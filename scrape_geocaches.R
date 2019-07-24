@@ -73,6 +73,12 @@ if (length(log)==0) {
   log<-""
 }
 
+#replace multiple whitespaces with single space
+clean_log <- gsub('\\s+',' ',log)
+#trim spaces from ends of elements
+clean_log <- trimws(clean_log)
+#drop blank elements
+clean_log <- clean_log[clean_log != '']
 
 page_results <- cbind.data.frame(users,status,date,log,i)
 all_results<-rbind(all_results,page_results)
