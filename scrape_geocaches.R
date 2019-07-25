@@ -4,7 +4,8 @@ library(rvest)
 library(lubridate)
 library(dplyr)
 library(ggplot2)
-library(maps)
+library(gganimate)
+library(ggmap)
 
 #start RSelenium
 #connect to running server
@@ -86,6 +87,38 @@ all_results<-rbind(all_results,page_results)
 
 # save results
 write.table(all_results,file = "cave-mines-not-complete-results.tab",row.names = F,col.names = T,quote = F,sep = "\t")
+###############
+
+# merge with coords
+all_results_merge <- merge(all_results,m_gc,by.x = "i",by.y = "url")
+
+# fix coords
+all_results_merge$lat <- as.numeric(gsub("° ",".",gsub("[.]","",gsub(pattern = "N ",replacement = "",all_results_merge$lat))))
+all_results_merge$lon <- as.numeric(gsub("° ",".",gsub("[.]","",gsub(pattern = "W ",replacement = "-",all_results_merge$lon))))
+
+# fix date
+all_results_merge$date<-mdy(all_results_merge$date)
+all_results_merge$year <- year(all_results_merge$date)
+
+# summarize all data
+all_visits_window<-all_results_merge %>% filter(status == c("Publish Listing","Found it","Didn't find it"), year >= 2008) 
+all_summary <- all_visits_window %>% group_by(i,lat,lon,year) %>% summarise(total=length(users))
+
+# map for all caves
+# now a moving picture!
+ggmap(get_map(location = "Maryland",source = "google",zoom = 5,maptype = "terrain-background",scale = "auto"))+
+  geom_point(data=all_summary,aes(y=lat,x=lon,size=total,group = seq_along(i),color=factor(year)),alpha=0.5)+
+  # scale_colour_manual(values = brewer.pal(11,name = "Paired")) +
+  # geom_path(data=all_visits_window,aes(y=lat,x=lon,group=users),color="red")+
+  transition_states(year,transition_length = 2,state_length = 1)+
+  enter_appear()+exit_disappear()+
+  ggtitle('Year: {closest_state}')  
+  
+anim_save("all_summary_year.gif",animation = last_plot())
+
+ggplot(all_summary,aes(x=year,y=total))+
+  geom_point()+
+  geom_smooth(method = "lm",se=F)
 
 ###############
 # search logs for bats, search urls for cave/mine
@@ -99,15 +132,27 @@ cache_merge <- merge(cache_with_bats,m_gc,by.x = "i",by.y = "url")
 cache_merge$lat <- as.numeric(gsub("° ",".",gsub("[.]","",gsub(pattern = "N ",replacement = "",cache_merge$lat))))
 cache_merge$lon <- as.numeric(gsub("° ",".",gsub("[.]","",gsub(pattern = "W ",replacement = "-",cache_merge$lon))))
 
-unique_visits_window<-cache_merge %>% filter(status == c("Publish Listing","Found it","Didn't find it"), year >= 2008) %>% group_by(i,lat,lon) %>% summarise(total=length(users))
+# fix date
+cache_merge$date<-mdy(cache_merge$date)
 
-# map
-ggplot()+geom_polygon(data=map_data("North America"),aes(x=long,y=lat,group=group))+coord_fixed(1.3)
+# summarise visits at these caves for the time period that we care about
+unique_visits_window<-cache_merge %>% filter(status == c("Publish Listing","Found it","Didn't find it"), date >= 2008) 
+unique_summary <- unique_visits_window %>% group_by(i,lat,lon) %>% summarise(total=length(users))
 
-ggmap(get_map(location = "New York",source = "google",zoom = 4))+
-  geom_point(data=unique_visits_window,aes(y=lat,x=lon,size=total),alpha=0.5)
+# map for positive bat id's
+# register_google(key = "AIzaSyDw5appsfJ_gWd45-AeYe_WTT2VvI8kXhQ")
+ggmap(get_map(location = "Maryland",source = "google",zoom = 5,maptype = "terrain-background",scale = "auto"))+
+  geom_point(data=unique_summary,aes(y=lat,x=lon,size=total,group = i))+
+  # scale_colour_manual(values = brewer.pal(11,name = "Paired")) +
+  geom_path(data=unique_visits_window,aes(y=lat,x=lon,group=users),color="red")+
+  transition_states(year,transition_length = 2,state_length = 1)+
+  enter_appear()+exit_disappear()+
+  ggtitle('Year: {closest_state}')
 
-#write.table(bat_mentions,file = "bat_mentions_maritimes.tab",quote = F,row.names = F,col.names = T,sep = "\t")
+anim_save("all_summary_year.gif",animation = last_plot())
+
+
+write.table(bat_mentions,file = "bat_mentions_maritimes.tab",quote = F,row.names = F,col.names = T,sep = "\t")
 
 # fix date
 cache_with_bats$date <- mdy(cache_with_bats$date)
