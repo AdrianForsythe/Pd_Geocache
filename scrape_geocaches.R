@@ -46,16 +46,16 @@ for(j in 1:m_gc[m_gc$url==i,]$numpage){
 page_source<-remDr$getPageSource()
 
 #parse it
-users<-html(page_source[[1]]) %>% html_nodes(".h5") %>%
+users<-xml2::read_html(page_source[[1]]) %>% html_nodes(".h5") %>%
   html_text()
 
-status<-html(page_source[[1]]) %>% html_nodes(".LogType .log-meta") %>%
+status<-xml2::read_html(page_source[[1]]) %>% html_nodes(".LogType .log-meta") %>%
   html_text(trim = T)
 
-date<-html(page_source[[1]]) %>% html_nodes(".LogDate") %>%
+date<-xml2::read_html(page_source[[1]]) %>% html_nodes(".LogDate") %>%
   html_text()
 
-log<-html(page_source[[1]]) %>% html_nodes(".LogText") %>%
+log<-xml2::read_html(page_source[[1]]) %>% html_nodes(".LogText") %>%
   html_text(trim = T)
 
 if (length(users)==0) {
@@ -78,10 +78,8 @@ if (length(log)==0) {
 clean_log <- gsub('\\s+',' ',log)
 #trim spaces from ends of elements
 clean_log <- trimws(clean_log)
-#drop blank elements
-clean_log <- clean_log[clean_log != '']
 
-page_results <- cbind.data.frame(users,status,date,log,i)
+page_results <- cbind.data.frame(users,status,date,clean_log,i)
 all_results<-rbind(all_results,page_results)
 }
 
@@ -140,14 +138,12 @@ unique_visits_window<-cache_merge %>% filter(status == c("Publish Listing","Foun
 unique_summary <- unique_visits_window %>% group_by(i,lat,lon) %>% summarise(total=length(users))
 
 # map for positive bat id's
-# register_google(key = "AIzaSyDw5appsfJ_gWd45-AeYe_WTT2VvI8kXhQ")
+register_google(key = "AIzaSyDw5appsfJ_gWd45-AeYe_WTT2VvI8kXhQ")
 ggmap(get_map(location = "Maryland",source = "google",zoom = 5,maptype = "terrain-background",scale = "auto"))+
-  geom_point(data=unique_summary,aes(y=lat,x=lon,size=total,group = i))+
+  geom_point(data=unique_summary,aes(y=lat,x=lon,size=total))+
   # scale_colour_manual(values = brewer.pal(11,name = "Paired")) +
-  geom_path(data=unique_visits_window,aes(y=lat,x=lon,group=users),color="red")+
-  transition_states(year,transition_length = 2,state_length = 1)+
-  enter_appear()+exit_disappear()+
-  ggtitle('Year: {closest_state}')
+  geom_path(data=unique_visits_window,aes(y=lat,x=lon,group=users),color="red")
+  
 
 anim_save("all_summary_year.gif",animation = last_plot())
 
