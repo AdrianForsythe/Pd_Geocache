@@ -30,7 +30,7 @@ user_gc<-read.table("cave-mines-not-complete-results.tab",header=T,sep="\t",comm
 
 #navigate to your page
 all_results<-NULL
-for (i in unique(user_gc$users)[[1]]) {
+for (i in unique(user_gc$users)) {
   page_results<-NULL
   remDr$navigate(url = paste("https://www.geocaching.com/seek/nearest.aspx?ul=",i,sep=""))
   
@@ -55,9 +55,9 @@ for (i in unique(user_gc$users)[[1]]) {
   ### Next pages  
   #click through j times, determined by num.finds
   next.pages<-NULL
-  for(j in 1:(as.numeric(num.finds)/20+2)){      
-    if(length(remDr$findElement(using="xpath",value="//a[(((count(preceding-sibling::*) + 1) = 16) and parent::*)]//b")) != 0) {# element exists, then click
-    next.page<-remDr$findElement(using="xpath",value="//a[(((count(preceding-sibling::*) + 1) = 16) and parent::*)]//b")
+  for(j in 1:(as.numeric(num.finds)/20+1)){      
+    if(length(remDr$findElement(using="partial link text",value="Next >")) != 0) {# element exists, then click
+    next.page<-remDr$findElement(using="partial link text",value="Next >")
     next.page$clickElement()
     
     #get the page html
@@ -71,9 +71,9 @@ for (i in unique(user_gc$users)[[1]]) {
     visit.date.next<-xml2::read_html(page_source[[1]]) %>% html_nodes(".AlignCenter~ td+ td .small")%>%
       html_text()
     next.pages<-cbind(gcs.next,visit.date.next)
-    Sys.sleep(1.5)    
+    # Sys.sleep(1.5)    
     }
   }
   page_results <- cbind(i,num.finds,rbind(first.page,next.pages))
-  all_results<-rbind(all_results,page_results) 
+  all_results<-rbind.data.frame(all_results,page_results) 
 }
