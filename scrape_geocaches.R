@@ -105,9 +105,11 @@ all_summary <- all_visits_window %>% group_by(i,lat,lon,year) %>% summarise(tota
 # map for all caves
 # now a moving picture!
 ggmap(get_map(location = "Maryland",source = "google",zoom = 5,maptype = "terrain-background",scale = "auto"))+
-  geom_point(data=all_summary,aes(y=lat,x=lon,size=total,group = seq_along(i),color=factor(year)),alpha=0.5)+
+  geom_point(data=all_summary,aes(y=lat,x=lon,size=total,
+                                  # group = seq_along(i),
+                                  color=factor(year)),alpha=0.5)+
   # scale_colour_manual(values = brewer.pal(11,name = "Paired")) +
-  # geom_path(data=all_visits_window,aes(y=lat,x=lon,group=users),color="red")+
+  geom_path(data=all_visits_window,aes(y=lat,x=lon,group=users),color="red")+
   transition_states(year,transition_length = 2,state_length = 1)+
   enter_appear()+exit_disappear()+
   ggtitle('Year: {closest_state}')  
@@ -120,7 +122,7 @@ ggplot(all_summary,aes(x=year,y=total))+
 
 ###############
 # search logs for bats, search urls for cave/mine
-bat_mentions<-unique(all_results[grep("\\bbat[s]\\b",all_results$log),]$i)
+bat_mentions<-unique(all_results[grep("\\bbat[s]\\b",all_results$clean_log),]$i)
 
 # only take sites with bat[s]
 cache_with_bats<-subset(all_results,i %in% bat_mentions)
