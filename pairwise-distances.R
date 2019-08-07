@@ -4,15 +4,11 @@ library(dplyr)
 # read in geocache list
 m_gc<-read.csv("cave-mines-not-complete.csv",header=T)
 
-# read in results (finally in the right format)
-all_results<-read.table("cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = "")
-
-# merge with coords
-all_results_merge <- merge(all_results,m_gc,by.x = "i",by.y = "url",all=T)
-
 # fix coords
 # on linux, encoding changes to "\xb0"
-all_results_merge$lat <- as.numeric(gsub("\xb0 ",".",gsub("[.]","",gsub(pattern = "N ",replacement = "",all_results_merge$lat))))
-all_results_merge$lon <- as.numeric(gsub("\xb0 ",".",gsub("[.]","",gsub(pattern = "W ",replacement = "-",all_results_merge$lon))))
+m_gc$lat <- as.numeric(gsub("\xb0 ",".",gsub("[.]","",gsub(pattern = "N ",replacement = "",m_gc$lat))))
+m_gc$lon <- as.numeric(gsub("\xb0 ",".",gsub("[.]","",gsub(pattern = "W ",replacement = "-",m_gc$lon))))
 
-distm(all_results_merge[,c("lon","lat")],all_results_merge[,c("lon","lat")])
+pairwise.dist<-distm(m_gc[,c("lon","lat")],m_gc[,c("lon","lat")],fun=distHaversine)
+
+write.csv(x=pairwise.dist,file="pairwise.dist.csv",col.names=T,row.names=T)
