@@ -27,3 +27,5 @@ df.centroids<-data.frame(matrix(unlist(corr.centroids), nrow=length(corr.centroi
 
 # combine
 clean.df <- cbind(df,df.centroids)
+
+write.csv(clean.df,"clean-coords.csv")
