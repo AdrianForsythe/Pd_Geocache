@@ -24,8 +24,9 @@ corr.centroids <- st_transform(centroids, 29101) %>%
 
 # convert to dataframe
 df.centroids<-data.frame(matrix(unlist(corr.centroids), nrow=length(corr.centroids), byrow=T))
+df<-as.data.frame(df)
 
 # combine
-clean.df <- cbind(df,df.centroids)
+clean.df <- cbind(df[,-16],df.centroids)
 
 write.csv(clean.df,"clean-coords.csv")
