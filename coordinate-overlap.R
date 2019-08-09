@@ -20,11 +20,17 @@ all_results_merge$lon <- as.numeric(gsub("\xb0 ",".",gsub("[.]","",gsub(pattern 
 # date
 all_results_merge$year <- year(mdy(all_results_merge$date))
 
+# trim down
+all_results_merge<-all_results_merge[!duplicated(all_results_merge$i),]
+
 ##### find overlaps in coords to match caves with counties
-presence_coords<-data.table(df.centroids)
+clean.df <- read.csv("clean-coords.csv",header = T,na.strings = " ")
+presence_coords<-as.data.table(clean.df[,c("X1","X2")])
 colnames(presence_coords) <- c("lon","lat")
+
 geocache_coords<-data.table(all_results_merge[, c("lon","lat")])
 
+###
 CartesianJoin<- function(X,Y)
   setkey(X[,c(k=1,.SD)],k)[Y[,c(k=1,.SD)],allow.cartesian=TRUE][,k:=NULL]
 
@@ -37,7 +43,7 @@ colnames(LatLonWide) <- c("presence.lon","presence.lat","geocache.lon","geocache
 
 # clean.df[clean.df$COUNTYNAME %in% all_results_merge$county,]
 
-promiscuity<-all_results_merge %>% group_by(i,year) %>% summarise(total=length(unique(users)))
-hist(promiscuity$total)
-
-most_active <- filter(promiscuity,total >1)
+# promiscuity<-all_results_merge %>% group_by(i,year) %>% summarise(total=length(unique(users)))
+# hist(promiscuity$total)
+# 
+# most_active <- filter(promiscuity,total >1)
