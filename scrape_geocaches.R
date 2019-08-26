@@ -28,7 +28,9 @@ SignOn <- remDr$findElement(using = "id", "SignIn")
 SignOn$clickElement()
 
 # generate list of urls
-m_gc<-read.csv("cave-mines-not-complete.csv",header=T)
+m_gc<-read.table("euro-cave-not-complete.csv",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = "")
+m_gc$url <- paste("https://www.geocaching.com/geocache/",m_gc$GC,sep = "")
+m_gc$numpage <- round(m_gc$numfinds/25,digits = 0)
 
 #navigate to your page
 all_results<-NULL
@@ -84,4 +86,4 @@ all_results<-rbind(all_results,page_results)
 }
 
 # save results
-write.table(all_results,file = "cave-mines-not-complete-results.tab",row.names = F,col.names = T,quote = F,sep = "\t")
+write.table(all_results,file = "euro-cave-not-complete-results.tab",row.names = F,col.names = T,quote = F,sep = "\t")

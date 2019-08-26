@@ -1,7 +1,7 @@
 library(geosphere)
 library(sf)
 library(dplyr)
-library(lubidate)
+library(lubridate)
 
 ######
 # read in geocache list
@@ -9,6 +9,7 @@ m_gc<-read.csv("cave-mines-not-complete.csv",header=T)
 
 # read in results (finally in the right format)
 all_results<-read.table("cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = "")
+all_results <- filter(all_results,status == c("Found it","Didn't find it","Owner Maintenance","Publish Listing"))
 
 # merge with coords
 all_results_merge <- merge(all_results,m_gc,by.x = "i",by.y = "url",all=T)
@@ -22,10 +23,12 @@ all_results_merge$lon <- as.numeric(gsub("\xb0 ",".",gsub("[.]","",gsub(pattern 
 all_results_merge$year <- year(mdy(all_results_merge$date))
 
 # trim down
-geocache.locs<-all_results_merge %>% group_by(i,lon,lat) %>% summarise(total=n())
-
+geocache.locs<-all_results_merge %>% group_by(year) %>% mutate(count=length(unique(i))) %>% 
+  group_by(i,lon,lat,year,count) %>% 
+  summarise(total=length(unique(users)))
+  
 # coords as an sp object
-geocache.coords<-as_Spatial(st_as_sf(geocache.coords,coords = c("lon", "lat"),crs = 4326, agr = "constant"))
+geocache.coords<-as_Spatial(st_as_sf(geocache.locs,coords = c("lon", "lat"),crs = 4326, agr = "constant"))
 
 # WNS presence data
 source("wns-presence.R")
@@ -36,19 +39,21 @@ source("wns-presence.R")
 # NA denotes the point does not fall in a polygon
 # if a point falls in multiple polygons the last polygon is recorded.
 
-index.df<-as.data.frame(over(geocache.coords, poly,returnList = F, fn = mean))
+index.df<-as.data.frame(over(geocache.coords, poly,returnList = F))
 colnames(index.df) <-"index"
 
 # do a loop for "complex" lookup operation
 results<-NULL
 for (i in index.df$index) {
+  u<-df[i,"STATEPROV"]
+  v<-df[i,"COUNTYNAME"]
   w<-df[i,"SAMPLEDATE"]
   x<-df[i,"YR_SUSPECT"]
   y<-df[i,"YR_CONFIRM"]  
   z<-df[i,"WNS_MAP_YR"]  
-  results<-rbind.data.frame(results,cbind(w,x,y,z))
+  results<-rbind.data.frame(results,cbind(u,v,w,x,y,z))
 }
-colnames(results)<-c("sample.date","yr.suspect","yr.confirm","wns.map.yr")
+colnames(results)<-c("state.prov","county","sample.date","yr.suspect","yr.confirm","wns.map.yr")
 
 geocache.presence.df<-cbind.data.frame(geocache.coords,results)
 
@@ -57,11 +62,11 @@ all_merge<-merge(geocache.presence.df,all_results,by="i",all=T)
 
 # fix dates
 all_merge$date <- mdy(all_merge$date)
-all_merge$sample.date<-gsub(pattern = " 06/09/2018",replacement = "06/09/2018",all_merge$sample.date)
+# all_merge$sample.date<-gsub(pattern = " 06/09/2018",replacement = "06/09/2018",all_merge$sample.date)
 
 #### temporary assumptions ####
 # presence dates
-all_merge$sample.date<-mdy(gsub(pattern = "/00/",replacement = "/01/",all_merge$sample.date))
+# all_merge$sample.date<-mdy(gsub(pattern = "/00/",replacement = "/01/",all_merge$sample.date))
 all_merge$wns.map.yr<-ymd(gsub("-.+","/01/01",all_merge$wns.map.yr))
 all_merge$yr.suspect<-ymd(gsub("-.+","/01/01",all_merge$yr.suspect))
 all_merge$yr.confirm<-ymd(gsub("-.+","/01/01",all_merge$yr.confirm))

@@ -45,59 +45,62 @@ ggmap(map)+
   geom_path(data=all_visits_window,aes(y=lat,x=lon,group=users),color="red",alpha=0.3)+
   geom_point(data=all_summary,aes(y=lat,x=lon,size=total,color=as.factor(year)),alpha=0.5)+
   # scale_colour_manual(values = brewer.pal(11,name = "Paired")) +
-  theme(legend.position = "none")
+  theme_classic()+
+  theme(axis.text = element_text(size=10),
+        axis.title = element_text(size = 12),
+        legend.position = "none")
+ggsave(filename = "num-geocache.png",plot=last_plot())
 
-# correlation in visits/time?
+##### correlation in visits/time?
 num.geocache <- all_visits_window %>% group_by(date) %>% summarise(total=length(unique(i)))
 
 ggplot(num.geocache,aes(x=date,y=total))+
   geom_point(alpha=0.5)+
-  geom_smooth(method = "lm",se=F,color="red")+
-  geom_vline(xintercept = as.numeric(as.Date("2008-01-01")),linetype="dashed",color="blue")+
+  geom_smooth(method = "lm",se=F,color="red",size=2)+
+  geom_vline(xintercept = as.numeric(as.Date("2008-01-01")),linetype="dashed",color="blue",size=2)+
   labs(x= "Date",y="Number of Geocache Sites at Caves/Mines")+
-  geom_text(aes(x=as.Date("2008-01-01"),y=35,label="WNS Introduced"),hjust=-0.1)+
-  theme_classic()
+  geom_text(aes(x=as.Date("2008-01-01"),y=35,label="WNS Introduced"),hjust=-0.1,size=4)+
+  theme_classic()+
+  theme(axis.text = element_text(size=10),
+        axis.title = element_text(size = 12))
 ggsave(filename = "num-geocache-year.png",plot=last_plot())
 
 # user activity
 user.activity.date <- all_visits_window %>% group_by(date,GC) %>% summarise(total=n())
 # %>% group_by(date,GC) %>% summarise(mean=mean(total),sd=sd(total))
 
-user.activity.month <- all_visits_window %>% group_by(month,GC) %>% summarise(total=n()) %>%
-  group_by(month,GC) %>% summarise(mean=mean(total),sd=sd(total))
-
-user.activity.year <- all_visits_window %>% group_by(year,GC) %>% summarise(total=n()) %>%
-  group_by(year,GC) %>% summarise(mean=mean(total),sd=sd(total))
-
-user.activity.month.year <- all_visits_window %>% group_by(month.year) %>% summarise(total=n()) %>%
-  group_by(month.year) %>% summarise(avg=mean(total),sd=sd(total))
-
-ggplot(user.activity.date,aes(x=date,y=total))+
-  stat_summary(fun.y = max,geom = "point",alpha=0.5)+
+ggplot(user.activity.date,aes(x=date))+
+  geom_histogram(color="black",fill="gray")+
+  # geom_point(alpha=0.5)+
   # geom_line(data = user.activity.month.year,aes(x=month.year,y=mean,group=1))
-  geom_smooth(method = "lm",na.rm = T,color="red")+
-  coord_cartesian(ylim = c(0,40))+
-  labs(x="Date",y="Average Number of Unique Visitors")+
-  geom_vline(xintercept = as.numeric(as.Date("2008-01-01")),linetype="dashed",color="blue")+
-  geom_text(aes(x=as.Date("2008-01-01"),y=25,label="WNS Introduced"),hjust=-0.1)+
+  # geom_smooth(method = "lm",na.rm = T,color="red")+
+  # coord_cartesian(ylim = c(0,40))+
+  labs(x="Date",y="Number of Unique Visitors")+
+  geom_vline(xintercept = as.numeric(as.Date("2008-01-01")),linetype="dashed",color="blue",size=2)+
+  geom_text(aes(x=as.Date("2008-01-01"),y=2100,label="WNS Introduced"),hjust=-0.1,size=4)+
   theme_classic()+
-  theme(axis.text.x = element_blank(),
-        axis.ticks.x = element_blank())
+  theme(axis.text = element_text(size=10),
+        axis.title = element_text(size = 12))
 ggsave(filename = "max-visits-date.png",plot=last_plot())
+
+library(lme4)
+summary(lmer(total ~ date + (1|GC),data = user.activity.date))
 
 #### ANIMATE
 # now a moving picture!
-ggmap(map)+
-  geom_point(data=all_visits_window,aes(y=lat,x=lon,group=users),alpha=0.5)+
+p<-ggmap(map)+
+  geom_point(data=all_visits_window,aes(y=lat,x=lon,group=users))+
   # geom_path(data=all_visits_window,aes(y=lat,x=lon,group=users))+
   transition_reveal(along = date,keep_last = F)+
   shadow_wake(wake_length = 0.1, alpha = T)+
   # scale_colour_manual(values = sample(col_vector, n,replace = T))+
   #   ease_aes("linear")+
-  # ggtitle('Year: {frame_along}')
-  theme(legend.position = "none")
-  
-anim_save("users_year.gif",animation = last_plot())
+  ggtitle('Year: {frame_along}')+
+  theme_classic()+
+  theme(axis.text = element_text(size=10),
+        axis.title = element_text(size = 12),
+        legend.position = "none")
+anim_save("users_year.gif",animation = p)
 
 ## Distance travelled by users
 library(geosphere)

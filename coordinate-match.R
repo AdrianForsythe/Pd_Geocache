@@ -25,7 +25,7 @@ all_results_merge$year <- year(mdy(all_results_merge$date))
 geocache.locs<-all_results_merge %>% group_by(i,lon,lat) %>% summarise(total=n())
 
 # coords as an sp object
-geocache.coords<-st_as_sf(geocache.coords,coords = c("lon", "lat"),crs = 4326, agr = "constant")
+geocache.coords<-st_as_sf(geocache.locs,coords = c("lon", "lat"),crs = 4326, agr = "constant")
 
 ##### Genetic samples #####
 genetic.coords<-read.csv("../Pd_MSAT/SraRunTable.csv",header=T)
