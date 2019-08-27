@@ -3,9 +3,6 @@ library(RSelenium)
 library(rvest)
 library(lubridate)
 library(dplyr)
-library(ggplot2)
-library(gganimate)
-library(ggmap)
 
 #start RSelenium
 #connect to running server
