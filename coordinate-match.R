@@ -39,27 +39,42 @@ geocache.locs<-na.omit(all_results_merge) %>%
 geocache.coords<-st_as_sf(geocache.locs,coords = c("lon", "lat"),crs = 4326, agr = "constant")
 
 ##### Genetic samples #####
-## MSAT
-# coords<-read.csv("../Pd_MSAT/msat_locations.csv",header=T)
-# genetic.coords<-coords[!is.na(coords$lat),]
-# genetic.coords<-genetic.coords[!duplicated(genetic.coords$lat),]
-# genetic.coords<-st_as_sf(genetic.coords,coords = c("lon", "lat"),crs = 4326, agr = "constant")
+##### MSAT
+dat<-read.csv("~/Fragment_analyses/comb_binned.csv",header=T)
+row.names(dat)<-dat[,"isolate"]
 
-## SNPs
-meta <- read.csv("../Pd_MSAT/SraRunTable.csv", header = T)
-vcf <- read.vcfR("../Pd_MSAT/NA.bestsnp.backfill.filtered.vcf")
-genind <- vcfR2genind(vcf)
-strata<-meta[match(indNames(genind),meta$Run),]
-include_list <- as.character(strata[!is.na(strata$lat), ]$Run)
-genind <- genind[include_list]
-strata <- subset(strata, Run %in% include_list)
-strata <- strata[match(indNames(genind), strata$Run),]
-genetic.coords <- strata[!duplicated(strata$other_location), c("lon", "lat")]
-genetic.coords<-st_as_sf(genetic.coords,coords = c("lon", "lat"),crs = 4326, agr = "constant")
+# list of columns to match between datasets
+keep_cols<-colnames(dat[,-c(1,11)])
+
+# Drees et al 2017 data
+drees_dat<-read.csv("../Pd_MSAT/Drees_microsats_binned.csv",header = T)
+drees_dat<-drees_dat[,c(2,26:47)]
+colnames(drees_dat)<-tolower(colnames(drees_dat))
+colnames(drees_dat)<-gsub("_bins","",colnames(drees_dat))
+rownames(drees_dat)<-drees_dat[,1]
+
+# now match them
+all_dat<-rbind(dat[,keep_cols],drees_dat[,keep_cols])
+
+pop<-df2genind(all_dat,ploidy = 1)
+pop<-missingno(pop,type = "mean")
+
+# Setting population strata: region or caves?
+location_dat<-na.omit(read.csv("../Pd_MSAT/msat_locations.csv",header=T))
+strata<- location_dat[match(indNames(pop),location_dat$StrainID),]
+strata$id<-as.factor(paste(strata$cave,strata$Province,sep="-"))
+pop@strata <- strata
+pop@pop <- pop@strata$id
+
+pop<-poppr::clonecorrect(pop)
+
+# Do you want just North America, or include all Euro isolates?
+na.strata<-na.omit(strata[strata$Region == "North America",])
+pop<-pop[na.strata$StrainID]
 
 ##### find closest point to match isolate locations with geocaches
 closest.matches<-as.data.frame(st_sf(st_nearest_points(geocache.coords$geometry,genetic.coords$geometry)))
-closest.matches<-separate(closest.matches,1,c("gc.lon","gen.lon","gc.lat","gen.lat"),sep=c(","," "))
+closest.matches<-separate(closest.matches,1,c("gc.lon","gen.lon","gc.lat","gen.lat"),sep=", ")
 closest.matches$gen.lon<-as.numeric(gsub("[c(,)]", "",closest.matches$gen.lon))
 closest.matches$gc.lon<-as.numeric(gsub("[c(,)]", "",closest.matches$gc.lon))
 closest.matches$gen.lat<-as.numeric(gsub("[c(,)]", "",closest.matches$gen.lat))
@@ -76,7 +91,49 @@ max.visits<-na.omit(all_results_merge) %>%
   group_by(GC,lat,lon,) %>% 
   summarise(max=max(total))
 
-m1<-merge(closest.matches,strata,by.x="gen.lat",by.y="lat")
+m1<-merge(closest.matches,coords,by.x="gen.lat",by.y="lat")
+m2<-merge(m1,max.visits,by.x="gc.lat",by.y="lat")
+
+# only use the closest matches
+min.closest.match <- m2 %>% 
+  group_by(gen.lon,gen.lat) %>%
+  filter(dist==min(dist,na.rm = T))
+
+write.csv(min.closest.match,"closest.matches.msat.csv")
+
+#####
+## SNPs
+# meta <- read.csv("../Pd_MSAT/SraRunTable.csv", header = T)
+# vcf <- read.vcfR("../Pd_MSAT/NA.bestsnp.backfill.filtered.vcf")
+# genind <- vcfR2genind(vcf)
+# strata<-meta[match(indNames(genind),meta$Run),]
+# include_list <- as.character(strata[!is.na(strata$lat), ]$Run)
+# genind <- genind[include_list]
+# strata <- subset(strata, Run %in% include_list)
+# strata <- strata[match(indNames(genind), strata$Run),]
+# genetic.coords <- strata[!duplicated(strata$other_location), c("lon", "lat")]
+# genetic.coords<-st_as_sf(genetic.coords,coords = c("lon", "lat"),crs = 4326, agr = "constant")
+
+##### find closest point to match isolate locations with geocaches
+closest.matches<-as.data.frame(st_sf(st_nearest_points(geocache.coords$geometry,genetic.coords$geometry)))
+closest.matches<-separate(closest.matches,1,c("gc.lon","gen.lon","gc.lat","gen.lat"),sep=", ")
+closest.matches$gen.lon<-as.numeric(gsub("[c(,)]", "",closest.matches$gen.lon))
+closest.matches$gc.lon<-as.numeric(gsub("[c(,)]", "",closest.matches$gc.lon))
+closest.matches$gen.lat<-as.numeric(gsub("[c(,)]", "",closest.matches$gen.lat))
+closest.matches$gc.lat<-as.numeric(gsub("[c(,)]", "",closest.matches$gc.lat))
+
+# distance in meters!
+closest.matches$dist<-sapply(1:nrow(closest.matches),function(i)
+  distm(closest.matches[i,c("gen.lon","gen.lat")],closest.matches[i,c("gc.lon","gc.lat")],fun = distGeo))
+
+# per year
+max.visits<-na.omit(all_results_merge) %>% 
+  group_by(GC,year) %>% 
+  mutate(total=n()) %>% 
+  group_by(GC,lat,lon,) %>% 
+  summarise(max=max(total))
+
+m1<-merge(closest.matches,coords,by.x="gen.lat",by.y="lat")
 m2<-merge(m1,max.visits,by.x="gc.lat",by.y="lat")
 
 # only use the closest matches
@@ -85,28 +142,3 @@ min.closest.match <- m2 %>%
   filter(dist==min(dist,na.rm = T))
 
 write.csv(min.closest.match,"closest.matches.snp.csv")
-
-#####
-# cleaned.df<-all_results_merge %>% 
-#   filter(status %in% c("Publish Listing","Found it","Didn't find it"))
-# 
-# s<-split(as.character(cleaned.df$users), as.character(cleaned.df$GC))
-# results<-NULL
-# for (i in unique(names(s))) {
-#   j<-s[i]
-#   c<-sapply(s,`%in%`,j)  
-#   d<-sapply(c,sum)
-#   results<-rbind(results,cbind(d,names(d),i))
-# }
-# results<-as.data.frame(results)
-# rownames(results)<-NULL
-# colnames(results)<-c("intersect","gc1","gc2")
-# results$intersect<-as.numeric(results$intersect)
-# 
-# closest.matches.merge[results$gc1]
-# 
-# results.mat<-spread(results,key = "gc1",value = "intersect")
-# rownames(results.mat)<-results.mat$gc2
-# results.mat<-results.mat[,-1]
-# 
-# write.table(results.mat,file="gc.user.intersect.tab",quote = F,sep = "\t",col.names = T,row.names = T)
