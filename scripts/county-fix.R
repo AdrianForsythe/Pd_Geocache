@@ -3,20 +3,20 @@ library(maps)
 library(sp)
 library(maptools)
 
-source("coordinate-overlap.R")
+source("scripts/coordinate-overlap.R")
 
 # make a SpatialPolygonsDataframe, make row ids to match
 rownames(df) <- names(poly)
 poly.df<-SpatialPolygonsDataFrame(poly,df)
 
 # read in list of all counties
-counties<-read.csv("all-counties.csv",header=T)
+counties<-read.csv("data/all-counties.csv",header=T)
 counties<-tidyr::separate(counties,1,c("county","state.province","Country"),sep="\t")
 counties$county<-gsub(pattern = " / (.*)","",counties$county)
 
 # Canada counties
 # read in shape file
-can<-readOGR("../Downloads/lcd_000b16a_e/lcd_000b16a_e.shp")
+can<-readOGR("shape/lcd_000b16a_e/lcd_000b16a_e.shp")
 can<-can[can@data$PRNAME %in% c("Quebec / Québec","Ontario","Prince Edward Island / Île-du-Prince-Édouard","Nova Scotia / Nouvelle-Écosse","New Brunswick / Nouveau-Brunswick"),]
 can.id<-as.character(paste(can$CDNAME,can$PRNAME,sep=", "))
 can.id<-gsub(pattern = " / (.*)","",can.id)
@@ -43,6 +43,7 @@ usa.sf$id <- usa.id
 
 united.poly<-rbind(can.sf[,"id"],usa.sf[,2:1])
 
+####
 # combine spatial polygon dfs
 # united.poly<-sf::st_union(can@polygons,usa)
 # united.poly<-unionSpatialPolygons(can,usa)

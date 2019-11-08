@@ -8,10 +8,10 @@ library(ggmap)
 library(RColorBrewer)
 
 # read in geocache list
-m_gc<-read.csv("cave-mines-not-complete.csv",header=T)
+m_gc<-read.csv("data/cave-mines-not-complete.csv",header=T)
 
 # read in results (finally in the right format)
-all_results<-read.table("cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = "")
+all_results<-read.table("data/cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = "")
 
 # merge with coords
 all_results_merge <- merge(all_results,m_gc,by.x = "i",by.y = "url",all=T)
@@ -49,7 +49,7 @@ ggmap(map)+
   theme(axis.text = element_text(size=10),
         axis.title = element_text(size = 12),
         legend.position = "none")
-ggsave(filename = "num-geocache.png",plot=last_plot())
+ggsave(filename = "figures/num-geocache.png",plot=last_plot())
 
 ##### correlation in visits/time?
 num.geocache <- all_visits_window %>% group_by(date) %>% summarise(total=length(unique(i)))
@@ -63,7 +63,7 @@ ggplot(num.geocache,aes(x=date,y=total))+
   theme_classic()+
   theme(axis.text = element_text(size=10),
         axis.title = element_text(size = 12))
-ggsave(filename = "num-geocache-year.png",plot=last_plot())
+ggsave(filename = "figures/num-geocache-year.png",plot=last_plot())
 
 # user activity
 user.activity.date <- all_visits_window %>% group_by(date,GC) %>% summarise(total=n())
@@ -81,7 +81,7 @@ ggplot(user.activity.date,aes(x=date))+
   theme_classic()+
   theme(axis.text = element_text(size=10),
         axis.title = element_text(size = 12))
-ggsave(filename = "max-visits-date.png",plot=last_plot())
+ggsave(filename = "figures/max-visits-date.png",plot=last_plot())
 
 library(lme4)
 summary(lmer(total ~ date + (1|GC),data = user.activity.date))
@@ -100,7 +100,7 @@ p<-ggmap(map)+
   theme(axis.text = element_text(size=10),
         axis.title = element_text(size = 12),
         legend.position = "none")
-anim_save("users_year.gif",animation = p)
+anim_save("figures/users_year.gif",animation = p)
 
 ## Distance travelled by users
 library(geosphere)
@@ -122,7 +122,7 @@ for (i in unique(travellers$users)) {
 ###############
 # search logs for bats, search urls for cave/mine
 bat_mentions<-unique(all_results[grep("\\bbat[s]\\b",all_results$log),]$i)
-write.table(bat_mentions,file = "bat_mentions_maritimes.tab",quote = F,row.names = F,col.names = T,sep = "\t")
+write.table(bat_mentions,file = "data/bat_mentions_maritimes.tab",quote = F,row.names = F,col.names = T,sep = "\t")
 
 # only take sites with bat[s]
 cache_with_bats<-subset(all_results,i %in% bat_mentions)
@@ -148,4 +148,4 @@ ggmap(get_map(location = "Maryland",source = "google",zoom = 5,maptype = "terrai
   enter_appear()+exit_disappear()+
   ggtitle('Year: {closest_state}')
 
-anim_save("all_summary_year.gif",animation = last_plot())
+anim_save("figures/all_summary_year.gif",animation = last_plot())

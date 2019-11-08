@@ -9,11 +9,11 @@ library(lubridate)
 
 ######
 # read in geocache list
-m_gc<-read.csv("cave-mines-not-complete.csv",header=T)
+m_gc<-read.csv("data/cave-mines-not-complete.csv",header=T)
 
 # read in results (finally in the right format)
-all_results<-rbind(read.table("cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = ""),
-                   read.table("missing-cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = ""))
+all_results<-rbind(read.table("data/cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = ""),
+                   read.table("data/missing-cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = ""))
 
 # merge with coords
 all_results_merge <- merge(all_results,m_gc,by.x = "i",by.y = "url",all=T)
@@ -40,14 +40,14 @@ geocache.coords<-st_as_sf(geocache.locs,coords = c("lon", "lat"),crs = 4326, agr
 
 ##### Genetic samples #####
 ##### MSAT
-dat<-read.csv("~/Fragment_analyses/comb_binned.csv",header=T)
+dat<-read.csv("data/comb_binned.csv",header=T)
 row.names(dat)<-dat[,"isolate"]
 
 # list of columns to match between datasets
 keep_cols<-colnames(dat[,-c(1,11)])
 
 # Drees et al 2017 data
-drees_dat<-read.csv("../Pd_MSAT/Drees_microsats_binned.csv",header = T)
+drees_dat<-read.csv("data/Drees_microsats_binned.csv",header = T)
 drees_dat<-drees_dat[,c(2,26:47)]
 colnames(drees_dat)<-tolower(colnames(drees_dat))
 colnames(drees_dat)<-gsub("_bins","",colnames(drees_dat))
@@ -60,7 +60,7 @@ pop<-df2genind(all_dat,ploidy = 1)
 pop<-missingno(pop,type = "mean")
 
 # Setting population strata: region or caves?
-location_dat<-na.omit(read.csv("../Pd_MSAT/msat_locations.csv",header=T))
+location_dat<-na.omit(read.csv("data/msat_locations.csv",header=T))
 strata<- location_dat[match(indNames(pop),location_dat$StrainID),]
 strata$id<-as.factor(paste(strata$cave,strata$Province,sep="-"))
 pop@strata <- strata
@@ -99,7 +99,7 @@ min.closest.match <- m2 %>%
   group_by(gen.lon,gen.lat) %>%
   filter(dist==min(dist,na.rm = T))
 
-write.csv(min.closest.match,"closest.matches.msat.csv")
+write.csv(min.closest.match,"data/closest.matches.msat.csv")
 
 #####
 ## SNPs
@@ -141,4 +141,4 @@ min.closest.match <- m2 %>%
   group_by(gen.lon,gen.lat) %>%
   filter(dist==min(dist,na.rm = T))
 
-write.csv(min.closest.match,"closest.matches.snp.csv")
+write.csv(min.closest.match,"data/closest.matches.snp.csv")

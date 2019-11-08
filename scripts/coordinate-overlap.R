@@ -5,10 +5,10 @@ library(lubridate)
 
 ######
 # read in geocache list
-m_gc<-read.csv("cave-mines-not-complete.csv",header=T)
+m_gc<-read.csv("data/cave-mines-not-complete.csv",header=T)
 
 # read in results (finally in the right format)
-all_results<-read.table("cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = "")
+all_results<-read.table("data/cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = "")
 all_results <- filter(all_results,status == c("Found it","Didn't find it","Owner Maintenance","Publish Listing"))
 
 # merge with coords
@@ -30,8 +30,8 @@ geocache.locs<-all_results_merge %>% group_by(year) %>% mutate(count=length(uniq
 # coords as an sp object
 geocache.coords<-as_Spatial(st_as_sf(geocache.locs,coords = c("lon", "lat"),crs = 4326, agr = "constant"))
 
-# WNS presence data
-source("wns-presence.R")
+# load in WNS presence data
+source("scripts/wns-presence.R")
 
 ##### find overlaps in coords to match caves with counties #####
 # returns a numeric vector of length equal to the number of points
@@ -75,5 +75,3 @@ all_merge$yr.confirm<-ymd(gsub("-.+","/01/01",all_merge$yr.confirm))
 # relevant.records<-all_merge[all_merge$sample.date > all_merge$date | all_merge$sample.date > all_merge$yr.suspect | all_merge$sample.date > all_merge$yr.confirm,]
 relevant.records<-all_merge[all_merge$wns.map.yr > all_merge$date,]
 relevant.records<-relevant.records[!is.na(relevant.records$i),]
-
-#### next run a model?

@@ -2,10 +2,10 @@ library(dplyr)
 library(lubridate)
 library(ggplot2)
 
-eu.gc<-read.table("euro-cave-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = "")
+eu.gc<-read.table("data/euro-cave-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = "")
 eu.gc$date<-mdy(eu.gc$date)
 
-na.gc<-na.omit(read.table("cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = ""))
+na.gc<-na.omit(read.table("data/cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = ""))
 na.gc$date<-mdy(na.gc$date)
 
 na.gc.td<-na.gc %>% group_by(users,date) %>% summarise()
@@ -19,7 +19,7 @@ ggplot(na.gc.td,aes(x=na.gc.td[,1]))+geom_histogram(fill="gray",color="black")+
   theme_classic()+
   theme(axis.text = element_text(size=10),
         axis.title = element_text(size = 12))
-ggsave(filename = "diff.time.na.png",dpi = 300)
+ggsave(filename = "figures/diff.time.na.png",dpi = 300)
 
 x<-na.gc[unique(na.gc$users) %in% unique(eu.gc$users),]
 
@@ -35,4 +35,4 @@ ggplot(td.p,aes(x=td.p[,1]))+geom_histogram(fill="gray",color="black")+
   theme_classic()+
   theme(axis.text = element_text(size=10),
         axis.title = element_text(size = 12))
-ggsave(filename = "diff.time.na.eu.png",dpi = 300)
+ggsave(filename = "figures/diff.time.na.eu.png",dpi = 300)
