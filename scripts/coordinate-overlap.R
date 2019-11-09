@@ -14,21 +14,25 @@ all_results <- filter(all_results,status == c("Found it","Didn't find it","Owner
 # merge with coords
 all_results_merge <- merge(all_results,m_gc,by.x = "i",by.y = "url",all=T)
 
-# fix coords
-# on linux, encoding changes to "\xb0"
-all_results_merge$lat <- as.numeric(gsub("\xb0 ",".",gsub("[.]","",gsub(pattern = "N ",replacement = "",all_results_merge$lat))))
-all_results_merge$lon <- as.numeric(gsub("\xb0 ",".",gsub("[.]","",gsub(pattern = "W ",replacement = "-",all_results_merge$lon))))
+# split DMS coords
+# worst format ever
+all_results_merge$lat <- paste(all_results_merge$lat,"N")
+all_results_merge$lon <- gsub("-","",all_results_merge$lon)
+all_results_merge$lon <- paste(all_results_merge$lon,"W")
+
+# and convert to DD coords
+char2dms(all_results_merge$lat,chd = ":",chm = ":",chs = ":")
 
 # date
 all_results_merge$year <- year(mdy(all_results_merge$date))
 
 # trim down
 geocache.locs<-all_results_merge %>% group_by(year) %>% mutate(count=length(unique(i))) %>% 
-  group_by(i,lon,lat,year,count) %>% 
+  group_by(i,lat,lat,year,count) %>% 
   summarise(total=length(unique(users)))
   
 # coords as an sp object
-geocache.coords<-as_Spatial(st_as_sf(geocache.locs,coords = c("lon", "lat"),crs = 4326, agr = "constant"))
+geocache.coords<-as_Spatial(st_as_sf(geocache.locs,coords = c("lat", "lat"),crs = 4326, agr = "constant"))
 
 # load in WNS presence data
 source("scripts/wns-presence.R")
