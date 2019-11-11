@@ -73,6 +73,9 @@ pop<-poppr::clonecorrect(pop)
 na.strata<-na.omit(strata[strata$Region == "North America",])
 pop<-pop[na.strata$StrainID]
 
+coords <- na.strata[!duplicated(na.strata$cave), c("lon", "lat")]
+genetic.coords<-st_as_sf(coords,coords = c("lon", "lat"),crs = 4326, agr = "constant")
+
 ##### find closest point to match isolate locations with geocaches
 closest.matches<-as.data.frame(st_sf(st_nearest_points(geocache.coords$geometry,genetic.coords$geometry)))
 closest.matches<-separate(closest.matches,1,c("gc.lon","gen.lon","gc.lat","gen.lat"),sep=", ")
@@ -81,9 +84,9 @@ closest.matches$gc.lon<-as.numeric(gsub("[c(,)]", "",closest.matches$gc.lon))
 closest.matches$gen.lat<-as.numeric(gsub("[c(,)]", "",closest.matches$gen.lat))
 closest.matches$gc.lat<-as.numeric(gsub("[c(,)]", "",closest.matches$gc.lat))
 
-# distance in meters!
+# distance in km!
 closest.matches$dist<-sapply(1:nrow(closest.matches),function(i)
-  distm(closest.matches[i,c("gen.lon","gen.lat")],closest.matches[i,c("gc.lon","gc.lat")],fun = distGeo))
+  distm(closest.matches[i,c("gen.lon","gen.lat")],closest.matches[i,c("gc.lon","gc.lat")],fun = distGeo))/1000
 
 # per year
 max.visits<-na.omit(all_results_merge) %>% 
@@ -102,6 +105,36 @@ min.closest.match <- m2 %>%
 
 write.csv(min.closest.match,"data/closest.matches.msat.csv")
 
+
+###### user intersect
+cleaned.df<-all_results_merge %>%
+  filter(status %in% c("Publish Listing","Found it","Didn't find it"))
+
+s<-split(as.character(cleaned.df$users), as.character(cleaned.df$GC))
+
+# iterate through users that visited a cave, searching for visits to other caves from same user
+### TAKES A WHILE
+results<-NULL
+for (i in unique(names(s))) {
+  j<-s[i]
+  c<-sapply(s,`%in%`,j)
+  d<-sapply(c,sum)
+  results<-rbind(results,cbind(d,names(d),i))
+}
+results<-as.data.frame(results)
+rownames(results)<-NULL
+colnames(results)<-c("intersect","gc1","gc2")
+results$intersect<-as.numeric(results$intersect)-1
+
+# only sites that we care about:
+cave.intersects<-results[results$gc1 %in% min.closest.match$GC & results$gc2 %in% min.closest.match$GC,]
+
+cave.intersects.mat<-spread(cave.intersects,key = "gc1",value = "intersect")
+rownames(cave.intersects.mat)<-cave.intersects.mat$gc2
+cave.intersects.mat<-cave.intersects.mat[,-1]
+
+write.csv(cave.intersects.mat,file="data/gc.user.intersect.msat.csv",row.names = T)
+
 #####
 ## SNPs
 # meta <- read.csv("../Pd_MSAT/SraRunTable.csv", header = T)
@@ -116,30 +149,30 @@ write.csv(min.closest.match,"data/closest.matches.msat.csv")
 # genetic.coords<-st_as_sf(genetic.coords,coords = c("lon", "lat"),crs = 4326, agr = "constant")
 
 ##### find closest point to match isolate locations with geocaches
-closest.matches<-as.data.frame(st_sf(st_nearest_points(geocache.coords$geometry,genetic.coords$geometry)))
-closest.matches<-separate(closest.matches,1,c("gc.lon","gen.lon","gc.lat","gen.lat"),sep=", ")
-closest.matches$gen.lon<-as.numeric(gsub("[c(,)]", "",closest.matches$gen.lon))
-closest.matches$gc.lon<-as.numeric(gsub("[c(,)]", "",closest.matches$gc.lon))
-closest.matches$gen.lat<-as.numeric(gsub("[c(,)]", "",closest.matches$gen.lat))
-closest.matches$gc.lat<-as.numeric(gsub("[c(,)]", "",closest.matches$gc.lat))
-
-# distance in meters!
-closest.matches$dist<-sapply(1:nrow(closest.matches),function(i)
-  distm(closest.matches[i,c("gen.lon","gen.lat")],closest.matches[i,c("gc.lon","gc.lat")],fun = distGeo))
-
-# per year
-max.visits<-na.omit(all_results_merge) %>% 
-  group_by(GC,year) %>% 
-  mutate(total=n()) %>% 
-  group_by(GC,lat,lon,) %>% 
-  summarise(max=max(total))
-
-m1<-merge(closest.matches,coords,by.x="gen.lat",by.y="lat")
-m2<-merge(m1,max.visits,by.x="gc.lat",by.y="lat")
-
-# only use the closest matches
-min.closest.match <- m2 %>% 
-  group_by(gen.lon,gen.lat) %>%
-  filter(dist==min(dist,na.rm = T))
-
-write.csv(min.closest.match,"data/closest.matches.snp.csv")
+# closest.matches<-as.data.frame(st_sf(st_nearest_points(geocache.coords$geometry,genetic.coords$geometry)))
+# closest.matches<-separate(closest.matches,1,c("gc.lon","gen.lon","gc.lat","gen.lat"),sep=", ")
+# closest.matches$gen.lon<-as.numeric(gsub("[c(,)]", "",closest.matches$gen.lon))
+# closest.matches$gc.lon<-as.numeric(gsub("[c(,)]", "",closest.matches$gc.lon))
+# closest.matches$gen.lat<-as.numeric(gsub("[c(,)]", "",closest.matches$gen.lat))
+# closest.matches$gc.lat<-as.numeric(gsub("[c(,)]", "",closest.matches$gc.lat))
+# 
+# # distance in meters!
+# closest.matches$dist<-sapply(1:nrow(closest.matches),function(i)
+#   distm(closest.matches[i,c("gen.lon","gen.lat")],closest.matches[i,c("gc.lon","gc.lat")],fun = distGeo))
+# 
+# # per year
+# max.visits<-na.omit(all_results_merge) %>% 
+#   group_by(GC,year) %>% 
+#   mutate(total=n()) %>% 
+#   group_by(GC,lat,lon,) %>% 
+#   summarise(max=max(total))
+# 
+# m1<-merge(closest.matches,coords,by.x="gen.lat",by.y="lat")
+# m2<-merge(m1,max.visits,by.x="gc.lat",by.y="lat")
+# 
+# # only use the closest matches
+# min.closest.match <- m2 %>% 
+#   group_by(gen.lon,gen.lat) %>%
+#   filter(dist==min(dist,na.rm = T))
+# 
+# write.csv(min.closest.match,"data/closest.matches.snp.csv")
