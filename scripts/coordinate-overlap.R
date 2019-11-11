@@ -14,11 +14,13 @@ all_results <- filter(all_results,status == c("Found it","Didn't find it","Owner
 # merge with coords
 all_results_merge <- merge(all_results,m_gc,by.x = "i",by.y = "url",all=T)
 
-# split DMS coords
-# worst format ever
-all_results_merge$lat <- paste(all_results_merge$lat,"N")
-all_results_merge$lon <- gsub("-","",all_results_merge$lon)
-all_results_merge$lon <- paste(all_results_merge$lon,"W")
+# fix coords
+lat.dms <- do.call(rbind, strsplit(as.character(all_results_merge$lat), ":"))
+lat.dec <- as.numeric(lat.dms[,1]) + (as.numeric(lat.dms[,2]) + as.numeric(lat.dms[,3])/60)/60
+all_results_merge$lat <- lat.dec
+lon.dms <- do.call(rbind, strsplit(as.character(all_results_merge$lon), ":"))
+lon.dec <- as.numeric(lon.dms[,1]) + (as.numeric(lon.dms[,2]) + as.numeric(lon.dms[,3])/60)/60
+all_results_merge$lon <- lon.dec
 
 # and convert to DD coords
 char2dms(all_results_merge$lat,chd = ":",chm = ":",chs = ":")
