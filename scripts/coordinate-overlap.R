@@ -1,18 +1,24 @@
 library(geosphere)
 library(sf)
+library(sp)
 library(dplyr)
 library(lubridate)
 
-######
-# read in geocache list
-m_gc<-read.csv("data/cave-mines-not-complete.csv",header=T)
+##### Read in GC list
+gc<-read.csv("data/cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "",row.names = NULL)
+
+# somehow, I missed these sites in the previous list
+m_gc<-read.csv("data/missing-cave-mines-not-complete.csv",header=T,sep=",",fill = T,na.strings = "",quote = "",comment.char = "",row.names = NULL)
+
+# create final list
+f_gc<-rbind(gc,m_gc)
 
 # read in results (finally in the right format)
 all_results<-read.table("data/cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = "")
 all_results <- filter(all_results,status == c("Found it","Didn't find it","Owner Maintenance","Publish Listing"))
 
 # merge with coords
-all_results_merge <- merge(all_results,m_gc,by.x = "i",by.y = "url",all=T)
+all_results_merge <- merge(all_results,f_gc,by.x = "i",by.y = "url",all=T)
 
 # fix coords
 lat.dms <- do.call(rbind, strsplit(as.character(all_results_merge$lat), ":"))
@@ -23,15 +29,15 @@ lon.dec <- as.numeric(lon.dms[,1]) + (as.numeric(lon.dms[,2]) + as.numeric(lon.d
 all_results_merge$lon <- lon.dec
 
 # and convert to DD coords
-char2dms(all_results_merge$lat,chd = ":",chm = ":",chs = ":")
+char2dms(all_results_merge,chd = ":",chm = ":",chs = ":")
 
 # date
 all_results_merge$year <- year(mdy(all_results_merge$date))
 
-# trim down
+# trim down to the number of common users between geocache sites over years
 geocache.locs<-all_results_merge %>% group_by(year) %>% mutate(count=length(unique(i))) %>% 
   group_by(i,lat,lat,year,count) %>% 
-  summarise(total=length(unique(users)))
+  summarise(total=length(!unique(users)))
   
 # coords as an sp object
 geocache.coords<-as_Spatial(st_as_sf(geocache.locs,coords = c("lat", "lat"),crs = 4326, agr = "constant"))

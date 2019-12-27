@@ -1,3 +1,6 @@
+##### simple mantel test using county-level incidence of WNS and county-level human visits at caves
+# testing if the year of WNS incidence corresponds to the number of human visits to caves in that county
+
 library(ade4)
 
 # first run the output from script to match shape files to GC sites

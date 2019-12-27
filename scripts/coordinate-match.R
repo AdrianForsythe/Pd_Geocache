@@ -8,16 +8,21 @@ library(dplyr)
 library(tidyr)
 library(lubridate)
 
-######
-# read in geocache list
-m_gc<-read.csv("data/cave-mines-not-complete.csv",header=T)
+##### Read in GC list
+gc<-read.csv("cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "")
+
+# somehow, I missed these sites in the previous list
+m_gc<-read.csv("missing-cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "")
+
+# create final list
+f_gc<-rbind(gc,f_gc)
 
 # read in results (finally in the right format)
 all_results<-rbind(read.table("data/cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = ""),
                    read.table("data/missing-cave-mines-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = ""))
 
 # merge with coords
-all_results_merge <- merge(all_results,m_gc,by.x = "i",by.y = "url",all=T)
+all_results_merge <- merge(all_results,f_gc,by.x = "i",by.y = "url",all=T)
 
 # fix coords
 # on linux, encoding changes to "\xb0"
