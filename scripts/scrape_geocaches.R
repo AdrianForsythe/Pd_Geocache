@@ -6,10 +6,10 @@ library(lubridate)
 library(dplyr)
 
 ##### Read in GC list
-gc<-read.csv("cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "")
+gc<-read.csv("data/cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "")
 
 # somehow, I missed these sites in the previous list
-m_gc<-read.csv("missing-cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "")
+m_gc<-read.csv("data/missing-cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "")
 
 # create final list
 f_gc<-rbind(gc,m_gc)
@@ -17,6 +17,7 @@ f_gc<-rbind(gc,m_gc)
 ##### Start RSelenium
 # make sure the docker version of selenium is installed first!
 # then run: sudo docker run -d -p 4445:4444 selenium/standalone-firefox
+
 # connect to running server
 rD <- rsDriver(port = 4445L, browser = 'firefox')
 remDr <- rD$client
@@ -48,7 +49,7 @@ f_gc$numpage <- round(as.numeric(f_gc$numfinds)/25,digits = 0)
 ##### Start scraping
 # this takes a few hours to run!
 all_results<-NULL
-for (i in as.character(f_gc$url)) {
+for (i in as.character(f_gc$url)[1:10]) {
   # navigate to page i
   remDr$navigate(url = i)
   
@@ -104,4 +105,4 @@ for (i in as.character(f_gc$url)) {
 }
 
 # save results
-write.table(all_results,file = "all-cave-mines-not-complete-results.tab",row.names = F,col.names = T,quote = F,sep = "\t")
+write.table(all_results,file = "data/all-cave-mines-not-complete-results.tab",row.names = F,col.names = T,quote = F,sep = "\t")

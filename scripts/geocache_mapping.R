@@ -8,10 +8,10 @@ library(ggmap)
 library(RColorBrewer)
 
 ##### Read in GC list
-gc<-read.csv("cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "")
+gc<-read.csv("data/cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "")
 
 # somehow, I missed these sites in the previous list
-m_gc<-read.csv("missing-cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "")
+m_gc<-read.csv("data/missing-cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "")
 
 # create final list
 f_gc<-rbind(gc,m_gc)
@@ -115,7 +115,7 @@ travellers<-all_visits_window %>% group_by(users) %>% mutate(finds = n()) %>%
   filter(finds >1 & status %in% c("Found it","Didn't find it"))
 
 for (i in unique(travellers$users)) {
-  d<-travellers[travellers$users=="NY Kid",]
+  d<-travellers[travellers$users==i,]
   f<-d[!duplicated(d$i),]
   m<-distm(f[,c("lat","lon")],fun = distHaversine)  
   diag(m) <- NA
