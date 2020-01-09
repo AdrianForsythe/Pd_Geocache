@@ -1,0 +1,54 @@
+KeyID,SiteCode,Col Date,On-site loc,Substrate,PCR_GearSum,Gear qPCR (Ct),GearFC_Pd
+44690.301,IN1,7/18/2012,harp trap,inner wires & lower inner bar,Neg,0.00,Neg
+44690.302,IN1,7/18/2012,harp trap,outer wires,Neg,0.00,Neg
+44690.303,IN1,7/19/2012,harp trap,inner wires & lower inner bar,Neg,0.00,Neg
+44690.304,IN1,7/19/2012,harp trap,outer wires & outer lower bar,Neg,0.00,Neg
+44690.305,IN1,7/20/2012,backpack,outer surfaces of bag,Pos,38.39,Neg
+44691.301,KY3,7/23/2012,harp trap,lower 1/4 of trap filaments,Pos,39.78,Neg
+44691.302,KY3,7/23/2012,harp trap,inner surface of catch bag (nearest cave entrance),Neg,0.00,NG
+44691.303,KY3,7/23/2012,harp trap,inner surface of catch bag (side away from cave entrance),Neg,0.00,Neg
+44691.304,KY3,7/24/2012,harp trap,inner surface of catch bag (nearest cave entrance),Neg,0.00,Neg
+44691.305,KY3,7/24/2012,harp trap,inner surface of catch bag (side away from cave entrance),Equiv,,Neg
+44691.306,KY3,7/24/2012,harp trap,lower 1/4 of trap filaments,Neg,0.00,Neg
+44691.307,KY3,7/24/2012,backpack,outer surfaces,Equiv,,Neg
+44692.301,KY2,7/25/2012,JB boots,"soles, upper foot",Neg,0.00,OG
+44692.302,KY2,7/25/2012,JB head lamp,on/off switch,Neg,0.00,Neg
+44692.303,KY2,7/26/2012,AB tyvek,seat and upper posterior thighs,Neg,0.00,Neg
+44692.304,KY2,7/26/2012,AB digital camera,outer surfaces,Neg,0.00,NG
+44692.305,KY2,7/26/2012,backpack,outer surfaces,Neg,0.00,Neg
+44693.301,OH1,7/31/2012,KS headlamp,plastic & rubber on/off switch & light,Neg,0.00,NG
+44693.302,OH1,7/31/2012,harp trap,"catch bag, plastic",Neg,0.00,Neg
+44693.303,OH1,7/31/2012,KL handling/batting gloves,spandex material & leather,Neg,0.00,NG
+44693.304,OH1,8/1/2012,harp trap,"inner strings, lower quarter & bar",Neg,0.00,Neg
+44693.305,OH1,8/1/2012,harp trap,"outer strings, lower quarter & bar",Neg,0.00,NG
+44693.306,OH1,7/31/2012,harp trap,inner strings (nearest mine entrance),Neg,0.00,NG
+44693.307,OH1,7/31/2012,harp trap,plastic catch bag,Neg,0.00,Neg
+44693.308,OH1,8/1/2012,bat handler's lap,canvas pants,Neg,0.00,Neg
+44693.309,OH1,8/2/2012,datasheet,paper,Neg,0.00,Neg
+44693.310,OH1,8/1/2012,harp trap,plastic catch bag,Neg,0.00,Neg
+44693.311,OH1,8/1/2012,mist net,mist net at used at entrance 618 & perpendicular mist net  used at entrance 619,Neg,0.00,Neg
+44693.312,OH1,8/2/2012,harp trap,catch bag,Pos,39.98,Neg
+44693.313,OH1,8/2/2012,harp trap,plastic catch bag,Neg,0.00,Neg
+44694.301,KY4,8/15/2012,wide harp trap,"nylon strings, bottom bar, plastic shield on catch bag",Neg,0.00,Neg
+44694.302,KY4,8/15/2012,narrow harp trap,nylon strings & bottom bar,Neg,0.00,NG
+44694.303,KY4,8/15/2012,narrow harp trap,plastic shield & divider of cloth catch bag,Neg,0.00,NG
+44694.304,KY4,8/16/2012,AB,"hair, uncovered",Neg,0.00,Neg
+44694.305,KY4,8/16/2012,MT boot bottom,mud & rubber,Neg,0.00,OG
+44695.301,KY1,8/21/2012,harp trap,catch bag,Neg,0.00,Neg
+44695.302,KY1,8/21/2012,harp trap,catch bag,Neg,0.00,Neg
+44695.303,KY1,8/21/2012,harp trap,strings,Neg,0.00,Neg
+44695.304,KY1,8/21/2012,digital calipers,metal,Neg,0.00,NG
+44695.305,KY1,8/22/2012,camera,plastic,Neg,0.00,Neg
+44695.100,KY1,8/22/2012,Anne's tyvek,tyvek,Neg,0.00,OG
+44695.101,KY1,8/22/2012,backpack,"nylon, green",Neg,0.00,OG
+44696.301,TN1,8/6/2012,MT head lamp,plastic,Neg,0.00,Neg
+44696.302,TN1,8/6/2012,sample cooler lid & handle,plastic,Neg,0.00,OG
+44696.303,TN1,8/7/2012,mist net,nylon,Neg,0.00,Neg
+44696.304,TN1,8/7/2012,bottom of boot (JC),rubber,Neg,0.00,Neg
+44696.305,TN1,8/14/2012,AB tyvek,tyvek,Neg,0.00,Neg
+44696.306,TN1,8/14/2012,mist net,nyon strings,Neg,0.00,NG
+44697.301,VA1,8/9/2012,mist net,nylon strings,Neg,0.00,NG
+44697.302,VA1,8/9/2012,AB boot bottom,rubber,Neg,0.00,OG
+44697.303,VA1,8/13/2012,mist net,nylon strings,Neg,0.00,NG
+44697.304,VA1,8/13/2012,MT bat handling glove,leather,Neg,0.00,OG
+44697.305,VA1,8/13/2012,digital platform scale,"metal tray, plastic buttons",Neg,0.00,NG

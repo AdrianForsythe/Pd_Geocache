@@ -1,0 +1,1646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Michelle L Verant</origin>
+        <origin>Elizabeth A Bohuski</origin>
+        <origin>Katherine LD Richgels</origin>
+        <origin>Kevin J Olival</origin>
+        <origin>David S Blehert</origin>
+        <pubdate>20171114</pubdate>
+        <title>Determinants of Pseudogymnoascus destructans within bat hibernacula: data</title>
+        <geoform>tabular digital data</geoform>
+        <pubinfo>
+          <pubplace>Online</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <onlink>https://doi.org/10.5066/F77D2SP5</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>ML Verant</origin>
+            <origin>EA Bohuski</origin>
+            <origin>KLD Richgels</origin>
+            <origin>KJ Olival</origin>
+            <origin>DS Blehert</origin>
+            <pubdate>20171025</pubdate>
+            <title>Determinants of Pseudogymnoascus destructans within bat hibernacula: implications for surveillance and management of white-nose syndrome.</title>
+            <geoform>manuscript</geoform>
+            <pubinfo>
+              <pubplace>Online</pubplace>
+              <publish>Journal of Applied Ecology</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.5066/xxxxxxxx</onlink>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This dataset includes data used to summarize trends and identify best-fit models to explain patterns in presence-absence and abundance of Pseudogymnoascus destructans (Pd) in environmental substrates and on bats within six bat hibernacula at different stages of white-nose syndrome (WNS). Data relating to environmental substrates include: dates and relative spatial locations of samples collected within study hibernacula, presence and quantity of Pd in samples based on qPCR analysis, and daily temperature parameters at each sample location on the days samples were collected. Data relating to bats include: dates and relative spatial locations of hibernating bats that were sampled, species, sex, weight(g), forearm length(mm), body mass index (weight/forearm), proportion of the wing with visible fungus or fluorescence characteristic of WNS under hand-held UVA light and presence and quantity of Pd in wing-skin swab samples based on qPCR analysis.  Measures of time since first detection of WNS at each study hibernaculum are also included in the dataset.</abstract>
+      <purpose>These data were used to identify determinants of the distribution of Pd within hibernacula over time from first introduction of Pd to an established state. This information is useful for determining optimal surveillance strategies for Pd within a hibernaculum (e.g. priority sample types and sample sizes) and for guiding management actions involving manipulation of the environment or environmental reservoirs of Pd within a hibernaculum.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20120801</begdate>
+          <enddate>20150830</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <descgeog>World</descgeog>
+      <bounding>
+        <westbc>-180.0</westbc>
+        <eastbc>180.0</eastbc>
+        <northbc>90.0</northbc>
+        <southbc>-90.0</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>biota</themekey>
+        <themekey>health</themekey>
+      </theme>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>epidemiology</themekey>
+        <themekey>surveillance</themekey>
+        <themekey>hibernacula</themekey>
+        <themekey>environmental reservoir</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Thesaurus</themekt>
+        <themekey>white-nose syndrome</themekey>
+        <themekey>bats</themekey>
+      </theme>
+      <place>
+        <placekt>Common geographic areas</placekt>
+        <placekey>New York</placekey>
+        <placekey>Kentucky</placekey>
+        <placekey>Tennessee</placekey>
+        <placekey>Wisconsin</placekey>
+      </place>
+      <place>
+        <placekt>None</placekt>
+        <placekey>bats</placekey>
+      </place>
+    </keywords>
+    <taxonomy>
+      <keywtax>
+        <taxonkt>USGS Biocomplexity Thesaurus</taxonkt>
+        <taxonkey>Fungi</taxonkey>
+        <taxonkey>Mammals</taxonkey>
+      </keywtax>
+      <taxonsys>
+        <classsys>
+          <classcit>
+            <citeinfo>
+              <origin>Integrated Taxonomic Information System (ITIS)</origin>
+              <pubdate>2017</pubdate>
+              <title>Integrated Taxonomic Information System (ITIS)</title>
+              <geoform>ONLINE_REFERENCE</geoform>
+              <pubinfo>
+                <pubplace>Washington, D.C.</pubplace>
+                <publish>Integrated Taxonomic Information System (ITIS)</publish>
+              </pubinfo>
+              <onlink>http://itis.gov</onlink>
+            </citeinfo>
+          </classcit>
+        </classsys>
+        <classsys>
+          <classcit>
+            <citeinfo>
+              <origin>Gargas, A</origin>
+              <origin>MT Trest</origin>
+              <origin>M Christensen</origin>
+              <origin>TJ Volk</origin>
+              <origin>DS Blehert</origin>
+              <pubdate>2009</pubdate>
+              <title>Geomyces [now Pseudogymnoascus] destructans sp. nov. associated with bat white-nose syndrome</title>
+              <geoform>ONLINE_REFERENCE</geoform>
+              <pubinfo>
+                <pubplace>Unknown</pubplace>
+                <publish>Mycotaxon</publish>
+              </pubinfo>
+              <onlink>https://www.nwhc.usgs.gov/disease_information/white-nose_syndrome/wns_publications_list.jsp</onlink>
+            </citeinfo>
+          </classcit>
+        </classsys>
+        <ider>
+          <cntinfo>
+            <cntperp>
+              <cntper>Michelle Verant</cntper>
+              <cntorg>National Park Service</cntorg>
+            </cntperp>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>1201 Oakridge Drive, Suite 200</address>
+              <city>Fort Collins</city>
+              <state>CO</state>
+              <postal>80525</postal>
+              <country>USA</country>
+            </cntaddr>
+            <cntvoice>970-225-3505</cntvoice>
+            <cntemail>michelle_verant@nps.gov</cntemail>
+          </cntinfo>
+        </ider>
+        <taxonpro>expert advice;;genetic analysis</taxonpro>
+        <taxoncom>A limited number of bat species were present within the study hibernacula and all bats captured for the study were identified to species based on distinct morphologic characteristics by qualified bat experts. There was no ambiguity in bat species classification. The qPCR assay used to identify the presence of Pd in samples is highly sensitive and specific as described by Muller et al. (2012) Mycologia, 105, 253-259</taxoncom>
+      </taxonsys>
+      <taxongen>All bats were identified to species. Fungal identification in the samples was targeted for Pd using qPCR.</taxongen>
+      <taxoncl>
+        <taxonrn>Kingdom</taxonrn>
+        <taxonrv>Animalia</taxonrv>
+        <taxoncl>
+          <taxonrn>Subkingdom</taxonrn>
+          <taxonrv>Bilateria</taxonrv>
+          <taxoncl>
+            <taxonrn>Infrakingdom</taxonrn>
+            <taxonrv>Deuterostomia</taxonrv>
+            <taxoncl>
+              <taxonrn>Phylum</taxonrn>
+              <taxonrv>Chordata</taxonrv>
+              <taxoncl>
+                <taxonrn>Subphylum</taxonrn>
+                <taxonrv>Vertebrata</taxonrv>
+                <taxoncl>
+                  <taxonrn>Infraphylum</taxonrn>
+                  <taxonrv>Gnathostomata</taxonrv>
+                  <taxoncl>
+                    <taxonrn>Superclass</taxonrn>
+                    <taxonrv>Tetrapoda</taxonrv>
+                    <taxoncl>
+                      <taxonrn>Class</taxonrn>
+                      <taxonrv>Mammalia</taxonrv>
+                      <taxoncl>
+                        <taxonrn>Subclass</taxonrn>
+                        <taxonrv>Theria</taxonrv>
+                        <taxoncl>
+                          <taxonrn>Infraclass</taxonrn>
+                          <taxonrv>Eutheria</taxonrv>
+                          <taxoncl>
+                            <taxonrn>Order</taxonrn>
+                            <taxonrv>Chiroptera</taxonrv>
+                            <taxoncl>
+                              <taxonrn>Suborder</taxonrn>
+                              <taxonrv>Yangochiroptera</taxonrv>
+                              <taxoncl>
+                                <taxonrn>Superfamily</taxonrn>
+                                <taxonrv>Vespertilionoidea</taxonrv>
+                                <taxoncl>
+                                  <taxonrn>Family</taxonrn>
+                                  <taxonrv>Vespertilionidae</taxonrv>
+                                  <taxoncl>
+                                    <taxonrn>Subfamily</taxonrn>
+                                    <taxonrv>Myotinae</taxonrv>
+                                    <taxoncl>
+                                      <taxonrn>Genus</taxonrn>
+                                      <taxonrv>Myotis</taxonrv>
+                                      <taxoncl>
+                                        <taxonrn>Species</taxonrn>
+                                        <taxonrv>Myotis lucifugus</taxonrv>
+                                        <common>little brown bat</common>
+                                        <common>Miotis norteamericano</common>
+                                        <common>little brown myotis</common>
+                                        <common>petite chauve-souris brune</common>
+                                        <common>Little Brown Myotis</common>
+                                      </taxoncl>
+                                    </taxoncl>
+                                  </taxoncl>
+                                </taxoncl>
+                              </taxoncl>
+                            </taxoncl>
+                          </taxoncl>
+                        </taxoncl>
+                      </taxoncl>
+                    </taxoncl>
+                  </taxoncl>
+                </taxoncl>
+              </taxoncl>
+            </taxoncl>
+          </taxoncl>
+        </taxoncl>
+      </taxoncl>
+      <taxoncl>
+        <taxonrn>Kingdom</taxonrn>
+        <taxonrv>Animalia</taxonrv>
+        <taxoncl>
+          <taxonrn>Subkingdom</taxonrn>
+          <taxonrv>Bilateria</taxonrv>
+          <taxoncl>
+            <taxonrn>Infrakingdom</taxonrn>
+            <taxonrv>Deuterostomia</taxonrv>
+            <taxoncl>
+              <taxonrn>Phylum</taxonrn>
+              <taxonrv>Chordata</taxonrv>
+              <taxoncl>
+                <taxonrn>Subphylum</taxonrn>
+                <taxonrv>Vertebrata</taxonrv>
+                <taxoncl>
+                  <taxonrn>Infraphylum</taxonrn>
+                  <taxonrv>Gnathostomata</taxonrv>
+                  <taxoncl>
+                    <taxonrn>Superclass</taxonrn>
+                    <taxonrv>Tetrapoda</taxonrv>
+                    <taxoncl>
+                      <taxonrn>Class</taxonrn>
+                      <taxonrv>Mammalia</taxonrv>
+                      <taxoncl>
+                        <taxonrn>Subclass</taxonrn>
+                        <taxonrv>Theria</taxonrv>
+                        <taxoncl>
+                          <taxonrn>Infraclass</taxonrn>
+                          <taxonrv>Eutheria</taxonrv>
+                          <taxoncl>
+                            <taxonrn>Order</taxonrn>
+                            <taxonrv>Chiroptera</taxonrv>
+                            <taxoncl>
+                              <taxonrn>Suborder</taxonrn>
+                              <taxonrv>Yangochiroptera</taxonrv>
+                              <taxoncl>
+                                <taxonrn>Superfamily</taxonrn>
+                                <taxonrv>Vespertilionoidea</taxonrv>
+                                <taxoncl>
+                                  <taxonrn>Family</taxonrn>
+                                  <taxonrv>Vespertilionidae</taxonrv>
+                                  <taxoncl>
+                                    <taxonrn>Subfamily</taxonrn>
+                                    <taxonrv>Myotinae</taxonrv>
+                                    <taxoncl>
+                                      <taxonrn>Genus</taxonrn>
+                                      <taxonrv>Myotis</taxonrv>
+                                      <taxoncl>
+                                        <taxonrn>Species</taxonrn>
+                                        <taxonrv>Myotis sodalis</taxonrv>
+                                        <common>Indiana Myotis</common>
+                                        <common>Indiana bat</common>
+                                      </taxoncl>
+                                    </taxoncl>
+                                  </taxoncl>
+                                </taxoncl>
+                              </taxoncl>
+                            </taxoncl>
+                          </taxoncl>
+                        </taxoncl>
+                      </taxoncl>
+                    </taxoncl>
+                  </taxoncl>
+                </taxoncl>
+              </taxoncl>
+            </taxoncl>
+          </taxoncl>
+        </taxoncl>
+      </taxoncl>
+      <taxoncl>
+        <taxonrn>Kingdom</taxonrn>
+        <taxonrv>Animalia</taxonrv>
+        <taxoncl>
+          <taxonrn>Subkingdom</taxonrn>
+          <taxonrv>Bilateria</taxonrv>
+          <taxoncl>
+            <taxonrn>Infrakingdom</taxonrn>
+            <taxonrv>Deuterostomia</taxonrv>
+            <taxoncl>
+              <taxonrn>Phylum</taxonrn>
+              <taxonrv>Chordata</taxonrv>
+              <taxoncl>
+                <taxonrn>Subphylum</taxonrn>
+                <taxonrv>Vertebrata</taxonrv>
+                <taxoncl>
+                  <taxonrn>Infraphylum</taxonrn>
+                  <taxonrv>Gnathostomata</taxonrv>
+                  <taxoncl>
+                    <taxonrn>Superclass</taxonrn>
+                    <taxonrv>Tetrapoda</taxonrv>
+                    <taxoncl>
+                      <taxonrn>Class</taxonrn>
+                      <taxonrv>Mammalia</taxonrv>
+                      <taxoncl>
+                        <taxonrn>Subclass</taxonrn>
+                        <taxonrv>Theria</taxonrv>
+                        <taxoncl>
+                          <taxonrn>Infraclass</taxonrn>
+                          <taxonrv>Eutheria</taxonrv>
+                          <taxoncl>
+                            <taxonrn>Order</taxonrn>
+                            <taxonrv>Chiroptera</taxonrv>
+                            <taxoncl>
+                              <taxonrn>Suborder</taxonrn>
+                              <taxonrv>Yangochiroptera</taxonrv>
+                              <taxoncl>
+                                <taxonrn>Superfamily</taxonrn>
+                                <taxonrv>Vespertilionoidea</taxonrv>
+                                <taxoncl>
+                                  <taxonrn>Family</taxonrn>
+                                  <taxonrv>Vespertilionidae</taxonrv>
+                                  <taxoncl>
+                                    <taxonrn>Subfamily</taxonrn>
+                                    <taxonrv>Vespertilioninae</taxonrv>
+                                    <taxoncl>
+                                      <taxonrn>Tribe</taxonrn>
+                                      <taxonrv>Pipistrellini</taxonrv>
+                                      <taxoncl>
+                                        <taxonrn>Genus</taxonrn>
+                                        <taxonrv>Perimyotis</taxonrv>
+                                        <taxoncl>
+                                          <taxonrn>Species</taxonrn>
+                                          <taxonrv>Perimyotis subflavus</taxonrv>
+                                        </taxoncl>
+                                      </taxoncl>
+                                    </taxoncl>
+                                  </taxoncl>
+                                </taxoncl>
+                              </taxoncl>
+                            </taxoncl>
+                          </taxoncl>
+                        </taxoncl>
+                      </taxoncl>
+                    </taxoncl>
+                  </taxoncl>
+                </taxoncl>
+              </taxoncl>
+            </taxoncl>
+          </taxoncl>
+        </taxoncl>
+      </taxoncl>
+	   <taxoncl>
+        <taxonrn>Kingdom</taxonrn>
+        <taxonrv>Fungi</taxonrv>
+            <taxoncl>
+              <taxonrn>Phylum</taxonrn>
+              <taxonrv>Ascomycota</taxonrv>
+                   <taxoncl>
+                      <taxonrn>Class</taxonrn>
+                      <taxonrv>Dothideomycetes</taxonrv>
+                         <taxoncl>
+                            <taxonrn>Order</taxonrn>
+                            <taxonrv>Incerti ordinis</taxonrv>
+                              <taxoncl>
+                                  <taxonrn>Family</taxonrn>
+                                  <taxonrv>Pseudeurotiaceae</taxonrv>
+                                   <taxoncl>
+                                      <taxonrn>Genus</taxonrn>
+                                      <taxonrv>Pseudogymnoascus</taxonrv>
+                                      <taxoncl>
+                                        <taxonrn>Species</taxonrn>
+                                        <taxonrv>Pseudogymnoascus destructans</taxonrv>
+                   </taxoncl>
+                </taxoncl>
+              </taxoncl>
+            </taxoncl>
+          </taxoncl>
+        </taxoncl>
+      </taxoncl>
+    </taxonomy>
+    <accconst>None.  Please see 'Distribution Info' for details.</accconst>
+    <useconst>none</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>David S Blehert</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>6006 Schroeder Road</address>
+          <city>Madison</city>
+          <state>WI</state>
+          <postal>53711</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>608-270-2466</cntvoice>
+        <cntemail>dblehert@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>United States Fish and Wildlife Service (funding), National Institutes of Health Ruth L. Kirschstein National Research Service Award (OD010423 from the National Institute of General Medical Sciences (funding). The following agencies and organizations provided field support for data collection: New York Department of Environmental Conservation, Kentucky Department of Fish and Wildlife, Tennessee Wildlife Resources Agency, Wisconsin Department of Natural Resources, Tennessee Nature Conservancy, Northeastern Cave Conservancy, Inc. and Southeastern Cave Conservancy, Inc.</datacred>
+    <tool>
+      <tooldesc>R was used for statistical analysis</tooldesc>
+      <toolacc>
+        <onlink>https://www.r-project.org/</onlink>
+        <toolinst>download online</toolinst>
+      </toolacc>
+      <toolcont>
+        <cntinfo>
+          <cntperp>
+            <cntper>Katherine L Richgels</cntper>
+            <cntorg>Midwest Region</cntorg>
+          </cntperp>
+          <cntaddr>
+            <addrtype>mailing and physical</addrtype>
+            <address>6006 Schroeder Road</address>
+            <city>Madison</city>
+            <state>WI</state>
+            <postal>53711</postal>
+            <country>United States</country>
+          </cntaddr>
+          <cntvoice>608-270-2400 x2334</cntvoice>
+          <cntemail>krichgels@usgs.gov</cntemail>
+        </cntinfo>
+      </toolcont>
+      <toolcite>
+        <citeinfo>
+          <origin>R Development Core Team</origin>
+          <pubdate>2008</pubdate>
+          <title>R: A language and environment for statistical computing. R Foundation for Statistical Computing</title>
+          <geoform>Software</geoform>
+        </citeinfo>
+      </toolcite>
+    </tool>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>All samples were analyzed for Pd using standard, qualified protocols and included both positive and negative controls for extraction and qPCR. Standard curves were compared across reactions to ensure consistency and all results from qPCR runs were manually verified for proper amplification and assignment of Ct values. Field data were reviewed for inconsistencies or errors during transfer from field sheets into electronic format. Once compiled across study sites, all data were again manually double-checked following completion of each sampling interval. 
+The final dataset was assessed for errors and outliers using summary statistics and other manipulations and tests in R, prior to the final analyses.</attraccr>
+    </attracc>
+    <logic>All values occur within expected ranges and the dataset has been checked for duplicates and erroneous omissions.</logic>
+    <complete>As described in the manuscript, there are a few areas in which the dataset is incomplete due to sampling or equipment constraints. Temperature data was recorded at all study hibernacula from August 2012 to August 2014, and at only three of the sites (WI, TN, KY) from August 2014 to August 2015. Additionally, temperature parameters are not included for all dates and sample locations due to failure or loss of the data-loggers used to record temperature at each sample location. There is no bat data for NY2 because of the scarcity of bats within that hibernaculum during the study.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>No formal positional accuracy tests were conducted</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>No formal positional accuracy tests were conducted</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <method>
+        <methtype>both</methtype>
+        <methdesc>Field sampling of bats and analysis of temperature data were collected.  Real-time quantitative polymerase chain reaction assays (qPCR) used to determine presence and quantity of Pd in samples according to established protocols and methods.</methdesc>
+        <methcite>
+          <citeinfo>
+            <origin>Muller, L.K</origin>
+            <origin>Lorch, J.M</origin>
+            <origin>Lindner, D.L</origin>
+            <origin>O'Connor, M</origin>
+            <origin>Gargas, A</origin>
+            <origin>Blehert, D.S</origin>
+            <pubdate>2012</pubdate>
+            <title>Bat white-nose syndrome: A real-time TaqMan polymerase chain reaction test targeting the intergenic spacer region of Geomyces destructans.</title>
+            <geoform>Mycologia, 105, 253-259</geoform>
+            <onlink>http://www.jstor.org/stable/43924151</onlink>
+          </citeinfo>
+        </methcite>
+        <methcite>
+          <citeinfo>
+            <origin>Verant, M.L</origin>
+            <origin>Bohuski, E.A</origin>
+            <origin>Lorch, J.M</origin>
+            <origin>Blehert, D.S</origin>
+            <pubdate>2016</pubdate>
+            <title>Optimized methods for total nucleic acid extraction and quantitation of the bat white-nose syndrome fungus, Pseudogymnoascus destructans, from swab and environmental samples</title>
+            <geoform>Journal of Veterinary Diagnostic Investigation, 28, 110-118</geoform>
+            <onlink>https://doi.org/10.1177/1040638715626963</onlink>
+          </citeinfo>
+        </methcite>
+      </method>
+      <procstep>
+        <procdesc>All field data (sample ID, sample type, location, date, bat attributes, etc.) were entered into an electronic spreadsheet after each sampling trip. Data related to environmental substrates and bats were maintained on separate spreadsheets (ongoing 201308 - 201508).</procdesc>
+        <procdate>20150830</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Temperature data were downloaded from data-loggers at each sample location within hibernacula using OneWireViewer (Maxim integrated) software (ongoing 201308 – 201508). Individual csv files were compiled and daily temperature parameters were calculated for each sample location over the study period using R. Statistical summaries and temperature trends over time were assessed within and across study hibernacula to identify any outliers or discrepancies (201509). These data were then merged with the main sample datasets (201509-10).</procdesc>
+        <procdate>20151030</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Results from qPCR analyses of all samples were compiled into spreadsheets (one for environmental substrates and one for bats). Using R, a column was created for presence-absence of Pd in the sample and Ct values were converted to units of genomic DNA using the intercept and slope of the mean standard curve on the reaction plate according to the equation: DNA (fg) = 10α + β(Ct). Genomic DNA values were then converted to log10 genomic DNA (fg). These data were merged with the main sample datasets (201509-10).</procdesc>
+        <procdate>20151030</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>batdata.csv</enttypl>
+        <enttypd>Comma Separate Value (CSV) file containing data.</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Date</attrlabl>
+        <attrdef>day the bat was sampled (M/D/YY)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>3/4/13</rdommin>
+            <rdommax>3/16/15</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Site</attrlabl>
+        <attrdef>Study hibernaculum ID</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>Kentucky</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>6</edomv>
+            <edomvd>Ney York #3</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>Tennessee</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Wisconsin</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>New York #1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Region</attrlabl>
+        <attrdef>Sample region within the hibernaculum where the bat was captured and sampled.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>There are 3 regions that vary by distance from the entrance with Region 1 near the entrance and Region 3 the farthest from the entrance</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Year</attrlabl>
+        <attrdef>year the bat was sampled</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>2013</rdommin>
+            <rdommax>2015</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ID</attrlabl>
+        <attrdef>bat sample number</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>numbered sequentially for each site and sample date</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WNSWinters</attrlabl>
+        <attrdef>number of years (winters) since first confirmation of WNS in hibernating bats in the study hibernaculum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>third year WNS was detected at the site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>5</edomv>
+            <edomvd>fifth year WNS was detected at the site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>first year WNS was detected at the site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>WNS negative site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>6</edomv>
+            <edomvd>sixth year WNS was detected at the site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>fourth year WNS was detected at the site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>second year WNS was detected at the site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>7</edomv>
+            <edomvd>seventh year WNS was detected at the site</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WNStime</attrlabl>
+        <attrdef>Measure of time since first confirmation of WNS in bats in the hibernaculum. Each unit of WNStime coincided with a sampling interval, which was approximately every four months</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>7</edomv>
+            <edomvd>7th subsequent sampling interval after first confirmation of WNS</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>17</edomv>
+            <edomvd>17th subsequent sampling interval after first confirmation of WNS</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>2nd subsequent sampling interval after first confirmation of WNS</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>WNS negative at time of sampling</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>19</edomv>
+            <edomvd>19th subsequent sampling interval after first confirmation of WNS</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>10</edomv>
+            <edomvd>10th subsequent sampling interval after first confirmation of WNS</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>5</edomv>
+            <edomvd>5th subsequent sampling interval after first confirmation of WNS</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>22</edomv>
+            <edomvd>22nd subsequent sampling interval after first confirmation of WNS</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>20</edomv>
+            <edomvd>20th subsequent sampling interval after first confirmation of WNS</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>WNS first confirmed at time of sampling</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>4th subsequent sampling interval after first confirmation of WNS</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Species</attrlabl>
+        <attrdef>Species sampled at site</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>MYLU</edomv>
+            <edomvd>Myotis lucifugus, little brown bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>PESU</edomv>
+            <edomvd>Perimyotis subflavus, tri-colored bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MYSO</edomv>
+            <edomvd>Myotis sodalis, Indiana bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sex</attrlabl>
+        <attrdef>sex of smapled bat</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>M</edomv>
+            <edomvd>Male</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>F</edomv>
+            <edomvd>Female</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Weight</attrlabl>
+        <attrdef>body mass</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>3.11</rdommin>
+            <rdommax>9.52</rdommax>
+            <attrunit>g</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Forearm</attrlabl>
+        <attrdef>length of the right forearm</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>30.59</rdommin>
+            <rdommax>42.4</rdommax>
+            <attrunit>mm</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>BMI</attrlabl>
+        <attrdef>body mass index, calculated as weight/forearm</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.092093574</rdommin>
+            <rdommax>0.261538462</rdommax>
+            <attrunit>g/mm</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Fungus</attrlabl>
+        <attrdef>ordinal scale indicating proportion of the surface of the wing membrane with visible fungus</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>no fungus</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>1-33% covered</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>34-66% covered</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>67-99 % covered</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>100% covered</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>UV</attrlabl>
+        <attrdef>ordinal scale indicating the proportion of the wing surface with visible fluorescence characteristic of WNS lesions under a UVA light</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>greater than 75%</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>no fluorescence</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>less than 25%</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>20-50%</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>50-75%</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ct</attrlabl>
+        <attrdef>Ct value from qPCR analysis of a wing skin-swab sample. Ct of 0 means the sample did not cross the threshold within 40 cycles so is considered negative for Pd</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>39.74</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>logDNA</attrlabl>
+        <attrdef>log10 genomic DNA of Pd (femtograms) in the sample based on qPCR</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-0.539156627</rdommin>
+            <rdommax>3.231073975</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Pd</attrlabl>
+        <attrdef>binary measure of presence (1) or absence (0) of Pd in the sample based on qPCR analsyis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>presence</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>absence</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>x</attrlabl>
+        <attrdef>distance from the entrance of the hibernaculum where the roosting bat was captured and sampled (assigned by the location of the logger within 2 m of the bat).  A value of zero means that data was collected within the hibernaculum but on the same plane as the entrance.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>NA indicates that temperature data was not available for that location on the day that bat was sampled. The lack of temperature data at some locations and time intervals was due to malfunction or displacement of temperature loggers.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>378.8</rdommax>
+			<attrunit>meter</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>z</attrlabl>
+        <attrdef>distance from the floor of the hibernaculum where the roosting bat was captured and sampled (assigned by the location of the logger within 2 m of the bat). z was measured as distance from the floor of the main chamber in the sampling region. In a few instances, there was a section of the cave or mine that dropped down below the main floor, such that a sampling location on a wall of the cave or mine was actually below the level of the main floor of the sampling region.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>NA indicates that temperature data was not available for that location on the day that bat was sampled. The lack of temperature data at some locations and time intervals was due to malfunction or displacement of temperature loggers.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>-3.85</rdommin>
+            <rdommax>13.4</rdommax>
+			<attrunit>meter</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tdmean</attrlabl>
+        <attrdef>mean daily temperature of the roost location (based on the logger within 2m of the bat)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>NA indicates that temperature data was not available for that location on the day that bat was sampled. The lack of temperature data at some locations and time intervals was due to malfunction or displacement of temperature loggers.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>1.4135</rdommin>
+            <rdommax>11.19475</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tdmedian</attrlabl>
+        <attrdef>median daily temperature of the roost location (based on the logger within 2m of the bat)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>NA indicates that temperature data was not available for that location on the day that bat was sampled. The lack of temperature data at some locations and time intervals was due to malfunction or displacement of temperature loggers.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>1.4135</rdommin>
+            <rdommax>11.1635</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tdsd</attrlabl>
+        <attrdef>standard deviation of daily temperature of the roost location (based on the logger within 2m of the bat)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>NA indicates that temperature data was not available for that location on the day that bat was sampled. The lack of temperature data at some locations and time intervals was due to malfunction or displacement of temperature loggers.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>2.45003687</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tdmin</attrlabl>
+        <attrdef>minimum daily temperature of the roost location (based on the logger within 2m of the bat)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>NA indicates that temperature data was not available for that location on the day that bat was sampled. The lack of temperature data at some locations and time intervals was due to malfunction or displacement of temperature loggers.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>-0.422</rdommin>
+            <rdommax>11.132</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tdmax</attrlabl>
+        <attrdef>maximum daily temperature of the roost location (based on the logger within 2m of the bat)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>NA indicates that temperature data was not available for that location on the day that bat was sampled. The lack of temperature data at some locations and time intervals was due to malfunction or displacement of temperature loggers.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>1.445</rdommin>
+            <rdommax>11.378</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tdrange</attrlabl>
+        <attrdef>range of daily temperature of the roost location (based on the logger within 2m of the bat)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>NA indicates that temperature data was not available for that location on the day that bat was sampled. The lack of temperature data at some locations and time intervals was due to malfunction or displacement of temperature loggers.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>5.015</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>dailytemp.csv</enttypl>
+        <enttypd>Comma Separate Value (CSV) file containing data.</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Date</attrlabl>
+        <attrdef>Day of sampling (m/d/yy)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+         <attrdomv>
+          <rdom>
+            <rdommin>8/7/12</rdommin>
+            <rdommax>8/24/15</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Site</attrlabl>
+        <attrdef>Study hibernaculum ID</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Wisconsin</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>Kentucky</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>New York #1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>6</edomv>
+            <edomvd>New York #3</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>Tennessee</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>5</edomv>
+            <edomvd>New York #2</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>nan</edomv>
+            <edomvd>not available</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Logger</attrlabl>
+        <attrdef>Sample location ID within each study hibernaculum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Sample location ID within each study hibernaculum</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tmean</attrlabl>
+        <attrdef>mean daily temperature</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-14.74425</rdommin>
+            <rdommax>28.5795</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tmedian</attrlabl>
+        <attrdef>median daily temperature</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-15.4365</rdommin>
+            <rdommax>28.6675</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tsd</attrlabl>
+        <attrdef>standard deviation of daily temperature</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>17.42277287</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tmin</attrlabl>
+        <attrdef>minimum daily temperature</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-19.948</rdommin>
+            <rdommax>28.033</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tmax</attrlabl>
+        <attrdef>maximum daily temperature</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-12.955</rdommin>
+            <rdommax>36.394</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Trange</attrlabl>
+        <attrdef>range of daily temperature</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>37.798</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>envdata.csv</enttypl>
+        <enttypd>Comma Separate Value (CSV) file containing data.</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Date</attrlabl>
+        <attrdef>Day of sample collection (mm/dd/yyyy)</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>8/7/2012</rdommin>
+            <rdommax>8/24/2015</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Site</attrlabl>
+        <attrdef>Study hibernaculum ID</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Wisconsin</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>Tennessee</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>3</edomv>
+            <edomvd>Kentucky</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>4</edomv>
+            <edomvd>New York #1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>5</edomv>
+            <edomvd>New York #2</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>6</edomv>
+            <edomvd>New York #3</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Logger</attrlabl>
+        <attrdef>Sample location ID within each study hibernaculum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <udom>Sample location ID within each study hibernaculum</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WNStime</attrlabl>
+        <attrdef>Measure of time since first confirmation of WNS in bats in the hibernaculum. Each unit of WNStime coincided with a sampling interval, which was approximately every four months</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>22</rdommax>
+            <attrunit>subsequent sampling interval after first confirmation of WNS</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Season</attrlabl>
+        <attrdef>Assigned based on date of sample collection</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Summer</edomv>
+            <edomvd>August</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Fall</edomv>
+            <edomvd>Nov-Dec</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Spring</edomv>
+            <edomvd>March</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WNSWinters</attrlabl>
+        <attrdef>Years (winters) since first confirmation of WNS in hibernating bats in the study hibernaculum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>8</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ct</attrlabl>
+        <attrdef>Ct value from qPCR analysis of the sample. Ct of 0 means the sample did not cross the threshold within 40 cycles so is considered negative for Pd.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>Not avaialble</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>39.99</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Pd</attrlabl>
+        <attrdef>binary measure of presence (1) or absence (0) of Pd in the sample based on qPCR analsyis</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>absence</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>presence</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Type</attrlabl>
+        <attrdef>type of sample collected within each hibernaculum</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>swab</edomv>
+            <edomvd>swab samples were collected from the wall or ceiling</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>sediment</edomv>
+            <edomvd>sediment was collected from the floor</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>slope</attrlabl>
+        <attrdef>mean slope of the standard curves included on the qPCR reaction plate</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-3.802</rdommin>
+            <rdommax>-3.124</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>intercept</attrlabl>
+        <attrdef>mean intercept of the standard curves included on the qPCR reaction plate</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>34.969</rdommin>
+            <rdommax>39.727</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>logDNA</attrlabl>
+        <attrdef>log10 genomic DNA of Pd (femtograms) in the sample calculated from Ct value from qPCR</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-1.51</rdommin>
+            <rdommax>4.66</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>x</attrlabl>
+        <attrdef>distance between the sample location and the entrance to the hibernaculum. A value of zero means that data was collected within the hibernaculum but on the same plane as the entrance.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>378.8</rdommax>
+			<attrunit>meter</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>z</attrlabl>
+        <attrdef>height of the sample location from the floor of the hibernaculum.  z was measured as distance from the floor of the main chamber in the sampling region. In a few instances, there was a section of the cave or mine that dropped down below the main floor, such that a sampling location on a wall of the cave or mine was actually below the level of the main floor of the sampling region.</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-3.85</rdommin>
+            <rdommax>7.1</rdommax>
+			<attrunit>meter</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tmean</attrlabl>
+        <attrdef>mean daily temperature at the sample location</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>NA indicates that temperature data was not available for that location on the day that bat was sampled. The lack of temperature data at some locations and time intervals was due to malfunction or displacement of temperature loggers.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>-0.47025</rdommin>
+            <rdommax>24.65766667</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tmedian</attrlabl>
+        <attrdef>median daily temperature at the sample location</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>NA indicates that temperature data was not available for that location on the day that bat was sampled. The lack of temperature data at some locations and time intervals was due to malfunction or displacement of temperature loggers.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>-0.439</rdommin>
+            <rdommax>23.783</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tsd</attrlabl>
+        <attrdef>standard deviation of daily temperature at the sample location</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>NA indicates that temperature data was not available for that location on the day that bat was sampled. The lack of temperature data at some locations and time intervals was due to malfunction or displacement of temperature loggers.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>4.99120697</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tmin</attrlabl>
+        <attrdef>minimum daily temperature at the sample location</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>NA indicates that temperature data was not available for that location on the day that bat was sampled. The lack of temperature data at some locations and time intervals was due to malfunction or displacement of temperature loggers.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>-1.256</rdommin>
+            <rdommax>22.657</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Tmax</attrlabl>
+        <attrdef>maximum daily temperature at the sample location</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>NA indicates that temperature data was not available for that location on the day that bat was sampled. The lack of temperature data at some locations and time intervals was due to malfunction or displacement of temperature loggers.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.126</rdommin>
+            <rdommax>27.533</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Trange</attrlabl>
+        <attrdef>range of daily temperature at the sample location</attrdef>
+        <attrdefs>Producer Defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>NA</edomv>
+            <edomvd>NA indicates that temperature data was not available for that location on the day that bat was sampled. The lack of temperature data at some locations and time intervals was due to malfunction or displacement of temperature loggers.</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>10.592</rdommax>
+            <attrunit>C</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntperp>
+          <cntper>Science Base</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20171114</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>David S Blehert</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntpos>Microbiologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>6006 Schroeder Road</address>
+          <city>Madison</city>
+          <state>WI</state>
+          <postal>53711</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>608-270-2466</cntvoice>
+        <cntfax>608-270-2415</cntfax>
+        <cntemail>dblehert@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Biological Data Profile of the Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001.1-1999</metstdv>
+  </metainfo>
+</metadata>
