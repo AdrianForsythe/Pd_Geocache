@@ -1,8 +1,6 @@
 #### create a spatial weight matrix
 # crude method, adjacency measured using centroids of counties
 
-library(raster)
-library(spdep)
 
 # load in spatial polygons df for US and Canada
 source("county-fix.R")

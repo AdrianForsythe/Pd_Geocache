@@ -1,10 +1,5 @@
 ##### Sraping geocache records from a list of known cave/mine sites in North America
 
-library(RSelenium)
-library(rvest)
-library(lubridate)
-library(dplyr)
-
 ##### Read in GC list
 gc<-read.csv("data/cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "")
 
@@ -13,10 +8,6 @@ m_gc<-read.csv("data/missing-cave-mines-not-complete.csv",header=T,fill = T,sep 
 
 # create final list
 f_gc<-rbind(gc,m_gc)
-
-##### Start RSelenium
-# make sure the docker version of selenium is installed first!
-# then run: sudo docker run -d -p 4445:4444 selenium/standalone-firefox
 
 # connect to running server
 rD <- rsDriver(port = 4445L, browser = 'firefox')

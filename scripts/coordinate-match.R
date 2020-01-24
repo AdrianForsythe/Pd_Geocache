@@ -1,12 +1,3 @@
-library(vcfR)
-library(adegenet)
-library(poppr)
-library(geosphere)
-library(sf)
-library(sp)
-library(dplyr)
-library(tidyr)
-library(lubridate)
 
 ##### Read in GC list
 gc<-read.csv("cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "")

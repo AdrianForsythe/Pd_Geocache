@@ -2,10 +2,6 @@
 #### for all counties/municipalities in US/Canada
 #### where we have WNS records from
 
-library(rgdal)
-library(maps)
-library(sp)
-library(maptools)
 
 # first run the output from script to match shape files to GC sites
 source("scripts/coordinate-overlap.R")

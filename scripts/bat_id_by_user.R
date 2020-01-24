@@ -1,12 +1,4 @@
 # bat id by user
-#####
-library(dplyr)
-library(lubridate)
-library(ggplot2)
-library(gganimate)
-library(ggmap)
-library(RColorBrewer)
-
 ##### Read in GC list
 gc<-read.csv("cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "")
 

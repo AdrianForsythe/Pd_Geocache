@@ -1,6 +1,4 @@
 
-library(dplyr)
-library(adegenet)
 
 x<-read.table("cave-mines-not-complete-results.tab",sep="\t",fill=T,header = T)
 m_gc<-read.csv("cave-mines-not-complete.csv",header=T)

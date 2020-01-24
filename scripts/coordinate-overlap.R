@@ -1,8 +1,3 @@
-library(geosphere)
-library(sf)
-library(sp)
-library(dplyr)
-library(lubridate)
 
 ##### Read in GC list
 gc<-read.csv("data/cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "",row.names = NULL)

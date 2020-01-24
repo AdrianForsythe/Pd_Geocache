@@ -1,5 +1,3 @@
-library(geosphere)
-library(dplyr)
 
 # read in geocache list
 m_gc<-read.csv("cave-mines-not-complete.csv",header=T)

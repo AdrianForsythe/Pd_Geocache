@@ -1,6 +1,3 @@
-library(dplyr)
-library(lubridate)
-library(ggplot2)
 
 eu.gc<-read.table("data/euro-cave-not-complete-results.tab",header=T,fill = T,sep = "\t",na.strings = "",quote = "",comment.char = "")
 eu.gc$date<-mdy(eu.gc$date)

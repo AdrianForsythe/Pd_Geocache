@@ -1,11 +1,5 @@
 ######
 # mapping cave visits
-library(dplyr)
-library(lubridate)
-library(ggplot2)
-library(gganimate)
-library(ggmap)
-library(RColorBrewer)
 
 ##### Read in GC list
 gc<-read.csv("data/cave-mines-not-complete.csv",header=T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = "")
@@ -89,7 +83,6 @@ ggplot(user.activity.date,aes(x=date))+
         axis.title = element_text(size = 12))
 ggsave(filename = "figures/max-visits-date.png",plot=last_plot())
 
-library(lme4)
 summary(lmer(total ~ date + (1|GC),data = user.activity.date))
 
 #### ANIMATE
@@ -109,7 +102,6 @@ p<-ggmap(map)+
 anim_save("figures/users_year.gif",animation = p)
 
 ## Distance travelled by users
-library(geosphere)
 
 travellers<-all_visits_window %>% group_by(users) %>% mutate(finds = n()) %>% 
   filter(finds >1 & status %in% c("Found it","Didn't find it"))

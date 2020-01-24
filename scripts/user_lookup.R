@@ -1,9 +1,4 @@
 # geocache user lookup
-library(RSelenium)
-library(rvest)
-library(lubridate)
-library(dplyr)
-library(ggplot2)
 
 #start RSelenium
 #connect to running server

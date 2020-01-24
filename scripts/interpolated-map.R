@@ -1,6 +1,3 @@
-library(dplyr)
-library(lubridate)
-library(ggmap)
 
 ######
 # read in geocache list
@@ -23,7 +20,6 @@ all_results_merge$year <- year(mdy(all_results_merge$date))
 # trim down
 geocache.locs<-all_results_merge %>% group_by(i,lon,lat) %>% summarise(total=n())
 
-library(akima)
 # interp of total visits
 pts.grid <- interp(geocache.locs$lon,geocache.locs$lat,geocache.locs$total,duplicate = "mean")
 pts.grid2 <- expand.grid(x=pts.grid$x, y=pts.grid$y)

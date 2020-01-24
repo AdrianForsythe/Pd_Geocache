@@ -1,7 +1,3 @@
-library(dplyr)
-library(esri2sf)
-library(sp)
-library(lubridate)
 
 # url for Bat Hibernation Period (Fall-Winter-Spring)
 url2 <- "https://www.sciencebase.gov/arcgis/rest/services/Catalog/59d45504e4b05fe04cc3d3e0/MapServer/2"
