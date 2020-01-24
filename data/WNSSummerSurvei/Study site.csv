@@ -1,0 +1,9 @@
+ResearchID,SiteCode,State,County,Winter Popn Class,Winter diversity
+44690,IN1,IN,Monroe,reduced-contaminated,"MYSO, MYLU, EPFU, PESU"
+44691,KY3,KY,Breckinridge,stable-contaminated,"MYLU, PESU, MYSE, MYSO, MYGR, MYLE"
+44692,KY2,KY,Carter,stable-clean,"MYSO, MYLU, MYSE, PESU, EPFU"
+44693,OH1,OH,Lawrence,reduced-contaminated,"MYLU, MYSO, PESU, EPFU, MYSE"
+44694,KY4,KY,Trigg,stable-contaminated,"EPFU, MYSO, MYLU, MYSE, PESU"
+44695,KY1,KY,Edmonson,stable-clean,"MYSO, MYLU, PESU, EPFU, MYSE"
+44696,TN1,TN,Montgomery,reduced-contaminated,"PESU, MYLU, MYSE, EPFU"
+44697,VA1,VA,Wise,stable-contaminated,"MYLU, PESU, MYSO, MYLE, EPFU"

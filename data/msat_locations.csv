@@ -1,0 +1,299 @@
+Region,Country,Province,StrainID,sra_code,lat,lon,cave,year,adj.lat,adj.lon
+North America,USA,NC,US7,US7,36.140093,-81.907196,Avery,2011,36.140093,-81.907196
+North America,USA,NC,US8,US8,36.140093,-81.907196,Avery,2011,36.140093,-81.907196
+North America,Canada,NB,NB16,NB16,45.923222,-64.645711,Berryton Cave,2012,45.8751,-64.871633
+North America,Canada,NB,NB14,NB14,45.923222,-64.645711,Berryton Cave,2012,45.8751,-64.871633
+North America,Canada,NB,NB10,NB10,45.923222,-64.645711,Berryton Cave,2012,45.8751,-64.871633
+North America,Canada,NB,NB11,NB11,45.923222,-64.645711,Berryton Cave,2012,45.8751,-64.871633
+North America,Canada,NB,NB13,NB13,45.923222,-64.645711,Berryton Cave,2012,45.8751,-64.871633
+North America,Canada,NB,NB17,NB17,45.923222,-64.645711,Berryton Cave,2012,45.8751,-64.871633
+North America,Canada,NB,NB18,NB18,45.923222,-64.645711,Berryton Cave,2012,45.8751,-64.871633
+North America,Canada,NB,NB7,NB7,45.923222,-64.645711,Berryton Cave,2012,45.8751,-64.871633
+North America,Canada,NB,NB53,NB53,45.923222,-64.645711,Berryton Cave,2012,45.8751,-64.871633
+North America,Canada,NB,NB19,NB19,45.923222,-64.645711,Berryton Cave,2012,45.8751,-64.871633
+North America,Canada,NB,NB12,NB12,45.923222,-64.645711,Berryton Cave,2012,45.8751,-64.871633
+North America,Canada,NB,NB20,NB20,45.923222,-64.645711,Berryton Cave,2012,45.8751,-64.871633
+North America,Canada,NB,NB21,NB21,45.923222,-64.645711,Berryton Cave,2012,45.8751,-64.871633
+North America,Canada,NB,NB22,NB22,45.923222,-64.645711,Berryton Cave,2011,45.8751,-64.871633
+North America,Canada,PEI,PE6,PE6,46.060933,-62.710862,Caledonia,2013,46.060933,-62.710862
+North America,Canada,NB,NB3,NB3,45.560171,-64.280423,Dorchester Mine,2012,45.8751,-64.871633
+North America,Canada,NB,NB35,NB35,45.560171,-64.280423,Dorchester Mine,2012,45.8751,-64.871633
+North America,Canada,NB,NB48,NB48,45.560171,-64.280423,Dorchester Mine,2012,45.8751,-64.871633
+North America,Canada,NB,NB27,NB27,45.560171,-64.280423,Dorchester Mine,2012,45.8751,-64.871633
+North America,Canada,NB,NB49,NB49,45.560171,-64.280423,Dorchester Mine,2012,45.8751,-64.871633
+North America,Canada,NB,NB26,NB26,45.560171,-64.280423,Dorchester Mine,2012,45.8751,-64.871633
+North America,Canada,NS,NS1,NS1,45.000131,-64.157238,Falmouth,2013,45.000131,-64.157238
+North America,USA,WV,US12,US12,38.084851,-81.073608,Fayette,2011,38.084851,-81.073608
+North America,Canada,NB,NB4,NB4,45.39043,-65.22053,Glebe Mine,2012,45.659833,-65.3814
+North America,Canada,NB,NB33,NB33,45.39043,-65.22053,Glebe Mine,2012,45.659833,-65.3814
+North America,Canada,NB,NB47,NB47,45.39043,-65.22053,Glebe Mine,2012,45.659833,-65.3814
+North America,Canada,NB,NB57,NB57,45.39043,-65.22053,Glebe Mine,2012,45.659833,-65.3814
+North America,Canada,NB,NB41,NB41,45.39043,-65.22053,Glebe Mine,2012,45.659833,-65.3814
+North America,Canada,NB,NB61,NB61,45.39043,-65.22053,Glebe Mine,2012,45.659833,-65.3814
+North America,Canada,NB,NB50,NB50,45.39043,-65.22053,Glebe Mine,2012,45.659833,-65.3814
+North America,Canada,NB,NB9,NB9,45.39043,-65.22053,Glebe Mine,2012,45.659833,-65.3814
+North America,Canada,NB,NB23,NB23,45.39043,-65.22053,Glebe Mine,2012,45.659833,-65.3814
+North America,Canada,NB,NB44,NB44,45.39043,-65.22053,Glebe Mine,2012,45.659833,-65.3814
+North America,USA,VA,US1,US1,43.784759,-72.753782,Greely Mine,2013,43.784759,-72.753782
+North America,USA,WV,US5,US5,37.786538,-80.307934,Greenbrier,2010,37.786538,-80.307934
+North America,Canada,NB,NB36,NB36,45.180017,-66.030033,Harbells Cave,2012,45.30035,-66.05085
+North America,Canada,NB,NB28,NB28,45.180017,-66.030033,Harbells Cave,2012,45.30035,-66.05085
+North America,Canada,NB,NB2,NB2,45.180017,-66.030033,Harbells Cave,2012,45.30035,-66.05085
+North America,Canada,NB,NB37,NB37,45.180017,-66.030033,Harbells Cave,2012,45.30035,-66.05085
+North America,Canada,NB,NB5,NB5,45.180017,-66.030033,Harbells Cave,2012,45.30035,-66.05085
+North America,Canada,NB,NB63,NB63,45.180017,-66.030033,Harbells Cave,2012,45.30035,-66.05085
+North America,Canada,NB,NB31,NB31,45.180017,-66.030033,Harbells Cave,2012,45.30035,-66.05085
+North America,Canada,NB,NB25,NB25,45.180127,-66.400075,Howes Cave,2012,45.180127,-66.400075
+North America,USA,OH,US11,US11,38.653343,-82.516937,Lawrence,2011,38.653343,-82.516937
+North America,Canada,NB,NB30,NB30,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,Canada,NB,NB67,NB67,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,Canada,NB,NB1,NB1,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,Canada,NB,NB62,NB62,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,Canada,NB,NB55,NB55,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,Canada,NB,NB38,NB38,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,Canada,NB,NB24,NB24,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,Canada,NB,NB32,NB32,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,Canada,NB,NB39,NB39,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,Canada,NB,NB40,NB40,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,Canada,NB,NB43,NB43,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,Canada,NB,NB6,NB6,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,Canada,NB,NB64,NB64,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,Canada,NB,NB66,NB66,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,Canada,NB,NB69,NB69,45.36055,-65.26024,Markhamville Mine,2012,45.557967,-65.52665
+North America,USA,TN,Gd00487,22997-1,36.3805,-84.9325,Missing1,2010,36.3805,-84.9325
+North America,USA,TN,Gd00157,22948-1,36.4969,-87.3829,Missing2,2010,36.4969,-87.3829
+North America,USA,TN,Gd00490,23444-1,36.4969,-87.3829,Missing2,2011,36.4969,-87.3829
+North America,USA,TN,Gd00484,22930-2,36.5129,-82.3041,Missing3,2010,36.5129,-82.3041
+North America,USA,VA,Gd00491,23455-1,36.9752,-82.6212,Missing4,2011,36.9752,-82.6212
+North America,USA,VA,Gd00481,22469-1,37.314,-80.7037,Missing5,2009,37.314,-80.7037
+North America,USA,IN,Gd00489,23434-1W,38.2924,-86.4517,Missing6,2011,38.2924,-86.4517
+North America,USA,IN,Gd00488,23414-1W,38.6,-86.1053,Missing7,2011,38.6,-86.1053
+North America,USA,WV,Gd00084,22429-8,38.69,-79.36,Missing8,2009,38.69,-79.36
+North America,USA,MO,Gd05828,23897-2,39.058,-90.96,Missing9,2012,39.058,-90.96
+North America,USA,DE,Gd05827,23877-1,39.5783,-75.639,Missing10,2012,39.5783,-75.639
+North America,USA,MD,Gd00485,22949-4,39.6215,-78.6989,Missing11,2010,39.6215,-78.6989
+North America,USA,NJ,Gd00156,22442-2,40.8572,-74.9973,Missing12,2009,40.8572,-74.9973
+North America,Canada,ON,ON14,ON14,40.900279,-77.356195,Missing13,2012,40.900279,-77.356195
+North America,USA,PA,Gd00155,22504-1,40.9193,-77.82,Missing14,2009,40.9193,-77.82
+North America,USA,CT,Gd00479,22004-1,41.7925,-73.2453,Missing15,2008,41.7925,-73.2453
+North America,USA,CT,Gd00480,22426-2,41.7925,-73.2453,Missing15,2009,41.7925,-73.2453
+North America,USA,NY,Gd00482,22480-1,41.8881,-74.2586,Missing16,2009,41.8881,-74.2586
+North America,USA,MA,Gd00082,20693-1,42.1531,-72.6316,Missing17,2008,42.1531,-72.6316
+North America,USA,MA,Gd00478,20682-10,42.3707,-73.2064,Missing18,2008,42.3707,-73.2064
+North America,USA,VT,Gd00477,20674-9,43.0355,-73.093,Missing19,2008,43.0355,-73.093
+North America,USA,VT,Gd00483,22884-4W,43.5801,-73.0366,Missing20,2010,43.5801,-73.0366
+North America,Canada,ON,ON10,ON10,44.02,-80.06,Missing21,2013,44.02,-80.06
+North America,Canada,ON,ON3,ON3,44.28,-77.28,Missing22,2013,44.28,-77.28
+North America,Canada,ON,ON11,ON11,44.54,-80.96,Missing23,2013,44.54,-80.96
+North America,USA,ME,Gd05826,23874-1,44.5629,-68.3682,Missing24,2011,44.5629,-68.3682
+Europe,France,Aquitaine,Gd00494,Gd41,45.1,0.7,Missing25,2009,45.1,0.7
+North America,Canada,ON,ON4,ON4,45.3,-77.63,Missing26,2013,45.3,-77.63
+North America,Canada,QU,QU12,QU12,45.52,-71.28,Missing27,2013,45.52,-71.28
+North America,Canada,QU,QU13,QU13,45.52,-71.28,Missing27,2013,45.52,-71.28
+North America,Canada,NB,Gd05846,W41203,45.9369,-64.4769,Missing28,2012,45.9369,-64.4769
+North America,Canada,ON,ON15,ON15,46.140093,-81.907196,Missing29,2013,46.140093,-81.907196
+North America,Canada,ON,ON8,ON8,46.31,-78.71,Missing30,2013,46.31,-78.71
+North America,Canada,ON,ON9,ON9,46.31,-78.71,Missing30,2013,46.31,-78.71
+North America,Canada,QU,QU16,QU16,47.002968,-71.194153,Missing31,2013,47.002968,-71.194153
+Europe,Switzerland,Argau,Gd00079,GU350433,47.08333,8,Missing32,2009,47.08333,8
+Europe,Hungary,Kislod,Gd00080,GU350434,47.1455,17.6224,Missing33,2009,47.1455,17.6224
+North America,Canada,ON,ON5,ON5,47.65,-80.77,Missing34,2013,47.65,-80.77
+North America,Canada,ON,Gd00085,22971-3,48.15,-80.0333,Missing35,2010,48.15,-80.0333
+North America,Canada,ON,ON2,ON2,48.15,-80.03,Missing36,2013,48.15,-80.03
+North America,Canada,ON,ON1,ON1,48.16,-80.02,Missing37,2013,48.16,-80.02
+North America,Canada,ON,ON7,ON7,48.46,-81.26,Missing38,2013,48.46,-81.26
+North America,Canada,ON,ON6,ON6,48.46,-81.26,Missing38,2013,48.46,-81.26
+North America,Canada,ON,Gd00486,22972-2W,50.4454,-86.0472,Missing39,2010,50.4454,-86.0472
+Europe,Ukraine,Ukraine,Gd00501,Gd44,50.45,30.5,Missing40,2011,50.45,30.5
+Europe,Germany,Thuringen,Gd00003,GU999986,51.5167,11.1667,Missing41,2009,51.5167,11.1667
+North America,Canada,NB,Gd05837,461202,,,Missing42,2012,0,0
+North America,Canada,NB,Gd05833,312202A,,,Missing43,2012,0,0
+North America,Canada,NB,Gd05850,521106,,,Missing44,2012,0,0
+North America,Canada,NB,Gd05849,572203,,,Missing45,2012,0,0
+North America,Canada,NB,Gd05843,432101,,,Missing46,2012,0,0
+North America,Canada,NB,Gd05845,W28109,,,Missing47,2012,0,0
+North America,Canada,NB,Gd05844,2011,,,Missing48,2011,0,0
+North America,Canada,NB,Gd05847,101204,,,Missing49,2012,0,0
+North America,Canada,NB,Gd05839,W40104,,,Missing50,2012,0,0
+North America,Canada,NB,Gd05831,W36105,,,Missing51,2012,0,0
+North America,Canada,NB,Gd05829,W30108,,,Missing52,2012,0,0
+North America,Canada,NB,Gd05830,42201,,,Missing53,2012,0,0
+North America,Canada,NB,Gd05832,212104,,,Missing54,2012,0,0
+North America,Canada,NB,Gd05834,622202A,,,Missing55,2012,0,0
+North America,Canada,NB,Gd05835,422101,,,Missing56,2012,0,0
+North America,Canada,NB,Gd05836,412101,,,Missing57,2012,0,0
+North America,Canada,NB,Gd05838,MO7106,,,Missing58,2012,0,0
+North America,Canada,NB,Gd05840,S1205,,,Missing59,2012,0,0
+North America,Canada,NB,Gd05841,162202,,,Missing60,2012,0,0
+North America,Canada,NB,Gd05842,11106,,,Missing61,2012,0,0
+North America,Canada,NB,Gd05848,662104,,,Missing62,2012,0,0
+North America,Canada,NS,Gd06018,6366,,,Missing63,2012,0,0
+North America,Canada,NS,Gd06017,BBC7,,,Missing64,2012,0,0
+North America,Canada,NS,Gd06020,R5,,,Missing65,2012,0,0
+North America,Canada,NS,Gd06022,76A9,,,Missing66,2012,0,0
+North America,Canada,NS,Gd06012,C2,,,Missing67,2012,0,0
+North America,Canada,NS,Gd06024,R9,,,Missing68,2012,0,0
+North America,Canada,NS,Gd06021,R6,,,Missing69,2012,0,0
+North America,Canada,NS,Gd06023,R8,,,Missing70,2012,0,0
+North America,Canada,NS,Gd06013,C3,,,Missing71,2012,0,0
+North America,Canada,NS,Gd06014,C4,,,Missing72,2012,0,0
+North America,Canada,NS,Gd06016,R1,,,Missing73,2012,0,0
+North America,Canada,NS,Gd06019,R4,,,Missing74,2012,0,0
+North America,Canada,NS,Gd06015,C5,,,Missing75,2012,0,0
+North America,USA,CT,Gd05628,3-CT-6,,,Missing76,2009,0,0
+North America,USA,MA,Gd05635,7-MA-10,,,Missing77,2009,0,0
+North America,USA,NH,Gd05629,3-NH-12,,,Missing78,2009,0,0
+North America,USA,NH,Gd05639,7W,,,Missing79,2011,0,0
+North America,USA,NH,Gd05630,9S,,,Missing80,2011,0,0
+North America,USA,NH,Gd05641,10S,,,Missing81,2011,0,0
+North America,USA,NH,Gd05640,10F,,,Missing82,2012,0,0
+North America,USA,NH,Gd05633,3-NH-10,,,Missing83,2009,0,0
+North America,USA,NH,Gd05638,9W,,,Missing84,2011,0,0
+North America,USA,NH,Gd05632,3-NH-7,,,Missing85,2009,0,0
+North America,USA,NH,Gd05634,7S,,,Missing86,2011,0,0
+North America,USA,NJ,Gd00083,22442-1,,,Missing87,2009,0,0
+North America,USA,NY,Gd00707,WW20,,,Missing88,2011,0,0
+North America,USA,NY,Gd14868,WHM-4-41,,,Missing89,2008,0,0
+North America,USA,NY,Gd14866,WHM-4-28,,,Missing90,2008,0,0
+North America,USA,NY,Gd14486,NY,,,Missing91,2008,0,0
+North America,USA,NY,Gd14879,GM-O-1,,,Missing92,2008,0,0
+North America,USA,NY,Gd14884,GM-F-3,,,Missing93,2008,0,0
+North America,USA,NY,Gd14487,NY,,,Missing94,2008,0,0
+North America,USA,NY,Gd00753,HM12B,,,Missing95,2011,0,0
+North America,USA,NY,Gd14068,North-5,,,Missing96,2013,0,0
+North America,USA,NY,Gd14484,NY,,,Missing97,2008,0,0
+North America,USA,NY,Gd14485,NY,,,Missing98,2008,0,0
+North America,USA,NY,Gd14867,WHM-4-32,,,Missing99,2008,0,0
+North America,USA,NY,Gd14876,BM7,,,Missing100,2009,0,0
+North America,USA,NY,Gd14880,GM-O-2,,,Missing101,2008,0,0
+North America,USA,NY,Gd14881,GM-O-3,,,Missing102,2008,0,0
+North America,USA,NY,Gd14882,GM-F-1,,,Missing103,2009,0,0
+North America,USA,NY,Gd14883,GM-F-2,,,Missing104,2008,0,0
+North America,USA,VA,Gd05626,1F,,,Missing105,2012,0,0
+North America,USA,VA,Gd05627,1S,,,Missing106,2011,0,0
+North America,USA,VT,Gd05631,4W,,,Missing107,2011,0,0
+North America,USA,VT,Gd05644,4S,,,Missing108,2011,0,0
+North America,USA,VT,Gd05636,5F,,,Missing109,2011,0,0
+North America,USA,VT,Gd05637,5W,,,Missing110,2011,0,0
+North America,USA,WV,Gd05642,15S,,,Missing111,2011,0,0
+North America,USA,WV,Gd05643,15W,,,Missing112,2011,0,0
+Europe,Belgium,Wallonie,Gd00500,Gd35,,,Missing113,2010,0,0
+Europe,Estonia,Harju,Gd00497,Gd150,,,Missing114,2011,0,0
+Europe,France,France,Gd00493,Gd23,,,Missing115,2011,0,0
+Europe,France,France,Gd00492,Gd24,,,Missing116,2011,0,0
+Europe,France,Bretagne,Gd00496,Gd38,,,Missing117,2010,0,0
+Europe,France,Bretagne,Gd00495,Gd38,,,Missing118,2010,0,0
+Europe,Poland,Poland,Gd00498,Gd30,,,Missing119,2010,0,0
+Europe,Ukraine,Lower Silesia,Gd00499,Gd31,,,Missing120,2010,0,0
+Europe,Unknown,Unknown,Gd_00388-ca,Gd_00388-ca,,,Missing121,,0,0
+Europe,Unknown,Unknown,Gd_00388-cb,Gd_00388-cb,,,Missing122,,0,0
+Europe,Unknown,Unknown,Gd_00388-cc,Gd_00388-cc,,,Missing123,,0,0
+Europe,Unknown,Unknown,Gd_00389-aa,Gd_00389-aa,,,Missing124,,0,0
+Europe,Unknown,Unknown,Gd_00389-ab,Gd_00389-ab,,,Missing125,,0,0
+Europe,Unknown,Unknown,Gd_00389-ac,Gd_00389-ac,,,Missing126,,0,0
+Europe,Unknown,Unknown,Gd_00390-aa,Gd_00390-aa,,,Missing127,,0,0
+Europe,Unknown,Unknown,Gd_00390-ab,Gd_00390-ab,,,Missing128,,0,0
+Europe,Unknown,Unknown,Gd_00390-ac,Gd_00390-ac,,,Missing129,,0,0
+Europe,Unknown,Unknown,Gd_00391-bb,Gd_00391-bb,,,Missing130,,0,0
+Europe,Unknown,Unknown,Gd_00391-bc,Gd_00391-bc,,,Missing131,,0,0
+Europe,Unknown,Unknown,Gd_00391-ca,Gd_00391-ca,,,Missing132,,0,0
+Europe,Unknown,Unknown,Gd_00391-cb,Gd_00391-cb,,,Missing133,,0,0
+Europe,Unknown,Unknown,Gd_00303-ba,Gd_00303-ba,,,Missing134,,0,0
+Europe,Unknown,Unknown,Gd_00303-ca,Gd_00303-ca,,,Missing135,,0,0
+Europe,Unknown,Unknown,Gd_00303-cc,Gd_00303-cc,,,Missing136,,0,0
+Europe,Unknown,Unknown,Gd_00304-ba,Gd_00304-ba,,,Missing137,,0,0
+Europe,Unknown,Unknown,Gd_00304-bb,Gd_00304-bb,,,Missing138,,0,0
+Europe,Unknown,Unknown,Gd_00304-ca,Gd_00304-ca,,,Missing139,,0,0
+Europe,Unknown,Unknown,Gd_00305-aa,Gd_00305-aa,,,Missing140,,0,0
+Europe,Unknown,Unknown,Gd_00305-ba,Gd_00305-ba,,,Missing141,,0,0
+Europe,Unknown,Unknown,Gd_00305-ca,Gd_00305-ca,,,Missing142,,0,0
+Europe,Unknown,Unknown,Gd_00306-ba,Gd_00306-ba,,,Missing143,,0,0
+Europe,Unknown,Unknown,Gd_00306-bb,Gd_00306-bb,,,Missing144,,0,0
+Europe,Unknown,Unknown,Gd_00306-bc,Gd_00306-bc,,,Missing145,,0,0
+Europe,Unknown,Unknown,Gd_00306-ca,Gd_00306-ca,,,Missing146,,0,0
+Europe,Unknown,Unknown,Gd_00306-cb,Gd_00306-cb,,,Missing147,,0,0
+Europe,Unknown,Unknown,Gd_00306-cc,Gd_00306-cc,,,Missing148,,0,0
+Europe,Unknown,Unknown,Gd_00307-ba,Gd_00307-ba,,,Missing149,,0,0
+Europe,Unknown,Unknown,Gd_00307-bb,Gd_00307-bb,,,Missing150,,0,0
+Europe,Unknown,Unknown,Gd_00308-aa,Gd_00308-aa,,,Missing151,,0,0
+Europe,Unknown,Unknown,Gd_00308-ab,Gd_00308-ab,,,Missing152,,0,0
+Europe,Unknown,Unknown,Gd_00308-ac,Gd_00308-ac,,,Missing153,,0,0
+Europe,Unknown,Unknown,Gd_00309-ba,Gd_00309-ba,,,Missing154,,0,0
+Europe,Unknown,Unknown,Gd_00309-bb,Gd_00309-bb,,,Missing155,,0,0
+Europe,Unknown,Unknown,Gd_00310-aa,Gd_00310-aa,,,Missing156,,0,0
+Europe,Unknown,Unknown,Gd_00310-ab,Gd_00310-ab,,,Missing157,,0,0
+Europe,Unknown,Unknown,Gd_00310-ba,Gd_00310-ba,,,Missing158,,0,0
+Europe,Unknown,Unknown,Gd_00311-aa,Gd_00311-aa,,,Missing159,,0,0
+Europe,Unknown,Unknown,Gd_00311-ab,Gd_00311-ab,,,Missing160,,0,0
+Europe,Unknown,Unknown,Gd_00311-ac,Gd_00311-ac,,,Missing161,,0,0
+Europe,Unknown,Unknown,Gd_00311-ba,Gd_00311-ba,,,Missing162,,0,0
+Europe,Unknown,Unknown,Gd_00312-aa,Gd_00312-aa,,,Missing163,,0,0
+Europe,Unknown,Unknown,Gd_00312-ab,Gd_00312-ab,,,Missing164,,0,0
+Europe,Unknown,Unknown,Gd_00312-ba,Gd_00312-ba,,,Missing165,,0,0
+Europe,Unknown,Unknown,Gd_00313-ba,Gd_00313-ba,,,Missing166,,0,0
+Europe,Unknown,Unknown,Gd_00313-bb,Gd_00313-bb,,,Missing167,,0,0
+Europe,Unknown,Unknown,Gd_00313-bc,Gd_00313-bc,,,Missing168,,0,0
+Europe,Unknown,Unknown,Gd_00314-ca,Gd_00314-ca,,,Missing169,,0,0
+Europe,Unknown,Unknown,Gd_00314-cb,Gd_00314-cb,,,Missing170,,0,0
+Europe,Unknown,Unknown,Gd_00314-cc,Gd_00314-cc,,,Missing171,,0,0
+Europe,Unknown,Unknown,Gd_00315-ba,Gd_00315-ba,,,Missing172,,0,0
+Europe,Unknown,Unknown,Gd_00315-bb,Gd_00315-bb,,,Missing173,,0,0
+Europe,Unknown,Unknown,Gd_00315-bc,Gd_00315-bc,,,Missing174,,0,0
+Europe,Unknown,Unknown,Gd_00316-ea,Gd_00316-ea,,,Missing175,,0,0
+Europe,Unknown,Unknown,Gd_00316-ec,Gd_00316-ec,,,Missing176,,0,0
+Europe,Unknown,Unknown,Gd_00316-fa,Gd_00316-fa,,,Missing177,,0,0
+Europe,Unknown,Unknown,Gd_00316-fb,Gd_00316-fb,,,Missing178,,0,0
+Europe,Unknown,Unknown,Gd_00317-ba,Gd_00317-ba,,,Missing179,,0,0
+Europe,Unknown,Unknown,Gd_00317-bb,Gd_00317-bb,,,Missing180,,0,0
+Europe,Unknown,Unknown,Gd_00317-bc,Gd_00317-bc,,,Missing181,,0,0
+Europe,Unknown,Unknown,Gd_00318-bb,Gd_00318-bb,,,Missing182,,0,0
+Europe,Unknown,Unknown,Gd_00318-bc,Gd_00318-bc,,,Missing183,,0,0
+Europe,Unknown,Unknown,Gd_00318-ca,Gd_00318-ca,,,Missing184,,0,0
+Europe,Unknown,Unknown,Gd_00319-ba,Gd_00319-ba,,,Missing185,,0,0
+Europe,Unknown,Unknown,Gd_00319-bb,Gd_00319-bb,,,Missing186,,0,0
+Europe,Unknown,Unknown,Gd_00319-bc,Gd_00319-bc,,,Missing187,,0,0
+Europe,Unknown,Unknown,Gd_00320-bb,Gd_00320-bb,,,Missing188,,0,0
+Europe,Unknown,Unknown,Gd_00320-bc,Gd_00320-bc,,,Missing189,,0,0
+Europe,Unknown,Unknown,Gd_00320-ca,Gd_00320-ca,,,Missing190,,0,0
+Europe,Unknown,Unknown,Gd_00320-cb,Gd_00320-cb,,,Missing191,,0,0
+Europe,Unknown,Unknown,Gd_00321-ba,Gd_00321-ba,,,Missing192,,0,0
+Europe,Unknown,Unknown,Gd_00321-bb,Gd_00321-bb,,,Missing193,,0,0
+Europe,Unknown,Unknown,Gd_00321-bc,Gd_00321-bc,,,Missing194,,0,0
+Europe,Unknown,Unknown,Gd_00321-bd,Gd_00321-bd,,,Missing195,,0,0
+Europe,Unknown,Unknown,Gd_00321-be,Gd_00321-be,,,Missing196,,0,0
+Europe,Unknown,Unknown,Gd_00321-ca,Gd_00321-ca,,,Missing197,,0,0
+Europe,Unknown,Unknown,Gd_00322-ba,Gd_00322-ba,,,Missing198,,0,0
+Europe,Unknown,Unknown,Gd_00322-bb,Gd_00322-bb,,,Missing199,,0,0
+Europe,Unknown,Unknown,Gd_00322-bc,Gd_00322-bc,,,Missing200,,0,0
+North America,Canada,PEI,PE8,PE8,46.014727,-62.610955,Murray River,2013,46.014727,-62.610955
+North America,USA,WV,US14,US14,38.769075,-79.289703,Pendleton,2011,38.769075,-79.289703
+North America,Canada,PEI,PE5,PE5,46.059712,-63.012986,Prim Point,2013,46.059712,-63.012986
+North America,USA,WV,US13,US13,38.848264,-80.010681,Randolph,2011,38.848264,-80.010681
+North America,Canada,PEI,PE2,PE2,46.203033,-63.150144,Rocky Point,2013,46.203033,-63.150144
+North America,Canada,PEI,PE1,PE1,46.203033,-63.150144,Rocky Point,2013,46.203033,-63.150144
+North America,USA,WV,US9,US9,39.121537,-79.648819,Tucker,2011,39.121537,-79.648819
+North America,Canada,PEI,PE3,PE3,46.164912,-62.81343,Uigg,2013,46.164912,-62.81343
+North America,Canada,PEI,PE4,PE4,46.179741,-62.88424,Vernon Bridge,2013,46.179741,-62.88424
+North America,Canada,NB,NB56,NB56,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB34,NB34,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB59,NB59,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB15,NB15,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB60,NB60,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB46,NB46,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB68,NB68,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB42,NB42,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB8,NB8,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB71,NB71,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB54,NB54,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB29,NB29,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB45,NB45,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB52,NB52,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB58,NB58,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB65,NB65,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,Canada,NB,NB70,NB70,45.923222,-64.645711,White Cave,2012,45.923222,-64.645711
+North America,USA,NY,US4,US4,41.86408,-74.081798,Williams Hotel Mine,2013,41.86408,-74.081798
+North America,USA,NY,US3,US3,41.86408,-74.081798,Williams Hotel Mine,2013,41.86408,-74.081798
+North America,USA,NY,US15,US15,41.86408,-74.081798,Williams Hotel Mine,2008,41.86408,-74.081798
+North America,USA,NY,Gd01053,20631-21,41.86408,-74.081798,Williams Hotel Mine,2008,41.86408,-74.081798
+North America,USA,PA,US6,US6,40.900279,-77.356195,Woodward,2010,40.900279,-77.356195
+North America,USA,NC,US10,US10,35.9024,-82.347336,Yancey,2011,35.9024,-82.347336

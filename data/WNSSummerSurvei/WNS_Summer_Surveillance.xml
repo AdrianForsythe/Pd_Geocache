@@ -1,0 +1,2095 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Anne Ballmann</origin>
+        <pubdate>20170106</pubdate>
+        <title>WNS Summer Surveillance: DATA</title>
+        <geoform>Tabular Digital Data</geoform>
+        <pubinfo>
+          <pubplace>Online</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <onlink>http://dx.doi.org/10.5066/F78P5XRX</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Ballmann AE</origin>
+            <origin>MR Torkelson</origin>
+            <origin>EA Bohuski</origin>
+            <origin>RE Russell</origin>
+            <origin>DS Blehert</origin>
+            <pubdate>20170106</pubdate>
+            <title>DISPERSAL HAZARDS OF PSEUDOGYMNOASCUS DESTRUCTANS BY BATS ND HUMAN ACTIVITY AT HIBERNACULA IN SUMMER</title>
+            <geoform>Publication (Journal)</geoform>
+            <pubinfo>
+              <pubplace>Online</pubplace>
+              <publish>Journal of Wildlife Disease</publish>
+            </pubinfo>
+            <onlink>q</onlink>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Bats occupying hibernacula during summer months may play an important role in the epidemiology of white-nose syndrome (WNS). For example, bats exposed to viable Pseudogymnoascus destructans (Pd), the causative agent of WNS, in late summer could spread the fungus by transmitting it to other bats or to other locations suitable for establishment of new environmental reservoirs.  To explore risks for transmission of Pd during the non-hibernal season, we screened bats using hibernacula between July 18 to August 22, 2012 and associated environmental samples for presence of Pd.  Study sites within the eastern United States included six hibernacula known to harbor Pd and two hibernacula in which bats with WNS had not been previously observed.  Standard demographic and morphometric data were recorded for bats captured from inside each study site. Sample types evaluated for the presence of Pd included bat wing swabs, guano pellets from individual bats, swabs of hibernaculum walls, and sediments from the hibernaculum floor.  Additionally, swabs of various trapping and processing equipment and clothing worn into study sites were evaluated for the presence of Pd.</abstract>
+      <purpose>Documents bat species diversity during summer months at select hibernacula; assesses the prevalence of Pd exposure in bats that use contaminated environmental reservoirs (hibernacula) during the summer; identifies which sample types from bats and in the environment should be used for reliable Pd surveillance in summer months; demonstrates potential for contamination of equipment/clothing by Pd when working at or within Pd-contaminated environments even when there is no clinical signs of disease in the bat population</purpose>
+      <supplinf>The bat population at each hibernaculum was classified as either stable or reduced based on Winter 2012/2013 population estimates divided by the average of two to five years of available pre-WNS winter census data (including data from the first year of WNS detection).  Hibernacula with &gt;25% decline in winter count estimates since the detection of WNS were considered to have reduced populations due to WNS.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20120718</begdate>
+          <enddate>20120822</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>Not planned</update>
+    </status>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>summer surveillance</themekey>
+        <themekey>environmental reservoir</themekey>
+        <themekey>guano</themekey>
+        <themekey>human-assisted movement</themekey>
+        <themekey>white nose syndrome</themekey>
+      </theme>
+      <place>
+        <placekt>Common geographic areas</placekt>
+        <placekey>Indiana</placekey>
+        <placekey>Ohio</placekey>
+        <placekey>Virginia</placekey>
+        <placekey>Kentucky</placekey>
+        <placekey>Tennessee</placekey>
+      </place>
+    </keywords>
+    <taxonomy>
+      <keywtax>
+        <taxonkt>USGS Biocomplexity Thesaurus</taxonkt>
+        <taxonkey>Mammals</taxonkey>
+      </keywtax>
+      <taxonsys>
+        <classsys>
+          <classcit>
+            <citeinfo>
+              <origin>ITIS</origin>
+              <pubdate>2016</pubdate>
+              <title>ITIS</title>
+              <geoform>ONLINE_REFERENCE</geoform>
+              <pubinfo>
+                <pubplace>Unknown</pubplace>
+                <publish>ITIS</publish>
+              </pubinfo>
+              <onlink>http://www.itis.gov</onlink>
+            </citeinfo>
+          </classcit>
+        </classsys>
+        <ider>
+          <cntinfo>
+            <cntperp>
+              <cntper>Anne Ballmann</cntper>
+              <cntorg>U.S. Geological Survey</cntorg>
+            </cntperp>
+            <cntaddr>
+              <addrtype>mailing and physical</addrtype>
+              <address>6006 Schroeder Rd</address>
+              <city>Madison</city>
+              <state>WI</state>
+              <postal>53711</postal>
+              <country>USA</country>
+            </cntaddr>
+            <cntvoice>608-270-2445</cntvoice>
+            <cntemail>aballmann@usgs.gov</cntemail>
+          </cntinfo>
+        </ider>
+        <taxonpro>expert advice;;</taxonpro>
+        <taxoncom>relied on local bat biologists for species identification by visual inspection</taxoncom>
+      </taxonsys>
+      <taxongen>several bat species were used in this investigation</taxongen>
+      <taxoncl>
+        <taxonrn>Kingdom</taxonrn>
+        <taxonrv>Animalia</taxonrv>
+        <taxoncl>
+          <taxonrn>Subkingdom</taxonrn>
+          <taxonrv>Bilateria</taxonrv>
+          <taxoncl>
+            <taxonrn>Infrakingdom</taxonrn>
+            <taxonrv>Deuterostomia</taxonrv>
+            <taxoncl>
+              <taxonrn>Phylum</taxonrn>
+              <taxonrv>Chordata</taxonrv>
+              <taxoncl>
+                <taxonrn>Subphylum</taxonrn>
+                <taxonrv>Vertebrata</taxonrv>
+                <taxoncl>
+                  <taxonrn>Infraphylum</taxonrn>
+                  <taxonrv>Gnathostomata</taxonrv>
+                  <taxoncl>
+                    <taxonrn>Superclass</taxonrn>
+                    <taxonrv>Tetrapoda</taxonrv>
+                    <taxoncl>
+                      <taxonrn>Class</taxonrn>
+                      <taxonrv>Mammalia</taxonrv>
+                      <taxoncl>
+                        <taxonrn>Subclass</taxonrn>
+                        <taxonrv>Theria</taxonrv>
+                        <taxoncl>
+                          <taxonrn>Infraclass</taxonrn>
+                          <taxonrv>Eutheria</taxonrv>
+                          <taxoncl>
+                            <taxonrn>Order</taxonrn>
+                            <taxonrv>Chiroptera</taxonrv>
+                            <taxoncl>
+                              <taxonrn>Suborder</taxonrn>
+                              <taxonrv>Yangochiroptera</taxonrv>
+                              <taxoncl>
+                                <taxonrn>Superfamily</taxonrn>
+                                <taxonrv>Vespertilionoidea</taxonrv>
+                                <taxoncl>
+                                  <taxonrn>Family</taxonrn>
+                                  <taxonrv>Vespertilionidae</taxonrv>
+                                  <taxoncl>
+                                    <taxonrn>Subfamily</taxonrn>
+                                    <taxonrv>Vespertilioninae</taxonrv>
+                                    <taxoncl>
+                                      <taxonrn>Tribe</taxonrn>
+                                      <taxonrv>Eptesicini</taxonrv>
+                                      <taxoncl>
+                                        <taxonrn>Genus</taxonrn>
+                                        <taxonrv>Eptesicus</taxonrv>
+                                        <taxoncl>
+                                          <taxonrn>Subgenus</taxonrn>
+                                          <taxonrv>Eptesicus (Eptesicus)</taxonrv>
+                                          <taxoncl>
+                                            <taxonrn>Species</taxonrn>
+                                            <taxonrv>Eptesicus fuscus</taxonrv>
+                                            <common>big brown bat</common>
+                                            <common>Murciélago-moreno norteamericano</common>
+                                            <common>grande chauve-souris brune</common>
+                                            <common>Big Brown Bat</common>
+                                            <taxoncl>
+                                              <taxonrn>Subspecies</taxonrn>
+                                              <taxonrv>Eptesicus fuscus bahamensis</taxonrv>
+                                            </taxoncl>
+                                            <taxoncl>
+                                              <taxonrn>Subspecies</taxonrn>
+                                              <taxonrv>Eptesicus fuscus bernardinus</taxonrv>
+                                            </taxoncl>
+                                            <taxoncl>
+                                              <taxonrn>Subspecies</taxonrn>
+                                              <taxonrv>Eptesicus fuscus dutertreus</taxonrv>
+                                            </taxoncl>
+                                            <taxoncl>
+                                              <taxonrn>Subspecies</taxonrn>
+                                              <taxonrv>Eptesicus fuscus fuscus</taxonrv>
+                                            </taxoncl>
+                                            <taxoncl>
+                                              <taxonrn>Subspecies</taxonrn>
+                                              <taxonrv>Eptesicus fuscus hispaniolae</taxonrv>
+                                            </taxoncl>
+                                            <taxoncl>
+                                              <taxonrn>Subspecies</taxonrn>
+                                              <taxonrv>Eptesicus fuscus lynni</taxonrv>
+                                            </taxoncl>
+                                            <taxoncl>
+                                              <taxonrn>Subspecies</taxonrn>
+                                              <taxonrv>Eptesicus fuscus miradorensis</taxonrv>
+                                            </taxoncl>
+                                            <taxoncl>
+                                              <taxonrn>Subspecies</taxonrn>
+                                              <taxonrv>Eptesicus fuscus osceola</taxonrv>
+                                            </taxoncl>
+                                            <taxoncl>
+                                              <taxonrn>Subspecies</taxonrn>
+                                              <taxonrv>Eptesicus fuscus pallidus</taxonrv>
+                                            </taxoncl>
+                                            <taxoncl>
+                                              <taxonrn>Subspecies</taxonrn>
+                                              <taxonrv>Eptesicus fuscus peninsulae</taxonrv>
+                                            </taxoncl>
+                                            <taxoncl>
+                                              <taxonrn>Subspecies</taxonrn>
+                                              <taxonrv>Eptesicus fuscus petersoni</taxonrv>
+                                            </taxoncl>
+                                            <taxoncl>
+                                              <taxonrn>Subspecies</taxonrn>
+                                              <taxonrv>Eptesicus fuscus wetmorei</taxonrv>
+                                            </taxoncl>
+                                          </taxoncl>
+                                        </taxoncl>
+                                      </taxoncl>
+                                    </taxoncl>
+                                  </taxoncl>
+                                </taxoncl>
+                              </taxoncl>
+                            </taxoncl>
+                          </taxoncl>
+                        </taxoncl>
+                      </taxoncl>
+                    </taxoncl>
+                  </taxoncl>
+                </taxoncl>
+              </taxoncl>
+            </taxoncl>
+          </taxoncl>
+        </taxoncl>
+      </taxoncl>
+      <taxoncl>
+        <taxonrn>Kingdom</taxonrn>
+        <taxonrv>Animalia</taxonrv>
+        <taxoncl>
+          <taxonrn>Subkingdom</taxonrn>
+          <taxonrv>Bilateria</taxonrv>
+          <taxoncl>
+            <taxonrn>Infrakingdom</taxonrn>
+            <taxonrv>Deuterostomia</taxonrv>
+            <taxoncl>
+              <taxonrn>Phylum</taxonrn>
+              <taxonrv>Chordata</taxonrv>
+              <taxoncl>
+                <taxonrn>Subphylum</taxonrn>
+                <taxonrv>Vertebrata</taxonrv>
+                <taxoncl>
+                  <taxonrn>Infraphylum</taxonrn>
+                  <taxonrv>Gnathostomata</taxonrv>
+                  <taxoncl>
+                    <taxonrn>Superclass</taxonrn>
+                    <taxonrv>Tetrapoda</taxonrv>
+                    <taxoncl>
+                      <taxonrn>Class</taxonrn>
+                      <taxonrv>Mammalia</taxonrv>
+                      <taxoncl>
+                        <taxonrn>Subclass</taxonrn>
+                        <taxonrv>Theria</taxonrv>
+                        <taxoncl>
+                          <taxonrn>Infraclass</taxonrn>
+                          <taxonrv>Eutheria</taxonrv>
+                          <taxoncl>
+                            <taxonrn>Order</taxonrn>
+                            <taxonrv>Chiroptera</taxonrv>
+                            <taxoncl>
+                              <taxonrn>Suborder</taxonrn>
+                              <taxonrv>Yangochiroptera</taxonrv>
+                              <taxoncl>
+                                <taxonrn>Superfamily</taxonrn>
+                                <taxonrv>Vespertilionoidea</taxonrv>
+                                <taxoncl>
+                                  <taxonrn>Family</taxonrn>
+                                  <taxonrv>Vespertilionidae</taxonrv>
+                                  <taxoncl>
+                                    <taxonrn>Subfamily</taxonrn>
+                                    <taxonrv>Vespertilioninae</taxonrv>
+                                    <taxoncl>
+                                      <taxonrn>Tribe</taxonrn>
+                                      <taxonrv>Lasiurini</taxonrv>
+                                      <taxoncl>
+                                        <taxonrn>Genus</taxonrn>
+                                        <taxonrv>Lasiurus</taxonrv>
+                                        <taxoncl>
+                                          <taxonrn>Subgenus</taxonrn>
+                                          <taxonrv>Lasiurus (Lasiurus)</taxonrv>
+                                          <taxoncl>
+                                            <taxonrn>Species</taxonrn>
+                                            <taxonrv>Lasiurus borealis</taxonrv>
+                                            <common>red bat</common>
+                                            <common>eastern red bat</common>
+                                            <common>chauve-souris rousse</common>
+                                            <common>Murciélago-cola peluda rojizo</common>
+                                            <common>Eastern Red Bat</common>
+                                          </taxoncl>
+                                        </taxoncl>
+                                      </taxoncl>
+                                    </taxoncl>
+                                  </taxoncl>
+                                </taxoncl>
+                              </taxoncl>
+                            </taxoncl>
+                          </taxoncl>
+                        </taxoncl>
+                      </taxoncl>
+                    </taxoncl>
+                  </taxoncl>
+                </taxoncl>
+              </taxoncl>
+            </taxoncl>
+          </taxoncl>
+        </taxoncl>
+      </taxoncl>
+      <taxoncl>
+        <taxonrn>Kingdom</taxonrn>
+        <taxonrv>Animalia</taxonrv>
+        <taxoncl>
+          <taxonrn>Subkingdom</taxonrn>
+          <taxonrv>Bilateria</taxonrv>
+          <taxoncl>
+            <taxonrn>Infrakingdom</taxonrn>
+            <taxonrv>Deuterostomia</taxonrv>
+            <taxoncl>
+              <taxonrn>Phylum</taxonrn>
+              <taxonrv>Chordata</taxonrv>
+              <taxoncl>
+                <taxonrn>Subphylum</taxonrn>
+                <taxonrv>Vertebrata</taxonrv>
+                <taxoncl>
+                  <taxonrn>Infraphylum</taxonrn>
+                  <taxonrv>Gnathostomata</taxonrv>
+                  <taxoncl>
+                    <taxonrn>Superclass</taxonrn>
+                    <taxonrv>Tetrapoda</taxonrv>
+                    <taxoncl>
+                      <taxonrn>Class</taxonrn>
+                      <taxonrv>Mammalia</taxonrv>
+                      <taxoncl>
+                        <taxonrn>Subclass</taxonrn>
+                        <taxonrv>Theria</taxonrv>
+                        <taxoncl>
+                          <taxonrn>Infraclass</taxonrn>
+                          <taxonrv>Eutheria</taxonrv>
+                          <taxoncl>
+                            <taxonrn>Order</taxonrn>
+                            <taxonrv>Chiroptera</taxonrv>
+                            <taxoncl>
+                              <taxonrn>Suborder</taxonrn>
+                              <taxonrv>Yangochiroptera</taxonrv>
+                              <taxoncl>
+                                <taxonrn>Superfamily</taxonrn>
+                                <taxonrv>Vespertilionoidea</taxonrv>
+                                <taxoncl>
+                                  <taxonrn>Family</taxonrn>
+                                  <taxonrv>Vespertilionidae</taxonrv>
+                                  <taxoncl>
+                                    <taxonrn>Subfamily</taxonrn>
+                                    <taxonrv>Myotinae</taxonrv>
+                                    <taxoncl>
+                                      <taxonrn>Genus</taxonrn>
+                                      <taxonrv>Myotis</taxonrv>
+                                      <taxoncl>
+                                        <taxonrn>Species</taxonrn>
+                                        <taxonrv>Myotis grisescens</taxonrv>
+                                        <common>gray myotis</common>
+                                        <common>Gray Myotis</common>
+                                        <common>gray bat</common>
+                                      </taxoncl>
+                                    </taxoncl>
+                                  </taxoncl>
+                                </taxoncl>
+                              </taxoncl>
+                            </taxoncl>
+                          </taxoncl>
+                        </taxoncl>
+                      </taxoncl>
+                    </taxoncl>
+                  </taxoncl>
+                </taxoncl>
+              </taxoncl>
+            </taxoncl>
+          </taxoncl>
+        </taxoncl>
+      </taxoncl>
+      <taxoncl>
+        <taxonrn>Kingdom</taxonrn>
+        <taxonrv>Animalia</taxonrv>
+        <taxoncl>
+          <taxonrn>Subkingdom</taxonrn>
+          <taxonrv>Bilateria</taxonrv>
+          <taxoncl>
+            <taxonrn>Infrakingdom</taxonrn>
+            <taxonrv>Deuterostomia</taxonrv>
+            <taxoncl>
+              <taxonrn>Phylum</taxonrn>
+              <taxonrv>Chordata</taxonrv>
+              <taxoncl>
+                <taxonrn>Subphylum</taxonrn>
+                <taxonrv>Vertebrata</taxonrv>
+                <taxoncl>
+                  <taxonrn>Infraphylum</taxonrn>
+                  <taxonrv>Gnathostomata</taxonrv>
+                  <taxoncl>
+                    <taxonrn>Superclass</taxonrn>
+                    <taxonrv>Tetrapoda</taxonrv>
+                    <taxoncl>
+                      <taxonrn>Class</taxonrn>
+                      <taxonrv>Mammalia</taxonrv>
+                      <taxoncl>
+                        <taxonrn>Subclass</taxonrn>
+                        <taxonrv>Theria</taxonrv>
+                        <taxoncl>
+                          <taxonrn>Infraclass</taxonrn>
+                          <taxonrv>Eutheria</taxonrv>
+                          <taxoncl>
+                            <taxonrn>Order</taxonrn>
+                            <taxonrv>Chiroptera</taxonrv>
+                            <taxoncl>
+                              <taxonrn>Suborder</taxonrn>
+                              <taxonrv>Yangochiroptera</taxonrv>
+                              <taxoncl>
+                                <taxonrn>Superfamily</taxonrn>
+                                <taxonrv>Vespertilionoidea</taxonrv>
+                                <taxoncl>
+                                  <taxonrn>Family</taxonrn>
+                                  <taxonrv>Vespertilionidae</taxonrv>
+                                  <taxoncl>
+                                    <taxonrn>Subfamily</taxonrn>
+                                    <taxonrv>Myotinae</taxonrv>
+                                    <taxoncl>
+                                      <taxonrn>Genus</taxonrn>
+                                      <taxonrv>Myotis</taxonrv>
+                                      <taxoncl>
+                                        <taxonrn>Species</taxonrn>
+                                        <taxonrv>Myotis leibii</taxonrv>
+                                        <common>small-footed myotis</common>
+                                        <common>eastern small-footed myotis</common>
+                                        <common>chauve-souris pygmée</common>
+                                        <common>Eastern Small-footed Myotis</common>
+                                        <common>eastern small-footed bat</common>
+                                      </taxoncl>
+                                    </taxoncl>
+                                  </taxoncl>
+                                </taxoncl>
+                              </taxoncl>
+                            </taxoncl>
+                          </taxoncl>
+                        </taxoncl>
+                      </taxoncl>
+                    </taxoncl>
+                  </taxoncl>
+                </taxoncl>
+              </taxoncl>
+            </taxoncl>
+          </taxoncl>
+        </taxoncl>
+      </taxoncl>
+      <taxoncl>
+        <taxonrn>Kingdom</taxonrn>
+        <taxonrv>Animalia</taxonrv>
+        <taxoncl>
+          <taxonrn>Subkingdom</taxonrn>
+          <taxonrv>Bilateria</taxonrv>
+          <taxoncl>
+            <taxonrn>Infrakingdom</taxonrn>
+            <taxonrv>Deuterostomia</taxonrv>
+            <taxoncl>
+              <taxonrn>Phylum</taxonrn>
+              <taxonrv>Chordata</taxonrv>
+              <taxoncl>
+                <taxonrn>Subphylum</taxonrn>
+                <taxonrv>Vertebrata</taxonrv>
+                <taxoncl>
+                  <taxonrn>Infraphylum</taxonrn>
+                  <taxonrv>Gnathostomata</taxonrv>
+                  <taxoncl>
+                    <taxonrn>Superclass</taxonrn>
+                    <taxonrv>Tetrapoda</taxonrv>
+                    <taxoncl>
+                      <taxonrn>Class</taxonrn>
+                      <taxonrv>Mammalia</taxonrv>
+                      <taxoncl>
+                        <taxonrn>Subclass</taxonrn>
+                        <taxonrv>Theria</taxonrv>
+                        <taxoncl>
+                          <taxonrn>Infraclass</taxonrn>
+                          <taxonrv>Eutheria</taxonrv>
+                          <taxoncl>
+                            <taxonrn>Order</taxonrn>
+                            <taxonrv>Chiroptera</taxonrv>
+                            <taxoncl>
+                              <taxonrn>Suborder</taxonrn>
+                              <taxonrv>Yangochiroptera</taxonrv>
+                              <taxoncl>
+                                <taxonrn>Superfamily</taxonrn>
+                                <taxonrv>Vespertilionoidea</taxonrv>
+                                <taxoncl>
+                                  <taxonrn>Family</taxonrn>
+                                  <taxonrv>Vespertilionidae</taxonrv>
+                                  <taxoncl>
+                                    <taxonrn>Subfamily</taxonrn>
+                                    <taxonrv>Myotinae</taxonrv>
+                                    <taxoncl>
+                                      <taxonrn>Genus</taxonrn>
+                                      <taxonrv>Myotis</taxonrv>
+                                      <taxoncl>
+                                        <taxonrn>Species</taxonrn>
+                                        <taxonrv>Myotis lucifugus</taxonrv>
+                                        <common>little brown bat</common>
+                                        <common>Miotis norteamericano</common>
+                                        <common>little brown myotis</common>
+                                        <common>petite chauve-souris brune</common>
+                                        <common>Little Brown Myotis</common>
+                                        <taxoncl>
+                                          <taxonrn>Subspecies</taxonrn>
+                                          <taxonrv>Myotis lucifugus alascensis</taxonrv>
+                                        </taxoncl>
+                                        <taxoncl>
+                                          <taxonrn>Subspecies</taxonrn>
+                                          <taxonrv>Myotis lucifugus carissima</taxonrv>
+                                        </taxoncl>
+                                        <taxoncl>
+                                          <taxonrn>Subspecies</taxonrn>
+                                          <taxonrv>Myotis lucifugus lucifugus</taxonrv>
+                                        </taxoncl>
+                                        <taxoncl>
+                                          <taxonrn>Subspecies</taxonrn>
+                                          <taxonrv>Myotis lucifugus pernox</taxonrv>
+                                        </taxoncl>
+                                        <taxoncl>
+                                          <taxonrn>Subspecies</taxonrn>
+                                          <taxonrv>Myotis lucifugus relictus</taxonrv>
+                                        </taxoncl>
+                                      </taxoncl>
+                                    </taxoncl>
+                                  </taxoncl>
+                                </taxoncl>
+                              </taxoncl>
+                            </taxoncl>
+                          </taxoncl>
+                        </taxoncl>
+                      </taxoncl>
+                    </taxoncl>
+                  </taxoncl>
+                </taxoncl>
+              </taxoncl>
+            </taxoncl>
+          </taxoncl>
+        </taxoncl>
+      </taxoncl>
+      <taxoncl>
+        <taxonrn>Kingdom</taxonrn>
+        <taxonrv>Animalia</taxonrv>
+        <taxoncl>
+          <taxonrn>Subkingdom</taxonrn>
+          <taxonrv>Bilateria</taxonrv>
+          <taxoncl>
+            <taxonrn>Infrakingdom</taxonrn>
+            <taxonrv>Deuterostomia</taxonrv>
+            <taxoncl>
+              <taxonrn>Phylum</taxonrn>
+              <taxonrv>Chordata</taxonrv>
+              <taxoncl>
+                <taxonrn>Subphylum</taxonrn>
+                <taxonrv>Vertebrata</taxonrv>
+                <taxoncl>
+                  <taxonrn>Infraphylum</taxonrn>
+                  <taxonrv>Gnathostomata</taxonrv>
+                  <taxoncl>
+                    <taxonrn>Superclass</taxonrn>
+                    <taxonrv>Tetrapoda</taxonrv>
+                    <taxoncl>
+                      <taxonrn>Class</taxonrn>
+                      <taxonrv>Mammalia</taxonrv>
+                      <taxoncl>
+                        <taxonrn>Subclass</taxonrn>
+                        <taxonrv>Theria</taxonrv>
+                        <taxoncl>
+                          <taxonrn>Infraclass</taxonrn>
+                          <taxonrv>Eutheria</taxonrv>
+                          <taxoncl>
+                            <taxonrn>Order</taxonrn>
+                            <taxonrv>Chiroptera</taxonrv>
+                            <taxoncl>
+                              <taxonrn>Suborder</taxonrn>
+                              <taxonrv>Yangochiroptera</taxonrv>
+                              <taxoncl>
+                                <taxonrn>Superfamily</taxonrn>
+                                <taxonrv>Vespertilionoidea</taxonrv>
+                                <taxoncl>
+                                  <taxonrn>Family</taxonrn>
+                                  <taxonrv>Vespertilionidae</taxonrv>
+                                  <taxoncl>
+                                    <taxonrn>Subfamily</taxonrn>
+                                    <taxonrv>Myotinae</taxonrv>
+                                    <taxoncl>
+                                      <taxonrn>Genus</taxonrn>
+                                      <taxonrv>Myotis</taxonrv>
+                                      <taxoncl>
+                                        <taxonrn>Species</taxonrn>
+                                        <taxonrv>Myotis septentrionalis</taxonrv>
+                                        <common>northern myotis</common>
+                                        <common>chauve-souris nordique</common>
+                                        <common>northern long-eared bat</common>
+                                        <common>Northern Myotis</common>
+                                      </taxoncl>
+                                    </taxoncl>
+                                  </taxoncl>
+                                </taxoncl>
+                              </taxoncl>
+                            </taxoncl>
+                          </taxoncl>
+                        </taxoncl>
+                      </taxoncl>
+                    </taxoncl>
+                  </taxoncl>
+                </taxoncl>
+              </taxoncl>
+            </taxoncl>
+          </taxoncl>
+        </taxoncl>
+      </taxoncl>
+      <taxoncl>
+        <taxonrn>Kingdom</taxonrn>
+        <taxonrv>Animalia</taxonrv>
+        <taxoncl>
+          <taxonrn>Subkingdom</taxonrn>
+          <taxonrv>Bilateria</taxonrv>
+          <taxoncl>
+            <taxonrn>Infrakingdom</taxonrn>
+            <taxonrv>Deuterostomia</taxonrv>
+            <taxoncl>
+              <taxonrn>Phylum</taxonrn>
+              <taxonrv>Chordata</taxonrv>
+              <taxoncl>
+                <taxonrn>Subphylum</taxonrn>
+                <taxonrv>Vertebrata</taxonrv>
+                <taxoncl>
+                  <taxonrn>Infraphylum</taxonrn>
+                  <taxonrv>Gnathostomata</taxonrv>
+                  <taxoncl>
+                    <taxonrn>Superclass</taxonrn>
+                    <taxonrv>Tetrapoda</taxonrv>
+                    <taxoncl>
+                      <taxonrn>Class</taxonrn>
+                      <taxonrv>Mammalia</taxonrv>
+                      <taxoncl>
+                        <taxonrn>Subclass</taxonrn>
+                        <taxonrv>Theria</taxonrv>
+                        <taxoncl>
+                          <taxonrn>Infraclass</taxonrn>
+                          <taxonrv>Eutheria</taxonrv>
+                          <taxoncl>
+                            <taxonrn>Order</taxonrn>
+                            <taxonrv>Chiroptera</taxonrv>
+                            <taxoncl>
+                              <taxonrn>Suborder</taxonrn>
+                              <taxonrv>Yangochiroptera</taxonrv>
+                              <taxoncl>
+                                <taxonrn>Superfamily</taxonrn>
+                                <taxonrv>Vespertilionoidea</taxonrv>
+                                <taxoncl>
+                                  <taxonrn>Family</taxonrn>
+                                  <taxonrv>Vespertilionidae</taxonrv>
+                                  <taxoncl>
+                                    <taxonrn>Subfamily</taxonrn>
+                                    <taxonrv>Myotinae</taxonrv>
+                                    <taxoncl>
+                                      <taxonrn>Genus</taxonrn>
+                                      <taxonrv>Myotis</taxonrv>
+                                      <taxoncl>
+                                        <taxonrn>Species</taxonrn>
+                                        <taxonrv>Myotis sodalis</taxonrv>
+                                        <common>Indiana Myotis</common>
+                                        <common>Indiana bat</common>
+                                      </taxoncl>
+                                    </taxoncl>
+                                  </taxoncl>
+                                </taxoncl>
+                              </taxoncl>
+                            </taxoncl>
+                          </taxoncl>
+                        </taxoncl>
+                      </taxoncl>
+                    </taxoncl>
+                  </taxoncl>
+                </taxoncl>
+              </taxoncl>
+            </taxoncl>
+          </taxoncl>
+        </taxoncl>
+      </taxoncl>
+    </taxonomy>
+    <accconst>Yes, several study sites contain T and E bat species so site names have been masked and only county-level spatial resolution is provided</accconst>
+    <useconst>Yes, several study sites contain T and E bat species so site names have been masked and only county-level spatial resolution is provided</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Anne Ballmann</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>6006 Schroeder Road</address>
+          <city>Madison</city>
+          <state>WI</state>
+          <postal>53711</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>608-270-2445</cntvoice>
+        <cntemail>aballmann@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>Winter bat population counts for study sites from respective agency databases (not published)Scott Johnson (IN DNR)Brooke Hines (KY DFW)Josh Campbell (TNWRA), Cory Holliday (TNC)Rick Reynolds (VA DIF)Katrina Schultes (USFS)Rickard Toomey (NPS)</datacred>
+    <native>Environment as of Metadata Creation: Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.4.1 (Build 5686) Service Pack N/A (Build N/A)</native>
+    <tool>
+      <tooldesc>statistical tool to evaluate site charateristics</tooldesc>
+      <toolacc>
+        <onlink>https://cran.r-project.org/</onlink>
+        <toolinst>download from URL</toolinst>
+      </toolacc>
+      <toolcont>
+        <cntinfo>
+          <cntperp>
+            <cntper>Anne Ballmann</cntper>
+            <cntorg>U.S. Geological Surevy</cntorg>
+          </cntperp>
+          <cntaddr>
+            <addrtype>mailing and physical</addrtype>
+            <address>6006 Schroeder Rd</address>
+            <city>Madison</city>
+            <state>WI</state>
+            <postal>53711</postal>
+            <country>USA</country>
+          </cntaddr>
+          <cntvoice>608-270-2445</cntvoice>
+          <cntemail>aballmann@usgs.gov</cntemail>
+        </cntinfo>
+      </toolcont>
+      <toolcite>
+        <citeinfo>
+          <origin>R Core Team</origin>
+          <pubdate>2013</pubdate>
+          <title>R</title>
+          <geoform>Spftware</geoform>
+        </citeinfo>
+      </toolcite>
+    </tool>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>visual inspection of data from handwritten datasheets at time of data entry into MS Access database; retained original hand-written datasheets as reference; ensured digital scale and digital calipers were set to proper units and zeroed prior to each new measurement; calculated certain datafields in MSExcel from original raw data (BMI)</attraccr>
+    </attracc>
+    <logic>No formal logical accuracy tests were conducted</logic>
+    <complete>excluded demographic and morphometric data of bats captured on outside of site entrances; recorded species and noted if it was a recapture</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>No formal positional accuracy tests were conducted</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>No formal positional accuracy tests were conducted</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <method>
+        <methtype>both</methtype>
+        <methdesc>Both lab and field work were done to create these data</methdesc>
+        <methcite>
+          <citeinfo>
+            <origin>BRUNET-ROSSINNI, A. K. AND G. S. WILKINSON</origin>
+            <pubdate>2009</pubdate>
+            <title>Methods for age estimation and senescence in bats. In Ecological and behavioral methods for the study of bats</title>
+            <geoform>Document</geoform>
+            <onlink>None</onlink>
+          </citeinfo>
+        </methcite>
+      </method>
+      <procstep>
+        <procdesc>Field data (species, sex, age-class, repro status, body wt, R forearm length, UV status, WDI) and samples collected between July 18-August 22, 2012.  Samples (wing swabs, guano, environmental swabs, sediment, gear swabs) stored frozen at -20C for up to 6 weeks before transferring to -80C.  Samples processed between May 2013-May 2014.</procdesc>
+        <procdate>20120822</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>We evaluated the effects of site characteristics (i.e., hibernacula with stable winter bat populations and hibernacula with reduced winter bat populations) and sample type (sediment versus wall swab) on observed PCR results using linear regression in a Bayesian framework with R2OpenBUGS (Sturtz et al., 2005) in R (R Core Team, 2013). We modeled observed PCR Ct values (y) for each individual i as normally distributed with a mean of μ and variance of τ (i.e. yi ~ Ɲ(μ,τ)).</procdesc>
+        <procdate>20120920</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>Bats_Inside Attribute Table</enttypl>
+        <enttypd>Table containing attribute information associated with the data set.</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>KeyID</attrlabl>
+        <attrdef>unique site id and sample accession number</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <udom>unique site id and sample accession number</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SiteCode</attrlabl>
+        <attrdef>unique identifier for study site</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>IN1</edomv>
+            <edomvd>Indiana 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY1</edomv>
+            <edomvd>Kentucky 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY2</edomv>
+            <edomvd>Kentucky 2</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY3</edomv>
+            <edomvd>Kentucky 3</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY4</edomv>
+            <edomvd>Kentucky 4</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>OH1</edomv>
+            <edomvd>Ohio 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>TN1</edomv>
+            <edomvd>Tennessee</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>VA1</edomv>
+            <edomvd>Virginia 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Col_Date</attrlabl>
+        <attrdef>date of sample collection (MM/DD/YYYY)</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>7/18/2012</rdommin>
+            <rdommax>8/9/2012</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Species</attrlabl>
+        <attrdef>4 -letter species code based on first two letters of the genus and species (GGSS)</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>EPFU</edomv>
+            <edomvd>Eptesicus fuscus-Big brown bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>LABO</edomv>
+            <edomvd>Lasiurus borealis-Eastern red bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MYGR</edomv>
+            <edomvd>Myotis grisescens-Gray bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MYLE</edomv>
+            <edomvd>Myotis leibii-Eastern small-footed bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MYLU</edomv>
+            <edomvd>Myotis lucifugus-Little brown bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MYSE</edomv>
+            <edomvd>Myotis septentrionalis-Northern long-eared bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MYSO</edomv>
+            <edomvd>Myotis sodalis-Indiana bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>PESU</edomv>
+            <edomvd>Perimyotis pipistrellus-Tricolored bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sex</attrlabl>
+        <attrdef>male or female based on examination of external genital</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>F</edomv>
+            <edomvd>Female bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>M</edomv>
+            <edomvd>Male bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Reprod St</attrlabl>
+        <attrdef>reproductive status of bat determined by visual inspection and classified</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>PL</edomv>
+            <edomvd>post lactation in females</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>NL</edomv>
+            <edomvd>non lactating in females</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>ND</edomv>
+            <edomvd>testes not descended in males</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+		<attrdomv>
+          <edom>
+            <edomv>S</edomv>
+            <edomvd>scrotal testes in males</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+		<attrdomv>
+          <edom>
+            <edomv>NR</edomv>
+            <edomvd>not recorded; reproductive status of males was not recorded at study sites IN1, KY2, and KY3</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+	  <attr>
+        <attrlabl>Age_Class</attrlabl>
+        <attrdef>adult or juvenile bat </attrdef>
+        <attrdefs>(BRUNET-ROSSINNI, A. K. AND G. S. WILKINSON. 2009)</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>adult</edomv>
+            <edomvd>adult bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>juv</edomv>
+            <edomvd>juvenille bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>unk</edomv>
+            <edomvd>Unknown age class</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Capture_method</attrlabl>
+        <attrdef>type of trapping method used</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>hand</edomv>
+            <edomvd>trapped by hand</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>harp trap</edomv>
+            <edomvd>harp trap used</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>mist net</edomv>
+            <edomvd>caught in mist net</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Recapture</attrlabl>
+        <attrdef>had individual bat been captured previously</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>Unknown</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>No</edomv>
+            <edomvd>No the bat had not been previously captured</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Yes</edomv>
+            <edomvd>Yes the bat has been previously captured</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Body_wt__g_</attrlabl>
+        <attrdef>mass of bat to the nearest 0.1 grams at time of sample collection</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>[NULL]</edomv>
+            <edomvd>represents the measurement was failed to be collected prior to the release of the bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>3.97</rdommin>
+            <rdommax>20.5</rdommax>
+            <attrunit>g</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>R_Forearm__mm_</attrlabl>
+        <attrdef>right forearm length (carpus to elbow) to the nearest 0.1 millimeters</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>[NULL]</edomv>
+            <edomvd>represents the measurement was failed to be collected prior to the release of the bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>28.8</rdommin>
+            <rdommax>49.7</rdommax>
+            <attrunit>mm</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>BMI</attrlabl>
+        <attrdef>body mass index calculated to the nearest 0.01 g/mm from body mass divided by right forearm length; a blank cell indicates that either one or both measurements of body wt. or forearm length were failed to be collected prior to the release of the bat such that calculation of BMI was not possible.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>[NULL]</edomv>
+            <edomvd>represents the measurement was failed to be collected prior to the release of the bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.12</rdommin>
+            <rdommax>0.43</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WDI</attrlabl>
+        <attrdef>wing damage index assessed by observer </attrdef>
+        <attrdefs>(REICHARD, J. D. AND T. H. KUNZ. 2009.)</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>no damage</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>minimal damage</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2</edomv>
+            <edomvd>moderate damage</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>NR</edomv>
+            <edomvd>not recorded (WDI not assessed prior to release of the bat)</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>UV</attrlabl>
+        <attrdef>evidence of characteristic fluorescence on wing membrane examined under ultraviolet light (385nm)-pos or neg </attrdef>
+        <attrdefs>(Turner et al. 2014)</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Neg</edomv>
+            <edomvd>Negative for characteristic fluorescence</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Pos</edomv>
+            <edomvd>Positive for characteristic fluorescence</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Feces</attrlabl>
+        <attrdef>guano pellets collected from individual bat</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>No</edomv>
+            <edomvd>No guano pellets collected from individual bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Yes</edomv>
+            <edomvd>guano pellets collected from individual bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Band_ID</attrlabl>
+        <attrdef>metal band data (agency, band number, color) placed or observed on an individual bat at capture</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <udom>metal band data (agency, band number, color) placed or observed on an individual bat at capture</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>wingPCR_Sum__Pos__Neg__Equiv__NA_</attrlabl>
+        <attrdef>result of PCR on wing swab</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>missing</edomv>
+            <edomvd>missing pcr</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Neg</edomv>
+            <edomvd>negative pcr</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Pos</edomv>
+            <edomvd>postive pcr</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>wing_qPCR__Ct_</attrlabl>
+        <attrdef>real-time PCR cycle threshold value obtained from bat wing swab</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>39.99</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>wingFC_Pd</attrlabl>
+        <attrdef>fungal growth of Pd in culture from bat wing swab</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>{Null Value / Empty Field Entry}</edomv>
+            <edomvd>Not recorded</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Neg</edomv>
+            <edomvd>negative fungal growth</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>NG</edomv>
+            <edomvd>no fungal growth</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>OG</edomv>
+            <edomvd>fungal overgrowth</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Pos</edomv>
+            <edomvd>postive fungal growth</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FecalPCR_Sum</attrlabl>
+        <attrdef>result of PCR on guano pellet(s) from individual bat</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>{Null Value / Empty Field Entry}</edomv>
+            <edomvd>Not recorded</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Neg</edomv>
+            <edomvd>negative result of PCR on guano pellet(s) from individual bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Pos</edomv>
+            <edomvd>postive result of PCR on guano pellet(s) from individual bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Fecal_qPCR__Ct_</attrlabl>
+        <attrdef>real-time PCR cycle threshold value obtained from guano pellet of individual bat</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+		<attrdomv>
+          <edom>
+            <edomv>{Null Value / Empty Field Entry}</edomv>
+            <edomvd>Not recorded</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>38.49</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>Enviro Attribute Table</enttypl>
+        <enttypd>Table containing attribute information associated with the data set.</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>KeyID</attrlabl>
+        <attrdef>unique site id and sample accession number</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <udom>unique site id and sample accession number</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SiteCode</attrlabl>
+        <attrdef>unique identifier for study site</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>IN1</edomv>
+            <edomvd>Indiana 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY1</edomv>
+            <edomvd>Kentucky 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY2</edomv>
+            <edomvd>Kentucky 2</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY3</edomv>
+            <edomvd>Kentucky 3</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY4</edomv>
+            <edomvd>Kentucky 4</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>OH1</edomv>
+            <edomvd>Ohio 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>TN1</edomv>
+            <edomvd>Tennessee 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>VA1</edomv>
+            <edomvd>Virginia 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Col_Date</attrlabl>
+        <attrdef>date of sample collection (MM/DD/YYYY)</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>7/20/2012</rdommin>
+            <rdommax>8/9/2012</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sample_type</attrlabl>
+        <attrdef>categorical description of sample collected</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>soil</edomv>
+            <edomvd>soil sample</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>wall</edomv>
+            <edomvd>wall sample</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>envPCR_Sum</attrlabl>
+        <attrdef>result of PCR on environmental sample</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Neg</edomv>
+            <edomvd>Negative result of PCR on environmental sample</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Pos</edomv>
+            <edomvd>Positive result of PCR on environmental sample</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Env_qPCR__Ct_</attrlabl>
+        <attrdef>real-time PCR cycle threshold value obtained from environmental sample</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>38.88</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>Gear Attribute Table</enttypl>
+        <enttypd>Table containing attribute information associated with the data set.</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>KeyID</attrlabl>
+        <attrdef>unique site id and sample accession number</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <udom>unique site id and sample accession number</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SiteCode</attrlabl>
+        <attrdef>unique identifier for study site</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>IN1</edomv>
+            <edomvd>Indiana 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY1</edomv>
+            <edomvd>Kentucky 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY2</edomv>
+            <edomvd>Kentucky 2</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY3</edomv>
+            <edomvd>Kentucky 3</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY4</edomv>
+            <edomvd>Kentucky 4</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>OH1</edomv>
+            <edomvd>Ohio 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>TN1</edomv>
+            <edomvd>Tennessee 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>VA1</edomv>
+            <edomvd>Virginia 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Col_Date</attrlabl>
+        <attrdef>date of sample collection (MM/DD/YYYY)</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>7/18/2012</rdommin>
+            <rdommax>8/22/2012</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>On_site_loc</attrlabl>
+        <attrdef>descriptor of equipment swabbed</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <udom>descriptor of equipment swabbed</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Substrate</attrlabl>
+        <attrdef>description of equipment substrate</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <udom>description of equipment substrate</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PCR_GearSum</attrlabl>
+        <attrdef>result of PCR on gear sample</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Equiv</edomv>
+            <edomvd>Equivocal, equivocal PCR results are defined as samples showing initial amplification activity but which fail to reach the assay threshold by 40 amplification cycles</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Neg</edomv>
+            <edomvd>Negative</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Pos</edomv>
+            <edomvd>Postive</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Gear_qPCR(Ct)</attrlabl>
+        <attrdef>real-time PCR cycle threshold value obtained from gear sample</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>39.98</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GearFC_pd</attrlabl>
+        <attrdef>fungal growth of Pd in culture from equipment swab</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Neg</edomv>
+            <edomvd>Negative fungal growth of Pd in culture from equipment swab</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>NG</edomv>
+            <edomvd>No fungal growth of Pd in culture from equipment swab</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>OG</edomv>
+            <edomvd>fungal overgrowth of Pd in culture from equipment swab</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>Study site Attribute Table</enttypl>
+        <enttypd>Table containing attribute information associated with the data set.</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>ResearchID</attrlabl>
+        <attrdef>unique research number assigned to study site</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>44690</rdommin>
+            <rdommax>44697</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SiteCode</attrlabl>
+        <attrdef>unique identifier for study site</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>IN1</edomv>
+            <edomvd>Indiana 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY1</edomv>
+            <edomvd>Kentucky 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY2</edomv>
+            <edomvd>Kentucky 2</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY3</edomv>
+            <edomvd>Kentucky 3</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY4</edomv>
+            <edomvd>Kentucky 4</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>OH1</edomv>
+            <edomvd>Ohio 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>TN1</edomv>
+            <edomvd>Tennessee 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>VA1</edomv>
+            <edomvd>Virginia 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>State</attrlabl>
+        <attrdef>2-letter postal abbreviation of state where study site is located</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>IN</edomv>
+            <edomvd>Indiana</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY</edomv>
+            <edomvd>Kentucky</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>OH</edomv>
+            <edomvd>Ohio</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>TN</edomv>
+            <edomvd>Tennessee</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>VA</edomv>
+            <edomvd>Virginia</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>County</attrlabl>
+        <attrdef>county where study site is located</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Breckinridge</edomv>
+            <edomvd>Kentucky</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Carter</edomv>
+            <edomvd>Kentucky</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Edmonson</edomv>
+            <edomvd>Kentucky</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Lawrence</edomv>
+            <edomvd>Ohio</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Monroe</edomv>
+            <edomvd>Indiana</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Montgomery</edomv>
+            <edomvd>Tennessee</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Trigg</edomv>
+            <edomvd>Kentucky</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Wise</edomv>
+            <edomvd>Virginia</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Winter Popn Class </attrlabl>
+        <attrdef>study site classification based on winter bat population level impacts of WNS</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+       <attrdomv>
+          <udom>study site classification based on winter bat population level impacts of WNS; categorical data (stable-clean; stable-contaminated; reduced-contaminated)</udom>
+        </attrdomv>
+       </attr>
+      <attr>
+        <attrlabl>Winter_diversity</attrlabl>
+        <attrdef>list of species codes observed at study site during winter hibernation</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <udom>list of species codes observed at study site during winter hibernation; species codes defined in metadata for Bats table </udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+	  <detailed>
+      <enttyp>
+        <enttypl>Bats_Outside Attribute Table</enttypl>
+        <enttypd>Table containing attribute information associated with the data set.</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+     <attr>
+        <attrlabl>SiteCode</attrlabl>
+        <attrdef>unique identifier for study site</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>IN1</edomv>
+            <edomvd>Indiana 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY1</edomv>
+            <edomvd>Kentucky 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY2</edomv>
+            <edomvd>Kentucky 2</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY3</edomv>
+            <edomvd>Kentucky 3</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>KY4</edomv>
+            <edomvd>Kentucky 4</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>OH1</edomv>
+            <edomvd>Ohio 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>TN1</edomv>
+            <edomvd>Tennessee</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>VA1</edomv>
+            <edomvd>Virginia 1</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Col_Date</attrlabl>
+        <attrdef>date of sample collection (MM/DD/YYYY)</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>7/23/2012</rdommin>
+            <rdommax>8/21/2012</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+	  <attr>
+        <attrlabl>Capture time</attrlabl>
+        <attrdef>time (24-hour HH:MM format) recorded when bats were removed from trap; </attrdef>
+        <attrdefs>Producer defined</attrdefs>
+		 <attrdomv>
+          <edom>
+            <edomv>{NULL}</edomv>
+            <edomvd>blank cells- capture time not recorded for individual bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>0:00</rdommin>
+            <rdommax>23:59</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Capture method</attrlabl>
+        <attrdef>type of trapping method used (harp trap; mist-net)</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <udom>type of trapping method used (harp trap; mist-net)</udom>
+        </attrdomv>
+      </attr>
+	  <attr>
+        <attrlabl>Species</attrlabl>
+        <attrdef>4 -letter species code based on first two letters of the genus and species (GGSS)</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>EPFU</edomv>
+            <edomvd>Eptesicus fuscus</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>LABO</edomv>
+            <edomvd>Lasiurus borealis</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MYGR</edomv>
+            <edomvd>Myotis grisescens</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MYLE</edomv>
+            <edomvd>Myotis leibii</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MYLU</edomv>
+            <edomvd>Myotis lucifugus</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MYSE</edomv>
+            <edomvd>Myotis septentrionalis</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MYSO</edomv>
+            <edomvd>Myotis sodalis</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>PESU</edomv>
+            <edomvd>Perimyotis pipistrellus</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sex</attrlabl>
+        <attrdef>male or female based on examination of external genital</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>F</edomv>
+            <edomvd>Female bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>M</edomv>
+            <edomvd>Male bat</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Band ID</attrlabl>
+        <attrdef>metal band data (agency, band number, color) placed or observed on an individual bat at capture; blank cell indicates that no wing band was observed or placed on the individual bat prior to release</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <udom>metal band data (agency, band number, color) placed or observed on an individual bat at capture; blank cell indicates that no wing band was observed or placed on the individual bat prior to release</udom>
+        </attrdomv>
+      </attr>
+	  <attr>
+        <attrlabl>Recapture</attrlabl>
+        <attrdef>had individual bat been captured previously</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>False</edomv>
+            <edomvd>No the bat had not been previously captured</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>True</edomv>
+            <edomvd>Yes the bat has been previously captured</edomvd>
+            <edomvds>Producer defined</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+     </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntperp>
+          <cntper>Anne Ballmann</cntper>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>6006 Schroeder Road</address>
+          <city>Madison</city>
+          <state>WI</state>
+          <postal>53711</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>608-270-2445</cntvoice>
+        <cntemail>aballmann@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20170106</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Anne E Ballmann</cntper>
+          <cntorg>U.S. Geological Survey, Midwest Region</cntorg>
+        </cntperp>
+        <cntpos>Wildlife Disease Specialist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>6006 Schroeder Road</address>
+          <city>Madison</city>
+          <state>WI</state>
+          <postal>53711</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>608-270-2445</cntvoice>
+        <cntfax>608-270-2415</cntfax>
+        <cntemail>aballmann@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Biological Data Profile of the Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001.1-1999</metstdv>
+  </metainfo>
+</metadata>
+
