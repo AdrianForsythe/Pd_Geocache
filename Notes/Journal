@@ -20,3 +20,5 @@ UPDATE: Different coronavirus but still pretty cool paper
 - Have to look into push and pull from R so I dont just do it by hand
 - I think Gamma Distributed County Duration isn't a thing
 - Do I need more scripts? I think the remainder ones are on Git via Adrian
+- TO DO: Upload WNS-GT-Duration.R and fix what else is up with it. Ultimately it is the one needed for frag-runner.R which
+is the script used for creating simulations 
