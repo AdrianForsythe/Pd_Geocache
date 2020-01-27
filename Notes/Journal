@@ -6,3 +6,17 @@ https://www.nature.com/articles/s41598-018-33975-x
 UPDATE: Different coronavirus but still pretty cool paper
 - Decided that for first few simulations only 10 will suffice
 - Need to still confirm with Adrian size of validation set after it has been full scraped
+
+## January 27th
+
+- Forgot to update journal over weekend and push stuff to Git...oops
+- Did several odd things to SIR model to have SSIR and SSIIRR or some combination of those
+- Ultimately went with Mike's selection of SSII model and include R in the later part once we have a grasp on things
+- Use of Morgan's bird and mosquito model
+- Look into making a Make rule for this set of equations and functions of everything to match Adrians
+- Wait for Adrians things to not be broken from Make (they're probably not but I am not good at Make)
+- Get a second opinion on my scripts
+- Unsure if my scripts are going to be in the same format as the geocache datascrape
+- Have to look into push and pull from R so I dont just do it by hand
+- I think Gamma Distributed County Duration isn't a thing
+- Do I need more scripts? I think the remainder ones are on Git via Adrian
