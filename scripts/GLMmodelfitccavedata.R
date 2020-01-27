@@ -19,3 +19,4 @@ abline(a=1, b=lambda, col='brown',lwd=2)
 title(substitute(paste("Exponential growth rate", ~lambda," = ",lambdaval), list(lambdaval=round(lambda,2))))
 
 #Stll missing some parts
+#
