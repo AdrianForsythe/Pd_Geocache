@@ -36,22 +36,23 @@ SSIIWNS<- function(initVars, gamma, R0, populationSize, maxEvents, startTime=0, 
   betaB <-gamma*R0/populationSize #density dependent transmission; beta is a function of the initially 
   betaH <-gamma*R0/populationSize #Needs a betaH estimates bc this wont fly
   #fully susceptible population size
-  parameters  <- c(gamma,betaB,betaH)
+  parameters  <- c(gamma,betaB,betaH,theta)
   
   #Obviously this model is significantly smaller than the other ones and only has 1 infected state
   
-  SSIIModel <- function(t, x, parms) {
+  SSIIRModel <- function(t, x, parms) {
     with(as.list(c(parms, x)), {
       dSB <- (-betaB*SB*IB) 		#Bat susceptibles
       dSH <- (-betaH*SH*IH)        #Human susceptibles
       dIH <- betaH*SH*IH -(gamma)*IB	#infected           	  		
-      dIB <- gamma*IB + betaB*SB*IB
-      res <- c(dSB, dSH, dIH, dIB)
+      dIB <- gamma*IB + betaB*SB*IB - theta*IB
+      dRB <- theta*IB
+      res <- c(dSB, dSH, dIH, dIB, dRB)
       list(res)
     })
   }
   
-  out <- as.data.frame(lsoda(initVars, timeSteps, SSIIModel, parameters))
+  out <- as.data.frame(lsoda(initVars, timeSteps, SSIIRModel, parameters))
   
   
   
@@ -73,7 +74,7 @@ write.csv(file="us_data_dur",new_caves)
 #these are the simulations
 
 unique_S_sequence<-unlist(lapply(unique_cave_numbers,function (x) {
-  results<-SSIIWNS(c(SH=x-1, SB=x-1, IB=1, IH=1), 1/3, 2.56, x, 100*10^2, startTime=0, 100);
+  results<-SSIIRWNS(c(SH=x-1, SB=x-1, IB=1, IH=1, RB=0), 1/3, 2.56, x, 100*10^2, startTime=0, 100);
   results$S[seq(0,10000,100)+1]
 }))
 unique_S_sequence<-matrix(t(unique_S_sequence),ncol=length(unique_cave_numbers),nrow=101);
