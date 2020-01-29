@@ -23,3 +23,19 @@ Bens ideas
 - Approximate Bayesian Computation for parameter estimation (sample from prior distributions, run simulations, calculate distance from output to result, the set of simulation that are closest to your actual is the most optimal and is selected)
 - Run 1000 simulations at least.
 - Start a journal
+
+## January 29th
+
+- no adrian
+- my brain hurts
+-model too complicated
+-simplify to have just a beta 
+- create a probability matrix that simply infects the neighbors in a binomial fashion
+- try and avoid the linear model unless you can prove it for the $x_j$ in the probability 
+$p_{i,t} = 1 - \Pi^N_{j=1} (1 - \beta_{i,j} * x_{j,t})
+- \PI^N_t=w binom(1-(1-p_i)^I_t, S_t)
+- glm(newinf ~ 1 + log(I_t), size = S_t, family = binom(cloglog))
+- Kinda sneaky that the binom turns to log (I_t)
+- Look into other papers that do network stuff and see what they do
+- glm only offers intellectual satisfaction and computational (Ben is keen on)
+- Need document of bonehead simple model of the data through caves
