@@ -8,6 +8,8 @@
 
 #Now we are altering this script to include the human interaction from Smith et al
 
+county_duration<-function(...){
+  
 SSIIWNS<- function(initVars, gamma, R0, populationSize, maxEvents, startTime=0, endTime) {
   #Purpose: Perform numerical integration of SSII system of ODEs using lsoda() ODE solver
   #          to simulate a deterministic SSII model run
@@ -58,14 +60,14 @@ SSIIWNS<- function(initVars, gamma, R0, populationSize, maxEvents, startTime=0, 
   
 } 
 
-caves<-read.csv("us_data.csv", header=TRUE) #WNS county dataset
+caves<-read.csv("examples/ORegan-2016-resources/us_data.csv", header=TRUE) #WNS county dataset
 
 #Now to calculate the duration of the epidemic in each county
 
 unique_caves<-data.frame(unique_cave_numbers,unique_duration);
 
 new_caves<-merge(caves,unique_caves,by.x="caves",by.y="unique_cave_numbers",all.x=TRUE)
-write.csv(file="us_data_dur",new_caves) 
+write.csv(file="data/us_data_dur",new_caves) 
 # csv file must be sorted by FIPS number to generate simulations correctly
 
 #script to calculate number of susceptible caves per county per year over course of epidemic 
@@ -84,8 +86,8 @@ unique_S_sequence<-floor(unique_S_sequence[-101,]);
 unique_caves<-data.frame(unique_cave_numbers,unique_duration,t(unique_S_sequence));
 
 new_caves<-merge(caves,unique_caves,by.x="caves",by.y="unique_cave_numbers",all.x=TRUE)
-write.csv(file="us_data_dur_S_sequence.csv",new_caves) 
+write.csv(file="data/us_data_dur_S_sequence.csv",new_caves) 
 # csv file must be sorted by FIPS number to generate simulations correctly
-
+}
   
   

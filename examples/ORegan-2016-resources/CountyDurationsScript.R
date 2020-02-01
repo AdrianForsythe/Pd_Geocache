@@ -6,6 +6,8 @@
 
 #Any questions contact S.M. O'Regan smoregan@uga.edu
 
+ORegan_county <- function(...){
+  
 SIRWNS<- function(initVars, gamma, R0, populationSize, maxEvents, startTime=0, endTime) {
   #Purpose: Perform numerical integration of SIR system of ODEs using lsoda() ODE solver
   #          to simulate a deterministic SIR model run
@@ -99,3 +101,4 @@ new_caves<-merge(caves,unique_caves,by.x="caves",by.y="unique_cave_numbers",all.
 write.csv(file="us_data_dur_S_sequence.csv",new_caves) # csv file must be sorted by FIPS number to generate simulations correctly
 
 #mean/median duration of epidemic in a county closely agree - about 25 years.
+}

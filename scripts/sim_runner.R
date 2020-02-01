@@ -1,8 +1,7 @@
-#Load Dependencies
-source('WNS-GT-Duration.R')
-
+run_sim<-function(){
+  
 #Read data: US County data (uc)
-uc=read.csv('us_data_dur.csv', header=TRUE)
+uc=read.csv('examples/ORegan-2016-resources/us_data_dur.csv', header=TRUE)
 #Subset county data to only Counties with Caves (cc)
 cc=uc[which(uc$caves>0),]
 #Get coordinates of county centroids
@@ -38,4 +37,4 @@ dur_si_sims1_5=makesims(cc,dist,b,first=5,nsims=10,seed=521)
 
 #This all worked
 
-
+}

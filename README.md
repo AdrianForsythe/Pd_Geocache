@@ -1,14 +1,32 @@
 # Pd_Geocache
 Search geocaching databases for evidence of people visiting caves!
 
+## Prerequisites
+### Linux
+- Selenium install
+`sudo docker pull selenium/standalone-firefox`
+
+- Start RSelenium
+`sudo docker run -d -p 4445:4444 selenium/standalone-firefox`
+  - if you get the error " Unrecognized content encoding type. libcurl understands deflate, gzip content encodings." do a clean install of R package `stringi`.
+
 ## TO-DO
-- confirm accuracy of geocache locations
-	- Mines/Caves are actually in Mines/Caves
-- Smarter regex strategy for finding user records with bat sightings
-	- i.e. "spotted a bat" vs. "blind as a bat"
+### Urgent
+- Be better at filtering out false-positive sites
+	- confirm accuracy of geocache locations -- Mines/Caves are actually in Mines/Caves
+	- try a few terms to exclude from site descriptions
+		- this involves changing scraping script to include description
 - Adjacency matrix at the geocache level, instead of county
 	- re-run mantel
 	- useful when I get around to integrating new methods
+- Estimation of R0?
+	- include bat population data (i.e. growth rate)
+		- data from monitoring populations impacted by WNS for multiple years
+
+### Not as urgent
+- Smarter regex strategy for finding user records with bat sightings
+	- i.e. "spotted a bat" vs. "blind as a bat"
+- try out snakemake or other pipeline management software?
 
 # Pre-requisites
 Some packages for spatial operations are needed

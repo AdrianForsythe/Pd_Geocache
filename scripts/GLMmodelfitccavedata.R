@@ -1,8 +1,8 @@
 ##cave dataset
-geocache_data<-read.csv("Incoming",header=TRUE)
-
+glm_model<-function(...){
+  
 #fit glm model to data
-model<-glm(Z ~ Y - 1 , data= geocache_data, family=poisson(link="identity")) 
+model<-glm(Z ~ Y - 1 , data= gc_dat, family=poisson(link="identity")) 
 #Is p value worth keeping in here?
 
 #intrinsic growth rate of infection
@@ -20,3 +20,4 @@ title(substitute(paste("Exponential growth rate", ~lambda," = ",lambdaval), list
 
 #Stll missing some parts
 #
+}
