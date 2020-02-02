@@ -28,6 +28,9 @@ filter_descriptions<-function(...){
     # navigate to page i
     remDr$navigate(url = i)
     
+    # wait for page to finish loading. Is this necessary?
+    Sys.sleep(1.5)
+    
     page_source<-remDr$getPageSource()
     
     description<-xml2::read_html(page_source[[1]]) %>% html_nodes(".UserSuppliedContent") %>%
@@ -40,11 +43,10 @@ filter_descriptions<-function(...){
       } else {
         match <- 0
       }
-      column_matches<-as.numeric(cbind(column_matches,match))
+      column_matches<-cbind(column_matches,match)
     }
     full_set<-rbind(full_set,cbind(column_matches,i))
     colnames(full_set) <- c(keywords,"url")
-    Sys.sleep(0.5)
   }
   
   #
@@ -61,7 +63,8 @@ filter_descriptions<-function(...){
 filtered_set<-subset(wide_full_set,  wide_full_set$flashlight > 0 & wide_full_set$cave > 0 | 
                        wide_full_set$ore > 0 & wide_full_set$mine > 0 | 
                        wide_full_set$mineral > 0 & wide_full_set$mine > 0) 
-filtered_gc_dat<-gc_dat[gc_dat$url %in% filtered_set$url,]
+
+filtered_gc_dat<-na.omit(gc_dat[match(filtered_set$url,gc_dat$url),])
 
 write.csv(filtered_gc_dat,"data/gc-list-filtered.csv")
 }

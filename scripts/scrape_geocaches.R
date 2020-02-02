@@ -1,6 +1,6 @@
 ##### Sraping geocache records from a list of known cave/mine sites in North America
 
-start_scrape<-function(dat){
+start_scrape<-function(...){
   # connect to running server
   rD <- rsDriver(port = 4445L, browser = 'firefox')
   remDr <- rD$client
@@ -31,7 +31,7 @@ start_scrape<-function(dat){
   
   ##### Start scraping
   # this takes a few hours to run!
-  scrape_dat<-NULL
+  scraped<-NULL
   for (i in as.character(filtered_gc_dat$url)) {
     # navigate to page i
     remDr$navigate(url = i)
@@ -83,10 +83,10 @@ start_scrape<-function(dat){
     clean_log <- trimws(clean_log)
     
     ### Bind it all together
-    page_results <- cbind.data.frame(users,status,date,clean_log,i)
-    scrape_dat<-rbind(scrape_dat,page_results)
+    page_results <- cbind(users,status,date,clean_log,i)
+    scraped<-rbind.data.frame(scraped,page_results)
   }
   
   # save results
-  write.table(scrape_dat,file = "data/gc-scrape-results.tab",row.names = F,col.names = T,quote = F,sep = "\t")
+  write.table(scraped,file = "data/gc-scrape-results.tab",row.names = F,col.names = T,quote = F,sep = "\t")
 }

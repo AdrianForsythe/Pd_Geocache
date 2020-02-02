@@ -1,5 +1,5 @@
-library(Matrix)
-
+wns_duration<-function(...){
+  
 # 10.30425552 -0.03080282 0.03506665 0.26193472
 
 #Spatial decay function - probability that node j infects node i
@@ -359,4 +359,5 @@ plot_cumI<-function(sims,years,dur){
   lines(x=0:years, y=epi,type='l')
   lines(x=0:years, y=bounds[1,],type='l',lty=2)
   lines(x=0:years, y=bounds[2,],type='l',lty=2)
+}
 }

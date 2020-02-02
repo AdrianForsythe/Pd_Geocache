@@ -10,12 +10,15 @@ Search geocaching databases for evidence of people visiting caves!
 `sudo docker run -d -p 4445:4444 selenium/standalone-firefox`
   - if you get the error " Unrecognized content encoding type. libcurl understands deflate, gzip content encodings." do a clean install of R package `stringi`.
 
+## Primer on Drake Workflow
+
+
 ## TO-DO
 ### Urgent
-- Be better at filtering out false-positive sites
-	- confirm accuracy of geocache locations -- Mines/Caves are actually in Mines/Caves
-	- try a few terms to exclude from site descriptions
-		- this involves changing scraping script to include description
+- ~~Be better at filtering out false-positive sites~~
+	- ~~confirm accuracy of geocache locations -- Mines/Caves are actually in Mines/Caves~~
+	- ~~try a few terms to exclude from site descriptions~~
+		- ~~this involves changing scraping script to include description~~
 - Adjacency matrix at the geocache level, instead of county
 	- re-run mantel
 	- useful when I get around to integrating new methods

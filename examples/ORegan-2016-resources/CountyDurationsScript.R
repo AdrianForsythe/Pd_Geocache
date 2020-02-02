@@ -6,7 +6,7 @@
 
 #Any questions contact S.M. O'Regan smoregan@uga.edu
 
-ORegan_county <- function(...){
+county_duration <- function(...){
   
 SIRWNS<- function(initVars, gamma, R0, populationSize, maxEvents, startTime=0, endTime) {
   #Purpose: Perform numerical integration of SIR system of ODEs using lsoda() ODE solver

@@ -47,7 +47,7 @@ for (i in as.character(sampled_set$url)) {
       } else {
         match <- 0
       }
-      column_matches<-as.numeric(cbind(column_matches,match))
+      column_matches<-cbind(column_matches,match)
     }
   full_set<-rbind(full_set,cbind(column_matches,i))
   colnames(full_set) <- c(keywords,"url")

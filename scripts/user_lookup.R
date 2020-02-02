@@ -1,9 +1,9 @@
 # geocache user lookup
 
-rev_lookup <- function (dat) {
-  dat$users.url <- htmltools::urlEncodePath(as.character(dat$users))
+rev_lookup <- function (...) {
+  scraped$users.url <- htmltools::urlEncodePath(as.character(scraped$users))
   s <- 1
-  user.list <- unique(dat$users.url)
+  user.list <- unique(scraped$users.url)
   # why?
   user.list <- user.list[4:22749]
   for (i in user.list) {
@@ -68,10 +68,10 @@ rev_lookup <- function (dat) {
     }
     page_results <- cbind(i, num.finds, rbind(first.page, 
                                               next.pages))
-    all_results <- rbind.data.frame(all_results, page_results)
+    user_history <- rbind.data.frame(user_history, page_results)
   }
-  write.csv(all_results, "user.history.csv", quote = F)
-  all_results[grep("Canada", all_results$clean.gcs.first, invert = T), 
+  write.csv(user_history, "user.history.csv", quote = F)
+  user_history[grep("Canada", user_history$clean.gcs.first, invert = T), 
               ]
   list(time = Sys.time(), tempfile = tempfile())
 }
