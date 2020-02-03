@@ -22,3 +22,10 @@ UPDATE: Different coronavirus but still pretty cool paper
 - Do I need more scripts? I think the remainder ones are on Git via Adrian
 - TO DO: Upload WNS-GT-Duration.R and fix what else is up with it. Ultimately it is the one needed for frag-runner.R which
 is the script used for creating simulations 
+
+
+## Feb 2
+- create a probability for the edges of user shared visits for all possible edges (ie visited a and b divided by total visits between the two)
+- Ask Ben about the probability between nodes and how that should be changed to adjust for recurring visitors
+- Should the network allow for returning visitors or not since it would effect the probabilities 
+- Or should simply the probability not include those returning ones (Is that allowed ??)
