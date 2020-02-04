@@ -2,12 +2,17 @@
 Search geocaching databases for evidence of people visiting caves!
 
 ## Prerequisites
-### Linux
-- Selenium install
-`sudo docker pull selenium/standalone-firefox`
+Some packages for spatial operations are needed
+- GDAL (for package "rgdal")
+	- `sudo apt-get install libgdal1-dev libproj-dev`
+- Selenium (for scraping purposes)
+	- [install via docker is recommended](https://github.com/SeleniumHQ/docker-selenium)
 
-- Start RSelenium
-`sudo docker run -d -p 4445:4444 selenium/standalone-firefox`
+### Selenium install on Linux
+- `sudo docker pull selenium/standalone-firefox`
+
+### To Start RSelenium
+- `sudo docker run -d -p 4445:4444 --shm-size 2g selenium/standalone-firefox`
   - if you get the error " Unrecognized content encoding type. libcurl understands deflate, gzip content encodings." do a clean install of R package `stringi`.
 
 ## Primer on Drake Workflow
@@ -19,24 +24,24 @@ Search geocaching databases for evidence of people visiting caves!
 	- ~~confirm accuracy of geocache locations -- Mines/Caves are actually in Mines/Caves~~
 	- ~~try a few terms to exclude from site descriptions~~
 		- ~~this involves changing scraping script to include description~~
+
 - Adjacency matrix at the geocache level, instead of county
 	- re-run mantel
 	- useful when I get around to integrating new methods
+
+- Our county records for sim params
+- 
+
 - Estimation of R0?
 	- include bat population data (i.e. growth rate)
 		- data from monitoring populations impacted by WNS for multiple years
 
+- Proportion of shared visits for all possible edges (path)
+
 ### Not as urgent
 - Smarter regex strategy for finding user records with bat sightings
 	- i.e. "spotted a bat" vs. "blind as a bat"
-- try out snakemake or other pipeline management software?
-
-# Pre-requisites
-Some packages for spatial operations are needed
-- GDAL (for package "rgdal")
-	- `sudo apt-get install libgdal1-dev libproj-dev`
-- Selenium (for scraping purposes)
-	- [install via docker is recommended](https://github.com/SeleniumHQ/docker-selenium)
+- ~~try out snakemake or other pipeline management software?~~
 
 ## General Workflow
 

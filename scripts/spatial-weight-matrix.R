@@ -8,4 +8,7 @@ make_adacency<-function (...) {
   united.listw <- nb2listw(united.w, style = "C")
   united.m <- nb2mat(united.w, style = "B", zero.policy = T)
   list(time = Sys.time(), tempfile = tempfile())
+
+  list(time = Sys.time(), tempfile = tempfile())
+  
 }

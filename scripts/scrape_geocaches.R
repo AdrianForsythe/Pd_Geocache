@@ -1,9 +1,12 @@
 ##### Sraping geocache records from a list of known cave/mine sites in North America
 
 start_scrape<-function(...){
+  
   # connect to running server
   rD <- rsDriver(port = 4445L, browser = 'firefox')
   remDr <- rD$client
+  
+  remDr$setTimeout(type = 'page load', milliseconds = 20000)
   
   # navigate to geocaching.com
   # going directly to the user sign in page
@@ -39,7 +42,7 @@ start_scrape<-function(...){
     #scroll down j times, waiting for the page to load at each time
     for(j in 1:filtered_gc_dat[filtered_gc_dat$url==i,]$numpage){      
       remDr$executeScript(paste("scroll(0,",j*10000,");"))
-      Sys.sleep(1.5)    
+      Sys.sleep(0.5)    
     }
     
     # get the page html

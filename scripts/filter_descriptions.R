@@ -5,6 +5,9 @@ filter_descriptions<-function(...){
   rD <- rsDriver(port = 4445L, browser = 'firefox')
   remDr <- rD$client
   
+  # set timeout
+  remDr$setTimeout(type = 'page load', milliseconds = 20000)
+  
   # navigate to geocaching.com
   # going directly to the user sign in page
   remDr$navigate(url = "https://www.geocaching.com/account/signin?returnUrl=%2fplay")
@@ -29,7 +32,7 @@ filter_descriptions<-function(...){
     remDr$navigate(url = i)
     
     # wait for page to finish loading. Is this necessary?
-    Sys.sleep(1.5)
+    Sys.sleep(0.5)
     
     page_source<-remDr$getPageSource()
     
@@ -51,12 +54,15 @@ filter_descriptions<-function(...){
   
   #
   long_full_set <- full_set %>% as.data.frame(full_set) %>%
-    pivot_longer(cols = -url,names_to = "keyword") %>% mutate(value=as.numeric(levels(value))[value]) %>% mutate(presence = ifelse(value > 0 ,1,0))
+    pivot_longer(cols = -url,names_to = "keyword") %>% mutate(value=as.integer(levels(value))[value]) %>% mutate(presence = ifelse(value > 0 ,1,0))
   
-  wide_full_set<-long_full_set %>% pivot_wider(names_from = keyword,values_from = presence,id_cols = url,values_fn = list(presence = sum))
+  wide_full_set<-long_full_set %>% 
+    pivot_wider(names_from = keyword,values_from = presence,id_cols = url,values_fn = list(presence = min)) %>% 
+    # mutate_all(as.integer()) %>%
+    as.data.frame()
   
   png("figures/keyword_combinations.png",res = 300,height = 800,width = 1000,units = "px")
-  UpSetR::upset(as.data.frame(wide_full_set),nintersects = NA,nsets = length(keywords),order.by = "freq")
+  UpSetR::upset(wide_full_set,nintersects = NA,nsets = length(keywords),order.by = "freq")
   dev.off()
 
 ##### Filtering
