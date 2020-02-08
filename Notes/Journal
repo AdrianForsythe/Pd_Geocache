@@ -43,4 +43,7 @@ is the script used for creating simulations
 - Changed countydistribution.R accordingly
 - Get a better understanding of what order to run everything in (drake files) 
 - Learn about ABC vs MCMC
+- Is ABC with sequential Monte carlo the answer?
 - A much nicer organization method is needed for all this. Huge mess
+- Currently GLM is built on occurance (ie. poisson dist based on date). This seems fine but unsure what to change to binom.
+- 
