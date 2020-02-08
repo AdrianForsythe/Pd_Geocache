@@ -33,3 +33,7 @@ Using the cloglog to see if poisson model is good or not and is actually really 
 Gompertz Function
 https://en.wikipedia.org/wiki/Gompertz_function
 Gompertz is so close to cloglog (Need to learn moreabout link functions)
+
+Modeling discrete survival time
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4360712/
+Statsy paper with bernoulli cloglog proof
