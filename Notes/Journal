@@ -24,8 +24,20 @@ UPDATE: Different coronavirus but still pretty cool paper
 is the script used for creating simulations 
 
 
-## Feb 2
+## Feb 2nd
+
 - create a probability for the edges of user shared visits for all possible edges (ie visited a and b divided by total visits between the two)
 - Ask Ben about the probability between nodes and how that should be changed to adjust for recurring visitors
 - Should the network allow for returning visitors or not since it would effect the probabilities 
 - Or should simply the probability not include those returning ones (Is that allowed ??)
+
+
+## Feb 8th
+
+- Get better at using the journal to test what is needed. Start to incorporate our data with the model. 
+- Examined the format Adrian has organized the data and how to incorporate it into the model
+- Attempt the proof Ben asked for of binomial cloglog
+- Get rid of SSIIRR
+- Go back to SIR with a simpler binomial transition
+- Dont worry about recurring visitors
+- Changed countydistribution.R accordingly
