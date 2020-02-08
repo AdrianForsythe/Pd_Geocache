@@ -1,0 +1,35 @@
+Whole course on Networking Epi projects:
+https://statnet.github.io/nme/index.html
+Incudes lots of information on visualization of networks and simplifies the math extrememly
+
+logistic regression and accounting for differences in exposure by BB:
+https://rpubs.com/bbolker/logregexp
+Includes description of how it all works + neat bird example
+
+Interpreting estimates of cloglog
+https://stats.stackexchange.com/questions/132627/interpreting-estimates-of-cloglog-logistic-regression
+BB explains the results of our functions
+
+ABC vs MCMC
+https://stats.stackexchange.com/questions/214724/how-do-abc-and-mcmc-differ-in-their-applications
+Explanation of which is appropriate for us (probably MCMC)
+
+Hazard rate explanation
+https://stats.stackexchange.com/questions/148699/modelling-a-binary-outcome-when-census-interval-varies
+probably not relevant to us but good to learn
+
+Link rate explanation
+http://www.people.vcu.edu/~dbandyop/pubh8472/Link_Binomial.pdf
+Explains the binomial link function 
+
+Complementary Log Log Model
+http://www.stat.ualberta.ca/~kcarrier/STAT562/comp_log_log.pdf
+very cool cloglog explanation/modeling example and includes logit = probit proof
+
+Poisson to Bernouilli cloglog proof
+https://freakonometrics.hypotheses.org/tag/cloglog
+Using the cloglog to see if poisson model is good or not and is actually really cool proof
+
+Gompertz Function
+https://en.wikipedia.org/wiki/Gompertz_function
+Gompertz is so close to cloglog (Need to learn moreabout link functions)
