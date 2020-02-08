@@ -41,3 +41,5 @@ is the script used for creating simulations
 - Go back to SIR with a simpler binomial transition
 - Dont worry about recurring visitors
 - Changed countydistribution.R accordingly
+- Get a better understanding of what order to run everything in (drake files) 
+- Learn about ABC vs MCMC
