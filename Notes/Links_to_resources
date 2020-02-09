@@ -37,3 +37,15 @@ Gompertz is so close to cloglog (Need to learn moreabout link functions)
 Modeling discrete survival time
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4360712/
 Statsy paper with bernoulli cloglog proof
+
+Intro to SIR binomial (Reed Frost)
+http://courses.washington.edu/b578a/readings/bookchap4.pdf
+Introduction to Reed-Frost model and discussion of neighboring infections. I dont think it would work because of closed population.
+A critical assumption of the model. 
+
+Greenwood Model
+https://www.tribonet.org/wiki/greenwoods-contact-model/
+description of Greenwood model. I'm unsure if this is applicable or what is even happening through out. 
+
+
+
