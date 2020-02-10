@@ -46,4 +46,12 @@ is the script used for creating simulations
 - Is ABC with sequential Monte carlo the answer?
 - A much nicer organization method is needed for all this. Huge mess
 - Currently GLM is built on occurance (ie. poisson dist based on date). This seems fine but unsure what to change to binom.
-- 
+
+## Feb 10th
+
+- Spoke with Adrian about data output and how the data will be in format long
+- Found various methods of people using complementary log log in binomial regression
+- Cant actually prove it because I cant wrap my head around the proof start
+- updated GLMmodelfitcavedata.R and CountyDurationScript.R 
+- Understood data format and how our most basic model will be interpretted
+
