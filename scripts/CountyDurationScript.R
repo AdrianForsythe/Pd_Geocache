@@ -10,7 +10,7 @@
 
 county_duration<-function(...){
   
-SSIIWNS<- function(initVars, gamma, R0, populationSize, maxEvents, startTime=0, endTime) {
+SIRWNS<- function(initVars, gamma, R0, populationSize, maxEvents, startTime=0, endTime) {
   #Purpose: Perform numerical integration of SSII system of ODEs using lsoda() ODE solver
   #          to simulate a deterministic SSII model run
   # Returns: a data frame with the following variables:
@@ -35,26 +35,25 @@ SSIIWNS<- function(initVars, gamma, R0, populationSize, maxEvents, startTime=0, 
   #similar to the other script that has gamma dist duration
   timeSteps  <- seq(startTime, endTime, length = maxEvents)
   intervalWidth <- round(((endTime - startTime) / maxEvents),4) # Round to 4 decimal places
-  betaB <-gamma*R0/populationSize #density dependent transmission; beta is a function of the initially 
-  betaH <-gamma*R0/populationSize #Needs a betaH estimates bc this wont fly
+  beta <- glm(incedence ~ adjacency , data = TBD , family = binomial(link = "cloglog")) #density dependent transmission; beta is a function of the initially 
+  #Needs a beta estimates to determine a more accurate model
   #fully susceptible population size
-  parameters  <- c(gamma,betaB,betaH,theta)
+  parameters  <- c(gamma,beta)
   
   #Obviously this model is significantly smaller than the other ones and only has 1 infected state
-  
-  SSIIRModel <- function(t, x, parms) {
+
+  SIRModel <- function(t, x, parms) {
     with(as.list(c(parms, x)), {
-      dSB <- (-betaB*SB*IB) 		#Bat susceptibles
-      dSH <- (-betaH*SH*IH)        #Human susceptibles
-      dIH <- betaH*SH*IH -(gamma)*IB	#infected           	  		
-      dIB <- gamma*IB + betaB*SB*IB - theta*IB
-      dRB <- theta*IB
-      res <- c(dSB, dSH, dIH, dIB, dRB)
+      dS <- (-beta*S*I) 		#Bat susceptibles
+           #Human susceptibles
+      dI <- beta*S*I -(gamma)*I	#infected           	  		
+      dR <- gamma*I
+      res <- c(dS,dI,dR)
       list(res)
     })
   }
   
-  out <- as.data.frame(lsoda(initVars, timeSteps, SSIIRModel, parameters))
+  out <- as.data.frame(lsoda(initVars, timeSteps, SIRModel, parameters))
   
   
   
@@ -76,7 +75,7 @@ write.csv(file="data/us_data_dur",new_caves)
 #these are the simulations
 
 unique_S_sequence<-unlist(lapply(unique_cave_numbers,function (x) {
-  results<-SSIIRWNS(c(SH=x-1, SB=x-1, IB=1, IH=1, RB=0), 1/3, 2.56, x, 100*10^2, startTime=0, 100);
+  results<-SIRWNS(c(S=x-1, I=1, R=0), 1/3, 2.56, x, 100*10^2, startTime=0, 100);
   results$S[seq(0,10000,100)+1]
 }))
 unique_S_sequence<-matrix(t(unique_S_sequence),ncol=length(unique_cave_numbers),nrow=101);
