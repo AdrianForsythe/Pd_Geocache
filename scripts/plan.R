@@ -34,7 +34,6 @@ plan <- drake_plan(
 
   # Find overlaps between GC sites and WNS infected counties
   source("scripts/coordinate-overlap.R"),
-  overlap = find_overlap(scraped,gc_filtered_dat,presence.poly),
   
   # Matching GC sites to locations where we have genetic samples
   # source("scripts/coordinate-match.R"),
@@ -42,7 +41,7 @@ plan <- drake_plan(
   
   # List of all counties within the States/Provinces in original GC list
   counties = read.csv("data/all-counties.csv", header = T) %>%
-    separate(1, c("county", "state.province", "Country"), sep = "\t"),
+    separate(1, c("county", "state.province", "Country"), sep = "\t") %>% distinct(),
 
   # Canadian `Counties` shapefile
   can.shape = readOGR("shape/lcd_000b16a_e/lcd_000b16a_e.shp"),
@@ -52,12 +51,13 @@ plan <- drake_plan(
 
   # Stich both countries together to create one polygon and fix names
   source("scripts/county-fix.R"),
-  unified_counties = county_fix(presence.df,presence.poly,counties,can.shape,usa.shape),
   
-  # Contructs spatial weight matricies from neighbour lists of county centroids
+  # Constructs spatial weight matricies from neighbour lists of county centroids
   source("scripts/spatial-weight-matrix.R"),
-  adjacency_matrix = make_adjacency(united.poly)
 
+  # Constructs visit-based weights at the county level in long-format
+  source("scripts/geocache-weight.R")
+  
   # Not Run
   # source("scripts/mantel.R"),
   # mantel = run_mantel(),

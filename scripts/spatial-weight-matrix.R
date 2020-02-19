@@ -1,8 +1,6 @@
 #### create a spatial weight matrix
 # crude method, adjacency measured using centroids of counties
 
-make_adjacency<-function(united.poly) {
-  
   # convert coords from poly to centroid points of counties. Then reproject.
   united.xy <- st_transform(united.poly, 29101) %>% st_centroid() %>% 
     st_transform(., "+proj=longlat +datum=WGS84")
@@ -25,4 +23,3 @@ make_adjacency<-function(united.poly) {
   
   list(time = Sys.time(), tempfile = tempfile())
   
-}

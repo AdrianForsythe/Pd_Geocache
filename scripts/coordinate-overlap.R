@@ -1,4 +1,3 @@
-find_overlap <- function (scraped,gc_filtered_dat,presence.poly) {
   all_results_clean <- filter(scraped, Type %in% c("Type.found_it", "Type.didnt_find_it", "Type.owner_maintenance", "Type.publish_listing"))
   all_results_merge <- merge(all_results_clean, gc_filtered_dat, by = "GC")
   
@@ -49,4 +48,3 @@ find_overlap <- function (scraped,gc_filtered_dat,presence.poly) {
   relevant.records <- relevant.records[!is.na(relevant.records$GC),]
   write.csv(relevant.records,"data/relevant-records.csv")
   list(time = Sys.time(), tempfile = tempfile())
-}

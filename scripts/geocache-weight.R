@@ -47,8 +47,29 @@ for (year in unique(as.character(county_visits$wns.map.yr))) {
 
 shared.users<-shared.users[shared.users$county1!=shared.users$county2,]
 
+# create list of all combinations
+all.years <- shared.users %>% expand(year,county1,county2)
+
+# merge with the data we have, filling in gaps
+all.shared.users<-merge(shared.users,all.years,all=TRUE)
+
 # create binary incidence value
-shared.users$incidence <- ifelse(is.na(shared.users$year),0,1)
+all.shared.users$incidence <- ifelse(is.na(all.shared.users$num.shared),0,1)
 
-write.csv(updated,"data/gc-shared-users.csv")
+# fix year
+all.shared.users$date <- ymd(all.shared.users$year)
 
+# fix number of users
+# put in NA's where there was no traffic between caves
+all.shared.users$num.shared <-  as.numeric(replace_na(all.shared.users$num.shared,0))
+
+county_rate<-all.shared.users %>% 
+  arrange(date) %>%
+  group_by(date) %>%
+  summarise(county.count = sum(incidence)) %>%
+  mutate(inf.counties = cumsum(county.count))
+
+# cumulative number of infected counties
+all.shared.users$inf.counties<-county_rate[match(all.shared.users$date,county_rate$date),]$inf.counties
+
+write.csv(all.shared.users,"data/gc-shared-users.csv")

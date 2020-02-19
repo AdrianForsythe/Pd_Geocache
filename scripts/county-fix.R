@@ -2,9 +2,8 @@
 #### for all counties/municipalities in US/Canada
 #### where we have WNS records from
 
-county_fix<-function (presence.df,poly,counties,can.shape,usa.shape) {
-  rownames(presence.df) <- names(poly)
-  poly.df <- SpatialPolygonsDataFrame(poly, presence.df)
+  rownames(presence.df) <- names(presence.poly)
+  poly.df <- SpatialPolygonsDataFrame(presence.poly, presence.df)
   counties$county <- gsub(pattern = " / (.*)", "", counties$county)
   can.shape <- can.shape[can.shape@data$PRNAME %in% c("Quebec / Québec", 
                                                       "Ontario", 
@@ -31,4 +30,3 @@ county_fix<-function (presence.df,poly,counties,can.shape,usa.shape) {
   usa.shape.sf$id <- usa.shape.id
   united.poly <- rbind(can.shape.sf[, "id"], usa.shape.sf[, 2:1])
   list(time = Sys.time(), tempfile = tempfile())
-}

@@ -5,7 +5,7 @@ source("scripts/packages.R")
 source("scripts/plan.R")
 
 ### Make
-r_make(plan,
+make(plan,
      lock_envir = FALSE,
      verbose = 2)
 
