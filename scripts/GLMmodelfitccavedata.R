@@ -4,7 +4,7 @@ glm_model<-function(...){
 # fit glm model to data
 
 # model<-glm(count ~ wns.map.yr - 1 , data= relevant.records, family=poisson(link="identity")) 
-model <- glm(incidence ~ gc.weight + COUNTYNAME + WNS_MAP_YR ,data = updated.weights, family = binomial(link = "cloglog"))
+model <- glm(incidence ~ num.shared + county1 + year ,data = shared.users, family = binomial(link = "cloglog"))
 #Is p value worth keeping in here?
 
 #intrinsic growth rate of infection
