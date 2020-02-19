@@ -1,13 +1,9 @@
-
-sample_descriptions<-function(...){
-  
+sample.description<-function(dat){
 set.seed(1234)
 
-gc_dat<-gc_dat[unique(gc_dat$GC),]
+rand.locs<-sample(1:nrow(dat), 100, replace=FALSE)
 
-rand.locs<-sample(1:nrow(gc_dat), 100, replace=FALSE)
-
-sampled_set<-gc_dat[rand.locs,]
+sampled_set<-dat[rand.locs,]
 
 rD <- rsDriver(port = 4445L, browser = 'firefox')
 remDr <- rD$client

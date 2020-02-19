@@ -1,6 +1,6 @@
 ##### Sraping geocache records from a list of known cave/mine sites in North America
 
-start_scrape<-function(...){
+start.scrape<-function(dat){
   
   # connect to running server
   rD <- rsDriver(port = 4445L, browser = 'firefox')
@@ -24,23 +24,23 @@ start_scrape<-function(...){
   SignOn$clickElement()
   
   # generate list of urls
-  # filtered_gc_dat$url <- paste("https://www.geocaching.com/geocache/",filtered_gc_dat$GC,sep = "")
+  # dat$url <- paste("https://www.geocaching.com/geocache/",dat$GC,sep = "")
   
   # the log page loads result dynamically, a la "infinite scrolling"
   # we already know the number of total results from these pages
   # and there are 25 results per page
   # so we known how many times we need to scroll to the end
-  filtered_gc_dat$numpage <- round(as.numeric(filtered_gc_dat$numfinds)/25,digits = 0)
+  dat$numpage <- round(as.numeric(dat$numfinds)/25,digits = 0)
   
   ##### Start scraping
   # this takes a few hours to run!
   scraped<-NULL
-  for (i in as.character(filtered_gc_dat$url)) {
+  for (i in as.character(dat$url)) {
     # navigate to page i
     remDr$navigate(url = i)
     
     #scroll down j times, waiting for the page to load at each time
-    for(j in 1:filtered_gc_dat[filtered_gc_dat$url==i,]$numpage){      
+    for(j in 1:dat[dat$url==i,]$numpage){      
       remDr$executeScript(paste("scroll(0,",j*10000,");"))
       Sys.sleep(0.5)    
     }
@@ -91,5 +91,5 @@ start_scrape<-function(...){
   }
   
   # save results
-  write.table(scraped,file = "data/gc-scrape-results.tab",row.names = F,col.names = T,quote = F,sep = "\t")
+  write.csv(scraped,file = "data/gc-scrape-results.csv")
 }

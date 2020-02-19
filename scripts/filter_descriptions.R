@@ -1,6 +1,4 @@
-filter_descriptions<-function(...){
-  
-  gc_dat<-gc_dat[unique(gc_dat$GC),]
+filter.description<-function(dat){
   
   rD <- rsDriver(port = 4445L, browser = 'firefox')
   remDr <- rD$client
@@ -27,7 +25,7 @@ filter_descriptions<-function(...){
   keywords <- c("flashlight","cave","mine","bat","ore","mineral")
   full_set<-NULL
   
-  for (i in as.character(gc_dat$url)) {
+  for (i in as.character(dat$url)) {
     # navigate to page i
     remDr$navigate(url = i)
     
@@ -70,7 +68,7 @@ filtered_set<-subset(wide_full_set,  wide_full_set$flashlight > 0 & wide_full_se
                        wide_full_set$ore > 0 & wide_full_set$mine > 0 | 
                        wide_full_set$mineral > 0 & wide_full_set$mine > 0) 
 
-filtered_gc_dat<-na.omit(gc_dat[match(filtered_set$url,gc_dat$url),])
+filtered_dat<-na.omit(dat[match(filtered_set$url,dat$url),])
 
-write.csv(filtered_gc_dat,"data/gc-list-filtered.csv")
+write.csv(filtered_dat,"data/gc-list-filtered.csv")
 }

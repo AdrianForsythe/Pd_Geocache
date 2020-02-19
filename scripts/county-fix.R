@@ -2,7 +2,7 @@
 #### for all counties/municipalities in US/Canada
 #### where we have WNS records from
 
-county_fix<-function (...) {
+county_fix<-function (presence.df,poly,counties,can.shape,usa.shape) {
   rownames(presence.df) <- names(poly)
   poly.df <- SpatialPolygonsDataFrame(poly, presence.df)
   counties$county <- gsub(pattern = " / (.*)", "", counties$county)
