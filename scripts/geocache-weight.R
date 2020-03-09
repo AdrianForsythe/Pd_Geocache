@@ -15,7 +15,8 @@ site_visits.p <- as_Spatial(st_as_sf(site_visits,
 num<-sp::over(site_visits.p, as_Spatial(presence.df$geoms),fn=NULL)
 
 # pull out a unique list of county polys
-uniq.df<-presence.df[na.omit(unique(num)),]
+# not from Cali or Wash for now!
+uniq.df<-presence.df[na.omit(unique(num)),] %>% filter(STATEPROV != c("California","Washington"))
 
 # convert coords from county poly to centroid points for each county. Then reproject.
 united.xy <- uniq.df$geoms %>% st_centroid() %>% 
@@ -27,7 +28,8 @@ united.xy <- uniq.df$geoms %>% st_centroid() %>%
 
 county_visits <- relevant.records %>%
   # getting rid of visits that don't matter
-  filter(Type %in% c("Type.found_it", "Type.didnt_find_it", "Type.owner_maintenance", "Type.publish_listing")) %>%
+  filter(Type %in% c("Type.found_it", "Type.didnt_find_it", "Type.owner_maintenance", "Type.publish_listing") &
+                       state.prov != c("California","Washington")) %>%
   # getting rid of users that don't visit sites in other counties
   group_by(User) %>%
   mutate(total = length(unique(county))) %>% filter(total > 1)
@@ -72,4 +74,25 @@ county_rate<-all.shared.users %>%
 # cumulative number of infected counties
 all.shared.users$inf.counties<-county_rate[match(all.shared.users$date,county_rate$date),]$inf.counties
 
-write.csv(all.shared.users,"data/gc-shared-users.csv")
+# which counties are touching?
+touching<-st_intersects(uniq.df$geoms,sparse = F)
+
+touching.m <- as.matrix(touching)
+rownames(touching.m)<-colnames(touching.m)<-uniq.df$COUNTYNAME
+touching.m2 <- reshape2::melt(touching.m)[reshape2::melt(upper.tri(touching.m))$value,]
+names(touching.m2) <- c("county1","county2","touching")
+
+# merge gc weights with adjacency score: 1 = touching, 0 = not touching
+both.weights<-merge(all.shared.users,touching.m2,by=c("county1","county2"))
+both.weights$touching<-if_else(both.weights$touching == TRUE,1,0)
+
+# save
+write.csv(both.weights,"data/gc-shared-users.csv")
+
+ggplot(uniq.df$geoms)+
+  borders("world") +
+  geom_sf(aes(fill=uniq.df$WNS_MAP_YR))+
+  coord_sf(xlim = c(-100, -57.5), ylim = c(35, 50))+
+  theme_bw()
+ggsave("figures/counties-shared-users.png",plot=last_plot(),dpi=300)
+  

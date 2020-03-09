@@ -1,8 +1,7 @@
 ##cave dataset
 # fit glm model to data
-
-model <- glm(as.factor(incidence) ~ num.shared + county1 + date ,data = all.shared.users, family = binomial(link = "cloglog"))
-
+model <- glm(as.factor(incidence) ~ year+as.factor(touching) ,data = both.weights, family = binomial(link = "cloglog"))
+summary(model)
 # Is p value worth keeping in here?
 
 #intrinsic growth rate of infection
