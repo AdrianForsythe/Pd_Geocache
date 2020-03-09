@@ -95,4 +95,3 @@ ggplot(uniq.df$geoms)+
   coord_sf(xlim = c(-100, -57.5), ylim = c(35, 50))+
   theme_bw()
 ggsave("figures/counties-shared-users.png",plot=last_plot(),dpi=300)
-  
