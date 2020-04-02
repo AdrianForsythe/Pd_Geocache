@@ -5,7 +5,7 @@ from pycaching.cache import Type
 
 geocaching = pycaching.login("a_forsythe", "v3X@s45aqePN")
 
-data = pd.read_csv("/home/adrian/PhD-Laptop/Pd_Geocache/data/gc-list-filtered.csv")
+data = pd.read_csv("data/gc-list-filtered.csv")
 
 d=[]
 for ind in data.index:
@@ -15,4 +15,4 @@ for ind in data.index:
   })
 df=pd.DataFrame(d)
   
-df.to_csv('/home/adrian/PhD-Laptop/Pd_Geocache/data/gc-scrape-results.csv',index=False)
+df.to_csv('data/gc-scrape-results.csv',index=False)
