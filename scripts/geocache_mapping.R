@@ -11,7 +11,7 @@ mapping <- function (...) {
                   summarise(total = length(User))
   
   register_google(key = "AIzaSyDw5appsfJ_gWd45-AeYe_WTT2VvI8kXhQ")
-  map <- get_stamenmap(c(right = -57, left = -96, top = 52, bottom = 32), 
+  map <- get_stamenmap(c(right = -57, left = -125, top = 52, bottom = 32), 
                  zoom = 5, source = "stamen", maptype = "terrain-background", scale = "auto")
   n <- length(unique(all_summary$Year))
   qual_col_pals = brewer.pal.info[brewer.pal.info$category == "qual", ]
@@ -22,8 +22,8 @@ mapping <- function (...) {
     geom_sf(aes(geometry=presence.df$geoms))+
     geom_path(data = all_visits_window, aes(y = coords.x2,x = coords.x1, group = User), color = "red", alpha = 0.3) +
     geom_point(data = all_summary, aes(y = coords.x2, x = coords.x1),color="black") +
-    # coord_sf(xlim = c(-125, -57.5), ylim = c(27.5, 55))+
-    coord_sf(xlim = c(-96, -57), ylim = c(32, 52))+
+    coord_sf(xlim = c(-125, -57.5), ylim = c(27.5, 55))+
+    # coord_sf(xlim = c(-96, -57), ylim = c(32, 52))+
     theme_classic() + 
     theme(axis.text = element_text(size = 10), 
           axis.title = element_text(size = 12),
