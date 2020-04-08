@@ -91,7 +91,9 @@ write.csv(both.weights,"data/gc-shared-users.csv")
 
 ggplot(uniq.df$geoms)+
   borders("world") +
+  borders("state") +
   geom_sf(aes(fill=uniq.df$WNS_MAP_YR))+
-  coord_sf(xlim = c(-100, -57.5), ylim = c(35, 50))+
+  coord_sf(xlim = c(-100, -60), ylim = c(32, 50))+
+  # coord_sf(xlim = c(-100, -57.5), ylim = c(35, 50))+
   theme_bw()
 ggsave("figures/counties-shared-users.png",plot=last_plot(),dpi=300)

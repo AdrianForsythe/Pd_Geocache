@@ -44,7 +44,13 @@
   all_merge$wns.map.yr <- ymd(gsub("-.+", "/01/01", all_merge$wns.map.yr))
   all_merge$yr.suspect <- ymd(gsub("-.+", "/01/01", all_merge$yr.suspect))
   all_merge$yr.confirm <- ymd(gsub("-.+", "/01/01", all_merge$yr.confirm))
-  relevant.records <- all_merge %>% filter(wns.map.yr > Year)
+  
+  relevant.records <- all_merge %>% filter(wns.map.yr >= Year)
   relevant.records <- relevant.records[!is.na(relevant.records$GC),]
+  
   write.csv(relevant.records,"data/relevant-records.csv")
+  
+  relevant.records.wpoly<-left_join(relevant.records,presence.df,by=c("county"="COUNTYNAME"))
+  saveRDS(relevant.records.wpoly,file = "data/relevant-records-withPoly.RDS")
+  
   list(time = Sys.time(), tempfile = tempfile())
