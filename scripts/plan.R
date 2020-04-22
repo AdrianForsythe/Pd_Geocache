@@ -56,9 +56,9 @@ plan <- drake_plan(
   source("scripts/county-fix.R"),
   
   # Constructs spatial weight matricies from neighbour lists of county centroids
-  source("scripts/spatial-weight-matrix.R"),
+  # source("scripts/spatial-weight-matrix.R"),
 
-  # Constructs visit-based weights at the county level in long-format
+  # Constructs both adjacency and visit-based weights at the county level in long-format
   source("scripts/geocache-weight.R"),
   
   # Not Run
