@@ -3,9 +3,12 @@
 ## Simulates an invasion of a cave and bat population by Pseudogymnoascus destructans
 
 
+## DON'T DO THIS.  Read Jenny Bryan's discussion of why this is a 'code smell'
 rm(list=ls(all=TRUE)) 
 
 library(ggplot2)
+
+
 library(extrafont)
 loadfonts()
 
@@ -100,7 +103,8 @@ SapronoseDF<-function(
     
   }
   
-  
+  ## BMB: NOT GOOD.  Always try to avoid global assignment <<-
+  ##  (not always possible, but you should try)
   X<<-X
   Y<<-Y
   Z<<-Z
@@ -156,8 +160,9 @@ for(i in 1:6){
 write.table(DATA, file = "5Yrs.txt", sep = " ")
 Data <- read.table(file = "5Yrs.txt", header=TRUE)
 
-attach(Data)
-Data <- as.data.frame(Data)
+## attach(Data)  ## BMB: CODE SMELL, don't use attach() if you can help it
+Data <- as.data.frame(Data) ## we've managed to lose all of the variable names
+                                        #  so variables below are 'V1', 'V2', which isn't very clear
 
 sp <- ggplot(Data, aes(x=V1/365, y=V4/1000))
 sp <- sp + geom_line(color="red")
