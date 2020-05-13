@@ -1,5 +1,6 @@
 #Load Dependencies
 source('WNS-GT-Duration.R')
+source('GLMModelFitCaveData.R')
 
 #Read data: US County data (uc)
 uc=read.csv('us_data_dur.csv', header=TRUE)
