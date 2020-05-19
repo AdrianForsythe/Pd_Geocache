@@ -14,7 +14,7 @@ R0=(lambda/gamma)+1 #basic reproduction number
 
 # taking the total number of sites infected per year and the cumulative sum
 cave_rate<-relevant.records %>% 
-  mutate(date=ymd(wns.map.yr)) %>%
+  mutate(date=lubridate::ymd(wns.map.yr)) %>%
   arrange(date) %>%
   group_by(date) %>%
   summarise(cave.count = length(unique(GC))) %>% 

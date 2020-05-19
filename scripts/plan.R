@@ -30,7 +30,6 @@ plan <- drake_plan(
     # WNS presence at county level polygon
   source("scripts/wns-presence.R"),
   
-
   # Find overlaps between GC sites and WNS infected counties
   source("scripts/coordinate-overlap.R"),
   
