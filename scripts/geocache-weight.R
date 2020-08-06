@@ -12,9 +12,18 @@ united.xy <- uniq.df$geoms %>% st_centroid() %>%
 
 county_visits <- presence.scrape %>%
   filter(Type %in% c("Type.found_it", "Type.didnt_find_it", "Type.owner_maintenance", "Type.publish_listing")) %>%
-  group_by(county,year) %>% 
+  group_by(county,year,lon,lat) %>% 
   distinct(User) %>%
   summarise(total = length(User))
+
+## Number of intersecting sites within a given radius (10km)
+site_visits<-presence.scrape %>%
+  filter(Type %in% c("Type.found_it", "Type.didnt_find_it", "Type.owner_maintenance", "Type.publish_listing")) %>%
+  group_by(GC,year,lon,lat) %>% 
+  distinct(User) %>%
+  summarise(total = length(User)) %>% st_as_sf(coords=c("lat","lon"),crs = 4326)
+
+n_local_neighbors <- lengths(st_is_within_distance(site_visits, dist = 100000))
 
 # need the number of visits at county level that match up with county centroids
 # match centroid back to county
@@ -47,7 +56,7 @@ all.shared.users <- presence.df %>%
 
 # fix number of users
 # put in NA's where there was no traffic between caves
-all.shared.users$num.shared <-  as.numeric(replace_na(all.shared.users$num.shared,0))
+all.shared.users$num.shared <- as.numeric(replace_na(all.shared.users$num.shared,0))
 
 # create binary incidence value
 all.shared.users$incidence <- ifelse(all.shared.users$YR_CONFIRM == " ",0,1)
