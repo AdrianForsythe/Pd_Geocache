@@ -5,6 +5,8 @@ plan <- drake_plan(
   # don't forget!
   # sudo docker run -d -p 4445:4444 --shm-size 2g selenium/standalone-firefox
   
+  source("scripts/packages.R"),
+  
   ### Start with raw list
   # Read in GC list
   gc_dat = read.csv("data/gc-list-eu-unfiltered.csv",header=T,row.names = NULL,strip.white = T,fill = T,sep = ",",na.strings = "",quote = "",comment.char = ""),
@@ -18,6 +20,6 @@ plan <- drake_plan(
   
   # clean the list of GC sites based on sampling keywords from descriptions
   source("scripts/filter_eu_descriptions.R"),
-  filtered = filter.description(gc_dat),
+  filtered = filter_eu_description(gc_dat),
   gc_filtered_dat = na.omit(read.csv("data/gc-list-eu-filtered.csv",header=T)),
 )
