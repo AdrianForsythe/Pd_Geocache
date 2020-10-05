@@ -1,6 +1,6 @@
 filter.description<-function(dat){
   
-  rD <- rsDriver(port = 4445L, browser = 'firefox')
+  rD <- rsDriver(port = 4444L, browser = 'firefox')
   remDr <- rD$client
   
   # set timeout
