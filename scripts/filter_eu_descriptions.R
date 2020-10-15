@@ -22,7 +22,31 @@ filter.description<-function(dat){
   SignOn$clickElement()
   
   #####
-  keywords <- c("flashlight","cave","mine","bat","ore","mineral")
+  keywords <- list(c("flashlight","cave","mine","bat","ore","mineral"), # English
+  c("фенерче", "пещера", "рудна мина", "прилеп", "руда", "минерал"), # Bulgarian
+  c("lommelygte", "hule", "malmminer", "flagermus", "malm", "mineral"), # Danish
+  c("taskulamp", "koobas", "maagikaevandus", "nahkhiir", "maak", "mineraal"), # Estonian
+  c("lampe de poche", "grotte", "mine de minerai", "chauve-souris", "minerai", "minéral"), #French
+  c("ficklampa", "grotta", "malmgruva", "fladdermus", "malm", "mineral"), # Swedish
+  c("baterka", "jaskyňa", "rudná baňa", "netopier", "ruda", "minerál"), # Slovak
+  c("lanterna", "pestera", "mina de minereu", "liliac", "minereu", "mineral"), # Romanian
+  c("lommelykt", "hule", "malmgruve", "flaggermus", "malm", "mineral"), #Norwegian
+  c("батеријска лампа", "пећина", "рудник руде", "слепи миш", "руда", "минерал"), # Serbian
+  c("linterna", "cueva", "mina de mineral", "murciélago", "mineral", "mineral"), #Spanish
+  c("el feneri", "mağara", "cevher madeni", "yarasa", "cevher", "mineral"), # Turkish
+  c("zaklamp", "grot", "ertsmijn", "vleermuis", "erts", "mineraal"), # Dutch
+  c("Taschenlampe", "Höhle", "Erzmine", "Fledermaus", "Erz", "Mineral"), # German
+  c("ліхтарик", "печера", "рудна шахта", "кажан", "руда", "мінерал"), # Ukrainian
+  c("svítilna", "jeskyně", "rudný důl", "netopýr", "ruda", "minerál"), #Czech
+  c("taskulamppu", "luola", "malmikaivos", "lepakko", "malmi", "mineraali"), #Finnish
+  c("φακός", "σπήλαιο", "ορυχείο μεταλλεύματος", "ρόπαλο", "μεταλλεύματα", "ορυκτά"), #Greek
+  c("torcia", "grotta", "miniera di minerale", "pipistrello", "minerale", "minerale"), # Italian
+  c("lukturītis", "ala", "rūdas raktuves", "sikspārnis", "rūdas", "minerāls"), # Latvian
+  c("latarka", "jaskinia", "kopalnia rudy", "nietoperz", "ruda", "minerał"), # Polish
+  c("фонарик", "пещера", "рудник", "летучая мышь", "руда", "минерал"), # Russian
+  c("svetilka", "jama", "rudnik rude", "netopir", "ruda", "mineral")) # Slovenian
+  
+  keywords<-setNames(keywords,c("English","Bulgarian","Danish","Estonian","Frensh","Swedish","Slovak","Romania","Norwegian","Serbian","Spanish","Turkish","Dutch","German","Ukranian","Czech","Finnish","Greek","Italian","Latvian","Polish","Russian","Slovenian"))
   full_set<-NULL
   
   for (i in as.character(dat$url)) {
@@ -52,7 +76,8 @@ filter.description<-function(dat){
   
   #
   long_full_set <- full_set %>% as.data.frame(full_set) %>%
-    pivot_longer(cols = -url,names_to = "keyword") %>% mutate(value=as.integer(levels(value))[value]) %>% mutate(presence = ifelse(value > 0 ,1,0))
+    pivot_longer(cols = -url,names_to = "keyword") %>% 
+    mutate(value=as.integer(levels(value))[value]) %>% mutate(presence = ifelse(value > 0 ,1,0))
   
   wide_full_set<-long_full_set %>% 
     pivot_wider(names_from = keyword,values_from = presence,id_cols = url,values_fn = list(presence = min)) %>% 
