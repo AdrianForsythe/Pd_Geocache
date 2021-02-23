@@ -1,0 +1,24 @@
+
+Call:
+glm(formula = as.factor(incidence) ~ as.factor(touching), family = binomial(link = "cloglog"), 
+    data = both_weights)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.5756  -1.4004   0.8259   0.9697   0.9697  
+
+Coefficients:
+                     Estimate Std. Error z value Pr(>|z|)    
+(Intercept)          -0.01962    0.01504  -1.305    0.192    
+as.factor(touching)1  0.23578    0.02172  10.857   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 18079  on 14166  degrees of freedom
+Residual deviance: 17961  on 14165  degrees of freedom
+AIC: 17965
+
+Number of Fisher Scoring iterations: 4
+

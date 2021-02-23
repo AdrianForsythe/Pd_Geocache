@@ -1,0 +1,5 @@
+Building DAG of jobs...
+Would delete data/gc-scrape.csv
+Would delete data/gc-list-filtered.csv
+Would delete figures/keyword-combinations.png
+Would delete data/gc-descriptions.csv

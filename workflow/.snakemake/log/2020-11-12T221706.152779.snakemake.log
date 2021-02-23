@@ -1,0 +1,8 @@
+Building DAG of jobs...
+InputFunctionException in line 15 of /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile:
+Error:
+  KeyboardInterrupt: 
+Wildcards:
+
+Traceback:
+

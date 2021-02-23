@@ -1,0 +1,2 @@
+SyntaxError in line 45 of /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile:
+Expected name or colon after rule or checkpoint keyword. (snakefile, line 45)

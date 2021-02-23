@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	ScrapeGC
+	1
+
+[Mon Jan  4 16:32:43 2021]
+rule ScrapeGC:
+    input: data/gc-list-filtered.csv
+    output: data/gc-scrape.csv
+    jobid: 0
+
+[Mon Jan  4 16:32:43 2021]
+Error in rule ScrapeGC:
+    jobid: 0
+    output: data/gc-scrape.csv
+
+RuleException:
+CalledProcessError in line 41 of /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile:
+Command 'set -euo pipefail;  /home/adrian/anaconda3/bin/python3.7 /home/adrian/PhD-Laptop/Pd_Geocache/workflow/.snakemake/scripts/tmp4zxq9gx0.test-pycaching.py' returned non-zero exit status 1.
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2189, in run_wrapper
+  File "/home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile", line 41, in __rule_ScrapeGC
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 529, in _callback
+  File "/home/adrian/anaconda3/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 515, in cached_or_run
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2201, in run_wrapper
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/adrian/PhD-Laptop/Pd_Geocache/workflow/.snakemake/log/2021-01-04T163243.449312.snakemake.log

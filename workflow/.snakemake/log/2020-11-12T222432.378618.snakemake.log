@@ -1,0 +1,34 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	FilterDescriptions
+	1
+
+[Thu Nov 12 22:24:32 2020]
+rule FilterDescriptions:
+    input: data/gc-descriptions.csv
+    output: data/gc-list-filtered.csv, figures/keyword_combinations.png
+    jobid: 0
+
+[Thu Nov 12 22:24:34 2020]
+Error in rule FilterDescriptions:
+    jobid: 0
+    output: data/gc-list-filtered.csv, figures/keyword_combinations.png
+
+RuleException:
+CalledProcessError in line 30 of /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile:
+Command 'set -euo pipefail;  Rscript --vanilla /home/adrian/PhD-Laptop/Pd_Geocache/workflow/.snakemake/scripts/tmp9q677oi8.filter_descriptions.R' returned non-zero exit status 1.
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2252, in run_wrapper
+  File "/home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile", line 30, in __rule_FilterDescriptions
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 560, in _callback
+  File "/home/adrian/anaconda3/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 546, in cached_or_run
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2264, in run_wrapper
+Removing output files of failed job FilterDescriptions since they might be corrupted:
+figures/keyword_combinations.png
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/adrian/PhD-Laptop/Pd_Geocache/workflow/.snakemake/log/2020-11-12T222432.378618.snakemake.log

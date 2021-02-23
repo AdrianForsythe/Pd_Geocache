@@ -1,0 +1,22 @@
+"фенерче", "пещера", "рудна мина", "прилеп", "руда", "минерал", # Bulgarian
+"lommelygte", "hule", "malmminer", "flagermus", "malm", "mineral", # Danish
+"taskulamp", "koobas", "maagikaevandus", "nahkhiir", "maak", "mineraal", # Estonian
+"lampe de poche", "grotte", "mine de minerai", "chauve-souris", "minerai", "minéral", #French
+"ficklampa", "grotta", "malmgruva", "fladdermus", "malm", "mineral", # Swedish
+"baterka", "jaskyňa", "rudná baňa", "netopier", "ruda", "minerál", # Slovak
+"lanterna", "pestera", "mina de minereu", "liliac", "minereu", "mineral", # Romanian
+"lommelykt", "hule", "malmgruve", "flaggermus", "malm", "mineral", #Norwegian
+"батеријска лампа", "пећина", "рудник руде", "слепи миш", "руда", "минерал", # Serbian
+"linterna", "cueva", "mina de mineral", "murciélago", "mineral", "mineral", #Spanish
+"el feneri", "mağara", "cevher madeni", "yarasa", "cevher", "mineral", # Turkish
+"zaklamp", "grot", "ertsmijn", "vleermuis", "erts", "mineraal", # Dutch
+"Taschenlampe", "Höhle", "Erzmine", "Fledermaus", "Erz", "Mineral", # German
+"ліхтарик", "печера", "рудна шахта", "кажан", "руда", "мінерал", # Ukrainian
+"svítilna", "jeskyně", "rudný důl", "netopýr", "ruda", "minerál", #Czech
+"taskulamppu", "luola", "malmikaivos", "lepakko", "malmi", "mineraali", #Finnish
+"φακός", "σπήλαιο", "ορυχείο μεταλλεύματος", "ρόπαλο", "μεταλλεύματα", "ορυκτά", #Greek
+"torcia", "grotta", "miniera di minerale", "pipistrello", "minerale", "minerale", # Italian
+"lukturītis", "ala", "rūdas raktuves", "sikspārnis", "rūdas", "minerāls", # Latvian
+"latarka", "jaskinia", "kopalnia rudy", "nietoperz", "ruda", "minerał", # Polish
+"фонарик", "пещера", "рудник", "летучая мышь", "руда", "минерал", # Russian
+"svetilka", "jama", "rudnik rude", "netopir", "ruda", "mineral" # Slovenian

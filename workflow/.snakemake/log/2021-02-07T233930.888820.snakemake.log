@@ -1,0 +1,34 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	PlotMapping
+	1
+
+[Sun Feb  7 23:39:30 2021]
+rule PlotMapping:
+    input: data/relevant-records.csv, data/presence.df.rds
+    output: figures/num-geocache.png, figures/num-geocache-year.png, figures/max-visits-date.png, figures/users_year.gif
+    jobid: 0
+
+[Sun Feb  7 23:39:40 2021]
+Error in rule PlotMapping:
+    jobid: 0
+    output: figures/num-geocache.png, figures/num-geocache-year.png, figures/max-visits-date.png, figures/users_year.gif
+
+RuleException:
+CalledProcessError in line 82 of /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile:
+Command 'set -euo pipefail;  Rscript --vanilla /home/adrian/PhD-Laptop/Pd_Geocache/workflow/.snakemake/scripts/tmpdli8bnmk.geocache_mapping.R' returned non-zero exit status 1.
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2189, in run_wrapper
+  File "/home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile", line 82, in __rule_PlotMapping
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 529, in _callback
+  File "/home/adrian/anaconda3/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 515, in cached_or_run
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2201, in run_wrapper
+Removing output files of failed job PlotMapping since they might be corrupted:
+figures/num-geocache.png
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/adrian/PhD-Laptop/Pd_Geocache/workflow/.snakemake/log/2021-02-07T233930.888820.snakemake.log

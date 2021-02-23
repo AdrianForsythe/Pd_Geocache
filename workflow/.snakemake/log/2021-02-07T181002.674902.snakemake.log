@@ -1,0 +1,33 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	CoordinateOverlap
+	1	GeocacheWeightMatrix
+	2
+
+[Sun Feb  7 18:10:02 2021]
+rule CoordinateOverlap:
+    input: data/gc-scrape.csv, data/gc-list-filtered.csv
+    output: data/presence.poly.rds, data/relevant-records.csv
+    jobid: 1
+
+[Sun Feb  7 18:10:05 2021]
+Error in rule CoordinateOverlap:
+    jobid: 1
+    output: data/presence.poly.rds, data/relevant-records.csv
+
+RuleException:
+CalledProcessError in line 61 of /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile:
+Command 'set -euo pipefail;  Rscript --vanilla /home/adrian/PhD-Laptop/Pd_Geocache/workflow/.snakemake/scripts/tmpe21vztxg.coordinate-overlap.R' returned non-zero exit status 1.
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2189, in run_wrapper
+  File "/home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile", line 61, in __rule_CoordinateOverlap
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 529, in _callback
+  File "/home/adrian/anaconda3/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 515, in cached_or_run
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2201, in run_wrapper
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/adrian/PhD-Laptop/Pd_Geocache/workflow/.snakemake/log/2021-02-07T181002.674902.snakemake.log

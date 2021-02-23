@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	GeocacheWeightMatrix
+	1
+
+[Sun Feb 21 22:45:16 2021]
+rule GeocacheWeightMatrix:
+    input: data/presence.df.rds
+    output: data/gc.weights.csv, data/gc.weights.long.rds, figures/counties-shared-users.png
+    jobid: 0
+
+[Sun Feb 21 22:45:18 2021]
+Error in rule GeocacheWeightMatrix:
+    jobid: 0
+    output: data/gc.weights.csv, data/gc.weights.long.rds, figures/counties-shared-users.png
+
+RuleException:
+CalledProcessError in line 116 of /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile:
+Command 'set -euo pipefail;  Rscript --vanilla /home/adrian/PhD-Laptop/Pd_Geocache/workflow/.snakemake/scripts/tmpev09ej_c.geocache-weight.R' returned non-zero exit status 1.
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2189, in run_wrapper
+  File "/home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile", line 116, in __rule_GeocacheWeightMatrix
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 529, in _callback
+  File "/home/adrian/anaconda3/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 515, in cached_or_run
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2201, in run_wrapper
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/adrian/PhD-Laptop/Pd_Geocache/workflow/.snakemake/log/2021-02-21T224516.231756.snakemake.log

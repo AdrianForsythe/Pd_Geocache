@@ -1,0 +1,3 @@
+NameError in line 56 of /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile:
+name 'gc' is not defined
+  File "/home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile", line 56, in <module>

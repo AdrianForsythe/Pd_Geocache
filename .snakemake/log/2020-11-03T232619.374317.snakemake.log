@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 3 of /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile:
+Missing input files for rule SampleDescriptions:
+data/gc-list-unfiltered.csv

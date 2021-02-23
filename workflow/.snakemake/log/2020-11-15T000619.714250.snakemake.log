@@ -1,0 +1,19 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	SampleDescriptions
+	1
+
+[Sun Nov 15 00:06:19 2020]
+rule SampleDescriptions:
+    input: data/gc-list-unfiltered.csv
+    output: data/gc-descriptions.csv
+    jobid: 0
+
+[Sun Nov 15 01:15:37 2020]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: /home/adrian/PhD-Laptop/Pd_Geocache/workflow/.snakemake/log/2020-11-15T000619.714250.snakemake.log
