@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	FilterDescriptions
+	1
+
+[Sat Apr 10 23:23:32 2021]
+rule FilterDescriptions:
+    input: data/gc-eu-descriptions.csv
+    output: data/gc-list-eu-filtered.csv, figures/keyword-combinations-eu.png
+    jobid: 0
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 19 of /home/adrian/PhD-Laptop/Pd_Geocache/workflow/eu_snakefile:
+Job completed successfully, but some output files are missing. Missing files after 5 seconds:
+figures/keyword-combinations-eu.png
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 544, in handle_job_success
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 231, in handle_job_success
+Removing output files of failed job FilterDescriptions since they might be corrupted:
+data/gc-list-eu-filtered.csv
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/adrian/PhD-Laptop/Pd_Geocache/workflow/.snakemake/log/2021-04-10T232332.970033.snakemake.log

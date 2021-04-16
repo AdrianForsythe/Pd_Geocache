@@ -1,0 +1,132 @@
+Lints for rule SampleDescriptions (line 14, /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile):
+    * No log directive defined:
+      Without a log directive, all output will be printed to the terminal. In distributed environments, this means that errors are harder to
+      discover. In local environments, output of concurrent jobs will be mixed and become unreadable.
+      Also see:
+      https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#log-files
+    * Specify a conda environment or container for each rule.:
+      This way, the used software for each specific step is documented, and the workflow can be executed on any machine without prerequisites.
+      Also see:
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#integrated-package-management
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#running-jobs-in-containers
+
+Lints for rule FilterDescriptions (line 33, /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile):
+    * No log directive defined:
+      Without a log directive, all output will be printed to the terminal. In distributed environments, this means that errors are harder to
+      discover. In local environments, output of concurrent jobs will be mixed and become unreadable.
+      Also see:
+      https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#log-files
+    * Specify a conda environment or container for each rule.:
+      This way, the used software for each specific step is documented, and the workflow can be executed on any machine without prerequisites.
+      Also see:
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#integrated-package-management
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#running-jobs-in-containers
+
+Lints for rule ScrapeGC (line 57, /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile):
+    * No log directive defined:
+      Without a log directive, all output will be printed to the terminal. In distributed environments, this means that errors are harder to
+      discover. In local environments, output of concurrent jobs will be mixed and become unreadable.
+      Also see:
+      https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#log-files
+    * Specify a conda environment or container for each rule.:
+      This way, the used software for each specific step is documented, and the workflow can be executed on any machine without prerequisites.
+      Also see:
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#integrated-package-management
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#running-jobs-in-containers
+
+Lints for rule PresenceShape (line 78, /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile):
+    * No log directive defined:
+      Without a log directive, all output will be printed to the terminal. In distributed environments, this means that errors are harder to
+      discover. In local environments, output of concurrent jobs will be mixed and become unreadable.
+      Also see:
+      https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#log-files
+    * Specify a conda environment or container for each rule.:
+      This way, the used software for each specific step is documented, and the workflow can be executed on any machine without prerequisites.
+      Also see:
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#integrated-package-management
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#running-jobs-in-containers
+
+Lints for rule CoordinateOverlap (line 95, /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile):
+    * No log directive defined:
+      Without a log directive, all output will be printed to the terminal. In distributed environments, this means that errors are harder to
+      discover. In local environments, output of concurrent jobs will be mixed and become unreadable.
+      Also see:
+      https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#log-files
+    * Specify a conda environment or container for each rule.:
+      This way, the used software for each specific step is documented, and the workflow can be executed on any machine without prerequisites.
+      Also see:
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#integrated-package-management
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#running-jobs-in-containers
+
+Lints for rule PlotMapping (line 126, /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile):
+    * No log directive defined:
+      Without a log directive, all output will be printed to the terminal. In distributed environments, this means that errors are harder to
+      discover. In local environments, output of concurrent jobs will be mixed and become unreadable.
+      Also see:
+      https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#log-files
+    * Specify a conda environment or container for each rule.:
+      This way, the used software for each specific step is documented, and the workflow can be executed on any machine without prerequisites.
+      Also see:
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#integrated-package-management
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#running-jobs-in-containers
+
+Lints for rule CountyFix (line 150, /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile):
+    * No log directive defined:
+      Without a log directive, all output will be printed to the terminal. In distributed environments, this means that errors are harder to
+      discover. In local environments, output of concurrent jobs will be mixed and become unreadable.
+      Also see:
+      https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#log-files
+    * Specify a conda environment or container for each rule.:
+      This way, the used software for each specific step is documented, and the workflow can be executed on any machine without prerequisites.
+      Also see:
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#integrated-package-management
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#running-jobs-in-containers
+
+Lints for rule SpatialWeightMatrix (line 173, /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile):
+    * No log directive defined:
+      Without a log directive, all output will be printed to the terminal. In distributed environments, this means that errors are harder to
+      discover. In local environments, output of concurrent jobs will be mixed and become unreadable.
+      Also see:
+      https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#log-files
+    * Specify a conda environment or container for each rule.:
+      This way, the used software for each specific step is documented, and the workflow can be executed on any machine without prerequisites.
+      Also see:
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#integrated-package-management
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#running-jobs-in-containers
+
+Lints for rule GeocacheWeightMatrix (line 194, /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile):
+    * No log directive defined:
+      Without a log directive, all output will be printed to the terminal. In distributed environments, this means that errors are harder to
+      discover. In local environments, output of concurrent jobs will be mixed and become unreadable.
+      Also see:
+      https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#log-files
+    * Specify a conda environment or container for each rule.:
+      This way, the used software for each specific step is documented, and the workflow can be executed on any machine without prerequisites.
+      Also see:
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#integrated-package-management
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#running-jobs-in-containers
+
+Lints for rule RunSim (line 215, /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile):
+    * No log directive defined:
+      Without a log directive, all output will be printed to the terminal. In distributed environments, this means that errors are harder to
+      discover. In local environments, output of concurrent jobs will be mixed and become unreadable.
+      Also see:
+      https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#log-files
+    * Specify a conda environment or container for each rule.:
+      This way, the used software for each specific step is documented, and the workflow can be executed on any machine without prerequisites.
+      Also see:
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#integrated-package-management
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#running-jobs-in-containers
+
+Lints for rule GLMCaveData (line 233, /home/adrian/PhD-Laptop/Pd_Geocache/workflow/snakefile):
+    * No log directive defined:
+      Without a log directive, all output will be printed to the terminal. In distributed environments, this means that errors are harder to
+      discover. In local environments, output of concurrent jobs will be mixed and become unreadable.
+      Also see:
+      https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#log-files
+    * Specify a conda environment or container for each rule.:
+      This way, the used software for each specific step is documented, and the workflow can be executed on any machine without prerequisites.
+      Also see:
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#integrated-package-management
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#running-jobs-in-containers
+

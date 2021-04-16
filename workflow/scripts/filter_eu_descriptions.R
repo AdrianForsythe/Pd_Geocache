@@ -28,48 +28,30 @@ filter.description<-function(data_path,out_path,keyword_plot){
   c("svetilka", "jama", "rudnik rude", "netopir", "ruda", "mineral")) # Slovenian
 
   keywords<-setNames(keywords,c("English","Bulgarian","Danish","Estonian","Frensh","Swedish","Slovak","Romania","Norwegian","Serbian","Spanish","Turkish","Dutch","German","Ukranian","Czech","Finnish","Greek","Italian","Latvian","Polish","Russian","Slovenian"))
+  keywords<-as.data.frame(keywords)
 
   gc_filtered_dat = na.omit(read.csv(data_path,header=T,strip.white = T))
 
-  full_set<-NULL
+  full_set<-gc_filtered_dat %>%
+  group_by(GC) %>%
+  mutate(flashlight=ifelse(grepl(paste(as.vector(keywords[,1]), collapse = "|"),Description,ignore.case = TRUE),1,0),
+         cave=ifelse(grepl(paste(as.vector(keywords[,2]), collapse = "|"),Description,ignore.case = TRUE),1,0),
+         mine=ifelse(grepl(paste(as.vector(keywords[,3]), collapse = "|"),Description,ignore.case = TRUE),1,0),
+         bat=ifelse(grepl(paste(as.vector(keywords[,4]), collapse = "|"),Description,ignore.case = TRUE),1,0),
+         ore=ifelse(grepl(paste(as.vector(keywords[,5]), collapse = "|"),Description,ignore.case = TRUE),1,0),
+         mineral=ifelse(grepl(paste(as.vector(keywords[,6]), collapse = "|"),Description,ignore.case = TRUE),1,0))
 
-  for (i in as.character(gc_filtered_dat$GC)) {
-    column_matches<-NULL
-    for (j in keywords) {
-      s<-filter(gc_filtered_dat,GC==i)
-      if(length(grep(paste(" ",j,sep=""),s$Description,ignore.case = TRUE,)>0)){
-        matches<-grep(paste(" ",j,sep=""),s$Description,ignore.case = TRUE)
-      } else {
-        matches <- 0
-      }
-      column_matches<-cbind(column_matches,matches)
-    }
-    full_set<-rbind(full_set,cbind(column_matches,i))
-    colnames(full_set) <- c(keywords,"GC")
-  }
 
-  long_full_set <- full_set %>% as.data.frame(full_set) %>%
-    pivot_longer(cols = -GC,names_to = "keyword") %>%
-    mutate(value=as.integer(levels(value))[value],
-           presence = ifelse(value > 0 ,1,0))
-
-  wide_full_set<-long_full_set %>%
-    pivot_wider(names_from = keyword,values_from = presence,id_cols = GC,values_fn = list(presence = min)) %>%
-    # mutate_all(as.integer()) %>%
-    as.data.frame()
-
-  png(keyword_plot,res = 300,height = 800,width = 1000,units = "px")
-  UpSetR::upset(wide_full_set,nintersects = NA,nsets = length(keywords),order.by = "freq")
-  dev.off()
+  #png(keyword_plot,res = 300,height = 800,width = 1000,units = "px")
+  #UpSetR::upset(full_set %>% select(-lon,-lat,-type,-Description),nintersects = NA,nsets = nrow(keywords),order.by = "freq")
+  #dev.off()
 
 ##### Filtering
-filtered_set<-subset(wide_full_set,  wide_full_set$flashlight > 0 & wide_full_set$cave > 0 |
-                       wide_full_set$ore > 0 & wide_full_set$mine > 0 |
-                       wide_full_set$mineral > 0 & wide_full_set$mine > 0)
+filtered_set<- full_set %>% filter(flashlight > 0 & cave > 0 | ore > 0 & mine > 0 | mineral > 0 & mine > 0)
 
-filtered_dat<-na.omit(gc_filtered_dat[match(filtered_set$GC,gc_filtered_dat$GC),])
+filtered_dat<- gc_filtered_dat %>% filter(GC %in% filtered_set$GC)
 
-write.csv(filtered_dat,out_path)
+write.csv(filtered_dat,out_path,quote=FALSE,row.names=FALSE)
 }
 
 filter.description(snakemake@input[[1]],snakemake@output[[1]],snakemake@output[[2]])

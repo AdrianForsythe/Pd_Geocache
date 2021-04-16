@@ -17,6 +17,9 @@ Search geocaching databases for evidence of people visiting caves!
 		- still issues with scraping, mostly due to "premium only" or non-standard cache types. The work around was to use a geocache preium subscription
 	- this method is maybe X10 faster, as `pycaching` uses GroundSpeak's API.
 
+3. Included more US States and CAD provinces impacted by WNS
+	- increased amount of sites covered and shared users between sites
+	
 ## General Workflow
 ### Scraping user records from geocaching.com
 - pulls user info, visits to a site, date, log entry

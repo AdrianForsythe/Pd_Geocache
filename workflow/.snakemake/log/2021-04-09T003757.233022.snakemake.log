@@ -1,0 +1,31 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	SampleDescriptions
+	1
+
+[Fri Apr  9 00:37:57 2021]
+rule SampleDescriptions:
+    input: data/gc-list-eu-unfiltered.csv
+    output: data/gc-eu-descriptions.csv
+    jobid: 0
+
+Terminating processes on user request, this might take some time.
+[Fri Apr  9 00:38:12 2021]
+Error in rule SampleDescriptions:
+    jobid: 0
+    output: data/gc-eu-descriptions.csv
+
+RuleException:
+CalledProcessError in line 17 of /home/adrian/PhD-Laptop/Pd_Geocache/workflow/eu_snakefile:
+Command 'set -euo pipefail;  /home/adrian/anaconda3/bin/python3.7 /home/adrian/PhD-Laptop/Pd_Geocache/workflow/.snakemake/scripts/tmpvlwt4o2f.pycaching-descriptions.py' returned non-zero exit status 1.
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2189, in run_wrapper
+  File "/home/adrian/PhD-Laptop/Pd_Geocache/workflow/eu_snakefile", line 17, in __rule_SampleDescriptions
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 529, in _callback
+  File "/home/adrian/anaconda3/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 515, in cached_or_run
+  File "/home/adrian/anaconda3/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2201, in run_wrapper
+Complete log: /home/adrian/PhD-Laptop/Pd_Geocache/workflow/.snakemake/log/2021-04-09T003757.233022.snakemake.log
