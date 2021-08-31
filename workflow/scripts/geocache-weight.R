@@ -1,21 +1,33 @@
 # summary of GC finds - GC
 # polygons are included here in order to grab the centroid later
 
-require(tidyverse)
-require(sf)
-require(maps)
+spatial_weight_matrix<-function(relevant.records,presence.df,weights,shared.users){
 
-spatial_weight_matrix<-function(relevant.records,presence.df,weights.csv,shared.users){
-
+  require(tidyverse)
+  require(sf)
+  require(lwgeom)
+  require(maps)
+  
+  # for testing
+  relevant_records<-read.csv("workflow/data/relevant-records.csv",header=T)
+  presence_df<-readRDS("workflow/data/presence.df.rds")
+  weights<-"workflow/data/gc.weights.csv"
+  
   relevant_records<-read.csv(relevant.records)
-  presence_df<-readRDS(presence.df)
+  # presence_df<-readRDS(presence.df)
 
   # pull out a unique list of county polys
-  # not from Cali or Wash for now!
-  uniq_df<-presence_df %>% filter(.,STATEPROV != c("California","Washington"))
-  uniq_df<-uniq_df[!duplicated(uniq_df$county),]
-
+  # exclude west coast right now
+  uniq_df<-presence_df %>% 
+    filter(!STATEPROV %in% c("California","Washington") ) %>% 
+    distinct(county,.keep_all = T)
+  
   # convert coords from county poly to centroid points for each county. Then reproject.
+  
+  # sf with spherical geometry?!?
+  # see https://github.com/r-spatial/sf/issues/1762#issuecomment-900571711
+  sf_use_s2(FALSE)
+  
   united_xy <- uniq_df$geoms %>% st_centroid() %>%
     st_transform(., "+proj=longlat +datum=WGS84")
 
@@ -33,7 +45,7 @@ spatial_weight_matrix<-function(relevant.records,presence.df,weights.csv,shared.
     summarise(total = length(User)) %>%
     st_as_sf(coords=c("lat","lon"),crs = 4326)
 
-  n_local_neighbors <- lengths(sf::st_is_within_distance(site_visits, dist = 100000))
+  # n_local_neighbors <- lengths(sf::st_is_within_distance(site_visits, dist = 100000))
 
   # need the number of visits at county level that match up with county centroids
   # match centroid back to county
@@ -93,16 +105,18 @@ spatial_weight_matrix<-function(relevant.records,presence.df,weights.csv,shared.
 
   # merge gc weights with adjacency score: 1 = touching, 0 = not touching
   both_weights<-left_join(all_shared_users,touching_m2,by=c("county","county2"))
-  both_weights$touching<-if_else(is.na(both_weights$touching),0,1)
+  both_weights$touching<-if_else(is.na(both_weights$touching) | isFALSE(both_weights$touching),0,1)
 
   # save
-  write.csv(both_weights,weights.csv)
+  write.csv(x = both_weights,file = weights,quote = F)
 
-  su.p<-ggplot(uniq_df$geoms)+
-    borders("world") +
-    borders("state") +
-    geom_sf(aes(fill=uniq_df$WNS_MAP_YR))+
+  su.p<-uniq_df %>% 
+    ggplot()+
+    borders("world",fill = "white") +
+    borders("state",fill = "white") +
     coord_sf(xlim = c(-125, -57.5), ylim = c(27.5, 55))+
+    geom_sf(aes(fill=uniq_df$WNS_MAP_YR))+
+    geom_path()
     # coord_sf(xlim = c(-100, -57.5), ylim = c(35, 50))+
     theme_bw()
   ggsave(shared.users,plot=su.p,dpi=300)

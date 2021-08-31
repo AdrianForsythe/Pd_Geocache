@@ -17,11 +17,7 @@ presence.df <- presence.df %>%
 presence.poly <- as_Spatial(presence.df$geoms)
 
 # pull out a unique list of county polys
-# not from Cali or Wash for now!
-uniq.df<-presence.df %>% 
-  filter(.,STATEPROV != c("California","Washington"))
-
-uniq.df<-uniq.df[!duplicated(uniq.df$county),]
+uniq.df<-presence.df %>% distinct(county,.keep_all_T)
 
 # convert coords from county poly to centroid points for each county. Then reproject.
 united.xy <- uniq.df$geoms %>% st_centroid() %>% 

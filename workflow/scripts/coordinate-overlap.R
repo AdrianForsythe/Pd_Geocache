@@ -1,11 +1,17 @@
-require(ggmap)
-require(tidyverse)
-require(sf)
-require(sp)
-require(lubridate)
-
 GetOverlaps<-function(scraped,presence.df,presence.poly,relevant_records){
+
+  require(ggmap)
+  require(tidyverse)
+  require(sf)
+  require(sp)
+  require(lubridate)
   
+  # for testing
+  scraped<-"workflow/data/gc-scrape.csv"
+  presence.df<-"workflow/data/presence.df.rds"
+  presence.poly<-"workflow/data/presence.poly.rds"
+  relevant_records<-"data/relevant-records.csv"
+
   gc.records<-read.csv(scraped,header=TRUE) %>% 
     mutate(Year = lubridate::year(lubridate::ymd(Date)))
 

@@ -1,0 +1,516 @@
+\documentclass{article}
+\title{SDE notes: practical/R stuff}
+\usepackage{hyperref}
+\usepackage{url}
+\date{\today}
+\newcommand{\code}[1]{{\tt #1}}
+\newcommand{\fixme}[1]{{\textbf{FIXME: #1}}}
+\newcommand{\ex}[1]{{\textbf{Exercise: }}}
+\begin{document}
+\maketitle
+
+\section{Preliminaries}
+%% Sweave/knitr options
+\SweaveOpts{
+  fig.width=5,fig.height=5,out.width=0.7\textwidth,
+  fig.align=center,tidy=FALSE,echo=TRUE}
+<<echo=FALSE,message=FALSE>>=
+## stuff for making pretty PDFs -- **ignore** if running
+##  interactively ...
+if (require(knitr)) {
+  require(highlight)
+  knit_hooks$set(
+                 fig=function(before, options, envir) {
+                   if (before) {
+                     par(bty="l",las=1)
+                   } else { }
+                 },
+                 ## from Yihui Xie: https://gist.github.com/1805862
+                 printfun = function(before, options, envir) {
+                   if (before) return()
+                   txt = capture.output(dump(options$printfun, ''))
+                   ## reformat if tidy=TRUE
+                   if (options$tidy) txt = formatR::tidy.source(text = txt, output = FALSE)$text.tidy
+                   con = textConnection(txt)
+                   on.exit(close(con))
+                   out = capture.output({
+                     highlight::highlight(con, renderer = highlight::renderer_latex(document= FALSE),
+                                          showPrompts = options$prompt, size = options$size,show_line_numbers=TRUE)
+                   })
+                   paste(out, collapse = '\n')
+                 })
+olddev <- options(device = function(...) {
+          .Call("R_GD_nullDevice", PACKAGE = "grDevices")
+        }) 
+}
+library(ggplot2)
+theme_update(theme_bw())
+@ 
+
+<<setpars>>=
+par(bty="l",las=1)  ## set graphics parameters
+## (L-shaped box, horizontal tick labels)
+set.seed(101)  ## set random-number seed
+@ 
+
+\section{Constructing neighbourhood matrices}
+
+I've defined most of the useful functions in
+a file \code{nbrmatfuns.R}, so they're easier to read into an R session:
+<<message=FALSE,warning=FALSE>>=
+source("nbrmatfuns.R")
+@ 
+
+R and MATLAB are almost exact opposites in this respect; in MATLAB every function
+needs to be in a separate file (I think?), but because MATLAB code is compiled,
+functions can be defined anywhere in the file (beginning, end, etc.).  In contrast,
+in R functions can be all in the same file, or all in different files, but they
+must be defined before they're used.
+
+\subsection{Utility functions}
+
+\paragraph{wrapmod} takes the modulus ($x \mbox{ mod } N$) 
+but returns $N$ rather than 0 when $x=N$ or $x=0$
+(we need this to construct periodic boundary conditions):
+<<wrapmodsrc,printfun=wrapmod,echo=FALSE>>=
+## source code of wrapmod
+@
+
+\ex\ try out \code{wrapmod} for yourself (e.g. \code{wrapmod(1:5,5)}) and
+compare its behaviour to that of \verb+%%+.
+
+\paragraph{mplot} takes a matrix and plots it in a sensible
+way for our purposes. The default behaviour of R's \code{image}
+function is to plot (1,1) in the lower left corner, and to plot
+the rows left-to-right and the columns bottom-to-top; we want
+(1,1) in the upper left corner, the rows top-to-bottom, and
+the columns left-to-right, so we have to both transpose and
+flip the matrix.  I've added some fancy bits for nice axes,
+and for drawing lines to separate the blocks of the matrix by
+rows/columns of the original grid.
+<<mplotsrc,printfun=mplot,echo=FALSE>>=
+## source code of mplot
+@ 
+
+\ex\ Experiment to see the order in which R orders, and plots, matrices.
+(1) Construct a $3 \times 3$ matrix \code{m} containing the vector of values from 1 to 9;
+examine it to see how R has arranged the values.  (2) Use \code{c()} or \code{as.vector()}
+to collapse \code{m} to a vector; see what order it's in.
+(3) use \code{plot(1:9,1:9,pch=16,cex=2,col=1:9)} [\code{pch}=plotting character (16 is a filled circle); \code{cex}=character expansion (i.e. point size); \code{col}=colo(u)r] to see what default colours R uses for
+plotting the values from 1:9;
+(4) use \code{image(m,breaks=(1:10)-0.5,col=1:9)} to visualize the matrix.
+(5) convince yourself that the transposition-and-flipping trick used in \code{mplot}
+works.
+
+
+Note that sparse matrices (which we will deal with a bit later)
+have their own \code{image} method, which is even a bit prettier
+than \code{mplot}; the \code{add.bands} stuff is the only
+real advantage of our home-made function.
+
+\ex\ Try out these nicer methods via 
+<<eval=FALSE>>=
+library(Matrix)
+image(Matrix(m),colorkey=TRUE)
+@ 
+(I tried to get custom colours, but couldn't easily figure out how, but the
+greyscale used here is sufficient to see what's going on.)
+
+\subsection{\code{for} loops}
+
+The first, most boneheaded approach is to just to 
+loop over all rows and columns and then over offsets
+to rows and columns:
+
+<<printfun=nbr_loop,echo=FALSE,tidy=FALSE>>=
+## source code of nbr_loop
+@ 
+
+\begin{itemize}
+  \item \code{match.arg()} is a standard way to allow users to take
+    shortcuts in specifying arguments
+  \item note the \code{debug} statements: I actually spent a lot of time looking at pictures (see below) and printing out interim results before I got everything working \ldots
+  \item the stuff at the end (1) converts the 0/1 matrix back to a logical (TRUE/FALSE) matrix; (2) if desired, converts the result into a \emph{sparse} matrix, where only the locations of the non-zero (or TRUE in this case) positions are stored.
+    
+  \end{itemize}
+\subsection{matrix shift calculations}
+
+A cleverer way (which turns out to be \emph{slower},
+much to my surprise) is to construct matrices of
+the row and column coordinates and use R's \code{outer}
+function (a generalized outer product) to compute 
+matrices containing the distances in the horizontal and
+vertical directions:
+
+<<nbrshiftsrc,printfun=nbr_shift,echo=FALSE>>=
+## source code of nbr_shift
+@ 
+
+\ex\ set \code{N} to 4 and work through the steps of
+constructing \code{rm}, \code{cm}, \code{rowdist},
+\code{coldist}, and \code{nbr} by hand, 
+to convince yourself what's going on.
+
+\subsection{sparse matrix construction}
+
+The best way to do this is to work directly in the
+sparse matrix framework.  In particular, in the
+\code{Matrix} package R has functions for
+constructing banded matrices (\code{bandSparse})
+and constructing block-diagonal matrices (\code{bdiag}).
+In order to make the VN(1) matrix, we first construct
+a ``row-neighbor'' ($N \times N$) matrix with the diagonal
+and the first off-diagonals in each direction set.
+If we want periodic boundary conditions, then we also set
+the corner elements of this matrix.
+We then make a block-diagonal matrix with $N$ of these
+matrices.  To set the column neighbours, we set the
+off-diagonals $N$ elements above and below the main diagonal;
+for periodic boundary conditions we also set the $(N^{2}-N)$
+off-diagonals.
+
+<<nbrsparcesrc,printfun=nbr_sparse,echo=FALSE>>=
+## source code of nbr_sparse
+@ 
+
+\subsection{kronecker product}
+
+Another sparse-matrix-based approach uses the \emph{Kronecker product},
+(\href{http://en.wikipedia.org/wiki/Kronecker_product}{Wikipedia ref.});
+if we have two matrices $A= (a_{ij})$ and $B=(b_{kl})$, then the
+$\{ik,jl\}^{\mbox{th}}$ element of their
+Kronecker product $A \otimes B$ is $a_{ij} b_{kl}$ (I used
+\href{http://detexify.kirelabs.org/classify.html}{detexify}
+to figure out the \LaTeX\ symbol name).
+
+Since R's \code{Matrix} package knows about Kronecker products,
+we can use them to compute the neighbourhood matrix:
+
+<<nbrkronsrc,printfun=nbr_kron,echo=FALSE>>=
+## source code of nbr_kron
+@ 
+
+\ex\ I again suggest that you work through some of the details
+of this for yourself, visualizing the intermediate results.
+Take $N=10$.  Construct a diagonal matrix ($\code{Diagonal(N)}$);
+construct the row-distance-neighbourhood matrix called \code{snbr}
+following the steps above; use \code{image} to visualize the
+results at each step.  Denoting \code{snbr} as $S$ and the diagonal
+matrix as $D$, use \code{kronecker} and \code{image} to visualize
+the output of $S \otimes S$, $S \otimes D$, $D \otimes S$, and
+$D \otimes D$.
+
+\ex\ Can you figure out how to use these components (\code{bandSparse},
+\code{Diagonal}, \code{kronecker}, combination with \code{|} (``or'')
+to construct the VN neighbourhood matrix with $n>1$?  (I would use
+<<eval=FALSE>>=
+mplot(nbr_loop(10,type="VN",n=3,sparse=FALSE),add.bands=TRUE)
+@ 
+or something similar, to see what you're aiming for.)
+
+\subsection{Pictures}
+
+The basic non-cyclic matrix.  This is \emph{almost} the banded matrix
+with off-diagonals $\{-N,-1,1,N\}$ set, but not quite, because
+we don't want element 5 (the end of the first column) to be
+a neighbour of element 6 (the beginning of the second column).
+
+<<mplot1,fig=yes,warning=FALSE>>=
+mplot(as.matrix(nbr_loop(5,cyclic=FALSE)),add.bands=TRUE)
+@ 
+
+For periodic boundary conditions, we fill in the corners of the
+diagonal blocks, and the diagonals of the corner blocks:
+<<mplot2,fig=yes,warning=FALSE>>=
+mplot(as.matrix(nbr_loop(5)),add.bands=TRUE)
+@ 
+
+We don't really need to see more, but we can
+check out examples like the Moore neighbourhood of size 2:
+<<mplot3,fig=yes,warning=FALSE>>=
+mplot(as.matrix(nbr_loop(7,type="M",n=2)),add.bands=TRUE)
+@ 
+
+How about timing?
+<<timecomp,fig.width=8,out.width=\textwidth,warning=FALSE>>=
+load("nbrmatbatch.RData")
+library(ggplot2)
+brkvec <- 10^sort(outer(c(0,log10(5)),-2:1,"+"))
+ggplot(results,aes(x=n,y=time,colour=method))+geom_point()+geom_line()+
+  scale_y_log10(breaks=brkvec)+
+  labs(x="matrix dimension",y="time (sec)")
+@ 
+
+Some conclusions:
+\begin{itemize}
+  \item for the largest few matrix sizes the looping and shifting methods actually
+    fail (missing points) because R runs out of memory on my laptop
+  \item the shifting approach is actually worst, and compilation makes little difference
+  \item looping is better, compiling helps, and a significant fraction of the time is
+    actually spent converting from the dense to the sparse matrix
+  \item the two methods based on constructing sparse matrices from scratch are 
+    much faster (at least for $n \geq 20$), 
+    with \verb+nbr_kron+ being fastest -- although the difference between
+    0.05 and 0.1 seconds is unlikely to be very important!
+  \item also keep in mind that even the difference between 0.1 and 20 seconds
+    is unlikely to be terribly relevant, because we will only need to define
+    the neighborhood matrix once for each geometry we want to use:
+    ``Premature optimization is the root of all evil''
+    (Donald Knuth, from \href{http://en.wikiquote.org/wiki/Donald_Knuth}{Wikiquotes}).
+    I spent all this effort on the matrix construction because (1) seeing the different
+    strategies may be informative, and in other contexts the speed differences might
+    be more relevant; (2) I got carried away.
+  \end{itemize}
+We can use variants of these strategies to construct matrices that
+compute diffusion terms for PDEs, by taking the von Neumann (1) neighborhood
+matrix and multiplying the diagonal by -2 (this is the simplest discretization
+scheme; others are possible).
+
+\section{Hawk-dove game}
+
+We already know how to set up ODEs.
+
+\subsection{ODE (``dynamical system'')}
+
+Define the gradient function:
+<<>>=
+hawkdovegrad <- function(time,y,pars) {
+  g <- with(as.list(c(y,pars)),
+       { n <- u+v
+         pu <- u/n
+         pv <- v/n
+         c(u*(a*pu+b*pv-k*n),v*(c*pu+d*pv-k*n))
+       })
+  list(g,NULL)
+}
+@ 
+
+Run the system for ``Case I'', from a series of
+different starting points:
+<<>>=
+library(deSolve)
+params1 <- c(a=0.4,b=0.8,c=0.6,d=0.3,k=1)
+y1 <- c(u=0.1,v=0.9)
+y2 <- c(u=0.9,v=0.1)
+y3 <- c(u=0.1,v=0.1)
+y4 <- c(u=0.9,v=0.9)
+tvec1 <- seq(0,25,by=0.1)
+HD1 <- ode(y1,tvec1,hawkdovegrad,params1)
+HD2 <- ode(y2,tvec1,hawkdovegrad,params1)
+HD3 <- ode(y3,tvec1,hawkdovegrad,params1)
+HD4 <- ode(y4,tvec1,hawkdovegrad,params1)
+@ 
+
+Plot the results:
+<<odeplot1>>=
+with(as.data.frame(HD1),plot(u,v,type="l",xlim=c(0,1),ylim=c(0,1)))
+with(as.data.frame(HD2),lines(u,v))
+with(as.data.frame(HD3),lines(u,v))
+with(as.data.frame(HD4),lines(u,v))
+@ 
+
+\ex\ reconstruct the pictures of Cases II-IV for
+the dynamical system from Durrett and Levin.
+
+\section{PDE}
+
+R doesn't have extensive methods for numerical solution of PDEs;
+in particular, the methods that are provided by \code{ode.2D} in
+the \code{deSolve} package are likely to work well only for
+parabolic PDEs, not for hyperbolic ones.  However,
+they should be good enough for what we want to do \ldots
+
+<<>>=
+dmatlist <- list()  ## set up global list
+hawkdovegrad2D <- function (time, state, pars, N, Da, dx, debug=FALSE) {
+  NN <- N*N
+  Hawk <- matrix(nrow = N, ncol = N,state[1:NN])
+  Dove <- matrix(nrow = N, ncol = N,state[(NN+1):(2*NN)])
+  
+  ## check to see if a diffusion matrix has been created for this
+  ## size system or not.  
+  ## If not, create it and store it globally.
+  if (is.null(dmat <- dmatlist[[as.character(N)]])) {
+    ## note <<- means GLOBAL assignment
+    dmat <- dmatlist[[as.character(N)]] <<- 
+      ## block-diagonal of two VN(1) matrices, minus 3*I(N)
+      bdiag(nbr_kron(N),nbr_kron(N))+Diagonal(2*NN,-3)
+  }
+
+  g <- with (as.list(pars), {
+    n <- c(Hawk+Dove)              ## total pop density
+    pHawk <- ifelse(n>0,Hawk/n,0)  ## prop. hawk
+    pDove <- ifelse(n>0,Dove/n,0)  ## prop. dove
+    ## game steps
+    dHawk <- Hawk * (a*pHawk+b*pDove-k*n)
+    dDove <- Dove * (c*pHawk+d*pDove-k*n)
+    ## ... plus diffusion
+    drop(c(dHawk,dDove)+Da*dmat %*% state)
+  })
+  if (debug) cat(mean(g[1:NN]),mean(g[-(1:NN)]),"\n")
+  return(list(g))
+}
+@ 
+
+Define parameters:
+<<>>=
+R  <- 20                      # total length of surface, m
+N  <- 50                      # number of boxes in one direction
+dx <- R/N                     # thickness of each layer
+Da <- 0.05                    # m2/d, dispersion coefficient
+NN <- N^2
+@ 
+
+Define initial conditions:
+<<>>=
+yini <- rep(0,2*NN)
+cc      <- c((NN/2):(NN/2+1)+N/2, (NN/2):(NN/2+1)-N/2)
+yini[cc] <- yini[NN+cc] <- 1
+times   <- seq(0, 30, by = 1)
+@ 
+
+<<HDpdesol1,cache=TRUE, message=FALSE>>=
+HDpdesol1 <- ode.2D(y = yini, times = times, func = hawkdovegrad2D, parms = params1,
+              dimens = c(N, N), names = c("Hawk","Dove"),
+              N = N, dx = dx, Da = Da, method = rkMethod("rk45ck"))
+@ 
+
+Try out \code{plot(HDpdesol1)} (don't try to print it out!)
+
+Or if you want to summarize the total number of hawks,
+we need to take the sums of columns 2 to $N^{2}+1$ (the first column
+is the time index) and of columns $N^2+2$ to $2 N^2+1$ 
+for each time:
+<<HDpdesumplot>>=
+allhawks <- rowSums(HDpdesol1[,2:2501])*dx^2
+alldoves <- rowSums(HDpdesol1[,2502:5001])*dx^2
+matplot(HDpdesol1[,"time"],cbind(allhawks,alldoves),type="l")
+@ 
+
+\ex\ Try to sort out the units of this model so that the
+equilibrium density matches the results of the ODE model.
+
+\subsection{Patch model}
+
+Finally, we'll implement the patch model, using the Gillespie
+algorithm (but ignoring the elapsed time and just sampling the
+next event in each case).
+
+<<>>=
+HDrates <- function(y,pars) {
+  g <- with(as.list(c(y,pars)),
+       { 
+         u <- y[1:Npatch]
+         v <- y[(Npatch+1):(2*Npatch)]
+         n <- u+v
+         pu <- ifelse(n==0,0,u/n)
+         pv <- ifelse(n==0,0,v/n)
+         hbr <- (a*pu+b*pv)
+         dbr <- (c*pu+d*pv)        
+         list(hawkbirth=u*pmax(0,hbr),
+           hawkdeath=k*u+u*pmax(0,-hbr),
+           hawkmove=mu*u,
+           dovebirth=v*pmax(0,dbr),
+           dovedeath=k*v+v*pmax(0,-dbr),
+           dovemove=mu*v)
+       })
+  g
+  }
+
+## transition matrix
+HDtransmat <- matrix(c(1,0,-1,0,-1,0,0,1,0,-1,0,-1),
+                     byrow=TRUE,ncol=2,
+                     dimnames=list(c("hawkbirth","hawkdeath",
+                       "hawkmove","dovebirth",
+                       "dovedeath","dovemove")))
+
+HDtrans <- function(y,rates) {
+  totrates <- sapply(rates,sum)
+  ## which event happens?
+  w <- sample(1:length(totrates),size=1,prob=totrates)
+  ## which patch does it happen in?
+  p <- sample(1:Npatch,size=1,prob=rates[[w]])
+  n <- names(rates)[w]  ## name of transition
+  ## reshape state vector (could be avoided)
+  m <- matrix(y,ncol=2,dimnames=list(NULL,c("hawk","dove")))
+  m[p,] <- m[p,] + HDtransmat[n,]
+  if (n %in% c("hawkmove","dovemove")) {
+    newpatch <- sample(1:Npatch,size=1)
+    ## disallow same-patch move?    
+    if (n=="hawkmove") {
+      m[newpatch,"hawk"] <- m[newpatch,"hawk"]+1
+    } else {
+      m[newpatch,"dove"] <- m[newpatch,"dove"]+1
+    }
+  }
+  c(m)
+}
+@ 
+
+Set up parameters:
+<<>>=
+Npatch <- 50
+params5 <- c(params1,mu=1)
+params5["k"] <- 0.5
+set.seed(101)
+y <- sample(0:20,2*Npatch)
+steps <- 10000
+rptsteps <- 100
+@ 
+
+Run patch model:
+<<patch1,cache=TRUE>>=
+res <- matrix(ncol=2,nrow=ceiling(steps/rptsteps+1))
+colnames(res) <- c("hawk","dove")
+rpt <- 1
+t_patch <- system.time(
+   for (i in 1:steps) {
+        y <- HDtrans(y,HDrates(y,params5))
+        if (i %% rptsteps==0) {
+           res[rpt,] <- colSums(matrix(y,ncol=2))
+           rpt <- rpt+1
+         }
+    })["elapsed"]
+@ 
+
+(Takes about \Sexpr{round(t_patch,1)} seconds to run.)
+
+Plot results:
+<<patchmodelplot1>>=
+matplot(res,type="l",lty=1)
+@ 
+
+Or:
+<<patchmodelplot2,message=FALSE,warning=FALSE>>=
+library(reshape)
+ggplot(melt(res),aes(x=X1,y=value,colour=X2))+geom_line()
+@ 
+
+\ex\ Look at \code{HDtransmat} and make sure
+that you can interpret it.
+Try out the patch model for several different cases.
+
+Now, if you're feeling really ambitious, you can see if
+you can put the pieces we have together into an 
+implementation of the interacting particle
+system.  We have code for creating the
+VN matrix, which if multiplied by the hawk or dove state
+vector should generate the number of individuals of each
+type in the neighbourhood of each cell, as well as code for calculating
+total rates, picking an event, picking a cell, and updating
+that cell.
+
+It's possible that this naive approach will just be too slow
+(you can start by trying it out on a very small spatial arena,
+say 7 $\times$ 7, which shouldn't be any harder than the
+50-patch model we tried above).  The only other trick that
+may be useful is \emph{rejection sampling}, where we pick a patch
+at random (regardless of its rate) and then see whether to
+keep it or try another patch \ldots
+
+<<echo=FALSE>>=
+options(device=olddev$device)
+@ 
+
+\end{document}
+
