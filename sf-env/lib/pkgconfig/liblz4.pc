@@ -1,0 +1,14 @@
+#   LZ4 - Fast LZ compression algorithm
+#   Copyright (C) 2011-2014, Yann Collet.
+#   BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)
+
+prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+libdir=/home/adrian/PhD/Pd_Geocache/sf-env/lib
+includedir=/home/adrian/PhD/Pd_Geocache/sf-env/include
+
+Name: lz4
+Description: extremely fast lossless compression algorithm library
+URL: http://www.lz4.org/
+Version: 1.9.3
+Libs: -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -llz4
+Cflags: -I/home/adrian/PhD/Pd_Geocache/sf-env/include

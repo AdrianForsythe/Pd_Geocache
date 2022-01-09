@@ -1,0 +1,325 @@
+
+<!-- saved from url=(0110)https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/rabies.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Spatial Dynamics of Rabies Epidemics on Heterogeneous Landscapes in Connecticut_files/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app212.us.archive.org';v.server_ms=1764;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./Spatial Dynamics of Rabies Epidemics on Heterogeneous Landscapes in Connecticut_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./Spatial Dynamics of Rabies Epidemics on Heterogeneous Landscapes in Connecticut_files/wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://medschool.umaryland.edu:80/departments/epidemiology/dsmith/rabies.html","20040127190904","https://web.archive.org/","web","/_static/",
+	      "1075230544");
+</script>
+<link rel="stylesheet" type="text/css" href="./Spatial Dynamics of Rabies Epidemics on Heterogeneous Landscapes in Connecticut_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./Spatial Dynamics of Rabies Epidemics on Heterogeneous Landscapes in Connecticut_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+<title> 
+Spatial Dynamics of Rabies Epidemics on Heterogeneous Landscapes in Connecticut 
+</title>
+</head>
+
+<body bgcolor="WHITE"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20040127190904/http://medschool.umaryland.edu:80/departments/epidemiology/dsmith/rabies.html</div>
+<div id="donato" style="position:relative;width:100%;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="./Spatial Dynamics of Rabies Epidemics on Heterogeneous Landscapes in Connecticut_files/donate.html" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><script type="text/javascript">
+__wm.bt(650,27,25,2,"web","http://medschool.umaryland.edu/departments/epidemiology/dsmith/rabies.html","20040127190904",1996,"/_static/",["/_static/css/banner-styles.css?v=omkqRugM","/_static/css/iconochive.css?v=qtvMKcIJ"], "False");
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<center> 
+<h1> The Spatial Dynamics of Raccoon Rabies across Connecticut </h1>
+by <b> David L. Smith, Brendan Lucey, Lance Waller,
+ James E. Childs, and Leslie A. Real</b> <br> 
+Web page maintained by: <a href="https://web.archive.org/web/20040127190904/mailto:dave@needles.umaryland.edu">
+dave@needles.umaryland.edu </a>. 
+</center>
+<hr>
+
+As an epidemic spreads, the front is often jagged and irregular, reflecting
+spatial variation in local transmission rates, stochasticity, or reporting
+errors. We developed a methodology for quantifying spatial variation in the
+rates of disease spread across a heterogeneous landscape. The results have been
+discussed in detail in our paper, "Predicting the Spatial Dynamics of Rabies
+Epidemics on Heterogenous Landscapes," <b> <a href="https://web.archive.org/web/20040127190904/http://www.pnas.org/">
+Proceedings of the National Academy of Sciences </a> </b> by David Smith,
+Brendan Lucey, Lance Waller, James E. Childs, and Leslie A. Real. (To download
+the paper in pdf format from the PNAS website, click <a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/tmp.html">
+HERE.</a>) Here, we have provided supplementary information about the methods,
+raw data and computer code, and instructional information. 
+
+<h2> <a name="connecticut">  Step One: Date of First Appearance</a> </h2> 
+
+<a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/connecticut.html"> <img src="./Spatial Dynamics of Rabies Epidemics on Heterogeneous Landscapes in Connecticut_files/connecticut.jpg" height="181" width="300" align="right"></a> 
+
+<b> Racoon Rabies in Connecticut:</b> Racoon rabies first appeared in
+Connecticut in 1990 as part of a large epidemic in the northeastern US
+beginning in 1977 near the border between Virginia and West Virginia. In
+Connecticut, dead or suspicious raccoons were reported to local health
+officials. The animals were collected or captured and sent to state health
+offices to test for the presence of rabies. In Connecticut, the location of
+rabid raccoons was recorded township by township. Thus, the data reflect
+passsive reporting for political units, not ecological relevant units. To
+download the raw data for the date of first appearance, or to see an enlarged
+view of the figure, click on the image to the right.  
+
+<p> We wanted to develop predictive models for the invasive spread of rabies
+across heterogeneous landscapes. To do this, we developed models to predict the
+date when rabies was first detected in each of the Connecticut's 169 townships.
+
+</p><h2> <a name="network"> Step Two: The Adjacency Network </a>  </h2> 
+
+<b> Defining a Network: </b> Since the data were aggregated
+township by township, we developed a mathematical model for the
+spatial spread of rabies on a network defined by the townships
+and their adjacency relationships. We generated a file using a
+GIS database  of Connecticut townships (illustrated at the right)
+to define the relationships. Two townships were defined to be to
+be adjacent if they shared more than one point in common along
+the border. In the illustration at the left, the vertices of the
+graphs are placed at the geographical centers of each of the 169
+townships.  An edge connects each pair of townships that shares a
+border.  To see an enlarged version of the image at the left or
+download the adjacency matrix, click the figure to the left.  
+
+<a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/network.html"> <img src="./Spatial Dynamics of Rabies Epidemics on Heterogeneous Landscapes in Connecticut_files/network.jpg" width="300" height="240" align="left"></a> 
+
+<h2> Step Three: Surrogate Variables</h2> We wanted to use data
+that was readily availabe that we could use as a surrogates for
+the variables associated with raccoon movement population
+density. The population density of wildlife is not readily
+available, and expensive to obtain for an area as large as
+Connecticut. We chose one variable that was associated with
+raccoon movement, and one associated with raccoon density. The
+two variables were human population density and the position of
+large rivers. To download the raw data, click on the image at the
+left. 
+
+<p> <b> Human Population Density </b> We used data from the 1990
+census for human population density for the townships.  
+
+</p><p> <b> Rivers: </b> Based on a GIS database, we also determined
+whether the centers of two townships were separated by a river or
+other large body of water.  In the illustration of the network,
+the blue edges represent townships that are separated by water.
+The red edges represent two townships that are adjacent, but not
+totally separated by a large body of water. 
+
+</p><p> <b> Translocation: </b> In the model, rabid raccoons may be
+transported long distances aided (deliberately or not) by human
+movement. In addition, long-distance migration of young raccoons
+may transmit raccoon rabies to a township in advance of the
+front.  We sought to quantify the rate that such events occur.  
+
+
+</p><h2> <a name="model"> Step Four: A Stochastic Model </a> </h2> 
+
+<a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/model.html"> <img src="./Spatial Dynamics of Rabies Epidemics on Heterogeneous Landscapes in Connecticut_files/model.gif" align="right"></a>
+
+We developed a discrete-event simulator; or in other words, a
+simulator in continuous time for which the infection of each
+townships occurs at a unique point in time. Each time one
+township becomes infected, the probability of infection in nearby
+townships increases.  The algorithm determines which township is
+infected, and when it becomes infected. The algorithm has six
+steps. 
+
+<ol>
+<li> For each township, sum the infection rates to compute the <b>Township Rate.</b> 
+	<ul>
+	<li> A township may become infected through local transmission if adjacent
+	townships are infected. Local transmission rates may be higher
+	or lower depending on the population density of the neighbor and whether or not
+	two townships are separated by a river.  
+	</li><li> A township may become infected through long-distance translocation of
+	rabid raccoons. 
+	</li><li> For each township, the total rate is the sum of the local rate divided
+	by the number of neighbors plus the long-distance translocation rate.   
+   </li></ul>
+</li><li> Compute the <b>Total Rate</b> of change, the sum of all the <b>Township Rates
+</b>.
+</li><li> Compute the elapsed time, the waiting time to the next event. The waiting 
+time is exponentially distributed with expected time 1/<b>Total Rate</b>. In the
+simulator, we draw a random variate from this distrubution. 
+</li><li> In the simulator, we "force" the edges on the western border of
+Connecticut. The time to infection is not simulated, but given by the data.
+After computing the elapsed time, we see whether the date when rabies was
+observed in one of the forced townships preceded the simulated event. If so,
+the borders are forced, and no event is simulated.
+</li><li> If no event is forced, we simulate infection. Only one township becomes
+infected at a time, so the algorith simply selects one. The probability for any
+particular township is its <b>Township Rate / Total Rate</b>. We draw a
+multinomial random variate to determine which township is infected. 
+</li><li> Finally, once a township has been infected, we update the infection status
+and repeate the algorithm until every township is infected. 
+</li></ol>
+
+For additional information about the algorithm, including the computer code,
+click on the image to the right. 
+
+<h2> Step Five: Candidate Models </h2> 
+
+Each candidate model is determined by a rule for determining local rates of
+spread, and the rate of translocation. The five candidate models we tested were
+<ul>
+<li> <b> Null:</b> A simple model with no heterogeneity in the rate of spread. 
+</li><li> <b> Human: </b> The local rate of spread was correlated with the natural
+log of the population density of the infected neighbor.
+</li><li> <b> River:</b>  A river with uniform rates of translocation, but different
+local rates crossing rivers.
+</li><li> <b> RivHum1: </b> A combination of <b> River </b> and <b> Human </b> with
+different slopes and intercepts for local spread crossing, and not crossing
+rivers.
+</li><li> <b> RivHum2: </b> An extension of <b> River </b>, but the rate of
+long-distance translocation was correlated with the log of human population
+density.  
+</li></ul>
+
+<a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/results.html"> <img src="./Spatial Dynamics of Rabies Epidemics on Heterogeneous Landscapes in Connecticut_files/results.gif" align="left"></a>
+<h2> <a name="results"> Step Six: Fitting the models </a> </h2>  
+
+For each model, and a set of parameters, the <b> Expected </b> behavior of the
+model was determined by simulating the model 5,000 times, and taking the
+average time to first appearance over the ensemble. 
+
+<p> For each candidate model, we searched parameter space to find the
+parameters that minimized the Pearson Chi-Squared statistic, the sum over all
+townships of <b> (Observed - Expected)^2 / Expected </b> for all the townships
+(ignoring those that were forced). Click <a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/model.html"> here </a> for
+additional technical details and the computer code. 
+
+</p><h2> <a name="chisq"> Step Seven: Model Selection and Goodness of Fit </a> </h2>  
+
+Ranking the Chi-Squared statistics for the best fit parameters for all five
+candidate models is one way to compare the relative goodness of fit. For
+example, <b> Rivers </b> had a goodness of fit measure that was 10% lower than
+the <b> Null </b> Model. The fit was done separately with and without Putnam, a
+clear outlier. 
+
+In addition, we used the Chi-square distribution to estimate the overall
+goodness of fit.  A histogram of the residuals shows that they are
+approximately normally distributed (<a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/chisq.html">see histograms
+</a>).  Moreover, the elements of the are consistent with the assumptions of a
+Chi-Square distribution with one degree of freedon. Three townships, South
+Windsor ``sw,'' Union ``u,'' and Enfield ``e,'' contribute disproportionately
+to the variance; without these three points the mean would be 0.98 and the
+variance would be 1.74, consistent with the assumptions.  Since the assumptions
+are consistent with the Chi-square distribution with one-degree of freedom, we
+used the summed Chi-square statistic with the appropriate degrees of freedom to
+generate p-values to test for the goodness of fit.
+
+<p> A good statistical fit required the addition of habitat heterogeneity.  The
+goodness of fit measure improved by approximately 10% in the models that
+included rivers compared with those did not (see Table, above); this margin is much
+larger than the 1% improvement in the goodness of fit measure gained by
+incorporating human population density. The relatively large improvement
+suggests that rivers play an important role in rabies transmission.  Moreover,
+when Putnam was excluded (see <a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/rabies.html#quantitative"> Figure c, bottom graph</a>
+), models that did not incorporate rivers were rejected by the goodness of fit
+test, while those that did incorporate rivers were not.  A comparison of the
+significance values, parameter values, and improvement in the goodness of fit
+from the addition of rivers suggests that a predictive model requires a
+seven-fold reduction in transmission crossing rivers (fitted parameters are
+reported in the table).
+
+
+<a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/chisq.html"> <img src="./Spatial Dynamics of Rabies Epidemics on Heterogeneous Landscapes in Connecticut_files/chisq.gif" align="right"> </a>
+
+</p><h2> Step Seven: Quantitative Interpretation </h2>
+
+In the models that generated the best fit (see the Table), slower local spread
+of rabies was strongly associated with river crossings, the global spread by
+translocation was relatively frequent, and human population density had very
+little effect on the local spread of rabies.  All of the models that
+incorporated slowing at rivers had a better fit than the alternative models
+that did not include this factor (Table 1).  Using the full data set, all of
+the models differed significantly from the observed data. The model predictions
+and observations were substantially different in a few townships (<a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/chisq.html"> histogram</a>  and <a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/rabies.html#quantitative">  panel c, bottom
+graph </a> ).
+
+<p>Even though local transmission accounted for most transmission,
+long-distance translocation was frequent. Of the 159 townships not on the
+western border of Connecticut, twenty-one townships (13%) recorded their first
+case of raccoon rabies when none of the adjacent townships were infected. 
+
+</p><p> Human population density was weakly associated with the rate of local
+spread and the rate of translocation (the difference in the rate of spread
+between the least and most populated township was 11% in <b> RivHum2</b>  and
+14% in <b> RivHum1 </b> ). The fits did improve when human population density
+was used to predict the rate of spread, but the improvements were minor and the
+improved fit may be artifactual. Any association between the rate of spread and
+human population density is consistent with a hypothesis of increased rate of
+rabies spread into the townships, but it also supports a hypothesis of more
+efficient detection. 
+
+</p><p> Most important, we found that river crossings slowed the spread of rabies
+by a factor of seven. The earliest appearance of rabies east of the Connecticut
+river may have been due to a rare translocation event rather than a more
+predictable local transmission event; the first case of rabies east of the
+Connecticut river was detected in South Windsor (``sw'' in <a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/connecticut.html"> top graph </a> , <a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/rabies.html#quantitative">panel b,
+bottom graph</a>), far in advance of the front, and the first cases in nearby
+townships of Enfield and Union and one adjacent township were observed shortly
+thereafter (``e'' and ``u'' in <a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/connecticut.html"> top graph </a> ,
+<a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/rabies.html#quantitative">panel b, bottom graph</a>). Similar but less
+dramatic patterns are observed in the townships surrounding Clinton in the
+southern, central townships (``c'' in <a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/connecticut.html"> top graph
+</a> , <a href="https://web.archive.org/web/20040127190904/medschool.umaryland.edu/departments/epidemiology/dsmith/rabies.html#quantitative">panel b, bottom graph</a>).
+
+</p><p> To assess the consequences of a seven-fold delay crossing rivers on the
+overall dynamics of rabies, we further simulated the epidemic with and without
+rivers and with and without long-distance translocation. Rivers delay the
+appearance in southeastern Connecticut by approximately 16 months (Figure d,
+below) without translocation and by 11 months with translocation. The effect of
+rivers was strongest close to the river and declined with the distance from the
+river. A river shadow effect was visible (Figure d, below). We attribute this
+shadow effect to two properties of these models. First, a small probability of
+translocation adds stochasticity that obscures the patterns that would be
+formed by local heterogeneity. Local delays associated with river crossings are
+reduced if rabid raccoons cross rivers by translocation. Second, patterns
+caused by local heterogeneity dissipate because there are multiple routes for
+the spread of infection. For example, once an epidemic reaches a river, it may
+cross at any of the shared boundaries. After the epidemic crosses the river, it
+may spread rapidly down the river to other townships.  Consequently, a long
+local delay crossing the river may appear shorter because it is most strongly
+affected by the average first event, not the average of all events. 
+
+</p><p>
+</p><center> 
+<a name="quantitative"> <img src="./Spatial Dynamics of Rabies Epidemics on Heterogeneous Landscapes in Connecticut_files/quantitative.gif"> </a> 
+</center> 
+
+
+
+<!--
+     FILE ARCHIVED ON 19:09:04 Jan 27, 2004 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:37:11 Oct 07, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 1300.137
+  exclusion.robots: 0.325
+  exclusion.robots.policy: 0.313
+  RedisCDXSource: 14.133
+  esindex: 0.015
+  LoadShardBlock: 1258.321 (3)
+  PetaboxLoader3.datanode: 490.826 (4)
+  CDXLines.iter: 23.125 (3)
+  PetaboxLoader3.resolve: 1139.108 (2)
+  load_resource: 458.637
+--></body></html>

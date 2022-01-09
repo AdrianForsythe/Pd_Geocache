@@ -1,0 +1,13 @@
+prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+exec_prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+libdir=/home/adrian/PhD/Pd_Geocache/sf-env/lib
+includedir=/home/adrian/PhD/Pd_Geocache/sf-env/include
+ccompiler=/home/conda/feedstock_root/build_artifacts/libnetcdf_1630367969803/_build_env/bin/x86_64-conda-linux-gnu-cc
+
+Name: netCDF
+Description: NetCDF Client Library for C
+URL: http://www.unidata.ucar.edu/netcdf
+Version: 4.8.1
+Libs: -L${libdir} -lnetcdf
+Libs.private: -lmfhdf -ldf -lhdf5_hl -lhdf5 -lm -lcurl -lzip
+Cflags: -I${includedir}

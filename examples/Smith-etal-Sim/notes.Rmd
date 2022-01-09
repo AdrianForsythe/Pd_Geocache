@@ -1,0 +1,133 @@
+---
+title: "Smith et al 2002 Simulations"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Smith et al 2002: The Spatial Dynamics of Raccoon Rabies across Connecticut
+
+> As an epidemic spreads, the front is often jagged and irregular, reflecting spatial variation in local transmission rates, stochasticity, or reporting errors.
+
+- we may need a way to account for reporting errors
+
+> We developed a methodology for quantifying spatial variation in the rates of disease spread across a heterogeneous landscape. 
+
+## Overview
+> To explore the spatial dynamics of this disease, we constructed an interaction network based on the adjacency of townships; two townships were considered to be adjacent if they shared at least one point along the border in common.In the simulations, the rate of disease spread into a target township depended on the fraction of townships adjacent to the target that were experiencing rabies among raccoons already, which we hereafter refer to as ‘‘infected.’’ The local rates of transmission across adjacent townships, lambda i,j, varied to incorporate heterogeneous variables; if the ith and jth townships are not adjacent, then lambdai,j=0. Long-distance translocation was modeled as a low, constant rate of infection for all uninfected townships, muj, regardless of
+whether they had infected neighbors.
+
+## Step One: Date of First Appearance
+
+> Racoon Rabies in Connecticut: Racoon rabies first appeared in Connecticut in 1990 as part of a large epidemic in the northeastern US beginning in 1977 near the border between Virginia and West Virginia. In Connecticut, dead or suspicious raccoons were reported to local health officials. The animals were collected or captured and sent to state health offices to test for the presence of rabies. In Connecticut, *the location of rabid raccoons was recorded township by township.* Thus, the data reflect passsive reporting for political units, not ecological relevant units.
+
+- this is exactly how occurrences of WNS were reported
+
+I have already generated this data with the geocaching dataset.
+
+> *We wanted to develop predictive models for the invasive spread of rabies across heterogeneous landscapes. To do this, we developed models to predict the date when rabies was first detected in each of the Connecticut's 169 townships.*
+
+This is what we are trying to do with this data.
+
+## Step Two: The Adjacency Network
+
+> Defining a Network: Since the data were aggregated township by township, we developed a mathematical model for the spatial spread of rabies on a network defined by the townships and their adjacency relationships. We generated a file using a GIS database of Connecticut townships (illustrated at the right) to define the relationships. Two townships were defined to be to be adjacent if they shared *more than one point in common along the border*.
+
+- [x] I have networks, but not in the correct format. Should be an n x n matrix of counties that are adjacent.
+
+I have now created networks in the correct format.
+
+> In the simulations, the rate of disease spread into a target township depended on the *fraction of townships adjacent to the target that were experiencing rabies among raccoons already*, which we hereafter refer to as "infected".
+
+## Step Three: Surrogate Variables
+
+> We wanted to use data that was readily available that we could use as a surrogates for the variables associated with raccoon movement population density. The population density of wildlife is not readily available, and expensive to obtain for an area as large as Connecticut. We chose one variable that was associated with raccoon movement, and one associated with raccoon density. The two variables were human population density and the position of large rivers. To download the raw data, click on the image at the left.
+
+> Furthermore, each reported case of rabies is an interaction between a human and a rabid raccoon, thus human population density is an integral part of the detection process.
+
+> Human Population Density: We used data from the 1990 census for human population density for the townships.
+
+- Should we use population density of the latest census data? Paired with the geocache visiting rates, we could see if the impact of human activity is consistent.
+
+> Rivers: Based on a GIS database, we also determined whether the centers of two townships were separated by a river or other large body of water. In the illustration of the network, the blue edges represent townships that are separated by water. The red edges represent two townships that are adjacent, but not totally separated by a large body of water.
+
+- We won't consider barriers... right?
+
+> Translocation: In the model, rabid raccoons may be transported long distances aided (deliberately or not) by human movement. In addition, long-distance migration of young raccoons may transmit raccoon rabies to a township in advance of the front. We sought to *quantify the rate that such events occur*.
+
+- Ok, super important: the rates of long-distance dispersal. Different rates considering if transmission is either by bats or by humans?
+
+## Step Four: A Stochastic Model
+
+> We developed a discrete-event simulator; or in other words, *a simulator in continuous time for which the infection of each townships occurs at a unique point in time*. Each time one township becomes infected, the probability of infection in nearby townships increases. The algorithm determines which township is infected, and when it becomes infected. The algorithm has six steps:
+
+> 1. For each township, sum the infection rates to compute the Township Rate.
+  - A township may become infected through local transmission if adjacent townships are infected. Local transmission rates may be higher or lower depending on the population density of the neighbor and whether or not two townships are separated by a river.
+  - A township may become infected through long-distance translocation of rabid raccoons.
+  - For each township, the total rate is the sum of the local rate divided by the number of neighbors plus the long-distance translocation rate.
+2. Compute the Total Rate of change, the sum of all the Township Rates .
+3. Compute the elapsed time, the waiting time to the next event. The waiting time is exponentially distributed with expected time 1/Total Rate. In the simulator, we draw a random variate from this distrubution.
+4. In the simulator, we "force" the edges on the western border of Connecticut. The time to infection is not simulated, but given by the data. After computing the elapsed time, we see whether the date when rabies was observed in one of the forced townships preceded the simulated event. If so, the borders are forced, and no event is simulated.
+5. If no event is forced, we simulate infection. Only one township becomes infected at a time, so the algorith simply selects one. The probability for any particular township is its Township Rate / Total Rate. We draw a multinomial random variate to determine which township is infected.
+6. Finally, once a township has been infected, we update the infection status and repeate the algorithm until every township is infected.
+
+## Step Five: Candidate Models
+ > Each candidate model is determined by a rule for determining local rates of spread, and the rate of translocation. The five candidate models we tested were:
+  Null: A simple model with no heterogeneity in the rate of spread.
+  Human: The local rate of spread was correlated with the natural log of the population density of the infected neighbor.
+  River: A river with uniform rates of translocation, but different local rates crossing rivers.
+  RivHum1: A combination of River and Human with different slopes and intercepts for local spread crossing, and not crossing rivers.
+  RivHum2: An extension of River , but the rate of long-distance translocation was correlated with the log of human population density.
+
+## Step Six: Fitting the models
+For each model, and a set of parameters, the Expected behavior of the model was determined by simulating the model 5,000 times, and taking the average time to first appearance over the ensemble.
+For each candidate model, we searched parameter space to find the parameters that minimized the Pearson Chi-Squared statistic, the sum over all townships of (Observed - Expected)^2 / Expected for all the townships (ignoring those that were forced). Click here for additional technical details and the computer code.
+
+## Step Seven: Model Selection and Goodness of Fit
+Ranking the Chi-Squared statistics for the best fit parameters for all five candidate models is one way to compare the relative goodness of fit. For example, Rivers had a goodness of fit measure that was 10% lower than the Null Model. The fit was done separately with and without Putnam, a clear outlier. In addition, we used the Chi-square distribution to estimate the overall goodness of fit. A histogram of the residuals shows that they are approximately normally distributed (see histograms ). Moreover, the elements of the are consistent with the assumptions of a Chi-Square distribution with one degree of freedon. Three townships, South Windsor ``sw,'' Union ``u,'' and Enfield ``e,'' contribute disproportionately to the variance; without these three points the mean would be 0.98 and the variance would be 1.74, consistent with the assumptions. Since the assumptions are consistent with the Chi-square distribution with one-degree of freedom, we used the summed Chi-square statistic with the appropriate degrees of freedom to generate p-values to test for the goodness of fit.
+A good statistical fit required the addition of habitat heterogeneity. The goodness of fit measure improved by approximately 10% in the models that included rivers compared with those did not (see Table, above); this margin is much larger than the 1% improvement in the goodness of fit measure gained by incorporating human population density. The relatively large improvement suggests that rivers play an important role in rabies transmission. Moreover, when Putnam was excluded (see Figure c, bottom graph ), models that did not incorporate rivers were rejected by the goodness of fit test, while those that did incorporate rivers were not. A comparison of the significance values, parameter values, and improvement in the goodness of fit from the addition of rivers suggests that a predictive model requires a seven-fold reduction in transmission crossing rivers (fitted parameters are reported in the table).
+
+## Step Eight: Quantitative Interpretation
+In the models that generated the best fit (see the Table), slower local spread of rabies was strongly associated with river crossings, the global spread by translocation was relatively frequent, and human population density had very little effect on the local spread of rabies. All of the models that incorporated slowing at rivers had a better fit than the alternative models that did not include this factor (Table 1). Using the full data set, all of the models differed significantly from the observed data. The model predictions and observations were substantially different in a few townships ( histogram and panel c, bottom graph ).
+Even though local transmission accounted for most transmission, long-distance translocation was frequent. Of the 159 townships not on the western border of Connecticut, twenty-one townships (13%) recorded their first case of raccoon rabies when none of the adjacent townships were infected.
+
+Human population density was weakly associated with the rate of local spread and the rate of translocation (the difference in the rate of spread between the least and most populated township was 11% in RivHum2 and 14% in RivHum1 ). The fits did improve when human population density was used to predict the rate of spread, but the improvements were minor and the improved fit may be artifactual. Any association between the rate of spread and human population density is consistent with a hypothesis of increased rate of rabies spread into the townships, but it also supports a hypothesis of more efficient detection.
+
+Most important, we found that river crossings slowed the spread of rabies by a factor of seven. The earliest appearance of rabies east of the Connecticut river may have been due to a rare translocation event rather than a more predictable local transmission event; the first case of rabies east of the Connecticut river was detected in South Windsor (``sw'' in top graph , panel b, bottom graph), far in advance of the front, and the first cases in nearby townships of Enfield and Union and one adjacent township were observed shortly thereafter (``e'' and ``u'' in top graph , panel b, bottom graph). Similar but less dramatic patterns are observed in the townships surrounding Clinton in the southern, central townships (``c'' in top graph , panel b, bottom graph).
+
+To assess the consequences of a seven-fold delay crossing rivers on the overall dynamics of rabies, we further simulated the epidemic with and without rivers and with and without long-distance translocation. Rivers delay the appearance in southeastern Connecticut by approximately 16 months (Figure d, below) without translocation and by 11 months with translocation. The effect of rivers was strongest close to the river and declined with the distance from the river. A river shadow effect was visible (Figure d, below). We attribute this shadow effect to two properties of these models. First, a small probability of translocation adds stochasticity that obscures the patterns that would be formed by local heterogeneity. Local delays associated with river crossings are reduced if rabid raccoons cross rivers by translocation. Second, patterns caused by local heterogeneity dissipate because there are multiple routes for the spread of infection. For example, once an epidemic reaches a river, it may cross at any of the shared boundaries. After the epidemic crosses the river, it may spread rapidly down the river to other townships. Consequently, a long local delay crossing the river may appear shorter because it is most strongly affected by the average first event, not the average of all events.
+
+# readme.txt
+
+The code was written in C/C++ for gcc. 
+
+1. To download the file, right click on 
+  the link and save the file (named sim.tgz). 
+
+2. To unpack the tar-ball, type tar zxf sim.tgz. This creates 
+  a directory called sim with all the files necessary to 
+  run the simulator.
+
+3. To make an executable file, type make.
+
+4. To run the file, simply type:
+    Simulate -m <01234> -r <numreps>
+      -m 0 runs Null
+      -m 1 runs Human
+      -m 2 runs Rivers
+      -m 3 runs RivHum1
+      -m 4 runs RivHum2
+      -r numreps simulates the model numreps times
+
+5. Output is generated in a file called out.txt. 
+
+6. A file called "test.R" can be run in R to visualize the data. 
+
+7. A simple hill-climbing routine was included.  To run it, 
+    uncomment the commented line in main. (There is no stopping 
+    condition). 
+
+8. For more details, or to use this code for any purpose, please
+    contact dave@needles.umaryland.edu.

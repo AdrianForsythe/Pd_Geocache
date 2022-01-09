@@ -1,16 +1,23 @@
 ##### Create maps of Geocache records
 ## Not necessary at the moment
 ## have to switch to a non-Google API maps solution
-require(ggmap)
-require(gganimate)
-require(tidyverse)
-require(RColorBrewer)
-require(gifski)
-require(maps)
-require(maptools)
-
 gc_mapping <- function(eu_visits,na_visits,num.geocache,num.geocache.year,max.visits.date,travellers.date) {
 
+  require(ggmap)
+  require(gganimate)
+  require(tidyverse)
+  require(RColorBrewer)
+  require(gifski)
+  require(maps)
+  require(maptools)
+  
+  eu_visits<-"workflow/data/gc-eu-scrape.csv"
+  na_visits<-"workflow/data/gc-scrape.csv"
+  num.geocache<-"workflow/figures/eu-num-geocache.png"
+  num.geocache.year<-"workflow/figures/eu-num-geocache-year.png"
+  max.visits.date<-"workflow/figures/eu-max-visits-date.png"
+  travellers.date<-"workflow/figures/eu-travellers.gif"
+  
   eu_visits_window<-read.csv(eu_visits,header=TRUE) %>% 
     mutate(Year = lubridate::year(lubridate::ymd(Date))) %>%
     filter(Type %in% c("Type.found_it", "Type.didnt_find_it", "Type.owner_maintenance", "Type.publish_listing") &
@@ -28,7 +35,7 @@ gc_mapping <- function(eu_visits,na_visits,num.geocache,num.geocache.year,max.vi
   col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
 
   n_gc<-ggplot()+
-    borders("world") +
+    borders("world",fill="gray") +
     # geom_sf(data=presence_df,aes(geometry=geoms))+
     geom_path(data = eu_visits_window, aes(y = lon,x = lat, group = User), color = "red", alpha = 0.3) +
     geom_point(data = all_summary, aes(y = lon, x = lat),color="black") +
@@ -36,7 +43,8 @@ gc_mapping <- function(eu_visits,na_visits,num.geocache,num.geocache.year,max.vi
     theme_classic() +
     theme(axis.text = element_text(size = 10),
           axis.title = element_text(size = 12),
-          legend.position = "none")
+          legend.position = "none",
+          panel.background = element_rect(fill = 'skyblue'))
   ggsave(filename = num.geocache, plot = n_gc,dpi=300)
 
   n_gc_y <- eu_visits_window %>% group_by(Year) %>%
@@ -76,21 +84,50 @@ gc_mapping <- function(eu_visits,na_visits,num.geocache,num.geocache.year,max.vi
   all_visits_window<-na_visits_window %>% 
     left_join(eu_visits_window,by="User",suffix=c(".na",".eu"))
   
+  all_visits_window %>% filter(!is.na(GC.na) & !is.na(GC.eu)) %>% 
+    summarise(n=n_distinct(User))
+  
+  distinct.eu.visits<-all_visits_window %>% filter(!is.na(GC.na) & !is.na(GC.eu)) %>% 
+    distinct(GC.na,GC.eu,.keep_all=T) %>% # make sure these are unique trips to europe!
+    group_by(User,Year.na,Year.eu) %>% 
+    summarise(time=difftime(Date.eu,Date.na,units = "days")) %>% 
+    mutate(viability.window=ifelse(abs(time)<=30,1,0),
+           direction=ifelse(time<0,"to-europe","to-na"))
+
+  # most visits are separated by long periods of time.
+  distinct.eu.visits %>% 
+    ggplot(aes(abs(time)))+
+    geom_histogram(fill="gray",color="black")+
+    geom_vline(xintercept = 30,color="red",linetype="dashed",size=2)+
+    labs(x="Time (days)",y="Count")+
+    theme_classic()
+  
+  # few users made visits within the viability window...
+  distinct.eu.visits %>% 
+    filter(viability.window==1 & direction == "to-europe") %>% 
+    summarise(n=n_distinct(User))
+
+  distinct.eu.visits %>% 
+    filter(viability.window==1 & direction == "to-na") %>% 
+    summarise(n=n_distinct(User))
+  
+  
   travellers<-all_visits_window %>% 
-    # sample_n(size = 100) %>% 
+    sample_n(size = 100) %>%
     ggplot(group=seq_along(User))+
-    borders("world") +
+    borders("world",fill="gray") +
     coord_sf(xlim = c(-125, 41.44), ylim = c(27.5, 60.08))+
-    geom_segment(aes(x=lat.na,y=lon.na,xend=lat.eu,yend=lon.eu,group=User),alpha=0.25)+
+    # geom_segment(aes(x=lat.na,y=lon.na,xend=lat.eu,yend=lon.eu,group=User),alpha=0.25)+
     ggtitle("Year: {frame_along}") +
-    transition_reveal(as.Date(Date.na))+
+    transition_states(as.Date(Date.na))+
     shadow_wake(wake_length = 0.1, alpha = T) +
     geom_point(data=all_visits_window,aes(y=lon.na, x = lat.na,group=1),color="blue",size=2)+
     geom_point(data=all_visits_window,aes(y=lon.eu, x = lat.eu,group=1),color="red",size=2)+
     # shadow_wake(wake_length = 0.1, alpha = T) +
     # ease_aes('linear')
     theme_classic() +
-    theme(axis.text = element_text(size = 10))
+    theme(axis.text = element_text(size = 10),
+          panel.background = element_rect(fill = 'skyblue'))
   save_animation(travellers,filename=travellers.date)
     # anim_save(animate(travellers,renderer = gifski_renderer(),height=800,width=1600),filename=travellers.date)
   

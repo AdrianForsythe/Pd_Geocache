@@ -1,0 +1,53 @@
+{
+  "build": "h391b98a_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "sysroot_linux-64",
+    "gcc_impl_linux-64 9.4.0.*",
+    "binutils_linux-64 2.36 hf3e587d_2"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/gcc_linux-64-9.4.0-h391b98a_2",
+  "features": "",
+  "files": [
+    "etc/conda/activate.d/activate-gcc_linux-64.sh",
+    "etc/conda/deactivate.d/deactivate-gcc_linux-64.sh"
+  ],
+  "fn": "gcc_linux-64-9.4.0-h391b98a_2.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/gcc_linux-64-9.4.0-h391b98a_2",
+    "type": 1
+  },
+  "md5": "a77e2d52520b3b6f380852a6ffae0552",
+  "name": "gcc_linux-64",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/gcc_linux-64-9.4.0-h391b98a_2.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "etc/conda/activate.d/activate-gcc_linux-64.sh",
+        "path_type": "hardlink",
+        "sha256": "3836760ab6d95dd415a73f2e92c9837e6e22d9bd78bfa623eef89e3259e1f5b1",
+        "sha256_in_prefix": "3836760ab6d95dd415a73f2e92c9837e6e22d9bd78bfa623eef89e3259e1f5b1",
+        "size_in_bytes": 9917
+      },
+      {
+        "_path": "etc/conda/deactivate.d/deactivate-gcc_linux-64.sh",
+        "path_type": "hardlink",
+        "sha256": "ab3beaceee860c38dfb0dc7258002b918709af17eb71392be229003ce7d57f2b",
+        "sha256_in_prefix": "ab3beaceee860c38dfb0dc7258002b918709af17eb71392be229003ce7d57f2b",
+        "size_in_bytes": 6398
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "7bae7d4bdfd93d0b5fe2d2dc1a074395e706b10d34c845e1906f2540c3efc1ba",
+  "size": 24652,
+  "subdir": "linux-64",
+  "timestamp": 1638578045000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/gcc_linux-64-9.4.0-h391b98a_2.tar.bz2",
+  "version": "9.4.0"
+}

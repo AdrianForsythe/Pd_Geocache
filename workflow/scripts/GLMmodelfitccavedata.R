@@ -1,30 +1,46 @@
-##cave dataset
 # fit glm model to data
 glm.fit<-function(both.weights,relevant.records,glm.out,exp.growth.rate){
 
   require(tidyverse)
   
   # for testing
-  both_weights<-read.csv("workflow/data/gc.weights.csv",header=T)
-  relevant_records<-"workflow/data/relevant-records.csv"
-  # glm.out<-
+  # input
+  ## num shared users
+  both_weights<-read.csv("workflow/data/gc.weights.csv",header=T) %>% 
+    mutate(touching.infected=replace_na(ifelse(county1.incidence==TRUE & touching==1,1,0),0))
+  ## incidence
+  full_df<-read.csv("workflow/data/full-occurrance-df.csv") %>% 
+    mutate(incidence=ifelse(WNS_STATUS=="Confirmed",1,0),
+           year=lubridate::year(gsub("-.+","/01/01",WNS_MAP_YR)))
+  
+  ## touching infected county
+  total_touching<-read.csv("workflow/data/total-touching-infected.csv")
+  ## gc records
+  relevant.records<-read.csv("workflow/data/relevant-records.csv")
+  ## infection rate
+  infection.rate<-read.csv("workflow/data/infection-rate.csv",header=T)
+  # output
+  ## exponential growth rate figure
   exp.growth.rate<-"workflow/figures/exp-growth-rate.png"
   
-  # both_weights<-read.csv(both.weights)
-  relevant.records<-read.csv(relevant_records)
+  # model 1
+  touch.df<-total_touching %>% rename("county"="county.y") %>% 
+    left_join(full_df)
   
-  model <- glm(incidence ~ touching ,data = both_weights, family = binomial(link = "cloglog"))
-  # model <- glm(incidence ~ num_shared ,data = both_weights, family = binomial(link = "cloglog"))
+  model1 <- glm(incidence ~ year+n.touching ,data = touch.df, family = binomial(link = "cloglog"))
+  summary(model1)
   
-  sink(glm.out)
-  print(summary(model))
-  sink()  # returns output to the console
-  # Is p value worth keeping in here?
-
+  # model 2
+  sum.rr<-relevant.records %>% group_by(county,gc.year,presence.year) %>% summarise(total.users=n_distinct(User)) %>% filter(gc.year==presence.year) %>%
+    left_join(full_df,by=c("county","presence.year"="year"))
+  
+  model2 <- glm(incidence ~ total.users+total.users ,data = sum.rr, family = binomial(link = "cloglog"))
+  summary(model2)
+  
   # intrinsic growth rate of infection
-  lambda=as.numeric(model$coefficients[2])
-  lwr.lambda<-confint(model)[1]
-  upr.lambda<-confint(model)[2]
+  lambda=as.numeric(model1$coefficients[3])
+  lwr.lambda<-confint(model1)["n.touching",1]
+  upr.lambda<-confint(model1)["n.touching",2]
 
   gamma=1/3; #infectious period
   R0=(lambda/gamma)+1 #basic reproduction number

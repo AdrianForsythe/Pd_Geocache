@@ -1,0 +1,9 @@
+Name: libecpg_compat
+Description: PostgreSQL libecpg_compat library
+Url: https://www.postgresql.org/
+Version: 14.1
+Requires: 
+Requires.private: libecpg libpgtypes
+Cflags: -I/home/adrian/PhD/Pd_Geocache/sf-env/include
+Libs: -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lecpg_compat
+Libs.private: -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lpgcommon -lpgport -lpq -lm

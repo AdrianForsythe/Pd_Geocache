@@ -12,8 +12,8 @@ r250 = r250
 
 # the next line links with the math library; you can add more (see below)
 LIBS =		-lm #-lqt
-INCLUDE =	-I/usr/local/include -I/usr/local/include/qt -I${QTDIR}
-QT = -L${QTLIB}
+INCLUDE =	-I /home/adrianforsythe/anaconda3/include -I /home/adrianforsythe/anaconda3/include/qt -I ${QTDIR}
+QT = -L ${QTLIB}
 # If you want to compile for debugging, change "-O" to "-g"
 CFLAGS =	-g -O ${INCLUDE} ${LIBS} 
 
@@ -24,11 +24,11 @@ CFLAGS =	-g -O ${INCLUDE} ${LIBS}
 
 all: Simulate 
 
-Simulate: Simulate.cc ${r250}.o 
-	${CC} ${CFLAGS} ${LDFLAGS} -o Simulate Simulate.cc ${r250}.o 
+Simulate: Simulate.cc ${r250}.cc
+	${CC} ${CFLAGS} ${LDFLAGS} -o Simulate Simulate.cc ${r250}.cc
 
 ${r250}.o: ${r250}.cc
-	cd ${myCC}random; make r250 
+	cd ${r250} random; make r250 
 
 
 clean:

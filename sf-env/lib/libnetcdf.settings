@@ -1,0 +1,47 @@
+# NetCDF C Configuration Summary
+==============================
+
+# General
+-------
+NetCDF Version:		4.8.1
+Dispatch Version:       3
+Configured On:		Tue Aug 31 00:05:35 UTC 2021
+Host System:		x86_64-Linux-5.8.0-1039-azure
+Build Directory: 	/home/conda/feedstock_root/build_artifacts/libnetcdf_1630367969803/work
+Install Prefix:         /home/adrian/PhD/Pd_Geocache/sf-env
+
+# Compiling Options
+-----------------
+C Compiler:		/home/conda/feedstock_root/build_artifacts/libnetcdf_1630367969803/_build_env/bin/x86_64-conda-linux-gnu-cc
+CFLAGS:			-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/libnetcdf_1630367969803/work=/usr/local/src/conda/libnetcdf-4.8.1 -fdebug-prefix-map=/home/adrian/PhD/Pd_Geocache/sf-env=/usr/local/src/conda-prefix -fno-strict-aliasing -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -O3 -DNDEBUG
+CPPFLAGS:		 
+LDFLAGS:		-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,-rpath,/home/adrian/PhD/Pd_Geocache/sf-env/lib -Wl,-rpath-link,/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib 
+AM_CFLAGS:		
+AM_CPPFLAGS:		
+AM_LDFLAGS:		
+Shared Library:		yes
+Static Library:		no
+Extra libraries:	-lmfhdf -ldf -lhdf5_hl -lhdf5 -lm -lcurl -lzip
+
+# Features
+--------
+NetCDF-2 API:		yes
+HDF4 Support:		yes
+HDF5 Support:		yes
+NetCDF-4 API:		yes
+NC-4 Parallel Support:	no
+PnetCDF Support:	no
+DAP2 Support:		yes
+DAP4 Support:		yes
+Byte-Range Support:	yes
+Diskless Support:	yes
+MMap Support:		yes
+JNA Support:		no
+CDF5 Support:		yes
+ERANGE Fill Support:	yes
+Relaxed Boundary Check:	yes
+SZIP Support:           no
+SZIP Write Support:     no
+Parallel Filters:       yes
+NCZarr Support:		yes
+Multi-Filter Support:	yes

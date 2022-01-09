@@ -1,0 +1,74 @@
+#!/bin/sh
+CONFIG_LIBS="-L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lgdal"
+CONFIG_DEP_LIBS="-lcrypto -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -ltiledb -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lpoppler -ljson-c -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lfreexl -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lgeos_c -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lwebp -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lkmlbase -lkmldom -lkmlengine -lkmlxsd -lkmlregionator -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lexpat -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lxerces-c -lpthread -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lopenjp2 -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lnetcdf -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lhdf5  -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lmfhdf -ldf -lgif -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lgeotiff -L/home/adrian/PhD/Pd_Geocache/sf-env -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lpng -L/home/adrian/PhD/Pd_Geocache/sf-env -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lcfitsio -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lpq -llz4 -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lblosc -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lzstd -llzma -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lsqlite3 -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lproj  -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lsqlite3 -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -ltiff -L/home/adrian/PhD/Pd_Geocache/sf-env -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -ljpeg -ldeflate -lz -L/home/adrian/PhD/Pd_Geocache/sf-env -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lpthread -lm -lrt -ldl  -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lspatialite -L/home/adrian/PhD/Pd_Geocache/sf-env/lib64 -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -ldap -ldapserver -ldapclient -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lcurl -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lxml2 -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lz -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -llzma -lpthread -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -liconv -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -licui18n -licuuc -licudata -lm -ldl -lpthread -luuid  -lpcre -lLerc   -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lcurl           -liconv  -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lxml2      -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lkea  -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lhdf5_cpp -lhdf5 "
+CONFIG_PREFIX="/home/adrian/PhD/Pd_Geocache/sf-env"
+CONFIG_CFLAGS="-I/home/adrian/PhD/Pd_Geocache/sf-env/include"
+CONFIG_DATA="/home/adrian/PhD/Pd_Geocache/sf-env/share/gdal"
+CONFIG_VERSION="3.4.0"
+CONFIG_OGR_ENABLED=yes
+CONFIG_GNM_ENABLED=yes
+CONFIG_FORMATS="derived gtiff hfa mem vrt  aaigrid adrg aigrid airsar arg blx bmp bsb cals ceos ceos2 coasp cosar ctg dimap dted elas envisat ers esric fit gff gsg gxf hf2 idrisi ilwis ingr iris iso8211 jaxapalsar jdem kmlsuperoverlay l1b leveller map mrf msgn ngsgeoid nitf northwood pds prf r raw rmf rs2 safe saga sdts sentinel2 sgi sigdem srtmhgt stacit stacta terragen tga til tsx usgsdem xpm xyz zarr zmap rik ozi eeda plmosaic rda wcs wms wmts daas ogcapi rasterlite mbtiles grib pdf tiledb webp dods openjpeg netcdf kea hdf5 hdf4 gif png pcraster fits jpeg  pcidsk postgisraster"
+usage()
+{
+	cat <<EOF
+Usage: gdal-config [OPTIONS]
+Options:
+	[--prefix[=DIR]]
+	[--libs]
+	[--dep-libs]
+	[--cflags]
+	[--datadir]
+	[--version]
+	[--ogr-enabled]
+	[--gnm-enabled]
+	[--formats]
+EOF
+	exit $1
+}
+
+if test $# -eq 0; then
+	usage 1 1>&2
+fi
+
+case $1 in
+  --libs)
+    echo $CONFIG_LIBS
+    ;;
+
+  --dep-libs)
+    echo $CONFIG_DEP_LIBS
+    ;;
+
+  --cflags)
+    echo $CONFIG_CFLAGS
+    ;;
+
+  --datadir)
+    echo $CONFIG_DATA
+    ;;
+
+  --prefix)
+    echo $CONFIG_PREFIX
+    ;;
+
+  --version)
+    echo $CONFIG_VERSION
+    ;;
+
+  --ogr-enabled)
+    echo yes
+    ;;
+
+  --gnm-enabled)
+    echo $CONFIG_GNM_ENABLED
+    ;;
+
+  --formats)
+    echo $CONFIG_FORMATS
+    ;;
+
+  *)
+    usage 1 1>&2
+    ;;
+
+esac

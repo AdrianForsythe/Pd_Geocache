@@ -1,0 +1,15 @@
+prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+exec_prefix=${prefix}
+bindir=/home/adrian/PhD/Pd_Geocache/sf-env/bin
+libdir=/home/adrian/PhD/Pd_Geocache/sf-env/lib
+includedir=/home/adrian/PhD/Pd_Geocache/sf-env/include
+
+zipcmp=/home/adrian/PhD/Pd_Geocache/sf-env/bin/zipcmp
+
+Name: libzip
+Description: library for handling zip archives
+Version: 1.8.0
+Libs:  -L${libdir} -lzip
+Libs.private:  -lbz2 -lssl -lcrypto -lz
+Cflags: -I${includedir}
+

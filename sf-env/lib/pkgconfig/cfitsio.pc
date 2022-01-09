@@ -1,0 +1,12 @@
+prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: cfitsio
+Description: FITS File Subroutine Library
+URL: https://heasarc.gsfc.nasa.gov/fitsio/
+Version: 4.0.0
+Libs: -L${libdir} -lcfitsio -lcurl
+Libs.private: -lm -lpthread -lz -lbz2 
+Cflags: -I${includedir}

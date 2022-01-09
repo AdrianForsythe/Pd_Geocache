@@ -3,11 +3,12 @@
 #### where we have WNS records from
 
 # List of all counties within the States/Provinces in original GC list
-require(tidyverse)
-require(maps)
-require(maptools)
 
 county_fix<-function(all_counties,can_shape,presence_df,presence_poly,united_poly){
+  require(tidyverse)
+  require(maps)
+  require(maptools)
+  
   counties = read.csv(all_counties, header = T) %>%
     separate(1, c("county", "state.province", "Country"), sep = "\t") %>% distinct(),
 

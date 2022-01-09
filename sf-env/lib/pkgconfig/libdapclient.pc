@@ -1,0 +1,16 @@
+prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+ccompiler=/home/conda/feedstock_root/build_artifacts/libdap4_1616781153136/_build_env/bin/x86_64-conda-linux-gnu-cc
+cppcompiler=/home/conda/feedstock_root/build_artifacts/libdap4_1616781153136/_build_env/bin/x86_64-conda-linux-gnu-c++
+
+Name: libdapclient
+Description: Client side of the OPeNDAP C++ implementation of the Data Access Protocol
+Version: 3.20.6
+Requires: libdap
+Libs: -L${libdir} -ldapclient
+Libs.private: -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lcurl
+Requires.private: 
+Cflags: -I${includedir}/libdap
+

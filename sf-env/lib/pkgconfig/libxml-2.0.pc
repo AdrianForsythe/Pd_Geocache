@@ -1,0 +1,13 @@
+prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+modules=1
+
+Name: libXML
+Version: 2.9.12
+Description: libXML library version2.
+Requires:
+Libs: -L${libdir} -lxml2
+Libs.private: -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -licui18n -licuuc -licudata  -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lz -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -llzma -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -liconv -lm  
+Cflags: -I${includedir}/libxml2 -I/home/adrian/PhD/Pd_Geocache/sf-env/include 

@@ -1,0 +1,15 @@
+prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+ccompiler=/home/conda/feedstock_root/build_artifacts/libdap4_1616781153136/_build_env/bin/x86_64-conda-linux-gnu-cc
+cppcompiler=/home/conda/feedstock_root/build_artifacts/libdap4_1616781153136/_build_env/bin/x86_64-conda-linux-gnu-c++
+
+Name: libdap
+Description: Common items for the OPeNDAP C++ implementation of the Data Access Protocol
+Version: 3.20.6
+Libs: -L${libdir} -ldap
+Libs.private:  -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lxml2 -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lz -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -llzma -lpthread -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -liconv -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -licui18n -licuuc -licudata -lm -ldl -lpthread
+Requires.private: 
+Cflags: -I${includedir}/libdap
+

@@ -1,0 +1,334 @@
+{
+  "build": "r41he82ab30_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "r-askpass",
+    "libgcc-ng >=9.4.0",
+    "r-base >=4.1,<4.2.0a0",
+    "openssl >=3.0.0,<4.0a0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-openssl-1.4.6-r41he82ab30_0",
+  "features": "",
+  "files": [
+    "lib/R/library/openssl/DESCRIPTION",
+    "lib/R/library/openssl/INDEX",
+    "lib/R/library/openssl/LICENSE",
+    "lib/R/library/openssl/Meta/Rd.rds",
+    "lib/R/library/openssl/Meta/features.rds",
+    "lib/R/library/openssl/Meta/hsearch.rds",
+    "lib/R/library/openssl/Meta/links.rds",
+    "lib/R/library/openssl/Meta/nsInfo.rds",
+    "lib/R/library/openssl/Meta/package.rds",
+    "lib/R/library/openssl/Meta/vignette.rds",
+    "lib/R/library/openssl/NAMESPACE",
+    "lib/R/library/openssl/NEWS",
+    "lib/R/library/openssl/R/openssl",
+    "lib/R/library/openssl/R/openssl.rdb",
+    "lib/R/library/openssl/R/openssl.rdx",
+    "lib/R/library/openssl/cacert.pem",
+    "lib/R/library/openssl/doc/bignum.R",
+    "lib/R/library/openssl/doc/bignum.Rmd",
+    "lib/R/library/openssl/doc/bignum.html",
+    "lib/R/library/openssl/doc/crypto_hashing.R",
+    "lib/R/library/openssl/doc/crypto_hashing.Rmd",
+    "lib/R/library/openssl/doc/crypto_hashing.html",
+    "lib/R/library/openssl/doc/index.html",
+    "lib/R/library/openssl/doc/keys.R",
+    "lib/R/library/openssl/doc/keys.Rmd",
+    "lib/R/library/openssl/doc/keys.html",
+    "lib/R/library/openssl/doc/secure_rng.R",
+    "lib/R/library/openssl/doc/secure_rng.Rmd",
+    "lib/R/library/openssl/doc/secure_rng.html",
+    "lib/R/library/openssl/help/AnIndex",
+    "lib/R/library/openssl/help/aliases.rds",
+    "lib/R/library/openssl/help/openssl.rdb",
+    "lib/R/library/openssl/help/openssl.rdx",
+    "lib/R/library/openssl/help/paths.rds",
+    "lib/R/library/openssl/html/00Index.html",
+    "lib/R/library/openssl/html/R.css",
+    "lib/R/library/openssl/libs/openssl.so"
+  ],
+  "fn": "r-openssl-1.4.6-r41he82ab30_0.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-openssl-1.4.6-r41he82ab30_0",
+    "type": 1
+  },
+  "md5": "71ab699821ef90eeded3236204bddcd8",
+  "name": "r-openssl",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-openssl-1.4.6-r41he82ab30_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/openssl/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "dc5b061cf2429a308c4c01e88b7c61f79b9c19737f3f506ccf92312dcfb9c8e8",
+        "sha256_in_prefix": "dc5b061cf2429a308c4c01e88b7c61f79b9c19737f3f506ccf92312dcfb9c8e8",
+        "size_in_bytes": 1706
+      },
+      {
+        "_path": "lib/R/library/openssl/INDEX",
+        "path_type": "hardlink",
+        "sha256": "5b32b599299e414b5c7522c38bd2e0d7544f8f2545af05818ae81a47d93366c0",
+        "sha256_in_prefix": "5b32b599299e414b5c7522c38bd2e0d7544f8f2545af05818ae81a47d93366c0",
+        "size_in_bytes": 1006
+      },
+      {
+        "_path": "lib/R/library/openssl/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "3fbb8e774a322192e18e2d2e1eb9bf3054b065e562e7ffd3a6ab4dfa311fd394",
+        "sha256_in_prefix": "3fbb8e774a322192e18e2d2e1eb9bf3054b065e562e7ffd3a6ab4dfa311fd394",
+        "size_in_bytes": 41
+      },
+      {
+        "_path": "lib/R/library/openssl/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "0773b38a281a2ce2ba3096c36359a128ac6fa9949c2704662b15ec12505107bd",
+        "sha256_in_prefix": "0773b38a281a2ce2ba3096c36359a128ac6fa9949c2704662b15ec12505107bd",
+        "size_in_bytes": 1255
+      },
+      {
+        "_path": "lib/R/library/openssl/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "afa04c711628a6de0e93c59b08985fa661af90c9502d5620f12a5f20d9ef9eaa",
+        "sha256_in_prefix": "afa04c711628a6de0e93c59b08985fa661af90c9502d5620f12a5f20d9ef9eaa",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/openssl/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "b7169d7cff1e0fedcf1bd6acc2162d5e3706cc90e0c3e44f081cbaa9cec9d85d",
+        "sha256_in_prefix": "b7169d7cff1e0fedcf1bd6acc2162d5e3706cc90e0c3e44f081cbaa9cec9d85d",
+        "size_in_bytes": 1261
+      },
+      {
+        "_path": "lib/R/library/openssl/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "1ad5230388626e57f2e74d97ccd5ec01ca2cfb882dc7dec5d985cdf9df850242",
+        "sha256_in_prefix": "1ad5230388626e57f2e74d97ccd5ec01ca2cfb882dc7dec5d985cdf9df850242",
+        "size_in_bytes": 783
+      },
+      {
+        "_path": "lib/R/library/openssl/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "493b9f62463f938c31db87f504f28b88c33dae21f9930b6f86b088dc79a0f57f",
+        "sha256_in_prefix": "493b9f62463f938c31db87f504f28b88c33dae21f9930b6f86b088dc79a0f57f",
+        "size_in_bytes": 1481
+      },
+      {
+        "_path": "lib/R/library/openssl/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "6fcdc22727c16c74ee005dd24a37da2d87f4f3c1ef895b8f6c603479e54ea12f",
+        "sha256_in_prefix": "6fcdc22727c16c74ee005dd24a37da2d87f4f3c1ef895b8f6c603479e54ea12f",
+        "size_in_bytes": 1454
+      },
+      {
+        "_path": "lib/R/library/openssl/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "e3ced933d58e5117165632224117459e9fc5efd5723b8923d93cef98696b6dc2",
+        "sha256_in_prefix": "e3ced933d58e5117165632224117459e9fc5efd5723b8923d93cef98696b6dc2",
+        "size_in_bytes": 355
+      },
+      {
+        "_path": "lib/R/library/openssl/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "cb07cc3e10b44bfb80eb8fb1b3016510ac0386b315a677ff7e5ed805b25bb302",
+        "sha256_in_prefix": "cb07cc3e10b44bfb80eb8fb1b3016510ac0386b315a677ff7e5ed805b25bb302",
+        "size_in_bytes": 5932
+      },
+      {
+        "_path": "lib/R/library/openssl/NEWS",
+        "path_type": "hardlink",
+        "sha256": "45cb8b583ca47e569eb0b7156482d9365dde601caf9c09098d9ba3fb39b5d503",
+        "sha256_in_prefix": "45cb8b583ca47e569eb0b7156482d9365dde601caf9c09098d9ba3fb39b5d503",
+        "size_in_bytes": 5462
+      },
+      {
+        "_path": "lib/R/library/openssl/R/openssl",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/openssl/R/openssl.rdb",
+        "path_type": "hardlink",
+        "sha256": "0392d50eb934b286641648682a0090334e9578a4a03c5647c3c9252ef1878022",
+        "sha256_in_prefix": "0392d50eb934b286641648682a0090334e9578a4a03c5647c3c9252ef1878022",
+        "size_in_bytes": 118329
+      },
+      {
+        "_path": "lib/R/library/openssl/R/openssl.rdx",
+        "path_type": "hardlink",
+        "sha256": "2a26b8778b3d94cc5c5595bf3808946bc1b1df8893bae5644886f90b339b7548",
+        "sha256_in_prefix": "2a26b8778b3d94cc5c5595bf3808946bc1b1df8893bae5644886f90b339b7548",
+        "size_in_bytes": 3028
+      },
+      {
+        "_path": "lib/R/library/openssl/cacert.pem",
+        "path_type": "hardlink",
+        "sha256": "cb2eca3fbfa232c9e3874e3852d43b33589f27face98eef10242a853d83a437a",
+        "sha256_in_prefix": "cb2eca3fbfa232c9e3874e3852d43b33589f27face98eef10242a853d83a437a",
+        "size_in_bytes": 226116
+      },
+      {
+        "_path": "lib/R/library/openssl/doc/bignum.R",
+        "path_type": "hardlink",
+        "sha256": "11a7dd9ed6f158d9b75a9853e0bf27a2184d65c7112206350c4a4e3138588b6d",
+        "sha256_in_prefix": "11a7dd9ed6f158d9b75a9853e0bf27a2184d65c7112206350c4a4e3138588b6d",
+        "size_in_bytes": 1489
+      },
+      {
+        "_path": "lib/R/library/openssl/doc/bignum.Rmd",
+        "path_type": "hardlink",
+        "sha256": "3ccd6f84730da9d3ecf2dfe80093cf29f9756b7cccc5d5b7a3848e66c510df98",
+        "sha256_in_prefix": "3ccd6f84730da9d3ecf2dfe80093cf29f9756b7cccc5d5b7a3848e66c510df98",
+        "size_in_bytes": 3796
+      },
+      {
+        "_path": "lib/R/library/openssl/doc/bignum.html",
+        "path_type": "hardlink",
+        "sha256": "6c7df83f8e5db49f269e7bc2d0bbb0ccaa3e19e0f3abee00dc86aa55964c6655",
+        "sha256_in_prefix": "6c7df83f8e5db49f269e7bc2d0bbb0ccaa3e19e0f3abee00dc86aa55964c6655",
+        "size_in_bytes": 630346
+      },
+      {
+        "_path": "lib/R/library/openssl/doc/crypto_hashing.R",
+        "path_type": "hardlink",
+        "sha256": "57064f01fe44edfeccb5cb27cb1be21b06014404749ad4eee672366bf67cc6bf",
+        "sha256_in_prefix": "57064f01fe44edfeccb5cb27cb1be21b06014404749ad4eee672366bf67cc6bf",
+        "size_in_bytes": 1090
+      },
+      {
+        "_path": "lib/R/library/openssl/doc/crypto_hashing.Rmd",
+        "path_type": "hardlink",
+        "sha256": "fdc4d3563e64c6c6fd0c60de426a327c01a56e6514e23a0624c41b54cff4ffdc",
+        "sha256_in_prefix": "fdc4d3563e64c6c6fd0c60de426a327c01a56e6514e23a0624c41b54cff4ffdc",
+        "size_in_bytes": 1869
+      },
+      {
+        "_path": "lib/R/library/openssl/doc/crypto_hashing.html",
+        "path_type": "hardlink",
+        "sha256": "ea712ccafc7af8854824d31481994fc13485f4688571694843251f34831c3c56",
+        "sha256_in_prefix": "ea712ccafc7af8854824d31481994fc13485f4688571694843251f34831c3c56",
+        "size_in_bytes": 626317
+      },
+      {
+        "_path": "lib/R/library/openssl/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "eebb0b8b4726fad558e6f739e5137cd65e1dfe2fd1abd7eb923a9e4f829da2fc",
+        "sha256_in_prefix": "eebb0b8b4726fad558e6f739e5137cd65e1dfe2fd1abd7eb923a9e4f829da2fc",
+        "size_in_bytes": 2951
+      },
+      {
+        "_path": "lib/R/library/openssl/doc/keys.R",
+        "path_type": "hardlink",
+        "sha256": "cbd6c944f3838e29b9547dcf97e87ffe615409fd54d2c8d92dbeb5d0327602ba",
+        "sha256_in_prefix": "cbd6c944f3838e29b9547dcf97e87ffe615409fd54d2c8d92dbeb5d0327602ba",
+        "size_in_bytes": 1217
+      },
+      {
+        "_path": "lib/R/library/openssl/doc/keys.Rmd",
+        "path_type": "hardlink",
+        "sha256": "9159835c83b962af60b68697e4aebe9fcfe76d7e7f43b4e81bb5e007a10689fe",
+        "sha256_in_prefix": "9159835c83b962af60b68697e4aebe9fcfe76d7e7f43b4e81bb5e007a10689fe",
+        "size_in_bytes": 3633
+      },
+      {
+        "_path": "lib/R/library/openssl/doc/keys.html",
+        "path_type": "hardlink",
+        "sha256": "e7fa63c0e28ade54e08ffc0cb2addb97943c949e218a732c11fa3a0ed917dead",
+        "sha256_in_prefix": "e7fa63c0e28ade54e08ffc0cb2addb97943c949e218a732c11fa3a0ed917dead",
+        "size_in_bytes": 629724
+      },
+      {
+        "_path": "lib/R/library/openssl/doc/secure_rng.R",
+        "path_type": "hardlink",
+        "sha256": "b75923d843b26083d4e26dfcc03946e1a8cd2d1316ff8fbcf675c04aba3ee6f0",
+        "sha256_in_prefix": "b75923d843b26083d4e26dfcc03946e1a8cd2d1316ff8fbcf675c04aba3ee6f0",
+        "size_in_bytes": 904
+      },
+      {
+        "_path": "lib/R/library/openssl/doc/secure_rng.Rmd",
+        "path_type": "hardlink",
+        "sha256": "80d6dc37015a8be4fedc2fb39dc739b606225a97824b496b4db252a9f1456c4f",
+        "sha256_in_prefix": "80d6dc37015a8be4fedc2fb39dc739b606225a97824b496b4db252a9f1456c4f",
+        "size_in_bytes": 1467
+      },
+      {
+        "_path": "lib/R/library/openssl/doc/secure_rng.html",
+        "path_type": "hardlink",
+        "sha256": "fced56a663d5cbf3df692c42a3d5be6d07aed4f85847c63102a40f5476f82955",
+        "sha256_in_prefix": "fced56a663d5cbf3df692c42a3d5be6d07aed4f85847c63102a40f5476f82955",
+        "size_in_bytes": 772729
+      },
+      {
+        "_path": "lib/R/library/openssl/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "7c8d29beee13ae2b5bad133b835d2d3bbe2d4228f76fcd2defb8b5fc73434007",
+        "sha256_in_prefix": "7c8d29beee13ae2b5bad133b835d2d3bbe2d4228f76fcd2defb8b5fc73434007",
+        "size_in_bytes": 1668
+      },
+      {
+        "_path": "lib/R/library/openssl/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "1026e38d18f942d5f5dbb7aad9cd6651b84d5f045bfc7bbc348b343997926a51",
+        "sha256_in_prefix": "1026e38d18f942d5f5dbb7aad9cd6651b84d5f045bfc7bbc348b343997926a51",
+        "size_in_bytes": 701
+      },
+      {
+        "_path": "lib/R/library/openssl/help/openssl.rdb",
+        "path_type": "hardlink",
+        "sha256": "ffcde9fc6b275b841d6b13cf89759dd75bc12f019c8f562bdadd2818cb41673c",
+        "sha256_in_prefix": "ffcde9fc6b275b841d6b13cf89759dd75bc12f019c8f562bdadd2818cb41673c",
+        "size_in_bytes": 45242
+      },
+      {
+        "_path": "lib/R/library/openssl/help/openssl.rdx",
+        "path_type": "hardlink",
+        "sha256": "481e58d9d96f3c145bf61de164bc226b0d8e359349e770fe3394d2f95b1721d8",
+        "sha256_in_prefix": "481e58d9d96f3c145bf61de164bc226b0d8e359349e770fe3394d2f95b1721d8",
+        "size_in_bytes": 628
+      },
+      {
+        "_path": "lib/R/library/openssl/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "6642a7b514c1344bc2ae3124b00a22084766c4179eb721b019d882e57329900a",
+        "sha256_in_prefix": "6642a7b514c1344bc2ae3124b00a22084766c4179eb721b019d882e57329900a",
+        "size_in_bytes": 357
+      },
+      {
+        "_path": "lib/R/library/openssl/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "c154eea1067efdfa6d76d86f474696eec5eed8cf3ce9d6a34c44346af70f9599",
+        "sha256_in_prefix": "c154eea1067efdfa6d76d86f474696eec5eed8cf3ce9d6a34c44346af70f9599",
+        "size_in_bytes": 10222
+      },
+      {
+        "_path": "lib/R/library/openssl/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "sha256_in_prefix": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "size_in_bytes": 1335
+      },
+      {
+        "_path": "lib/R/library/openssl/libs/openssl.so",
+        "path_type": "hardlink",
+        "sha256": "32d8e9cd8005eab1f286ee087e999fd260a4fd6daec19b77a381c13735a36044",
+        "sha256_in_prefix": "32d8e9cd8005eab1f286ee087e999fd260a4fd6daec19b77a381c13735a36044",
+        "size_in_bytes": 118584
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "fbfd179990dec0bf78b22dd7912b25580341db442f31591fe374c64bfd278f39",
+  "size": 1182814,
+  "subdir": "linux-64",
+  "timestamp": 1639898121000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-openssl-1.4.6-r41he82ab30_0.tar.bz2",
+  "version": "1.4.6"
+}

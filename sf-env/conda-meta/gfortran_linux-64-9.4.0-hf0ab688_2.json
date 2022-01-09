@@ -1,0 +1,54 @@
+{
+  "build": "hf0ab688_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "sysroot_linux-64",
+    "binutils_linux-64 2.36 hf3e587d_2",
+    "gfortran_impl_linux-64 9.4.0.*",
+    "gcc_linux-64 9.4.0 h391b98a_2"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/gfortran_linux-64-9.4.0-hf0ab688_2",
+  "features": "",
+  "files": [
+    "etc/conda/activate.d/activate-gfortran_linux-64.sh",
+    "etc/conda/deactivate.d/deactivate-gfortran_linux-64.sh"
+  ],
+  "fn": "gfortran_linux-64-9.4.0-hf0ab688_2.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/gfortran_linux-64-9.4.0-hf0ab688_2",
+    "type": 1
+  },
+  "md5": "40b48d25538375ab125f1148d669bab8",
+  "name": "gfortran_linux-64",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/gfortran_linux-64-9.4.0-hf0ab688_2.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "etc/conda/activate.d/activate-gfortran_linux-64.sh",
+        "path_type": "hardlink",
+        "sha256": "026c2dab62037d6b2778c603b867aa24e18a0b35fa51bc70b2a623ec72460d9c",
+        "sha256_in_prefix": "026c2dab62037d6b2778c603b867aa24e18a0b35fa51bc70b2a623ec72460d9c",
+        "size_in_bytes": 4744
+      },
+      {
+        "_path": "etc/conda/deactivate.d/deactivate-gfortran_linux-64.sh",
+        "path_type": "hardlink",
+        "sha256": "680b0e0f9ecda8467fd09e1f371f8868aaf7bb9f364b2e0a5f4961386ef146b7",
+        "sha256_in_prefix": "680b0e0f9ecda8467fd09e1f371f8868aaf7bb9f364b2e0a5f4961386ef146b7",
+        "size_in_bytes": 4748
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "b7a9d82020dfc47fb9965de7ab3f090c751ea0402d7b10d6e348fa3eff048363",
+  "size": 24297,
+  "subdir": "linux-64",
+  "timestamp": 1638578099000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/gfortran_linux-64-9.4.0-hf0ab688_2.tar.bz2",
+  "version": "9.4.0"
+}

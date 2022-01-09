@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+
+usage()
+{
+    cat <<EOF
+Usage: kea-config [OPTIONS]
+Options:
+     [--prefix]
+     [--version]
+     [--libs]
+     [--cflags]
+     [--ldflags]
+     [--includes]
+     [--hdfincludes]
+     [--hdfcflags]
+     [--hdflibs]
+EOF
+    exit $1
+}
+if test $# -eq 0; then
+  usage 1 1>&2
+fi
+while test $# -gt 0; do
+case "$1" in
+    -*=*) optarg=`echo "$1" | sed 's/[-_a-zA-Z0-9]*=//'` ;;
+    *) optarg= ;;
+esac
+case $1 in
+    --prefix)
+    echo -n "/home/adrian/PhD/Pd_Geocache/sf-env "
+     ;;
+	--version)
+    echo -n "1.4.14 "
+     ;;
+    --cflags)
+    echo -n "-I/home/adrian/PhD/Pd_Geocache/sf-env/include "
+      ;;
+    --libs)
+      echo -n "-L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lkea "
+      ;;
+    --ldflags)
+      echo -n "/home/adrian/PhD/Pd_Geocache/sf-env/lib "
+      ;;
+    --includes)
+      echo -n "/home/adrian/PhD/Pd_Geocache/sf-env/include "
+      ;;
+	--hdfincludes)
+      echo -n " /home/adrian/PhD/Pd_Geocache/sf-env/include "
+      ;;
+	--hdfcflags)
+      echo -n " -I/home/adrian/PhD/Pd_Geocache/sf-env/include "
+      ;;
+	--hdflibs)
+      echo -n " -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lhdf5_cpp -lhdf5 "
+      ;;
+  esac
+  shift
+done
+echo

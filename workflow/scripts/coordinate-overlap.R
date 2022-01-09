@@ -7,15 +7,17 @@ GetOverlaps<-function(scraped,presence.df,presence.poly,relevant_records){
   require(lubridate)
   
   # for testing
-  scraped<-"workflow/data/gc-scrape.csv"
-  presence.df<-"workflow/data/presence.df.rds"
-  presence.poly<-"workflow/data/presence.poly.rds"
-  relevant_records<-"data/relevant-records.csv"
+  # scraped<-"workflow/data/gc-scrape.csv"
+  # presence.df<-"workflow/data/presence.df.rds"
+  # presence.poly<-"workflow/data/presence.poly.rds"
+  # relevant_records<-"workflow/data/relevant-records.csv"
 
   gc.records<-read.csv(scraped,header=TRUE) %>% 
-    mutate(Year = lubridate::year(lubridate::ymd(Date)))
+    mutate(gc.year = lubridate::year(lubridate::ymd(Date)))
 
-  presence_df<-readRDS(presence.df) %>% rowid_to_column("poly.index")
+  presence_df<-readRDS(presence.df) %>% 
+    rename(presence.year=year) %>% 
+    rowid_to_column("poly.index")
   presence_poly<-readRDS(file = presence.poly)
   
   all_results_merge <-gc.records %>%
@@ -24,7 +26,7 @@ GetOverlaps<-function(scraped,presence.df,presence.poly,relevant_records){
   # count users at each site per year
   # we do this again at a later step, but this is useful to tell if there are any sites that don't get visited in a year
   geocache.locs <- all_results_merge %>%
-    group_by(GC, Year,lat,lon) %>%
+    group_by(GC, gc.year,lat,lon) %>%
     distinct(User) %>%
     tally(name = "total")
 
@@ -40,7 +42,7 @@ GetOverlaps<-function(scraped,presence.df,presence.poly,relevant_records){
 
   # merge with our scraped dataset of geocache records
   # we want all, because there are a few sites that did not get visited some years
-  presence.scrape <-merge(gc.records,geocache.presence.df,by = c("GC","User","Title","Log","Date","Type")) %>% 
+  presence.scrape <-merge(gc.records,geocache.presence.df,by = c("GC","User","Title","Log","Date","Type","gc.year")) %>% 
     rename(GC.Date=Date) %>% 
     mutate(wns.map.yr = lubridate::ymd(gsub("-.+", "/01/01", WNS_MAP_YR)),
            r.suspect = lubridate::ymd(gsub("-.+", "/01/01", YR_SUSPECT)),

@@ -1,0 +1,454 @@
+{
+  "build": "r41h03ef668_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "r-cpp11",
+    "libgcc-ng >=9.3.0",
+    "libstdcxx-ng >=9.3.0",
+    "r-base >=4.1,<4.2.0a0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-wk-0.5.0-r41h03ef668_0",
+  "features": "",
+  "files": [
+    "lib/R/library/wk/DESCRIPTION",
+    "lib/R/library/wk/INDEX",
+    "lib/R/library/wk/LICENSE",
+    "lib/R/library/wk/Meta/Rd.rds",
+    "lib/R/library/wk/Meta/features.rds",
+    "lib/R/library/wk/Meta/hsearch.rds",
+    "lib/R/library/wk/Meta/links.rds",
+    "lib/R/library/wk/Meta/nsInfo.rds",
+    "lib/R/library/wk/Meta/package.rds",
+    "lib/R/library/wk/NAMESPACE",
+    "lib/R/library/wk/NEWS.md",
+    "lib/R/library/wk/R/wk",
+    "lib/R/library/wk/R/wk.rdb",
+    "lib/R/library/wk/R/wk.rdx",
+    "lib/R/library/wk/help/AnIndex",
+    "lib/R/library/wk/help/aliases.rds",
+    "lib/R/library/wk/help/paths.rds",
+    "lib/R/library/wk/help/wk.rdb",
+    "lib/R/library/wk/help/wk.rdx",
+    "lib/R/library/wk/html/00Index.html",
+    "lib/R/library/wk/html/R.css",
+    "lib/R/library/wk/include/wk-v1-filter.hpp",
+    "lib/R/library/wk/include/wk-v1-handler.hpp",
+    "lib/R/library/wk/include/wk-v1-impl.c",
+    "lib/R/library/wk/include/wk-v1-reader.hpp",
+    "lib/R/library/wk/include/wk-v1.h",
+    "lib/R/library/wk/include/wk/coord.hpp",
+    "lib/R/library/wk/include/wk/error-formatter.hpp",
+    "lib/R/library/wk/include/wk/fields.hpp",
+    "lib/R/library/wk/include/wk/filter.hpp",
+    "lib/R/library/wk/include/wk/geometry-debug-handler.hpp",
+    "lib/R/library/wk/include/wk/geometry-formatter.hpp",
+    "lib/R/library/wk/include/wk/geometry-handler.hpp",
+    "lib/R/library/wk/include/wk/geometry-meta.hpp",
+    "lib/R/library/wk/include/wk/geometry.hpp",
+    "lib/R/library/wk/include/wk/io-bytes.hpp",
+    "lib/R/library/wk/include/wk/io-string.hpp",
+    "lib/R/library/wk/include/wk/io.hpp",
+    "lib/R/library/wk/include/wk/parse-exception.hpp",
+    "lib/R/library/wk/include/wk/rcpp-coord-reader.hpp",
+    "lib/R/library/wk/include/wk/rcpp-io.hpp",
+    "lib/R/library/wk/include/wk/rcpp-translate.hpp",
+    "lib/R/library/wk/include/wk/rct.hpp",
+    "lib/R/library/wk/include/wk/reader.hpp",
+    "lib/R/library/wk/include/wk/wkb-reader.hpp",
+    "lib/R/library/wk/include/wk/wkb-writer.hpp",
+    "lib/R/library/wk/include/wk/wkt-reader.hpp",
+    "lib/R/library/wk/include/wk/wkt-streamer.hpp",
+    "lib/R/library/wk/include/wk/wkt-writer.hpp",
+    "lib/R/library/wk/include/wk/writer.hpp",
+    "lib/R/library/wk/include/wk/xyzm.hpp",
+    "lib/R/library/wk/libs/wk.so"
+  ],
+  "fn": "r-wk-0.5.0-r41h03ef668_0.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-wk-0.5.0-r41h03ef668_0",
+    "type": 1
+  },
+  "md5": "9f0027929f679a03c5a470b4fc3a832f",
+  "name": "r-wk",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-wk-0.5.0-r41h03ef668_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/wk/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "c6edc446b695ffd67b05df8f29272e6e37155e5c98c2771ee0a637f33984d759",
+        "sha256_in_prefix": "c6edc446b695ffd67b05df8f29272e6e37155e5c98c2771ee0a637f33984d759",
+        "size_in_bytes": 1671
+      },
+      {
+        "_path": "lib/R/library/wk/INDEX",
+        "path_type": "hardlink",
+        "sha256": "b34e97b997458cc11d9fd238340f591f58276b66493932e30f28c68ba6962fb6",
+        "sha256_in_prefix": "b34e97b997458cc11d9fd238340f591f58276b66493932e30f28c68ba6962fb6",
+        "size_in_bytes": 1876
+      },
+      {
+        "_path": "lib/R/library/wk/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "530ed53de6c2b7866de75f6a152e8b6eb150544d38087a35a06f46a9a18f9853",
+        "sha256_in_prefix": "530ed53de6c2b7866de75f6a152e8b6eb150544d38087a35a06f46a9a18f9853",
+        "size_in_bytes": 46
+      },
+      {
+        "_path": "lib/R/library/wk/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "d0c42096b8f455792a404a9efa0b20adf9816793df1c7875dfd70b6a763526d1",
+        "sha256_in_prefix": "d0c42096b8f455792a404a9efa0b20adf9816793df1c7875dfd70b6a763526d1",
+        "size_in_bytes": 2091
+      },
+      {
+        "_path": "lib/R/library/wk/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "b84ca42483e79a917d4c89f07a99625c472773b7d3ba686c276da9b5514abeac",
+        "sha256_in_prefix": "b84ca42483e79a917d4c89f07a99625c472773b7d3ba686c276da9b5514abeac",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/wk/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "5daf957ad71f4ace2e77a569252d71a76651ab5939998fec10403e3c8d060113",
+        "sha256_in_prefix": "5daf957ad71f4ace2e77a569252d71a76651ab5939998fec10403e3c8d060113",
+        "size_in_bytes": 2218
+      },
+      {
+        "_path": "lib/R/library/wk/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "6e5e2d3389c84c0c2b25b08e434c50907587bc36c1fe98dbd5844acdb07495ba",
+        "sha256_in_prefix": "6e5e2d3389c84c0c2b25b08e434c50907587bc36c1fe98dbd5844acdb07495ba",
+        "size_in_bytes": 1462
+      },
+      {
+        "_path": "lib/R/library/wk/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "673172d8da7cd4bfe5b43bc2d7e5bb48c07408b759a152f45ac4969694728de9",
+        "sha256_in_prefix": "673172d8da7cd4bfe5b43bc2d7e5bb48c07408b759a152f45ac4969694728de9",
+        "size_in_bytes": 1590
+      },
+      {
+        "_path": "lib/R/library/wk/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "a0989276f867dc0b3c537d44a46c7a232385d808ba8ecb921252a1a6ced2cdfd",
+        "sha256_in_prefix": "a0989276f867dc0b3c537d44a46c7a232385d808ba8ecb921252a1a6ced2cdfd",
+        "size_in_bytes": 1292
+      },
+      {
+        "_path": "lib/R/library/wk/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "d050eb1afa1a156d362a75105538517934d844ff3e326b89c58921f9d1853c9a",
+        "sha256_in_prefix": "d050eb1afa1a156d362a75105538517934d844ff3e326b89c58921f9d1853c9a",
+        "size_in_bytes": 9969
+      },
+      {
+        "_path": "lib/R/library/wk/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "2eb95716b18d78711b631239f1fddbfc2effe1f4489b9a4996e112f6c1e1b414",
+        "sha256_in_prefix": "2eb95716b18d78711b631239f1fddbfc2effe1f4489b9a4996e112f6c1e1b414",
+        "size_in_bytes": 3599
+      },
+      {
+        "_path": "lib/R/library/wk/R/wk",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/wk/R/wk.rdb",
+        "path_type": "hardlink",
+        "sha256": "d874fb89fdc279c5cf77a23aa709fe8525a0fdf16504480320e7e88663db9ee4",
+        "sha256_in_prefix": "d874fb89fdc279c5cf77a23aa709fe8525a0fdf16504480320e7e88663db9ee4",
+        "size_in_bytes": 174888
+      },
+      {
+        "_path": "lib/R/library/wk/R/wk.rdx",
+        "path_type": "hardlink",
+        "sha256": "fb9cceb690f5768a9affff4fbb5fa0f22723cab12d2bdc5c09dda038f3d3fc27",
+        "sha256_in_prefix": "fb9cceb690f5768a9affff4fbb5fa0f22723cab12d2bdc5c09dda038f3d3fc27",
+        "size_in_bytes": 4569
+      },
+      {
+        "_path": "lib/R/library/wk/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "62eae7d3b0167d1c803de85f256b9ec7e53e1e0388d6c49aecff4e53ebbf9f9e",
+        "sha256_in_prefix": "62eae7d3b0167d1c803de85f256b9ec7e53e1e0388d6c49aecff4e53ebbf9f9e",
+        "size_in_bytes": 4693
+      },
+      {
+        "_path": "lib/R/library/wk/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "254697d61e2fd7169e185ca6daf0de97f8f92802861135e2d299faa4757d7e90",
+        "sha256_in_prefix": "254697d61e2fd7169e185ca6daf0de97f8f92802861135e2d299faa4757d7e90",
+        "size_in_bytes": 1373
+      },
+      {
+        "_path": "lib/R/library/wk/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "0a202965173d361bb9947891f1658cc87b2bd19314836417c82322a16cb21a0c",
+        "sha256_in_prefix": "0a202965173d361bb9947891f1658cc87b2bd19314836417c82322a16cb21a0c",
+        "size_in_bytes": 458
+      },
+      {
+        "_path": "lib/R/library/wk/help/wk.rdb",
+        "path_type": "hardlink",
+        "sha256": "7dc91fe387c45daa62186f54c95386a366ade707b9db7e6ff08e56e326b4bd97",
+        "sha256_in_prefix": "7dc91fe387c45daa62186f54c95386a366ade707b9db7e6ff08e56e326b4bd97",
+        "size_in_bytes": 79034
+      },
+      {
+        "_path": "lib/R/library/wk/help/wk.rdx",
+        "path_type": "hardlink",
+        "sha256": "9f586bdb99367d534b363de00934173df6ba418f6a24d00bf18e3880cc92d8d7",
+        "sha256_in_prefix": "9f586bdb99367d534b363de00934173df6ba418f6a24d00bf18e3880cc92d8d7",
+        "size_in_bytes": 974
+      },
+      {
+        "_path": "lib/R/library/wk/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "a8da92eb8dde6f1b3b7dedabb5e43bff09547768dcb67204876c1a450e631e64",
+        "sha256_in_prefix": "a8da92eb8dde6f1b3b7dedabb5e43bff09547768dcb67204876c1a450e631e64",
+        "size_in_bytes": 23683
+      },
+      {
+        "_path": "lib/R/library/wk/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "sha256_in_prefix": "0f4849ab1757247808d54da2c371e992364371c942ad7d629dae8d62327ed068",
+        "size_in_bytes": 1335
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk-v1-filter.hpp",
+        "path_type": "hardlink",
+        "sha256": "c0cec131219786bae3a0d3625149e713079122ab630d7261992cd7f274e69f39",
+        "sha256_in_prefix": "c0cec131219786bae3a0d3625149e713079122ab630d7261992cd7f274e69f39",
+        "size_in_bytes": 2186
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk-v1-handler.hpp",
+        "path_type": "hardlink",
+        "sha256": "54564d11e1c7f312ab5471390443799bd372dced32e735094436b32b3382054d",
+        "sha256_in_prefix": "54564d11e1c7f312ab5471390443799bd372dced32e735094436b32b3382054d",
+        "size_in_bytes": 7382
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk-v1-impl.c",
+        "path_type": "hardlink",
+        "sha256": "dd829f68b9a7f82852aed9e6fb8e0d4f470534d8d9d8f241306dd9bc62b9a80e",
+        "sha256_in_prefix": "dd829f68b9a7f82852aed9e6fb8e0d4f470534d8d9d8f241306dd9bc62b9a80e",
+        "size_in_bytes": 5480
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk-v1-reader.hpp",
+        "path_type": "hardlink",
+        "sha256": "542d3680dea0953a00c202ad896df2831a7b210b3a2a8335a43875ad2f29ce53",
+        "sha256_in_prefix": "542d3680dea0953a00c202ad896df2831a7b210b3a2a8335a43875ad2f29ce53",
+        "size_in_bytes": 2564
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk-v1.h",
+        "path_type": "hardlink",
+        "sha256": "4460a557a99f812c985d88ebf9edf58d8b4c00e2f9912f9ed067e9dab779b466",
+        "sha256_in_prefix": "4460a557a99f812c985d88ebf9edf58d8b4c00e2f9912f9ed067e9dab779b466",
+        "size_in_bytes": 3570
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/coord.hpp",
+        "path_type": "hardlink",
+        "sha256": "5570dfe3fa1f5ecfb8fddd0bd1bc517984c6a06f1919e34dbe69b89b9d28d5e7",
+        "sha256_in_prefix": "5570dfe3fa1f5ecfb8fddd0bd1bc517984c6a06f1919e34dbe69b89b9d28d5e7",
+        "size_in_bytes": 1868
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/error-formatter.hpp",
+        "path_type": "hardlink",
+        "sha256": "703173a4d481e4bf05f204fd926f975d47d5fcb886f7672fbdc5de705f761b72",
+        "sha256_in_prefix": "703173a4d481e4bf05f204fd926f975d47d5fcb886f7672fbdc5de705f761b72",
+        "size_in_bytes": 823
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/fields.hpp",
+        "path_type": "hardlink",
+        "sha256": "a2ff55973693e2bd2e6a4d760b8fdf69f5edcbf8fe5d7449140b8ddc9fbb27f2",
+        "sha256_in_prefix": "a2ff55973693e2bd2e6a4d760b8fdf69f5edcbf8fe5d7449140b8ddc9fbb27f2",
+        "size_in_bytes": 2427
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/filter.hpp",
+        "path_type": "hardlink",
+        "sha256": "50cd2db5ddb7326d7b888056f6ddc044cf28f3f69a335f0ca67fad9454d1482f",
+        "sha256_in_prefix": "50cd2db5ddb7326d7b888056f6ddc044cf28f3f69a335f0ca67fad9454d1482f",
+        "size_in_bytes": 3012
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/geometry-debug-handler.hpp",
+        "path_type": "hardlink",
+        "sha256": "7aad7fe5815c75a421e7945b14965c72883271fe16a2b6a94702c2e72e48086d",
+        "sha256_in_prefix": "7aad7fe5815c75a421e7945b14965c72883271fe16a2b6a94702c2e72e48086d",
+        "size_in_bytes": 4057
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/geometry-formatter.hpp",
+        "path_type": "hardlink",
+        "sha256": "c10ab6891697cba85c18cd9449d479200c5483548e4e9ed3be365dd6141188cc",
+        "sha256_in_prefix": "c10ab6891697cba85c18cd9449d479200c5483548e4e9ed3be365dd6141188cc",
+        "size_in_bytes": 1398
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/geometry-handler.hpp",
+        "path_type": "hardlink",
+        "sha256": "5efe9a1e5c44624cafd07d3ff94f4b3f398e87e34757c677d874ff40e52476a7",
+        "sha256_in_prefix": "5efe9a1e5c44624cafd07d3ff94f4b3f398e87e34757c677d874ff40e52476a7",
+        "size_in_bytes": 936
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/geometry-meta.hpp",
+        "path_type": "hardlink",
+        "sha256": "6284851596591fdf814b29ee3f8503676b2fbb3bef45bb73979ba317fe5e4815",
+        "sha256_in_prefix": "6284851596591fdf814b29ee3f8503676b2fbb3bef45bb73979ba317fe5e4815",
+        "size_in_bytes": 4225
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/geometry.hpp",
+        "path_type": "hardlink",
+        "sha256": "dcac2ae6c3e15205238651c207b54c55ba60286600c1d004cd29c1fbad6e1d58",
+        "sha256_in_prefix": "dcac2ae6c3e15205238651c207b54c55ba60286600c1d004cd29c1fbad6e1d58",
+        "size_in_bytes": 1561
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/io-bytes.hpp",
+        "path_type": "hardlink",
+        "sha256": "7bf0a3d4307db12ed59f51b9babe5fb0748b287a65169d28904d8597c8220cfa",
+        "sha256_in_prefix": "7bf0a3d4307db12ed59f51b9babe5fb0748b287a65169d28904d8597c8220cfa",
+        "size_in_bytes": 1137
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/io-string.hpp",
+        "path_type": "hardlink",
+        "sha256": "a6858aa934ac8186a38594632df0c64fdfc589f4201c8c8c1135c3050e58ff4d",
+        "sha256_in_prefix": "a6858aa934ac8186a38594632df0c64fdfc589f4201c8c8c1135c3050e58ff4d",
+        "size_in_bytes": 1485
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/io.hpp",
+        "path_type": "hardlink",
+        "sha256": "65b6e72412446f233c8d32c748ce92619b76c9fd72388ae232f33f61eb9a78bd",
+        "sha256_in_prefix": "65b6e72412446f233c8d32c748ce92619b76c9fd72388ae232f33f61eb9a78bd",
+        "size_in_bytes": 522
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/parse-exception.hpp",
+        "path_type": "hardlink",
+        "sha256": "b7c5e9313035743095235e0b2cd37fa7598d87ff72a6c1727032297a352d6b52",
+        "sha256_in_prefix": "b7c5e9313035743095235e0b2cd37fa7598d87ff72a6c1727032297a352d6b52",
+        "size_in_bytes": 477
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/rcpp-coord-reader.hpp",
+        "path_type": "hardlink",
+        "sha256": "4fe56edd07a58801c0800ac9957b757754d94a564e67a03e18e1c794188307a6",
+        "sha256_in_prefix": "4fe56edd07a58801c0800ac9957b757754d94a564e67a03e18e1c794188307a6",
+        "size_in_bytes": 8923
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/rcpp-io.hpp",
+        "path_type": "hardlink",
+        "sha256": "54e3d4ae2da18624d2126a6ec813708fe8eba5f00ac338ce0f116f1e674b1828",
+        "sha256_in_prefix": "54e3d4ae2da18624d2126a6ec813708fe8eba5f00ac338ce0f116f1e674b1828",
+        "size_in_bytes": 6681
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/rcpp-translate.hpp",
+        "path_type": "hardlink",
+        "sha256": "f824766546a6f23a6cc5f609242541a3b12614b4a85b6da039aa957df704660b",
+        "sha256_in_prefix": "f824766546a6f23a6cc5f609242541a3b12614b4a85b6da039aa957df704660b",
+        "size_in_bytes": 3285
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/rct.hpp",
+        "path_type": "hardlink",
+        "sha256": "fe387eec8d64c732f047424743b6c9d9fa6b0e549cf28917417fda22693b18b0",
+        "sha256_in_prefix": "fe387eec8d64c732f047424743b6c9d9fa6b0e549cf28917417fda22693b18b0",
+        "size_in_bytes": 2045
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/reader.hpp",
+        "path_type": "hardlink",
+        "sha256": "97da8f865a060445ab6fb71b7b10cb9b2e6e423ded794b420bb1a434f05aa9f2",
+        "sha256_in_prefix": "97da8f865a060445ab6fb71b7b10cb9b2e6e423ded794b420bb1a434f05aa9f2",
+        "size_in_bytes": 1313
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/wkb-reader.hpp",
+        "path_type": "hardlink",
+        "sha256": "ef6ebde144cc3ea08061a77611a13f99e8d0fff4bbe4b2d36f7e325890a0ef1a",
+        "sha256_in_prefix": "ef6ebde144cc3ea08061a77611a13f99e8d0fff4bbe4b2d36f7e325890a0ef1a",
+        "size_in_bytes": 5140
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/wkb-writer.hpp",
+        "path_type": "hardlink",
+        "sha256": "054db7e9728ac01bdca06a81cc3ea19ee9011094a77bdfe43404476718772031",
+        "sha256_in_prefix": "054db7e9728ac01bdca06a81cc3ea19ee9011094a77bdfe43404476718772031",
+        "size_in_bytes": 3306
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/wkt-reader.hpp",
+        "path_type": "hardlink",
+        "sha256": "ed81c15606e67f9e3c903d1683da86119212477805443970400b20974d333629",
+        "sha256_in_prefix": "ed81c15606e67f9e3c903d1683da86119212477805443970400b20974d333629",
+        "size_in_bytes": 5319
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/wkt-streamer.hpp",
+        "path_type": "hardlink",
+        "sha256": "15db0b5ba9efae0d9c706dad7e83f7ce157cca7ca931185ee57d8ce2eca9c348",
+        "sha256_in_prefix": "15db0b5ba9efae0d9c706dad7e83f7ce157cca7ca931185ee57d8ce2eca9c348",
+        "size_in_bytes": 18063
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/wkt-writer.hpp",
+        "path_type": "hardlink",
+        "sha256": "aa0449f92eed7b197b524625d20b809dfaed6d951d100863984efabfc2801a69",
+        "sha256_in_prefix": "aa0449f92eed7b197b524625d20b809dfaed6d951d100863984efabfc2801a69",
+        "size_in_bytes": 3870
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/writer.hpp",
+        "path_type": "hardlink",
+        "sha256": "15cf4a4fb006353694061987fef8c5d51342c9cfffd064b136f5fda32dbef5bf",
+        "sha256_in_prefix": "15cf4a4fb006353694061987fef8c5d51342c9cfffd064b136f5fda32dbef5bf",
+        "size_in_bytes": 2037
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/xyzm.hpp",
+        "path_type": "hardlink",
+        "sha256": "443baa082f976fcf96c89255cc58b5549ab05b0b79f879398d371c288c732497",
+        "sha256_in_prefix": "443baa082f976fcf96c89255cc58b5549ab05b0b79f879398d371c288c732497",
+        "size_in_bytes": 3347
+      },
+      {
+        "_path": "lib/R/library/wk/libs/wk.so",
+        "path_type": "hardlink",
+        "sha256": "380977e2c28a2d39a18fd93e15e3e4beecc0f958714d0a43173fcf17ca2196bf",
+        "sha256_in_prefix": "380977e2c28a2d39a18fd93e15e3e4beecc0f958714d0a43173fcf17ca2196bf",
+        "size_in_bytes": 320488
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "d853fe6e13bea8becc62cc0b0412a92212e6e273511035c34cd0d083ed7cb7e1",
+  "size": 396403,
+  "subdir": "linux-64",
+  "timestamp": 1626159891000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-wk-0.5.0-r41h03ef668_0.tar.bz2",
+  "version": "0.5.0"
+}

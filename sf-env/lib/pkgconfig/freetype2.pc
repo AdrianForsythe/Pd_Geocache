@@ -1,0 +1,14 @@
+prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+exec_prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+libdir=/home/adrian/PhD/Pd_Geocache/sf-env/lib
+includedir=/home/adrian/PhD/Pd_Geocache/sf-env/include
+
+Name: FreeType 2
+URL: https://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 24.0.18
+Requires:
+Requires.private: zlib, libpng
+Libs: -L${libdir} -lfreetype
+Libs.private: 
+Cflags: -I${includedir}/freetype2

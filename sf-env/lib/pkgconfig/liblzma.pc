@@ -1,0 +1,19 @@
+#
+# Author: Lasse Collin
+#
+# This file has been put into the public domain.
+# You can do whatever you want with this file.
+#
+
+prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+exec_prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+libdir=/home/adrian/PhD/Pd_Geocache/sf-env/lib
+includedir=/home/adrian/PhD/Pd_Geocache/sf-env/include
+
+Name: liblzma
+Description: General purpose data compression library
+URL: https://tukaani.org/xz/
+Version: 5.2.5
+Cflags: -I${includedir}
+Libs: -L${libdir} -llzma
+Libs.private: -pthread -lrt  -lpthread

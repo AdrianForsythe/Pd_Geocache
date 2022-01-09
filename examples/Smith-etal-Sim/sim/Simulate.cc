@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <iostream.h>
+#include <iostream>
 #include <stdlib.h>
 #include <math.h>
 #include <unistd.h>
@@ -65,7 +65,7 @@ void newParams(MODEL *mod);
 void showParams(MODEL *mod);
 void Maximize(MODEL *mod);
 
-main(int argc, char **argv){
+int main(int argc, char **argv){
   MODEL *mod;
   mod = setupModel(argc, argv); 
   Simulate(mod);
@@ -131,8 +131,8 @@ void setupSim(int argc, char **argv, MODEL *mod){
 	mod->sim->modType = '0'; 
 	mod->sim->putnam = false;
 	GetOptions(argc, argv, mod);
- 	mod->sim->rates = new (double *)[mod->nTowns]; 
- 	mod->sim->events = new (double *)[mod->sim->nReps]; 
+ 	mod->sim->rates = &(new (double *))[mod->nTowns]; 
+ 	mod->sim->events = &(new (double *))[mod->sim->nReps]; 
  	mod->sim->simRate = new double[mod->nTowns]; 
 	mod->sim->avg = new double[mod->nTowns]; 
  	mod->sim->state = new int[mod->nTowns]; 
@@ -153,7 +153,7 @@ void getData(MODEL *mod){
   datafile = fopen ("first.txt", "r");
   fscanf(datafile, "%*s %*s %*s %*s %*s");
   for (i = 0; i < mod->nTowns; i++){
-    fscanf (datafile, "%s ", &name); 
+    fscanf (datafile, "%s ", *name); 
     sprintf(mod->data[i].name, "%s ", name);
     fscanf (datafile, "%lf ", &mod->data[i].x); 
     fscanf (datafile, "%lf ", &mod->data[i].y); 
@@ -196,10 +196,10 @@ void Maximize(MODEL *mod){
 
 void showParams(MODEL *mod){
 	int i;
-	cout << "ChiSq = " << mod->sim->totChiSq << endl;
+	std::cout << "ChiSq = " << mod->sim->totChiSq << std::endl;
 	for (i=0;i<mod->sim->nPars;i++)
-		cout << mod->sim->names[i] << " " << mod->sim->params[i] << endl ; 
-	cout << endl;
+	  std::cout << mod->sim->names[i] << " " << mod->sim->params[i] << std::endl ; 
+	std::cout << std::endl;
 }
 
 void oldParams(MODEL *mod){
@@ -265,13 +265,13 @@ void ReadParams(MODEL *mod){
   sprintf(filename, "mod%c.in", mod->sim->modType); 
   infil = fopen (filename, "r");
 	//cout << "opened " << filename << "\n";
-  fscanf(infil, "%s %d ", &mod->sim->modName, &mod->sim->nPars); 
+  fscanf(infil, "%s %d ", *mod->sim->modName, &mod->sim->nPars); 
 	//cout << "nPars = " << mod->sim->nPars<< "\n";
   mod->sim->LB = new double[mod->sim->nPars];
   mod->sim->UB = new double[mod->sim->nPars];
   mod->sim->params = new double[mod->sim->nPars];
   mod->sim->best = new double[mod->sim->nPars];
-  mod->sim->names = new (char *)[mod->sim->nPars];
+  mod->sim->names = &(new (char *))[mod->sim->nPars];
   for(i=0;i<mod->sim->nPars;i++){
     mod->sim->names[i] = new char[20];
     fscanf(infil, "%s %lf %lf %lf", &tmps, 
@@ -379,7 +379,7 @@ double GetRate(int i, int j, MODEL *mod){
         	rate =  mod->sim->params[3];  
       break;
       default:
-        cout << "BAD MODEL SUBTYPE\n";
+        std::cout << "BAD MODEL SUBTYPE\n";
         exit(33);
       break;
     }
@@ -428,7 +428,7 @@ void Summarize (MODEL *mod){
 		}
 		mod->sim->avg[i] = mod->sim->avg[i]/(double)mod->sim->nReps;
 		if ((i == 115) && (mod->sim->putnam == false)){
-			cout << "Ignoring Putnam! "; 
+			std::cout << "Ignoring Putnam! "; 
 		}
 		else{
 			mod->sim->totChiSq += 

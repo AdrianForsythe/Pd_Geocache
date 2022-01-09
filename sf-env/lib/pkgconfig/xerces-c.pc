@@ -1,0 +1,11 @@
+prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Xerces-C++
+Description: Validating XML parser library for C++
+Version: 3.2.3
+Libs: -L${libdir} -lxerces-c
+Libs.private: -L/opt/conda/lib -lcurl
+Cflags: -I${includedir}

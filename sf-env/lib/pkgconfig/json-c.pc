@@ -1,0 +1,12 @@
+prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+exec_prefix=/home/adrian/PhD/Pd_Geocache/sf-env
+libdir=/home/adrian/PhD/Pd_Geocache/sf-env/lib
+includedir=/home/adrian/PhD/Pd_Geocache/sf-env/include
+
+Name: json-c
+Description: A JSON implementation in C
+Version: 0.15
+Requires:
+Libs.private: 
+Libs: -L${libdir} -ljson-c
+Cflags: -I${includedir} -I${includedir}/json-c
