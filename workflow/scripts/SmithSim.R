@@ -17,8 +17,8 @@ library(parallel)
 # read in presence data, used for times of county infections
 presence.df<-readRDS("workflow/data/presence.df.rds") %>% 
   select(-geoms) %>% 
-  as.data.frame()
-# %>% slice_sample(n = 10)
+  as.data.frame() %>% 
+  filter(STATEPROV=="New York")
 
 # range of dates for the pandemic, in cumulative number of days
 presence.df$pand.days<-((year(presence.df$date)-min(year(presence.df$date)))*365)+yday(ymd(presence.df$date))
@@ -26,8 +26,8 @@ presence.df$pand.days<-((year(presence.df$date)-min(year(presence.df$date)))*365
 # for parallel processing
 cores=4
 
-# we start at day 1
-current.time<-1
+# we start at day 0
+current.time<-0
 
 # null expectations for translocations
 mu<-3*10^(-4)
@@ -36,8 +36,7 @@ mu<-3*10^(-4)
 days.max<-max(presence.df$pand.days)
 
 # dataframe with info on adjacency
-total.touching<-read.csv(file = "workflow/data/total-touching.csv",header = T) 
-# %>% filter(county %in% presence.df$county & county2 %in% presence.df$county)
+total.touching<-read.csv(file = "workflow/data/total-touching.csv",header = T) %>% filter(county %in% presence.df$county & county2 %in% presence.df$county)
 
 # adjacency matrix is kinda messy, should only keep upper.tri
 m<-total.touching %>%
@@ -48,7 +47,7 @@ m[upper.tri(m)]<-NA
 total.touching<-m %>% as.data.frame() %>% rownames_to_column("county") %>% pivot_longer(cols = -county,names_to = "county2",values_to = "touching") %>% filter(!is.na(touching))
 
 # starting with X = 1 (no infections) for all counties
-n.infected<-0
+n.infected<-1
 init.counties<-presence.df %>% filter(pand.days==1) %>% pull(county)
 all.counties<-unique(c(total.touching$county,total.touching$county2)) %>% 
   data.frame() %>% 
@@ -64,10 +63,9 @@ message_parallel <- function(...){
   system(sprintf('echo "\n%s\n"', paste0(..., collapse="")))
 }
 
-
 # repeat until each county becomes infected. 
-while (n.infected<n.counties & current.time < days.max) {
-  print(paste("Current time: ",current.time,"    Number of Infected Counties: ",n.infected))
+results<-NULL
+while (n.infected<n.counties | current.time < days.max) {
   # Step 1
   # the total rate of infection in the jth county, ρj, where:
   # ρj = μjXj + ∑i λi,j Xj(1 − Xi)
@@ -114,32 +112,52 @@ while (n.infected<n.counties & current.time < days.max) {
   # Draw a random number to determine the elapsed time. 
   # we assume waiting times are distributed exponentially with rate parameter Λ.
   # After computing the elapsed time, we see whether the date when rabies was observed in one of the forced townships preceded the simulated event. If so, the borders are forced, and no event is simulated.
-  elapsed.t<-round(rexp(1, rate = total.rate)/100)
+  elapsed.t<-round(rexp(1, rate = total.rate)*100)
   current.time<-elapsed.t+current.time
   
-  n.infected.new<-(n.counties-sum(all.counties$X))-n.infected
-  
-  # force
-  # (D) Check to see if any of the edges had become infected in the elapsed interval. 
-  to.force<-presence.df %>% filter(pand.days>current.time & pand.days<= current.time) %>% distinct(county)
-  
-  if (length(to.force!=0)) {
-    # (F) Infect the forced edge or the infected county
-    all.counties<-all.counties %>% mutate(X=ifelse(county%in%to.force,0,1))
-  } else {
-    # (E) If no edges were forced, select a random county to infect. 
-    # townships that had higher rates of infection had higher probabilities of becoming infected.
-    # Random townships were chosen from the multinomial distribution
-    # the probability that the ith county was chosen was ρi/Λ.
+  if (elapsed.t != 0) {
+    n.infected.new<-(n.counties-sum(all.counties$X))-n.infected
     
-    uninfected <- all.counties %>% left_join(local.rates,by = "county") %>% filter(X==1) %>% column_to_rownames("county")
-    infect.rate<-stats::rmultinom(n=1,size=nrow(uninfected),prob = as.vector(uninfected$pj)/total.rate)
-    to.infect<-uninfected[sample(x = local.rates %>% filter(Xi==1) %>% pull(county),size = 1,prob = infect.rate),]
-    # Finally, the state of the infected county is updated
-    all.counties<-all.counties %>% mutate(X=ifelse(county%in%rownames(to.infect),0,X),
-                                          date.infected=current.time)
-    # all.counties["county"==to.infect,"X"]<-0 # update records of infected counties
+    # force
+    # (D) Check to see if any of the edges had become infected in the elapsed interval. 
+    to.force<-presence.df %>% 
+      filter(pand.days<= current.time) %>% 
+      distinct(county) %>% pull(county)
+    
+    if (length(to.force)!=0) {
+      # (F) Infect the forced edge or the infected county
+      all.counties<-all.counties %>% mutate(X=ifelse(county%in%to.force,0,X))
+    } else {
+      # (E) If no edges were forced, select a random county to infect. 
+      # townships that had higher rates of infection had higher probabilities of becoming infected.
+      # Random townships were chosen from the multinomial distribution
+      # the probability that the ith county was chosen was ρi/Λ.
+      
+      uninfected <- all.counties %>% left_join(local.rates,by = "county") %>% filter(X==1) %>% column_to_rownames("county")
+      infect.rate<-stats::rmultinom(n=1,size=nrow(uninfected),prob = as.vector(uninfected$pj)/total.rate)
+      to.infect<-uninfected[sample(x = local.rates %>% filter(Xi==1) %>% pull(county),size = 1,prob = infect.rate),]
+      # Finally, the state of the infected county is updated
+      all.counties<-all.counties %>% mutate(X=ifelse(county%in%rownames(to.infect),0,X),
+                                            date.infected=current.time)
+      # all.counties["county"==to.infect,"X"]<-0 # update records of infected counties
+    }
+  } else {
+    next
   }
   n.infected<-all.counties %>% filter(X==0) %>% distinct(county) %>% nrow()
   current.time<-elapsed.t+current.time
+  print(paste("Current time: ",current.time,"    Elapsed time: ",elapsed.t,"    Number of Infected Counties: ",n.infected))
+  results<-bind_rows(results,data.frame("Current time"=current.time,"Elapsed time"=elapsed.t,"Number of Infected Counties"=n.infected))
 }
+
+presence.df %>% 
+  arrange(pand.days) %>% 
+  mutate(status=ifelse(WNS_STATUS=="Confirmed",1,0),
+         cumsum=cumsum(status),
+         dataset="truth") %>% 
+  bind_rows(results %>% mutate(dataset="null") %>% rename("pand.days"="Current.time","cumsum"="Number.of.Infected.Counties")) %>% 
+ggplot(aes(x=pand.days,y=cumsum))+geom_path(aes(color=dataset))
+
+presence.df %>% ggplot()+geom_sf()
+
+write.csv(x=results,file="workflow/data/SmithSimNull.csv",quote=FALSE,row.names = FALSE)
