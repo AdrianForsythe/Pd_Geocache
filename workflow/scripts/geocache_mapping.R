@@ -35,7 +35,7 @@ gc_mapping <- function(presence.df,relevant.records,num.geocache,num.geocache.ye
                   group_by(GC,gc.year,coords.x1,coords.x2) %>%
                   summarise(total = length(User))
 
-  ggmap::register_google(key = "AIzaSyDw5appsfJ_gWd45-AeYe_WTT2VvI8kXhQ")
+  ggmap::register_google(key = API_KEY)
   map <- get_stamenmap(c(right = -57, left = -125, top = 52, bottom = 32),
                  zoom = 5, source = "stamen", maptype = "terrain-background", scale = "auto")
   n <- length(unique(all_summary$year))

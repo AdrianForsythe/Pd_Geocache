@@ -28,7 +28,7 @@ gc_mapping <- function(eu_visits,na_visits,num.geocache,num.geocache.year,max.vi
                   group_by(GC,Year,lat,lon) %>%
                   summarise(total = n_distinct(User))
 
-  ggmap::register_google(key = "AIzaSyDw5appsfJ_gWd45-AeYe_WTT2VvI8kXhQ")
+  ggmap::register_google(key = API_KEY)
   map <- get_stamenmap(c(left=-11.04,bottom=35.2,right=41.44,top=60.08),zoom = 5, source = "stamen", maptype = "terrain-background", scale = "auto")
   n <- length(unique(all_summary$Year))
   qual_col_pals = brewer.pal.info[brewer.pal.info$category == "qual", ]

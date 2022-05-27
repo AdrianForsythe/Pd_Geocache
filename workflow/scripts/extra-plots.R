@@ -6,7 +6,7 @@ require(ggmap)
 require(tidyverse)
 require(RColorBrewer)
 
-register_google(key = "AIzaSyDw5appsfJ_gWd45-AeYe_WTT2VvI8kXhQ")
+register_google(key = API_KEY)
 
 # for testing
 # presence.df<-readRDS("workflow/data/presence.df.rds")

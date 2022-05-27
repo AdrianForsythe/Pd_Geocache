@@ -25,7 +25,7 @@ pts.grid <- interp(geocache.locs$lon,geocache.locs$lat,geocache.locs$total,dupli
 pts.grid2 <- expand.grid(x=pts.grid$x, y=pts.grid$y)
 pts.grid2$z <- as.vector(pts.grid$z)
 
-register_google(key = "AIzaSyDw5appsfJ_gWd45-AeYe_WTT2VvI8kXhQ")
+register_google(key = API_KEY)
 map<-get_map(location = "Maryland",source = "google",zoom = 5,maptype = "terrain-background",scale = "auto")
 ggmap(map)+
   geom_tile(data=na.omit(pts.grid2),aes(x=x,y=y,fill=z),alpha=0.75)+
