@@ -1,0 +1,223 @@
+{
+  "build": "r42hc72bb7e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.2,<4.3.0a0",
+    "r-brio",
+    "r-desc",
+    "r-digest",
+    "r-evaluate",
+    "r-fansi",
+    "r-memoise",
+    "r-rlang",
+    "r-vctrs",
+    "r-withr",
+    "r-yaml"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-downlit-0.4.2-r42hc72bb7e_1",
+  "features": "",
+  "files": [
+    "lib/R/library/downlit/DESCRIPTION",
+    "lib/R/library/downlit/INDEX",
+    "lib/R/library/downlit/LICENSE",
+    "lib/R/library/downlit/Meta/Rd.rds",
+    "lib/R/library/downlit/Meta/features.rds",
+    "lib/R/library/downlit/Meta/hsearch.rds",
+    "lib/R/library/downlit/Meta/links.rds",
+    "lib/R/library/downlit/Meta/nsInfo.rds",
+    "lib/R/library/downlit/Meta/package.rds",
+    "lib/R/library/downlit/NAMESPACE",
+    "lib/R/library/downlit/NEWS.md",
+    "lib/R/library/downlit/R/downlit",
+    "lib/R/library/downlit/R/downlit.rdb",
+    "lib/R/library/downlit/R/downlit.rdx",
+    "lib/R/library/downlit/WORDLIST",
+    "lib/R/library/downlit/help/AnIndex",
+    "lib/R/library/downlit/help/aliases.rds",
+    "lib/R/library/downlit/help/downlit.rdb",
+    "lib/R/library/downlit/help/downlit.rdx",
+    "lib/R/library/downlit/help/paths.rds",
+    "lib/R/library/downlit/html/00Index.html",
+    "lib/R/library/downlit/html/R.css"
+  ],
+  "fn": "r-downlit-0.4.2-r42hc72bb7e_1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-downlit-0.4.2-r42hc72bb7e_1",
+    "type": 1
+  },
+  "md5": "52129a8253cf81365af9bff3a5e594d7",
+  "name": "r-downlit",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-downlit-0.4.2-r42hc72bb7e_1.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/downlit/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "5c2fc71362a5ea008e5305d73f3553680788840f90e4a69f6d1a1b5324f181ce",
+        "sha256_in_prefix": "5c2fc71362a5ea008e5305d73f3553680788840f90e4a69f6d1a1b5324f181ce",
+        "size_in_bytes": 1298
+      },
+      {
+        "_path": "lib/R/library/downlit/INDEX",
+        "path_type": "hardlink",
+        "sha256": "951180cad5d74504f547ad4f456af554aeb6bc86014c2c1a446608908b40c23d",
+        "sha256_in_prefix": "951180cad5d74504f547ad4f456af554aeb6bc86014c2c1a446608908b40c23d",
+        "size_in_bytes": 383
+      },
+      {
+        "_path": "lib/R/library/downlit/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "6654d97ff54de7e7bcddc25d4e31e7634f25380cff8f41510ba5bf10a173e42a",
+        "sha256_in_prefix": "6654d97ff54de7e7bcddc25d4e31e7634f25380cff8f41510ba5bf10a173e42a",
+        "size_in_bytes": 37
+      },
+      {
+        "_path": "lib/R/library/downlit/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "fd14a6672ce863216cdb908f1a44befa8a594be48fe2fb5d74ff6ef927ab0329",
+        "sha256_in_prefix": "fd14a6672ce863216cdb908f1a44befa8a594be48fe2fb5d74ff6ef927ab0329",
+        "size_in_bytes": 583
+      },
+      {
+        "_path": "lib/R/library/downlit/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/downlit/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "19ca930a986e57bbbe9718b0736b82d0d17d47f520d9f4af6c862bf3d22aeac7",
+        "sha256_in_prefix": "19ca930a986e57bbbe9718b0736b82d0d17d47f520d9f4af6c862bf3d22aeac7",
+        "size_in_bytes": 610
+      },
+      {
+        "_path": "lib/R/library/downlit/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "6a6800479e8b9b13c7236b77ca10e6ed722f8e7bcbc39cc93e3c062c9a1d2a9b",
+        "sha256_in_prefix": "6a6800479e8b9b13c7236b77ca10e6ed722f8e7bcbc39cc93e3c062c9a1d2a9b",
+        "size_in_bytes": 295
+      },
+      {
+        "_path": "lib/R/library/downlit/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "1010a711a350ff6d25259cfd61188dc31d415dce3b6560f70d79e12a9d808982",
+        "sha256_in_prefix": "1010a711a350ff6d25259cfd61188dc31d415dce3b6560f70d79e12a9d808982",
+        "size_in_bytes": 451
+      },
+      {
+        "_path": "lib/R/library/downlit/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "3e23110ebfc392581fcfa25db00fb0e1f23f031b41c45a5d189f90374dcbe3fc",
+        "sha256_in_prefix": "3e23110ebfc392581fcfa25db00fb0e1f23f031b41c45a5d189f90374dcbe3fc",
+        "size_in_bytes": 1326
+      },
+      {
+        "_path": "lib/R/library/downlit/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "88228066b646dd4d43e42bab7dd3695f5b4a58dab540deb8c607e65a787e5cdf",
+        "sha256_in_prefix": "88228066b646dd4d43e42bab7dd3695f5b4a58dab540deb8c607e65a787e5cdf",
+        "size_in_bytes": 820
+      },
+      {
+        "_path": "lib/R/library/downlit/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "fced6bd1db2ad7db872b965716a9f58b3b8178f2184f72193a85b97bd6d08892",
+        "sha256_in_prefix": "fced6bd1db2ad7db872b965716a9f58b3b8178f2184f72193a85b97bd6d08892",
+        "size_in_bytes": 4760
+      },
+      {
+        "_path": "lib/R/library/downlit/R/downlit",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/downlit/R/downlit.rdb",
+        "path_type": "hardlink",
+        "sha256": "b3809c3dcf82c805c488f6f9aba8dbc813ed08018cca30c46da4007a6c2c2589",
+        "sha256_in_prefix": "b3809c3dcf82c805c488f6f9aba8dbc813ed08018cca30c46da4007a6c2c2589",
+        "size_in_bytes": 82349
+      },
+      {
+        "_path": "lib/R/library/downlit/R/downlit.rdx",
+        "path_type": "hardlink",
+        "sha256": "b644f3516c19bdd81699f757c2728c085f195941fb6e16197899156f816ec84b",
+        "sha256_in_prefix": "b644f3516c19bdd81699f757c2728c085f195941fb6e16197899156f816ec84b",
+        "size_in_bytes": 1895
+      },
+      {
+        "_path": "lib/R/library/downlit/WORDLIST",
+        "path_type": "hardlink",
+        "sha256": "72212298d30e4a03ccc6654ceeb0b3f881041a35a15ba4e3be997444926728b1",
+        "sha256_in_prefix": "72212298d30e4a03ccc6654ceeb0b3f881041a35a15ba4e3be997444926728b1",
+        "size_in_bytes": 100
+      },
+      {
+        "_path": "lib/R/library/downlit/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "9dde65ad8e63c730c462b556256f6490233a2afb69992c53fe3e21089ce9e578",
+        "sha256_in_prefix": "9dde65ad8e63c730c462b556256f6490233a2afb69992c53fe3e21089ce9e578",
+        "size_in_bytes": 448
+      },
+      {
+        "_path": "lib/R/library/downlit/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "fdec0a37cc93a815c6c2341ff36ec17e5be7b093b9ddb5a7f81fc668052ec577",
+        "sha256_in_prefix": "fdec0a37cc93a815c6c2341ff36ec17e5be7b093b9ddb5a7f81fc668052ec577",
+        "size_in_bytes": 239
+      },
+      {
+        "_path": "lib/R/library/downlit/help/downlit.rdb",
+        "path_type": "hardlink",
+        "sha256": "3af7da1691e2b31a4bfa6d131f1cdd865db11f65b06050f8c6afec97929f7131",
+        "sha256_in_prefix": "3af7da1691e2b31a4bfa6d131f1cdd865db11f65b06050f8c6afec97929f7131",
+        "size_in_bytes": 18208
+      },
+      {
+        "_path": "lib/R/library/downlit/help/downlit.rdx",
+        "path_type": "hardlink",
+        "sha256": "18e0c8b1641b0b68bde3619bbb1fca2d1dca5d08cdd3e4d1732d17adb7b31fe1",
+        "sha256_in_prefix": "18e0c8b1641b0b68bde3619bbb1fca2d1dca5d08cdd3e4d1732d17adb7b31fe1",
+        "size_in_bytes": 358
+      },
+      {
+        "_path": "lib/R/library/downlit/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "d2b0b364af884c5af6bef0e6731db9f131f82c26274a8a0299a1b651f7ce23fb",
+        "sha256_in_prefix": "d2b0b364af884c5af6bef0e6731db9f131f82c26274a8a0299a1b651f7ce23fb",
+        "size_in_bytes": 250
+      },
+      {
+        "_path": "lib/R/library/downlit/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "b76b289bf6f839408650cdbe46d4e2dbc05f9f02b2bb30cade75c3f54d60737b",
+        "sha256_in_prefix": "b76b289bf6f839408650cdbe46d4e2dbc05f9f02b2bb30cade75c3f54d60737b",
+        "size_in_bytes": 2393
+      },
+      {
+        "_path": "lib/R/library/downlit/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "d50f9fd4b7516c391102438d8cbcea42aa985435c779ff4f2ddbad3764af6794",
+  "size": 122223,
+  "subdir": "noarch",
+  "timestamp": 1665294404000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-downlit-0.4.2-r42hc72bb7e_1.tar.bz2",
+  "version": "0.4.2"
+}

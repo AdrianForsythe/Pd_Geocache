@@ -33,7 +33,7 @@ supported_features="AsynchDNS GSS-API HSTS HTTP2 HTTPS-proxy IPv6 Kerberos Large
 Name: libcurl
 URL: https://curl.se/
 Description: Library to transfer files with ftp, http, etc.
-Version: 7.80.0
+Version: 7.83.1
 Libs: -L${libdir} -lcurl 
 Libs.private: -lnghttp2 -lssh2 -lssh2 -lssl -lcrypto -lssl -lcrypto -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lgssapi_krb5 -lz -lrt -pthread
 Cflags: -I${includedir} 

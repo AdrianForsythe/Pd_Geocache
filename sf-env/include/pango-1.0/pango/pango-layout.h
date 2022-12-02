@@ -53,7 +53,10 @@ typedef PangoGlyphItem PangoLayoutRun;
  * within the available space.
  *
  * If the `PangoLayout` is set to justify using [method@Pango.Layout.set_justify],
- * this only has effect for partial lines.
+ * this only affects partial lines.
+ *
+ * See [method@Pango.Layout.set_auto_dir] for how text direction affects
+ * the interpretation of `PangoAlignment` values.
  */
 typedef enum {
   PANGO_ALIGN_LEFT,
@@ -220,9 +223,14 @@ PANGO_AVAILABLE_IN_1_44
 float          pango_layout_get_line_spacing     (PangoLayout                *layout);
 PANGO_AVAILABLE_IN_ALL
 void           pango_layout_set_justify          (PangoLayout                *layout,
-						  gboolean                    justify);
+                                                  gboolean                    justify);
 PANGO_AVAILABLE_IN_ALL
 gboolean       pango_layout_get_justify          (PangoLayout                *layout);
+PANGO_AVAILABLE_IN_1_50
+void           pango_layout_set_justify_last_line (PangoLayout                *layout,
+                                                   gboolean                    justify);
+PANGO_AVAILABLE_IN_1_50
+gboolean       pango_layout_get_justify_last_line (PangoLayout                *layout);
 PANGO_AVAILABLE_IN_1_4
 void           pango_layout_set_auto_dir         (PangoLayout                *layout,
 						  gboolean                    auto_dir);
@@ -290,6 +298,13 @@ void     pango_layout_get_cursor_pos       (PangoLayout    *layout,
 					    int             index_,
 					    PangoRectangle *strong_pos,
 					    PangoRectangle *weak_pos);
+
+PANGO_AVAILABLE_IN_1_50
+void     pango_layout_get_caret_pos        (PangoLayout    *layout,
+                                            int             index_,
+                                            PangoRectangle *strong_pos,
+                                            PangoRectangle *weak_pos);
+
 PANGO_AVAILABLE_IN_ALL
 void     pango_layout_move_cursor_visually (PangoLayout    *layout,
 					    gboolean        strong,
@@ -336,6 +351,81 @@ GSList *         pango_layout_get_lines            (PangoLayout    *layout);
 PANGO_AVAILABLE_IN_1_16
 GSList *         pango_layout_get_lines_readonly   (PangoLayout    *layout);
 
+/**
+ * PangoLayoutSerializeFlags:
+ * @PANGO_LAYOUT_SERIALIZE_DEFAULT: Default behavior
+ * @PANGO_LAYOUT_SERIALIZE_CONTEXT: Include context information
+ * @PANGO_LAYOUT_SERIALIZE_OUTPUT: Include information about the formatted output
+ *
+ * Flags that influence the behavior of [method@Pango.Layout.serialize].
+ *
+ * New members may be added to this enumeration over time.
+ *
+ * Since: 1.50
+ */
+typedef enum {
+  PANGO_LAYOUT_SERIALIZE_DEFAULT = 0,
+  PANGO_LAYOUT_SERIALIZE_CONTEXT = 1 << 0,
+  PANGO_LAYOUT_SERIALIZE_OUTPUT = 1 << 1,
+} PangoLayoutSerializeFlags;
+
+PANGO_AVAILABLE_IN_1_50
+GBytes *        pango_layout_serialize             (PangoLayout                *layout,
+                                                    PangoLayoutSerializeFlags   flags);
+
+PANGO_AVAILABLE_IN_1_50
+gboolean        pango_layout_write_to_file         (PangoLayout                 *layout,
+                                                    PangoLayoutSerializeFlags   flags,
+
+                                                    const char                  *filename,
+                                                    GError                     **error);
+
+#define PANGO_LAYOUT_DESERIALIZE_ERROR (pango_layout_deserialize_error_quark ())
+
+/**
+ * PangoLayoutDeserializeError:
+ * @PANGO_LAYOUT_DESERIALIZE_INVALID: Unspecified error
+ * @PANGO_LAYOUT_DESERIALIZE_INVALID_VALUE: A JSon value could not be
+ *   interpreted
+ * @PANGO_LAYOUT_DESERIALIZE_MISSING_VALUE: A required JSon member was
+ *   not found
+ *
+ * Errors that can be returned by [func@Pango.Layout.deserialize].
+ *
+ * Since: 1.50
+ */
+typedef enum {
+  PANGO_LAYOUT_DESERIALIZE_INVALID,
+  PANGO_LAYOUT_DESERIALIZE_INVALID_VALUE,
+  PANGO_LAYOUT_DESERIALIZE_MISSING_VALUE,
+} PangoLayoutDeserializeError;
+
+PANGO_AVAILABLE_IN_1_50
+GQuark          pango_layout_deserialize_error_quark (void);
+
+/**
+ * PangoLayoutDeserializeFlags:
+ * @PANGO_LAYOUT_DESERIALIZE_DEFAULT: Default behavior
+ * @PANGO_LAYOUT_DESERIALIZE_CONTEXT: Apply context information
+ *   from the serialization to the `PangoContext`
+ *
+ * Flags that influence the behavior of [func@Pango.Layout.deserialize].
+ *
+ * New members may be added to this enumeration over time.
+ *
+ * Since: 1.50
+ */
+typedef enum {
+  PANGO_LAYOUT_DESERIALIZE_DEFAULT = 0,
+  PANGO_LAYOUT_DESERIALIZE_CONTEXT = 1 << 0,
+} PangoLayoutDeserializeFlags;
+
+PANGO_AVAILABLE_IN_1_50
+PangoLayout *   pango_layout_deserialize           (PangoContext                 *context,
+                                                    GBytes                       *bytes,
+                                                    PangoLayoutDeserializeFlags   flags,
+                                                    GError                      **error);
+
 
 #define PANGO_TYPE_LAYOUT_LINE (pango_layout_line_get_type ())
 
@@ -346,6 +436,15 @@ PANGO_AVAILABLE_IN_1_10
 PangoLayoutLine *pango_layout_line_ref   (PangoLayoutLine *line);
 PANGO_AVAILABLE_IN_ALL
 void             pango_layout_line_unref (PangoLayoutLine *line);
+
+PANGO_AVAILABLE_IN_1_50
+int      pango_layout_line_get_start_index (PangoLayoutLine *line);
+PANGO_AVAILABLE_IN_1_50
+int      pango_layout_line_get_length      (PangoLayoutLine *line);
+PANGO_AVAILABLE_IN_1_50
+gboolean pango_layout_line_is_paragraph_start (PangoLayoutLine *line);
+PANGO_AVAILABLE_IN_1_50
+PangoDirection pango_layout_line_get_resolved_direction (PangoLayoutLine *line);
 
 PANGO_AVAILABLE_IN_ALL
 gboolean pango_layout_line_x_to_index   (PangoLayoutLine  *line,
@@ -442,6 +541,12 @@ void pango_layout_iter_get_layout_extents  (PangoLayoutIter *iter,
 					    PangoRectangle  *logical_rect);
 PANGO_AVAILABLE_IN_ALL
 int  pango_layout_iter_get_baseline        (PangoLayoutIter *iter);
+PANGO_AVAILABLE_IN_1_50
+int  pango_layout_iter_get_run_baseline    (PangoLayoutIter *iter);
+
+
+G_DEFINE_AUTOPTR_CLEANUP_FUNC(PangoLayout, g_object_unref)
+G_DEFINE_AUTOPTR_CLEANUP_FUNC(PangoLayoutIter, pango_layout_iter_free)
 
 G_END_DECLS
 

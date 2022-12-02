@@ -1,10 +1,10 @@
 prefix=/home/adrian/PhD/Pd_Geocache/sf-env
-libdir=${prefix}/lib
 includedir=${prefix}/include
+libdir=${prefix}/lib
 
 Name: harfbuzz
 Description: HarfBuzz text shaping library
-Version: 3.2.0
+Version: 5.1.0
 Requires.private: freetype2, graphite2, glib-2.0
 Libs: -L${libdir} -lharfbuzz
 Libs.private: -pthread -lm

@@ -1,0 +1,206 @@
+{
+  "build": "r42hc72bb7e_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.2,<4.3.0a0",
+    "r-tibble"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-rematch2-2.1.2-r42hc72bb7e_2",
+  "features": "",
+  "files": [
+    "lib/R/library/rematch2/DESCRIPTION",
+    "lib/R/library/rematch2/INDEX",
+    "lib/R/library/rematch2/LICENSE",
+    "lib/R/library/rematch2/Meta/Rd.rds",
+    "lib/R/library/rematch2/Meta/features.rds",
+    "lib/R/library/rematch2/Meta/hsearch.rds",
+    "lib/R/library/rematch2/Meta/links.rds",
+    "lib/R/library/rematch2/Meta/nsInfo.rds",
+    "lib/R/library/rematch2/Meta/package.rds",
+    "lib/R/library/rematch2/NAMESPACE",
+    "lib/R/library/rematch2/NEWS.md",
+    "lib/R/library/rematch2/R/rematch2",
+    "lib/R/library/rematch2/R/rematch2.rdb",
+    "lib/R/library/rematch2/R/rematch2.rdx",
+    "lib/R/library/rematch2/help/AnIndex",
+    "lib/R/library/rematch2/help/aliases.rds",
+    "lib/R/library/rematch2/help/paths.rds",
+    "lib/R/library/rematch2/help/rematch2.rdb",
+    "lib/R/library/rematch2/help/rematch2.rdx",
+    "lib/R/library/rematch2/html/00Index.html",
+    "lib/R/library/rematch2/html/R.css"
+  ],
+  "fn": "r-rematch2-2.1.2-r42hc72bb7e_2.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-rematch2-2.1.2-r42hc72bb7e_2",
+    "type": 1
+  },
+  "md5": "e8be9d4a91d2a17ad8aca012982e7d48",
+  "name": "r-rematch2",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-rematch2-2.1.2-r42hc72bb7e_2.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/rematch2/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "07eb01c4f8ed433ba19d3c6b4de41344984089eb10194426fc11fa62836980fb",
+        "sha256_in_prefix": "07eb01c4f8ed433ba19d3c6b4de41344984089eb10194426fc11fa62836980fb",
+        "size_in_bytes": 887
+      },
+      {
+        "_path": "lib/R/library/rematch2/INDEX",
+        "path_type": "hardlink",
+        "sha256": "850f07a4e9aa0990f3ae63447765fa1f8e2a94a083f872c90c6f01b49519b328",
+        "sha256_in_prefix": "850f07a4e9aa0990f3ae63447765fa1f8e2a94a083f872c90c6f01b49519b328",
+        "size_in_bytes": 611
+      },
+      {
+        "_path": "lib/R/library/rematch2/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "da1ae1c3f613e11adc5acfc7612bd76105e4ca6740f27f60ed49191d66419939",
+        "sha256_in_prefix": "da1ae1c3f613e11adc5acfc7612bd76105e4ca6740f27f60ed49191d66419939",
+        "size_in_bytes": 66
+      },
+      {
+        "_path": "lib/R/library/rematch2/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "011078c1333712761431191979f079c6ad1579bc8dad7ea633ae52203c2a2127",
+        "sha256_in_prefix": "011078c1333712761431191979f079c6ad1579bc8dad7ea633ae52203c2a2127",
+        "size_in_bytes": 479
+      },
+      {
+        "_path": "lib/R/library/rematch2/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/rematch2/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "a8ab8201e020311aa2dd1d27e95074e3a40ed18f036ad3bc279cee384bf2022c",
+        "sha256_in_prefix": "a8ab8201e020311aa2dd1d27e95074e3a40ed18f036ad3bc279cee384bf2022c",
+        "size_in_bytes": 502
+      },
+      {
+        "_path": "lib/R/library/rematch2/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "983a8a6da9c6a8f730ad1c8b96048709094d2d074aeb8e699c60b9edd61c5182",
+        "sha256_in_prefix": "983a8a6da9c6a8f730ad1c8b96048709094d2d074aeb8e699c60b9edd61c5182",
+        "size_in_bytes": 216
+      },
+      {
+        "_path": "lib/R/library/rematch2/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "381aa972f1583415e2458b7b8ebf14598686fef0211087672c97f6f32749c0ec",
+        "sha256_in_prefix": "381aa972f1583415e2458b7b8ebf14598686fef0211087672c97f6f32749c0ec",
+        "size_in_bytes": 295
+      },
+      {
+        "_path": "lib/R/library/rematch2/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "7c436d4cf6a30ee0e4bf45746af0581b585b5558d5b5dd28d04b040102c07f9d",
+        "sha256_in_prefix": "7c436d4cf6a30ee0e4bf45746af0581b585b5558d5b5dd28d04b040102c07f9d",
+        "size_in_bytes": 904
+      },
+      {
+        "_path": "lib/R/library/rematch2/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "c6ea9b29a402932a6430f708acaf69880d12c5bd0be56efb9c7317effe97321a",
+        "sha256_in_prefix": "c6ea9b29a402932a6430f708acaf69880d12c5bd0be56efb9c7317effe97321a",
+        "size_in_bytes": 343
+      },
+      {
+        "_path": "lib/R/library/rematch2/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "2989a113a04f05e3bfee2fe7a99ac1738f2966ca0bc5365b39962cc51f367b81",
+        "sha256_in_prefix": "2989a113a04f05e3bfee2fe7a99ac1738f2966ca0bc5365b39962cc51f367b81",
+        "size_in_bytes": 828
+      },
+      {
+        "_path": "lib/R/library/rematch2/R/rematch2",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/rematch2/R/rematch2.rdb",
+        "path_type": "hardlink",
+        "sha256": "50f095ecd6888f1f70f65a20d8ad7fba31c178b1a300c19112132574dc93d434",
+        "sha256_in_prefix": "50f095ecd6888f1f70f65a20d8ad7fba31c178b1a300c19112132574dc93d434",
+        "size_in_bytes": 18256
+      },
+      {
+        "_path": "lib/R/library/rematch2/R/rematch2.rdx",
+        "path_type": "hardlink",
+        "sha256": "414896cac8d3c252566d809aa5aec371b2a87f638fcbdf26f8933cea17b3b774",
+        "sha256_in_prefix": "414896cac8d3c252566d809aa5aec371b2a87f638fcbdf26f8933cea17b3b774",
+        "size_in_bytes": 434
+      },
+      {
+        "_path": "lib/R/library/rematch2/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "5ff1c3b53648dc4f21a02efb693cf4ef753a13c39dcb48df6587447a3e4f98ac",
+        "sha256_in_prefix": "5ff1c3b53648dc4f21a02efb693cf4ef753a13c39dcb48df6587447a3e4f98ac",
+        "size_in_bytes": 256
+      },
+      {
+        "_path": "lib/R/library/rematch2/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "606631992afd1974b0c75d4b64c57b480079ed08331486eaa78c14e8bf886597",
+        "sha256_in_prefix": "606631992afd1974b0c75d4b64c57b480079ed08331486eaa78c14e8bf886597",
+        "size_in_bytes": 168
+      },
+      {
+        "_path": "lib/R/library/rematch2/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "2ce543a4bf0848dddeab4a4c5c8593bee2f850576df03001b130c51d3c7ba84a",
+        "sha256_in_prefix": "2ce543a4bf0848dddeab4a4c5c8593bee2f850576df03001b130c51d3c7ba84a",
+        "size_in_bytes": 213
+      },
+      {
+        "_path": "lib/R/library/rematch2/help/rematch2.rdb",
+        "path_type": "hardlink",
+        "sha256": "a8db2f469ef81a405323d114805b769d4e639708abc3d2d3dc3d02739ae9f3cd",
+        "sha256_in_prefix": "a8db2f469ef81a405323d114805b769d4e639708abc3d2d3dc3d02739ae9f3cd",
+        "size_in_bytes": 19146
+      },
+      {
+        "_path": "lib/R/library/rematch2/help/rematch2.rdx",
+        "path_type": "hardlink",
+        "sha256": "1bf2fd0dd1d94c6e4a202a9c10ae4340c6c21c51c8251e67c3916ee5d3d25c2d",
+        "sha256_in_prefix": "1bf2fd0dd1d94c6e4a202a9c10ae4340c6c21c51c8251e67c3916ee5d3d25c2d",
+        "size_in_bytes": 287
+      },
+      {
+        "_path": "lib/R/library/rematch2/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "b80e2968cae5124936561f9aa98a9ace05926445c5c197f73f6b0128099801aa",
+        "sha256_in_prefix": "b80e2968cae5124936561f9aa98a9ace05926445c5c197f73f6b0128099801aa",
+        "size_in_bytes": 2462
+      },
+      {
+        "_path": "lib/R/library/rematch2/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "1d107957b0360c42e2017df9ec7243122e09f258395a11a9629af5d708af8709",
+  "size": 54878,
+  "subdir": "noarch",
+  "timestamp": 1665205672000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-rematch2-2.1.2-r42hc72bb7e_2.tar.bz2",
+  "version": "2.1.2"
+}

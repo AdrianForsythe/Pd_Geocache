@@ -1,0 +1,888 @@
+{
+  "build": "r42h884c59f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "gdal",
+    "_r-mutex 1.* anacondar_1",
+    "r-base >=4.2,<4.3.0a0",
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0",
+    "r-sp >=1.1_0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-rgdal-1.5_32-r42h884c59f_0",
+  "features": "",
+  "files": [
+    "lib/R/library/rgdal/ChangeLog",
+    "lib/R/library/rgdal/DESCRIPTION",
+    "lib/R/library/rgdal/INDEX",
+    "lib/R/library/rgdal/LICENSE.TXT",
+    "lib/R/library/rgdal/Meta/Rd.rds",
+    "lib/R/library/rgdal/Meta/data.rds",
+    "lib/R/library/rgdal/Meta/features.rds",
+    "lib/R/library/rgdal/Meta/hsearch.rds",
+    "lib/R/library/rgdal/Meta/links.rds",
+    "lib/R/library/rgdal/Meta/nsInfo.rds",
+    "lib/R/library/rgdal/Meta/package.rds",
+    "lib/R/library/rgdal/Meta/vignette.rds",
+    "lib/R/library/rgdal/NAMESPACE",
+    "lib/R/library/rgdal/NEWS.md",
+    "lib/R/library/rgdal/OSGeo4W_test",
+    "lib/R/library/rgdal/R/rgdal",
+    "lib/R/library/rgdal/R/rgdal.rdb",
+    "lib/R/library/rgdal/R/rgdal.rdx",
+    "lib/R/library/rgdal/README",
+    "lib/R/library/rgdal/README.windows",
+    "lib/R/library/rgdal/SVN_VERSION",
+    "lib/R/library/rgdal/data/GridsDatums.rda",
+    "lib/R/library/rgdal/data/nor2k.rda",
+    "lib/R/library/rgdal/doc/CRS_projections_transformations.R",
+    "lib/R/library/rgdal/doc/CRS_projections_transformations.Rmd",
+    "lib/R/library/rgdal/doc/CRS_projections_transformations.html",
+    "lib/R/library/rgdal/doc/OGR_shape_encoding.R",
+    "lib/R/library/rgdal/doc/OGR_shape_encoding.Rnw",
+    "lib/R/library/rgdal/doc/OGR_shape_encoding.pdf",
+    "lib/R/library/rgdal/doc/PROJ6_GDAL3.R",
+    "lib/R/library/rgdal/doc/PROJ6_GDAL3.Rmd",
+    "lib/R/library/rgdal/doc/PROJ6_GDAL3.html",
+    "lib/R/library/rgdal/doc/index.html",
+    "lib/R/library/rgdal/etc/obj_with_comments.RData",
+    "lib/R/library/rgdal/etc/obj_without_comments.RData",
+    "lib/R/library/rgdal/etc/point.cpg",
+    "lib/R/library/rgdal/etc/point.dbf",
+    "lib/R/library/rgdal/etc/point.prj",
+    "lib/R/library/rgdal/etc/point.shp",
+    "lib/R/library/rgdal/etc/point.shx",
+    "lib/R/library/rgdal/etc/point_LinuxGDAL.RData",
+    "lib/R/library/rgdal/etc/point_WinCRAN.RData",
+    "lib/R/library/rgdal/etc/test_dfs.RData",
+    "lib/R/library/rgdal/help/AnIndex",
+    "lib/R/library/rgdal/help/aliases.rds",
+    "lib/R/library/rgdal/help/paths.rds",
+    "lib/R/library/rgdal/help/rgdal.rdb",
+    "lib/R/library/rgdal/help/rgdal.rdx",
+    "lib/R/library/rgdal/html/00Index.html",
+    "lib/R/library/rgdal/html/R.css",
+    "lib/R/library/rgdal/include/projects.h",
+    "lib/R/library/rgdal/libs/rgdal.so",
+    "lib/R/library/rgdal/m4/ax_cxx_compile_stdcxx.m4",
+    "lib/R/library/rgdal/misc/GGHB.IG_CRS.rda",
+    "lib/R/library/rgdal/misc/meuse.png",
+    "lib/R/library/rgdal/misc/snow.png",
+    "lib/R/library/rgdal/pictures/MR5905167_372.nc",
+    "lib/R/library/rgdal/pictures/Rlogo.jpg",
+    "lib/R/library/rgdal/pictures/SOURCES",
+    "lib/R/library/rgdal/pictures/SP27GTIF.TIF",
+    "lib/R/library/rgdal/pictures/big_int_arc_file.asc",
+    "lib/R/library/rgdal/pictures/cea.tif",
+    "lib/R/library/rgdal/pictures/erdas_spnad83.tif",
+    "lib/R/library/rgdal/pictures/logo.jpg",
+    "lib/R/library/rgdal/pictures/scaleoffset.dat",
+    "lib/R/library/rgdal/pictures/scaleoffset.vrt",
+    "lib/R/library/rgdal/pictures/test_envi_class.envi",
+    "lib/R/library/rgdal/pictures/test_envi_class.hdr",
+    "lib/R/library/rgdal/vectors/PacoursIKA2.DAT",
+    "lib/R/library/rgdal/vectors/PacoursIKA2.ID",
+    "lib/R/library/rgdal/vectors/PacoursIKA2.MAP",
+    "lib/R/library/rgdal/vectors/PacoursIKA2.TAB",
+    "lib/R/library/rgdal/vectors/SOURCES",
+    "lib/R/library/rgdal/vectors/Up.dat",
+    "lib/R/library/rgdal/vectors/Up.id",
+    "lib/R/library/rgdal/vectors/Up.ind",
+    "lib/R/library/rgdal/vectors/Up.map",
+    "lib/R/library/rgdal/vectors/Up.tab",
+    "lib/R/library/rgdal/vectors/airports.gml",
+    "lib/R/library/rgdal/vectors/b_pump.gpkg",
+    "lib/R/library/rgdal/vectors/cities.dbf",
+    "lib/R/library/rgdal/vectors/cities.htm",
+    "lib/R/library/rgdal/vectors/cities.prj",
+    "lib/R/library/rgdal/vectors/cities.sbn",
+    "lib/R/library/rgdal/vectors/cities.sbx",
+    "lib/R/library/rgdal/vectors/cities.shp",
+    "lib/R/library/rgdal/vectors/cities.shx",
+    "lib/R/library/rgdal/vectors/kiritimati_primary_roads.dbf",
+    "lib/R/library/rgdal/vectors/kiritimati_primary_roads.prj",
+    "lib/R/library/rgdal/vectors/kiritimati_primary_roads.sbn",
+    "lib/R/library/rgdal/vectors/kiritimati_primary_roads.sbx",
+    "lib/R/library/rgdal/vectors/kiritimati_primary_roads.shp",
+    "lib/R/library/rgdal/vectors/kiritimati_primary_roads.shx",
+    "lib/R/library/rgdal/vectors/ps_cant_31.MID",
+    "lib/R/library/rgdal/vectors/ps_cant_31.MIF",
+    "lib/R/library/rgdal/vectors/scot_BNG.dbf",
+    "lib/R/library/rgdal/vectors/scot_BNG.prj",
+    "lib/R/library/rgdal/vectors/scot_BNG.shp",
+    "lib/R/library/rgdal/vectors/scot_BNG.shx",
+    "lib/R/library/rgdal/vectors/test64.csv",
+    "lib/R/library/rgdal/vectors/test64.csvt",
+    "lib/R/library/rgdal/vectors/test64.vrt",
+    "lib/R/library/rgdal/vectors/test_trk2.gpx",
+    "lib/R/library/rgdal/vectors/trin_inca_pl03.dbf",
+    "lib/R/library/rgdal/vectors/trin_inca_pl03.shp",
+    "lib/R/library/rgdal/vectors/trin_inca_pl03.shx"
+  ],
+  "fn": "r-rgdal-1.5_32-r42h884c59f_0.conda",
+  "license": "GPL-2",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-rgdal-1.5_32-r42h884c59f_0",
+    "type": 1
+  },
+  "md5": "2ec2dc34561c3bf1518d8be9ab570a6a",
+  "name": "r-rgdal",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-rgdal-1.5_32-r42h884c59f_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/rgdal/ChangeLog",
+        "path_type": "hardlink",
+        "sha256": "80ed7253ef0d1c3f838aee623a7554bc992cbdfdd9343d75f1f59f61ac82ac41",
+        "sha256_in_prefix": "80ed7253ef0d1c3f838aee623a7554bc992cbdfdd9343d75f1f59f61ac82ac41",
+        "size_in_bytes": 126655
+      },
+      {
+        "_path": "lib/R/library/rgdal/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "00f73026d3d24d5d57af418f6229d385aa5be826c82dc6ea033f939ef4460936",
+        "sha256_in_prefix": "00f73026d3d24d5d57af418f6229d385aa5be826c82dc6ea033f939ef4460936",
+        "size_in_bytes": 2899
+      },
+      {
+        "_path": "lib/R/library/rgdal/INDEX",
+        "path_type": "hardlink",
+        "sha256": "6a387d3a7344db9f8653d24c2c69850cb6e1ec3204ba81386a3a81b510bae4a2",
+        "sha256_in_prefix": "6a387d3a7344db9f8653d24c2c69850cb6e1ec3204ba81386a3a81b510bae4a2",
+        "size_in_bytes": 2006
+      },
+      {
+        "_path": "lib/R/library/rgdal/LICENSE.TXT",
+        "path_type": "hardlink",
+        "sha256": "b66637dd3f433d23b5ca90cdfefc1fe798f14164b3a2812a14069940f2cfb7f6",
+        "sha256_in_prefix": "b66637dd3f433d23b5ca90cdfefc1fe798f14164b3a2812a14069940f2cfb7f6",
+        "size_in_bytes": 14265
+      },
+      {
+        "_path": "lib/R/library/rgdal/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "0e531cc3f56be91a7610b08d8dac50dbb91a90cfcba6293e4a1b5faaa1a4b370",
+        "sha256_in_prefix": "0e531cc3f56be91a7610b08d8dac50dbb91a90cfcba6293e4a1b5faaa1a4b370",
+        "size_in_bytes": 2388
+      },
+      {
+        "_path": "lib/R/library/rgdal/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "74b1ff05d5967b1675c4ea0e61bea359d3267b9e9546c4bd1087b003096b26d3",
+        "sha256_in_prefix": "74b1ff05d5967b1675c4ea0e61bea359d3267b9e9546c4bd1087b003096b26d3",
+        "size_in_bytes": 145
+      },
+      {
+        "_path": "lib/R/library/rgdal/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "f46232c297371e4cffbf6057a877e30d9c280f48db20d3dad7b640472f21f563",
+        "sha256_in_prefix": "f46232c297371e4cffbf6057a877e30d9c280f48db20d3dad7b640472f21f563",
+        "size_in_bytes": 121
+      },
+      {
+        "_path": "lib/R/library/rgdal/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "bcb34274de64700965b4ef2068c27d01c3e5298ebcd13718bc546393c05d17a0",
+        "sha256_in_prefix": "bcb34274de64700965b4ef2068c27d01c3e5298ebcd13718bc546393c05d17a0",
+        "size_in_bytes": 2376
+      },
+      {
+        "_path": "lib/R/library/rgdal/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "486fa30b9f18f865442bf8ba969a6140c720e477f768a56b7ff1d3ecdf8eb1e1",
+        "sha256_in_prefix": "486fa30b9f18f865442bf8ba969a6140c720e477f768a56b7ff1d3ecdf8eb1e1",
+        "size_in_bytes": 1674
+      },
+      {
+        "_path": "lib/R/library/rgdal/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "9937460541354323fd4c77459ea392961b86d74d8de240ae8f9550eeeb093451",
+        "sha256_in_prefix": "9937460541354323fd4c77459ea392961b86d74d8de240ae8f9550eeeb093451",
+        "size_in_bytes": 1411
+      },
+      {
+        "_path": "lib/R/library/rgdal/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "5375db8cbfe6f23f2cb917a7c5a9eb3ea2fa48d94c89bda9d0820aa292dd4c0d",
+        "sha256_in_prefix": "5375db8cbfe6f23f2cb917a7c5a9eb3ea2fa48d94c89bda9d0820aa292dd4c0d",
+        "size_in_bytes": 1941
+      },
+      {
+        "_path": "lib/R/library/rgdal/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "1dca1db90c54b669930353f426ec0b899fb3d23b97a468f2fe334392cebf2fdc",
+        "sha256_in_prefix": "1dca1db90c54b669930353f426ec0b899fb3d23b97a468f2fe334392cebf2fdc",
+        "size_in_bytes": 316
+      },
+      {
+        "_path": "lib/R/library/rgdal/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "1400de732ee1710bd6c153b5a999269c15ca6d69b36afade846a332f12754579",
+        "sha256_in_prefix": "1400de732ee1710bd6c153b5a999269c15ca6d69b36afade846a332f12754579",
+        "size_in_bytes": 3281
+      },
+      {
+        "_path": "lib/R/library/rgdal/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "8a08e871a2544e774adda86a58c43671a52ade58c628ba8d9573a8ae96d7a9d0",
+        "sha256_in_prefix": "8a08e871a2544e774adda86a58c43671a52ade58c628ba8d9573a8ae96d7a9d0",
+        "size_in_bytes": 7291
+      },
+      {
+        "_path": "lib/R/library/rgdal/OSGeo4W_test",
+        "path_type": "hardlink",
+        "sha256": "c19356b235f9d1b14d63a37fc0b280d064991ca4043e4cd4693af85912196f47",
+        "sha256_in_prefix": "c19356b235f9d1b14d63a37fc0b280d064991ca4043e4cd4693af85912196f47",
+        "size_in_bytes": 715
+      },
+      {
+        "_path": "lib/R/library/rgdal/R/rgdal",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/rgdal/R/rgdal.rdb",
+        "path_type": "hardlink",
+        "sha256": "9523775e401b257f5c25158375e7a7b47f7e47deb1f79f22c4fe35e42a2e306c",
+        "sha256_in_prefix": "9523775e401b257f5c25158375e7a7b47f7e47deb1f79f22c4fe35e42a2e306c",
+        "size_in_bytes": 541860
+      },
+      {
+        "_path": "lib/R/library/rgdal/R/rgdal.rdx",
+        "path_type": "hardlink",
+        "sha256": "ca6659086e15a1aabe07ccf5befed51d615109b8110ce6062d4562654e42bc7f",
+        "sha256_in_prefix": "ca6659086e15a1aabe07ccf5befed51d615109b8110ce6062d4562654e42bc7f",
+        "size_in_bytes": 3342
+      },
+      {
+        "_path": "lib/R/library/rgdal/README",
+        "path_type": "hardlink",
+        "sha256": "813d585b3813e0e216e909e24fa2f76b9137e4c9b2267273120cd475f669e4c1",
+        "sha256_in_prefix": "813d585b3813e0e216e909e24fa2f76b9137e4c9b2267273120cd475f669e4c1",
+        "size_in_bytes": 6981
+      },
+      {
+        "_path": "lib/R/library/rgdal/README.windows",
+        "path_type": "hardlink",
+        "sha256": "32f982f41a3dd626780921db36be41a1c0ed59625766a7c08de8d069ce8015bd",
+        "sha256_in_prefix": "32f982f41a3dd626780921db36be41a1c0ed59625766a7c08de8d069ce8015bd",
+        "size_in_bytes": 6157
+      },
+      {
+        "_path": "lib/R/library/rgdal/SVN_VERSION",
+        "path_type": "hardlink",
+        "sha256": "2ed7e92ae38fd190db546c9a842a46d5b92bda2e7b7dab1a641de6961c5d0aaf",
+        "sha256_in_prefix": "2ed7e92ae38fd190db546c9a842a46d5b92bda2e7b7dab1a641de6961c5d0aaf",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/R/library/rgdal/data/GridsDatums.rda",
+        "path_type": "hardlink",
+        "sha256": "e1807862e0ebded0e4f915aada57990c9753d0992a1226e638d6855bc97767ca",
+        "sha256_in_prefix": "e1807862e0ebded0e4f915aada57990c9753d0992a1226e638d6855bc97767ca",
+        "size_in_bytes": 3336
+      },
+      {
+        "_path": "lib/R/library/rgdal/data/nor2k.rda",
+        "path_type": "hardlink",
+        "sha256": "6a994d3e19de07eda21018c9ed02eb318a6f464efdf3c6d3790801819a390a96",
+        "sha256_in_prefix": "6a994d3e19de07eda21018c9ed02eb318a6f464efdf3c6d3790801819a390a96",
+        "size_in_bytes": 6780
+      },
+      {
+        "_path": "lib/R/library/rgdal/doc/CRS_projections_transformations.R",
+        "path_type": "hardlink",
+        "sha256": "8e833b5b34da2137abbccf1d1cd5b51c189626c1a65c68d44183998409c6647e",
+        "sha256_in_prefix": "8e833b5b34da2137abbccf1d1cd5b51c189626c1a65c68d44183998409c6647e",
+        "size_in_bytes": 8869
+      },
+      {
+        "_path": "lib/R/library/rgdal/doc/CRS_projections_transformations.Rmd",
+        "path_type": "hardlink",
+        "sha256": "758a14f03331066ebedea153af0dcdf672eb0e8edda1fbc105148741292aaf44",
+        "sha256_in_prefix": "758a14f03331066ebedea153af0dcdf672eb0e8edda1fbc105148741292aaf44",
+        "size_in_bytes": 27524
+      },
+      {
+        "_path": "lib/R/library/rgdal/doc/CRS_projections_transformations.html",
+        "path_type": "hardlink",
+        "sha256": "b19e005548f990e8d036b933b882bab3bd1f661bdd44282e23bbcc8bc869f0f8",
+        "sha256_in_prefix": "b19e005548f990e8d036b933b882bab3bd1f661bdd44282e23bbcc8bc869f0f8",
+        "size_in_bytes": 2428412
+      },
+      {
+        "_path": "lib/R/library/rgdal/doc/OGR_shape_encoding.R",
+        "path_type": "hardlink",
+        "sha256": "5352a87e9f9afd5063b201395be360623243298d882ef7fb49ffad9607213192",
+        "sha256_in_prefix": "5352a87e9f9afd5063b201395be360623243298d882ef7fb49ffad9607213192",
+        "size_in_bytes": 8122
+      },
+      {
+        "_path": "lib/R/library/rgdal/doc/OGR_shape_encoding.Rnw",
+        "path_type": "hardlink",
+        "sha256": "458ab79b22c2e8f533e06eb0a675d8ef0194be759de8364353886d10eb668431",
+        "sha256_in_prefix": "458ab79b22c2e8f533e06eb0a675d8ef0194be759de8364353886d10eb668431",
+        "size_in_bytes": 13981
+      },
+      {
+        "_path": "lib/R/library/rgdal/doc/OGR_shape_encoding.pdf",
+        "path_type": "hardlink",
+        "sha256": "c1e7de7bee49c8eff34e8414e717fa1a5c569a91fe415fb1730b8e90950d9ca0",
+        "sha256_in_prefix": "c1e7de7bee49c8eff34e8414e717fa1a5c569a91fe415fb1730b8e90950d9ca0",
+        "size_in_bytes": 85988
+      },
+      {
+        "_path": "lib/R/library/rgdal/doc/PROJ6_GDAL3.R",
+        "path_type": "hardlink",
+        "sha256": "986c9ee22057a96cb3eee5c3a89d9ad1952346de0562cc24d770d219431c4dea",
+        "sha256_in_prefix": "986c9ee22057a96cb3eee5c3a89d9ad1952346de0562cc24d770d219431c4dea",
+        "size_in_bytes": 47529
+      },
+      {
+        "_path": "lib/R/library/rgdal/doc/PROJ6_GDAL3.Rmd",
+        "path_type": "hardlink",
+        "sha256": "955a79a58540dc52c1d88308549d6c5da8b669205d347af8c4f97c014911e5f1",
+        "sha256_in_prefix": "955a79a58540dc52c1d88308549d6c5da8b669205d347af8c4f97c014911e5f1",
+        "size_in_bytes": 57316
+      },
+      {
+        "_path": "lib/R/library/rgdal/doc/PROJ6_GDAL3.html",
+        "path_type": "hardlink",
+        "sha256": "fffdb0537254b22a0e61befacace4cea24c052017ea7b3a86f83759d88989843",
+        "sha256_in_prefix": "fffdb0537254b22a0e61befacace4cea24c052017ea7b3a86f83759d88989843",
+        "size_in_bytes": 1161852
+      },
+      {
+        "_path": "lib/R/library/rgdal/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "805f317bac922aee98461889e49835764c227628b1de73cce758d59819a17e03",
+        "sha256_in_prefix": "805f317bac922aee98461889e49835764c227628b1de73cce758d59819a17e03",
+        "size_in_bytes": 2441
+      },
+      {
+        "_path": "lib/R/library/rgdal/etc/obj_with_comments.RData",
+        "path_type": "hardlink",
+        "sha256": "7ed6bf23e5a110bca665509771679fd8748bd755b8b5b9f16cb4684c83bae4cc",
+        "sha256_in_prefix": "7ed6bf23e5a110bca665509771679fd8748bd755b8b5b9f16cb4684c83bae4cc",
+        "size_in_bytes": 4248
+      },
+      {
+        "_path": "lib/R/library/rgdal/etc/obj_without_comments.RData",
+        "path_type": "hardlink",
+        "sha256": "b1ed0762d03e9f6324fcdb627773b311e96f7e98d05b76260070575cc176613e",
+        "sha256_in_prefix": "b1ed0762d03e9f6324fcdb627773b311e96f7e98d05b76260070575cc176613e",
+        "size_in_bytes": 1311
+      },
+      {
+        "_path": "lib/R/library/rgdal/etc/point.cpg",
+        "path_type": "hardlink",
+        "sha256": "929f003731a97f915d11893c6652bbc7db0b36118eb4357cc721f7f68aeb25ff",
+        "sha256_in_prefix": "929f003731a97f915d11893c6652bbc7db0b36118eb4357cc721f7f68aeb25ff",
+        "size_in_bytes": 3
+      },
+      {
+        "_path": "lib/R/library/rgdal/etc/point.dbf",
+        "path_type": "hardlink",
+        "sha256": "fac379ce6dc4d15417a150e854aea07aff41c6c8b200360c908644a91a5c5984",
+        "sha256_in_prefix": "fac379ce6dc4d15417a150e854aea07aff41c6c8b200360c908644a91a5c5984",
+        "size_in_bytes": 173
+      },
+      {
+        "_path": "lib/R/library/rgdal/etc/point.prj",
+        "path_type": "hardlink",
+        "sha256": "228d99c48fb48491aa26f6fd3732051c70d4d0cd578fb21a56297b3678d397ad",
+        "sha256_in_prefix": "228d99c48fb48491aa26f6fd3732051c70d4d0cd578fb21a56297b3678d397ad",
+        "size_in_bytes": 401
+      },
+      {
+        "_path": "lib/R/library/rgdal/etc/point.shp",
+        "path_type": "hardlink",
+        "sha256": "68fecf2ac72949b57d5c694258ccf760c73857ec69164b4e032a19e10b164525",
+        "sha256_in_prefix": "68fecf2ac72949b57d5c694258ccf760c73857ec69164b4e032a19e10b164525",
+        "size_in_bytes": 128
+      },
+      {
+        "_path": "lib/R/library/rgdal/etc/point.shx",
+        "path_type": "hardlink",
+        "sha256": "cdf04ea18ff84099e00098be8a7ebf849eb9613a78e893682ccc82d41957fc50",
+        "sha256_in_prefix": "cdf04ea18ff84099e00098be8a7ebf849eb9613a78e893682ccc82d41957fc50",
+        "size_in_bytes": 108
+      },
+      {
+        "_path": "lib/R/library/rgdal/etc/point_LinuxGDAL.RData",
+        "path_type": "hardlink",
+        "sha256": "96df821cca8db3a16f26e5c4e943a898d18eef8a418807806e0b39c97873e650",
+        "sha256_in_prefix": "96df821cca8db3a16f26e5c4e943a898d18eef8a418807806e0b39c97873e650",
+        "size_in_bytes": 3071
+      },
+      {
+        "_path": "lib/R/library/rgdal/etc/point_WinCRAN.RData",
+        "path_type": "hardlink",
+        "sha256": "8ef202bfd59c55b5a562aab0cac6e441b334f711042ebfd4efa6f2d7e0716530",
+        "sha256_in_prefix": "8ef202bfd59c55b5a562aab0cac6e441b334f711042ebfd4efa6f2d7e0716530",
+        "size_in_bytes": 3130
+      },
+      {
+        "_path": "lib/R/library/rgdal/etc/test_dfs.RData",
+        "path_type": "hardlink",
+        "sha256": "56c46b39da526ed910045f0917acf74f43c46e2b76cf447ad1b343a07cd977ae",
+        "sha256_in_prefix": "56c46b39da526ed910045f0917acf74f43c46e2b76cf447ad1b343a07cd977ae",
+        "size_in_bytes": 225
+      },
+      {
+        "_path": "lib/R/library/rgdal/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "2a54bddfb84e450167064cdd230121b553fa701bc29edc8685149101a32e4204",
+        "sha256_in_prefix": "2a54bddfb84e450167064cdd230121b553fa701bc29edc8685149101a32e4204",
+        "size_in_bytes": 5909
+      },
+      {
+        "_path": "lib/R/library/rgdal/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "d9e57826c5c6362f83a29926a4142ec87a7de7870f21bff7ff80963ac55a5e73",
+        "sha256_in_prefix": "d9e57826c5c6362f83a29926a4142ec87a7de7870f21bff7ff80963ac55a5e73",
+        "size_in_bytes": 1663
+      },
+      {
+        "_path": "lib/R/library/rgdal/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "48072c09430636bb04b97138917b151e9a91109d24cbf182ef677a86c5aad5e9",
+        "sha256_in_prefix": "48072c09430636bb04b97138917b151e9a91109d24cbf182ef677a86c5aad5e9",
+        "size_in_bytes": 435
+      },
+      {
+        "_path": "lib/R/library/rgdal/help/rgdal.rdb",
+        "path_type": "hardlink",
+        "sha256": "1fd4896ce7aef0189cd324950a915b6df677282640b39ab0a935b5e9c78bb2c2",
+        "sha256_in_prefix": "1fd4896ce7aef0189cd324950a915b6df677282640b39ab0a935b5e9c78bb2c2",
+        "size_in_bytes": 124904
+      },
+      {
+        "_path": "lib/R/library/rgdal/help/rgdal.rdx",
+        "path_type": "hardlink",
+        "sha256": "b46dfcc1f6a9c3d7990757ee165b0fd2a466dd00d5372efada38906d1212134d",
+        "sha256_in_prefix": "b46dfcc1f6a9c3d7990757ee165b0fd2a466dd00d5372efada38906d1212134d",
+        "size_in_bytes": 820
+      },
+      {
+        "_path": "lib/R/library/rgdal/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "4707ead61d088464420282c12c24cd0ee6e55a3a98c3e88769848245c2132834",
+        "sha256_in_prefix": "4707ead61d088464420282c12c24cd0ee6e55a3a98c3e88769848245c2132834",
+        "size_in_bytes": 24012
+      },
+      {
+        "_path": "lib/R/library/rgdal/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/rgdal/include/projects.h",
+        "path_type": "hardlink",
+        "sha256": "ebb3b7c7f5b01adf7c989d961679eb14bea9e1188a3791b9e9a2526516730851",
+        "sha256_in_prefix": "ebb3b7c7f5b01adf7c989d961679eb14bea9e1188a3791b9e9a2526516730851",
+        "size_in_bytes": 15057
+      },
+      {
+        "_path": "lib/R/library/rgdal/libs/rgdal.so",
+        "path_type": "hardlink",
+        "sha256": "8d190b3ed6c86a18d3e18a8c171689132612557b4959fe68c4b0318a9af3932d",
+        "sha256_in_prefix": "8d190b3ed6c86a18d3e18a8c171689132612557b4959fe68c4b0318a9af3932d",
+        "size_in_bytes": 155400
+      },
+      {
+        "_path": "lib/R/library/rgdal/m4/ax_cxx_compile_stdcxx.m4",
+        "path_type": "hardlink",
+        "sha256": "a6f7cdef49579d995976baece6e605aca1f2c8b0cb771bbae4d7b816710dcb4c",
+        "sha256_in_prefix": "a6f7cdef49579d995976baece6e605aca1f2c8b0cb771bbae4d7b816710dcb4c",
+        "size_in_bytes": 13824
+      },
+      {
+        "_path": "lib/R/library/rgdal/misc/GGHB.IG_CRS.rda",
+        "path_type": "hardlink",
+        "sha256": "5b475c2da2e4f420123cac1f35e7f2e72abe0c1aaf0d0f469b698ee6c5e6e283",
+        "sha256_in_prefix": "5b475c2da2e4f420123cac1f35e7f2e72abe0c1aaf0d0f469b698ee6c5e6e283",
+        "size_in_bytes": 264
+      },
+      {
+        "_path": "lib/R/library/rgdal/misc/meuse.png",
+        "path_type": "hardlink",
+        "sha256": "7c397bab34c48175a77488f0c4c5b0b1f995260e48efc6fb0f07ec2f2e3731c3",
+        "sha256_in_prefix": "7c397bab34c48175a77488f0c4c5b0b1f995260e48efc6fb0f07ec2f2e3731c3",
+        "size_in_bytes": 585149
+      },
+      {
+        "_path": "lib/R/library/rgdal/misc/snow.png",
+        "path_type": "hardlink",
+        "sha256": "07ab4a18cf16e53b4dc9de5eddcc97710e3220d25ba20755a02cfac378ab02be",
+        "sha256_in_prefix": "07ab4a18cf16e53b4dc9de5eddcc97710e3220d25ba20755a02cfac378ab02be",
+        "size_in_bytes": 402342
+      },
+      {
+        "_path": "lib/R/library/rgdal/pictures/MR5905167_372.nc",
+        "path_type": "hardlink",
+        "sha256": "dff1fc42f555b756d030af60cb5e103b19c7d3d0ff90687ac6bd5b2b5c26d1d1",
+        "sha256_in_prefix": "dff1fc42f555b756d030af60cb5e103b19c7d3d0ff90687ac6bd5b2b5c26d1d1",
+        "size_in_bytes": 73282
+      },
+      {
+        "_path": "lib/R/library/rgdal/pictures/Rlogo.jpg",
+        "path_type": "hardlink",
+        "sha256": "c71900d10ce22ea038fc705645b6eaea95f40e99be5968b2cc9d3a70fac96dea",
+        "sha256_in_prefix": "c71900d10ce22ea038fc705645b6eaea95f40e99be5968b2cc9d3a70fac96dea",
+        "size_in_bytes": 7196
+      },
+      {
+        "_path": "lib/R/library/rgdal/pictures/SOURCES",
+        "path_type": "hardlink",
+        "sha256": "e11bc271d805d0d3f1b6eda8adaeadffc5ab9dbf034ec605eb1669e1ba5058b9",
+        "sha256_in_prefix": "e11bc271d805d0d3f1b6eda8adaeadffc5ab9dbf034ec605eb1669e1ba5058b9",
+        "size_in_bytes": 261
+      },
+      {
+        "_path": "lib/R/library/rgdal/pictures/SP27GTIF.TIF",
+        "path_type": "hardlink",
+        "sha256": "d97fdf7a959eb5afe03d976e061c155356b4def524d7e09600e3ee33be252084",
+        "sha256_in_prefix": "d97fdf7a959eb5afe03d976e061c155356b4def524d7e09600e3ee33be252084",
+        "size_in_bytes": 650466
+      },
+      {
+        "_path": "lib/R/library/rgdal/pictures/big_int_arc_file.asc",
+        "path_type": "hardlink",
+        "sha256": "f1b0a9886da26970d7a2ff389d36eb2e0e39ad7da70fc758d32a59562c6ebf21",
+        "sha256_in_prefix": "f1b0a9886da26970d7a2ff389d36eb2e0e39ad7da70fc758d32a59562c6ebf21",
+        "size_in_bytes": 392
+      },
+      {
+        "_path": "lib/R/library/rgdal/pictures/cea.tif",
+        "path_type": "hardlink",
+        "sha256": "26acb9b05d42c6ffc9b1b62a4bb9be7f3c208d9c5b5ec05e3b2a06e97230ead6",
+        "sha256_in_prefix": "26acb9b05d42c6ffc9b1b62a4bb9be7f3c208d9c5b5ec05e3b2a06e97230ead6",
+        "size_in_bytes": 270993
+      },
+      {
+        "_path": "lib/R/library/rgdal/pictures/erdas_spnad83.tif",
+        "path_type": "hardlink",
+        "sha256": "e7977007a784e7298004af6cd6dc6ff44cde7ca15a80f7058cc84e1395ae3380",
+        "sha256_in_prefix": "e7977007a784e7298004af6cd6dc6ff44cde7ca15a80f7058cc84e1395ae3380",
+        "size_in_bytes": 348878
+      },
+      {
+        "_path": "lib/R/library/rgdal/pictures/logo.jpg",
+        "path_type": "hardlink",
+        "sha256": "cd66b8c85f369852fffe0ec24bf3daa01b7f43f17b351b71dd55072f50df349d",
+        "sha256_in_prefix": "cd66b8c85f369852fffe0ec24bf3daa01b7f43f17b351b71dd55072f50df349d",
+        "size_in_bytes": 4679
+      },
+      {
+        "_path": "lib/R/library/rgdal/pictures/scaleoffset.dat",
+        "path_type": "hardlink",
+        "sha256": "fe2118b40fedb257a589b32b62f78d715c282deae0114402ad29ad224e8ec1b6",
+        "sha256_in_prefix": "fe2118b40fedb257a589b32b62f78d715c282deae0114402ad29ad224e8ec1b6",
+        "size_in_bytes": 50
+      },
+      {
+        "_path": "lib/R/library/rgdal/pictures/scaleoffset.vrt",
+        "path_type": "hardlink",
+        "sha256": "7a3d264d3bfb83d673c8988dcf32197f55844f62fbfa3701590a923f7e1756cd",
+        "sha256_in_prefix": "7a3d264d3bfb83d673c8988dcf32197f55844f62fbfa3701590a923f7e1756cd",
+        "size_in_bytes": 995
+      },
+      {
+        "_path": "lib/R/library/rgdal/pictures/test_envi_class.envi",
+        "path_type": "hardlink",
+        "sha256": "ad2804439d63250580d1cce72fa07c38a8ddaa5f34f60b662c524c18cb09a0da",
+        "sha256_in_prefix": "ad2804439d63250580d1cce72fa07c38a8ddaa5f34f60b662c524c18cb09a0da",
+        "size_in_bytes": 1800
+      },
+      {
+        "_path": "lib/R/library/rgdal/pictures/test_envi_class.hdr",
+        "path_type": "hardlink",
+        "sha256": "f7039d7cf398caf36217e19d060907863befdd3aa34a7e00aa1451175605c292",
+        "sha256_in_prefix": "f7039d7cf398caf36217e19d060907863befdd3aa34a7e00aa1451175605c292",
+        "size_in_bytes": 995
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/PacoursIKA2.DAT",
+        "path_type": "hardlink",
+        "sha256": "98da1c7d0dbea0746572d8be89f41b327223636a1771064e510c56de8af61ede",
+        "sha256_in_prefix": "98da1c7d0dbea0746572d8be89f41b327223636a1771064e510c56de8af61ede",
+        "size_in_bytes": 353
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/PacoursIKA2.ID",
+        "path_type": "hardlink",
+        "sha256": "0a6e00e1591e95a90c73bc482f61277b41cde9913b4439d47159f821e48d8c77",
+        "sha256_in_prefix": "0a6e00e1591e95a90c73bc482f61277b41cde9913b4439d47159f821e48d8c77",
+        "size_in_bytes": 20
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/PacoursIKA2.MAP",
+        "path_type": "hardlink",
+        "sha256": "d0fa33dd191951e4e103585a2f3336d82b2a5b73a1298f89f019598291bf8a65",
+        "sha256_in_prefix": "d0fa33dd191951e4e103585a2f3336d82b2a5b73a1298f89f019598291bf8a65",
+        "size_in_bytes": 3584
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/PacoursIKA2.TAB",
+        "path_type": "hardlink",
+        "sha256": "a805960589a33b51a03938e2a559ba36baba38df8a22ef83ba4c5a1f82a2e2a6",
+        "sha256_in_prefix": "a805960589a33b51a03938e2a559ba36baba38df8a22ef83ba4c5a1f82a2e2a6",
+        "size_in_bytes": 172
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/SOURCES",
+        "path_type": "hardlink",
+        "sha256": "bc77c3bfe8fbef5f2873a44f7a0fa4a59ac8a5ed8bca3e2eaf6aacdb31a89fa5",
+        "sha256_in_prefix": "bc77c3bfe8fbef5f2873a44f7a0fa4a59ac8a5ed8bca3e2eaf6aacdb31a89fa5",
+        "size_in_bytes": 510
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/Up.dat",
+        "path_type": "hardlink",
+        "sha256": "8802589066bc1a2a11ccb0c8c85c32f2bb446df2849633ce21a723e605764536",
+        "sha256_in_prefix": "8802589066bc1a2a11ccb0c8c85c32f2bb446df2849633ce21a723e605764536",
+        "size_in_bytes": 43170
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/Up.id",
+        "path_type": "hardlink",
+        "sha256": "ac0e0471579eaeddb64a2ef7b5361b8b8b1eeb229f71a044df874b5d35953fd2",
+        "sha256_in_prefix": "ac0e0471579eaeddb64a2ef7b5361b8b8b1eeb229f71a044df874b5d35953fd2",
+        "size_in_bytes": 324
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/Up.ind",
+        "path_type": "hardlink",
+        "sha256": "b41d9b850b8367cda15046e1b00e3ce25918fbf12571ecce5155e4174e6c5b8b",
+        "sha256_in_prefix": "b41d9b850b8367cda15046e1b00e3ce25918fbf12571ecce5155e4174e6c5b8b",
+        "size_in_bytes": 56832
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/Up.map",
+        "path_type": "hardlink",
+        "sha256": "c7aa66d439ff452376a022c07ba65c188d8bd8ed567dfd61f578146af73fe17b",
+        "sha256_in_prefix": "c7aa66d439ff452376a022c07ba65c188d8bd8ed567dfd61f578146af73fe17b",
+        "size_in_bytes": 166912
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/Up.tab",
+        "path_type": "hardlink",
+        "sha256": "67613eb288fc9717142aa87f733d3865a8a54bc3707eae2bd66e549538df5345",
+        "sha256_in_prefix": "67613eb288fc9717142aa87f733d3865a8a54bc3707eae2bd66e549538df5345",
+        "size_in_bytes": 1640
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/airports.gml",
+        "path_type": "hardlink",
+        "sha256": "4adfb424340b39baaadb4eb2971a28737f6944234f8d720da5d5d850c640136c",
+        "sha256_in_prefix": "4adfb424340b39baaadb4eb2971a28737f6944234f8d720da5d5d850c640136c",
+        "size_in_bytes": 5640
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/b_pump.gpkg",
+        "path_type": "hardlink",
+        "sha256": "c5e2c20859822d8639221055353ec0a48f0a47b13d90e5e02d4668143dd4e492",
+        "sha256_in_prefix": "c5e2c20859822d8639221055353ec0a48f0a47b13d90e5e02d4668143dd4e492",
+        "size_in_bytes": 98304
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/cities.dbf",
+        "path_type": "hardlink",
+        "sha256": "d5f98a2e928b471e874471a19b98425c5da295ada3b1cfc06520bfeebeffd0f6",
+        "sha256_in_prefix": "d5f98a2e928b471e874471a19b98425c5da295ada3b1cfc06520bfeebeffd0f6",
+        "size_in_bytes": 39552
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/cities.htm",
+        "path_type": "hardlink",
+        "sha256": "8c065ef5f039f706c01ca3d594cecc2e3894a50cd49a4ce7f08e936989fcf5d6",
+        "sha256_in_prefix": "8c065ef5f039f706c01ca3d594cecc2e3894a50cd49a4ce7f08e936989fcf5d6",
+        "size_in_bytes": 15043
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/cities.prj",
+        "path_type": "hardlink",
+        "sha256": "5d3b39697820a6d6dfe49413bea38603f41331c162725fd1bd958941034a1c37",
+        "sha256_in_prefix": "5d3b39697820a6d6dfe49413bea38603f41331c162725fd1bd958941034a1c37",
+        "size_in_bytes": 142
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/cities.sbn",
+        "path_type": "hardlink",
+        "sha256": "9a75be62d71fb56f9587958ba4f4a55f6a3db585dd19d39d682ed254075c32de",
+        "sha256_in_prefix": "9a75be62d71fb56f9587958ba4f4a55f6a3db585dd19d39d682ed254075c32de",
+        "size_in_bytes": 13452
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/cities.sbx",
+        "path_type": "hardlink",
+        "sha256": "2f0e70c60329c014bde8822ff7627bad38c575542451762f472e9702592d2d52",
+        "sha256_in_prefix": "2f0e70c60329c014bde8822ff7627bad38c575542451762f472e9702592d2d52",
+        "size_in_bytes": 1268
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/cities.shp",
+        "path_type": "hardlink",
+        "sha256": "23147f40a59046f90249ea385d8a05f09e262f7f22eb354245716978899af90d",
+        "sha256_in_prefix": "23147f40a59046f90249ea385d8a05f09e262f7f22eb354245716978899af90d",
+        "size_in_bytes": 17068
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/cities.shx",
+        "path_type": "hardlink",
+        "sha256": "a8cc0d354c9656298f545f25e6c7feb7ba772db126b66846dd7bc71f909aa2dc",
+        "sha256_in_prefix": "a8cc0d354c9656298f545f25e6c7feb7ba772db126b66846dd7bc71f909aa2dc",
+        "size_in_bytes": 4948
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/kiritimati_primary_roads.dbf",
+        "path_type": "hardlink",
+        "sha256": "33ec5ec0108a73bad24c3559d7f27ea3f9c80a55af6001e635c77a62819255f3",
+        "sha256_in_prefix": "33ec5ec0108a73bad24c3559d7f27ea3f9c80a55af6001e635c77a62819255f3",
+        "size_in_bytes": 311
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/kiritimati_primary_roads.prj",
+        "path_type": "hardlink",
+        "sha256": "a968770928e3cd20339f61b3ac9f5949e7c95c2e696cf4386adefabb7f288817",
+        "sha256_in_prefix": "a968770928e3cd20339f61b3ac9f5949e7c95c2e696cf4386adefabb7f288817",
+        "size_in_bytes": 402
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/kiritimati_primary_roads.sbn",
+        "path_type": "hardlink",
+        "sha256": "c629f25e751c636cd6288c9cbf364cb3fd289280856f7ef526c7e8c459fad793",
+        "sha256_in_prefix": "c629f25e751c636cd6288c9cbf364cb3fd289280856f7ef526c7e8c459fad793",
+        "size_in_bytes": 492
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/kiritimati_primary_roads.sbx",
+        "path_type": "hardlink",
+        "sha256": "82fc1a30571104964d2d5749fcc1240048048a843cf260b2014b804847272f8d",
+        "sha256_in_prefix": "82fc1a30571104964d2d5749fcc1240048048a843cf260b2014b804847272f8d",
+        "size_in_bytes": 156
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/kiritimati_primary_roads.shp",
+        "path_type": "hardlink",
+        "sha256": "abb88d9c6c969ec48f299fc76d2fea0d499849c31c44905f27073adf4527e960",
+        "sha256_in_prefix": "abb88d9c6c969ec48f299fc76d2fea0d499849c31c44905f27073adf4527e960",
+        "size_in_bytes": 7324
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/kiritimati_primary_roads.shx",
+        "path_type": "hardlink",
+        "sha256": "b9d49d577270a8c22ee49f55422fd8daba6f90d2075c9ca21588e2820dba59ac",
+        "sha256_in_prefix": "b9d49d577270a8c22ee49f55422fd8daba6f90d2075c9ca21588e2820dba59ac",
+        "size_in_bytes": 380
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/ps_cant_31.MID",
+        "path_type": "hardlink",
+        "sha256": "81e23ad2acfd679dfa10b58fa8b6197d0937198ef0c6e10e50ae9ef049a707e1",
+        "sha256_in_prefix": "81e23ad2acfd679dfa10b58fa8b6197d0937198ef0c6e10e50ae9ef049a707e1",
+        "size_in_bytes": 2968
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/ps_cant_31.MIF",
+        "path_type": "hardlink",
+        "sha256": "7688a7277fc368cebdaceff7843318e9b712e4404b626414dea40369be32e804",
+        "sha256_in_prefix": "7688a7277fc368cebdaceff7843318e9b712e4404b626414dea40369be32e804",
+        "size_in_bytes": 39042
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/scot_BNG.dbf",
+        "path_type": "hardlink",
+        "sha256": "623e7bd6df4597bedaef74738edd86c0cf8abc031cd406914be86691cc83a53b",
+        "sha256_in_prefix": "623e7bd6df4597bedaef74738edd86c0cf8abc031cd406914be86691cc83a53b",
+        "size_in_bytes": 13217
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/scot_BNG.prj",
+        "path_type": "hardlink",
+        "sha256": "6a33766b888e62dfc218ae5de578c609164f840796fe58470b501e511da3662a",
+        "sha256_in_prefix": "6a33766b888e62dfc218ae5de578c609164f840796fe58470b501e511da3662a",
+        "size_in_bytes": 416
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/scot_BNG.shp",
+        "path_type": "hardlink",
+        "sha256": "85f95a878249e67619f7c0ab9f3b11007d48dc36f5cc11d9bfa5381139986cd7",
+        "sha256_in_prefix": "85f95a878249e67619f7c0ab9f3b11007d48dc36f5cc11d9bfa5381139986cd7",
+        "size_in_bytes": 60748
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/scot_BNG.shx",
+        "path_type": "hardlink",
+        "sha256": "7d2c6df7249081ddeccf1422c097bd19a62190c5a4fed645bfc3d1eae8a2fb16",
+        "sha256_in_prefix": "7d2c6df7249081ddeccf1422c097bd19a62190c5a4fed645bfc3d1eae8a2fb16",
+        "size_in_bytes": 548
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/test64.csv",
+        "path_type": "hardlink",
+        "sha256": "f655761f6179d9467f51abfb756a293b1dc316ab91f3985d6c36e279c89c5472",
+        "sha256_in_prefix": "f655761f6179d9467f51abfb756a293b1dc316ab91f3985d6c36e279c89c5472",
+        "size_in_bytes": 45
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/test64.csvt",
+        "path_type": "hardlink",
+        "sha256": "1e9face616deca5092fc68f8492ddd8a2f3c344c6ce1e1c8a80656a68983efbe",
+        "sha256_in_prefix": "1e9face616deca5092fc68f8492ddd8a2f3c344c6ce1e1c8a80656a68983efbe",
+        "size_in_bytes": 34
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/test64.vrt",
+        "path_type": "hardlink",
+        "sha256": "8585b8cef92be47c0d46b23bbba19b2cc1c689f0b800ea96bd10d1bc7d5be372",
+        "sha256_in_prefix": "8585b8cef92be47c0d46b23bbba19b2cc1c689f0b800ea96bd10d1bc7d5be372",
+        "size_in_bytes": 301
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/test_trk2.gpx",
+        "path_type": "hardlink",
+        "sha256": "2b8dd19d0ff790a52c2f76d054ece02949e9ea408be71436f1f77ee260e73ee8",
+        "sha256_in_prefix": "2b8dd19d0ff790a52c2f76d054ece02949e9ea408be71436f1f77ee260e73ee8",
+        "size_in_bytes": 4926
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/trin_inca_pl03.dbf",
+        "path_type": "hardlink",
+        "sha256": "86506240322e71cb81219a1002995c66077c43c7f8c18b62e7539ca1f9150fe2",
+        "sha256_in_prefix": "86506240322e71cb81219a1002995c66077c43c7f8c18b62e7539ca1f9150fe2",
+        "size_in_bytes": 4332
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/trin_inca_pl03.shp",
+        "path_type": "hardlink",
+        "sha256": "35c9794d693fe9b9f553826729150ad315f799d73764726c4360899413af86fd",
+        "sha256_in_prefix": "35c9794d693fe9b9f553826729150ad315f799d73764726c4360899413af86fd",
+        "size_in_bytes": 19844
+      },
+      {
+        "_path": "lib/R/library/rgdal/vectors/trin_inca_pl03.shx",
+        "path_type": "hardlink",
+        "sha256": "24e9c1ffb7ff80e43f698fc9ab9e33981b1e1700a8fe35cce36ffc008f390dcb",
+        "sha256_in_prefix": "24e9c1ffb7ff80e43f698fc9ab9e33981b1e1700a8fe35cce36ffc008f390dcb",
+        "size_in_bytes": 124
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "f4999daa65f9bd3f5f708b35ea22937c20d38efba6bd9e33863dd52f4365bd64",
+  "size": 4434147,
+  "subdir": "linux-64",
+  "timestamp": 1655736305000,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-rgdal-1.5_32-r42h884c59f_0.conda",
+  "version": "1.5_32"
+}

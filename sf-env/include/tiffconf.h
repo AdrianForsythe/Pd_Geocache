@@ -61,7 +61,7 @@
 #define JPEG_SUPPORT 1
 
 /* Support JBIG compression (requires JBIG-KIT library) */
-#define JBIG_SUPPORT 1
+/* #undef JBIG_SUPPORT */
 
 /* Support LERC compression */
 #define LERC_SUPPORT 1

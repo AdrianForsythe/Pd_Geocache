@@ -1,3 +1,27 @@
+# version 1.0-7
+
+* `st_drop_geometry()` is a generic; #1914
+
+* `st_crs(x)$ud_unit` returns the unit of the coordinate reference system of `x`
+
+* geometric predicates return `sgbp` objects omitting self-intersections etc. by passing `remove_self = TRUE` and unique symmetric relationship by passing `retain_unique = TRUE` (to `...` if needed); this simplifies identifying (and removing) duplicated geometries; duplicates are identified by e.g. by `st_equals(x, retain_unique = TRUE) |> unlist() |> unique()`; #1893
+
+* fix compile issue against GDAL < 2.5.0 introduced in 1.0-6; #1899
+
+# version 1.0-6
+
+* adapt to new `spatstat.random` package; #1892
+
+* `st_geometry<-()` also allows to rename a geometry column in an `sf` object; #1890
+
+* for `sf` objects, the `st_as_sfc()` method is an alias for `st_geometry()`; #1882
+
+* `st_make_grid()` speeded up; #1579 thanks to Krzysztof Dyba
+
+* remove direct and indirect dependencies on `rgeos` and `rgdal`; #1869
+
+* use `stats::dist` rather than GEOS for symmetric point-point Euclidian distance computation; #1874
+
 # version 1.0-5
 
 * package startup message reports status of `sf_use_s2()`; #1782

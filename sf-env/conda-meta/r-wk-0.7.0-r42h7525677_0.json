@@ -1,0 +1,286 @@
+{
+  "build": "r42h7525677_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "r-base >=4.2,<4.3.0a0",
+    "r-cpp11"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-wk-0.7.0-r42h7525677_0",
+  "features": "",
+  "files": [
+    "lib/R/library/wk/DESCRIPTION",
+    "lib/R/library/wk/INDEX",
+    "lib/R/library/wk/LICENSE",
+    "lib/R/library/wk/Meta/Rd.rds",
+    "lib/R/library/wk/Meta/data.rds",
+    "lib/R/library/wk/Meta/features.rds",
+    "lib/R/library/wk/Meta/hsearch.rds",
+    "lib/R/library/wk/Meta/links.rds",
+    "lib/R/library/wk/Meta/nsInfo.rds",
+    "lib/R/library/wk/Meta/package.rds",
+    "lib/R/library/wk/NAMESPACE",
+    "lib/R/library/wk/NEWS.md",
+    "lib/R/library/wk/R/wk",
+    "lib/R/library/wk/R/wk.rdb",
+    "lib/R/library/wk/R/wk.rdx",
+    "lib/R/library/wk/data/Rdata.rdb",
+    "lib/R/library/wk/data/Rdata.rds",
+    "lib/R/library/wk/data/Rdata.rdx",
+    "lib/R/library/wk/help/AnIndex",
+    "lib/R/library/wk/help/aliases.rds",
+    "lib/R/library/wk/help/paths.rds",
+    "lib/R/library/wk/help/wk.rdb",
+    "lib/R/library/wk/help/wk.rdx",
+    "lib/R/library/wk/html/00Index.html",
+    "lib/R/library/wk/html/R.css",
+    "lib/R/library/wk/include/wk-v1-impl.c",
+    "lib/R/library/wk/include/wk-v1.h",
+    "lib/R/library/wk/include/wk/experimental/wk-v1-filter-cpp11.hpp",
+    "lib/R/library/wk/include/wk/experimental/wk-v1-handler-cpp11.hpp",
+    "lib/R/library/wk/include/wk/experimental/wk-v1-reader-cpp11.hpp",
+    "lib/R/library/wk/libs/wk.so"
+  ],
+  "fn": "r-wk-0.7.0-r42h7525677_0.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-wk-0.7.0-r42h7525677_0",
+    "type": 1
+  },
+  "md5": "3257b8e329c46802830a237042bd296a",
+  "name": "r-wk",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-wk-0.7.0-r42h7525677_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/wk/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "a2663f8a25587a6b8435ab4dac0b463edd3bcca9ae3e25dc9483861e83305cad",
+        "sha256_in_prefix": "a2663f8a25587a6b8435ab4dac0b463edd3bcca9ae3e25dc9483861e83305cad",
+        "size_in_bytes": 1707
+      },
+      {
+        "_path": "lib/R/library/wk/INDEX",
+        "path_type": "hardlink",
+        "sha256": "95993aa9ec216d671c9dce52c397f4adc0e5e49808320ee9e6bb4bac0770cb65",
+        "sha256_in_prefix": "95993aa9ec216d671c9dce52c397f4adc0e5e49808320ee9e6bb4bac0770cb65",
+        "size_in_bytes": 2954
+      },
+      {
+        "_path": "lib/R/library/wk/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "530ed53de6c2b7866de75f6a152e8b6eb150544d38087a35a06f46a9a18f9853",
+        "sha256_in_prefix": "530ed53de6c2b7866de75f6a152e8b6eb150544d38087a35a06f46a9a18f9853",
+        "size_in_bytes": 46
+      },
+      {
+        "_path": "lib/R/library/wk/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "d32ee5f2445bd08fd323d9239aa46189a008f84aff293423053242b738ff3b9c",
+        "sha256_in_prefix": "d32ee5f2445bd08fd323d9239aa46189a008f84aff293423053242b738ff3b9c",
+        "size_in_bytes": 3033
+      },
+      {
+        "_path": "lib/R/library/wk/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "44c0ba37f660aa5884b19a67a95ac4fe41d24b07f5dad123f06adc978e2c8b53",
+        "sha256_in_prefix": "44c0ba37f660aa5884b19a67a95ac4fe41d24b07f5dad123f06adc978e2c8b53",
+        "size_in_bytes": 170
+      },
+      {
+        "_path": "lib/R/library/wk/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/wk/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "e1914f5e72503eaf98e4e88383d3bb2f9e628654d127eecc94cac33514053634",
+        "sha256_in_prefix": "e1914f5e72503eaf98e4e88383d3bb2f9e628654d127eecc94cac33514053634",
+        "size_in_bytes": 3053
+      },
+      {
+        "_path": "lib/R/library/wk/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "f9b814502157caee13848a53ed6d77b1a3d70858020bd3068460e63b870c0838",
+        "sha256_in_prefix": "f9b814502157caee13848a53ed6d77b1a3d70858020bd3068460e63b870c0838",
+        "size_in_bytes": 2095
+      },
+      {
+        "_path": "lib/R/library/wk/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "1f65dd12fadb6beb22f1c2b7753d327d01a143ebd8506b6ba99c272d96afe7f6",
+        "sha256_in_prefix": "1f65dd12fadb6beb22f1c2b7753d327d01a143ebd8506b6ba99c272d96afe7f6",
+        "size_in_bytes": 2134
+      },
+      {
+        "_path": "lib/R/library/wk/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "1d416fe38fae55eea8c3bc5efdb34c60372c643cd7c2f3fb96fe30ed7a81395a",
+        "sha256_in_prefix": "1d416fe38fae55eea8c3bc5efdb34c60372c643cd7c2f3fb96fe30ed7a81395a",
+        "size_in_bytes": 1337
+      },
+      {
+        "_path": "lib/R/library/wk/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "d74aa45403ed2125ee2d6715ecb3979e1fc64c45bfef08a137ba9fe43fdcbe84",
+        "sha256_in_prefix": "d74aa45403ed2125ee2d6715ecb3979e1fc64c45bfef08a137ba9fe43fdcbe84",
+        "size_in_bytes": 13094
+      },
+      {
+        "_path": "lib/R/library/wk/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "b8a1e87493fd24ebe8e77e0728550e14d8280e0405c95c4e52a8ab9db5283bc5",
+        "sha256_in_prefix": "b8a1e87493fd24ebe8e77e0728550e14d8280e0405c95c4e52a8ab9db5283bc5",
+        "size_in_bytes": 7328
+      },
+      {
+        "_path": "lib/R/library/wk/R/wk",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/wk/R/wk.rdb",
+        "path_type": "hardlink",
+        "sha256": "6a9e4ed1c46785848241e465b3a913d168d5e6e39495bda6464bc4b05101ab71",
+        "sha256_in_prefix": "6a9e4ed1c46785848241e465b3a913d168d5e6e39495bda6464bc4b05101ab71",
+        "size_in_bytes": 282073
+      },
+      {
+        "_path": "lib/R/library/wk/R/wk.rdx",
+        "path_type": "hardlink",
+        "sha256": "23dc8c578ffdc1803f34b1acdda7c091da59dfd99863682494c858ed9eca61b3",
+        "sha256_in_prefix": "23dc8c578ffdc1803f34b1acdda7c091da59dfd99863682494c858ed9eca61b3",
+        "size_in_bytes": 6397
+      },
+      {
+        "_path": "lib/R/library/wk/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "1ad1e3dc8ac43e135be7dc4ca82d4ff29d0f7d7dfaf20a15166eb0c5660408ab",
+        "sha256_in_prefix": "1ad1e3dc8ac43e135be7dc4ca82d4ff29d0f7d7dfaf20a15166eb0c5660408ab",
+        "size_in_bytes": 1224371
+      },
+      {
+        "_path": "lib/R/library/wk/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "7c5919ad284e2c9e3271b91a76cf212b681bfaa3600e6bc8e3a4d4cbd1dc9adc",
+        "sha256_in_prefix": "7c5919ad284e2c9e3271b91a76cf212b681bfaa3600e6bc8e3a4d4cbd1dc9adc",
+        "size_in_bytes": 121
+      },
+      {
+        "_path": "lib/R/library/wk/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "0fe4cbbf0c1d2fe6d662f4b9819da18ce94b46f488965ed3598e9b5275b58a1c",
+        "sha256_in_prefix": "0fe4cbbf0c1d2fe6d662f4b9819da18ce94b46f488965ed3598e9b5275b58a1c",
+        "size_in_bytes": 194
+      },
+      {
+        "_path": "lib/R/library/wk/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "c9ae0ded6a010cf02e43787a3b6c4f80150fbcd4e13c28ac8e24282bff74de02",
+        "sha256_in_prefix": "c9ae0ded6a010cf02e43787a3b6c4f80150fbcd4e13c28ac8e24282bff74de02",
+        "size_in_bytes": 6960
+      },
+      {
+        "_path": "lib/R/library/wk/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "d54bf465852628da1c86f3708506dab74bd711c1dff31c70321bed3a62c7cbe9",
+        "sha256_in_prefix": "d54bf465852628da1c86f3708506dab74bd711c1dff31c70321bed3a62c7cbe9",
+        "size_in_bytes": 1941
+      },
+      {
+        "_path": "lib/R/library/wk/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "4df79e4157d993a17e615cc3d2bc87b6c2804f48cf8e7b9a5e5de408736a1155",
+        "sha256_in_prefix": "4df79e4157d993a17e615cc3d2bc87b6c2804f48cf8e7b9a5e5de408736a1155",
+        "size_in_bytes": 638
+      },
+      {
+        "_path": "lib/R/library/wk/help/wk.rdb",
+        "path_type": "hardlink",
+        "sha256": "a394f80cc7540b6ee93fa8baefd13d02fed7dce1e7236c85a9445e863ce93517",
+        "sha256_in_prefix": "a394f80cc7540b6ee93fa8baefd13d02fed7dce1e7236c85a9445e863ce93517",
+        "size_in_bytes": 127288
+      },
+      {
+        "_path": "lib/R/library/wk/help/wk.rdx",
+        "path_type": "hardlink",
+        "sha256": "3e878c8c62b862a3ec53762fe25bd21bfa23c59f89d8cd084502c1ebfc1eba85",
+        "sha256_in_prefix": "3e878c8c62b862a3ec53762fe25bd21bfa23c59f89d8cd084502c1ebfc1eba85",
+        "size_in_bytes": 1411
+      },
+      {
+        "_path": "lib/R/library/wk/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "553a1a83305036bbc6266d325194a1936b0712208afc20dcf4acbd8c750b52fd",
+        "sha256_in_prefix": "553a1a83305036bbc6266d325194a1936b0712208afc20dcf4acbd8c750b52fd",
+        "size_in_bytes": 33629
+      },
+      {
+        "_path": "lib/R/library/wk/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk-v1-impl.c",
+        "path_type": "hardlink",
+        "sha256": "d02d3c0b0c00a21467dc5b94e790a708c51acfeb0822cf7dcb9367ce568430a7",
+        "sha256_in_prefix": "d02d3c0b0c00a21467dc5b94e790a708c51acfeb0822cf7dcb9367ce568430a7",
+        "size_in_bytes": 5488
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk-v1.h",
+        "path_type": "hardlink",
+        "sha256": "54cc4e60e68dfea62fdd37ee357c2319f2d4e4ae11042df6f0682009a9fe4968",
+        "sha256_in_prefix": "54cc4e60e68dfea62fdd37ee357c2319f2d4e4ae11042df6f0682009a9fe4968",
+        "size_in_bytes": 3578
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/experimental/wk-v1-filter-cpp11.hpp",
+        "path_type": "hardlink",
+        "sha256": "4d88944ced5f7d62bac4ac530db49bac04b57b1b6f830401c48115e1abee85a9",
+        "sha256_in_prefix": "4d88944ced5f7d62bac4ac530db49bac04b57b1b6f830401c48115e1abee85a9",
+        "size_in_bytes": 2192
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/experimental/wk-v1-handler-cpp11.hpp",
+        "path_type": "hardlink",
+        "sha256": "54564d11e1c7f312ab5471390443799bd372dced32e735094436b32b3382054d",
+        "sha256_in_prefix": "54564d11e1c7f312ab5471390443799bd372dced32e735094436b32b3382054d",
+        "size_in_bytes": 7382
+      },
+      {
+        "_path": "lib/R/library/wk/include/wk/experimental/wk-v1-reader-cpp11.hpp",
+        "path_type": "hardlink",
+        "sha256": "542d3680dea0953a00c202ad896df2831a7b210b3a2a8335a43875ad2f29ce53",
+        "sha256_in_prefix": "542d3680dea0953a00c202ad896df2831a7b210b3a2a8335a43875ad2f29ce53",
+        "size_in_bytes": 2564
+      },
+      {
+        "_path": "lib/R/library/wk/libs/wk.so",
+        "path_type": "hardlink",
+        "sha256": "76a44d2ef68cfad55f586f88c830daf7add1c5bbe2034148846eb312d0fbcd40",
+        "sha256_in_prefix": "76a44d2ef68cfad55f586f88c830daf7add1c5bbe2034148846eb312d0fbcd40",
+        "size_in_bytes": 254264
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "b9c3c616c0bb6bdfd5fdd4c231a63013c61418e9271c255272258a0610cb553f",
+  "size": 1740898,
+  "subdir": "linux-64",
+  "timestamp": 1665648133000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-wk-0.7.0-r42h7525677_0.tar.bz2",
+  "version": "0.7.0"
+}

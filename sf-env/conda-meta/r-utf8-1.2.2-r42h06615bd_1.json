@@ -1,0 +1,236 @@
+{
+  "build": "r42h06615bd_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "r-base >=4.2,<4.3.0a0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-utf8-1.2.2-r42h06615bd_1",
+  "features": "",
+  "files": [
+    "lib/R/library/utf8/DESCRIPTION",
+    "lib/R/library/utf8/INDEX",
+    "lib/R/library/utf8/LICENSE",
+    "lib/R/library/utf8/Meta/Rd.rds",
+    "lib/R/library/utf8/Meta/features.rds",
+    "lib/R/library/utf8/Meta/hsearch.rds",
+    "lib/R/library/utf8/Meta/links.rds",
+    "lib/R/library/utf8/Meta/nsInfo.rds",
+    "lib/R/library/utf8/Meta/package.rds",
+    "lib/R/library/utf8/Meta/vignette.rds",
+    "lib/R/library/utf8/NAMESPACE",
+    "lib/R/library/utf8/R/utf8",
+    "lib/R/library/utf8/R/utf8.rdb",
+    "lib/R/library/utf8/R/utf8.rdx",
+    "lib/R/library/utf8/doc/index.html",
+    "lib/R/library/utf8/doc/utf8.Rmd",
+    "lib/R/library/utf8/doc/utf8.html",
+    "lib/R/library/utf8/help/AnIndex",
+    "lib/R/library/utf8/help/aliases.rds",
+    "lib/R/library/utf8/help/paths.rds",
+    "lib/R/library/utf8/help/utf8.rdb",
+    "lib/R/library/utf8/help/utf8.rdx",
+    "lib/R/library/utf8/html/00Index.html",
+    "lib/R/library/utf8/html/R.css",
+    "lib/R/library/utf8/libs/utf8.so"
+  ],
+  "fn": "r-utf8-1.2.2-r42h06615bd_1.tar.bz2",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-utf8-1.2.2-r42h06615bd_1",
+    "type": 1
+  },
+  "md5": "c1e5a496324b0a96ac0d79d93ed25d1d",
+  "name": "r-utf8",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-utf8-1.2.2-r42h06615bd_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/utf8/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "467c6c0935168eda4a11349f6ee7245565d5f186868cb66736f41fcdee5a1026",
+        "sha256_in_prefix": "467c6c0935168eda4a11349f6ee7245565d5f186868cb66736f41fcdee5a1026",
+        "size_in_bytes": 1306
+      },
+      {
+        "_path": "lib/R/library/utf8/INDEX",
+        "path_type": "hardlink",
+        "sha256": "3fa752721b84a4269b5b099db13d3f6198a6b3550443cf56148e0c9a23ac2ff8",
+        "sha256_in_prefix": "3fa752721b84a4269b5b099db13d3f6198a6b3550443cf56148e0c9a23ac2ff8",
+        "size_in_bytes": 393
+      },
+      {
+        "_path": "lib/R/library/utf8/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "sha256_in_prefix": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size_in_bytes": 11358
+      },
+      {
+        "_path": "lib/R/library/utf8/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "ec08ffd97e6535e98ab5e1ca74b902f40b6e656082286e795ab977bd26d198b6",
+        "sha256_in_prefix": "ec08ffd97e6535e98ab5e1ca74b902f40b6e656082286e795ab977bd26d198b6",
+        "size_in_bytes": 470
+      },
+      {
+        "_path": "lib/R/library/utf8/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/utf8/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "496a380ebd6a4337a00152d1657e6ba0e67ad81d3e60b9c6eff1775bec292431",
+        "sha256_in_prefix": "496a380ebd6a4337a00152d1657e6ba0e67ad81d3e60b9c6eff1775bec292431",
+        "size_in_bytes": 478
+      },
+      {
+        "_path": "lib/R/library/utf8/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "63531b313868326b93e76b6355b7de2ef73d5a1b53f923b7046b5be0ce9e1c14",
+        "sha256_in_prefix": "63531b313868326b93e76b6355b7de2ef73d5a1b53f923b7046b5be0ce9e1c14",
+        "size_in_bytes": 229
+      },
+      {
+        "_path": "lib/R/library/utf8/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "b0bf6d7fb275ae1b3df44923ad02233c2077c5ebf5791989db1cf2d71ad1321b",
+        "sha256_in_prefix": "b0bf6d7fb275ae1b3df44923ad02233c2077c5ebf5791989db1cf2d71ad1321b",
+        "size_in_bytes": 346
+      },
+      {
+        "_path": "lib/R/library/utf8/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "b1db6a592e9c95d750c2cdc520f528ac9695c3d0034c7cec7824bea6a007e71c",
+        "sha256_in_prefix": "b1db6a592e9c95d750c2cdc520f528ac9695c3d0034c7cec7824bea6a007e71c",
+        "size_in_bytes": 1163
+      },
+      {
+        "_path": "lib/R/library/utf8/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "d75156af20b22cc872fae18594d5643c6192cbbfcfeba4bbad76d10f9620263a",
+        "sha256_in_prefix": "d75156af20b22cc872fae18594d5643c6192cbbfcfeba4bbad76d10f9620263a",
+        "size_in_bytes": 225
+      },
+      {
+        "_path": "lib/R/library/utf8/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "6d07d20a5d83b0c006dcff9316d6689214b76bb35b62684594c281ce40b0afb2",
+        "sha256_in_prefix": "6d07d20a5d83b0c006dcff9316d6689214b76bb35b62684594c281ce40b0afb2",
+        "size_in_bytes": 238
+      },
+      {
+        "_path": "lib/R/library/utf8/R/utf8",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/utf8/R/utf8.rdb",
+        "path_type": "hardlink",
+        "sha256": "c8057fc2e5319015e01e32eb721d4ed8f492bceea5a417c0797fe7df7aff1d4b",
+        "sha256_in_prefix": "c8057fc2e5319015e01e32eb721d4ed8f492bceea5a417c0797fe7df7aff1d4b",
+        "size_in_bytes": 32621
+      },
+      {
+        "_path": "lib/R/library/utf8/R/utf8.rdx",
+        "path_type": "hardlink",
+        "sha256": "7bd4b63cfb5b8afe9f42921eaf5eb2a583cd284dc454a48e6952dcca256eb744",
+        "sha256_in_prefix": "7bd4b63cfb5b8afe9f42921eaf5eb2a583cd284dc454a48e6952dcca256eb744",
+        "size_in_bytes": 696
+      },
+      {
+        "_path": "lib/R/library/utf8/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "9dbb4ea7fcd6e4ea9bc0623ea3f44a38fff99e3bcce6fa7d6cb0d41cc2513697",
+        "sha256_in_prefix": "9dbb4ea7fcd6e4ea9bc0623ea3f44a38fff99e3bcce6fa7d6cb0d41cc2513697",
+        "size_in_bytes": 1328
+      },
+      {
+        "_path": "lib/R/library/utf8/doc/utf8.Rmd",
+        "path_type": "hardlink",
+        "sha256": "4778ca88d3db480932d4c0f7b96e56dda88bad063c6edefed8135c2b649e0029",
+        "sha256_in_prefix": "4778ca88d3db480932d4c0f7b96e56dda88bad063c6edefed8135c2b649e0029",
+        "size_in_bytes": 16288
+      },
+      {
+        "_path": "lib/R/library/utf8/doc/utf8.html",
+        "path_type": "hardlink",
+        "sha256": "39d8675b3578275841a2cc97015c3b109e9459c8530abd2ef41f6ed1ac268735",
+        "sha256_in_prefix": "39d8675b3578275841a2cc97015c3b109e9459c8530abd2ef41f6ed1ac268735",
+        "size_in_bytes": 39027
+      },
+      {
+        "_path": "lib/R/library/utf8/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "9d00f5bd2f5dfd2de0276f8bb3fce2ea580cb51067d07b49edc0cfb9b2ee1d42",
+        "sha256_in_prefix": "9d00f5bd2f5dfd2de0276f8bb3fce2ea580cb51067d07b49edc0cfb9b2ee1d42",
+        "size_in_bytes": 239
+      },
+      {
+        "_path": "lib/R/library/utf8/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "96059b0a86c08bfa3e010d547ca8188efed99343dc7315a15ff214b54be07380",
+        "sha256_in_prefix": "96059b0a86c08bfa3e010d547ca8188efed99343dc7315a15ff214b54be07380",
+        "size_in_bytes": 181
+      },
+      {
+        "_path": "lib/R/library/utf8/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "4ab37385e551f192ae80a3f5743bfb6741503f53f90c7da11be625c9f4066c44",
+        "sha256_in_prefix": "4ab37385e551f192ae80a3f5743bfb6741503f53f90c7da11be625c9f4066c44",
+        "size_in_bytes": 228
+      },
+      {
+        "_path": "lib/R/library/utf8/help/utf8.rdb",
+        "path_type": "hardlink",
+        "sha256": "1d6fe9ddf7445ca218c856284e07763ba194482cfab2ae20bf716678eb316e8a",
+        "sha256_in_prefix": "1d6fe9ddf7445ca218c856284e07763ba194482cfab2ae20bf716678eb316e8a",
+        "size_in_bytes": 25814
+      },
+      {
+        "_path": "lib/R/library/utf8/help/utf8.rdx",
+        "path_type": "hardlink",
+        "sha256": "8dab3d454786d338bb934f107af2f9b7b7171eaa7518015484604c43885056c1",
+        "sha256_in_prefix": "8dab3d454786d338bb934f107af2f9b7b7171eaa7518015484604c43885056c1",
+        "size_in_bytes": 332
+      },
+      {
+        "_path": "lib/R/library/utf8/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "8643ce43ad4697a70a2ef0d8d1dacaa7eb4bf8e916d0b6ce81c7bb907e024ef0",
+        "sha256_in_prefix": "8643ce43ad4697a70a2ef0d8d1dacaa7eb4bf8e916d0b6ce81c7bb907e024ef0",
+        "size_in_bytes": 2241
+      },
+      {
+        "_path": "lib/R/library/utf8/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/utf8/libs/utf8.so",
+        "path_type": "hardlink",
+        "sha256": "e60853ee87e1d1d3507beae0f2f81c3e02241131de57aac160441d7d21d0a97b",
+        "sha256_in_prefix": "e60853ee87e1d1d3507beae0f2f81c3e02241131de57aac160441d7d21d0a97b",
+        "size_in_bytes": 326936
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "62668dbf12e60f0848894a6f36f70ff745f1e3be83c24fb29c0be0339c153e63",
+  "size": 167472,
+  "subdir": "linux-64",
+  "timestamp": 1665095419000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-utf8-1.2.2-r42h06615bd_1.tar.bz2",
+  "version": "1.2.2"
+}

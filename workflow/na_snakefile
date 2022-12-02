@@ -1,119 +1,121 @@
 ###### snakemake pipeline to scrape geocaching records overlapping with likely sites of bat hibernacula ######
-### Start with raw list
-# Read in GC list
 
-# Take a sample of the description sections from GC pages
-# source("scripts/sample_descriptions.R"),
-# sampled = sample.description(gc_dat),
+REGIONS = "na eu".split()
+
+# TODO: add expansion to file names in this fashion:
+# expand("data/{id}/{id}-gc-list-unfiltered.csv", id=REGIONS)
 
 # clean the list of GC sites based on sampling keywords from descriptions
+# takes a sample of the description sections from GC pages
 
+### Start with raw list
+# Read in GC list
 rule SampleDescriptions:
     input:
-        "data/gc-list-unfiltered.csv"
+        expand({id}/"data/gc-list-{id}-unfiltered.csv", id=REGIONS)
     output:
-        "data/gc-descriptions.csv"
+        expand({id}/"data/gc-descriptions-{id}.csv", id=REGIONS)
     script:
         "scripts/pycaching-descriptions.py"
 
 rule FilterDescriptions:
     input:
-        "data/gc-descriptions.csv"
+        expand({id}/"data/gc-descriptions-{id}.csv", id=REGIONS)
     output:
-        "data/gc-list-filtered.csv",
-        "figures/keyword-combinations.png"
+        expand({id}/"data/gc-list-{id}-filtered.csv",id=REGIONS)
+        expand({id}/"figures/keyword-combinations-{id}.png",id=REGIONS)
     script:
         "scripts/filter_descriptions.R"
 
 # Now scrape just the sites that have these keywords
 rule ScrapeGC:
     input:
-        "data/gc-list-filtered.csv"
+        expand({id}/"data/gc-list-{id}-filtered.csv",id=REGIONS)
     output:
-        "data/gc-scrape.csv"
+        expand({id}/"data/gc-{id}-scrape.csv",id=REGIONS)
     script:
         "scripts/pycaching.py"
 
 # WNS presence at county level polygon
 rule PresenceShape:
     output:
-        "data/presence.df.rds",
-        "data/presence.poly.rds"
+        expand({id}/"data/presence.df.rds"
+        expand({id}/"data/presence.poly.rds"
     script:
         "scripts/wns-presence.R"
 
 # extra plots
 rule ExtraPlots:
     input:
-        "data/presence.df.rds"
+        expand({id}/"data/presence.df.rds"
     output:
-        "figures/county-incidence.png"
+        expand({id}/"figures/county-incidence.png"
     script:
         "script/extra-plots.R"
 
 # county level incidence of wns
 rule Incidence:
     input:
-        "data/presence.df.rds"
+        expand({id}/"data/presence.df.rds"
     output:
-        "data/full-county-year-incidence.csv"
+        expand({id}/"data/full-county-year-incidence.csv"
     script:
         "scripts/full-county-incidence.R"
 
 # Find overlaps between GC sites and WNS infected counties
 rule CoordinateOverlap:
     input:
-        "data/gc-scrape.csv",
-        "data/presence.df.rds",
-        "data/presence.poly.rds"
+        expand({id}/"data/gc-na-scrape.csv",
+        expand({id}/"data/presence.df.rds",
+        expand({id}/"data/presence.poly.rds"
     output:
-        "data/relevant-records.csv"
+        expand({id}/"data/relevant-records.csv"
     script:
         "scripts/coordinate-overlap.R"
 
 # Visualization of movement between sites
 rule PlotMapping:
     input:
-        "data/presence.df.rds",
-        "data/relevant-records.csv"
+        expand({id}/"data/presence.df.rds"),
+        expand({id}/"data/relevant-records.csv")
     output:
-        "figures/num-geocache.png",
-        "figures/num-geocache-year.png",
-        "figures/max-visits-date.png",
-        "figures/users_year.gif"
+        expand({id}/"figures/num-geocache.png"),
+        expand({id}/"figures/num-geocache-year.png"),
+        expand({id}/"figures/max-visits-date.png"),
+        expand({id}/"figures/users_year.gif")
     script:
         "scripts/geocache_mapping.R"
 
 # Stitch both countries together to create one polygon and fix names
 rule CountyFix:
     input:
-        "data/all-counties.csv",
-        "shape/lcd_000b16a_e/lcd_000b16a_e.shp",
-        "data/presence.df.rds",
-        "data/presence.poly.rds"
+        expand({id}/"data/all-counties.csv"),
+        expand({id}/"shape/lcd_000b16a_e/lcd_000b16a_e.shp"),
+        expand({id}/"data/presence.df.rds"),
+        expand({id}/"data/presence.poly.rds")
     output:
-        "data/united.poly.rds"
+        expand({id}/"data/united.poly.rds")
     script:
         "scripts/county-fix.R"
 
 # Constructs spatial weight matricies from neighbour lists of county centroids
 rule SpatialWeightMatrix:
     input:
-        "data/relevant-records.csv",
-        "data/presence.df.rds"
+        expand({id}/"data/relevant-records.csv"),
+        expand({id}/"data/presence.df.rds")
     output:
-        "data/spatial.weights.long"
+        expand({id}/"data/spatial.weights.long")
     script:
         "scripts/spatial-weight-matrix.R"
 
 # Constructs both adjacency and visit-based weights at the county level in long-format
 rule GeocacheWeightMatrix:
     input:
-        "data/relevant-records.csv",
-        "data/presence.df.rds"
+        expand({id}/"data/relevant-records.csv"),
+        expand({id}/"data/presence.df.rds")
     output:
-        "data/gc.weights",
-        "figures/counties-shared-users.png"
+        expand({id}/"data/gc.weights"),
+        expand({id}/"figures/counties-shared-users.png")
     script:
         "scripts/geocache-weight.R"
 
@@ -126,10 +128,10 @@ rule RunSim:
 
 rule GLMCaveData:
     input:
-        "data/gc.weights.csv",
-        "data/relevant-records.csv"
+        expand({id}/"data/gc.weights.csv"),
+        expand({id}/"data/relevant-records.csv")
     output:
-        "data/glm-summary.txt",
-        "figures/exp-growth-rate.png"
+        expand({id}/"data/glm-summary.txt"),
+        expand({id}/"figures/exp-growth-rate.png")
     script:
         "scripts/GLMmodelfitccavedata.R"

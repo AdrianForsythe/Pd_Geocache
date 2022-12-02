@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head><title>R: Simple Features for R</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
@@ -12,7 +12,7 @@
 <div style="text-align: center;">
 <a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]" /></a>
 <a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]" /></a>
-</div><h2>Documentation for package &lsquo;sf&rsquo; version 1.0-5</h2>
+</div><h2>Documentation for package &lsquo;sf&rsquo; version 1.0-7</h2>
 
 <ul><li><a href="../DESCRIPTION">DESCRIPTION file</a>.</li>
 <li><a href="../doc/index.html">User guides, package vignettes and other documentation.</a></li>
@@ -129,6 +129,8 @@
 <tr><td style="width: 25%;"><a href="tidyverse.html">gather.sf</a></td>
 <td>Tidyverse methods for sf objects (remove .sf suffix!)</td></tr>
 <tr><td style="width: 25%;"><a href="gdal.html">gdal</a></td>
+<td>functions to interact with gdal not meant to be called directly by users (but e.g. by stars::read_stars)</td></tr>
+<tr><td style="width: 25%;"><a href="gdal.html">gdal_create</a></td>
 <td>functions to interact with gdal not meant to be called directly by users (but e.g. by stars::read_stars)</td></tr>
 <tr><td style="width: 25%;"><a href="gdal.html">gdal_crs</a></td>
 <td>functions to interact with gdal not meant to be called directly by users (but e.g. by stars::read_stars)</td></tr>
@@ -614,7 +616,9 @@
 <tr><td style="width: 25%;"><a href="st_drivers.html">st_drivers</a></td>
 <td>Get GDAL drivers</td></tr>
 <tr><td style="width: 25%;"><a href="st_geometry.html">st_drop_geometry</a></td>
-<td>Get, set, or replace geometry from an sf object</td></tr>
+<td>Get, set, replace or rename geometry from an sf object</td></tr>
+<tr><td style="width: 25%;"><a href="st_geometry.html">st_drop_geometry.sf</a></td>
+<td>Get, set, replace or rename geometry from an sf object</td></tr>
 <tr><td style="width: 25%;"><a href="geos_binary_pred.html">st_equals</a></td>
 <td>Geometric binary predicates on pairs of simple feature geometry sets</td></tr>
 <tr><td style="width: 25%;"><a href="geos_binary_pred.html">st_equals_exact</a></td>
@@ -624,15 +628,15 @@
 <tr><td style="width: 25%;"><a href="st_join.html">st_filter.sf</a></td>
 <td>spatial join, spatial filter</td></tr>
 <tr><td style="width: 25%;"><a href="st_geometry.html">st_geometry</a></td>
-<td>Get, set, or replace geometry from an sf object</td></tr>
+<td>Get, set, replace or rename geometry from an sf object</td></tr>
 <tr><td style="width: 25%;"><a href="st_geometry.html">st_geometry.sf</a></td>
-<td>Get, set, or replace geometry from an sf object</td></tr>
+<td>Get, set, replace or rename geometry from an sf object</td></tr>
 <tr><td style="width: 25%;"><a href="st_geometry.html">st_geometry.sfc</a></td>
-<td>Get, set, or replace geometry from an sf object</td></tr>
+<td>Get, set, replace or rename geometry from an sf object</td></tr>
 <tr><td style="width: 25%;"><a href="st_geometry.html">st_geometry.sfg</a></td>
-<td>Get, set, or replace geometry from an sf object</td></tr>
+<td>Get, set, replace or rename geometry from an sf object</td></tr>
 <tr><td style="width: 25%;"><a href="st_geometry.html">st_geometry&lt;-</a></td>
-<td>Get, set, or replace geometry from an sf object</td></tr>
+<td>Get, set, replace or rename geometry from an sf object</td></tr>
 <tr><td style="width: 25%;"><a href="st.html">st_geometrycollection</a></td>
 <td>Create simple feature from a numeric vector, matrix or list</td></tr>
 <tr><td style="width: 25%;"><a href="st_geometry_type.html">st_geometry_type</a></td>
@@ -796,7 +800,7 @@
 <tr><td style="width: 25%;"><a href="st_crs.html">st_set_crs</a></td>
 <td>Retrieve coordinate reference system from object</td></tr>
 <tr><td style="width: 25%;"><a href="st_geometry.html">st_set_geometry</a></td>
-<td>Get, set, or replace geometry from an sf object</td></tr>
+<td>Get, set, replace or rename geometry from an sf object</td></tr>
 <tr><td style="width: 25%;"><a href="st_precision.html">st_set_precision</a></td>
 <td>Get precision</td></tr>
 <tr><td style="width: 25%;"><a href="sf.html">st_sf</a></td>

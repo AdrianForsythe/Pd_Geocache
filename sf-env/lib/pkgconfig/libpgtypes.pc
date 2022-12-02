@@ -1,7 +1,7 @@
 Name: libpgtypes
 Description: PostgreSQL libpgtypes library
 Url: https://www.postgresql.org/
-Version: 14.1
+Version: 14.5
 Requires: 
 Requires.private: 
 Cflags: -I/home/adrian/PhD/Pd_Geocache/sf-env/include

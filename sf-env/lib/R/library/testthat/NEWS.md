@@ -1,3 +1,130 @@
+# testthat 3.1.5
+
+* Deprecation warnings are no longer captured by `expect_warning(code, NA)`,
+  `expect_no_warning(code)`, or `expect_silent(code)`. This ensures that they 
+  bubble up to the top level so that you can address them (#1680). If you want 
+  to assert that code does not throw a deprecation warning, use
+  `expect_no_condition(code(), class = "lifecycle_warning_deprecation")`.
+
+* New experimental `expect_no_error()`, `expect_no_warning()`, 
+  `expect_no_message()`, and `expect_no_condition()` for asserting
+  the code runs without an error, warning, message, or condition (#1679).
+
+* Fixed a warning in R >=4.2.0 on Windows that occurred when using the C++
+  testing infrastructure that testthat provides (#1672).
+
+* Fixed an issue that could prevent compilation of Catch unit tests with
+  LLVM 15. In the interim, packages needing a local workaround can set
+  `PKG_CPPFLAGS = -DCATCH_CONFIG_CPP11_NO_SHUFFLE` in their `src/Makevars`.
+  (@kevinushey, #1687)
+
+* Improve way `capture_output()` handles encoding thanks to suggestion from
+  Kurt Hornik (#1693). This means that snapshots using UTF-8 encoded text on 
+  windows work once again.
+
+* `local_reproducible_output()` will no longer attempt to set the local language
+  when `LANG='C'` is set or an R version is used that was not compiled with
+  natural language support (NLS), which would previously emit non-test-related
+  warnings during testing (@dgkf, #1662; @heavywatal, #1689).
+
+* `test_check()` now suppresses hyperlinks since they'll take you to the wrong
+  places (#1648).
+
+* New `set_max_fails()` helper to make it easier to set the maximum number of
+  failures before stopping the test suite. And the advice to set to Inf is
+  now clickable (#1628).
+
+* You can now configure the behaviour of the implicit
+  `devtools::load_all()` call performed by `devtools::test()` in your
+  package DESCRIPTION file (#1636). To disable exports of internal
+  functions and of testthat helpers, use:
+
+  ```
+  Config/testthat/load-all: list(export_all = FALSE, helpers = FALSE)
+  ```
+
+  Helpers are now attached on the search path by default after calling
+  `devtools::test()`.
+
+# testthat 3.1.4
+
+* Minor tweaks to output for latest cli (#1606).
+
+# testthat 3.1.3
+
+* Package that explicitly depend on rlang in their description file
+  are now opting into a new snapshot display for errors, warnings, and
+  messages. Previously this only concerned packages that explicitly
+  depended on rlang >= 1.0.0. This display will eventually become the
+  default for all packages.
+
+  Changes include:
+
+  - Condition classes are no longer included in the snapshot by
+    default. This is to avoid snapshot noise when upstream code adds
+    or changes a class. For instance, r-devel has added classes to
+    base errors.
+
+  - Warnings and errors are now printed with rlang, including the
+    `call` field. This makes it easy to monitor the full appearance of
+    warning and error messages as they are displayed to users.
+
+    This change is part of a push towards mentioning the useful
+    context of an error as part of messages, see the release notes of
+    rlang 1.0.0 for more about this.
+
+* Test results show hyperlinks to failed expectation when supported (#1544). 
+
+
+# testthat 3.1.2
+
+* testthat now uses brio for all reading and writing (#1120). This
+  ensures that snapshots always use "\n" to separate lines (#1516).
+
+* `expect_snapshot()` no longer inadvertently trims trailing new lines off
+  of errors and messages (#1509).
+
+* If `expect_snapshot()` generates a snapshot with different value but
+  still compares as equal (e.g. because you've set a numeric tolerance), the 
+  saved values no longer update if another snapshot in the same file changes.
+
+* `expect_snapshot()` now only adds a `.new` file for the variants that 
+  actually changed, not all variants, while `expect_snapshot_file()` with
+  variant with no longer immediately deletes `.new` files (#1468).
+
+* `expect_snapshot_file()` gains a `transform` argument to match 
+  `expect_snapshot()` (#1474). `compare` now defaults to `NULL`, automatically 
+  guessing the comparison type based on the extension.
+
+* `expect_snapshot_file()` now errors if the file being snapshot does not exist; 
+  `SnapshotReporter` also now treats the file directory as an absolute path 
+  (#1476, @malcolmbarrett)
+
+* New `expect_snapshot_warning()` to match `expect_snapshot_error()` (#1532).
+
+* `JUnitReporter` now includes skip messages/reasons (@rfineman, #1507)
+
+* `local_reproducible_output()` gains a `lang` argument so that you can 
+  optionally override the language used to translate error messages (#1483).
+  It also sets the global option `cli.num_colors` in addition to 
+  `crayon.enabled`.
+
+* `test_that()` no longer inappropriately skips when calling `expect_equal()`
+  when you've temporarily set the locale to non-UTF-8 (#1285).
+
+* `skip_if_offline()` now automatically calls `skip_on_cran()` (#1479).
+
+* `snapshot_accept()` and `snapshot_review()` now work with exactly the same
+  file specification which can be a snapshot name, a file name, or a directory
+  (#1546). They both work better with variants (#1508). Snapshot cleanup also 
+  removes all empty directories (#1457).
+
+* When a snapshot changes the hint also mentions that you can use 
+  `snapshot_review()` (#1500, @DanChaltiel) and the message tells you what 
+  variant is active (#1540).
+* JUnit reporter now includes skip messages/reasons (@rfineman, #1507). 
+
+
 # testthat 3.1.1
 
 * Condition expectations like `expect_error()` now match across the

@@ -1,0 +1,222 @@
+{
+  "build": "r42hc72bb7e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-lattice",
+    "r-base >=4.2,<4.3.0a0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-coda-0.19_4-r42hc72bb7e_1",
+  "features": "",
+  "files": [
+    "lib/R/library/coda/AUTHORS",
+    "lib/R/library/coda/CITATION",
+    "lib/R/library/coda/DESCRIPTION",
+    "lib/R/library/coda/INDEX",
+    "lib/R/library/coda/Meta/Rd.rds",
+    "lib/R/library/coda/Meta/data.rds",
+    "lib/R/library/coda/Meta/features.rds",
+    "lib/R/library/coda/Meta/hsearch.rds",
+    "lib/R/library/coda/Meta/links.rds",
+    "lib/R/library/coda/Meta/nsInfo.rds",
+    "lib/R/library/coda/Meta/package.rds",
+    "lib/R/library/coda/NAMESPACE",
+    "lib/R/library/coda/R/coda",
+    "lib/R/library/coda/R/coda.rdb",
+    "lib/R/library/coda/R/coda.rdx",
+    "lib/R/library/coda/data/line.rda",
+    "lib/R/library/coda/help/AnIndex",
+    "lib/R/library/coda/help/aliases.rds",
+    "lib/R/library/coda/help/coda.rdb",
+    "lib/R/library/coda/help/coda.rdx",
+    "lib/R/library/coda/help/paths.rds",
+    "lib/R/library/coda/html/00Index.html",
+    "lib/R/library/coda/html/R.css"
+  ],
+  "fn": "r-coda-0.19_4-r42hc72bb7e_1.tar.bz2",
+  "license": "GPL (>= 2)",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-coda-0.19_4-r42hc72bb7e_1",
+    "type": 1
+  },
+  "md5": "4f734d12524d9586704f67d14234ed5f",
+  "name": "r-coda",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-coda-0.19_4-r42hc72bb7e_1.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/coda/AUTHORS",
+        "path_type": "hardlink",
+        "sha256": "994ed119fae51c0e8c62c658210f30943da677ed2402d4faac3e257b030fdcfd",
+        "sha256_in_prefix": "994ed119fae51c0e8c62c658210f30943da677ed2402d4faac3e257b030fdcfd",
+        "size_in_bytes": 1737
+      },
+      {
+        "_path": "lib/R/library/coda/CITATION",
+        "path_type": "hardlink",
+        "sha256": "69138ae397bc00da5a89e7478c887652bda4985ed6fc794c460307a00d482c82",
+        "sha256_in_prefix": "69138ae397bc00da5a89e7478c887652bda4985ed6fc794c460307a00d482c82",
+        "size_in_bytes": 731
+      },
+      {
+        "_path": "lib/R/library/coda/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "94fc2d7c6649c1e2f882c7420cdf6a38eb34caaf07f3d50c5ac072ec99dbcb01",
+        "sha256_in_prefix": "94fc2d7c6649c1e2f882c7420cdf6a38eb34caaf07f3d50c5ac072ec99dbcb01",
+        "size_in_bytes": 1274
+      },
+      {
+        "_path": "lib/R/library/coda/INDEX",
+        "path_type": "hardlink",
+        "sha256": "a5348d89dbfb70448c405549d496ae6d9d5b809ec6dd39f684e0e438fbf15160",
+        "sha256_in_prefix": "a5348d89dbfb70448c405549d496ae6d9d5b809ec6dd39f684e0e438fbf15160",
+        "size_in_bytes": 2778
+      },
+      {
+        "_path": "lib/R/library/coda/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "457464bd4eb56c19c46c691f8ea2e1e0da415ce2b72979af96b840bcd5c25719",
+        "sha256_in_prefix": "457464bd4eb56c19c46c691f8ea2e1e0da415ce2b72979af96b840bcd5c25719",
+        "size_in_bytes": 2064
+      },
+      {
+        "_path": "lib/R/library/coda/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "3d233ad0b0b6707f2488ce070f535841cdf1b22a53bef05578c396a778ecf038",
+        "sha256_in_prefix": "3d233ad0b0b6707f2488ce070f535841cdf1b22a53bef05578c396a778ecf038",
+        "size_in_bytes": 111
+      },
+      {
+        "_path": "lib/R/library/coda/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/coda/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "fec7c119ea1148e4dc583236510a2a9a6d80987bebde4fb0c4f25d239eb4b9b7",
+        "sha256_in_prefix": "fec7c119ea1148e4dc583236510a2a9a6d80987bebde4fb0c4f25d239eb4b9b7",
+        "size_in_bytes": 1970
+      },
+      {
+        "_path": "lib/R/library/coda/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "43ee15aec5e7cf65fa08aad4b110c0c622859098c2dedfbbf022ab0386252b54",
+        "sha256_in_prefix": "43ee15aec5e7cf65fa08aad4b110c0c622859098c2dedfbbf022ab0386252b54",
+        "size_in_bytes": 968
+      },
+      {
+        "_path": "lib/R/library/coda/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "915d7437297aa5782aec12bd22406ed1969641c98ec12a4f7ab3d19df9daa716",
+        "sha256_in_prefix": "915d7437297aa5782aec12bd22406ed1969641c98ec12a4f7ab3d19df9daa716",
+        "size_in_bytes": 1076
+      },
+      {
+        "_path": "lib/R/library/coda/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "9ff8227707c9ddf458e1e40d23bd1ab031ae76ec46bde58043906c691738b8c2",
+        "sha256_in_prefix": "9ff8227707c9ddf458e1e40d23bd1ab031ae76ec46bde58043906c691738b8c2",
+        "size_in_bytes": 1007
+      },
+      {
+        "_path": "lib/R/library/coda/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "42b73f102ed9931f007d4187636a754a0f024fbd32b431e7705783b5ea31954f",
+        "sha256_in_prefix": "42b73f102ed9931f007d4187636a754a0f024fbd32b431e7705783b5ea31954f",
+        "size_in_bytes": 3471
+      },
+      {
+        "_path": "lib/R/library/coda/R/coda",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/coda/R/coda.rdb",
+        "path_type": "hardlink",
+        "sha256": "b6f580b31ecbee7dae5ec66f16694e141d1c68cc70511223315ca93a99bd39a4",
+        "sha256_in_prefix": "b6f580b31ecbee7dae5ec66f16694e141d1c68cc70511223315ca93a99bd39a4",
+        "size_in_bytes": 182899
+      },
+      {
+        "_path": "lib/R/library/coda/R/coda.rdx",
+        "path_type": "hardlink",
+        "sha256": "da1e1c1ddc22f8ae98aed476ba97dd745a97623eaa8f0b2982713eff3d96b36d",
+        "sha256_in_prefix": "da1e1c1ddc22f8ae98aed476ba97dd745a97623eaa8f0b2982713eff3d96b36d",
+        "size_in_bytes": 2014
+      },
+      {
+        "_path": "lib/R/library/coda/data/line.rda",
+        "path_type": "hardlink",
+        "sha256": "21c4fbeebca779f829333c8c03bb3d657e6cd6ebefb99c9a9b7fbe53ba3265c9",
+        "sha256_in_prefix": "21c4fbeebca779f829333c8c03bb3d657e6cd6ebefb99c9a9b7fbe53ba3265c9",
+        "size_in_bytes": 9599
+      },
+      {
+        "_path": "lib/R/library/coda/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "119ba6beba16a5aceac1f615d2a9f581ec72f5b3c3860c9eec07bb8a3a662d00",
+        "sha256_in_prefix": "119ba6beba16a5aceac1f615d2a9f581ec72f5b3c3860c9eec07bb8a3a662d00",
+        "size_in_bytes": 2220
+      },
+      {
+        "_path": "lib/R/library/coda/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "57e84757eb2ab16366409ca7b078ee4c27de37d6b84a48c60591d070153f3870",
+        "sha256_in_prefix": "57e84757eb2ab16366409ca7b078ee4c27de37d6b84a48c60591d070153f3870",
+        "size_in_bytes": 773
+      },
+      {
+        "_path": "lib/R/library/coda/help/coda.rdb",
+        "path_type": "hardlink",
+        "sha256": "2a61b87c58a693cd2e1a610b7f8f54c17ef8e5dec8c28d463625c8390c841897",
+        "sha256_in_prefix": "2a61b87c58a693cd2e1a610b7f8f54c17ef8e5dec8c28d463625c8390c841897",
+        "size_in_bytes": 111163
+      },
+      {
+        "_path": "lib/R/library/coda/help/coda.rdx",
+        "path_type": "hardlink",
+        "sha256": "0fcf18fb673562cdfdd03f3f30351644f2cf23c447ad2fc8e2843e2f40d810d8",
+        "sha256_in_prefix": "0fcf18fb673562cdfdd03f3f30351644f2cf23c447ad2fc8e2843e2f40d810d8",
+        "size_in_bytes": 1141
+      },
+      {
+        "_path": "lib/R/library/coda/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "b0f0d80c9b714b72f3f4db3c0cf8383f2053d57bf8ca4b2867b4cfa1875a7479",
+        "sha256_in_prefix": "b0f0d80c9b714b72f3f4db3c0cf8383f2053d57bf8ca4b2867b4cfa1875a7479",
+        "size_in_bytes": 532
+      },
+      {
+        "_path": "lib/R/library/coda/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "d73eab4e24b138fa9e9ee701d5f67c9b2d957ea10a660c94930d819ca9f2cf2c",
+        "sha256_in_prefix": "d73eab4e24b138fa9e9ee701d5f67c9b2d957ea10a660c94930d819ca9f2cf2c",
+        "size_in_bytes": 12526
+      },
+      {
+        "_path": "lib/R/library/coda/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "6801cfbbd8ce9362b7ac98c5a9e96fb426d21c0cbf816417e43ce51a453e255f",
+  "size": 341546,
+  "subdir": "noarch",
+  "timestamp": 1665199939000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-coda-0.19_4-r42hc72bb7e_1.tar.bz2",
+  "version": "0.19_4"
+}

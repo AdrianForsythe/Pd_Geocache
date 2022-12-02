@@ -73,7 +73,8 @@ st_crop                 crop an sf object to a specific rectangle
 st_crs                  Retrieve coordinate reference system from
                         object
 st_drivers              Get GDAL drivers
-st_geometry             Get, set, or replace geometry from an sf object
+st_geometry             Get, set, replace or rename geometry from an sf
+                        object
 st_geometry_type        Return geometry type of an object
 st_graticule            Compute graticules and their parameters
 st_is                   test equality between the geometry type and a

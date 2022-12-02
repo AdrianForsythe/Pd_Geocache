@@ -1,18 +1,17 @@
 prefix=/home/adrian/PhD/Pd_Geocache/sf-env
-exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
 includedir=${prefix}/include
-sysconfdir=${prefix}/etc
-localstatedir=${prefix}/var
-PACKAGE=fontconfig
+libdir=${prefix}/lib
+
+sysconfdir=/home/adrian/PhD/Pd_Geocache/sf-env/etc
+localstatedir=/home/adrian/PhD/Pd_Geocache/sf-env/var
 confdir=${sysconfdir}/fonts
-cachedir=${localstatedir}/cache/${PACKAGE}
+cachedir=${localstatedir}/cache/fontconfig
 
 Name: Fontconfig
 Description: Font configuration and customization library
-Version: 2.13.1
-Requires:  freetype2 >= 21.0.15
-Requires.private:  uuid libxml-2.0 >= 2.6
+Version: 2.14.0
+Requires: freetype2 >=  21.0.15
+Requires.private: expat
 Libs: -L${libdir} -lfontconfig
-Libs.private:  
-Cflags: -I${includedir}  
+Libs.private: -pthread
+Cflags: -I${includedir}

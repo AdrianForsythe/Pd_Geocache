@@ -7,7 +7,7 @@ GetOverlaps<-function(scraped,presence.df,presence.poly,relevant_records){
   require(lubridate)
   
   # for testing
-  # scraped<-"workflow/data/gc-scrape.csv"
+  # scraped<-"workflow/na/data/gc-na-scrape.csv"
   # presence.df<-"workflow/data/presence.df.rds"
   # presence.poly<-"workflow/data/presence.poly.rds"
   # relevant_records<-"workflow/data/relevant-records.csv"
@@ -31,7 +31,7 @@ GetOverlaps<-function(scraped,presence.df,presence.poly,relevant_records){
     tally(name = "total")
 
   # order of coords matters!
-  geocache.coords <- as_Spatial(st_as_sf(all_results_merge, coords = c("lat","lon"), crs = 4326, agr = "constant"))
+  geocache.coords <- as_Spatial(st_as_sf(all_results_merge, coords = c("lon","lat"), crs = 4326, agr = "constant"))
 
   # create an index of matching polygons from presence data
   geocache.coords$poly.index <- over(geocache.coords, presence_poly, returnList = F)

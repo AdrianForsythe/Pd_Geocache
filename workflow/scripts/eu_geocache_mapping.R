@@ -11,12 +11,13 @@ gc_mapping <- function(eu_visits,na_visits,num.geocache,num.geocache.year,max.vi
   require(maps)
   require(maptools)
   
-  eu_visits<-"workflow/data/gc-eu-scrape.csv"
-  na_visits<-"workflow/data/gc-scrape.csv"
-  num.geocache<-"workflow/figures/eu-num-geocache.png"
-  num.geocache.year<-"workflow/figures/eu-num-geocache-year.png"
-  max.visits.date<-"workflow/figures/eu-max-visits-date.png"
-  travellers.date<-"workflow/figures/eu-travellers.gif"
+  # for testing
+  # eu_visits<-"workflow/data/gc-eu-scrape.csv"
+  # na_visits<-"workflow/na/data/gc-na-scrape.csv"
+  # num.geocache<-"workflow/figures/eu-num-geocache.png"
+  # num.geocache.year<-"workflow/figures/eu-num-geocache-year.png"
+  # max.visits.date<-"workflow/figures/eu-max-visits-date.png"
+  # travellers.date<-"workflow/figures/eu-travellers.gif"
   
   eu_visits_window<-read.csv(eu_visits,header=TRUE) %>% 
     mutate(Year = lubridate::year(lubridate::ymd(Date))) %>%

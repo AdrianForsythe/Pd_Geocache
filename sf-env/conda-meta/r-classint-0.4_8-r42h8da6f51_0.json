@@ -1,0 +1,257 @@
+{
+  "build": "r42h8da6f51_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libgfortran-ng",
+    "libgfortran5 >=10.4.0",
+    "r-base >=4.2,<4.3.0a0",
+    "r-class",
+    "r-e1071",
+    "r-kernsmooth"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-classint-0.4_8-r42h8da6f51_0",
+  "features": "",
+  "files": [
+    "lib/R/library/classInt/ChangeLog",
+    "lib/R/library/classInt/DESCRIPTION",
+    "lib/R/library/classInt/INDEX",
+    "lib/R/library/classInt/Meta/Rd.rds",
+    "lib/R/library/classInt/Meta/features.rds",
+    "lib/R/library/classInt/Meta/hsearch.rds",
+    "lib/R/library/classInt/Meta/links.rds",
+    "lib/R/library/classInt/Meta/nsInfo.rds",
+    "lib/R/library/classInt/Meta/package.rds",
+    "lib/R/library/classInt/Meta/vignette.rds",
+    "lib/R/library/classInt/NAMESPACE",
+    "lib/R/library/classInt/NEWS.md",
+    "lib/R/library/classInt/R/classInt",
+    "lib/R/library/classInt/R/classInt.rdb",
+    "lib/R/library/classInt/R/classInt.rdx",
+    "lib/R/library/classInt/doc/headtailsR.R",
+    "lib/R/library/classInt/doc/headtailsR.Rmd",
+    "lib/R/library/classInt/doc/headtailsR.html",
+    "lib/R/library/classInt/doc/index.html",
+    "lib/R/library/classInt/help/AnIndex",
+    "lib/R/library/classInt/help/aliases.rds",
+    "lib/R/library/classInt/help/classInt.rdb",
+    "lib/R/library/classInt/help/classInt.rdx",
+    "lib/R/library/classInt/help/paths.rds",
+    "lib/R/library/classInt/html/00Index.html",
+    "lib/R/library/classInt/html/R.css",
+    "lib/R/library/classInt/libs/classInt.so"
+  ],
+  "fn": "r-classint-0.4_8-r42h8da6f51_0.tar.bz2",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-classint-0.4_8-r42h8da6f51_0",
+    "type": 1
+  },
+  "md5": "38c99ef5bf3290bda4d0d573b2a2e070",
+  "name": "r-classint",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-classint-0.4_8-r42h8da6f51_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/classInt/ChangeLog",
+        "path_type": "hardlink",
+        "sha256": "3f88f09db4f71c2285bf3b5a26f4946e5b182768502da661a1a63015835140dc",
+        "sha256_in_prefix": "3f88f09db4f71c2285bf3b5a26f4946e5b182768502da661a1a63015835140dc",
+        "size_in_bytes": 16679
+      },
+      {
+        "_path": "lib/R/library/classInt/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "740194c5b2dc5ad530620efd87466025c57f6a562b8fec51e60f7263c275f554",
+        "sha256_in_prefix": "740194c5b2dc5ad530620efd87466025c57f6a562b8fec51e60f7263c275f554",
+        "size_in_bytes": 1755
+      },
+      {
+        "_path": "lib/R/library/classInt/INDEX",
+        "path_type": "hardlink",
+        "sha256": "a7f6095609595b0b415a4130452aab525f379a73ebcdf48ff258409bac6ab76b",
+        "sha256_in_prefix": "a7f6095609595b0b415a4130452aab525f379a73ebcdf48ff258409bac6ab76b",
+        "size_in_bytes": 506
+      },
+      {
+        "_path": "lib/R/library/classInt/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "4d63ff375c994a5b2bfdfcbec840bb0d435db5c926d1e66ff622ea29150f5638",
+        "sha256_in_prefix": "4d63ff375c994a5b2bfdfcbec840bb0d435db5c926d1e66ff622ea29150f5638",
+        "size_in_bytes": 528
+      },
+      {
+        "_path": "lib/R/library/classInt/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/classInt/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "9910332b398eba45c6aa82227f27e73f41d88f32ce4a85460bd7f1a7a9b9e319",
+        "sha256_in_prefix": "9910332b398eba45c6aa82227f27e73f41d88f32ce4a85460bd7f1a7a9b9e319",
+        "size_in_bytes": 546
+      },
+      {
+        "_path": "lib/R/library/classInt/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "be9aed42584c4d7ece6a780c51ed38c0d53626613f3b3c0be720016833f26e06",
+        "sha256_in_prefix": "be9aed42584c4d7ece6a780c51ed38c0d53626613f3b3c0be720016833f26e06",
+        "size_in_bytes": 262
+      },
+      {
+        "_path": "lib/R/library/classInt/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "7e8ef7fed64b88015fd40170f82525819acb1fde91240a3ecc7ca1e541867616",
+        "sha256_in_prefix": "7e8ef7fed64b88015fd40170f82525819acb1fde91240a3ecc7ca1e541867616",
+        "size_in_bytes": 497
+      },
+      {
+        "_path": "lib/R/library/classInt/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "d88c4848cbfe31f43e617cddbc825f14a1804ae201c38043f6033f5ec22eaf93",
+        "sha256_in_prefix": "d88c4848cbfe31f43e617cddbc825f14a1804ae201c38043f6033f5ec22eaf93",
+        "size_in_bytes": 1323
+      },
+      {
+        "_path": "lib/R/library/classInt/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "3b08c347eb1390541f7dd7af4838d4aaf3efc9a74b0432968563d239ca173405",
+        "sha256_in_prefix": "3b08c347eb1390541f7dd7af4838d4aaf3efc9a74b0432968563d239ca173405",
+        "size_in_bytes": 213
+      },
+      {
+        "_path": "lib/R/library/classInt/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "357954dbfbc3ac7c46d90e076cc82d5cfb6657fc3ff186fa31c7a8179578b2f7",
+        "sha256_in_prefix": "357954dbfbc3ac7c46d90e076cc82d5cfb6657fc3ff186fa31c7a8179578b2f7",
+        "size_in_bytes": 587
+      },
+      {
+        "_path": "lib/R/library/classInt/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "b35619eb6b278f80f1e1658573565539490aa22199a89d6c99e9948ea82a8ce1",
+        "sha256_in_prefix": "b35619eb6b278f80f1e1658573565539490aa22199a89d6c99e9948ea82a8ce1",
+        "size_in_bytes": 1215
+      },
+      {
+        "_path": "lib/R/library/classInt/R/classInt",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/classInt/R/classInt.rdb",
+        "path_type": "hardlink",
+        "sha256": "ebc3c70efb1ec69a1b9cf013ee3f496ae2c8e1c7f0b04f5a13c33948359fec61",
+        "sha256_in_prefix": "ebc3c70efb1ec69a1b9cf013ee3f496ae2c8e1c7f0b04f5a13c33948359fec61",
+        "size_in_bytes": 42364
+      },
+      {
+        "_path": "lib/R/library/classInt/R/classInt.rdx",
+        "path_type": "hardlink",
+        "sha256": "22deb180f7be2b6630f63e66d6df09e0ddcb9dec89ae8ce2050a4acb5afcf943",
+        "sha256_in_prefix": "22deb180f7be2b6630f63e66d6df09e0ddcb9dec89ae8ce2050a4acb5afcf943",
+        "size_in_bytes": 532
+      },
+      {
+        "_path": "lib/R/library/classInt/doc/headtailsR.R",
+        "path_type": "hardlink",
+        "sha256": "57f318a28a9268dd171719a5286f0f3c512b81ff9fa8634b3ab3f7b51f554997",
+        "sha256_in_prefix": "57f318a28a9268dd171719a5286f0f3c512b81ff9fa8634b3ab3f7b51f554997",
+        "size_in_bytes": 12849
+      },
+      {
+        "_path": "lib/R/library/classInt/doc/headtailsR.Rmd",
+        "path_type": "hardlink",
+        "sha256": "0ced9a0427865f1c2e81c7facdf6aec14bd8792af143a386ef4adecdde3980d3",
+        "sha256_in_prefix": "0ced9a0427865f1c2e81c7facdf6aec14bd8792af143a386ef4adecdde3980d3",
+        "size_in_bytes": 20979
+      },
+      {
+        "_path": "lib/R/library/classInt/doc/headtailsR.html",
+        "path_type": "hardlink",
+        "sha256": "780ca4be2a2f993bf4a30b4d13b76cd572928f8a23615a30147319ae7c644db8",
+        "sha256_in_prefix": "780ca4be2a2f993bf4a30b4d13b76cd572928f8a23615a30147319ae7c644db8",
+        "size_in_bytes": 628886
+      },
+      {
+        "_path": "lib/R/library/classInt/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "42ab0477dd61dea88a42c83f4a730d995a94b6fd8a14e887090ddf5b3717eb75",
+        "sha256_in_prefix": "42ab0477dd61dea88a42c83f4a730d995a94b6fd8a14e887090ddf5b3717eb75",
+        "size_in_bytes": 1407
+      },
+      {
+        "_path": "lib/R/library/classInt/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "ad68337ba57353fcf1f86594dde66b5234dba3f4cf605da9cb05b536f220e163",
+        "sha256_in_prefix": "ad68337ba57353fcf1f86594dde66b5234dba3f4cf605da9cb05b536f220e163",
+        "size_in_bytes": 410
+      },
+      {
+        "_path": "lib/R/library/classInt/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "78c2a3c6bbadfaacb176ae2394a7ca66452b812c5250900370e85f36f0a8d7f3",
+        "sha256_in_prefix": "78c2a3c6bbadfaacb176ae2394a7ca66452b812c5250900370e85f36f0a8d7f3",
+        "size_in_bytes": 204
+      },
+      {
+        "_path": "lib/R/library/classInt/help/classInt.rdb",
+        "path_type": "hardlink",
+        "sha256": "869c0fa0d42db46ff428c1d15b7694b506e8a2ebd240d7988f8a1805f1366237",
+        "sha256_in_prefix": "869c0fa0d42db46ff428c1d15b7694b506e8a2ebd240d7988f8a1805f1366237",
+        "size_in_bytes": 33385
+      },
+      {
+        "_path": "lib/R/library/classInt/help/classInt.rdx",
+        "path_type": "hardlink",
+        "sha256": "46696cccb711020d852fd230a69129be80ae77816a9f6751e4f0084f9c23bdcf",
+        "sha256_in_prefix": "46696cccb711020d852fd230a69129be80ae77816a9f6751e4f0084f9c23bdcf",
+        "size_in_bytes": 332
+      },
+      {
+        "_path": "lib/R/library/classInt/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "021f11829d7a616bf714512d917e2af6f8537eb6b666d956b303d15f9a420bf4",
+        "sha256_in_prefix": "021f11829d7a616bf714512d917e2af6f8537eb6b666d956b303d15f9a420bf4",
+        "size_in_bytes": 240
+      },
+      {
+        "_path": "lib/R/library/classInt/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "b62990bc7dadb2ff9ddaab225e501759d963570178ff3b9ba8c9b7b64d692094",
+        "sha256_in_prefix": "b62990bc7dadb2ff9ddaab225e501759d963570178ff3b9ba8c9b7b64d692094",
+        "size_in_bytes": 2708
+      },
+      {
+        "_path": "lib/R/library/classInt/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/classInt/libs/classInt.so",
+        "path_type": "hardlink",
+        "sha256": "8d2c33fa82a686a29ea8b01e7cba4cc5d26e9591aec67b309bdd505fd17062f1",
+        "sha256_in_prefix": "8d2c33fa82a686a29ea8b01e7cba4cc5d26e9591aec67b309bdd505fd17062f1",
+        "size_in_bytes": 15400
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "245363ab22502bc63932c97671d19e73ec56c7ed51d4047a7e619b9920ca160f",
+  "size": 508575,
+  "subdir": "linux-64",
+  "timestamp": 1665501723000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-classint-0.4_8-r42h8da6f51_0.tar.bz2",
+  "version": "0.4_8"
+}

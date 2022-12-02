@@ -1,9 +1,9 @@
 # Version checking for PROJ
 
-set (PACKAGE_VERSION "8.2.0")
-set (PACKAGE_VERSION_MAJOR "8")
-set (PACKAGE_VERSION_MINOR "2")
-set (PACKAGE_VERSION_PATCH "0")
+set (PACKAGE_VERSION "9.0.1")
+set (PACKAGE_VERSION_MAJOR "9")
+set (PACKAGE_VERSION_MINOR "0")
+set (PACKAGE_VERSION_PATCH "1")
 
 # These variable definitions parallel those in PROJ's
 # cmake/CMakeLists.txt.

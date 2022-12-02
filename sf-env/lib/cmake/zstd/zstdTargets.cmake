@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget zstd::libzstd_shared zstd::libzstd_static)
+foreach(_expectedTarget zstd::libzstd_shared)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -54,14 +54,6 @@ endif()
 add_library(zstd::libzstd_shared SHARED IMPORTED)
 
 set_target_properties(zstd::libzstd_shared PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "-pthread"
-)
-
-# Create imported target zstd::libzstd_static
-add_library(zstd::libzstd_static STATIC IMPORTED)
-
-set_target_properties(zstd::libzstd_static PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "-pthread"
 )

@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: gdaljp2metadata.h 315b6d277cdfd763148999530b3741862819261a 2021-05-08 19:57:32 +0200 Even Rouault $
+ * $Id$
  *
  * Project:  GDAL
  * Purpose:  JP2 Box Reader (and GMLJP2 Interpreter)
@@ -46,18 +46,18 @@
 class CPL_DLL GDALJP2Box
 {
 
-    VSILFILE   *fpVSIL;
+    VSILFILE   *fpVSIL = nullptr;
 
-    char        szBoxType[5];
+    char        szBoxType[5] {0, 0, 0, 0, 0};
 
-    GIntBig     nBoxOffset;
-    GIntBig     nBoxLength;
+    GIntBig     nBoxOffset = -1;
+    GIntBig     nBoxLength = 0;
 
-    GIntBig     nDataOffset;
+    GIntBig     nDataOffset = -1;
 
-    GByte       abyUUID[16];
+    GByte       abyUUID[16] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
-    GByte      *pabyData;
+    GByte      *pabyData = nullptr;
 
     CPL_DISALLOW_COPY_ASSIGN(GDALJP2Box)
 

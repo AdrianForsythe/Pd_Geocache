@@ -1,0 +1,317 @@
+{
+  "build": "r42hc72bb7e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.2,<4.3.0a0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-brew-1.0_8-r42hc72bb7e_1",
+  "features": "",
+  "files": [
+    "lib/R/library/brew/DESCRIPTION",
+    "lib/R/library/brew/INDEX",
+    "lib/R/library/brew/Meta/Rd.rds",
+    "lib/R/library/brew/Meta/features.rds",
+    "lib/R/library/brew/Meta/hsearch.rds",
+    "lib/R/library/brew/Meta/links.rds",
+    "lib/R/library/brew/Meta/nsInfo.rds",
+    "lib/R/library/brew/Meta/package.rds",
+    "lib/R/library/brew/NAMESPACE",
+    "lib/R/library/brew/R/brew",
+    "lib/R/library/brew/R/brew.rdb",
+    "lib/R/library/brew/R/brew.rdx",
+    "lib/R/library/brew/Sweave-test-1-006.pdf",
+    "lib/R/library/brew/Sweave-test-1-007.pdf",
+    "lib/R/library/brew/Sweave-test-1.tex",
+    "lib/R/library/brew/brew-test-1-1.pdf",
+    "lib/R/library/brew/brew-test-1.brew",
+    "lib/R/library/brew/brew-test-1.tex",
+    "lib/R/library/brew/brew-test-2-table.brew",
+    "lib/R/library/brew/brew-test-2.brew",
+    "lib/R/library/brew/brew-test-2.html",
+    "lib/R/library/brew/brew-test-2.tex",
+    "lib/R/library/brew/brew-test-3.brew",
+    "lib/R/library/brew/broken.brew",
+    "lib/R/library/brew/catprint.brew",
+    "lib/R/library/brew/example1.brew",
+    "lib/R/library/brew/example2.brew",
+    "lib/R/library/brew/featurefull.brew",
+    "lib/R/library/brew/help/AnIndex",
+    "lib/R/library/brew/help/aliases.rds",
+    "lib/R/library/brew/help/brew.rdb",
+    "lib/R/library/brew/help/brew.rdx",
+    "lib/R/library/brew/help/paths.rds",
+    "lib/R/library/brew/html/00Index.html",
+    "lib/R/library/brew/html/R.css"
+  ],
+  "fn": "r-brew-1.0_8-r42hc72bb7e_1.tar.bz2",
+  "license": "GPL-2",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-brew-1.0_8-r42hc72bb7e_1",
+    "type": 1
+  },
+  "md5": "2fd8e7697166db63e8ced3bb4dd33ee8",
+  "name": "r-brew",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-brew-1.0_8-r42hc72bb7e_1.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/brew/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "449954d2fc34dadd60b3289a6f33fd2ec1dc8542df1325287d4367368a102e29",
+        "sha256_in_prefix": "449954d2fc34dadd60b3289a6f33fd2ec1dc8542df1325287d4367368a102e29",
+        "size_in_bytes": 912
+      },
+      {
+        "_path": "lib/R/library/brew/INDEX",
+        "path_type": "hardlink",
+        "sha256": "5da7db535e4d23f625121bd73396f05c0902272c56e1eb03313d1667d0793b37",
+        "sha256_in_prefix": "5da7db535e4d23f625121bd73396f05c0902272c56e1eb03313d1667d0793b37",
+        "size_in_bytes": 108
+      },
+      {
+        "_path": "lib/R/library/brew/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "13150682b03732803d70df9d3bee3a3cb0b83ddce0f15331aeb1aa9ea8e86203",
+        "sha256_in_prefix": "13150682b03732803d70df9d3bee3a3cb0b83ddce0f15331aeb1aa9ea8e86203",
+        "size_in_bytes": 303
+      },
+      {
+        "_path": "lib/R/library/brew/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/brew/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "ee981ed9509dda6b4e50709fcad16be7321c32d2b95949548bc3d8df53e5099b",
+        "sha256_in_prefix": "ee981ed9509dda6b4e50709fcad16be7321c32d2b95949548bc3d8df53e5099b",
+        "size_in_bytes": 341
+      },
+      {
+        "_path": "lib/R/library/brew/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "60e3e32f108095a646d6106ce1b55887a67932e420681944a339f6f0d95fc589",
+        "sha256_in_prefix": "60e3e32f108095a646d6106ce1b55887a67932e420681944a339f6f0d95fc589",
+        "size_in_bytes": 136
+      },
+      {
+        "_path": "lib/R/library/brew/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "b15a27da9e151f07fc34ec383c7e4bf10cb15a7899235d2b9c242cde1a6dba33",
+        "sha256_in_prefix": "b15a27da9e151f07fc34ec383c7e4bf10cb15a7899235d2b9c242cde1a6dba33",
+        "size_in_bytes": 249
+      },
+      {
+        "_path": "lib/R/library/brew/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "54821ba3a4f5a78c02be1e069b9ca5c974b6e90b9c6ee692334a2d5e6c28868f",
+        "sha256_in_prefix": "54821ba3a4f5a78c02be1e069b9ca5c974b6e90b9c6ee692334a2d5e6c28868f",
+        "size_in_bytes": 900
+      },
+      {
+        "_path": "lib/R/library/brew/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "3ab48eb46cb6daf2dfcece227d3c362d7b80ed57259039883bef8bf9eab9a6f2",
+        "sha256_in_prefix": "3ab48eb46cb6daf2dfcece227d3c362d7b80ed57259039883bef8bf9eab9a6f2",
+        "size_in_bytes": 153
+      },
+      {
+        "_path": "lib/R/library/brew/R/brew",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/brew/R/brew.rdb",
+        "path_type": "hardlink",
+        "sha256": "a42f3ab93fdccfb2d57cac0164d18fb73fa207c3e96e5fc45c7f201cbb1499b2",
+        "sha256_in_prefix": "a42f3ab93fdccfb2d57cac0164d18fb73fa207c3e96e5fc45c7f201cbb1499b2",
+        "size_in_bytes": 15224
+      },
+      {
+        "_path": "lib/R/library/brew/R/brew.rdx",
+        "path_type": "hardlink",
+        "sha256": "b068cc5ce9672e347827714007188295f8e81fa45a0b7a5a81e0083da36a9e7d",
+        "sha256_in_prefix": "b068cc5ce9672e347827714007188295f8e81fa45a0b7a5a81e0083da36a9e7d",
+        "size_in_bytes": 452
+      },
+      {
+        "_path": "lib/R/library/brew/Sweave-test-1-006.pdf",
+        "path_type": "hardlink",
+        "sha256": "fab60539e6ae1ee2a8fdb7d33a8cd2f199cb57d070d9a89c523ff8c48fcc74d7",
+        "sha256_in_prefix": "fab60539e6ae1ee2a8fdb7d33a8cd2f199cb57d070d9a89c523ff8c48fcc74d7",
+        "size_in_bytes": 187081
+      },
+      {
+        "_path": "lib/R/library/brew/Sweave-test-1-007.pdf",
+        "path_type": "hardlink",
+        "sha256": "272638c5760dc48791cd3870b61bbb0daf2a4ccbd9d99dad3a74017b0b370595",
+        "sha256_in_prefix": "272638c5760dc48791cd3870b61bbb0daf2a4ccbd9d99dad3a74017b0b370595",
+        "size_in_bytes": 4157
+      },
+      {
+        "_path": "lib/R/library/brew/Sweave-test-1.tex",
+        "path_type": "hardlink",
+        "sha256": "3d9d8231de423f741fbb17823cedd1a46649fd9daf8b3e6b6d6009b41ae6112b",
+        "sha256_in_prefix": "3d9d8231de423f741fbb17823cedd1a46649fd9daf8b3e6b6d6009b41ae6112b",
+        "size_in_bytes": 3016
+      },
+      {
+        "_path": "lib/R/library/brew/brew-test-1-1.pdf",
+        "path_type": "hardlink",
+        "sha256": "ca07c79f979ffd735ecd276d48d1ccba44195d112b3dc7c2461f151e2133678d",
+        "sha256_in_prefix": "ca07c79f979ffd735ecd276d48d1ccba44195d112b3dc7c2461f151e2133678d",
+        "size_in_bytes": 187081
+      },
+      {
+        "_path": "lib/R/library/brew/brew-test-1.brew",
+        "path_type": "hardlink",
+        "sha256": "ab6a0e04c2f8a0b7244c1a02dd665c4dbfce431283449a87b7cd8aed1ccd78db",
+        "sha256_in_prefix": "ab6a0e04c2f8a0b7244c1a02dd665c4dbfce431283449a87b7cd8aed1ccd78db",
+        "size_in_bytes": 1869
+      },
+      {
+        "_path": "lib/R/library/brew/brew-test-1.tex",
+        "path_type": "hardlink",
+        "sha256": "51c9692531f7d05c720f146342abd948073f8645a38278e62e0086d2e57cefad",
+        "sha256_in_prefix": "51c9692531f7d05c720f146342abd948073f8645a38278e62e0086d2e57cefad",
+        "size_in_bytes": 2449
+      },
+      {
+        "_path": "lib/R/library/brew/brew-test-2-table.brew",
+        "path_type": "hardlink",
+        "sha256": "0116a8050e286511a04c45c748c6012204763382813775e3644fc4ac28598a39",
+        "sha256_in_prefix": "0116a8050e286511a04c45c748c6012204763382813775e3644fc4ac28598a39",
+        "size_in_bytes": 151
+      },
+      {
+        "_path": "lib/R/library/brew/brew-test-2.brew",
+        "path_type": "hardlink",
+        "sha256": "817f743e3d14d53814aa494aa767674268ea0ce4a3b45383680c633ba0fdcad4",
+        "sha256_in_prefix": "817f743e3d14d53814aa494aa767674268ea0ce4a3b45383680c633ba0fdcad4",
+        "size_in_bytes": 4085
+      },
+      {
+        "_path": "lib/R/library/brew/brew-test-2.html",
+        "path_type": "hardlink",
+        "sha256": "14cf876f50559883b621e57f880c0f12b5a0b8164d296d22d52863f40812a6f2",
+        "sha256_in_prefix": "14cf876f50559883b621e57f880c0f12b5a0b8164d296d22d52863f40812a6f2",
+        "size_in_bytes": 50218
+      },
+      {
+        "_path": "lib/R/library/brew/brew-test-2.tex",
+        "path_type": "hardlink",
+        "sha256": "176b75a9d90c3e393378f96b895197668ebe475db20ab831744f0467bec73a88",
+        "sha256_in_prefix": "176b75a9d90c3e393378f96b895197668ebe475db20ab831744f0467bec73a88",
+        "size_in_bytes": 2409
+      },
+      {
+        "_path": "lib/R/library/brew/brew-test-3.brew",
+        "path_type": "hardlink",
+        "sha256": "fa126186f730775a5a825ba8ea873f00145a85e124d3b1d965d97a21f7f1bb52",
+        "sha256_in_prefix": "fa126186f730775a5a825ba8ea873f00145a85e124d3b1d965d97a21f7f1bb52",
+        "size_in_bytes": 81
+      },
+      {
+        "_path": "lib/R/library/brew/broken.brew",
+        "path_type": "hardlink",
+        "sha256": "b8cb11775261be87bfc61953e35eca8cc5a9361e76fb70822ec411bcb09dcfbe",
+        "sha256_in_prefix": "b8cb11775261be87bfc61953e35eca8cc5a9361e76fb70822ec411bcb09dcfbe",
+        "size_in_bytes": 70
+      },
+      {
+        "_path": "lib/R/library/brew/catprint.brew",
+        "path_type": "hardlink",
+        "sha256": "aefd71116e882577cde03eb2cd2bb6ed54777c361c58253d5dd0fb819164bdff",
+        "sha256_in_prefix": "aefd71116e882577cde03eb2cd2bb6ed54777c361c58253d5dd0fb819164bdff",
+        "size_in_bytes": 766
+      },
+      {
+        "_path": "lib/R/library/brew/example1.brew",
+        "path_type": "hardlink",
+        "sha256": "a3702c96b516a79fa0cca1052bb641e9a7c8c2d7f5549a3bfa4860a62166b7b0",
+        "sha256_in_prefix": "a3702c96b516a79fa0cca1052bb641e9a7c8c2d7f5549a3bfa4860a62166b7b0",
+        "size_in_bytes": 243
+      },
+      {
+        "_path": "lib/R/library/brew/example2.brew",
+        "path_type": "hardlink",
+        "sha256": "1d41b3124ecda2ff7fb46e4124cf3c9ec7b40beec7686509fa36067996f16a7f",
+        "sha256_in_prefix": "1d41b3124ecda2ff7fb46e4124cf3c9ec7b40beec7686509fa36067996f16a7f",
+        "size_in_bytes": 38
+      },
+      {
+        "_path": "lib/R/library/brew/featurefull.brew",
+        "path_type": "hardlink",
+        "sha256": "cd7685c95f65db57084cdb7bf5dbb801a9612c1398847c23307baed49c268a05",
+        "sha256_in_prefix": "cd7685c95f65db57084cdb7bf5dbb801a9612c1398847c23307baed49c268a05",
+        "size_in_bytes": 486
+      },
+      {
+        "_path": "lib/R/library/brew/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "e18d2ffbf6f9e8b00ac55cc68a859b1ef124f238a1c89137292209657918ff04",
+        "sha256_in_prefix": "e18d2ffbf6f9e8b00ac55cc68a859b1ef124f238a1c89137292209657918ff04",
+        "size_in_bytes": 95
+      },
+      {
+        "_path": "lib/R/library/brew/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "c9167ad21e6203c9952595a3fe654ff2574c4bb19434fc166519284458dfe529",
+        "sha256_in_prefix": "c9167ad21e6203c9952595a3fe654ff2574c4bb19434fc166519284458dfe529",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "lib/R/library/brew/help/brew.rdb",
+        "path_type": "hardlink",
+        "sha256": "b63fd7c1af3d233bb756a65aa87b4b07f679937511a8f9f07dc84ad8212bcf12",
+        "sha256_in_prefix": "b63fd7c1af3d233bb756a65aa87b4b07f679937511a8f9f07dc84ad8212bcf12",
+        "size_in_bytes": 9814
+      },
+      {
+        "_path": "lib/R/library/brew/help/brew.rdx",
+        "path_type": "hardlink",
+        "sha256": "0e6321b53b8ce145a824396a099f4f1eeddd03e427ba6a371d598711044c9b91",
+        "sha256_in_prefix": "0e6321b53b8ce145a824396a099f4f1eeddd03e427ba6a371d598711044c9b91",
+        "size_in_bytes": 184
+      },
+      {
+        "_path": "lib/R/library/brew/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "0b97a7746567091cd98da8e2e397f1b68b4997b639a47f099f169c6199bf2e5f",
+        "sha256_in_prefix": "0b97a7746567091cd98da8e2e397f1b68b4997b639a47f099f169c6199bf2e5f",
+        "size_in_bytes": 169
+      },
+      {
+        "_path": "lib/R/library/brew/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "fe7921b12923a07bc3affda1218bdbd6d75d6587f0d3d080d412dd596fdfee32",
+        "sha256_in_prefix": "fe7921b12923a07bc3affda1218bdbd6d75d6587f0d3d080d412dd596fdfee32",
+        "size_in_bytes": 1508
+      },
+      {
+        "_path": "lib/R/library/brew/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "502368cc629a0f77d48b5e03f550f6de55e1cb9d8d4b729b35a33670ff5ff512",
+  "size": 71743,
+  "subdir": "noarch",
+  "timestamp": 1665213425000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-brew-1.0_8-r42hc72bb7e_1.tar.bz2",
+  "version": "1.0_8"
+}

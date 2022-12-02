@@ -52,6 +52,14 @@ typedef struct _PangoFontDescription PangoFontDescription;
  * to a script. The fields of this structure are private to implementations
  * of a font backend. See the documentation of the corresponding getters
  * for documentation of their meaning.
+ *
+ * For an overview of the most important metrics, see:
+ *
+ * <picture>
+ *   <source srcset="fontmetrics-dark.png" media="(prefers-color-scheme: dark)">
+ *   <img alt="Font metrics" src="fontmetrics-light.png">
+ * </picture>
+
  */
 typedef struct _PangoFontMetrics PangoFontMetrics;
 
@@ -73,34 +81,51 @@ typedef enum {
  * PangoVariant:
  * @PANGO_VARIANT_NORMAL: A normal font.
  * @PANGO_VARIANT_SMALL_CAPS: A font with the lower case characters
- * replaced by smaller variants of the capital characters.
+ *   replaced by smaller variants of the capital characters.
+ * @PANGO_VARIANT_ALL_SMALL_CAPS: A font with all characters
+ *   replaced by smaller variants of the capital characters. Since: 1.50
+ * @PANGO_VARIANT_PETITE_CAPS: A font with the lower case characters
+ *   replaced by smaller variants of the capital characters.
+ *   Petite Caps can be even smaller than Small Caps. Since: 1.50
+ * @PANGO_VARIANT_ALL_PETITE_CAPS: A font with all characters
+ *   replaced by smaller variants of the capital characters.
+ *   Petite Caps can be even smaller than Small Caps. Since: 1.50
+ * @PANGO_VARIANT_UNICASE: A font with the upper case characters
+ *   replaced by smaller variants of the capital letters. Since: 1.50
+ * @PANGO_VARIANT_TITLE_CAPS: A font with capital letters that
+ *   are more suitable for all-uppercase titles. Since: 1.50
  *
  * An enumeration specifying capitalization variant of the font.
  */
 typedef enum {
   PANGO_VARIANT_NORMAL,
-  PANGO_VARIANT_SMALL_CAPS
+  PANGO_VARIANT_SMALL_CAPS,
+  PANGO_VARIANT_ALL_SMALL_CAPS,
+  PANGO_VARIANT_PETITE_CAPS,
+  PANGO_VARIANT_ALL_PETITE_CAPS,
+  PANGO_VARIANT_UNICASE,
+  PANGO_VARIANT_TITLE_CAPS
 } PangoVariant;
 
 /**
  * PangoWeight:
- * @PANGO_WEIGHT_THIN: the thin weight (= 100; Since: 1.24)
+ * @PANGO_WEIGHT_THIN: the thin weight (= 100) Since: 1.24
  * @PANGO_WEIGHT_ULTRALIGHT: the ultralight weight (= 200)
  * @PANGO_WEIGHT_LIGHT: the light weight (= 300)
- * @PANGO_WEIGHT_SEMILIGHT: the semilight weight (= 350; Since: 1.36.7)
- * @PANGO_WEIGHT_BOOK: the book weight (= 380; Since: 1.24)
+ * @PANGO_WEIGHT_SEMILIGHT: the semilight weight (= 350) Since: 1.36.7
+ * @PANGO_WEIGHT_BOOK: the book weight (= 380) Since: 1.24)
  * @PANGO_WEIGHT_NORMAL: the default weight (= 400)
- * @PANGO_WEIGHT_MEDIUM: the normal weight (= 500; Since: 1.24)
+ * @PANGO_WEIGHT_MEDIUM: the medium weight (= 500) Since: 1.24
  * @PANGO_WEIGHT_SEMIBOLD: the semibold weight (= 600)
  * @PANGO_WEIGHT_BOLD: the bold weight (= 700)
  * @PANGO_WEIGHT_ULTRABOLD: the ultrabold weight (= 800)
  * @PANGO_WEIGHT_HEAVY: the heavy weight (= 900)
- * @PANGO_WEIGHT_ULTRAHEAVY: the ultraheavy weight (= 1000; Since: 1.24)
+ * @PANGO_WEIGHT_ULTRAHEAVY: the ultraheavy weight (= 1000) Since: 1.24
  *
  * An enumeration specifying the weight (boldness) of a font.
  *
- * This is a numerical value ranging from 100 to 1000, but there
- * are some predefined values.
+ * Weight is specified as a numeric value ranging from 100 to 1000.
+ * This enumeration simply provides some common, predefined values.
  */
 typedef enum {
   PANGO_WEIGHT_THIN = 100,
@@ -601,6 +626,17 @@ void                  pango_font_get_features      (PangoFont        *font,
 PANGO_AVAILABLE_IN_1_44
 hb_font_t *           pango_font_get_hb_font       (PangoFont        *font);
 
+PANGO_AVAILABLE_IN_1_50
+PangoLanguage **      pango_font_get_languages     (PangoFont        *font);
+
+PANGO_AVAILABLE_IN_1_50
+GBytes *              pango_font_serialize         (PangoFont        *font);
+
+PANGO_AVAILABLE_IN_1_50
+PangoFont *           pango_font_deserialize       (PangoContext     *context,
+                                                    GBytes           *bytes,
+                                                    GError          **error);
+
 /**
  * PANGO_GLYPH_EMPTY:
  *
@@ -652,6 +688,11 @@ hb_font_t *           pango_font_get_hb_font       (PangoFont        *font);
 #define PANGO_UNKNOWN_GLYPH_HEIGHT 14
 #endif
 #endif
+
+G_DEFINE_AUTOPTR_CLEANUP_FUNC(PangoFontFamily, g_object_unref)
+G_DEFINE_AUTOPTR_CLEANUP_FUNC(PangoFontFace, g_object_unref)
+G_DEFINE_AUTOPTR_CLEANUP_FUNC(PangoFont, g_object_unref)
+G_DEFINE_AUTOPTR_CLEANUP_FUNC(PangoFontDescription, pango_font_description_free)
 
 G_END_DECLS
 

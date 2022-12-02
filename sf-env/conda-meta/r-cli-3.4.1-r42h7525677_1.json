@@ -1,0 +1,526 @@
+{
+  "build": "r42h7525677_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "r-base >=4.2,<4.3.0a0",
+    "r-glue"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-cli-3.4.1-r42h7525677_1",
+  "features": "",
+  "files": [
+    "lib/R/library/cli/DESCRIPTION",
+    "lib/R/library/cli/INDEX",
+    "lib/R/library/cli/LICENSE",
+    "lib/R/library/cli/Meta/Rd.rds",
+    "lib/R/library/cli/Meta/features.rds",
+    "lib/R/library/cli/Meta/hsearch.rds",
+    "lib/R/library/cli/Meta/links.rds",
+    "lib/R/library/cli/Meta/nsInfo.rds",
+    "lib/R/library/cli/Meta/package.rds",
+    "lib/R/library/cli/NAMESPACE",
+    "lib/R/library/cli/NEWS.md",
+    "lib/R/library/cli/R/cli",
+    "lib/R/library/cli/R/cli.rdb",
+    "lib/R/library/cli/R/cli.rdx",
+    "lib/R/library/cli/R/sysdata.rdb",
+    "lib/R/library/cli/R/sysdata.rdx",
+    "lib/R/library/cli/examples/apps/news.R",
+    "lib/R/library/cli/examples/apps/outdated.R",
+    "lib/R/library/cli/examples/apps/search.R",
+    "lib/R/library/cli/examples/apps/up.R",
+    "lib/R/library/cli/help/AnIndex",
+    "lib/R/library/cli/help/aliases.rds",
+    "lib/R/library/cli/help/cli.rdb",
+    "lib/R/library/cli/help/cli.rdx",
+    "lib/R/library/cli/help/figures/demo-spinners.svg",
+    "lib/R/library/cli/help/figures/get-spinner.svg",
+    "lib/R/library/cli/help/figures/make-spinner-custom.svg",
+    "lib/R/library/cli/help/figures/make-spinner-default.svg",
+    "lib/R/library/cli/help/figures/make-spinner-template.svg",
+    "lib/R/library/cli/help/figures/progress-1.svg",
+    "lib/R/library/cli/help/figures/progress-after.svg",
+    "lib/R/library/cli/help/figures/progress-along-1.svg",
+    "lib/R/library/cli/help/figures/progress-along-2.svg",
+    "lib/R/library/cli/help/figures/progress-along-3.svg",
+    "lib/R/library/cli/help/figures/progress-clear.svg",
+    "lib/R/library/cli/help/figures/progress-current.svg",
+    "lib/R/library/cli/help/figures/progress-format.svg",
+    "lib/R/library/cli/help/figures/progress-message.svg",
+    "lib/R/library/cli/help/figures/progress-natotal.svg",
+    "lib/R/library/cli/help/figures/progress-output.svg",
+    "lib/R/library/cli/help/figures/progress-output2.svg",
+    "lib/R/library/cli/help/figures/progress-step-dynamic.svg",
+    "lib/R/library/cli/help/figures/progress-step-msg.svg",
+    "lib/R/library/cli/help/figures/progress-step-spin.svg",
+    "lib/R/library/cli/help/figures/progress-step.svg",
+    "lib/R/library/cli/help/figures/progress-tasks.svg",
+    "lib/R/library/cli/help/paths.rds",
+    "lib/R/library/cli/html/00Index.html",
+    "lib/R/library/cli/html/R.css",
+    "lib/R/library/cli/include/cli/progress.h",
+    "lib/R/library/cli/libs/cli.so",
+    "lib/R/library/cli/logo.txt",
+    "lib/R/library/cli/scripts/news.R",
+    "lib/R/library/cli/scripts/outdated.R",
+    "lib/R/library/cli/scripts/search.R",
+    "lib/R/library/cli/scripts/up.R",
+    "lib/R/library/cli/shiny/along/app.R",
+    "lib/R/library/cli/shiny/format/app.R",
+    "lib/R/library/cli/shiny/nested/app.R",
+    "lib/R/library/cli/shiny/output/app.R",
+    "lib/R/library/cli/shiny/simple/app.R"
+  ],
+  "fn": "r-cli-3.4.1-r42h7525677_1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-cli-3.4.1-r42h7525677_1",
+    "type": 1
+  },
+  "md5": "6daa2824e4f5cc70e2de3844e1e795a6",
+  "name": "r-cli",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-cli-3.4.1-r42h7525677_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/cli/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "12edeffd61799d62226050dc78944ea2e8d6316ab64fcdd4a8f12e062406a2e2",
+        "sha256_in_prefix": "12edeffd61799d62226050dc78944ea2e8d6316ab64fcdd4a8f12e062406a2e2",
+        "size_in_bytes": 1706
+      },
+      {
+        "_path": "lib/R/library/cli/INDEX",
+        "path_type": "hardlink",
+        "sha256": "a19ea7e08b905653f5845d2a908c39551bb7b9e84a93b380fc977cf9b3f3ddfe",
+        "sha256_in_prefix": "a19ea7e08b905653f5845d2a908c39551bb7b9e84a93b380fc977cf9b3f3ddfe",
+        "size_in_bytes": 6657
+      },
+      {
+        "_path": "lib/R/library/cli/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "cb0b4cc2c4113b19accefd9330a21b7a82c027bf46bc5dd1c5fff61507987af0",
+        "sha256_in_prefix": "cb0b4cc2c4113b19accefd9330a21b7a82c027bf46bc5dd1c5fff61507987af0",
+        "size_in_bytes": 41
+      },
+      {
+        "_path": "lib/R/library/cli/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "cd6c99e938dbf87958797d5da6ebbc8054c2620ab36d9a323170a0ef674fcb83",
+        "sha256_in_prefix": "cd6c99e938dbf87958797d5da6ebbc8054c2620ab36d9a323170a0ef674fcb83",
+        "size_in_bytes": 4876
+      },
+      {
+        "_path": "lib/R/library/cli/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/cli/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "d5225518300d66c344f47d4c1387b086aaed69e3b983bbaeca0e68c139a9a5cf",
+        "sha256_in_prefix": "d5225518300d66c344f47d4c1387b086aaed69e3b983bbaeca0e68c139a9a5cf",
+        "size_in_bytes": 4444
+      },
+      {
+        "_path": "lib/R/library/cli/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "46f896a963e896879bfdf2ab2e8a66deda22e10d812b3485c6f796816ea42c56",
+        "sha256_in_prefix": "46f896a963e896879bfdf2ab2e8a66deda22e10d812b3485c6f796816ea42c56",
+        "size_in_bytes": 2455
+      },
+      {
+        "_path": "lib/R/library/cli/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "94078d5c5f7008b4a4367f77cd7a26ab5ed3e011789c0d55121e2457d42ac5af",
+        "sha256_in_prefix": "94078d5c5f7008b4a4367f77cd7a26ab5ed3e011789c0d55121e2457d42ac5af",
+        "size_in_bytes": 1795
+      },
+      {
+        "_path": "lib/R/library/cli/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "4a065196ac5d459e2540fa88808322c21ef36480db1da961a43d41ea5168ff2a",
+        "sha256_in_prefix": "4a065196ac5d459e2540fa88808322c21ef36480db1da961a43d41ea5168ff2a",
+        "size_in_bytes": 1622
+      },
+      {
+        "_path": "lib/R/library/cli/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "420d35d16f77b577ca4503c6d563b1105f7cf191992eab16200163ced47e2739",
+        "sha256_in_prefix": "420d35d16f77b577ca4503c6d563b1105f7cf191992eab16200163ced47e2739",
+        "size_in_bytes": 5509
+      },
+      {
+        "_path": "lib/R/library/cli/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "111578f476b13f8311af8e4528396bb7cd5135ad1f8cbde9692a343d7eb28309",
+        "sha256_in_prefix": "111578f476b13f8311af8e4528396bb7cd5135ad1f8cbde9692a343d7eb28309",
+        "size_in_bytes": 15518
+      },
+      {
+        "_path": "lib/R/library/cli/R/cli",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/cli/R/cli.rdb",
+        "path_type": "hardlink",
+        "sha256": "f0c42831c37cb6f7d91762c07e1eebed06dd07f3ee650887dcd1ecf55e75b6fa",
+        "sha256_in_prefix": "f0c42831c37cb6f7d91762c07e1eebed06dd07f3ee650887dcd1ecf55e75b6fa",
+        "size_in_bytes": 575108
+      },
+      {
+        "_path": "lib/R/library/cli/R/cli.rdx",
+        "path_type": "hardlink",
+        "sha256": "3aabfafa6280b09b4814eec57f1f649b38b08493dcf389ce61e2afd916d7ef79",
+        "sha256_in_prefix": "3aabfafa6280b09b4814eec57f1f649b38b08493dcf389ce61e2afd916d7ef79",
+        "size_in_bytes": 8359
+      },
+      {
+        "_path": "lib/R/library/cli/R/sysdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "1d378f1514152d73be434ecf72c2e324b8b72c438c782f86353a3bc6383530f7",
+        "sha256_in_prefix": "1d378f1514152d73be434ecf72c2e324b8b72c438c782f86353a3bc6383530f7",
+        "size_in_bytes": 140978
+      },
+      {
+        "_path": "lib/R/library/cli/R/sysdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "3d9b140c19ead408c8c53977b18aea6e3e6d361183f5d55268afdf27013a1ecc",
+        "sha256_in_prefix": "3d9b140c19ead408c8c53977b18aea6e3e6d361183f5d55268afdf27013a1ecc",
+        "size_in_bytes": 249
+      },
+      {
+        "_path": "lib/R/library/cli/examples/apps/news.R",
+        "path_type": "hardlink",
+        "sha256": "1de48ae950f6f95a805bfdbd81cbec66734cf158d10f9433788d2211f125ef12",
+        "sha256_in_prefix": "1de48ae950f6f95a805bfdbd81cbec66734cf158d10f9433788d2211f125ef12",
+        "size_in_bytes": 2987
+      },
+      {
+        "_path": "lib/R/library/cli/examples/apps/outdated.R",
+        "path_type": "hardlink",
+        "sha256": "0052b0c3993ce7485d8c5de812e45d74285ed591453ebd933f6cbccc41587a69",
+        "sha256_in_prefix": "0052b0c3993ce7485d8c5de812e45d74285ed591453ebd933f6cbccc41587a69",
+        "size_in_bytes": 2072
+      },
+      {
+        "_path": "lib/R/library/cli/examples/apps/search.R",
+        "path_type": "hardlink",
+        "sha256": "6818e862eeadf45c258460f5d8e63d16dafafd38b1a5d3df25bcf0206756ab11",
+        "sha256_in_prefix": "6818e862eeadf45c258460f5d8e63d16dafafd38b1a5d3df25bcf0206756ab11",
+        "size_in_bytes": 2074
+      },
+      {
+        "_path": "lib/R/library/cli/examples/apps/up.R",
+        "path_type": "hardlink",
+        "sha256": "12407b1aa61c9a7d2a730fe5d313bce4efab719b0835f812f8a86e8bc04d6708",
+        "sha256_in_prefix": "12407b1aa61c9a7d2a730fe5d313bce4efab719b0835f812f8a86e8bc04d6708",
+        "size_in_bytes": 1534
+      },
+      {
+        "_path": "lib/R/library/cli/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "0e76f0678ea13f478aac2af7acde50086f3f1415803cdf887a53f80ce5400270",
+        "sha256_in_prefix": "0e76f0678ea13f478aac2af7acde50086f3f1415803cdf887a53f80ce5400270",
+        "size_in_bytes": 7069
+      },
+      {
+        "_path": "lib/R/library/cli/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "070e676da7c665a737e628e56e994d2b13f338a3fe3a782c30e21e3714a85fac",
+        "sha256_in_prefix": "070e676da7c665a737e628e56e994d2b13f338a3fe3a782c30e21e3714a85fac",
+        "size_in_bytes": 1951
+      },
+      {
+        "_path": "lib/R/library/cli/help/cli.rdb",
+        "path_type": "hardlink",
+        "sha256": "42e8dceea5cc6a2ffab83b8d86c6ed811d459cd8f9df77dfc90a48b81e019544",
+        "sha256_in_prefix": "42e8dceea5cc6a2ffab83b8d86c6ed811d459cd8f9df77dfc90a48b81e019544",
+        "size_in_bytes": 390497
+      },
+      {
+        "_path": "lib/R/library/cli/help/cli.rdx",
+        "path_type": "hardlink",
+        "sha256": "6a2593982879d1bce04115f3ab9e1292fdf4e8887ec4c4e6c7f26316e6818872",
+        "sha256_in_prefix": "6a2593982879d1bce04115f3ab9e1292fdf4e8887ec4c4e6c7f26316e6818872",
+        "size_in_bytes": 2594
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/demo-spinners.svg",
+        "path_type": "hardlink",
+        "sha256": "024d0ea985350cebc36f437158a9862f7563e20228bbcab0aee0661d0bd9905f",
+        "sha256_in_prefix": "024d0ea985350cebc36f437158a9862f7563e20228bbcab0aee0661d0bd9905f",
+        "size_in_bytes": 15630
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/get-spinner.svg",
+        "path_type": "hardlink",
+        "sha256": "1f319c1a272168c2ba04be0ed27c7c55cf64b055af7c35c09dc84ffd7add72e0",
+        "sha256_in_prefix": "1f319c1a272168c2ba04be0ed27c7c55cf64b055af7c35c09dc84ffd7add72e0",
+        "size_in_bytes": 15123
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/make-spinner-custom.svg",
+        "path_type": "hardlink",
+        "sha256": "b651e1ece1b8bd9b016763f51f268483abbcde5e5361c9387a39601d31bcfb33",
+        "sha256_in_prefix": "b651e1ece1b8bd9b016763f51f268483abbcde5e5361c9387a39601d31bcfb33",
+        "size_in_bytes": 16690
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/make-spinner-default.svg",
+        "path_type": "hardlink",
+        "sha256": "05448e30960e1398821ba649bbf6ac0807edd4c7ff528b99082ae7a3fef02cfb",
+        "sha256_in_prefix": "05448e30960e1398821ba649bbf6ac0807edd4c7ff528b99082ae7a3fef02cfb",
+        "size_in_bytes": 31294
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/make-spinner-template.svg",
+        "path_type": "hardlink",
+        "sha256": "5a338f99a14a9b0ee35bf9cfa216436bbb8cf2160effb5402d922860b84a2a4d",
+        "sha256_in_prefix": "5a338f99a14a9b0ee35bf9cfa216436bbb8cf2160effb5402d922860b84a2a4d",
+        "size_in_bytes": 31944
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-1.svg",
+        "path_type": "hardlink",
+        "sha256": "fb10709739d75507323beb45fb9fa20c5db46c6aa91e096ce9f1803233ce434c",
+        "sha256_in_prefix": "fb10709739d75507323beb45fb9fa20c5db46c6aa91e096ce9f1803233ce434c",
+        "size_in_bytes": 22303
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-after.svg",
+        "path_type": "hardlink",
+        "sha256": "ebc0ce5d17baf4ae7a52e5806949be4c1c5fe56d362684397a87641672c1e318",
+        "sha256_in_prefix": "ebc0ce5d17baf4ae7a52e5806949be4c1c5fe56d362684397a87641672c1e318",
+        "size_in_bytes": 12465
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-along-1.svg",
+        "path_type": "hardlink",
+        "sha256": "680ad5c5f3d4f6f6f7d78bb0cfe80f5d5de6da980e7ef6c23ba7f9ee1da1c692",
+        "sha256_in_prefix": "680ad5c5f3d4f6f6f7d78bb0cfe80f5d5de6da980e7ef6c23ba7f9ee1da1c692",
+        "size_in_bytes": 14212
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-along-2.svg",
+        "path_type": "hardlink",
+        "sha256": "dc0e70e737143ac3649bfd2b9928e1fa6b670ecc2902c177fa557dc3aff0a59a",
+        "sha256_in_prefix": "dc0e70e737143ac3649bfd2b9928e1fa6b670ecc2902c177fa557dc3aff0a59a",
+        "size_in_bytes": 13945
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-along-3.svg",
+        "path_type": "hardlink",
+        "sha256": "29b53af89e9e1b3af2fa9c6faf3869d8ff3ddc1ea46b9c7d093e8881fdf440f7",
+        "sha256_in_prefix": "29b53af89e9e1b3af2fa9c6faf3869d8ff3ddc1ea46b9c7d093e8881fdf440f7",
+        "size_in_bytes": 9676
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-clear.svg",
+        "path_type": "hardlink",
+        "sha256": "6e09013ae63b14c1db6124943fd6a2a51d6f4fc634e7138af55b4c48f5ca00a0",
+        "sha256_in_prefix": "6e09013ae63b14c1db6124943fd6a2a51d6f4fc634e7138af55b4c48f5ca00a0",
+        "size_in_bytes": 28477
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-current.svg",
+        "path_type": "hardlink",
+        "sha256": "42a2fe95e201afb515383c31954ec1f365310899a5c055d924220ddeac997255",
+        "sha256_in_prefix": "42a2fe95e201afb515383c31954ec1f365310899a5c055d924220ddeac997255",
+        "size_in_bytes": 22439
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-format.svg",
+        "path_type": "hardlink",
+        "sha256": "6aa16d186434f1e3373930f000db1b4f01867c34231b0c77b568a6ccb389904d",
+        "sha256_in_prefix": "6aa16d186434f1e3373930f000db1b4f01867c34231b0c77b568a6ccb389904d",
+        "size_in_bytes": 6628
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-message.svg",
+        "path_type": "hardlink",
+        "sha256": "b9c81b85991ab6eaa3cfc956b390c088403aaf62bcf90dcf6b8f361dec6e21bf",
+        "sha256_in_prefix": "b9c81b85991ab6eaa3cfc956b390c088403aaf62bcf90dcf6b8f361dec6e21bf",
+        "size_in_bytes": 5228
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-natotal.svg",
+        "path_type": "hardlink",
+        "sha256": "7bb105da96cf6aadbd2b7e7cbb7a209b01bd3cf63df0ab493340cab49aa3aa4b",
+        "sha256_in_prefix": "7bb105da96cf6aadbd2b7e7cbb7a209b01bd3cf63df0ab493340cab49aa3aa4b",
+        "size_in_bytes": 14193
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-output.svg",
+        "path_type": "hardlink",
+        "sha256": "93dad42192393c0a11b5e1aa2a3898e5849ede6a83fa02a74d2925a87b4b679b",
+        "sha256_in_prefix": "93dad42192393c0a11b5e1aa2a3898e5849ede6a83fa02a74d2925a87b4b679b",
+        "size_in_bytes": 21819
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-output2.svg",
+        "path_type": "hardlink",
+        "sha256": "9037875a2f1b1869e2c1cd11d6ef1988fb7295a086c8134f803f8f744452961c",
+        "sha256_in_prefix": "9037875a2f1b1869e2c1cd11d6ef1988fb7295a086c8134f803f8f744452961c",
+        "size_in_bytes": 21759
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-step-dynamic.svg",
+        "path_type": "hardlink",
+        "sha256": "cae732ddde16d8b87832cba37f5a2214a55e76e8bc2e1e8aa79426b6ec31738a",
+        "sha256_in_prefix": "cae732ddde16d8b87832cba37f5a2214a55e76e8bc2e1e8aa79426b6ec31738a",
+        "size_in_bytes": 18718
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-step-msg.svg",
+        "path_type": "hardlink",
+        "sha256": "709494fbefa7e627a12811a907c9e4b74071e6b09ea1e8f2c7062a78e8fcd63b",
+        "sha256_in_prefix": "709494fbefa7e627a12811a907c9e4b74071e6b09ea1e8f2c7062a78e8fcd63b",
+        "size_in_bytes": 6353
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-step-spin.svg",
+        "path_type": "hardlink",
+        "sha256": "3fa9ec84e67359d208af685cb57962d2d2cede172dea2a8bc871ae496f852f65",
+        "sha256_in_prefix": "3fa9ec84e67359d208af685cb57962d2d2cede172dea2a8bc871ae496f852f65",
+        "size_in_bytes": 15404
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-step.svg",
+        "path_type": "hardlink",
+        "sha256": "a65558c3da9f6e161648a69d937dab912b7019b4ed844a44f62970af6363e9f2",
+        "sha256_in_prefix": "a65558c3da9f6e161648a69d937dab912b7019b4ed844a44f62970af6363e9f2",
+        "size_in_bytes": 6584
+      },
+      {
+        "_path": "lib/R/library/cli/help/figures/progress-tasks.svg",
+        "path_type": "hardlink",
+        "sha256": "4c17b6a88556a49eaa050487063c9a679742235d4f6c748a5c92a0ef7c941a3d",
+        "sha256_in_prefix": "4c17b6a88556a49eaa050487063c9a679742235d4f6c748a5c92a0ef7c941a3d",
+        "size_in_bytes": 3018
+      },
+      {
+        "_path": "lib/R/library/cli/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "0d17a97e696dea7b2a822493796bce45ac3443e3ed1d8e9b1451ac719697541f",
+        "sha256_in_prefix": "0d17a97e696dea7b2a822493796bce45ac3443e3ed1d8e9b1451ac719697541f",
+        "size_in_bytes": 1079
+      },
+      {
+        "_path": "lib/R/library/cli/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "9c3b2db1b1fedd64361ad6fd498fe9d3461743e6932a481a6a05e0be2630417c",
+        "sha256_in_prefix": "9c3b2db1b1fedd64361ad6fd498fe9d3461743e6932a481a6a05e0be2630417c",
+        "size_in_bytes": 33703
+      },
+      {
+        "_path": "lib/R/library/cli/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/cli/include/cli/progress.h",
+        "path_type": "hardlink",
+        "sha256": "1bb3ff0a874335527c8afca9e1607a48d76b7609ba056a5dcd6f2e7d4f878708",
+        "sha256_in_prefix": "1bb3ff0a874335527c8afca9e1607a48d76b7609ba056a5dcd6f2e7d4f878708",
+        "size_in_bytes": 11748
+      },
+      {
+        "_path": "lib/R/library/cli/libs/cli.so",
+        "path_type": "hardlink",
+        "sha256": "41dad277856b56bc191a181c8aa464a778f173f498d335f66206c702cdb40e2c",
+        "sha256_in_prefix": "41dad277856b56bc191a181c8aa464a778f173f498d335f66206c702cdb40e2c",
+        "size_in_bytes": 187024
+      },
+      {
+        "_path": "lib/R/library/cli/logo.txt",
+        "path_type": "hardlink",
+        "sha256": "09754cf35ed9f7a49824f564701b1182fbb92e85cffea94386ba0508a7815e2a",
+        "sha256_in_prefix": "09754cf35ed9f7a49824f564701b1182fbb92e85cffea94386ba0508a7815e2a",
+        "size_in_bytes": 2742
+      },
+      {
+        "_path": "lib/R/library/cli/scripts/news.R",
+        "path_type": "hardlink",
+        "sha256": "1de48ae950f6f95a805bfdbd81cbec66734cf158d10f9433788d2211f125ef12",
+        "sha256_in_prefix": "1de48ae950f6f95a805bfdbd81cbec66734cf158d10f9433788d2211f125ef12",
+        "size_in_bytes": 2987
+      },
+      {
+        "_path": "lib/R/library/cli/scripts/outdated.R",
+        "path_type": "hardlink",
+        "sha256": "3a95394ec4aee51eea834fac5311964c7a06e1d8d4d998caf038c5b3afa6e4ad",
+        "sha256_in_prefix": "3a95394ec4aee51eea834fac5311964c7a06e1d8d4d998caf038c5b3afa6e4ad",
+        "size_in_bytes": 2033
+      },
+      {
+        "_path": "lib/R/library/cli/scripts/search.R",
+        "path_type": "hardlink",
+        "sha256": "35cb0d67fe3b9da847525ec540ca9cbda5f6382da3620837f462f8e6620e1522",
+        "sha256_in_prefix": "35cb0d67fe3b9da847525ec540ca9cbda5f6382da3620837f462f8e6620e1522",
+        "size_in_bytes": 2071
+      },
+      {
+        "_path": "lib/R/library/cli/scripts/up.R",
+        "path_type": "hardlink",
+        "sha256": "cceed73f982c14dd0440dc995eaf29f980fbe9ef48d8da9ade096b2b3c06882b",
+        "sha256_in_prefix": "cceed73f982c14dd0440dc995eaf29f980fbe9ef48d8da9ade096b2b3c06882b",
+        "size_in_bytes": 1528
+      },
+      {
+        "_path": "lib/R/library/cli/shiny/along/app.R",
+        "path_type": "hardlink",
+        "sha256": "978071879afe829b8470e08286a0eeeecdeae732ba2aa669fe444461b4b12fdd",
+        "sha256_in_prefix": "978071879afe829b8470e08286a0eeeecdeae732ba2aa669fe444461b4b12fdd",
+        "size_in_bytes": 1344
+      },
+      {
+        "_path": "lib/R/library/cli/shiny/format/app.R",
+        "path_type": "hardlink",
+        "sha256": "e60ebbda648cdd8a5e5405c7a0bb0ac43de18d58f61275a48f7db58fdeb77aed",
+        "sha256_in_prefix": "e60ebbda648cdd8a5e5405c7a0bb0ac43de18d58f61275a48f7db58fdeb77aed",
+        "size_in_bytes": 1395
+      },
+      {
+        "_path": "lib/R/library/cli/shiny/nested/app.R",
+        "path_type": "hardlink",
+        "sha256": "0cc3f5788a19644f2184286a2a0e7c0dd2dc8a6e9809a3a9af0546e82fc09df5",
+        "sha256_in_prefix": "0cc3f5788a19644f2184286a2a0e7c0dd2dc8a6e9809a3a9af0546e82fc09df5",
+        "size_in_bytes": 1694
+      },
+      {
+        "_path": "lib/R/library/cli/shiny/output/app.R",
+        "path_type": "hardlink",
+        "sha256": "9c23fad5619c9fcd5b33dae2d3988190195fa2f15bc3b1408e1d568c685874c3",
+        "sha256_in_prefix": "9c23fad5619c9fcd5b33dae2d3988190195fa2f15bc3b1408e1d568c685874c3",
+        "size_in_bytes": 1415
+      },
+      {
+        "_path": "lib/R/library/cli/shiny/simple/app.R",
+        "path_type": "hardlink",
+        "sha256": "6e92caf34f9c182f420cfece48b15de72e5f02fc493ebc26cffdd97da27f72f4",
+        "sha256_in_prefix": "6e92caf34f9c182f420cfece48b15de72e5f02fc493ebc26cffdd97da27f72f4",
+        "size_in_bytes": 1357
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "892bf66b395cbca0a3e97cbd64354da10986dfeaecbe5aa153cfe8dabf6df99b",
+  "size": 1241271,
+  "subdir": "linux-64",
+  "timestamp": 1665100415000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-cli-3.4.1-r42h7525677_1.tar.bz2",
+  "version": "3.4.1"
+}

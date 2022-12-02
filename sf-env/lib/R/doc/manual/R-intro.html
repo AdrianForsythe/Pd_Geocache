@@ -2,8 +2,8 @@
 <html>
 <!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- This manual is for R, version 4.1.2 (2021-11-01).
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- This manual is for R, version 4.2.1 (2022-06-23).
 
 Copyright (C) 1990 W. N. Venables
 
@@ -13,7 +13,7 @@ Copyright (C) 1997 R. Gentleman & R. Ihaka
 
 Copyright (C) 1997, 1998 M. Maechler
 
-Copyright (C) 1999-2021 R Core Team
+Copyright (C) 1999-2022 R Core Team
 
 Permission is granted to make and distribute verbatim copies of this
 manual provided the copyright notice and this permission notice are
@@ -128,6 +128,10 @@ p {
     margin-bottom: 1.2ex;
 }
 
+#Top > .header, #Top > h1 {     /* for Texinfo 6.8 */
+    display: none
+}
+
 -->
 </style>
 
@@ -180,13 +184,13 @@ analysis, classification, clustering, ...).
 <p>This manual provides information on data types, programming elements,
 statistical modelling and graphics.
 </p>
-<p>This manual is for R, version 4.1.2 (2021-11-01).
+<p>This manual is for R, version 4.2.1 (2022-06-23).
 </p>
 <p>Copyright &copy; 1990 W. N. Venables<br>
 Copyright &copy; 1992 W. N. Venables &amp; D. M. Smith<br>
 Copyright &copy; 1997 R. Gentleman &amp; R. Ihaka<br>
 Copyright &copy; 1997, 1998 M. Maechler<br>
-Copyright &copy; 1999&ndash;2021 R Core Team
+Copyright &copy; 1999&ndash;2022 R Core Team
 </p>
 <blockquote>
 <p>Permission is granted to make and distribute verbatim copies of this
@@ -2959,12 +2963,9 @@ restrictions on lists that may be made into data frames, namely
 factors, numeric matrices, lists, or other data frames.
 </li><li> Matrices, lists, and data frames provide as many variables to the new
 data frame as they have columns, elements, or variables, respectively.
-</li><li> Numeric vectors, logicals and factors are included as is, and by
-default<a id="DOCF18" href="#FOOT18"><sup>18</sup></a> character vectors are coerced to be
-factors, whose levels are the unique values appearing in the vector.
 </li><li> Vector structures appearing as variables of the data frame must all have
-the <em>same length</em>, and matrix structures must all have the same
-<em>row size</em>.
+the <em>same length</em>, and matrix structures must all have the
+<em>same number of rows</em>.
 </li></ul>
 
 <p>A data frame may for many purposes be regarded as a matrix with columns
@@ -3144,7 +3145,7 @@ packages) have been attached and detached.  Initially it gives
 <pre class="example">&gt; search()
 [1] &quot;.GlobalEnv&quot;   &quot;Autoloads&quot;    &quot;package:base&quot;
 </pre></div>
-<p>where <code>.GlobalEnv</code> is the workspace.<a id="DOCF19" href="#FOOT19"><sup>19</sup></a>
+<p>where <code>.GlobalEnv</code> is the workspace.<a id="DOCF18" href="#FOOT18"><sup>18</sup></a>
 </p>
 <p>After <code>lentils</code> is attached we have
 </p>
@@ -3184,7 +3185,7 @@ rather than entered during an R session at the keyboard.  R input
 facilities are simple and their requirements are fairly strict and even
 rather inflexible.  There is a clear presumption by the designers of
 R that you will be able to modify your input files using other tools,
-such as file editors or Perl<a id="DOCF20" href="#FOOT20"><sup>20</sup></a> to fit in with the
+such as file editors or Perl<a id="DOCF19" href="#FOOT19"><sup>19</sup></a> to fit in with the
 requirements of R.  Generally this is very simple.
 </p>
 <p>If variables are to be held mainly in data frames, as we strongly
@@ -3244,7 +3245,7 @@ to be read as a data frame might look as follows.
 
 <p>By default numeric items (except row labels) are read as numeric
 variables and non-numeric variables, such as <code>Cent.heat</code> in the
-example, as factors.  This can be changed if necessary.
+example, as character variables.  This can be changed if necessary.
 </p>
 <p>The function <code>read.table()</code> can then be used to read the data frame
 directly
@@ -3744,8 +3745,8 @@ mean of x mean of y
 
 <p>which does indicate a significant difference, assuming normality.  By
 default the R function does not assume equality of variances in the
-two samples (in contrast to the similar <small>S-PLUS</small> <code>t.test</code>
-function).  We can use the F test to test for equality in the variances,
+two samples.
+We can use the F test to test for equality in the variances,
 provided that the two samples are from normal populations.
 </p>
 <div class="example">
@@ -3944,7 +3945,7 @@ of <var>expr_1</var>.
 </p>
 <p>As an example, suppose <code>ind</code> is a vector of class indicators and we
 wish to produce separate plots of <code>y</code> versus <code>x</code> within
-classes.  One possibility here is to use <code>coplot()</code>,<a id="DOCF21" href="#FOOT21"><sup>21</sup></a>
+classes.  One possibility here is to use <code>coplot()</code>,<a id="DOCF20" href="#FOOT20"><sup>20</sup></a>
 which will produce an array of plots corresponding to each level of the
 factor.  Another way to do this, now putting all plots on the one
 display, is as follows:
@@ -4114,7 +4115,7 @@ is a generalized inverse of <em class='math'>X'X</em>.
 <p>and so on.
 </p>
 <p>The classical R function <code>lsfit()</code> does this job quite well, and
-more<a id="DOCF22" href="#FOOT22"><sup>22</sup></a>.  It in turn uses the functions <code>qr()</code> and <code>qr.coef()</code>
+more<a id="DOCF21" href="#FOOT21"><sup>21</sup></a>.  It in turn uses the functions <code>qr()</code> and <code>qr.coef()</code>
 in the slightly counterintuitive way above to do this part of the
 calculation.  Hence there is probably some value in having just this
 part isolated in a simple to use function if it is going to be in
@@ -4272,8 +4273,6 @@ topic and is not covered further here.
 <p>If global and permanent assignments are intended within a function, then
 either the &ldquo;superassignment&rdquo; operator, <code>&lt;&lt;-</code> or the function
 <code>assign()</code> can be used.  See the <code>help</code> document for details.
-<small>S-PLUS</small> users should be aware that <code>&lt;&lt;-</code> has different semantics
-in R.  These are discussed further in <a href="#Scope">Scope</a>.
 </p>
 <hr>
 </div>
@@ -4528,7 +4527,7 @@ replaces the value, in that environment, with the value of right hand
 side.  If the global or top-level environment is reached without finding
 the symbol <code>total</code> then that variable is created and assigned to
 there.  For most users <code>&lt;&lt;-</code> creates a global variable and assigns
-the value of the right hand side to it<a id="DOCF23" href="#FOOT23"><sup>23</sup></a>.  Only when <code>&lt;&lt;-</code> has
+the value of the right hand side to it<a id="DOCF22" href="#FOOT22"><sup>22</sup></a>.  Only when <code>&lt;&lt;-</code> has
 been used in a function that was returned as the value of another
 function will the special behavior described here occur.
 </p>
@@ -4585,7 +4584,7 @@ the <code>R_PROFILE</code> environment variable.  If that variable is unset,
 the file <samp>Rprofile.site</samp> in the R home subdirectory <samp>etc</samp> is
 used.  This file should contain the commands that you want to execute
 every time R is started under your system.  A second, personal,
-profile file named <samp>.Rprofile</samp><a id="DOCF24" href="#FOOT24"><sup>24</sup></a> can be placed in any directory.  If R is invoked in that
+profile file named <samp>.Rprofile</samp><a id="DOCF23" href="#FOOT23"><sup>23</sup></a> can be placed in any directory.  If R is invoked in that
 directory then that file will be sourced.  This file gives individual
 users control over their workspace and allows for different startup
 procedures in different working directories.  If no <samp>.Rprofile</samp>
@@ -5636,8 +5635,7 @@ and <code>nlminb()</code>,
 <span id="index-nlm"></span>
 <span id="index-optim"></span>
 <span id="index-nlminb"></span>
-which provide the functionality (and more) of <small>S-PLUS</small>&rsquo;s <code>ms()</code> and
-<code>nlminb()</code>.  We seek the parameter values that minimize some index
+We seek the parameter values that minimize some index
 of lack-of-fit, and they do this by trying out various parameter values
 iteratively.  Unlike linear regression for example, there is no
 guarantee that the procedure will converge on satisfactory estimates.
@@ -6537,7 +6535,7 @@ complete.
 &gt; par(oldpar)
 </pre></div>
 
-<p>To save and restore <em>all</em> settable<a id="DOCF25" href="#FOOT25"><sup>25</sup></a> graphical parameters use
+<p>To save and restore <em>all</em> settable<a id="DOCF24" href="#FOOT24"><sup>24</sup></a> graphical parameters use
 </p>
 <div class="example">
 <pre class="example">&gt; oldpar &lt;- par(no.readonly=TRUE)
@@ -6767,8 +6765,7 @@ tick marks.
 <dd><p>Axis styles for the <em class='math'>x</em> and <em class='math'>y</em> axes, respectively.   With
 styles <code>&quot;i&quot;</code> (internal) and <code>&quot;r&quot;</code> (the default) tick marks
 always fall within the range of the data, however style <code>&quot;r&quot;</code>
-leaves a small amount of space at the edges.  (S has other styles
-not implemented in R.)
+leaves a small amount of space at the edges.
 </p>
 </dd>
 </dl>
@@ -7960,14 +7957,6 @@ large and complicated calculations to be done.  Currently the maximum
 value accepted is 100000.
 </p>
 </dd>
-<dt><span><samp>--max-mem-size=<var>N</var></samp></span></dt>
-<dd><p>(Windows only) Specify a limit for the amount of memory to be used both
-for R objects and working areas.  This is set by default to the
-smaller of the amount of physical RAM in the machine and for 32-bit
-R, 1.5Gb<a id="DOCF26" href="#FOOT26"><sup>26</sup></a>, and must be between 32Mb and the
-maximum allowed on that version of Windows.
-</p>
-</dd>
 <dt><span><samp>--quiet</samp></span></dt>
 <dt><span><samp>--silent</samp></span></dt>
 <dt><span><samp>-q</samp></span></dt>
@@ -8379,9 +8368,11 @@ Next: <a href="#Function-and-variable-index" accesskey="n" rel="next">Function a
 time R is configured for compilation under UNIX, an inbuilt command
 line editor allowing recall, editing and re-submission of prior commands
 is used.  Note that other versions of <strong>readline</strong> exist and may be
-used by the inbuilt command line editor: this used to happen on macOS.
+used by the inbuilt command line editor: this is most common on macOS.
+You can find out which version (if any) is available by running
+<code>extSoftVersion()</code> in an R session.
 </p>
-<p>It can be disabled (useful for usage with <acronym>ESS</acronym> <a id="DOCF27" href="#FOOT27"><sup>27</sup></a>) using the startup option
+<p>It can be disabled (useful for usage with <acronym>ESS</acronym> <a id="DOCF25" href="#FOOT25"><sup>25</sup></a>) using the startup option
 <samp>--no-readline</samp>.
 </p>
 <p>Windows versions of R have somewhat simpler command-line editing: see
@@ -8389,7 +8380,7 @@ used by the inbuilt command line editor: this used to happen on macOS.
 file <samp>README.Rterm</samp> for command-line editing under
 <code>Rterm.exe</code>.
 </p>
-<p>When using R with GNU<a id="DOCF28" href="#FOOT28"><sup>28</sup></a> <strong>readline</strong>
+<p>When using R with GNU<a id="DOCF26" href="#FOOT26"><sup>26</sup></a> <strong>readline</strong>
 capabilities, the functions described below are available, as well as
 others (probably) documented in <code>man readline</code> or <code>info
 readline</code> on your system.
@@ -8398,7 +8389,7 @@ readline</code> on your system.
 characters, such as <kbd>Control-m</kbd>, are obtained by holding the
 <tt class="key">CTRL</tt> down while you press the <tt class="key">m</tt> key, and are written as
 <kbd>C-m</kbd> below.  Meta characters, such as <kbd>Meta-b</kbd>, are typed by
-holding down <tt class="key">META</tt><a id="DOCF29" href="#FOOT29"><sup>29</sup></a> and pressing <tt class="key">b</tt>, and written as <kbd>M-b</kbd>
+holding down <tt class="key">META</tt><a id="DOCF27" href="#FOOT27"><sup>27</sup></a> and pressing <tt class="key">b</tt>, and written as <kbd>M-b</kbd>
 in the following.  If your terminal does not have a <tt class="key">META</tt> key
 enabled, you can still type Meta characters using two-character
 sequences starting with <kbd>ESC</kbd>.  Thus, to enter <kbd>M-b</kbd>, you could
@@ -8406,7 +8397,7 @@ type <tt class="key">ESC</tt><tt class="key">b</tt>.  The <kbd>ESC</kbd> charact
 allowed on terminals with real Meta keys.  Note that case is significant
 for Meta characters.
 </p>
-<p>Some but not all versions<a id="DOCF30" href="#FOOT30"><sup>30</sup></a> of <strong>readline</strong>
+<p>Some but not all versions<a id="DOCF28" href="#FOOT28"><sup>28</sup></a> of <strong>readline</strong>
 will recognize resizing of the terminal window so this is best avoided.
 </p>
 </div>
@@ -9347,49 +9338,41 @@ root B with A = BB&rsquo; and find the squared length
 of the solution of By = x , perhaps using the Cholesky or
 eigen decomposition of A.  </p>
 <h5><a id="FOOT18" href="#DOCF18">(18)</a></h5>
-<p>Conversion of character columns to factors is
-overridden using the <code>stringsAsFactors</code> argument to the
-<code>data.frame()</code> function.</p>
-<h5><a id="FOOT19" href="#DOCF19">(19)</a></h5>
 <p>See the on-line help
 for <code>autoload</code> for the meaning of the second term.</p>
-<h5><a id="FOOT20" href="#DOCF20">(20)</a></h5>
+<h5><a id="FOOT19" href="#DOCF19">(19)</a></h5>
 <p>Under UNIX, the utilities
 <code>sed</code> or<code>awk</code> can be used.</p>
-<h5><a id="FOOT21" href="#DOCF21">(21)</a></h5>
+<h5><a id="FOOT20" href="#DOCF20">(20)</a></h5>
 <p>to be
 discussed later, or use <code>xyplot</code> from package <a href="https://CRAN.R-project.org/package=lattice"><strong>lattice</strong></a>.</p>
-<h5><a id="FOOT22" href="#DOCF22">(22)</a></h5>
+<h5><a id="FOOT21" href="#DOCF21">(21)</a></h5>
 <p>See also the methods described in <a href="#Statistical-models-in-R">Statistical models in R</a></p>
-<h5><a id="FOOT23" href="#DOCF23">(23)</a></h5>
+<h5><a id="FOOT22" href="#DOCF22">(22)</a></h5>
 <p>In some sense this
 mimics the behavior in <small>S-PLUS</small> since in <small>S-PLUS</small> this operator always
 creates or assigns to a global variable.</p>
-<h5><a id="FOOT24" href="#DOCF24">(24)</a></h5>
+<h5><a id="FOOT23" href="#DOCF23">(23)</a></h5>
 <p>So it is hidden under
 UNIX.</p>
-<h5><a id="FOOT25" href="#DOCF25">(25)</a></h5>
+<h5><a id="FOOT24" href="#DOCF24">(24)</a></h5>
 <p>Some graphics
 parameters such as the size of the current device are for information
 only.</p>
-<h5><a id="FOOT26" href="#DOCF26">(26)</a></h5>
-<p>2.5Gb on versions of Windows that support 3Gb per
-process and have the support enabled: see the <samp>rw-FAQ</samp> Q2.9; 3.5Gb
-on most 64-bit versions of Windows.</p>
-<h5><a id="FOOT27" href="#DOCF27">(27)</a></h5>
+<h5><a id="FOOT25" href="#DOCF25">(25)</a></h5>
 <p>The
 &lsquo;Emacs Speaks Statistics&rsquo; package; see the <acronym>URL</acronym>
 <a href="https://ESS.R-project.org/">https://ESS.R-project.org/</a></p>
-<h5><a id="FOOT28" href="#DOCF28">(28)</a></h5>
+<h5><a id="FOOT26" href="#DOCF26">(26)</a></h5>
 <p>It is possible to build R using an
 emulation of GNU <strong>readline</strong>, such as one based on NetBSD&rsquo;s
 <strong>editline</strong> (also known as <strong>libedit</strong>), in which case only a
 subset of the capabilities may be provided.</p>
-<h5><a id="FOOT29" href="#DOCF29">(29)</a></h5>
+<h5><a id="FOOT27" href="#DOCF27">(27)</a></h5>
 <p>On a PC keyboard this is usually the
 Alt key, occasionally the &lsquo;Windows&rsquo; key.  On a Mac keyboard normally no
 meta key is available.</p>
-<h5><a id="FOOT30" href="#DOCF30">(30)</a></h5>
+<h5><a id="FOOT28" href="#DOCF28">(28)</a></h5>
 <p>In particular, not versions 6.3 or
 later: this is worked around as from R 3.4.0.</p>
 </div>

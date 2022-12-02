@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: gdal_priv.h 6803b51bee1a39f759198a2b6f196d8c6c518555 2021-10-21 14:20:50 +0200 chacha21 $
+ * $Id$
  *
  * Name:     gdal_priv.h
  * Project:  GDAL Core
@@ -437,6 +437,9 @@ class CPL_DLL GDALDataset : public GDALMajorObject
     void  ShareLockWithParentDataset(GDALDataset* poParentDataset);
 
 //! @endcond
+
+    void                CleanupPostFileClosing();
+
     virtual int         CloseDependentDatasets();
 //! @cond Doxygen_Suppress
     int                 ValidateLayerCreationOptions( const char* const* papszLCO );
@@ -599,8 +602,7 @@ class CPL_DLL GDALDataset : public GDALMajorObject
     int           GetShared() const;
     void          MarkAsShared();
 
-    /** Set that the dataset must be deleted on close. */
-    void          MarkSuppressOnClose() { bSuppressOnClose = true; }
+    void          MarkSuppressOnClose();
 
     /** Return open options.
      * @return open options.
@@ -796,10 +798,18 @@ private:
 
     virtual int         TestCapability( const char * );
 
+    virtual std::vector<std::string> GetFieldDomainNames(CSLConstList papszOptions = nullptr) const;
+
     virtual const OGRFieldDomain* GetFieldDomain(const std::string& name) const;
 
     virtual bool        AddFieldDomain(std::unique_ptr<OGRFieldDomain>&& domain,
                                        std::string& failureReason);
+
+    virtual bool        DeleteFieldDomain(const std::string& name,
+                                          std::string& failureReason);
+
+    virtual bool        UpdateFieldDomain(std::unique_ptr<OGRFieldDomain>&& domain,
+                                          std::string& failureReason);
 
     virtual OGRLayer   *CreateLayer( const char *pszName,
                                      OGRSpatialReference *poSpatialRef = nullptr,
@@ -1040,6 +1050,7 @@ public:
     void          SetColorEntry( int, const GDALColorEntry * );
     int           CreateColorRamp( int, const GDALColorEntry * ,
                                    int, const GDALColorEntry * );
+    bool          IsIdentity() const;
 
     /** Convert a GDALColorTable* to a GDALRasterBandH.
      * @since GDAL 2.3
@@ -1124,6 +1135,15 @@ GDALAbstractBandBlockCache* GDALHashSetBandBlockCacheCreate(GDALRasterBand* poBa
 /* ******************************************************************** */
 
 class GDALMDArray;
+
+/** Range of values found in a mask band */
+typedef enum
+{
+    GMVR_UNKNOWN,           /*! Unknown (can also be used for any values between 0 and 255 for a Byte band) */
+    GMVR_0_AND_1_ONLY,      /*! Only 0 and 1 */
+    GMVR_0_AND_255_ONLY,    /*! Only 0 and 255 */
+} GDALMaskValueRange;
+
 
 /** A single raster band (or channel). */
 
@@ -1252,6 +1272,8 @@ class CPL_DLL GDALRasterBand : public GDALMajorObject
     virtual CPLErr FlushCache(bool bAtClosing = false);
     virtual char **GetCategoryNames();
     virtual double GetNoDataValue( int *pbSuccess = nullptr );
+    virtual int64_t GetNoDataValueAsInt64( int *pbSuccess = nullptr );
+    virtual uint64_t GetNoDataValueAsUInt64( int *pbSuccess = nullptr );
     virtual double GetMinimum( int *pbSuccess = nullptr );
     virtual double GetMaximum(int *pbSuccess = nullptr );
     virtual double GetOffset( int *pbSuccess = nullptr );
@@ -1263,6 +1285,8 @@ class CPL_DLL GDALRasterBand : public GDALMajorObject
 
     virtual CPLErr SetCategoryNames( char ** papszNames );
     virtual CPLErr SetNoDataValue( double dfNoData );
+    virtual CPLErr SetNoDataValueAsInt64( int64_t nNoData );
+    virtual CPLErr SetNoDataValueAsUInt64( uint64_t nNoData );
     virtual CPLErr DeleteNoDataValue();
     virtual CPLErr SetColorTable( GDALColorTable * poCT );
     virtual CPLErr SetColorInterpretation( GDALColorInterp eColorInterp );
@@ -1322,6 +1346,8 @@ class CPL_DLL GDALRasterBand : public GDALMajorObject
     virtual GDALRasterBand *GetMaskBand();
     virtual int             GetMaskFlags();
     virtual CPLErr          CreateMaskBand( int nFlagsIn );
+    virtual bool            IsMaskBand() const;
+    virtual GDALMaskValueRange GetMaskValueRange() const;
 
     virtual CPLVirtualMem  *GetVirtualMemAuto( GDALRWFlag eRWFlag,
                                                int *pnPixelSpace,
@@ -1374,6 +1400,9 @@ class CPL_DLL GDALAllValidMaskBand : public GDALRasterBand
     GDALRasterBand *GetMaskBand() override;
     int             GetMaskFlags() override;
 
+    bool            IsMaskBand() const override { return true; }
+    GDALMaskValueRange GetMaskValueRange() const override { return GMVR_0_AND_255_ONLY; }
+
     CPLErr ComputeStatistics( int bApproxOK,
                             double *pdfMin, double *pdfMax,
                             double *pdfMean, double *pdfStdDev,
@@ -1387,7 +1416,9 @@ class CPL_DLL GDALAllValidMaskBand : public GDALRasterBand
 
 class CPL_DLL GDALNoDataMaskBand : public GDALRasterBand
 {
-    double          dfNoDataValue;
+    double          dfNoDataValue = 0;
+    int64_t         nNoDataValueInt64 = 0;
+    uint64_t        nNoDataValueUInt64 = 0;
     GDALRasterBand *poParent;
 
     CPL_DISALLOW_COPY_ASSIGN(GDALNoDataMaskBand)
@@ -1401,6 +1432,9 @@ class CPL_DLL GDALNoDataMaskBand : public GDALRasterBand
   public:
     explicit GDALNoDataMaskBand( GDALRasterBand * );
     ~GDALNoDataMaskBand() override;
+
+    bool            IsMaskBand() const override { return true; }
+    GDALMaskValueRange GetMaskValueRange() const override { return GMVR_0_AND_255_ONLY; }
 
     static bool IsNoDataInRange(double dfNoDataValue,
                                 GDALDataType eDataType);
@@ -1422,6 +1456,9 @@ class CPL_DLL GDALNoDataValuesMaskBand : public GDALRasterBand
   public:
     explicit     GDALNoDataValuesMaskBand( GDALDataset * );
     ~GDALNoDataValuesMaskBand() override;
+
+    bool            IsMaskBand() const override { return true; }
+    GDALMaskValueRange GetMaskValueRange() const override { return GMVR_0_AND_255_ONLY; }
 };
 
 /* ******************************************************************** */
@@ -1445,6 +1482,8 @@ class GDALRescaledAlphaBand : public GDALRasterBand
   public:
     explicit GDALRescaledAlphaBand( GDALRasterBand * );
     ~GDALRescaledAlphaBand() override;
+
+    bool            IsMaskBand() const override { return true; }
 };
 //! @endcond
 
@@ -1601,7 +1640,7 @@ class CPL_DLL GDALDriver : public GDALMajorObject
                                            void * pProgressData );
 //! @endcond
     static CPLErr       QuietDelete( const char * pszName,
-                                     const char *const *papszAllowedDrivers = nullptr);
+                                     CSLConstList papszAllowedDrivers = nullptr);
 
 //! @cond Doxygen_Suppress
     static CPLErr       DefaultRename( const char * pszNewName,
@@ -1642,13 +1681,16 @@ class CPL_DLL GDALDriverManager : public GDALMajorObject
     int         nDrivers = 0;
     GDALDriver  **papoDrivers = nullptr;
     std::map<CPLString, GDALDriver*> oMapNameToDrivers{};
+    std::string                      m_osDriversIniPath{};
 
     GDALDriver  *GetDriver_unlocked( int iDriver )
             { return (iDriver >= 0 && iDriver < nDrivers) ?
                   papoDrivers[iDriver] : nullptr; }
 
-    GDALDriver  *GetDriverByName_unlocked( const char * pszName )
-            { return oMapNameToDrivers[CPLString(pszName).toupper()]; }
+    GDALDriver  *GetDriverByName_unlocked( const char * pszName ) const
+            { auto oIter = oMapNameToDrivers.find(CPLString(pszName).toupper());
+              return oIter == oMapNameToDrivers.end() ? nullptr : oIter->second;
+            }
 
     static char** GetSearchPaths(const char* pszGDAL_DRIVER_PATH);
 
@@ -1668,8 +1710,9 @@ class CPL_DLL GDALDriverManager : public GDALMajorObject
     void        DeregisterDriver( GDALDriver * );
 
     // AutoLoadDrivers is a no-op if compiled with GDAL_NO_AUTOLOAD defined.
-    static void        AutoLoadDrivers();
-    void        AutoSkipDrivers();
+    void               AutoLoadDrivers();
+    void               AutoSkipDrivers();
+    void               ReorderDrivers();
 
     static void        AutoLoadPythonDrivers();
 };
@@ -2451,9 +2494,21 @@ public:
 
     double GetNoDataValueAsDouble(bool* pbHasNoData = nullptr) const;
 
+    int64_t GetNoDataValueAsInt64(bool* pbHasNoData = nullptr) const;
+
+    uint64_t GetNoDataValueAsUInt64(bool* pbHasNoData = nullptr) const;
+
     virtual bool SetRawNoDataValue(const void* pRawNoData);
 
+//! @cond Doxygen_Suppress
+    bool SetNoDataValue(int nNoData) { return SetNoDataValue(static_cast<int64_t>(nNoData)); }
+//! @endcond
+
     bool SetNoDataValue(double dfNoData);
+
+    bool SetNoDataValue(int64_t nNoData);
+
+    bool SetNoDataValue(uint64_t nNoData);
 
     virtual double GetOffset(bool* pbHasOffset = nullptr, GDALDataType* peStorageType = nullptr) const;
 
@@ -2939,6 +2994,12 @@ bool CPL_DLL GDALBufferHasOnlyNoData(const void* pBuffer,
                                      size_t nComponents,
                                      int nBitsPerSample,
                                      GDALBufferSampleFormat nSampleFormat);
+
+void CPL_DLL GDALCopyNoDataValue(GDALRasterBand* poDstBand,
+                                 GDALRasterBand* poSrcBand);
+
+double CPL_DLL GDALGetNoDataValueCastToDouble(int64_t nVal);
+double CPL_DLL GDALGetNoDataValueCastToDouble(uint64_t nVal);
 
 //! @endcond
 

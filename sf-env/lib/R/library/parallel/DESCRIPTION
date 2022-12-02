@@ -1,5 +1,5 @@
 Package: parallel
-Version: 4.1.2
+Version: 4.2.1
 Priority: base
 Title: Support for Parallel computation in R
 Author: R Core Team
@@ -8,9 +8,9 @@ Contact: R-help mailing list <r-help@r-project.org>
 Description: Support for parallel computation, including by forking
    (taken from package multicore), by sockets (taken from package snow)
    and random-number generation.
-License: Part of R 4.1.2
+License: Part of R 4.2.1
 Imports: tools, compiler
 Suggests: methods
 Enhances: snow, nws, Rmpi
 NeedsCompilation: yes
-Built: R 4.1.2; x86_64-conda-linux-gnu; 2021-12-15 10:24:21 UTC; unix
+Built: R 4.2.1; x86_64-conda-linux-gnu; 2022-08-08 21:30:07 UTC; unix

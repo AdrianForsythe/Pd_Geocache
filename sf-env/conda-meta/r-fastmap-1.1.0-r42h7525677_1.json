@@ -1,0 +1,213 @@
+{
+  "build": "r42h7525677_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "r-base >=4.2,<4.3.0a0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-fastmap-1.1.0-r42h7525677_1",
+  "features": "",
+  "files": [
+    "lib/R/library/fastmap/DESCRIPTION",
+    "lib/R/library/fastmap/INDEX",
+    "lib/R/library/fastmap/LICENSE",
+    "lib/R/library/fastmap/Meta/Rd.rds",
+    "lib/R/library/fastmap/Meta/features.rds",
+    "lib/R/library/fastmap/Meta/hsearch.rds",
+    "lib/R/library/fastmap/Meta/links.rds",
+    "lib/R/library/fastmap/Meta/nsInfo.rds",
+    "lib/R/library/fastmap/Meta/package.rds",
+    "lib/R/library/fastmap/NAMESPACE",
+    "lib/R/library/fastmap/NEWS.md",
+    "lib/R/library/fastmap/R/fastmap",
+    "lib/R/library/fastmap/R/fastmap.rdb",
+    "lib/R/library/fastmap/R/fastmap.rdx",
+    "lib/R/library/fastmap/help/AnIndex",
+    "lib/R/library/fastmap/help/aliases.rds",
+    "lib/R/library/fastmap/help/fastmap.rdb",
+    "lib/R/library/fastmap/help/fastmap.rdx",
+    "lib/R/library/fastmap/help/paths.rds",
+    "lib/R/library/fastmap/html/00Index.html",
+    "lib/R/library/fastmap/html/R.css",
+    "lib/R/library/fastmap/libs/fastmap.so"
+  ],
+  "fn": "r-fastmap-1.1.0-r42h7525677_1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-fastmap-1.1.0-r42h7525677_1",
+    "type": 1
+  },
+  "md5": "e1275441225cc890c01ecb080f4dbee3",
+  "name": "r-fastmap",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-fastmap-1.1.0-r42h7525677_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/fastmap/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "acc3d95dde0fa5677370a79734edd2236f627fdd6785c51c09cd58929fca3cc3",
+        "sha256_in_prefix": "acc3d95dde0fa5677370a79734edd2236f627fdd6785c51c09cd58929fca3cc3",
+        "size_in_bytes": 1323
+      },
+      {
+        "_path": "lib/R/library/fastmap/INDEX",
+        "path_type": "hardlink",
+        "sha256": "41b3bb2a5faef1bfb4d1a03371263267649f120c9e2818ea8761e1ca621ba6d3",
+        "sha256_in_prefix": "41b3bb2a5faef1bfb4d1a03371263267649f120c9e2818ea8761e1ca621ba6d3",
+        "size_in_bytes": 171
+      },
+      {
+        "_path": "lib/R/library/fastmap/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "eb49d6e80fe812d92a4517ead055cd28842abcaffa709712c0bf5acebdc10d4f",
+        "sha256_in_prefix": "eb49d6e80fe812d92a4517ead055cd28842abcaffa709712c0bf5acebdc10d4f",
+        "size_in_bytes": 37
+      },
+      {
+        "_path": "lib/R/library/fastmap/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "05650cabde06dc23829f719c708e405117e2570d6a1c1e4d68037cfc633c4902",
+        "sha256_in_prefix": "05650cabde06dc23829f719c708e405117e2570d6a1c1e4d68037cfc633c4902",
+        "size_in_bytes": 313
+      },
+      {
+        "_path": "lib/R/library/fastmap/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/fastmap/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "1461538e22f2d2ab96beb9fb8e3f4e733cf5c4eb5db9175a851e1917bcd424e2",
+        "sha256_in_prefix": "1461538e22f2d2ab96beb9fb8e3f4e733cf5c4eb5db9175a851e1917bcd424e2",
+        "size_in_bytes": 330
+      },
+      {
+        "_path": "lib/R/library/fastmap/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "ae096e835acda2a15ce95d2bd55f9a075d7e18d9479d848f3a72317dee96ac5a",
+        "sha256_in_prefix": "ae096e835acda2a15ce95d2bd55f9a075d7e18d9479d848f3a72317dee96ac5a",
+        "size_in_bytes": 157
+      },
+      {
+        "_path": "lib/R/library/fastmap/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "e31b2026bcc8b39a84d3c0c4cdeba2d955a5ca9cb20d73c289245a1361c9189f",
+        "sha256_in_prefix": "e31b2026bcc8b39a84d3c0c4cdeba2d955a5ca9cb20d73c289245a1361c9189f",
+        "size_in_bytes": 332
+      },
+      {
+        "_path": "lib/R/library/fastmap/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "8d1b8b00e521605aee8d3b3cf255fbfec524231ac7ceb28092539ab0fe7b64ee",
+        "sha256_in_prefix": "8d1b8b00e521605aee8d3b3cf255fbfec524231ac7ceb28092539ab0fe7b64ee",
+        "size_in_bytes": 1118
+      },
+      {
+        "_path": "lib/R/library/fastmap/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "15411cce6ba0ced71e6f4619dc6c9c5bded56673373dd404ae8fb3123de35bc8",
+        "sha256_in_prefix": "15411cce6ba0ced71e6f4619dc6c9c5bded56673373dd404ae8fb3123de35bc8",
+        "size_in_bytes": 210
+      },
+      {
+        "_path": "lib/R/library/fastmap/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "8d6e94d61935e0d8c8731c10d56fb8b6d09518e46d158f137d8b7b550d9d5e98",
+        "sha256_in_prefix": "8d6e94d61935e0d8c8731c10d56fb8b6d09518e46d158f137d8b7b550d9d5e98",
+        "size_in_bytes": 236
+      },
+      {
+        "_path": "lib/R/library/fastmap/R/fastmap",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/fastmap/R/fastmap.rdb",
+        "path_type": "hardlink",
+        "sha256": "1ddac00cb1cd562ae09621e911eabb939dc7af49562db3323bda4dbfe7f58acc",
+        "sha256_in_prefix": "1ddac00cb1cd562ae09621e911eabb939dc7af49562db3323bda4dbfe7f58acc",
+        "size_in_bytes": 22696
+      },
+      {
+        "_path": "lib/R/library/fastmap/R/fastmap.rdx",
+        "path_type": "hardlink",
+        "sha256": "6cd1a5557f2a77edfca9fda73585925234e4b857644ef2aacdab8be263b44efd",
+        "sha256_in_prefix": "6cd1a5557f2a77edfca9fda73585925234e4b857644ef2aacdab8be263b44efd",
+        "size_in_bytes": 333
+      },
+      {
+        "_path": "lib/R/library/fastmap/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "668fb838f59de01984b381a22c32c31ba1d4c4ffbed85434b057f18388a8d3fc",
+        "sha256_in_prefix": "668fb838f59de01984b381a22c32c31ba1d4c4ffbed85434b057f18388a8d3fc",
+        "size_in_bytes": 107
+      },
+      {
+        "_path": "lib/R/library/fastmap/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "d1b2cbd85192f560439f7882cac4c644f4dfa879fa0476989426832f33cf32d6",
+        "sha256_in_prefix": "d1b2cbd85192f560439f7882cac4c644f4dfa879fa0476989426832f33cf32d6",
+        "size_in_bytes": 119
+      },
+      {
+        "_path": "lib/R/library/fastmap/help/fastmap.rdb",
+        "path_type": "hardlink",
+        "sha256": "e9250b071a7ded644dc8be6f1dc3e7a5d7b574c708ef68d331e18953632816bb",
+        "sha256_in_prefix": "e9250b071a7ded644dc8be6f1dc3e7a5d7b574c708ef68d331e18953632816bb",
+        "size_in_bytes": 12106
+      },
+      {
+        "_path": "lib/R/library/fastmap/help/fastmap.rdx",
+        "path_type": "hardlink",
+        "sha256": "39cd24e281dc32ce422a2de668c94051ccfaa2b95bf41b7d302773c99f95cf1c",
+        "sha256_in_prefix": "39cd24e281dc32ce422a2de668c94051ccfaa2b95bf41b7d302773c99f95cf1c",
+        "size_in_bytes": 241
+      },
+      {
+        "_path": "lib/R/library/fastmap/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "ffeb06fc6aee76c10e74218ae83630a4b4368785ea028f00a262efeb1f9cba9f",
+        "sha256_in_prefix": "ffeb06fc6aee76c10e74218ae83630a4b4368785ea028f00a262efeb1f9cba9f",
+        "size_in_bytes": 192
+      },
+      {
+        "_path": "lib/R/library/fastmap/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "d5f0835a9f65470612d1f4af3b4e1d85630140d2e8997fb259a08d7396eacc8c",
+        "sha256_in_prefix": "d5f0835a9f65470612d1f4af3b4e1d85630140d2e8997fb259a08d7396eacc8c",
+        "size_in_bytes": 1446
+      },
+      {
+        "_path": "lib/R/library/fastmap/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/fastmap/libs/fastmap.so",
+        "path_type": "hardlink",
+        "sha256": "43b1ebae9be7744b1535579103ce377bdbd78a703470eecd09d856fe6787f2ef",
+        "sha256_in_prefix": "43b1ebae9be7744b1535579103ce377bdbd78a703470eecd09d856fe6787f2ef",
+        "size_in_bytes": 53296
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "7462857797cea15ce1776c6721fb3af76b62826d223d411aebbe723d53f506da",
+  "size": 70217,
+  "subdir": "linux-64",
+  "timestamp": 1665113820000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-fastmap-1.1.0-r42h7525677_1.tar.bz2",
+  "version": "1.1.0"
+}

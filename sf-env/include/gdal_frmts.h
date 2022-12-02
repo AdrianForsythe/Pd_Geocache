@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: gdal_frmts.h ea49437af39fa2738de924701b87ad701d6530c2 2021-07-25 18:25:48 +0200 Even Rouault $
+ * $Id$
  *
  * Project:  GDAL
  * Purpose:  Prototypes for all format specific driver initialization.
@@ -59,13 +59,11 @@ void CPL_DLL GDALRegister_PNG(void);
 void CPL_DLL GDALRegister_DDS(void);
 void CPL_DLL GDALRegister_GTA(void);
 void CPL_DLL GDALRegister_JPEG(void);
-void CPL_DLL GDALRegister_JPEG2000(void);
 void CPL_DLL GDALRegister_JP2KAK(void);
 void CPL_DLL GDALRegister_JPIPKAK(void);
 void CPL_DLL GDALRegister_MEM(void);
 void CPL_DLL GDALRegister_JDEM(void);
 void CPL_DLL GDALRegister_RASDAMAN(void);
-void CPL_DLL GDALRegister_GRASS(void);
 void CPL_DLL GDALRegister_PNM(void);
 void CPL_DLL GDALRegister_GIF(void);
 void CPL_DLL GDALRegister_BIGGIF(void);
@@ -94,8 +92,6 @@ void CPL_DLL GDALRegister_MrSID(void);
 void CPL_DLL GDALRegister_MG4Lidar(void);
 void CPL_DLL GDALRegister_PCIDSK(void);
 void CPL_DLL GDALRegister_BT(void);
-void CPL_DLL GDALRegister_DODS(void);
-void CPL_DLL GDALRegister_GMT(void);
 void CPL_DLL GDALRegister_netCDF(void);
 void CPL_DLL GDALRegister_LAN(void);
 void CPL_DLL GDALRegister_CPG(void);
@@ -142,7 +138,6 @@ void CPL_DLL GDALRegister_SRP(void);
 void CPL_DLL GDALRegister_COASP(void);
 void CPL_DLL GDALRegister_BLX(void);
 void CPL_DLL GDALRegister_LCP(void);
-void CPL_DLL GDALRegister_TMS(void);
 void CPL_DLL GDALRegister_EIR(void);
 void CPL_DLL GDALRegister_ESRIC(void);
 void CPL_DLL GDALRegister_GEOR(void);
@@ -190,7 +185,6 @@ void CPL_DLL GDALRegister_Derived(void);
 void CPL_DLL GDALRegister_JP2Lura(void);
 void CPL_DLL GDALRegister_PRF(void);
 void CPL_DLL GDALRegister_NULL(void);
-void CPL_DLL GDALRegister_RDA(void);
 void CPL_DLL GDALRegister_EEDAI(void);
 void CPL_DLL GDALRegister_EEDA(void);
 void CPL_DLL GDALRegister_SIGDEM(void);

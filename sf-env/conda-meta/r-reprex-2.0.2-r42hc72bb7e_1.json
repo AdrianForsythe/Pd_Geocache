@@ -1,0 +1,433 @@
+{
+  "build": "r42hc72bb7e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "pandoc >=2.0",
+    "r-base >=4.2,<4.3.0a0",
+    "r-callr >=3.6.0",
+    "r-cli >=3.2.0",
+    "r-clipr >=0.4.0",
+    "r-fs",
+    "r-glue",
+    "r-knitr >=1.23",
+    "r-lifecycle",
+    "r-rlang >=1.0.0",
+    "r-rmarkdown",
+    "r-rstudioapi",
+    "r-withr >=2.3.0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-reprex-2.0.2-r42hc72bb7e_1",
+  "features": "",
+  "files": [
+    "lib/R/library/reprex/DESCRIPTION",
+    "lib/R/library/reprex/INDEX",
+    "lib/R/library/reprex/LICENSE",
+    "lib/R/library/reprex/Meta/Rd.rds",
+    "lib/R/library/reprex/Meta/features.rds",
+    "lib/R/library/reprex/Meta/hsearch.rds",
+    "lib/R/library/reprex/Meta/links.rds",
+    "lib/R/library/reprex/Meta/nsInfo.rds",
+    "lib/R/library/reprex/Meta/package.rds",
+    "lib/R/library/reprex/Meta/vignette.rds",
+    "lib/R/library/reprex/NAMESPACE",
+    "lib/R/library/reprex/NEWS.md",
+    "lib/R/library/reprex/R/reprex",
+    "lib/R/library/reprex/R/reprex.rdb",
+    "lib/R/library/reprex/R/reprex.rdx",
+    "lib/R/library/reprex/R/sysdata.rdb",
+    "lib/R/library/reprex/R/sysdata.rdx",
+    "lib/R/library/reprex/WORDLIST",
+    "lib/R/library/reprex/addins/reprex.css",
+    "lib/R/library/reprex/doc/index.html",
+    "lib/R/library/reprex/doc/reprex-dos-and-donts.R",
+    "lib/R/library/reprex/doc/reprex-dos-and-donts.Rmd",
+    "lib/R/library/reprex/doc/reprex-dos-and-donts.html",
+    "lib/R/library/reprex/help/AnIndex",
+    "lib/R/library/reprex/help/aliases.rds",
+    "lib/R/library/reprex/help/figures/README-viewer-screenshot.png",
+    "lib/R/library/reprex/help/figures/help-me-help-you.png",
+    "lib/R/library/reprex/help/figures/lifecycle-archived.svg",
+    "lib/R/library/reprex/help/figures/lifecycle-defunct.svg",
+    "lib/R/library/reprex/help/figures/lifecycle-deprecated.svg",
+    "lib/R/library/reprex/help/figures/lifecycle-experimental.svg",
+    "lib/R/library/reprex/help/figures/lifecycle-maturing.svg",
+    "lib/R/library/reprex/help/figures/lifecycle-questioning.svg",
+    "lib/R/library/reprex/help/figures/lifecycle-soft-deprecated.svg",
+    "lib/R/library/reprex/help/figures/lifecycle-stable.svg",
+    "lib/R/library/reprex/help/figures/lifecycle-superseded.svg",
+    "lib/R/library/reprex/help/figures/logo.png",
+    "lib/R/library/reprex/help/paths.rds",
+    "lib/R/library/reprex/help/reprex.rdb",
+    "lib/R/library/reprex/help/reprex.rdx",
+    "lib/R/library/reprex/html/00Index.html",
+    "lib/R/library/reprex/html/R.css",
+    "lib/R/library/reprex/rmarkdown/templates/reprex-featureful/skeleton/skeleton.Rmd",
+    "lib/R/library/reprex/rmarkdown/templates/reprex-featureful/template.yaml",
+    "lib/R/library/reprex/rmarkdown/templates/reprex-minimal/skeleton/skeleton.Rmd",
+    "lib/R/library/reprex/rmarkdown/templates/reprex-minimal/template.yaml",
+    "lib/R/library/reprex/rstudio/addins.dcf",
+    "lib/R/library/reprex/templates/BETTER_THAN_NOTHING.R"
+  ],
+  "fn": "r-reprex-2.0.2-r42hc72bb7e_1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-reprex-2.0.2-r42hc72bb7e_1",
+    "type": 1
+  },
+  "md5": "f4d654bcff45cce2066693949bbeb161",
+  "name": "r-reprex",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-reprex-2.0.2-r42hc72bb7e_1.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/reprex/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "ecd76781913e5d2a15bc92d7ad80adba9ba1edd0dea2870d56599caa155b7a8f",
+        "sha256_in_prefix": "ecd76781913e5d2a15bc92d7ad80adba9ba1edd0dea2870d56599caa155b7a8f",
+        "size_in_bytes": 2578
+      },
+      {
+        "_path": "lib/R/library/reprex/INDEX",
+        "path_type": "hardlink",
+        "sha256": "12e1f2eb83b944bf82ad942f7376b1d07d6ebb518dfc71f175248cf7383b2767",
+        "sha256_in_prefix": "12e1f2eb83b944bf82ad942f7376b1d07d6ebb518dfc71f175248cf7383b2767",
+        "size_in_bytes": 392
+      },
+      {
+        "_path": "lib/R/library/reprex/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "b7a260594a71a6dc30e4c07d1ae78e4a58c680c522bd242f171b7cae1d7bc6bf",
+        "sha256_in_prefix": "b7a260594a71a6dc30e4c07d1ae78e4a58c680c522bd242f171b7cae1d7bc6bf",
+        "size_in_bytes": 44
+      },
+      {
+        "_path": "lib/R/library/reprex/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "7f56df8de478d93f5b1664d4aa7ea1caedb7ce66f853e0873c0e116ec9c4d5e8",
+        "sha256_in_prefix": "7f56df8de478d93f5b1664d4aa7ea1caedb7ce66f853e0873c0e116ec9c4d5e8",
+        "size_in_bytes": 572
+      },
+      {
+        "_path": "lib/R/library/reprex/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/reprex/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "bc015447e2fa5a3ec34034f43623e5dc0868ebff4efd687cf3ed6c06d9b023bd",
+        "sha256_in_prefix": "bc015447e2fa5a3ec34034f43623e5dc0868ebff4efd687cf3ed6c06d9b023bd",
+        "size_in_bytes": 580
+      },
+      {
+        "_path": "lib/R/library/reprex/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "a131bd7b523880e9d11489adb7d907a534f948613c82742dc500d2786045b649",
+        "sha256_in_prefix": "a131bd7b523880e9d11489adb7d907a534f948613c82742dc500d2786045b649",
+        "size_in_bytes": 298
+      },
+      {
+        "_path": "lib/R/library/reprex/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "a0f28a07e49e80a13afdc48256673e0335c673907597d96a511b627e146e1a39",
+        "sha256_in_prefix": "a0f28a07e49e80a13afdc48256673e0335c673907597d96a511b627e146e1a39",
+        "size_in_bytes": 330
+      },
+      {
+        "_path": "lib/R/library/reprex/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "fed2b104343216b9137fdf40fc2e652af85e1cebaa826a64b9e825466aa7b383",
+        "sha256_in_prefix": "fed2b104343216b9137fdf40fc2e652af85e1cebaa826a64b9e825466aa7b383",
+        "size_in_bytes": 1865
+      },
+      {
+        "_path": "lib/R/library/reprex/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "d437e9c016d34725b035d7e8152c3cd5d535732499e7baf994c68f17135f6b98",
+        "sha256_in_prefix": "d437e9c016d34725b035d7e8152c3cd5d535732499e7baf994c68f17135f6b98",
+        "size_in_bytes": 219
+      },
+      {
+        "_path": "lib/R/library/reprex/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "3cf079f3e89650347bd54eda710664718e5e3f26be20431ea82e9f16484cafb5",
+        "sha256_in_prefix": "3cf079f3e89650347bd54eda710664718e5e3f26be20431ea82e9f16484cafb5",
+        "size_in_bytes": 428
+      },
+      {
+        "_path": "lib/R/library/reprex/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "0b3a0da51fda49b4862c2141aaa08b761545fb6e8deebad948d7d273dbbf88b6",
+        "sha256_in_prefix": "0b3a0da51fda49b4862c2141aaa08b761545fb6e8deebad948d7d273dbbf88b6",
+        "size_in_bytes": 17408
+      },
+      {
+        "_path": "lib/R/library/reprex/R/reprex",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/reprex/R/reprex.rdb",
+        "path_type": "hardlink",
+        "sha256": "109d29460a0de238fb9689d851945bb9869a74b2b6474f8b66940c5da6709c04",
+        "sha256_in_prefix": "109d29460a0de238fb9689d851945bb9869a74b2b6474f8b66940c5da6709c04",
+        "size_in_bytes": 83315
+      },
+      {
+        "_path": "lib/R/library/reprex/R/reprex.rdx",
+        "path_type": "hardlink",
+        "sha256": "209215c08a10ff6b0b4fee7703252e07524b9542119d358bdc17aed8c2e12043",
+        "sha256_in_prefix": "209215c08a10ff6b0b4fee7703252e07524b9542119d358bdc17aed8c2e12043",
+        "size_in_bytes": 2015
+      },
+      {
+        "_path": "lib/R/library/reprex/R/sysdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "73df5248c1e6a5ee9e71236a579569893e906d682a46241cb4ea02f9c3d5584b",
+        "sha256_in_prefix": "73df5248c1e6a5ee9e71236a579569893e906d682a46241cb4ea02f9c3d5584b",
+        "size_in_bytes": 795
+      },
+      {
+        "_path": "lib/R/library/reprex/R/sysdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "6a7202779666d39c503b6370e4e80e92230f18014f21ba7680ad8a68b0f42cfd",
+        "sha256_in_prefix": "6a7202779666d39c503b6370e4e80e92230f18014f21ba7680ad8a68b0f42cfd",
+        "size_in_bytes": 154
+      },
+      {
+        "_path": "lib/R/library/reprex/WORDLIST",
+        "path_type": "hardlink",
+        "sha256": "5a8fec3d723de500a1c19d6e86581e51b84204d9c7b6bf60b8822eb3715ac14e",
+        "sha256_in_prefix": "5a8fec3d723de500a1c19d6e86581e51b84204d9c7b6bf60b8822eb3715ac14e",
+        "size_in_bytes": 926
+      },
+      {
+        "_path": "lib/R/library/reprex/addins/reprex.css",
+        "path_type": "hardlink",
+        "sha256": "3da0d2c7dec9a1d21827bb7f41c31ab5b8bc71e701e030491ac3a0ae39edb229",
+        "sha256_in_prefix": "3da0d2c7dec9a1d21827bb7f41c31ab5b8bc71e701e030491ac3a0ae39edb229",
+        "size_in_bytes": 40
+      },
+      {
+        "_path": "lib/R/library/reprex/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "f0a3ec48b50e6a0155c4605f5631f7aef343d0661b1af2bf8145ec52116142c8",
+        "sha256_in_prefix": "f0a3ec48b50e6a0155c4605f5631f7aef343d0661b1af2bf8145ec52116142c8",
+        "size_in_bytes": 1448
+      },
+      {
+        "_path": "lib/R/library/reprex/doc/reprex-dos-and-donts.R",
+        "path_type": "hardlink",
+        "sha256": "c8cb14bf80f2a76554602144e0407c300c00df551ceb637bb911c024a6e20499",
+        "sha256_in_prefix": "c8cb14bf80f2a76554602144e0407c300c00df551ceb637bb911c024a6e20499",
+        "size_in_bytes": 946
+      },
+      {
+        "_path": "lib/R/library/reprex/doc/reprex-dos-and-donts.Rmd",
+        "path_type": "hardlink",
+        "sha256": "d4602a3e3c88fa41266330c7ba9d6798d88998b4940d28257c34effb33082ccc",
+        "sha256_in_prefix": "d4602a3e3c88fa41266330c7ba9d6798d88998b4940d28257c34effb33082ccc",
+        "size_in_bytes": 5234
+      },
+      {
+        "_path": "lib/R/library/reprex/doc/reprex-dos-and-donts.html",
+        "path_type": "hardlink",
+        "sha256": "35b88ac3ce7a7b78a8ff9793d876c391a2c793335f82c795f831939ff5d51077",
+        "sha256_in_prefix": "35b88ac3ce7a7b78a8ff9793d876c391a2c793335f82c795f831939ff5d51077",
+        "size_in_bytes": 18634
+      },
+      {
+        "_path": "lib/R/library/reprex/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "aac6a573a0aff2ff48f2680113e75fad7d8d573376adce13fdb91cf76f7f6189",
+        "sha256_in_prefix": "aac6a573a0aff2ff48f2680113e75fad7d8d573376adce13fdb91cf76f7f6189",
+        "size_in_bytes": 475
+      },
+      {
+        "_path": "lib/R/library/reprex/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "b5648e1b20b221ea552d3f78fa9690e1855f612708dd7d638a2bd8ea4a97b0ee",
+        "sha256_in_prefix": "b5648e1b20b221ea552d3f78fa9690e1855f612708dd7d638a2bd8ea4a97b0ee",
+        "size_in_bytes": 251
+      },
+      {
+        "_path": "lib/R/library/reprex/help/figures/README-viewer-screenshot.png",
+        "path_type": "hardlink",
+        "sha256": "1e383601e57ed0eb295d36890886f5a25cf56811c7c7e8891f1ee3e4b6effa79",
+        "sha256_in_prefix": "1e383601e57ed0eb295d36890886f5a25cf56811c7c7e8891f1ee3e4b6effa79",
+        "size_in_bytes": 38647
+      },
+      {
+        "_path": "lib/R/library/reprex/help/figures/help-me-help-you.png",
+        "path_type": "hardlink",
+        "sha256": "e94df5e0c1ea009952215f34ab4ad51cb36f36e023afe0d50e40709148d4b4df",
+        "sha256_in_prefix": "e94df5e0c1ea009952215f34ab4ad51cb36f36e023afe0d50e40709148d4b4df",
+        "size_in_bytes": 264152
+      },
+      {
+        "_path": "lib/R/library/reprex/help/figures/lifecycle-archived.svg",
+        "path_type": "hardlink",
+        "sha256": "1f91adc5fc098480adc7ae083713d15e4e6d4915a5c6a1ed6488145c480917e9",
+        "sha256_in_prefix": "1f91adc5fc098480adc7ae083713d15e4e6d4915a5c6a1ed6488145c480917e9",
+        "size_in_bytes": 1304
+      },
+      {
+        "_path": "lib/R/library/reprex/help/figures/lifecycle-defunct.svg",
+        "path_type": "hardlink",
+        "sha256": "7d6559cb01f8d78aa1e1cb416167de90ace6d1441d3e088062dbedf9891fd69c",
+        "sha256_in_prefix": "7d6559cb01f8d78aa1e1cb416167de90ace6d1441d3e088062dbedf9891fd69c",
+        "size_in_bytes": 1300
+      },
+      {
+        "_path": "lib/R/library/reprex/help/figures/lifecycle-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "b325b309900c9843a235f147918eab4f3b9bcca228656ff16c48bfd067337481",
+        "sha256_in_prefix": "b325b309900c9843a235f147918eab4f3b9bcca228656ff16c48bfd067337481",
+        "size_in_bytes": 1312
+      },
+      {
+        "_path": "lib/R/library/reprex/help/figures/lifecycle-experimental.svg",
+        "path_type": "hardlink",
+        "sha256": "ee207407774f49e01a44c86370569aee540c468cfc00b4e1d7fa4c9c9ee626af",
+        "sha256_in_prefix": "ee207407774f49e01a44c86370569aee540c468cfc00b4e1d7fa4c9c9ee626af",
+        "size_in_bytes": 1320
+      },
+      {
+        "_path": "lib/R/library/reprex/help/figures/lifecycle-maturing.svg",
+        "path_type": "hardlink",
+        "sha256": "7edd59bc4d9fb8d901894a301aec9a9cc0b5e0144239074ae9da679c2a19003b",
+        "sha256_in_prefix": "7edd59bc4d9fb8d901894a301aec9a9cc0b5e0144239074ae9da679c2a19003b",
+        "size_in_bytes": 1304
+      },
+      {
+        "_path": "lib/R/library/reprex/help/figures/lifecycle-questioning.svg",
+        "path_type": "hardlink",
+        "sha256": "94ac10480d97a8bc0b8e625aeb38d85747c77648f0c85b18f119957545f47552",
+        "sha256_in_prefix": "94ac10480d97a8bc0b8e625aeb38d85747c77648f0c85b18f119957545f47552",
+        "size_in_bytes": 1316
+      },
+      {
+        "_path": "lib/R/library/reprex/help/figures/lifecycle-soft-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "44f0804365bd36ebe44f91426029c4b11a66c389cbb9e1153cd1f69afa63b4c2",
+        "sha256_in_prefix": "44f0804365bd36ebe44f91426029c4b11a66c389cbb9e1153cd1f69afa63b4c2",
+        "size_in_bytes": 1334
+      },
+      {
+        "_path": "lib/R/library/reprex/help/figures/lifecycle-stable.svg",
+        "path_type": "hardlink",
+        "sha256": "14e0bf4e2a6945ac25e73aa3324b47f414fc3055faec1ac20e8f7d2c1badacba",
+        "sha256_in_prefix": "14e0bf4e2a6945ac25e73aa3324b47f414fc3055faec1ac20e8f7d2c1badacba",
+        "size_in_bytes": 1338
+      },
+      {
+        "_path": "lib/R/library/reprex/help/figures/lifecycle-superseded.svg",
+        "path_type": "hardlink",
+        "sha256": "2b830495e63927b7e08d7ee2b5a282479a363a4fcb712fe029b5cb2e76fb290a",
+        "sha256_in_prefix": "2b830495e63927b7e08d7ee2b5a282479a363a4fcb712fe029b5cb2e76fb290a",
+        "size_in_bytes": 1312
+      },
+      {
+        "_path": "lib/R/library/reprex/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "b6349fd986f78e703b2af2c0769234a847f64ee550f720a4dbe0569bd19091a5",
+        "sha256_in_prefix": "b6349fd986f78e703b2af2c0769234a847f64ee550f720a4dbe0569bd19091a5",
+        "size_in_bytes": 29885
+      },
+      {
+        "_path": "lib/R/library/reprex/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "d747db4084a8ac2c5a82805d1a74ace01f2035050bd268bafed8361848d85e68",
+        "sha256_in_prefix": "d747db4084a8ac2c5a82805d1a74ace01f2035050bd268bafed8361848d85e68",
+        "size_in_bytes": 239
+      },
+      {
+        "_path": "lib/R/library/reprex/help/reprex.rdb",
+        "path_type": "hardlink",
+        "sha256": "de2d2405c39fa490a99ba339df5f59f3b7b5e15fa91366b6500bdb21b4fa4754",
+        "sha256_in_prefix": "de2d2405c39fa490a99ba339df5f59f3b7b5e15fa91366b6500bdb21b4fa4754",
+        "size_in_bytes": 46953
+      },
+      {
+        "_path": "lib/R/library/reprex/help/reprex.rdx",
+        "path_type": "hardlink",
+        "sha256": "7829321020c1b71362aa8bd5d0d73cefc44b8e75e3dc3b19b8d21926a2c8b26f",
+        "sha256_in_prefix": "7829321020c1b71362aa8bd5d0d73cefc44b8e75e3dc3b19b8d21926a2c8b26f",
+        "size_in_bytes": 358
+      },
+      {
+        "_path": "lib/R/library/reprex/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "c26b2624cc0c92674ee06e044109bde53a75dc6cebcbc5ca9b48f0eb16312eca",
+        "sha256_in_prefix": "c26b2624cc0c92674ee06e044109bde53a75dc6cebcbc5ca9b48f0eb16312eca",
+        "size_in_bytes": 3016
+      },
+      {
+        "_path": "lib/R/library/reprex/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/reprex/rmarkdown/templates/reprex-featureful/skeleton/skeleton.Rmd",
+        "path_type": "hardlink",
+        "sha256": "b2c6693883b19c368c14286119e557d1959d69ab0b1d37b08a0e01a1b7a4921d",
+        "sha256_in_prefix": "b2c6693883b19c368c14286119e557d1959d69ab0b1d37b08a0e01a1b7a4921d",
+        "size_in_bytes": 2729
+      },
+      {
+        "_path": "lib/R/library/reprex/rmarkdown/templates/reprex-featureful/template.yaml",
+        "path_type": "hardlink",
+        "sha256": "b8937b2e425d30f7095f4e93d119a9b8dfe5f61320e66bf7422dc40153730110",
+        "sha256_in_prefix": "b8937b2e425d30f7095f4e93d119a9b8dfe5f61320e66bf7422dc40153730110",
+        "size_in_bytes": 117
+      },
+      {
+        "_path": "lib/R/library/reprex/rmarkdown/templates/reprex-minimal/skeleton/skeleton.Rmd",
+        "path_type": "hardlink",
+        "sha256": "f511942a4c75f9c3bba1b974c9dd2c2630c8db090bb7be37db58ed8193db3fbc",
+        "sha256_in_prefix": "f511942a4c75f9c3bba1b974c9dd2c2630c8db090bb7be37db58ed8193db3fbc",
+        "size_in_bytes": 220
+      },
+      {
+        "_path": "lib/R/library/reprex/rmarkdown/templates/reprex-minimal/template.yaml",
+        "path_type": "hardlink",
+        "sha256": "5c450ce457ffea796593351d214ee972375343b7c2e63921b2dd1d11e3e41afd",
+        "sha256_in_prefix": "5c450ce457ffea796593351d214ee972375343b7c2e63921b2dd1d11e3e41afd",
+        "size_in_bytes": 98
+      },
+      {
+        "_path": "lib/R/library/reprex/rstudio/addins.dcf",
+        "path_type": "hardlink",
+        "sha256": "ed667c5030cfe0a999e89a04482e2828503b4f1926ae26d4b5e8d5adea965a2f",
+        "sha256_in_prefix": "ed667c5030cfe0a999e89a04482e2828503b4f1926ae26d4b5e8d5adea965a2f",
+        "size_in_bytes": 266
+      },
+      {
+        "_path": "lib/R/library/reprex/templates/BETTER_THAN_NOTHING.R",
+        "path_type": "hardlink",
+        "sha256": "a33b931d35c46584448896377a290a91e80583423aa2b6902876c13eeef04fc5",
+        "sha256_in_prefix": "a33b931d35c46584448896377a290a91e80583423aa2b6902876c13eeef04fc5",
+        "size_in_bytes": 332
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "17acd793661d3e5cfd783f4acbadac6884f25172916d86127e9d5ea15e5559e7",
+  "size": 511248,
+  "subdir": "noarch",
+  "timestamp": 1665385532000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-reprex-2.0.2-r42hc72bb7e_1.tar.bz2",
+  "version": "2.0.2"
+}

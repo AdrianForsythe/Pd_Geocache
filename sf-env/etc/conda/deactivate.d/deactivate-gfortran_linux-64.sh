@@ -82,9 +82,9 @@ function _tc_activation() {
 # When people are using conda-build, assume that adding rpath during build, and pointing at
 #    the host env's includes and libs is helpful default behavior
 if [ "${CONDA_BUILD:-0}" = "1" ]; then
-  FFLAGS_USED="-fopenmp -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem ${PREFIX}/include -fdebug-prefix-map=${SRC_DIR}=/usr/local/src/conda/${PKG_NAME}-${PKG_VERSION} -fdebug-prefix-map=${PREFIX}=/usr/local/src/conda-prefix"
+  FFLAGS_USED="-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem ${PREFIX}/include -fdebug-prefix-map=${SRC_DIR}=/usr/local/src/conda/${PKG_NAME}-${PKG_VERSION} -fdebug-prefix-map=${PREFIX}=/usr/local/src/conda-prefix"
 else
-  FFLAGS_USED="-fopenmp -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem ${CONDA_PREFIX}/include"
+  FFLAGS_USED="-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem ${CONDA_PREFIX}/include"
 fi
 
 if [ "${CONDA_BUILD:-0}" = "1" ]; then
@@ -99,8 +99,8 @@ _tc_activation \
   gfortran f95 \
   "FFLAGS,${FFLAGS:-${FFLAGS_USED}}" \
   "FORTRANFLAGS,${FORTRANFLAGS:-${FFLAGS_USED}}" \
-  "DEBUG_FFLAGS,${FFLAGS:-${FFLAGS_USED} -fopenmp -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-all -fno-plt -Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fvar-tracking-assignments -ffunction-sections -pipe}" \
-  "DEBUG_FORTRANFLAGS,${FORTRANFLAGS:-${FFLAGS_USED} -fopenmp -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-all -fno-plt -Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fvar-tracking-assignments -ffunction-sections -pipe}" \
+  "DEBUG_FFLAGS,${FFLAGS:-${FFLAGS_USED} -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-all -fno-plt -Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fvar-tracking-assignments -ffunction-sections -pipe}" \
+  "DEBUG_FORTRANFLAGS,${FORTRANFLAGS:-${FFLAGS_USED} -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-all -fno-plt -Og -g -Wall -Wextra -fcheck=all -fbacktrace -fimplicit-none -fvar-tracking-assignments -ffunction-sections -pipe}" \
 
 # extra ones - have a dependency on the previous ones, so done after.
 _tc_activation \

@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: ogr_geometry.h 9f57a8d3c5f327cb02bb78ef23479c4b74143220 2021-05-22 00:41:26 +0200 Momtchil Momtchev $
+ * $Id$
  *
  * Project:  OpenGIS Simple Features Reference Implementation
  * Purpose:  Classes for manipulating simple features that is not specific
@@ -402,9 +402,9 @@ class CPL_DLL OGRGeometry
     virtual OGRGeometry* Normalize() const;
     virtual OGRBoolean  IsSimple() const;
     /*! Returns whether the geometry has a Z component. */
-    OGRBoolean  Is3D() const { return flags & OGR_G_3D; }
+    OGRBoolean  Is3D() const { return (flags & OGR_G_3D) != 0; }
     /*! Returns whether the geometry has a M component. */
-    OGRBoolean  IsMeasured() const { return flags & OGR_G_MEASURED; }
+    OGRBoolean  IsMeasured() const { return (flags & OGR_G_MEASURED) != 0; }
     virtual OGRBoolean  IsRing() const;
     virtual void        empty() = 0;
     virtual OGRGeometry *clone() const CPL_WARN_UNUSED_RESULT = 0;
@@ -1881,7 +1881,7 @@ class CPL_DLL OGRCompoundCurve : public OGRCurve
 
     virtual void    assignSpatialReference( OGRSpatialReference * poSR ) override;
 
-    OGRErr         addCurve( OGRCurve*, double dfToleranceEps = 1e-14  );
+    OGRErr         addCurve( const OGRCurve*, double dfToleranceEps = 1e-14  );
     OGRErr         addCurveDirectly( OGRCurve*, double dfToleranceEps = 1e-14 );
     OGRCurve      *stealCurve( int );
     virtual OGRPointIterator* getPointIterator() const override;

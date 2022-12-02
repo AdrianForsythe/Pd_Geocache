@@ -36,6 +36,7 @@ format.sfg	st
 full_join.sf	tidyverse
 gather.sf	tidyverse
 gdal	gdal
+gdal_create	gdal
 gdal_crs	gdal
 gdal_extract	gdal
 gdal_inv_geotransform	gdal
@@ -257,6 +258,7 @@ st_disjoint	geos_binary_pred
 st_distance	geos_measures
 st_drivers	st_drivers
 st_drop_geometry	st_geometry
+st_drop_geometry.sf	st_geometry
 st_equals	geos_binary_pred
 st_equals_exact	geos_binary_pred
 st_filter	st_join

@@ -1,0 +1,576 @@
+{
+  "build": "r42h7525677_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "r-base >=4.2,<4.3.0a0",
+    "r-ellipsis",
+    "r-generics",
+    "r-glue >=1.3.2",
+    "r-lifecycle >=1.0.0",
+    "r-magrittr >=1.5",
+    "r-pillar >=1.5.1",
+    "r-r6",
+    "r-rlang >=0.4.10",
+    "r-tibble >=2.1.3",
+    "r-tidyselect >=1.1.0",
+    "r-vctrs >=0.3.5"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-dplyr-1.0.10-r42h7525677_1",
+  "features": "",
+  "files": [
+    "lib/R/library/dplyr/DESCRIPTION",
+    "lib/R/library/dplyr/INDEX",
+    "lib/R/library/dplyr/LICENSE",
+    "lib/R/library/dplyr/Meta/Rd.rds",
+    "lib/R/library/dplyr/Meta/data.rds",
+    "lib/R/library/dplyr/Meta/features.rds",
+    "lib/R/library/dplyr/Meta/hsearch.rds",
+    "lib/R/library/dplyr/Meta/links.rds",
+    "lib/R/library/dplyr/Meta/nsInfo.rds",
+    "lib/R/library/dplyr/Meta/package.rds",
+    "lib/R/library/dplyr/Meta/vignette.rds",
+    "lib/R/library/dplyr/NAMESPACE",
+    "lib/R/library/dplyr/NEWS.md",
+    "lib/R/library/dplyr/R/dplyr",
+    "lib/R/library/dplyr/R/dplyr.rdb",
+    "lib/R/library/dplyr/R/dplyr.rdx",
+    "lib/R/library/dplyr/data/Rdata.rdb",
+    "lib/R/library/dplyr/data/Rdata.rds",
+    "lib/R/library/dplyr/data/Rdata.rdx",
+    "lib/R/library/dplyr/doc/base.R",
+    "lib/R/library/dplyr/doc/base.Rmd",
+    "lib/R/library/dplyr/doc/base.html",
+    "lib/R/library/dplyr/doc/colwise.R",
+    "lib/R/library/dplyr/doc/colwise.Rmd",
+    "lib/R/library/dplyr/doc/colwise.html",
+    "lib/R/library/dplyr/doc/compatibility.R",
+    "lib/R/library/dplyr/doc/compatibility.Rmd",
+    "lib/R/library/dplyr/doc/compatibility.html",
+    "lib/R/library/dplyr/doc/dplyr.R",
+    "lib/R/library/dplyr/doc/dplyr.Rmd",
+    "lib/R/library/dplyr/doc/dplyr.html",
+    "lib/R/library/dplyr/doc/grouping.R",
+    "lib/R/library/dplyr/doc/grouping.Rmd",
+    "lib/R/library/dplyr/doc/grouping.html",
+    "lib/R/library/dplyr/doc/index.html",
+    "lib/R/library/dplyr/doc/programming.R",
+    "lib/R/library/dplyr/doc/programming.Rmd",
+    "lib/R/library/dplyr/doc/programming.html",
+    "lib/R/library/dplyr/doc/rowwise.R",
+    "lib/R/library/dplyr/doc/rowwise.Rmd",
+    "lib/R/library/dplyr/doc/rowwise.html",
+    "lib/R/library/dplyr/doc/two-table.R",
+    "lib/R/library/dplyr/doc/two-table.Rmd",
+    "lib/R/library/dplyr/doc/two-table.html",
+    "lib/R/library/dplyr/doc/window-functions.R",
+    "lib/R/library/dplyr/doc/window-functions.Rmd",
+    "lib/R/library/dplyr/doc/window-functions.html",
+    "lib/R/library/dplyr/help/AnIndex",
+    "lib/R/library/dplyr/help/aliases.rds",
+    "lib/R/library/dplyr/help/dplyr.rdb",
+    "lib/R/library/dplyr/help/dplyr.rdx",
+    "lib/R/library/dplyr/help/figures/lifecycle-archived.svg",
+    "lib/R/library/dplyr/help/figures/lifecycle-defunct.svg",
+    "lib/R/library/dplyr/help/figures/lifecycle-deprecated.svg",
+    "lib/R/library/dplyr/help/figures/lifecycle-experimental.svg",
+    "lib/R/library/dplyr/help/figures/lifecycle-maturing.svg",
+    "lib/R/library/dplyr/help/figures/lifecycle-questioning.svg",
+    "lib/R/library/dplyr/help/figures/lifecycle-retired.svg",
+    "lib/R/library/dplyr/help/figures/lifecycle-soft-deprecated.svg",
+    "lib/R/library/dplyr/help/figures/lifecycle-stable.svg",
+    "lib/R/library/dplyr/help/figures/lifecycle-superseded.svg",
+    "lib/R/library/dplyr/help/figures/logo.png",
+    "lib/R/library/dplyr/help/paths.rds",
+    "lib/R/library/dplyr/html/00Index.html",
+    "lib/R/library/dplyr/html/R.css",
+    "lib/R/library/dplyr/libs/dplyr.so"
+  ],
+  "fn": "r-dplyr-1.0.10-r42h7525677_1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-dplyr-1.0.10-r42h7525677_1",
+    "type": 1
+  },
+  "md5": "b247a393fb7e5e06d190a860f325927e",
+  "name": "r-dplyr",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-dplyr-1.0.10-r42h7525677_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/dplyr/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "0420475bf984999253872007ac66530c7717d222de955e510e87c9bc493f4497",
+        "sha256_in_prefix": "0420475bf984999253872007ac66530c7717d222de955e510e87c9bc493f4497",
+        "size_in_bytes": 2167
+      },
+      {
+        "_path": "lib/R/library/dplyr/INDEX",
+        "path_type": "hardlink",
+        "sha256": "5b9d7580c47a01dcf94304bd22f05e7c9fb67c8db6645be39e31a437f5e52898",
+        "sha256_in_prefix": "5b9d7580c47a01dcf94304bd22f05e7c9fb67c8db6645be39e31a437f5e52898",
+        "size_in_bytes": 3131
+      },
+      {
+        "_path": "lib/R/library/dplyr/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "e3ff50f841b1c6a73084f3bc70cf10cf7ffdd0034dea219aaa5c60f3b6e15b56",
+        "sha256_in_prefix": "e3ff50f841b1c6a73084f3bc70cf10cf7ffdd0034dea219aaa5c60f3b6e15b56",
+        "size_in_bytes": 43
+      },
+      {
+        "_path": "lib/R/library/dplyr/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "ecb3ee8f9acdb9a78fe23c46d12f28fc0adcf1e842fe7579312d10b097aab516",
+        "sha256_in_prefix": "ecb3ee8f9acdb9a78fe23c46d12f28fc0adcf1e842fe7579312d10b097aab516",
+        "size_in_bytes": 4793
+      },
+      {
+        "_path": "lib/R/library/dplyr/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "7017b40788cf1d5cf62af0732823249843c703e0e35172cfc7532e741251ff6c",
+        "sha256_in_prefix": "7017b40788cf1d5cf62af0732823249843c703e0e35172cfc7532e741251ff6c",
+        "size_in_bytes": 169
+      },
+      {
+        "_path": "lib/R/library/dplyr/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/dplyr/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "e70340a17660554920dddc4ee2d28a18df59d6dc2ef181b8dbbb8e00bc27ca72",
+        "sha256_in_prefix": "e70340a17660554920dddc4ee2d28a18df59d6dc2ef181b8dbbb8e00bc27ca72",
+        "size_in_bytes": 4666
+      },
+      {
+        "_path": "lib/R/library/dplyr/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "3ce3b0b5c3af7ef02402d46ce7ab29ef0edfc9fb60ae885b3cb48761b6a26f2d",
+        "sha256_in_prefix": "3ce3b0b5c3af7ef02402d46ce7ab29ef0edfc9fb60ae885b3cb48761b6a26f2d",
+        "size_in_bytes": 2679
+      },
+      {
+        "_path": "lib/R/library/dplyr/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "75dd78baa8b156caaeca3611aa29233401ddba6f7665a058e0680ff476f880c1",
+        "sha256_in_prefix": "75dd78baa8b156caaeca3611aa29233401ddba6f7665a058e0680ff476f880c1",
+        "size_in_bytes": 2902
+      },
+      {
+        "_path": "lib/R/library/dplyr/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "fe2ceeb56074648ee5bfba6fa57e9c463415d17f25150f2794302df95ee4f2cc",
+        "sha256_in_prefix": "fe2ceeb56074648ee5bfba6fa57e9c463415d17f25150f2794302df95ee4f2cc",
+        "size_in_bytes": 1784
+      },
+      {
+        "_path": "lib/R/library/dplyr/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "f7ff7b018dd26ed053d4d697e56e125996fab3d596012260d1b9cc6cae0065a1",
+        "sha256_in_prefix": "f7ff7b018dd26ed053d4d697e56e125996fab3d596012260d1b9cc6cae0065a1",
+        "size_in_bytes": 413
+      },
+      {
+        "_path": "lib/R/library/dplyr/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "c6fce7b9f861e5e6ff56bc6444e18e5debb41264723aa0543651335d6104a421",
+        "sha256_in_prefix": "c6fce7b9f861e5e6ff56bc6444e18e5debb41264723aa0543651335d6104a421",
+        "size_in_bytes": 12259
+      },
+      {
+        "_path": "lib/R/library/dplyr/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "e14338e18f3587a6b05ce969eabce28ed8b3b36ccbfd28c1a1907e000b01215d",
+        "sha256_in_prefix": "e14338e18f3587a6b05ce969eabce28ed8b3b36ccbfd28c1a1907e000b01215d",
+        "size_in_bytes": 109568
+      },
+      {
+        "_path": "lib/R/library/dplyr/R/dplyr",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/dplyr/R/dplyr.rdb",
+        "path_type": "hardlink",
+        "sha256": "c03944c0bf84b39f060f488fbf30bb3db3b92796fedcdbddcaef76439b6dccac",
+        "sha256_in_prefix": "c03944c0bf84b39f060f488fbf30bb3db3b92796fedcdbddcaef76439b6dccac",
+        "size_in_bytes": 536381
+      },
+      {
+        "_path": "lib/R/library/dplyr/R/dplyr.rdx",
+        "path_type": "hardlink",
+        "sha256": "0e72d4df28e21cf3f216c517c2753db90a4ea88b4ac1b5a7f9294271fcf7d06d",
+        "sha256_in_prefix": "0e72d4df28e21cf3f216c517c2753db90a4ea88b4ac1b5a7f9294271fcf7d06d",
+        "size_in_bytes": 9107
+      },
+      {
+        "_path": "lib/R/library/dplyr/data/Rdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "e78d75c69b5c1899c0f331ead3d3e907f1ee3266ea026ff0fe8835cc581786b3",
+        "sha256_in_prefix": "e78d75c69b5c1899c0f331ead3d3e907f1ee3266ea026ff0fe8835cc581786b3",
+        "size_in_bytes": 85454
+      },
+      {
+        "_path": "lib/R/library/dplyr/data/Rdata.rds",
+        "path_type": "hardlink",
+        "sha256": "36558b18613db620e243486b8701e2e5b605b4afba9909c6bcefdccbe9f4e6b6",
+        "sha256_in_prefix": "36558b18613db620e243486b8701e2e5b605b4afba9909c6bcefdccbe9f4e6b6",
+        "size_in_bytes": 136
+      },
+      {
+        "_path": "lib/R/library/dplyr/data/Rdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "b6a898a2c7b97cc11f2c95508b1ab43107001993d91e5b06d7cd36a7a494dd51",
+        "sha256_in_prefix": "b6a898a2c7b97cc11f2c95508b1ab43107001993d91e5b06d7cd36a7a494dd51",
+        "size_in_bytes": 210
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/base.R",
+        "path_type": "hardlink",
+        "sha256": "73daa91eb6fb2d4e6bc042587fe15e94379625c4bd40dc02d5f4b2bf226811b8",
+        "sha256_in_prefix": "73daa91eb6fb2d4e6bc042587fe15e94379625c4bd40dc02d5f4b2bf226811b8",
+        "size_in_bytes": 6174
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/base.Rmd",
+        "path_type": "hardlink",
+        "sha256": "71fb8ecf5b98de8bf8c42daa45cd0cc5600168f622250ae26192aa7b8c081f7c",
+        "sha256_in_prefix": "71fb8ecf5b98de8bf8c42daa45cd0cc5600168f622250ae26192aa7b8c081f7c",
+        "size_in_bytes": 12082
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/base.html",
+        "path_type": "hardlink",
+        "sha256": "4f60612e25dc580f00a3ebc4da2284f6415a24cbb1fbe8940208dd8877dfc391",
+        "sha256_in_prefix": "4f60612e25dc580f00a3ebc4da2284f6415a24cbb1fbe8940208dd8877dfc391",
+        "size_in_bytes": 99393
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/colwise.R",
+        "path_type": "hardlink",
+        "sha256": "5f4f4c69256cd918b4d4694e6d5df5ba2847a167ddd2f7ebed5b64b831b87e5b",
+        "sha256_in_prefix": "5f4f4c69256cd918b4d4694e6d5df5ba2847a167ddd2f7ebed5b64b831b87e5b",
+        "size_in_bytes": 5626
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/colwise.Rmd",
+        "path_type": "hardlink",
+        "sha256": "dcd25c5635e705e76760bb3cf45a57cb30304c86a857c543746522d0df811de4",
+        "sha256_in_prefix": "dcd25c5635e705e76760bb3cf45a57cb30304c86a857c543746522d0df811de4",
+        "size_in_bytes": 12186
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/colwise.html",
+        "path_type": "hardlink",
+        "sha256": "a5a60d2196c28f23f1b3a2064511a1cf232dbac0a9bd749814b88b78fb25c360",
+        "sha256_in_prefix": "a5a60d2196c28f23f1b3a2064511a1cf232dbac0a9bd749814b88b78fb25c360",
+        "size_in_bytes": 64609
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/compatibility.R",
+        "path_type": "hardlink",
+        "sha256": "c83b24dba29f799a3c2346ee8d9a7c1d3bda2c6cdf6302797adaa06452c42026",
+        "sha256_in_prefix": "c83b24dba29f799a3c2346ee8d9a7c1d3bda2c6cdf6302797adaa06452c42026",
+        "size_in_bytes": 3668
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/compatibility.Rmd",
+        "path_type": "hardlink",
+        "sha256": "5ec152f6c46d0a8f775e99ca0c8d1b9ca772fcb9ac530cf9a611f6a289a902d7",
+        "sha256_in_prefix": "5ec152f6c46d0a8f775e99ca0c8d1b9ca772fcb9ac530cf9a611f6a289a902d7",
+        "size_in_bytes": 10064
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/compatibility.html",
+        "path_type": "hardlink",
+        "sha256": "c1a151b4e78797ace104fe0f4645cc6ba3ea4054a2302d216ac17fbc7ce7aec0",
+        "sha256_in_prefix": "c1a151b4e78797ace104fe0f4645cc6ba3ea4054a2302d216ac17fbc7ce7aec0",
+        "size_in_bytes": 35899
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/dplyr.R",
+        "path_type": "hardlink",
+        "sha256": "ef66b23615d6dbcd3b32401d1998f7b6f9bafc0c9ac81f204fbe0f6943114599",
+        "sha256_in_prefix": "ef66b23615d6dbcd3b32401d1998f7b6f9bafc0c9ac81f204fbe0f6943114599",
+        "size_in_bytes": 5289
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/dplyr.Rmd",
+        "path_type": "hardlink",
+        "sha256": "3d467578256cf344ad5ac9fecde4276dc2398ba6f11b9fc3a781716e78a07890",
+        "sha256_in_prefix": "3d467578256cf344ad5ac9fecde4276dc2398ba6f11b9fc3a781716e78a07890",
+        "size_in_bytes": 13837
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/dplyr.html",
+        "path_type": "hardlink",
+        "sha256": "be0b753b2625e62102ce5a74f35fa56e45ccf26ccc16207e20668b0e394ad9ad",
+        "sha256_in_prefix": "be0b753b2625e62102ce5a74f35fa56e45ccf26ccc16207e20668b0e394ad9ad",
+        "size_in_bytes": 93759
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/grouping.R",
+        "path_type": "hardlink",
+        "sha256": "395cfe80b37ea0d593b603937b9f19b4389d38a2e3367bd3f31af55778151e6d",
+        "sha256_in_prefix": "395cfe80b37ea0d593b603937b9f19b4389d38a2e3367bd3f31af55778151e6d",
+        "size_in_bytes": 4614
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/grouping.Rmd",
+        "path_type": "hardlink",
+        "sha256": "7bd098a6f3c9a55b98777ab16e1b9fadef1f0801c7b0e66a731d8c4fd48a0e0b",
+        "sha256_in_prefix": "7bd098a6f3c9a55b98777ab16e1b9fadef1f0801c7b0e66a731d8c4fd48a0e0b",
+        "size_in_bytes": 8462
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/grouping.html",
+        "path_type": "hardlink",
+        "sha256": "a023de51fa4d4bb476686b8d83638807cb65717a18f23d136624d48b079a6ddd",
+        "sha256_in_prefix": "a023de51fa4d4bb476686b8d83638807cb65717a18f23d136624d48b079a6ddd",
+        "size_in_bytes": 72800
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "046078bb56555e9fae3839ba0fa4e154fab0af5de22c79319080c30edafa2a71",
+        "sha256_in_prefix": "046078bb56555e9fae3839ba0fa4e154fab0af5de22c79319080c30edafa2a71",
+        "size_in_bytes": 5531
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/programming.R",
+        "path_type": "hardlink",
+        "sha256": "61bdc6caaaa53895a3a803f20165b5a8650541c552671b230827458253739e66",
+        "sha256_in_prefix": "61bdc6caaaa53895a3a803f20165b5a8650541c552671b230827458253739e66",
+        "size_in_bytes": 5058
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/programming.Rmd",
+        "path_type": "hardlink",
+        "sha256": "60bf04d3d57c96905e4802559a184fa722debdd357c5f728108dd3ff2e564d5e",
+        "sha256_in_prefix": "60bf04d3d57c96905e4802559a184fa722debdd357c5f728108dd3ff2e564d5e",
+        "size_in_bytes": 13962
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/programming.html",
+        "path_type": "hardlink",
+        "sha256": "bb0634b52d42671078f7bf85e1d31e9401442fb80a01b75e5f0881da623969a7",
+        "sha256_in_prefix": "bb0634b52d42671078f7bf85e1d31e9401442fb80a01b75e5f0881da623969a7",
+        "size_in_bytes": 45873
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/rowwise.R",
+        "path_type": "hardlink",
+        "sha256": "116b34c818eb4bf58fc7f7568b5ca2a9f37c28f06c3bd0e0ed15ac41e0548ad7",
+        "sha256_in_prefix": "116b34c818eb4bf58fc7f7568b5ca2a9f37c28f06c3bd0e0ed15ac41e0548ad7",
+        "size_in_bytes": 6523
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/rowwise.Rmd",
+        "path_type": "hardlink",
+        "sha256": "2fb19371ff4806cc8b6096a95df12ec2b4917bfa6b0dd51379e8b31c8c55215a",
+        "sha256_in_prefix": "2fb19371ff4806cc8b6096a95df12ec2b4917bfa6b0dd51379e8b31c8c55215a",
+        "size_in_bytes": 13907
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/rowwise.html",
+        "path_type": "hardlink",
+        "sha256": "299da942daca562a221071e2946c4c258792c07cb1efc77bd58016fa259d0bec",
+        "sha256_in_prefix": "299da942daca562a221071e2946c4c258792c07cb1efc77bd58016fa259d0bec",
+        "size_in_bytes": 84306
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/two-table.R",
+        "path_type": "hardlink",
+        "sha256": "2ab2cd208f33d2806a26ef3897330d6c6f6182572389d05b1eaa528a63c5d0d4",
+        "sha256_in_prefix": "2ab2cd208f33d2806a26ef3897330d6c6f6182572389d05b1eaa528a63c5d0d4",
+        "size_in_bytes": 2643
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/two-table.Rmd",
+        "path_type": "hardlink",
+        "sha256": "b8573f55832dd9c7c0ffbc0d5b3db16241c61c4b03d2ccd99a1801d90f5683a3",
+        "sha256_in_prefix": "b8573f55832dd9c7c0ffbc0d5b3db16241c61c4b03d2ccd99a1801d90f5683a3",
+        "size_in_bytes": 7292
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/two-table.html",
+        "path_type": "hardlink",
+        "sha256": "75520847922e0d329d1ab32cdbe597c89453867d029378af45901235afa9d610",
+        "sha256_in_prefix": "75520847922e0d329d1ab32cdbe597c89453867d029378af45901235afa9d610",
+        "size_in_bytes": 45414
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/window-functions.R",
+        "path_type": "hardlink",
+        "sha256": "7079afdcfc13778ec9d120313a06573e2ecce1e982cc566e9dd6acff8c71c954",
+        "sha256_in_prefix": "7079afdcfc13778ec9d120313a06573e2ecce1e982cc566e9dd6acff8c71c954",
+        "size_in_bytes": 3626
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/window-functions.Rmd",
+        "path_type": "hardlink",
+        "sha256": "a10788a21ce319a7b7e4e895d1bd28234478eb656f36feb3fddeda068827a74f",
+        "sha256_in_prefix": "a10788a21ce319a7b7e4e895d1bd28234478eb656f36feb3fddeda068827a74f",
+        "size_in_bytes": 9438
+      },
+      {
+        "_path": "lib/R/library/dplyr/doc/window-functions.html",
+        "path_type": "hardlink",
+        "sha256": "58859f59bbc00604cf45418d4a897789a53825c0a7b75ef3d13022a5a887f744",
+        "sha256_in_prefix": "58859f59bbc00604cf45418d4a897789a53825c0a7b75ef3d13022a5a887f744",
+        "size_in_bytes": 37580
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "8424a847660a348ab24405f5bda957055b75a65d725773d1b5b335ea7275f515",
+        "sha256_in_prefix": "8424a847660a348ab24405f5bda957055b75a65d725773d1b5b335ea7275f515",
+        "size_in_bytes": 6961
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "ed5541e1c704f4c1f11285de1f1bcd095367482a5ee5d8bf4a64f16fec8d3f41",
+        "sha256_in_prefix": "ed5541e1c704f4c1f11285de1f1bcd095367482a5ee5d8bf4a64f16fec8d3f41",
+        "size_in_bytes": 2387
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/dplyr.rdb",
+        "path_type": "hardlink",
+        "sha256": "7336795ee758c4ff1caedcc1add7a5060c9c19e9bdd4423c7eaf6a23496fb238",
+        "sha256_in_prefix": "7336795ee758c4ff1caedcc1add7a5060c9c19e9bdd4423c7eaf6a23496fb238",
+        "size_in_bytes": 333447
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/dplyr.rdx",
+        "path_type": "hardlink",
+        "sha256": "7054b4401b0a4e0b0201afa6ece68a3de91769a7a1828d59e66e1a14102d4393",
+        "sha256_in_prefix": "7054b4401b0a4e0b0201afa6ece68a3de91769a7a1828d59e66e1a14102d4393",
+        "size_in_bytes": 2283
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/figures/lifecycle-archived.svg",
+        "path_type": "hardlink",
+        "sha256": "e51548be52932d0b0468f5b11adcbebac08663898a7c043871864b0064710e86",
+        "sha256_in_prefix": "e51548be52932d0b0468f5b11adcbebac08663898a7c043871864b0064710e86",
+        "size_in_bytes": 967
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/figures/lifecycle-defunct.svg",
+        "path_type": "hardlink",
+        "sha256": "977a9d51157cf76f89e0d5562b8b57b06560682c4cc9e44333e9c394629fb520",
+        "sha256_in_prefix": "977a9d51157cf76f89e0d5562b8b57b06560682c4cc9e44333e9c394629fb520",
+        "size_in_bytes": 964
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/figures/lifecycle-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "7fefe18cc3b7059272fa85ff40c4a95739bb271276d819fe782ac38db295a07c",
+        "sha256_in_prefix": "7fefe18cc3b7059272fa85ff40c4a95739bb271276d819fe782ac38db295a07c",
+        "size_in_bytes": 970
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/figures/lifecycle-experimental.svg",
+        "path_type": "hardlink",
+        "sha256": "ed1f8972de7fdeb5dedc1087ea043dc4953dca5d58f54286b4c0ab297eefbe90",
+        "sha256_in_prefix": "ed1f8972de7fdeb5dedc1087ea043dc4953dca5d58f54286b4c0ab297eefbe90",
+        "size_in_bytes": 974
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/figures/lifecycle-maturing.svg",
+        "path_type": "hardlink",
+        "sha256": "9f33b55a1806ad5a3d565a0855a91b47ae26b7cf1ff0f025758bbd15b4c3984a",
+        "sha256_in_prefix": "9f33b55a1806ad5a3d565a0855a91b47ae26b7cf1ff0f025758bbd15b4c3984a",
+        "size_in_bytes": 966
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/figures/lifecycle-questioning.svg",
+        "path_type": "hardlink",
+        "sha256": "2feb00c21e12843cd1cd2e821c941628331dddbb26e34e58c40bb11dcffea89a",
+        "sha256_in_prefix": "2feb00c21e12843cd1cd2e821c941628331dddbb26e34e58c40bb11dcffea89a",
+        "size_in_bytes": 972
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/figures/lifecycle-retired.svg",
+        "path_type": "hardlink",
+        "sha256": "a74f73ab22058d1f9f2dfd41857933759cf1b8e3d03cc18bf1eddc1ab7f2daee",
+        "sha256_in_prefix": "a74f73ab22058d1f9f2dfd41857933759cf1b8e3d03cc18bf1eddc1ab7f2daee",
+        "size_in_bytes": 965
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/figures/lifecycle-soft-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "3a1280ea3869c1ffd2aa92d984e197eb9ac823746d018f000c5d53117ad257b1",
+        "sha256_in_prefix": "3a1280ea3869c1ffd2aa92d984e197eb9ac823746d018f000c5d53117ad257b1",
+        "size_in_bytes": 982
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/figures/lifecycle-stable.svg",
+        "path_type": "hardlink",
+        "sha256": "4817300514459f5ac876b1a379c7bad15d6049e1a954b71455ab78d76b83ffa0",
+        "sha256_in_prefix": "4817300514459f5ac876b1a379c7bad15d6049e1a954b71455ab78d76b83ffa0",
+        "size_in_bytes": 956
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/figures/lifecycle-superseded.svg",
+        "path_type": "hardlink",
+        "sha256": "c425824d3301dc7d4dc0100d408c4b469f488a8488be748a1fbe61abae5bab9e",
+        "sha256_in_prefix": "c425824d3301dc7d4dc0100d408c4b469f488a8488be748a1fbe61abae5bab9e",
+        "size_in_bytes": 971
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "63e6faebe8c7ba6c65e25e671d2906d80578ab51fa6242af2d5a92a8cdd6649d",
+        "sha256_in_prefix": "63e6faebe8c7ba6c65e25e671d2906d80578ab51fa6242af2d5a92a8cdd6649d",
+        "size_in_bytes": 45375
+      },
+      {
+        "_path": "lib/R/library/dplyr/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "08b8482e0e46ec792e5180b0415eeee4c4f04ec07c91ab5f87c5d308d193c217",
+        "sha256_in_prefix": "08b8482e0e46ec792e5180b0415eeee4c4f04ec07c91ab5f87c5d308d193c217",
+        "size_in_bytes": 924
+      },
+      {
+        "_path": "lib/R/library/dplyr/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "71c4695901d126a4f206c4f0f6bc6f79819a9bfafe06195f58fb243cb3d0040c",
+        "sha256_in_prefix": "71c4695901d126a4f206c4f0f6bc6f79819a9bfafe06195f58fb243cb3d0040c",
+        "size_in_bytes": 16768
+      },
+      {
+        "_path": "lib/R/library/dplyr/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/dplyr/libs/dplyr.so",
+        "path_type": "hardlink",
+        "sha256": "203ef2903bbe977449b8626179109f32f7a4ce604c6ec723f9336eb46d803453",
+        "sha256_in_prefix": "203ef2903bbe977449b8626179109f32f7a4ce604c6ec723f9336eb46d803453",
+        "size_in_bytes": 71648
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "5c8c13a71bd7ed37931c3c9995947e6ecf3d1c39f6d7ecd5ff3e8eee0f3b8827",
+  "size": 1193994,
+  "subdir": "linux-64",
+  "timestamp": 1665207371000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-dplyr-1.0.10-r42h7525677_1.tar.bz2",
+  "version": "1.0.10"
+}

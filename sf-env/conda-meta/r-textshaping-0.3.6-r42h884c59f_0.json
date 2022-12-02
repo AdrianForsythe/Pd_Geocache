@@ -1,0 +1,328 @@
+{
+  "build": "r42h884c59f_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "_r-mutex 1.* anacondar_1",
+    "r-base >=4.2,<4.3.0a0",
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0",
+    "r-systemfonts >=1.0.0",
+    "r-cpp11 >=0.2.1"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-textshaping-0.3.6-r42h884c59f_0",
+  "features": "",
+  "files": [
+    "lib/R/library/textshaping/DESCRIPTION",
+    "lib/R/library/textshaping/INDEX",
+    "lib/R/library/textshaping/LICENSE",
+    "lib/R/library/textshaping/Meta/Rd.rds",
+    "lib/R/library/textshaping/Meta/features.rds",
+    "lib/R/library/textshaping/Meta/hsearch.rds",
+    "lib/R/library/textshaping/Meta/links.rds",
+    "lib/R/library/textshaping/Meta/nsInfo.rds",
+    "lib/R/library/textshaping/Meta/package.rds",
+    "lib/R/library/textshaping/Meta/vignette.rds",
+    "lib/R/library/textshaping/NAMESPACE",
+    "lib/R/library/textshaping/NEWS.md",
+    "lib/R/library/textshaping/R/textshaping",
+    "lib/R/library/textshaping/R/textshaping.rdb",
+    "lib/R/library/textshaping/R/textshaping.rdx",
+    "lib/R/library/textshaping/doc/c_interface.R",
+    "lib/R/library/textshaping/doc/c_interface.Rmd",
+    "lib/R/library/textshaping/doc/c_interface.html",
+    "lib/R/library/textshaping/doc/index.html",
+    "lib/R/library/textshaping/help/AnIndex",
+    "lib/R/library/textshaping/help/aliases.rds",
+    "lib/R/library/textshaping/help/figures/lifecycle-archived.svg",
+    "lib/R/library/textshaping/help/figures/lifecycle-defunct.svg",
+    "lib/R/library/textshaping/help/figures/lifecycle-deprecated.svg",
+    "lib/R/library/textshaping/help/figures/lifecycle-experimental.svg",
+    "lib/R/library/textshaping/help/figures/lifecycle-maturing.svg",
+    "lib/R/library/textshaping/help/figures/lifecycle-questioning.svg",
+    "lib/R/library/textshaping/help/figures/lifecycle-stable.svg",
+    "lib/R/library/textshaping/help/figures/lifecycle-superseded.svg",
+    "lib/R/library/textshaping/help/paths.rds",
+    "lib/R/library/textshaping/help/textshaping.rdb",
+    "lib/R/library/textshaping/help/textshaping.rdx",
+    "lib/R/library/textshaping/html/00Index.html",
+    "lib/R/library/textshaping/html/R.css",
+    "lib/R/library/textshaping/include/textshaping.h",
+    "lib/R/library/textshaping/libs/textshaping.so"
+  ],
+  "fn": "r-textshaping-0.3.6-r42h884c59f_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-textshaping-0.3.6-r42h884c59f_0",
+    "type": 1
+  },
+  "md5": "0ff8b5aa78643ac002584859d1a409e2",
+  "name": "r-textshaping",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-textshaping-0.3.6-r42h884c59f_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/textshaping/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "d915469c773701a8a750849fcff05068bb1a531b9663ba75f8afcded14ea2c5c",
+        "sha256_in_prefix": "d915469c773701a8a750849fcff05068bb1a531b9663ba75f8afcded14ea2c5c",
+        "size_in_bytes": 1351
+      },
+      {
+        "_path": "lib/R/library/textshaping/INDEX",
+        "path_type": "hardlink",
+        "sha256": "1bb7d05c4c6dbceb652774960e35f2f4a85b52b52a823d6ec1d80b0e078d6c4c",
+        "sha256_in_prefix": "1bb7d05c4c6dbceb652774960e35f2f4a85b52b52a823d6ec1d80b0e078d6c4c",
+        "size_in_bytes": 228
+      },
+      {
+        "_path": "lib/R/library/textshaping/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "3bbb80ca3ae0e73f19902596d4ec0bbf90ffe9f9e764e465f3c0e4aaccf8f7be",
+        "sha256_in_prefix": "3bbb80ca3ae0e73f19902596d4ec0bbf90ffe9f9e764e465f3c0e4aaccf8f7be",
+        "size_in_bytes": 49
+      },
+      {
+        "_path": "lib/R/library/textshaping/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "8791e0347415f79e2fa679b4980f0cbc06de60f1a8b0dd1deffe444c14596041",
+        "sha256_in_prefix": "8791e0347415f79e2fa679b4980f0cbc06de60f1a8b0dd1deffe444c14596041",
+        "size_in_bytes": 435
+      },
+      {
+        "_path": "lib/R/library/textshaping/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "f46232c297371e4cffbf6057a877e30d9c280f48db20d3dad7b640472f21f563",
+        "sha256_in_prefix": "f46232c297371e4cffbf6057a877e30d9c280f48db20d3dad7b640472f21f563",
+        "size_in_bytes": 121
+      },
+      {
+        "_path": "lib/R/library/textshaping/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "ecca579fef1bdfec74c2338f4e58cc70f73fd40622726e68ebdbedaad5c503f6",
+        "sha256_in_prefix": "ecca579fef1bdfec74c2338f4e58cc70f73fd40622726e68ebdbedaad5c503f6",
+        "size_in_bytes": 463
+      },
+      {
+        "_path": "lib/R/library/textshaping/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "17786b625e5abfa2aaa23589e6a4be67d9eb2cbc408906ff76721ec4ed10b2ee",
+        "sha256_in_prefix": "17786b625e5abfa2aaa23589e6a4be67d9eb2cbc408906ff76721ec4ed10b2ee",
+        "size_in_bytes": 174
+      },
+      {
+        "_path": "lib/R/library/textshaping/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "9bfcaf47ebf8a9ec7315bce26e845e9379ebdd740db4e54255e6950488403787",
+        "sha256_in_prefix": "9bfcaf47ebf8a9ec7315bce26e845e9379ebdd740db4e54255e6950488403787",
+        "size_in_bytes": 340
+      },
+      {
+        "_path": "lib/R/library/textshaping/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "22cebf12e2265f05ef10f43716f9005da756b2a8c1169aea0df2a20c0c2b6542",
+        "sha256_in_prefix": "22cebf12e2265f05ef10f43716f9005da756b2a8c1169aea0df2a20c0c2b6542",
+        "size_in_bytes": 1214
+      },
+      {
+        "_path": "lib/R/library/textshaping/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "1ccb8e0f919027dddb1c91630f2d01a69f9a019e50f83ad220af6b6283bf94b6",
+        "sha256_in_prefix": "1ccb8e0f919027dddb1c91630f2d01a69f9a019e50f83ad220af6b6283bf94b6",
+        "size_in_bytes": 213
+      },
+      {
+        "_path": "lib/R/library/textshaping/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "4a8f23862b968c7d6fa71661c5ad9f73d1314fdcce2339c053de5f79452d673b",
+        "sha256_in_prefix": "4a8f23862b968c7d6fa71661c5ad9f73d1314fdcce2339c053de5f79452d673b",
+        "size_in_bytes": 227
+      },
+      {
+        "_path": "lib/R/library/textshaping/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "398666957c46ab073761e94fc2fa4627a71151ef4c58a8d8531f20b7da318d39",
+        "sha256_in_prefix": "398666957c46ab073761e94fc2fa4627a71151ef4c58a8d8531f20b7da318d39",
+        "size_in_bytes": 1311
+      },
+      {
+        "_path": "lib/R/library/textshaping/R/textshaping",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/textshaping/R/textshaping.rdb",
+        "path_type": "hardlink",
+        "sha256": "ab5b686e51a218f31488e42ce3305ddf15ebf81b14734a0c63582d521dadec73",
+        "sha256_in_prefix": "ab5b686e51a218f31488e42ce3305ddf15ebf81b14734a0c63582d521dadec73",
+        "size_in_bytes": 11512
+      },
+      {
+        "_path": "lib/R/library/textshaping/R/textshaping.rdx",
+        "path_type": "hardlink",
+        "sha256": "a68d724c664a3ec3d6429218829e1955e85322301d7816d9ced60c3f979ba185",
+        "sha256_in_prefix": "a68d724c664a3ec3d6429218829e1955e85322301d7816d9ced60c3f979ba185",
+        "size_in_bytes": 373
+      },
+      {
+        "_path": "lib/R/library/textshaping/doc/c_interface.R",
+        "path_type": "hardlink",
+        "sha256": "f500858fa832a92afbc96d1d4415838fabefc77b97bb8ee842a5a40ec8667cc9",
+        "sha256_in_prefix": "f500858fa832a92afbc96d1d4415838fabefc77b97bb8ee842a5a40ec8667cc9",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "lib/R/library/textshaping/doc/c_interface.Rmd",
+        "path_type": "hardlink",
+        "sha256": "aecb074e1f72145b7c62d8d4d60a2432682d34541512915b8846f8a2753737c4",
+        "sha256_in_prefix": "aecb074e1f72145b7c62d8d4d60a2432682d34541512915b8846f8a2753737c4",
+        "size_in_bytes": 4259
+      },
+      {
+        "_path": "lib/R/library/textshaping/doc/c_interface.html",
+        "path_type": "hardlink",
+        "sha256": "9ca51ea93f5ae54a65034b4d1c4717c9f1f810192bd7c5e994858f6d32156f28",
+        "sha256_in_prefix": "9ca51ea93f5ae54a65034b4d1c4717c9f1f810192bd7c5e994858f6d32156f28",
+        "size_in_bytes": 18478
+      },
+      {
+        "_path": "lib/R/library/textshaping/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "04af9edca60e64eb8930641c0ab0299031b7c070240e8a0e1758f9344590b4ac",
+        "sha256_in_prefix": "04af9edca60e64eb8930641c0ab0299031b7c070240e8a0e1758f9344590b4ac",
+        "size_in_bytes": 1370
+      },
+      {
+        "_path": "lib/R/library/textshaping/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "83a6844ddb807732d92309842597dc4a336a31224084faa95ea070d7eb1016d6",
+        "sha256_in_prefix": "83a6844ddb807732d92309842597dc4a336a31224084faa95ea070d7eb1016d6",
+        "size_in_bytes": 152
+      },
+      {
+        "_path": "lib/R/library/textshaping/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "f8027a98f6fa98f79e9263acbcd73cab5ed0c6f6d2e8fa02b766bcc0fa41fee3",
+        "sha256_in_prefix": "f8027a98f6fa98f79e9263acbcd73cab5ed0c6f6d2e8fa02b766bcc0fa41fee3",
+        "size_in_bytes": 136
+      },
+      {
+        "_path": "lib/R/library/textshaping/help/figures/lifecycle-archived.svg",
+        "path_type": "hardlink",
+        "sha256": "e51548be52932d0b0468f5b11adcbebac08663898a7c043871864b0064710e86",
+        "sha256_in_prefix": "e51548be52932d0b0468f5b11adcbebac08663898a7c043871864b0064710e86",
+        "size_in_bytes": 967
+      },
+      {
+        "_path": "lib/R/library/textshaping/help/figures/lifecycle-defunct.svg",
+        "path_type": "hardlink",
+        "sha256": "977a9d51157cf76f89e0d5562b8b57b06560682c4cc9e44333e9c394629fb520",
+        "sha256_in_prefix": "977a9d51157cf76f89e0d5562b8b57b06560682c4cc9e44333e9c394629fb520",
+        "size_in_bytes": 964
+      },
+      {
+        "_path": "lib/R/library/textshaping/help/figures/lifecycle-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "7fefe18cc3b7059272fa85ff40c4a95739bb271276d819fe782ac38db295a07c",
+        "sha256_in_prefix": "7fefe18cc3b7059272fa85ff40c4a95739bb271276d819fe782ac38db295a07c",
+        "size_in_bytes": 970
+      },
+      {
+        "_path": "lib/R/library/textshaping/help/figures/lifecycle-experimental.svg",
+        "path_type": "hardlink",
+        "sha256": "ed1f8972de7fdeb5dedc1087ea043dc4953dca5d58f54286b4c0ab297eefbe90",
+        "sha256_in_prefix": "ed1f8972de7fdeb5dedc1087ea043dc4953dca5d58f54286b4c0ab297eefbe90",
+        "size_in_bytes": 974
+      },
+      {
+        "_path": "lib/R/library/textshaping/help/figures/lifecycle-maturing.svg",
+        "path_type": "hardlink",
+        "sha256": "9f33b55a1806ad5a3d565a0855a91b47ae26b7cf1ff0f025758bbd15b4c3984a",
+        "sha256_in_prefix": "9f33b55a1806ad5a3d565a0855a91b47ae26b7cf1ff0f025758bbd15b4c3984a",
+        "size_in_bytes": 966
+      },
+      {
+        "_path": "lib/R/library/textshaping/help/figures/lifecycle-questioning.svg",
+        "path_type": "hardlink",
+        "sha256": "2feb00c21e12843cd1cd2e821c941628331dddbb26e34e58c40bb11dcffea89a",
+        "sha256_in_prefix": "2feb00c21e12843cd1cd2e821c941628331dddbb26e34e58c40bb11dcffea89a",
+        "size_in_bytes": 972
+      },
+      {
+        "_path": "lib/R/library/textshaping/help/figures/lifecycle-stable.svg",
+        "path_type": "hardlink",
+        "sha256": "4817300514459f5ac876b1a379c7bad15d6049e1a954b71455ab78d76b83ffa0",
+        "sha256_in_prefix": "4817300514459f5ac876b1a379c7bad15d6049e1a954b71455ab78d76b83ffa0",
+        "size_in_bytes": 956
+      },
+      {
+        "_path": "lib/R/library/textshaping/help/figures/lifecycle-superseded.svg",
+        "path_type": "hardlink",
+        "sha256": "c425824d3301dc7d4dc0100d408c4b469f488a8488be748a1fbe61abae5bab9e",
+        "sha256_in_prefix": "c425824d3301dc7d4dc0100d408c4b469f488a8488be748a1fbe61abae5bab9e",
+        "size_in_bytes": 971
+      },
+      {
+        "_path": "lib/R/library/textshaping/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "3f4b3c07c1fd6893c3af1357e22d3e014a7401426849350f883fb6104a4d7174",
+        "sha256_in_prefix": "3f4b3c07c1fd6893c3af1357e22d3e014a7401426849350f883fb6104a4d7174",
+        "size_in_bytes": 207
+      },
+      {
+        "_path": "lib/R/library/textshaping/help/textshaping.rdb",
+        "path_type": "hardlink",
+        "sha256": "62bcb883950962125bfa1edc5ddaefcf3b3ea4a5c9f4fd59249024b49f39b8a2",
+        "sha256_in_prefix": "62bcb883950962125bfa1edc5ddaefcf3b3ea4a5c9f4fd59249024b49f39b8a2",
+        "size_in_bytes": 11411
+      },
+      {
+        "_path": "lib/R/library/textshaping/help/textshaping.rdx",
+        "path_type": "hardlink",
+        "sha256": "e6cf43ab42308b2c2d1ecbe436b17831e0e779a233e7b705965a24f6045fcb73",
+        "sha256_in_prefix": "e6cf43ab42308b2c2d1ecbe436b17831e0e779a233e7b705965a24f6045fcb73",
+        "size_in_bytes": 257
+      },
+      {
+        "_path": "lib/R/library/textshaping/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "3a221679e343579f0aedaf6ed3fd4c20d044abc3544a230844462a5aaf070b04",
+        "sha256_in_prefix": "3a221679e343579f0aedaf6ed3fd4c20d044abc3544a230844462a5aaf070b04",
+        "size_in_bytes": 1510
+      },
+      {
+        "_path": "lib/R/library/textshaping/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/textshaping/include/textshaping.h",
+        "path_type": "hardlink",
+        "sha256": "1d31f9f3c872943ff1772c3bb7fc1007ccc588c00f86519b8e8217b5da220222",
+        "sha256_in_prefix": "1d31f9f3c872943ff1772c3bb7fc1007ccc588c00f86519b8e8217b5da220222",
+        "size_in_bytes": 3332
+      },
+      {
+        "_path": "lib/R/library/textshaping/libs/textshaping.so",
+        "path_type": "hardlink",
+        "sha256": "9d8aeacd1f720d0edecb3fbfad775214214d33c8c646dc5b0e2b350a37ce9f83",
+        "sha256_in_prefix": "9d8aeacd1f720d0edecb3fbfad775214214d33c8c646dc5b0e2b350a37ce9f83",
+        "size_in_bytes": 194768
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "05cca69853dcb183b2d001f18342c68e0c3daf1d6308a13bef17f70680715818",
+  "size": 108415,
+  "subdir": "linux-64",
+  "timestamp": 1654417459000,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-textshaping-0.3.6-r42h884c59f_0.conda",
+  "version": "0.3.6"
+}

@@ -1,6 +1,7 @@
 Rscript                 Run the commands 'Rscript' and 'R CMD'
 Rscript_call            Call a function in a new R session via
                         'Rscript()'
+alnum_id                Generate ID strings
 attr                    Obtain an attribute of an object without
                         partial matching
 base64_encode           Encode/decode data into/from base64 encoding.
@@ -39,6 +40,8 @@ isFALSE                 Test if an object is identical to 'FALSE'
 is_abs_path             Test if paths are relative or absolute
 is_ascii                Check if a character vector consists of
                         entirely ASCII characters
+is_blank                Test if a character vector consists of blank
+                        strings
 is_sub_path             Test if a path is a subpath of a dir
 is_web_path             Test if a path is a web path
 is_windows              Test for types of operating systems
@@ -84,12 +87,10 @@ same_path               Test if two paths are the same after they are
 session_info            An alternative to sessionInfo() to print
                         session information
 set_envvar              Set environment variables
+shrink_images           Shrink images to a maximum width
 split_lines             Split a character vector by line breaks
 split_source            Split source lines into complete expressions
 strict_list             Strict lists
-stringsAsStrings        Set the global option 'options(stringsAsFactors
-                        = FALSE)' inside a parent function and restore
-                        the option after the parent function exits
 submit_cran             Submit a source package to CRAN
 system3                 Run 'system2()' and mark its character output
                         as UTF-8 if appropriate

@@ -8,7 +8,8 @@ datadir=${datarootdir}/proj
 Name: PROJ
 Description: Coordinate transformation software library
 Requires:
-Version: 8.2.0
+Version: 9.0.1
 Libs: -L${libdir} -lproj
-Libs.private: -lsqlite3 -ltiff -lcurl -lstdc++ -lm -ldl
+Libs.private: -lpthread -lstdc++ -lm -ldl
+Requires.private: sqlite3 libtiff-4 libcurl
 Cflags: -I${includedir}

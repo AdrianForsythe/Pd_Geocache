@@ -1,0 +1,396 @@
+{
+  "build": "h3f4058f_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "bzip2 >=1.0.8,<2.0a0",
+    "curl >=7.83.1,<8.0a0",
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "libzlib >=1.2.12,<1.3.0a0",
+    "lz4-c >=1.9.3,<1.10.0a0",
+    "openssl >=3.0.3,<4.0a0",
+    "zlib >=1.2.12,<1.3.0a0",
+    "zstd >=1.5.2,<1.6.0a0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/tiledb-2.9.5-h3f4058f_0",
+  "features": "",
+  "files": [
+    "include/tiledb/array.h",
+    "include/tiledb/array_schema.h",
+    "include/tiledb/array_schema_evolution.h",
+    "include/tiledb/arrow_io_impl.h",
+    "include/tiledb/arrowio",
+    "include/tiledb/attribute.h",
+    "include/tiledb/config.h",
+    "include/tiledb/context.h",
+    "include/tiledb/core_interface.h",
+    "include/tiledb/deleter.h",
+    "include/tiledb/dimension.h",
+    "include/tiledb/domain.h",
+    "include/tiledb/error.h",
+    "include/tiledb/exception.h",
+    "include/tiledb/filter.h",
+    "include/tiledb/filter_list.h",
+    "include/tiledb/fragment_info.h",
+    "include/tiledb/group.h",
+    "include/tiledb/group_experimental.h",
+    "include/tiledb/object.h",
+    "include/tiledb/object_iter.h",
+    "include/tiledb/query.h",
+    "include/tiledb/query_condition.h",
+    "include/tiledb/schema_base.h",
+    "include/tiledb/stats.h",
+    "include/tiledb/subarray.h",
+    "include/tiledb/tiledb",
+    "include/tiledb/tiledb.h",
+    "include/tiledb/tiledb_enum.h",
+    "include/tiledb/tiledb_experimental",
+    "include/tiledb/tiledb_experimental.h",
+    "include/tiledb/tiledb_export.h",
+    "include/tiledb/tiledb_serialization.h",
+    "include/tiledb/tiledb_version.h",
+    "include/tiledb/type.h",
+    "include/tiledb/utils.h",
+    "include/tiledb/version.h",
+    "include/tiledb/vfs.h",
+    "lib/cmake/TileDB/TileDBConfig.cmake",
+    "lib/cmake/TileDB/TileDBTargets-release.cmake",
+    "lib/cmake/TileDB/TileDBTargets.cmake",
+    "lib/libtiledb.so",
+    "lib/libtiledb.so.2.9",
+    "lib/pkgconfig/tiledb.pc"
+  ],
+  "fn": "tiledb-2.9.5-h3f4058f_0.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/tiledb-2.9.5-h3f4058f_0",
+    "type": 1
+  },
+  "md5": "4128510b35ed578b909ea68234c9330f",
+  "name": "tiledb",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/tiledb-2.9.5-h3f4058f_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/tiledb/array.h",
+        "path_type": "hardlink",
+        "sha256": "07c70017af9230b12eefd81e1a7beab537b07817663ca73f8972e35aaa7efeda",
+        "sha256_in_prefix": "07c70017af9230b12eefd81e1a7beab537b07817663ca73f8972e35aaa7efeda",
+        "size_in_bytes": 49781
+      },
+      {
+        "_path": "include/tiledb/array_schema.h",
+        "path_type": "hardlink",
+        "sha256": "571955951d8c0895cc6112f051774f8e7c69ea129d78b758db60239e0bd55387",
+        "sha256_in_prefix": "571955951d8c0895cc6112f051774f8e7c69ea129d78b758db60239e0bd55387",
+        "size_in_bytes": 21438
+      },
+      {
+        "_path": "include/tiledb/array_schema_evolution.h",
+        "path_type": "hardlink",
+        "sha256": "c7a2feeb57b8abe42b8084a0ecc5696cefdff5668411644c5b196b08d71efb6e",
+        "sha256_in_prefix": "c7a2feeb57b8abe42b8084a0ecc5696cefdff5668411644c5b196b08d71efb6e",
+        "size_in_bytes": 6709
+      },
+      {
+        "_path": "include/tiledb/arrow_io_impl.h",
+        "path_type": "hardlink",
+        "sha256": "5a09d1cc9459ccd27163650ff1f83f68d58b25707030fed1aa4e5129c854e03c",
+        "sha256_in_prefix": "5a09d1cc9459ccd27163650ff1f83f68d58b25707030fed1aa4e5129c854e03c",
+        "size_in_bytes": 25187
+      },
+      {
+        "_path": "include/tiledb/arrowio",
+        "path_type": "hardlink",
+        "sha256": "ce39b8b14bfd243755282486b3fe7803996b23960c8429b364c34e5c7b0f48c8",
+        "sha256_in_prefix": "ce39b8b14bfd243755282486b3fe7803996b23960c8429b364c34e5c7b0f48c8",
+        "size_in_bytes": 3048
+      },
+      {
+        "_path": "include/tiledb/attribute.h",
+        "path_type": "hardlink",
+        "sha256": "c98251a0f908116647a28128f42f04ac0bbff809955ab186986e207d15c7920d",
+        "sha256_in_prefix": "c98251a0f908116647a28128f42f04ac0bbff809955ab186986e207d15c7920d",
+        "size_in_bytes": 19697
+      },
+      {
+        "_path": "include/tiledb/config.h",
+        "path_type": "hardlink",
+        "sha256": "7eb8f8e37d0fae86db3aff7241871422a41f5518ad43494ae26320ebe4ab123b",
+        "sha256_in_prefix": "7eb8f8e37d0fae86db3aff7241871422a41f5518ad43494ae26320ebe4ab123b",
+        "size_in_bytes": 33894
+      },
+      {
+        "_path": "include/tiledb/context.h",
+        "path_type": "hardlink",
+        "sha256": "05e28b0ed5d9ed27d7305312cc43b94fe72020cd8f51a0a47de734bbe5911faf",
+        "sha256_in_prefix": "05e28b0ed5d9ed27d7305312cc43b94fe72020cd8f51a0a47de734bbe5911faf",
+        "size_in_bytes": 7499
+      },
+      {
+        "_path": "include/tiledb/core_interface.h",
+        "path_type": "hardlink",
+        "sha256": "bae0e0770726fbbc62b8f13e14803c007db9bf1dcfa7eb454f558819bd14d11a",
+        "sha256_in_prefix": "bae0e0770726fbbc62b8f13e14803c007db9bf1dcfa7eb454f558819bd14d11a",
+        "size_in_bytes": 2561
+      },
+      {
+        "_path": "include/tiledb/deleter.h",
+        "path_type": "hardlink",
+        "sha256": "5f96c70e4768e7e2dcbe9699955e6ecb0d1a37d7e5c8d306fdda0389b0ea85b9",
+        "sha256_in_prefix": "5f96c70e4768e7e2dcbe9699955e6ecb0d1a37d7e5c8d306fdda0389b0ea85b9",
+        "size_in_bytes": 3600
+      },
+      {
+        "_path": "include/tiledb/dimension.h",
+        "path_type": "hardlink",
+        "sha256": "6a2c9f5de10eddf0ef4940b49f818bb099ceb60a4e4eace9ebbe1d559035c074",
+        "sha256_in_prefix": "6a2c9f5de10eddf0ef4940b49f818bb099ceb60a4e4eace9ebbe1d559035c074",
+        "size_in_bytes": 16187
+      },
+      {
+        "_path": "include/tiledb/domain.h",
+        "path_type": "hardlink",
+        "sha256": "920b3493f8f891dfc9e4ed7e62adc54626917b1866565aec2398d8528e2924b3",
+        "sha256_in_prefix": "920b3493f8f891dfc9e4ed7e62adc54626917b1866565aec2398d8528e2924b3",
+        "size_in_bytes": 9773
+      },
+      {
+        "_path": "include/tiledb/error.h",
+        "path_type": "hardlink",
+        "sha256": "a919bcf7633de2077076757294025ad4864ee0f10d4542da20041d879c75708d",
+        "sha256_in_prefix": "a919bcf7633de2077076757294025ad4864ee0f10d4542da20041d879c75708d",
+        "size_in_bytes": 3221
+      },
+      {
+        "_path": "include/tiledb/exception.h",
+        "path_type": "hardlink",
+        "sha256": "ed375aad08c7ae5415b626c7a819baf8212942b4932fd65cda7834b147116ec1",
+        "sha256_in_prefix": "ed375aad08c7ae5415b626c7a819baf8212942b4932fd65cda7834b147116ec1",
+        "size_in_bytes": 3981
+      },
+      {
+        "_path": "include/tiledb/filter.h",
+        "path_type": "hardlink",
+        "sha256": "d34d2de5fa8eac9ea2c481f1fd915df0aa55aff97e2b8b46b71308c336743d68",
+        "sha256_in_prefix": "d34d2de5fa8eac9ea2c481f1fd915df0aa55aff97e2b8b46b71308c336743d68",
+        "size_in_bytes": 10208
+      },
+      {
+        "_path": "include/tiledb/filter_list.h",
+        "path_type": "hardlink",
+        "sha256": "c45212a3e3a535f010b0c7f08174869d3f243d2db18172ce966258d4501fd7ce",
+        "sha256_in_prefix": "c45212a3e3a535f010b0c7f08174869d3f243d2db18172ce966258d4501fd7ce",
+        "size_in_bytes": 6750
+      },
+      {
+        "_path": "include/tiledb/fragment_info.h",
+        "path_type": "hardlink",
+        "sha256": "6487c4cf874a95c5be572d33915e3a23dd28f3ae83e1b50f2d84473d28944384",
+        "sha256_in_prefix": "6487c4cf874a95c5be572d33915e3a23dd28f3ae83e1b50f2d84473d28944384",
+        "size_in_bytes": 14127
+      },
+      {
+        "_path": "include/tiledb/group.h",
+        "path_type": "hardlink",
+        "sha256": "d0c87c968357a946432b883443d86fc78fc66944025fc1da80b93cba503eb3d2",
+        "sha256_in_prefix": "d0c87c968357a946432b883443d86fc78fc66944025fc1da80b93cba503eb3d2",
+        "size_in_bytes": 1847
+      },
+      {
+        "_path": "include/tiledb/group_experimental.h",
+        "path_type": "hardlink",
+        "sha256": "74f68873229639638edc5e3e6c51b931d477d8f08e5d97fdfba3cf0bb984fe9f",
+        "sha256_in_prefix": "74f68873229639638edc5e3e6c51b931d477d8f08e5d97fdfba3cf0bb984fe9f",
+        "size_in_bytes": 14028
+      },
+      {
+        "_path": "include/tiledb/object.h",
+        "path_type": "hardlink",
+        "sha256": "9b0c4f7ee2c1a8ec4401ce4df6d3a5a21227864d4b7a59c7e32c6cdceb89b357",
+        "sha256_in_prefix": "9b0c4f7ee2c1a8ec4401ce4df6d3a5a21227864d4b7a59c7e32c6cdceb89b357",
+        "size_in_bytes": 6100
+      },
+      {
+        "_path": "include/tiledb/object_iter.h",
+        "path_type": "hardlink",
+        "sha256": "6f8581a481890116cf8765cb3afa37fb8943f87302bb4890e451093d0ca10f1f",
+        "sha256_in_prefix": "6f8581a481890116cf8765cb3afa37fb8943f87302bb4890e451093d0ca10f1f",
+        "size_in_bytes": 8094
+      },
+      {
+        "_path": "include/tiledb/query.h",
+        "path_type": "hardlink",
+        "sha256": "9231527d0ee6e5848a610db24ef4ac245d556011158cfbe4d18efe79f866bd5e",
+        "sha256_in_prefix": "9231527d0ee6e5848a610db24ef4ac245d556011158cfbe4d18efe79f866bd5e",
+        "size_in_bytes": 88173
+      },
+      {
+        "_path": "include/tiledb/query_condition.h",
+        "path_type": "hardlink",
+        "sha256": "98f24dad3c981c8ecf221b8b2d3268d587cd0cfd5f65c7029d8d067ab0a3b416",
+        "sha256_in_prefix": "98f24dad3c981c8ecf221b8b2d3268d587cd0cfd5f65c7029d8d067ab0a3b416",
+        "size_in_bytes": 8938
+      },
+      {
+        "_path": "include/tiledb/schema_base.h",
+        "path_type": "hardlink",
+        "sha256": "ae47dc759610d48f8ec6552a1dda7951502843d07713a45ca008381a186b376d",
+        "sha256_in_prefix": "ae47dc759610d48f8ec6552a1dda7951502843d07713a45ca008381a186b376d",
+        "size_in_bytes": 3299
+      },
+      {
+        "_path": "include/tiledb/stats.h",
+        "path_type": "hardlink",
+        "sha256": "649d6184eff93a7aaf17bb345cadaed1cb537a735c9cf672b7a4e10f9ca498d8",
+        "sha256_in_prefix": "649d6184eff93a7aaf17bb345cadaed1cb537a735c9cf672b7a4e10f9ca498d8",
+        "size_in_bytes": 3742
+      },
+      {
+        "_path": "include/tiledb/subarray.h",
+        "path_type": "hardlink",
+        "sha256": "c64d048fc7f5a1f89cfff522f793b7225f6e439b7c808098b71e78ada01da297",
+        "sha256_in_prefix": "c64d048fc7f5a1f89cfff522f793b7225f6e439b7c808098b71e78ada01da297",
+        "size_in_bytes": 19665
+      },
+      {
+        "_path": "include/tiledb/tiledb",
+        "path_type": "hardlink",
+        "sha256": "e1771e7095b1a7c71d02b1459d125d15293d8c6c630ca9e7e31044bd5bf02c45",
+        "sha256_in_prefix": "e1771e7095b1a7c71d02b1459d125d15293d8c6c630ca9e7e31044bd5bf02c45",
+        "size_in_bytes": 2185
+      },
+      {
+        "_path": "include/tiledb/tiledb.h",
+        "path_type": "hardlink",
+        "sha256": "af41b2a7bd375c97bd38d08f3fef849bfc5a8893048d846a55e47961a227b0d2",
+        "sha256_in_prefix": "af41b2a7bd375c97bd38d08f3fef849bfc5a8893048d846a55e47961a227b0d2",
+        "size_in_bytes": 275761
+      },
+      {
+        "_path": "include/tiledb/tiledb_enum.h",
+        "path_type": "hardlink",
+        "sha256": "4e5147cadedd8c97f9c7763ca45ead9a9b22e3bc4092f85f2765a7207796c171",
+        "sha256_in_prefix": "4e5147cadedd8c97f9c7763ca45ead9a9b22e3bc4092f85f2765a7207796c171",
+        "size_in_bytes": 10555
+      },
+      {
+        "_path": "include/tiledb/tiledb_experimental",
+        "path_type": "hardlink",
+        "sha256": "109fde82301f4cf8815964c9f4a28a6ab8eda38c5ee7176d2299973513ac5f73",
+        "sha256_in_prefix": "109fde82301f4cf8815964c9f4a28a6ab8eda38c5ee7176d2299973513ac5f73",
+        "size_in_bytes": 1478
+      },
+      {
+        "_path": "include/tiledb/tiledb_experimental.h",
+        "path_type": "hardlink",
+        "sha256": "5340e88334f024b0ad0dce46017cf2877aec278ad85ce9db5c388c2e2d10c00c",
+        "sha256_in_prefix": "5340e88334f024b0ad0dce46017cf2877aec278ad85ce9db5c388c2e2d10c00c",
+        "size_in_bytes": 33848
+      },
+      {
+        "_path": "include/tiledb/tiledb_export.h",
+        "path_type": "hardlink",
+        "sha256": "bd2813fe5936bc904caed4adeb59ae094c4e8c56797da71672a8c3caa0ed432b",
+        "sha256_in_prefix": "bd2813fe5936bc904caed4adeb59ae094c4e8c56797da71672a8c3caa0ed432b",
+        "size_in_bytes": 1020
+      },
+      {
+        "_path": "include/tiledb/tiledb_serialization.h",
+        "path_type": "hardlink",
+        "sha256": "6c6fadf0dfa4f8e640bc2772c88cc49fed57449fb514f4855103f15e4617f304",
+        "sha256_in_prefix": "6c6fadf0dfa4f8e640bc2772c88cc49fed57449fb514f4855103f15e4617f304",
+        "size_in_bytes": 20139
+      },
+      {
+        "_path": "include/tiledb/tiledb_version.h",
+        "path_type": "hardlink",
+        "sha256": "77cd13287e1cec322cbc77e243e640f2b7e35e79813234b951c7093dab2e89cc",
+        "sha256_in_prefix": "77cd13287e1cec322cbc77e243e640f2b7e35e79813234b951c7093dab2e89cc",
+        "size_in_bytes": 1296
+      },
+      {
+        "_path": "include/tiledb/type.h",
+        "path_type": "hardlink",
+        "sha256": "bab30d27391966f888a88f8be1fad9749f819840f500532b2f8552e825b1f09d",
+        "sha256_in_prefix": "bab30d27391966f888a88f8be1fad9749f819840f500532b2f8552e825b1f09d",
+        "size_in_bytes": 13967
+      },
+      {
+        "_path": "include/tiledb/utils.h",
+        "path_type": "hardlink",
+        "sha256": "9ecfcb5619eed65913ec1e05bd1f6241463c6bf1c787fce82702e3281ed192a7",
+        "sha256_in_prefix": "9ecfcb5619eed65913ec1e05bd1f6241463c6bf1c787fce82702e3281ed192a7",
+        "size_in_bytes": 14157
+      },
+      {
+        "_path": "include/tiledb/version.h",
+        "path_type": "hardlink",
+        "sha256": "6439a1983fd754b1118ce28ae5e237df828b7795d53703311335a952bbc98b32",
+        "sha256_in_prefix": "6439a1983fd754b1118ce28ae5e237df828b7795d53703311335a952bbc98b32",
+        "size_in_bytes": 1679
+      },
+      {
+        "_path": "include/tiledb/vfs.h",
+        "path_type": "hardlink",
+        "sha256": "06c49aa311d71796fd0fef245c402f4d7f1335d0416cf27d04df65efb0d53e8f",
+        "sha256_in_prefix": "06c49aa311d71796fd0fef245c402f4d7f1335d0416cf27d04df65efb0d53e8f",
+        "size_in_bytes": 19332
+      },
+      {
+        "_path": "lib/cmake/TileDB/TileDBConfig.cmake",
+        "path_type": "hardlink",
+        "sha256": "2f662aef8932b2ba51eead17e6e87c493afeadf82598f07ae43aba6ff77d16d9",
+        "sha256_in_prefix": "2f662aef8932b2ba51eead17e6e87c493afeadf82598f07ae43aba6ff77d16d9",
+        "size_in_bytes": 1499
+      },
+      {
+        "_path": "lib/cmake/TileDB/TileDBTargets-release.cmake",
+        "path_type": "hardlink",
+        "sha256": "c1b76fcb2ae2c0d85503ea880dcbe849e5fef4ae10e40d133500f0e655e74fda",
+        "sha256_in_prefix": "c1b76fcb2ae2c0d85503ea880dcbe849e5fef4ae10e40d133500f0e655e74fda",
+        "size_in_bytes": 871
+      },
+      {
+        "_path": "lib/cmake/TileDB/TileDBTargets.cmake",
+        "path_type": "hardlink",
+        "sha256": "2f2295563807472939e057df99b9f94cc4372892f877912124fd1be2851875ae",
+        "sha256_in_prefix": "2f2295563807472939e057df99b9f94cc4372892f877912124fd1be2851875ae",
+        "size_in_bytes": 3286
+      },
+      {
+        "_path": "lib/libtiledb.so",
+        "path_type": "softlink",
+        "sha256": "53d39f7f4ed7d6f7d8e2f0d075fd7eb158576f0c21d3e902330855cd09d6b38e",
+        "size_in_bytes": 16193328
+      },
+      {
+        "_path": "lib/libtiledb.so.2.9",
+        "path_type": "hardlink",
+        "sha256": "53d39f7f4ed7d6f7d8e2f0d075fd7eb158576f0c21d3e902330855cd09d6b38e",
+        "sha256_in_prefix": "53d39f7f4ed7d6f7d8e2f0d075fd7eb158576f0c21d3e902330855cd09d6b38e",
+        "size_in_bytes": 16193328
+      },
+      {
+        "_path": "lib/pkgconfig/tiledb.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/tiledb_1655644015587/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "d627bc7f19311d39f51ea66abee548d68ba62bcc905ff27d7fe3764aa47ee1a2",
+        "sha256_in_prefix": "29492f3bd1abd9233d0adb74f68dc1baad1ea162205f16daf8c7924eb4a740e1",
+        "size_in_bytes": 621
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "a9ae061e64b4516278f42aee4f8cf8deefc2667297bc7c9c086143e340ba7b12",
+  "size": 4357942,
+  "subdir": "linux-64",
+  "timestamp": 1655644848000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/tiledb-2.9.5-h3f4058f_0.tar.bz2",
+  "version": "2.9.5"
+}

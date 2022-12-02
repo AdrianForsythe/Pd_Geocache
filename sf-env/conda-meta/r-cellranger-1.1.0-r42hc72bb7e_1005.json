@@ -1,0 +1,239 @@
+{
+  "build": "r42hc72bb7e_1005",
+  "build_number": 1005,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.2,<4.3.0a0",
+    "r-rematch",
+    "r-tibble"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-cellranger-1.1.0-r42hc72bb7e_1005",
+  "features": "",
+  "files": [
+    "lib/R/library/cellranger/DESCRIPTION",
+    "lib/R/library/cellranger/INDEX",
+    "lib/R/library/cellranger/LICENSE",
+    "lib/R/library/cellranger/Meta/Rd.rds",
+    "lib/R/library/cellranger/Meta/features.rds",
+    "lib/R/library/cellranger/Meta/hsearch.rds",
+    "lib/R/library/cellranger/Meta/links.rds",
+    "lib/R/library/cellranger/Meta/nsInfo.rds",
+    "lib/R/library/cellranger/Meta/package.rds",
+    "lib/R/library/cellranger/Meta/vignette.rds",
+    "lib/R/library/cellranger/NAMESPACE",
+    "lib/R/library/cellranger/NEWS.md",
+    "lib/R/library/cellranger/R/cellranger",
+    "lib/R/library/cellranger/R/cellranger.rdb",
+    "lib/R/library/cellranger/R/cellranger.rdx",
+    "lib/R/library/cellranger/doc/cell-references.Rmd",
+    "lib/R/library/cellranger/doc/cell-references.html",
+    "lib/R/library/cellranger/doc/index.html",
+    "lib/R/library/cellranger/help/AnIndex",
+    "lib/R/library/cellranger/help/aliases.rds",
+    "lib/R/library/cellranger/help/cellranger.rdb",
+    "lib/R/library/cellranger/help/cellranger.rdx",
+    "lib/R/library/cellranger/help/paths.rds",
+    "lib/R/library/cellranger/html/00Index.html",
+    "lib/R/library/cellranger/html/R.css"
+  ],
+  "fn": "r-cellranger-1.1.0-r42hc72bb7e_1005.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-cellranger-1.1.0-r42hc72bb7e_1005",
+    "type": 1
+  },
+  "md5": "c5fb1e0e6ac24a3c5dd59683291739b2",
+  "name": "r-cellranger",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-cellranger-1.1.0-r42hc72bb7e_1005.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/cellranger/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "3ee6dfa1681567ffe6746e88ec1e426a6e6bcb969ed661c7272c8eabfd8ab8bb",
+        "sha256_in_prefix": "3ee6dfa1681567ffe6746e88ec1e426a6e6bcb969ed661c7272c8eabfd8ab8bb",
+        "size_in_bytes": 923
+      },
+      {
+        "_path": "lib/R/library/cellranger/INDEX",
+        "path_type": "hardlink",
+        "sha256": "b79a8bc7a01e0adeff47da380ca4dcdce4fb2f7a9513c654045b3a599621b056",
+        "sha256_in_prefix": "b79a8bc7a01e0adeff47da380ca4dcdce4fb2f7a9513c654045b3a599621b056",
+        "size_in_bytes": 1187
+      },
+      {
+        "_path": "lib/R/library/cellranger/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "12138d675c360229bc01e1cf0fd45a8d089bfab8e2ed1e286d95ebeefb8725d0",
+        "sha256_in_prefix": "12138d675c360229bc01e1cf0fd45a8d089bfab8e2ed1e286d95ebeefb8725d0",
+        "size_in_bytes": 44
+      },
+      {
+        "_path": "lib/R/library/cellranger/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "069b86cb67d51b6b262124061f0a8fdf9464804152a9623b4baa5cc54fa78adc",
+        "sha256_in_prefix": "069b86cb67d51b6b262124061f0a8fdf9464804152a9623b4baa5cc54fa78adc",
+        "size_in_bytes": 926
+      },
+      {
+        "_path": "lib/R/library/cellranger/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/cellranger/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "a3bca9d8ef6c21d97c298717490e530c6052e9e9ca5fb1018c6d81a0b7df5982",
+        "sha256_in_prefix": "a3bca9d8ef6c21d97c298717490e530c6052e9e9ca5fb1018c6d81a0b7df5982",
+        "size_in_bytes": 912
+      },
+      {
+        "_path": "lib/R/library/cellranger/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "2ad82497d553e79486e2f5d982d17d073c5a43cf0428f7e4b485d4f6420e24c5",
+        "sha256_in_prefix": "2ad82497d553e79486e2f5d982d17d073c5a43cf0428f7e4b485d4f6420e24c5",
+        "size_in_bytes": 518
+      },
+      {
+        "_path": "lib/R/library/cellranger/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "a780b97302692c1ffadeac921b6dd1f14959fd310f827cfdf1d38ff41750a5ed",
+        "sha256_in_prefix": "a780b97302692c1ffadeac921b6dd1f14959fd310f827cfdf1d38ff41750a5ed",
+        "size_in_bytes": 459
+      },
+      {
+        "_path": "lib/R/library/cellranger/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "0ee58018cac9482669931c0cb7fc5812fa6fe83e93b77438c8589b19be7cf842",
+        "sha256_in_prefix": "0ee58018cac9482669931c0cb7fc5812fa6fe83e93b77438c8589b19be7cf842",
+        "size_in_bytes": 1026
+      },
+      {
+        "_path": "lib/R/library/cellranger/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "01835f22215930a36e28bcb47e8b3b11e81dbacd17531895c6558e3be9bdfc12",
+        "sha256_in_prefix": "01835f22215930a36e28bcb47e8b3b11e81dbacd17531895c6558e3be9bdfc12",
+        "size_in_bytes": 226
+      },
+      {
+        "_path": "lib/R/library/cellranger/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "c19e7bcce7f7ae69164513d99e722303089035937dda8eff727c7699db70a7ca",
+        "sha256_in_prefix": "c19e7bcce7f7ae69164513d99e722303089035937dda8eff727c7699db70a7ca",
+        "size_in_bytes": 1184
+      },
+      {
+        "_path": "lib/R/library/cellranger/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "f71421ab7b7eb40c6b41584bc4825dd5e721b778c716b467e5cc47fb29c820a0",
+        "sha256_in_prefix": "f71421ab7b7eb40c6b41584bc4825dd5e721b778c716b467e5cc47fb29c820a0",
+        "size_in_bytes": 1532
+      },
+      {
+        "_path": "lib/R/library/cellranger/R/cellranger",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/cellranger/R/cellranger.rdb",
+        "path_type": "hardlink",
+        "sha256": "483fcebcf2447ce5b44ab138f139e824a75c95ac7c4f00041d9178f415622021",
+        "sha256_in_prefix": "483fcebcf2447ce5b44ab138f139e824a75c95ac7c4f00041d9178f415622021",
+        "size_in_bytes": 44297
+      },
+      {
+        "_path": "lib/R/library/cellranger/R/cellranger.rdx",
+        "path_type": "hardlink",
+        "sha256": "f0a4c62ba40b523c02c8de99b4f5895d86196158740b53a0e8bdb720448ebf9c",
+        "sha256_in_prefix": "f0a4c62ba40b523c02c8de99b4f5895d86196158740b53a0e8bdb720448ebf9c",
+        "size_in_bytes": 1080
+      },
+      {
+        "_path": "lib/R/library/cellranger/doc/cell-references.Rmd",
+        "path_type": "hardlink",
+        "sha256": "cff2a49e6ea50e9bba499bff148378567b6319f836610a78b3a0dc3e1cf46dba",
+        "sha256_in_prefix": "cff2a49e6ea50e9bba499bff148378567b6319f836610a78b3a0dc3e1cf46dba",
+        "size_in_bytes": 2225
+      },
+      {
+        "_path": "lib/R/library/cellranger/doc/cell-references.html",
+        "path_type": "hardlink",
+        "sha256": "37acea54a8bdb6b364b7e7e285ddbd23dccf4e49d49df9abb6df342ec7e680d7",
+        "sha256_in_prefix": "37acea54a8bdb6b364b7e7e285ddbd23dccf4e49d49df9abb6df342ec7e680d7",
+        "size_in_bytes": 8625
+      },
+      {
+        "_path": "lib/R/library/cellranger/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "7f9b6e75969df03c0251fa5a8710768de159965d3701dbcec57ec1eb629dc720",
+        "sha256_in_prefix": "7f9b6e75969df03c0251fa5a8710768de159965d3701dbcec57ec1eb629dc720",
+        "size_in_bytes": 1403
+      },
+      {
+        "_path": "lib/R/library/cellranger/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "a1e02aef5a49167ff0028f93797d28f81b87a7717b4a9fc43638b30dae3083f4",
+        "sha256_in_prefix": "a1e02aef5a49167ff0028f93797d28f81b87a7717b4a9fc43638b30dae3083f4",
+        "size_in_bytes": 1189
+      },
+      {
+        "_path": "lib/R/library/cellranger/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "2c4f8f95833335145a0dabd437752ffd7ea54b88567fb3240ae04f1e38489b26",
+        "sha256_in_prefix": "2c4f8f95833335145a0dabd437752ffd7ea54b88567fb3240ae04f1e38489b26",
+        "size_in_bytes": 404
+      },
+      {
+        "_path": "lib/R/library/cellranger/help/cellranger.rdb",
+        "path_type": "hardlink",
+        "sha256": "a08e19daac28d711cd61d85759579956e17ad1b8799c402098bb6319ba89a80b",
+        "sha256_in_prefix": "a08e19daac28d711cd61d85759579956e17ad1b8799c402098bb6319ba89a80b",
+        "size_in_bytes": 42768
+      },
+      {
+        "_path": "lib/R/library/cellranger/help/cellranger.rdx",
+        "path_type": "hardlink",
+        "sha256": "c79c95b3a2e82277bed04ff49ca004b60f351159ace27071f7b09887fb9b01af",
+        "sha256_in_prefix": "c79c95b3a2e82277bed04ff49ca004b60f351159ace27071f7b09887fb9b01af",
+        "size_in_bytes": 566
+      },
+      {
+        "_path": "lib/R/library/cellranger/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "00982315ce996d0befa6df46a882298b051c212696231fe85adc415aca3f0009",
+        "sha256_in_prefix": "00982315ce996d0befa6df46a882298b051c212696231fe85adc415aca3f0009",
+        "size_in_bytes": 319
+      },
+      {
+        "_path": "lib/R/library/cellranger/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "dd2b53abee3c603b74b1a6a060562dc818a5d7917abecf7204f969cc1af50899",
+        "sha256_in_prefix": "dd2b53abee3c603b74b1a6a060562dc818a5d7917abecf7204f969cc1af50899",
+        "size_in_bytes": 6799
+      },
+      {
+        "_path": "lib/R/library/cellranger/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "e36e31227e7a803b4d730cd13fe59ba409c936600754d492d38beb8f86aa6e38",
+  "size": 112204,
+  "subdir": "noarch",
+  "timestamp": 1665205835000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-cellranger-1.1.0-r42hc72bb7e_1005.tar.bz2",
+  "version": "1.1.0"
+}

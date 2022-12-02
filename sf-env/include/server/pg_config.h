@@ -44,7 +44,7 @@
 #define BLCKSZ 8192
 
 /* Saved arguments from configure */
-#define CONFIGURE_ARGS " '--prefix=/home/adrian/PhD/Pd_Geocache/sf-env' '--with-readline' '--with-libraries=/home/adrian/PhD/Pd_Geocache/sf-env/lib' '--with-includes=/home/adrian/PhD/Pd_Geocache/sf-env/include' '--with-openssl' '--with-uuid=e2fs' '--with-libxml' '--with-libxslt' '--with-gssapi' '--with-system-tzdata=/home/adrian/PhD/Pd_Geocache/sf-env/share/zoneinfo' 'PG_SYSROOT=undefined' 'build_alias=x86_64-conda-linux-gnu' 'host_alias=x86_64-conda-linux-gnu' 'CC=x86_64-conda-linux-gnu-cc' 'CFLAGS=-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/postgresql-split_1637635358047/work=/usr/local/src/conda/postgresql-split-14.1 -fdebug-prefix-map=/home/adrian/PhD/Pd_Geocache/sf-env=/usr/local/src/conda-prefix' 'LDFLAGS=-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,-rpath,/home/adrian/PhD/Pd_Geocache/sf-env/lib -Wl,-rpath-link,/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib' 'CPPFLAGS=-DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include' 'CXX=x86_64-conda-linux-gnu-c++' 'CXXFLAGS=-fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/postgresql-split_1637635358047/work=/usr/local/src/conda/postgresql-split-14.1 -fdebug-prefix-map=/home/adrian/PhD/Pd_Geocache/sf-env=/usr/local/src/conda-prefix' 'CPP=/home/conda/feedstock_root/build_artifacts/postgresql-split_1637635358047/_build_env/bin/x86_64-conda-linux-gnu-cpp' 'PKG_CONFIG_PATH=/home/adrian/PhD/Pd_Geocache/sf-env/lib/pkgconfig'"
+#define CONFIGURE_ARGS " '--prefix=/home/adrian/PhD/Pd_Geocache/sf-env' '--with-readline' '--with-libraries=/home/adrian/PhD/Pd_Geocache/sf-env/lib' '--with-includes=/home/adrian/PhD/Pd_Geocache/sf-env/include' '--with-openssl' '--with-uuid=e2fs' '--with-libxml' '--with-libxslt' '--with-gssapi' '--with-system-tzdata=/home/adrian/PhD/Pd_Geocache/sf-env/share/zoneinfo' 'PG_SYSROOT=undefined' 'build_alias=x86_64-conda-linux-gnu' 'host_alias=x86_64-conda-linux-gnu' 'CC=x86_64-conda-linux-gnu-cc' 'CFLAGS=-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/postgresql-split_1660237941202/work=/usr/local/src/conda/postgresql-split-14.5 -fdebug-prefix-map=/home/adrian/PhD/Pd_Geocache/sf-env=/usr/local/src/conda-prefix' 'LDFLAGS=-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/adrian/PhD/Pd_Geocache/sf-env/lib -Wl,-rpath-link,/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib' 'CPPFLAGS=-DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include' 'CXX=x86_64-conda-linux-gnu-c++' 'CXXFLAGS=-fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/postgresql-split_1660237941202/work=/usr/local/src/conda/postgresql-split-14.5 -fdebug-prefix-map=/home/adrian/PhD/Pd_Geocache/sf-env=/usr/local/src/conda-prefix' 'CPP=/home/conda/feedstock_root/build_artifacts/postgresql-split_1660237941202/_build_env/bin/x86_64-conda-linux-gnu-cpp' 'PKG_CONFIG_PATH=/home/adrian/PhD/Pd_Geocache/sf-env/lib/pkgconfig'"
 
 /* Define to the default TCP port number on which the server listens and to
    which clients will try to connect. This can be overridden at run-time, but
@@ -641,6 +641,9 @@
 /* Define to 1 if you have the <sys/shm.h> header file. */
 #define HAVE_SYS_SHM_H 1
 
+/* Define to 1 if you have the <sys/signalfd.h> header file. */
+#define HAVE_SYS_SIGNALFD_H 1
+
 /* Define to 1 if you have the <sys/sockio.h> header file. */
 /* #undef HAVE_SYS_SOCKIO_H */
 
@@ -743,6 +746,9 @@
 /* Define to 1 if your compiler understands __builtin_ctz. */
 #define HAVE__BUILTIN_CTZ 1
 
+/* Define to 1 if your compiler understands __builtin_frame_address. */
+#define HAVE__BUILTIN_FRAME_ADDRESS 1
+
 /* Define to 1 if your compiler understands __builtin_$op_overflow. */
 #define HAVE__BUILTIN_OP_OVERFLOW 1
 
@@ -796,7 +802,7 @@
 #define PACKAGE_NAME "PostgreSQL"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "PostgreSQL 14.1"
+#define PACKAGE_STRING "PostgreSQL 14.5"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "postgresql"
@@ -805,7 +811,7 @@
 #define PACKAGE_URL "https://www.postgresql.org/"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "14.1"
+#define PACKAGE_VERSION "14.5"
 
 /* Define to the name of a signed 128-bit integer type. */
 #define PG_INT128_TYPE __int128
@@ -824,7 +830,7 @@
 #define PG_MAJORVERSION_NUM 14
 
 /* PostgreSQL minor version number */
-#define PG_MINORVERSION_NUM 1
+#define PG_MINORVERSION_NUM 5
 
 /* Define to best printf format archetype, usually gnu_printf if available. */
 #define PG_PRINTF_ATTRIBUTE gnu_printf
@@ -833,13 +839,13 @@
 #define PG_USE_STDBOOL 1
 
 /* PostgreSQL version as a string */
-#define PG_VERSION "14.1"
+#define PG_VERSION "14.5"
 
 /* PostgreSQL version as a number */
-#define PG_VERSION_NUM 140001
+#define PG_VERSION_NUM 140005
 
 /* A string containing the version number, platform, and C compiler */
-#define PG_VERSION_STR "PostgreSQL 14.1 on x86_64-conda-linux-gnu, compiled by x86_64-conda-linux-gnu-cc (GCC) 9.4.0, 64-bit"
+#define PG_VERSION_STR "PostgreSQL 14.5 on x86_64-conda-linux-gnu, compiled by x86_64-conda-linux-gnu-cc (conda-forge gcc 10.4.0-16) 10.4.0, 64-bit"
 
 /* Define to 1 to allow profiling output to be saved separately for each
    process. */

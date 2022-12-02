@@ -1,0 +1,318 @@
+{
+  "build": "r42h06615bd_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "r-base >=4.2,<4.3.0a0",
+    "r-htmlwidgets >=0.3.2",
+    "r-stringr"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-profvis-0.3.7-r42h06615bd_1",
+  "features": "",
+  "files": [
+    "lib/R/library/profvis/DESCRIPTION",
+    "lib/R/library/profvis/INDEX",
+    "lib/R/library/profvis/LICENSE",
+    "lib/R/library/profvis/Meta/Rd.rds",
+    "lib/R/library/profvis/Meta/features.rds",
+    "lib/R/library/profvis/Meta/hsearch.rds",
+    "lib/R/library/profvis/Meta/links.rds",
+    "lib/R/library/profvis/Meta/nsInfo.rds",
+    "lib/R/library/profvis/Meta/package.rds",
+    "lib/R/library/profvis/NAMESPACE",
+    "lib/R/library/profvis/NEWS.md",
+    "lib/R/library/profvis/R/profvis",
+    "lib/R/library/profvis/R/profvis.rdb",
+    "lib/R/library/profvis/R/profvis.rdx",
+    "lib/R/library/profvis/help/AnIndex",
+    "lib/R/library/profvis/help/aliases.rds",
+    "lib/R/library/profvis/help/paths.rds",
+    "lib/R/library/profvis/help/profvis.rdb",
+    "lib/R/library/profvis/help/profvis.rdx",
+    "lib/R/library/profvis/html/00Index.html",
+    "lib/R/library/profvis/html/R.css",
+    "lib/R/library/profvis/htmlwidgets/lib/d3/LICENSE",
+    "lib/R/library/profvis/htmlwidgets/lib/d3/d3.min.js",
+    "lib/R/library/profvis/htmlwidgets/lib/highlight/LICENSE",
+    "lib/R/library/profvis/htmlwidgets/lib/highlight/default.css",
+    "lib/R/library/profvis/htmlwidgets/lib/highlight/highlight.js",
+    "lib/R/library/profvis/htmlwidgets/lib/highlight/textmate.css",
+    "lib/R/library/profvis/htmlwidgets/lib/jquery/jquery.min.js",
+    "lib/R/library/profvis/htmlwidgets/lib/profvis/profvis.css",
+    "lib/R/library/profvis/htmlwidgets/lib/profvis/profvis.js",
+    "lib/R/library/profvis/htmlwidgets/lib/profvis/scroll.js",
+    "lib/R/library/profvis/htmlwidgets/profvis.js",
+    "lib/R/library/profvis/htmlwidgets/profvis.yaml",
+    "lib/R/library/profvis/libs/profvis.so",
+    "lib/R/library/profvis/shinymodule/draggable-helper.js"
+  ],
+  "fn": "r-profvis-0.3.7-r42h06615bd_1.tar.bz2",
+  "license": "GPL-3.0-only",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-profvis-0.3.7-r42h06615bd_1",
+    "type": 1
+  },
+  "md5": "a70e644ec1131e23ce750f685cdf78da",
+  "name": "r-profvis",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-profvis-0.3.7-r42h06615bd_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/profvis/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "616a9eaf708f6e15037a2f11e3422f325053b952c793ac86b61c75f2dfd56d4b",
+        "sha256_in_prefix": "616a9eaf708f6e15037a2f11e3422f325053b952c793ac86b61c75f2dfd56d4b",
+        "size_in_bytes": 1778
+      },
+      {
+        "_path": "lib/R/library/profvis/INDEX",
+        "path_type": "hardlink",
+        "sha256": "00d7a75e673a0549c5a5e8b4480a1e4468e6128d34c5569f6ad0f2ca7be5ae7e",
+        "sha256_in_prefix": "00d7a75e673a0549c5a5e8b4480a1e4468e6128d34c5569f6ad0f2ca7be5ae7e",
+        "size_in_bytes": 438
+      },
+      {
+        "_path": "lib/R/library/profvis/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "61671d183742efadb7422486b8b1385f81da3e3f4906ca27c204ce78699c50a2",
+        "sha256_in_prefix": "61671d183742efadb7422486b8b1385f81da3e3f4906ca27c204ce78699c50a2",
+        "size_in_bytes": 4696
+      },
+      {
+        "_path": "lib/R/library/profvis/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "19e04f635fe53f51debd34f85da448fb0f398933206da952e1c7df885ef296ec",
+        "sha256_in_prefix": "19e04f635fe53f51debd34f85da448fb0f398933206da952e1c7df885ef296ec",
+        "size_in_bytes": 455
+      },
+      {
+        "_path": "lib/R/library/profvis/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/profvis/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "b58889a435e168613bb4ffa8572c2f41ace12d69b221adaaaaeec425bdc6a0a8",
+        "sha256_in_prefix": "b58889a435e168613bb4ffa8572c2f41ace12d69b221adaaaaeec425bdc6a0a8",
+        "size_in_bytes": 459
+      },
+      {
+        "_path": "lib/R/library/profvis/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "6e5e8d78372c03b2624c8fe39eb49692d8240a41466081edc9994e706ddf8351",
+        "sha256_in_prefix": "6e5e8d78372c03b2624c8fe39eb49692d8240a41466081edc9994e706ddf8351",
+        "size_in_bytes": 205
+      },
+      {
+        "_path": "lib/R/library/profvis/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "63a571e38e9a8c2ea2f962b2167e310e57eeb61d2cab00105bed74a1fa30282f",
+        "sha256_in_prefix": "63a571e38e9a8c2ea2f962b2167e310e57eeb61d2cab00105bed74a1fa30282f",
+        "size_in_bytes": 377
+      },
+      {
+        "_path": "lib/R/library/profvis/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "68f910bc3ec48e4929a00d805fc48baab4972937a00999d62be2e69a8f69680e",
+        "sha256_in_prefix": "68f910bc3ec48e4929a00d805fc48baab4972937a00999d62be2e69a8f69680e",
+        "size_in_bytes": 1252
+      },
+      {
+        "_path": "lib/R/library/profvis/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "aaa5f97d91f3b841ad0f280bca6e49149c02a58cb6adcaf0670fe49440391d91",
+        "sha256_in_prefix": "aaa5f97d91f3b841ad0f280bca6e49149c02a58cb6adcaf0670fe49440391d91",
+        "size_in_bytes": 322
+      },
+      {
+        "_path": "lib/R/library/profvis/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "da3f0a873571813904a21d5dd0b277f09c68ab30205c046bf115b5bea1a267ae",
+        "sha256_in_prefix": "da3f0a873571813904a21d5dd0b277f09c68ab30205c046bf115b5bea1a267ae",
+        "size_in_bytes": 2619
+      },
+      {
+        "_path": "lib/R/library/profvis/R/profvis",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/profvis/R/profvis.rdb",
+        "path_type": "hardlink",
+        "sha256": "439f49ccc894f1e22ddb070101ced8090b96a5669c134ecb640665e5ea02cba6",
+        "sha256_in_prefix": "439f49ccc894f1e22ddb070101ced8090b96a5669c134ecb640665e5ea02cba6",
+        "size_in_bytes": 29855
+      },
+      {
+        "_path": "lib/R/library/profvis/R/profvis.rdx",
+        "path_type": "hardlink",
+        "sha256": "236853b22563ca22bbef1e700729c9b0673a5cf6c0281bb374b113eda5f10382",
+        "sha256_in_prefix": "236853b22563ca22bbef1e700729c9b0673a5cf6c0281bb374b113eda5f10382",
+        "size_in_bytes": 555
+      },
+      {
+        "_path": "lib/R/library/profvis/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "1199b7cab9294f76a29d57d003add8ad53e8aea2fb482693f824ee9b57a02a80",
+        "sha256_in_prefix": "1199b7cab9294f76a29d57d003add8ad53e8aea2fb482693f824ee9b57a02a80",
+        "size_in_bytes": 184
+      },
+      {
+        "_path": "lib/R/library/profvis/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "3dc598b24688d9e139e5ae7b51f81e74937ef964378b3912b523b688f624becf",
+        "sha256_in_prefix": "3dc598b24688d9e139e5ae7b51f81e74937ef964378b3912b523b688f624becf",
+        "size_in_bytes": 151
+      },
+      {
+        "_path": "lib/R/library/profvis/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "0901f84dfe9adda4635b32c99cd9b407d756a38d0187d9f48808418632b41f79",
+        "sha256_in_prefix": "0901f84dfe9adda4635b32c99cd9b407d756a38d0187d9f48808418632b41f79",
+        "size_in_bytes": 217
+      },
+      {
+        "_path": "lib/R/library/profvis/help/profvis.rdb",
+        "path_type": "hardlink",
+        "sha256": "ba4205a0e0109815f49c7661e5c57a401c848eeab98000fb877600755e081767",
+        "sha256_in_prefix": "ba4205a0e0109815f49c7661e5c57a401c848eeab98000fb877600755e081767",
+        "size_in_bytes": 13229
+      },
+      {
+        "_path": "lib/R/library/profvis/help/profvis.rdx",
+        "path_type": "hardlink",
+        "sha256": "f64570b5937ea7d8bec11ecf16b2a5b08732a2cc2d196e57f50284d99055d189",
+        "sha256_in_prefix": "f64570b5937ea7d8bec11ecf16b2a5b08732a2cc2d196e57f50284d99055d189",
+        "size_in_bytes": 308
+      },
+      {
+        "_path": "lib/R/library/profvis/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "49152b30ce518777ee0fbe6b11faa4ccfaf6718dc56f1143f203c09a7bc0132b",
+        "sha256_in_prefix": "49152b30ce518777ee0fbe6b11faa4ccfaf6718dc56f1143f203c09a7bc0132b",
+        "size_in_bytes": 1951
+      },
+      {
+        "_path": "lib/R/library/profvis/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/profvis/htmlwidgets/lib/d3/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "cfbbc38bc63359f41eef41f92314754d6652fd1a17d016de344926d5de34b7d5",
+        "sha256_in_prefix": "cfbbc38bc63359f41eef41f92314754d6652fd1a17d016de344926d5de34b7d5",
+        "size_in_bytes": 1429
+      },
+      {
+        "_path": "lib/R/library/profvis/htmlwidgets/lib/d3/d3.min.js",
+        "path_type": "hardlink",
+        "sha256": "a643b74067e8e03f8fc5eec9494c79b87aa6e33ccd953902b31d23e0463c69f6",
+        "sha256_in_prefix": "a643b74067e8e03f8fc5eec9494c79b87aa6e33ccd953902b31d23e0463c69f6",
+        "size_in_bytes": 151143
+      },
+      {
+        "_path": "lib/R/library/profvis/htmlwidgets/lib/highlight/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "bdb8f9bba7125549cb01d68d90050ac9604f5aa43f6fd63e070f6d7d095f8d74",
+        "sha256_in_prefix": "bdb8f9bba7125549cb01d68d90050ac9604f5aa43f6fd63e070f6d7d095f8d74",
+        "size_in_bytes": 1498
+      },
+      {
+        "_path": "lib/R/library/profvis/htmlwidgets/lib/highlight/default.css",
+        "path_type": "hardlink",
+        "sha256": "4485bea37bfe6bf26fdb2116f0b70888491e4a9916a9aa6762d99f623d30ae31",
+        "sha256_in_prefix": "4485bea37bfe6bf26fdb2116f0b70888491e4a9916a9aa6762d99f623d30ae31",
+        "size_in_bytes": 299
+      },
+      {
+        "_path": "lib/R/library/profvis/htmlwidgets/lib/highlight/highlight.js",
+        "path_type": "hardlink",
+        "sha256": "66c7af988ea9d6a448cecac16b206d04ca852d68fedaf53f662456f5eb00bf54",
+        "sha256_in_prefix": "66c7af988ea9d6a448cecac16b206d04ca852d68fedaf53f662456f5eb00bf54",
+        "size_in_bytes": 10427
+      },
+      {
+        "_path": "lib/R/library/profvis/htmlwidgets/lib/highlight/textmate.css",
+        "path_type": "hardlink",
+        "sha256": "5ec4a11489e1c0f322774a38c5e7e1186b1cf3a40f3fc07fe8d7ee0a228ee0f6",
+        "sha256_in_prefix": "5ec4a11489e1c0f322774a38c5e7e1186b1cf3a40f3fc07fe8d7ee0a228ee0f6",
+        "size_in_bytes": 320
+      },
+      {
+        "_path": "lib/R/library/profvis/htmlwidgets/lib/jquery/jquery.min.js",
+        "path_type": "hardlink",
+        "sha256": "668b046d12db350ccba6728890476b3efee53b2f42dbb84743e5e9f1ae0cc404",
+        "sha256_in_prefix": "668b046d12db350ccba6728890476b3efee53b2f42dbb84743e5e9f1ae0cc404",
+        "size_in_bytes": 97163
+      },
+      {
+        "_path": "lib/R/library/profvis/htmlwidgets/lib/profvis/profvis.css",
+        "path_type": "hardlink",
+        "sha256": "f6bddeb0d144103210507bdd34ed415edb3e99aad46a0e8e23d975d34f2a339b",
+        "sha256_in_prefix": "f6bddeb0d144103210507bdd34ed415edb3e99aad46a0e8e23d975d34f2a339b",
+        "size_in_bytes": 20273
+      },
+      {
+        "_path": "lib/R/library/profvis/htmlwidgets/lib/profvis/profvis.js",
+        "path_type": "hardlink",
+        "sha256": "7ed0e1c034a464830e81c13e80a31905289781ed632c565fbb11e049ad9d5eba",
+        "sha256_in_prefix": "7ed0e1c034a464830e81c13e80a31905289781ed632c565fbb11e049ad9d5eba",
+        "size_in_bytes": 87826
+      },
+      {
+        "_path": "lib/R/library/profvis/htmlwidgets/lib/profvis/scroll.js",
+        "path_type": "hardlink",
+        "sha256": "bd392f3c9842f1b795d300bc244f51275670c30732baf641f4ddb69ddd210123",
+        "sha256_in_prefix": "bd392f3c9842f1b795d300bc244f51275670c30732baf641f4ddb69ddd210123",
+        "size_in_bytes": 2047
+      },
+      {
+        "_path": "lib/R/library/profvis/htmlwidgets/profvis.js",
+        "path_type": "hardlink",
+        "sha256": "0a862461fc55fae644b2549f853d6959e9dc60d918569c2e8e99c2bf14bdf07d",
+        "sha256_in_prefix": "0a862461fc55fae644b2549f853d6959e9dc60d918569c2e8e99c2bf14bdf07d",
+        "size_in_bytes": 324
+      },
+      {
+        "_path": "lib/R/library/profvis/htmlwidgets/profvis.yaml",
+        "path_type": "hardlink",
+        "sha256": "7c2bffd844552ff3f40bde9963af6b226a5debe5baa088bea712fb4117702ae4",
+        "sha256_in_prefix": "7c2bffd844552ff3f40bde9963af6b226a5debe5baa088bea712fb4117702ae4",
+        "size_in_bytes": 495
+      },
+      {
+        "_path": "lib/R/library/profvis/libs/profvis.so",
+        "path_type": "hardlink",
+        "sha256": "fc66dbc4b531abe2c7dfedae06a520ec221c2a9345b8d5770e436375ecd8e334",
+        "sha256_in_prefix": "fc66dbc4b531abe2c7dfedae06a520ec221c2a9345b8d5770e436375ecd8e334",
+        "size_in_bytes": 15928
+      },
+      {
+        "_path": "lib/R/library/profvis/shinymodule/draggable-helper.js",
+        "path_type": "hardlink",
+        "sha256": "afdd760e85a9b424a7a8f817b5e84cbe67b6c5023bdcfbb3badbb706b8fc60e1",
+        "sha256_in_prefix": "afdd760e85a9b424a7a8f817b5e84cbe67b6c5023bdcfbb3badbb706b8fc60e1",
+        "size_in_bytes": 366
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "d53a35b574e1cb3465c0295b6d9015e884e6e3b85d13256d85299a27f9e6d3e8",
+  "size": 195022,
+  "subdir": "linux-64",
+  "timestamp": 1665314557000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-profvis-0.3.7-r42h06615bd_1.tar.bz2",
+  "version": "0.3.7"
+}

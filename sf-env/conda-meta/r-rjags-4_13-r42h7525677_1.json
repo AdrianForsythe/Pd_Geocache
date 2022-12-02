@@ -1,0 +1,215 @@
+{
+  "build": "r42h7525677_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "r-base >=4.2,<4.3.0a0",
+    "jags 4.*",
+    "r-coda >=0.13"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-rjags-4_13-r42h7525677_1",
+  "features": "",
+  "files": [
+    "lib/R/library/rjags/DESCRIPTION",
+    "lib/R/library/rjags/INDEX",
+    "lib/R/library/rjags/Meta/Rd.rds",
+    "lib/R/library/rjags/Meta/data.rds",
+    "lib/R/library/rjags/Meta/features.rds",
+    "lib/R/library/rjags/Meta/hsearch.rds",
+    "lib/R/library/rjags/Meta/links.rds",
+    "lib/R/library/rjags/Meta/nsInfo.rds",
+    "lib/R/library/rjags/Meta/package.rds",
+    "lib/R/library/rjags/NAMESPACE",
+    "lib/R/library/rjags/R/rjags",
+    "lib/R/library/rjags/R/rjags.rdb",
+    "lib/R/library/rjags/R/rjags.rdx",
+    "lib/R/library/rjags/data/LINE.RData",
+    "lib/R/library/rjags/help/AnIndex",
+    "lib/R/library/rjags/help/aliases.rds",
+    "lib/R/library/rjags/help/paths.rds",
+    "lib/R/library/rjags/help/rjags.rdb",
+    "lib/R/library/rjags/help/rjags.rdx",
+    "lib/R/library/rjags/html/00Index.html",
+    "lib/R/library/rjags/html/R.css",
+    "lib/R/library/rjags/libs/rjags.so"
+  ],
+  "fn": "r-rjags-4_13-r42h7525677_1.tar.bz2",
+  "license": "GPL-2.0-only",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-rjags-4_13-r42h7525677_1",
+    "type": 1
+  },
+  "md5": "d180857fde2e5e3f83d732e778ed5efb",
+  "name": "r-rjags",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-rjags-4_13-r42h7525677_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/rjags/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "92c9c45c787a1e5c0b21f0ec712073a2c751e7560f64d06efa6762e1cef4221d",
+        "sha256_in_prefix": "92c9c45c787a1e5c0b21f0ec712073a2c751e7560f64d06efa6762e1cef4221d",
+        "size_in_bytes": 835
+      },
+      {
+        "_path": "lib/R/library/rjags/INDEX",
+        "path_type": "hardlink",
+        "sha256": "461cbfca9fb37668985854d59a44e05d8e7a33cb01702a5f0a3b9ff10754aa1b",
+        "sha256_in_prefix": "461cbfca9fb37668985854d59a44e05d8e7a33cb01702a5f0a3b9ff10754aa1b",
+        "size_in_bytes": 956
+      },
+      {
+        "_path": "lib/R/library/rjags/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "0acec27cdc2cd50e4028d1f75ecf8a702befeda6d2d6b2285997a59ce86036da",
+        "sha256_in_prefix": "0acec27cdc2cd50e4028d1f75ecf8a702befeda6d2d6b2285997a59ce86036da",
+        "size_in_bytes": 933
+      },
+      {
+        "_path": "lib/R/library/rjags/Meta/data.rds",
+        "path_type": "hardlink",
+        "sha256": "f79ef3268136aea0f8934a896d8c550617a003386fb9db22ff2fc0244c1dc0ee",
+        "sha256_in_prefix": "f79ef3268136aea0f8934a896d8c550617a003386fb9db22ff2fc0244c1dc0ee",
+        "size_in_bytes": 108
+      },
+      {
+        "_path": "lib/R/library/rjags/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/rjags/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "066318f7fdb3cf3bfdc8a4b7580a3e35dd190d9e71bc6d32e9cf112d064a9bb6",
+        "sha256_in_prefix": "066318f7fdb3cf3bfdc8a4b7580a3e35dd190d9e71bc6d32e9cf112d064a9bb6",
+        "size_in_bytes": 954
+      },
+      {
+        "_path": "lib/R/library/rjags/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "7a08b0110dedc480e8522942f2e58a54422ac564c73ec0e3bffbc7ff0a58e7ff",
+        "sha256_in_prefix": "7a08b0110dedc480e8522942f2e58a54422ac564c73ec0e3bffbc7ff0a58e7ff",
+        "size_in_bytes": 458
+      },
+      {
+        "_path": "lib/R/library/rjags/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "e5eb8d7a4d9e7fbea604199cc2e8b0744db59bf8d1874e54e635ce05b74995b5",
+        "sha256_in_prefix": "e5eb8d7a4d9e7fbea604199cc2e8b0744db59bf8d1874e54e635ce05b74995b5",
+        "size_in_bytes": 498
+      },
+      {
+        "_path": "lib/R/library/rjags/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "87299ead3c9b012078630bf154ab9a4e6fc3f692d0a5f0b21a47cffbd227b937",
+        "sha256_in_prefix": "87299ead3c9b012078630bf154ab9a4e6fc3f692d0a5f0b21a47cffbd227b937",
+        "size_in_bytes": 898
+      },
+      {
+        "_path": "lib/R/library/rjags/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "243b29a31ec46da028b9df20cb2482825e82cef84680dd94ccdf7a8b05e95e33",
+        "sha256_in_prefix": "243b29a31ec46da028b9df20cb2482825e82cef84680dd94ccdf7a8b05e95e33",
+        "size_in_bytes": 899
+      },
+      {
+        "_path": "lib/R/library/rjags/R/rjags",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/rjags/R/rjags.rdb",
+        "path_type": "hardlink",
+        "sha256": "ab1ef894a18aa042927b029d38b0189fbb4c77a97900c70db4b999ba937ded26",
+        "sha256_in_prefix": "ab1ef894a18aa042927b029d38b0189fbb4c77a97900c70db4b999ba937ded26",
+        "size_in_bytes": 52814
+      },
+      {
+        "_path": "lib/R/library/rjags/R/rjags.rdx",
+        "path_type": "hardlink",
+        "sha256": "5eff352d6d8d75e056bb84131c05569630f0f8739689c39e4c6ea037d8e725e1",
+        "sha256_in_prefix": "5eff352d6d8d75e056bb84131c05569630f0f8739689c39e4c6ea037d8e725e1",
+        "size_in_bytes": 804
+      },
+      {
+        "_path": "lib/R/library/rjags/data/LINE.RData",
+        "path_type": "hardlink",
+        "sha256": "fb2a484eb17edc67edee5934c98ad184a33618426a04136d64859cd7027fc103",
+        "sha256_in_prefix": "fb2a484eb17edc67edee5934c98ad184a33618426a04136d64859cd7027fc103",
+        "size_in_bytes": 1770
+      },
+      {
+        "_path": "lib/R/library/rjags/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "82775ce9107087a7a4ef7771aff265f430354fab31f6cd16cbe72bd268bbba0a",
+        "sha256_in_prefix": "82775ce9107087a7a4ef7771aff265f430354fab31f6cd16cbe72bd268bbba0a",
+        "size_in_bytes": 736
+      },
+      {
+        "_path": "lib/R/library/rjags/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "e36bf58df6aeafff226323086c75eceb365ccb905b29473a33acd127af6cdd6b",
+        "sha256_in_prefix": "e36bf58df6aeafff226323086c75eceb365ccb905b29473a33acd127af6cdd6b",
+        "size_in_bytes": 392
+      },
+      {
+        "_path": "lib/R/library/rjags/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "7cecc59e0c1ad815a143acdc5289be65efe5421e7b2c41791821c508417beb2b",
+        "sha256_in_prefix": "7cecc59e0c1ad815a143acdc5289be65efe5421e7b2c41791821c508417beb2b",
+        "size_in_bytes": 315
+      },
+      {
+        "_path": "lib/R/library/rjags/help/rjags.rdb",
+        "path_type": "hardlink",
+        "sha256": "4e0d9e605ada7715e76d944a12251e9c3004cd2fed73eb54b138d1f1241c171a",
+        "sha256_in_prefix": "4e0d9e605ada7715e76d944a12251e9c3004cd2fed73eb54b138d1f1241c171a",
+        "size_in_bytes": 44981
+      },
+      {
+        "_path": "lib/R/library/rjags/help/rjags.rdx",
+        "path_type": "hardlink",
+        "sha256": "d9eaefea42bae1c981a1347553da77e6975ca19f44e0df1676ce8cbc4495e292",
+        "sha256_in_prefix": "d9eaefea42bae1c981a1347553da77e6975ca19f44e0df1676ce8cbc4495e292",
+        "size_in_bytes": 535
+      },
+      {
+        "_path": "lib/R/library/rjags/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "89f1a0c719ccc0531bb514d210c101ecebcd7200a86c3968dd6f5a36be8476b7",
+        "sha256_in_prefix": "89f1a0c719ccc0531bb514d210c101ecebcd7200a86c3968dd6f5a36be8476b7",
+        "size_in_bytes": 4656
+      },
+      {
+        "_path": "lib/R/library/rjags/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/rjags/libs/rjags.so",
+        "path_type": "hardlink",
+        "sha256": "f33cc4587b009094ba7dfbf6579fbc94933dd3ca056ff8ee836af1f72eab84df",
+        "sha256_in_prefix": "f33cc4587b009094ba7dfbf6579fbc94933dd3ca056ff8ee836af1f72eab84df",
+        "size_in_bytes": 77112
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "r-rjags",
+  "sha256": "22dc632a0f697df536d9fddfaabc5bfca357611577324bf52e0986e83efe3df6",
+  "size": 154548,
+  "subdir": "linux-64",
+  "timestamp": 1665307872000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-rjags-4_13-r42h7525677_1.tar.bz2",
+  "version": "4_13"
+}

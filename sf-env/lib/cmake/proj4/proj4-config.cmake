@@ -8,6 +8,12 @@
 #  PROJ4_BINARY_DIRS = /usr/local/bin
 #  PROJ4_VERSION = 4.9.1 (for example)
 
+include(CMakeFindDependencyMacro)
+if("TRUE" STREQUAL "TRUE")
+  # Chainload CURL usage requirements
+  find_dependency(CURL)
+endif()
+
 # Tell the user project where to find our headers and libraries
 get_filename_component (_DIR ${CMAKE_CURRENT_LIST_FILE} PATH)
 get_filename_component (_ROOT "${_DIR}/../../../" ABSOLUTE)

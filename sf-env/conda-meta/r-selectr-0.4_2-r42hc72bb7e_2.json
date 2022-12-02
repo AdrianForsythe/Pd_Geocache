@@ -1,0 +1,223 @@
+{
+  "build": "r42hc72bb7e_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.2,<4.3.0a0",
+    "r-r6",
+    "r-stringr"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-selectr-0.4_2-r42hc72bb7e_2",
+  "features": "",
+  "files": [
+    "lib/R/library/selectr/CITATION",
+    "lib/R/library/selectr/DESCRIPTION",
+    "lib/R/library/selectr/INDEX",
+    "lib/R/library/selectr/LICENCE",
+    "lib/R/library/selectr/Meta/Rd.rds",
+    "lib/R/library/selectr/Meta/features.rds",
+    "lib/R/library/selectr/Meta/hsearch.rds",
+    "lib/R/library/selectr/Meta/links.rds",
+    "lib/R/library/selectr/Meta/nsInfo.rds",
+    "lib/R/library/selectr/Meta/package.rds",
+    "lib/R/library/selectr/NAMESPACE",
+    "lib/R/library/selectr/NEWS.Rd",
+    "lib/R/library/selectr/R/selectr",
+    "lib/R/library/selectr/R/selectr.rdb",
+    "lib/R/library/selectr/R/selectr.rdx",
+    "lib/R/library/selectr/demos/svg-mathml.svg",
+    "lib/R/library/selectr/help/AnIndex",
+    "lib/R/library/selectr/help/aliases.rds",
+    "lib/R/library/selectr/help/paths.rds",
+    "lib/R/library/selectr/help/selectr.rdb",
+    "lib/R/library/selectr/help/selectr.rdx",
+    "lib/R/library/selectr/html/00Index.html",
+    "lib/R/library/selectr/html/R.css"
+  ],
+  "fn": "r-selectr-0.4_2-r42hc72bb7e_2.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-selectr-0.4_2-r42hc72bb7e_2",
+    "type": 1
+  },
+  "md5": "6b5a1e4ca563e72b80a982c6ae9394b5",
+  "name": "r-selectr",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-selectr-0.4_2-r42hc72bb7e_2.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/selectr/CITATION",
+        "path_type": "hardlink",
+        "sha256": "c8234d6b6b238447820b6310169c8111003c3cc17db48ef600efc619f0221747",
+        "sha256_in_prefix": "c8234d6b6b238447820b6310169c8111003c3cc17db48ef600efc619f0221747",
+        "size_in_bytes": 329
+      },
+      {
+        "_path": "lib/R/library/selectr/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "546ae7dd10135953553b26f5a36b94b527c105b3189bc08a8ebba40db7379a41",
+        "sha256_in_prefix": "546ae7dd10135953553b26f5a36b94b527c105b3189bc08a8ebba40db7379a41",
+        "size_in_bytes": 1238
+      },
+      {
+        "_path": "lib/R/library/selectr/INDEX",
+        "path_type": "hardlink",
+        "sha256": "661884917286e11141dd82b772f5c1e1c26d65d355914caca30f3dc5697f1ef5",
+        "sha256_in_prefix": "661884917286e11141dd82b772f5c1e1c26d65d355914caca30f3dc5697f1ef5",
+        "size_in_bytes": 219
+      },
+      {
+        "_path": "lib/R/library/selectr/LICENCE",
+        "path_type": "hardlink",
+        "sha256": "7c80f4756b63bce25e168de8f2eef1263b3682940947a2a37da23d3c39342262",
+        "sha256_in_prefix": "7c80f4756b63bce25e168de8f2eef1263b3682940947a2a37da23d3c39342262",
+        "size_in_bytes": 87
+      },
+      {
+        "_path": "lib/R/library/selectr/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "efb927ee0b4321c0d3a974e9be30bf7ccfe1bc41b553848479a5bf4998a8b22e",
+        "sha256_in_prefix": "efb927ee0b4321c0d3a974e9be30bf7ccfe1bc41b553848479a5bf4998a8b22e",
+        "size_in_bytes": 345
+      },
+      {
+        "_path": "lib/R/library/selectr/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/selectr/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "82cb115a43572f9100897a1d5a7fece25da47a62126077c0cf16fd3536e05c93",
+        "sha256_in_prefix": "82cb115a43572f9100897a1d5a7fece25da47a62126077c0cf16fd3536e05c93",
+        "size_in_bytes": 375
+      },
+      {
+        "_path": "lib/R/library/selectr/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "b4cf2c3c77e91cc4760a9e181b07326efbdd790bc4fcf02e96f47516510a44e8",
+        "sha256_in_prefix": "b4cf2c3c77e91cc4760a9e181b07326efbdd790bc4fcf02e96f47516510a44e8",
+        "size_in_bytes": 155
+      },
+      {
+        "_path": "lib/R/library/selectr/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "824c5506c228aa18c2d6263fb467d500756907718771fbf3b5a50fe5734d9181",
+        "sha256_in_prefix": "824c5506c228aa18c2d6263fb467d500756907718771fbf3b5a50fe5734d9181",
+        "size_in_bytes": 324
+      },
+      {
+        "_path": "lib/R/library/selectr/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "414667b20e9a2f5f3a65955ac9fb5354c49b72dab8b39ede704ba1879d105d83",
+        "sha256_in_prefix": "414667b20e9a2f5f3a65955ac9fb5354c49b72dab8b39ede704ba1879d105d83",
+        "size_in_bytes": 1107
+      },
+      {
+        "_path": "lib/R/library/selectr/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "e6453863407f25b7bff70bdf5198928ccd46e6f5712dcee031ac496272eda3b7",
+        "sha256_in_prefix": "e6453863407f25b7bff70bdf5198928ccd46e6f5712dcee031ac496272eda3b7",
+        "size_in_bytes": 373
+      },
+      {
+        "_path": "lib/R/library/selectr/NEWS.Rd",
+        "path_type": "hardlink",
+        "sha256": "324eae5ff55912337e42457c64f3ada11bbace20816dc24e2a513b4102356820",
+        "sha256_in_prefix": "324eae5ff55912337e42457c64f3ada11bbace20816dc24e2a513b4102356820",
+        "size_in_bytes": 8080
+      },
+      {
+        "_path": "lib/R/library/selectr/R/selectr",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/selectr/R/selectr.rdb",
+        "path_type": "hardlink",
+        "sha256": "17de39bdcf20ededa58115e0618b26d5009cac88d76375c636b3f19811864165",
+        "sha256_in_prefix": "17de39bdcf20ededa58115e0618b26d5009cac88d76375c636b3f19811864165",
+        "size_in_bytes": 494515
+      },
+      {
+        "_path": "lib/R/library/selectr/R/selectr.rdx",
+        "path_type": "hardlink",
+        "sha256": "94c591f6fde872a059b91926ef134412e8b7765a5583848e32a2682b3330a473",
+        "sha256_in_prefix": "94c591f6fde872a059b91926ef134412e8b7765a5583848e32a2682b3330a473",
+        "size_in_bytes": 1419
+      },
+      {
+        "_path": "lib/R/library/selectr/demos/svg-mathml.svg",
+        "path_type": "hardlink",
+        "sha256": "0fc47acc39faccf1ac04eb6e61b861c83465571261ec8656260cd311cdf6b8d8",
+        "sha256_in_prefix": "0fc47acc39faccf1ac04eb6e61b861c83465571261ec8656260cd311cdf6b8d8",
+        "size_in_bytes": 1958
+      },
+      {
+        "_path": "lib/R/library/selectr/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "c5ac60e542c136e1e077dd08f1fb674017f74459956d334b16b64df5ef43cd4b",
+        "sha256_in_prefix": "c5ac60e542c136e1e077dd08f1fb674017f74459956d334b16b64df5ef43cd4b",
+        "size_in_bytes": 160
+      },
+      {
+        "_path": "lib/R/library/selectr/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "0e2fdf4b7a6bf040c1adc9d76b8460eb186284a99c2415a14c66ab9b3c140e5a",
+        "sha256_in_prefix": "0e2fdf4b7a6bf040c1adc9d76b8460eb186284a99c2415a14c66ab9b3c140e5a",
+        "size_in_bytes": 125
+      },
+      {
+        "_path": "lib/R/library/selectr/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "b72c3099235b6394843ed667bb671b01211289b4130881f2c544c701c0938a09",
+        "sha256_in_prefix": "b72c3099235b6394843ed667bb671b01211289b4130881f2c544c701c0938a09",
+        "size_in_bytes": 185
+      },
+      {
+        "_path": "lib/R/library/selectr/help/selectr.rdb",
+        "path_type": "hardlink",
+        "sha256": "6b806287b543b437b356eceab8606b5d0ca964a46550d665e68bb008a59d86ef",
+        "sha256_in_prefix": "6b806287b543b437b356eceab8606b5d0ca964a46550d665e68bb008a59d86ef",
+        "size_in_bytes": 8470
+      },
+      {
+        "_path": "lib/R/library/selectr/help/selectr.rdx",
+        "path_type": "hardlink",
+        "sha256": "5869a29846223b02a5ecb3ed7ed5940b382f4f46359e3496a4e53d0471ce5c93",
+        "sha256_in_prefix": "5869a29846223b02a5ecb3ed7ed5940b382f4f46359e3496a4e53d0471ce5c93",
+        "size_in_bytes": 201
+      },
+      {
+        "_path": "lib/R/library/selectr/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "652b62a8ca03e62021feb0381ca9462ae0a7875a1b25a080ab68823665493528",
+        "sha256_in_prefix": "652b62a8ca03e62021feb0381ca9462ae0a7875a1b25a080ab68823665493528",
+        "size_in_bytes": 1808
+      },
+      {
+        "_path": "lib/R/library/selectr/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "9e73d018c667501f1667716b9b342220bbe88f143001424dabf70d05c2e6b7ad",
+  "size": 473860,
+  "subdir": "noarch",
+  "timestamp": 1665221450000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-selectr-0.4_2-r42hc72bb7e_2.tar.bz2",
+  "version": "0.4_2"
+}

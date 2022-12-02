@@ -1,0 +1,48 @@
+{
+  "build": "h2283fc2_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "krb5 >=1.19.3,<1.20.0a0",
+    "libcurl 7.83.1 h2283fc2_0",
+    "libgcc-ng >=10.3.0",
+    "libssh2 >=1.10.0,<2.0a0",
+    "libzlib >=1.2.11,<1.3.0a0",
+    "openssl >=3.0.3,<4.0a0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/curl-7.83.1-h2283fc2_0",
+  "features": "",
+  "files": [
+    "bin/curl"
+  ],
+  "fn": "curl-7.83.1-h2283fc2_0.tar.bz2",
+  "license": "curl",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/curl-7.83.1-h2283fc2_0",
+    "type": 1
+  },
+  "md5": "8968421d2c89a6b89dfc28d283971de1",
+  "name": "curl",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/curl-7.83.1-h2283fc2_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/curl",
+        "path_type": "hardlink",
+        "sha256": "7d957d443c7bda138fe69f749724928bcc54ede2b79137403ff59c2af9eb4ba8",
+        "sha256_in_prefix": "7d957d443c7bda138fe69f749724928bcc54ede2b79137403ff59c2af9eb4ba8",
+        "size_in_bytes": 222936
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "0488cd1eddc5cb2997487af120df48be571c911288862b4e530d93be8e34d84c",
+  "size": 91251,
+  "subdir": "linux-64",
+  "timestamp": 1652281614000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/curl-7.83.1-h2283fc2_0.tar.bz2",
+  "version": "7.83.1"
+}

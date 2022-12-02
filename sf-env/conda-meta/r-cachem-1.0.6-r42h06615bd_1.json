@@ -1,0 +1,214 @@
+{
+  "build": "r42h06615bd_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "r-base >=4.2,<4.3.0a0",
+    "r-fastmap",
+    "r-rlang"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-cachem-1.0.6-r42h06615bd_1",
+  "features": "",
+  "files": [
+    "lib/R/library/cachem/DESCRIPTION",
+    "lib/R/library/cachem/INDEX",
+    "lib/R/library/cachem/LICENSE",
+    "lib/R/library/cachem/Meta/Rd.rds",
+    "lib/R/library/cachem/Meta/features.rds",
+    "lib/R/library/cachem/Meta/hsearch.rds",
+    "lib/R/library/cachem/Meta/links.rds",
+    "lib/R/library/cachem/Meta/nsInfo.rds",
+    "lib/R/library/cachem/Meta/package.rds",
+    "lib/R/library/cachem/NAMESPACE",
+    "lib/R/library/cachem/NEWS.md",
+    "lib/R/library/cachem/R/cachem",
+    "lib/R/library/cachem/R/cachem.rdb",
+    "lib/R/library/cachem/R/cachem.rdx",
+    "lib/R/library/cachem/help/AnIndex",
+    "lib/R/library/cachem/help/aliases.rds",
+    "lib/R/library/cachem/help/cachem.rdb",
+    "lib/R/library/cachem/help/cachem.rdx",
+    "lib/R/library/cachem/help/paths.rds",
+    "lib/R/library/cachem/html/00Index.html",
+    "lib/R/library/cachem/html/R.css",
+    "lib/R/library/cachem/libs/cachem.so"
+  ],
+  "fn": "r-cachem-1.0.6-r42h06615bd_1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-cachem-1.0.6-r42h06615bd_1",
+    "type": 1
+  },
+  "md5": "767d66bfeef2f7acde48c101ac0a9b0a",
+  "name": "r-cachem",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-cachem-1.0.6-r42h06615bd_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/cachem/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "4b054c137547760db20709f45bfce23564ec310eadae0672346eb174d3fdf92a",
+        "sha256_in_prefix": "4b054c137547760db20709f45bfce23564ec310eadae0672346eb174d3fdf92a",
+        "size_in_bytes": 910
+      },
+      {
+        "_path": "lib/R/library/cachem/INDEX",
+        "path_type": "hardlink",
+        "sha256": "7aa243edad8dac31e273b7fbe289d20f22a86c3675c0ae9fd84d594470aba0ca",
+        "sha256_in_prefix": "7aa243edad8dac31e273b7fbe289d20f22a86c3675c0ae9fd84d594470aba0ca",
+        "size_in_bytes": 221
+      },
+      {
+        "_path": "lib/R/library/cachem/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "989914599f71466ce62f84fc83e7adb486e519f2e40eb2447597cba947463fc5",
+        "sha256_in_prefix": "989914599f71466ce62f84fc83e7adb486e519f2e40eb2447597cba947463fc5",
+        "size_in_bytes": 43
+      },
+      {
+        "_path": "lib/R/library/cachem/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "d03a337b49450f24b65f08bc4ddd23c1d58925a62f24f3193d21e4ae33e4758c",
+        "sha256_in_prefix": "d03a337b49450f24b65f08bc4ddd23c1d58925a62f24f3193d21e4ae33e4758c",
+        "size_in_bytes": 385
+      },
+      {
+        "_path": "lib/R/library/cachem/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/cachem/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "a5af05921033901ac1c229b5a0bdb806f6cd878e812b4c1dd06000189ea84182",
+        "sha256_in_prefix": "a5af05921033901ac1c229b5a0bdb806f6cd878e812b4c1dd06000189ea84182",
+        "size_in_bytes": 408
+      },
+      {
+        "_path": "lib/R/library/cachem/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "45e2e8bc3256234465ae2e6f81c46f91930a21ae846e60ded315c04a3cc78d66",
+        "sha256_in_prefix": "45e2e8bc3256234465ae2e6f81c46f91930a21ae846e60ded315c04a3cc78d66",
+        "size_in_bytes": 174
+      },
+      {
+        "_path": "lib/R/library/cachem/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "e7bb58c88f4e46d72d08430dc893e927fd27d28292639d6c111b5e20f96f8728",
+        "sha256_in_prefix": "e7bb58c88f4e46d72d08430dc893e927fd27d28292639d6c111b5e20f96f8728",
+        "size_in_bytes": 413
+      },
+      {
+        "_path": "lib/R/library/cachem/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "5196349b152e386823d6940860955619dd3301771577f6be78d87631d1e71bd3",
+        "sha256_in_prefix": "5196349b152e386823d6940860955619dd3301771577f6be78d87631d1e71bd3",
+        "size_in_bytes": 928
+      },
+      {
+        "_path": "lib/R/library/cachem/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "d5ddcda83b5622896e9dc9517db3a213e9cf8b546848823ca96bcca25a5997d8",
+        "sha256_in_prefix": "d5ddcda83b5622896e9dc9517db3a213e9cf8b546848823ca96bcca25a5997d8",
+        "size_in_bytes": 429
+      },
+      {
+        "_path": "lib/R/library/cachem/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "268f026cdb4831f5aba5c39bcf2e600664e472ea7b1911da5843fe1581830492",
+        "sha256_in_prefix": "268f026cdb4831f5aba5c39bcf2e600664e472ea7b1911da5843fe1581830492",
+        "size_in_bytes": 815
+      },
+      {
+        "_path": "lib/R/library/cachem/R/cachem",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/cachem/R/cachem.rdb",
+        "path_type": "hardlink",
+        "sha256": "baed8947ff7911b20b5c2928b33985eab3d14d3e2ebb1b7e696272943646b990",
+        "sha256_in_prefix": "baed8947ff7911b20b5c2928b33985eab3d14d3e2ebb1b7e696272943646b990",
+        "size_in_bytes": 33706
+      },
+      {
+        "_path": "lib/R/library/cachem/R/cachem.rdx",
+        "path_type": "hardlink",
+        "sha256": "f1378f7bc261a61eff57a8d0d4aec70f7f8ab15837e34ab4ec16201f4bfa3545",
+        "sha256_in_prefix": "f1378f7bc261a61eff57a8d0d4aec70f7f8ab15837e34ab4ec16201f4bfa3545",
+        "size_in_bytes": 439
+      },
+      {
+        "_path": "lib/R/library/cachem/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "ae0b0d4522378873d1083261ec44a6b190583b1dad8c715541ede342c5e5148c",
+        "sha256_in_prefix": "ae0b0d4522378873d1083261ec44a6b190583b1dad8c715541ede342c5e5148c",
+        "size_in_bytes": 137
+      },
+      {
+        "_path": "lib/R/library/cachem/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "321863a08225b27decebf59f983b8234cb26754889d97ccb3591c1d88e7f3eb0",
+        "sha256_in_prefix": "321863a08225b27decebf59f983b8234cb26754889d97ccb3591c1d88e7f3eb0",
+        "size_in_bytes": 139
+      },
+      {
+        "_path": "lib/R/library/cachem/help/cachem.rdb",
+        "path_type": "hardlink",
+        "sha256": "d1f0761eb57ea250456f6211d456a2e96735189d47c6ef62d2b30d17be180edf",
+        "sha256_in_prefix": "d1f0761eb57ea250456f6211d456a2e96735189d47c6ef62d2b30d17be180edf",
+        "size_in_bytes": 21231
+      },
+      {
+        "_path": "lib/R/library/cachem/help/cachem.rdx",
+        "path_type": "hardlink",
+        "sha256": "82fabaa3175c68d010f92f4737c2ec177455161c1b8dc12e67cfc73958bbc260",
+        "sha256_in_prefix": "82fabaa3175c68d010f92f4737c2ec177455161c1b8dc12e67cfc73958bbc260",
+        "size_in_bytes": 245
+      },
+      {
+        "_path": "lib/R/library/cachem/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "3349a8c293164f6f3b9ca1537bcca6c45a5818525caf12f3fcd3a250398f879f",
+        "sha256_in_prefix": "3349a8c293164f6f3b9ca1537bcca6c45a5818525caf12f3fcd3a250398f879f",
+        "size_in_bytes": 193
+      },
+      {
+        "_path": "lib/R/library/cachem/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "ee040f8f3202b7d4577d05aea9b5376ba36ac0585f11a76e3e6ecc79342cdd5f",
+        "sha256_in_prefix": "ee040f8f3202b7d4577d05aea9b5376ba36ac0585f11a76e3e6ecc79342cdd5f",
+        "size_in_bytes": 1341
+      },
+      {
+        "_path": "lib/R/library/cachem/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/cachem/libs/cachem.so",
+        "path_type": "hardlink",
+        "sha256": "013200b3223bd056eda327bd8dc9e545e7061d509b25c25916dbda085bd3084b",
+        "sha256_in_prefix": "013200b3223bd056eda327bd8dc9e545e7061d509b25c25916dbda085bd3084b",
+        "size_in_bytes": 15984
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "7f365fe9801e09ad97859e33448c09a635baeed9035b5039cfda31df32c137ad",
+  "size": 74880,
+  "subdir": "linux-64",
+  "timestamp": 1665127499000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-cachem-1.0.6-r42h06615bd_1.tar.bz2",
+  "version": "1.0.6"
+}

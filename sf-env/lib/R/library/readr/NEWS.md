@@ -1,3 +1,19 @@
+# readr 2.1.3
+
+* Help files below `man/` have been re-generated, so that they give rise to valid HTML5. (This is the impetus for this release, to keep the package safely on CRAN.)
+
+* `mini-gapminder-africa.csv` and friends are new example datasets accessible via `readr_example()`, which have been added to illustrate reading multiple files at once, into a single data frame.
+
+# readr 2.1.2
+
+* `read_table()`, `read_log()`, and `read_delim_chunked()` (and friends) gain the `show_col_types` argument found elsewhere. All `read_*()` functions now respect the `show_col_types` argument or option, even when using the first edition parsing engine (#1331).
+
+* `show_progress()` uses `rlang::is_interactive()` instead of `base::interactive()` (#1356).
+
+* `read_builtin()` does more argument checking, so that we catch obviously malformed input before passing along to `utils::data()` (#1361).
+
+* `chickens.csv` and `whitespace-sample.txt` are new example datasets accessible via `readr_example()` (#1354).
+
 # readr 2.1.1
 
 * Jenny Bryan is now the maintainer.

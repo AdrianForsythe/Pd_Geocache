@@ -6,9 +6,9 @@ includedir=/home/adrian/PhD/Pd_Geocache/sf-env/include
 Name: FreeType 2
 URL: https://freetype.org
 Description: A free, high-quality, and portable font engine.
-Version: 24.0.18
-Requires:
+Version: 24.3.18
+Requires: 
 Requires.private: zlib, libpng
-Libs: -L${libdir} -lfreetype
+Libs: -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lfreetype
 Libs.private: 
 Cflags: -I${includedir}/freetype2

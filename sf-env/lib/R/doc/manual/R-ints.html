@@ -2,10 +2,10 @@
 <html>
 <!-- Created by GNU Texinfo 6.8, https://www.gnu.org/software/texinfo/ -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- This manual is for R, version 4.1.2 (2021-11-01).
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- This manual is for R, version 4.2.1 (2022-06-23).
 
-Copyright (C) 1999-2021 R Core Team
+Copyright (C) 1999-2022 R Core Team
 
 Permission is granted to make and distribute verbatim copies of this
 manual provided the copyright notice and this permission notice are
@@ -120,6 +120,10 @@ p {
     margin-bottom: 1.2ex;
 }
 
+#Top > .header, #Top > h1 {     /* for Texinfo 6.8 */
+    display: none
+}
+
 -->
 </style>
 
@@ -161,9 +165,9 @@ Next: <a href="#R-Internal-Structures" accesskey="n" rel="next">R Internal Struc
 <p>This is a guide to the internal structures of R and coding standards for
 the core team working on R itself.
 </p>
-<p>This manual is for R, version 4.1.2 (2021-11-01).
+<p>This manual is for R, version 4.2.1 (2022-06-23).
 </p>
-<p>Copyright &copy; 1999&ndash;2021 R Core Team
+<p>Copyright &copy; 1999&ndash;2022 R Core Team
 </p>
 <blockquote>
 <p>Permission is granted to make and distribute verbatim copies of this
@@ -827,7 +831,7 @@ enclosure.
 <p>There are additional places that &lsquo;variables&rsquo; can be looked up, called
 &lsquo;user databases&rsquo; in comments in the code.  These seem undocumented in
 the R sources, but apparently refer to the <strong>RObjectTable</strong> package
-at <a href="http://www.omegahat.net/RObjectTables/">http://www.omegahat.net/RObjectTables/</a>.
+formerly available at <a href="https://www.omegahat.net/RObjectTables/">https://www.omegahat.net/RObjectTables/</a>.
 </p>
 <span id="index-base-environment"></span>
 <span id="index-environment_002c-base"></span>
@@ -1450,10 +1454,10 @@ operations is termed the <em>write barrier</em> and is done by making the
 <code>SEXP</code> opaque and only providing access via functions (which cannot
 be used as lvalues in assignments in C).
 </p>
-<p>All code in R extensions is by default behind the write barrier.  The
-only way to obtain direct access to the internals of the <code>SEXPREC</code>s
-is to define &lsquo;<samp>USE_RINTERNALS</samp>&rsquo; before including header file
-<samp>Rinternals.h</samp>, which is normally defined in <samp>Defn.h</samp>.  To
+<p>All code in R extensions is behind the write barrier.  R
+extensions cannot directly access the internals of the <code>SEXPREC</code>s.
+Base code can access internals if &lsquo;<samp>USE_RINTERNALS</samp>&rsquo; is defined.
+This is normally defined in <samp>Defn.h</samp> when R is compiled.  To
 enable a check on the way that the access is used, R can be compiled
 with flag <samp>--enable-strict-barrier</samp> which ensures that header
 <samp>Defn.h</samp> does not define &lsquo;<samp>USE_RINTERNALS</samp>&rsquo; and hence that
@@ -1629,8 +1633,8 @@ lacking a powerful enough <code>iconv</code>), it is likely that they work in
 Latin-1, the old R assumption. Then the parser can return a
 UTF-8-encoded string if it encounters a &lsquo;<samp>\uxxxx</samp>&rsquo; escape for a
 Unicode point that cannot be represented in the current charset.  (This
-needs MBCS support, and was only enabled<a id="DOCF9" href="#FOOT9"><sup>9</sup></a> on
-Windows.)  This is enabled for all platforms, and a &lsquo;<samp>\uxxxx</samp>&rsquo; or
+needs MBCS support, and in the past was only enabled<a id="DOCF9" href="#FOOT9"><sup>9</sup></a> on
+Windows.)  Now this is enabled for all platforms, and a &lsquo;<samp>\uxxxx</samp>&rsquo; or
 &lsquo;<samp>\Uxxxxxxxx</samp>&rsquo; escape ensures that the parsed string will be marked
 as UTF-8.
 </p>
@@ -1650,7 +1654,7 @@ assumption: it wants the symbol font to be encoded in UTF-8 as if it
 were encoded in Latin-1 rather than Adobe Symbol: this is selected by
 <code>wantSymbolUTF8 = NA_LOGICAL</code>.
 </p>
-<p>Windows has no UTF-8 locales, but rather expects to work with
+<p>Windows with MSVCRT as the C runtime has no UTF-8 locales, but rather expects to work with
 UCS-2<a id="DOCF10" href="#FOOT10"><sup>10</sup></a>
 strings.  R (being written in standard C) would not work internally
 with UCS-2 without extensive changes.  The <samp>Rgui</samp>
@@ -1664,6 +1668,39 @@ convention is used (see header file <samp>rgui_UTF8.h</samp>) by
 <code>readLines</code> and <code>scan</code> will read them into UTF-8 strings on
 Windows if the encoding is declared explicitly on an unopened
 connection passed to those functions.
+</p>
+<p>Windows have multiple notions of the current locale encoding, one is in the
+C runtime (C library) and another is the active code page (system locale). 
+The active code page is used when calling non-UTF-16 variants of Windows API
+functions (earlier referred to as ANSI calls), either directly or indirectly
+via POSIX wrappers inside MinGW-w64, from R, R packages and libraries they
+link to.  While R has handled many cases by calling directly the UTF-16
+variants of the Windows API, it still may sometimes use the non-UTF-16 ones,
+and external libraries also primarily developed for POSIX systems typically
+do that.  Therefore, for R to reliably work with (non-ASCII) strings on
+Windows, both the C locale encoding and the active code page on Windows must
+be the same, and by default they are.
+</p>
+<p>The Windows UCRT C runtime supports UTF-8 locales.  Historically, the active
+code page was a system-wide setting, changing which required a reboot, and
+UTF-8 was not supported.  Later a &quot;BETA: Use Unicode UTF-8 for worldwide
+language support&quot; feature has been added to set the active code page to
+UTF-8, but this still required a reboot and impacted all applications, many
+of which would not work correctly with that unexpected setting, so it could
+not be used in practice.
+</p>
+<p>Windows since Windows 10 (version 1903), Windows Server 2022 (LTSC), and
+Windows Server 1903 (semi-annual channel) allow setting the active code page
+to UTF-8 in the application manifest.  This changes the active code page
+only for the given application and does so together with changing also the
+UCRT C locale to UTF-8. R 4.2 for Windows uses this feature to get UTF-8 as
+the native encoding on Windows. To make that possible, R had to switch to
+UCRT, which in turn required creation of Rtools42.
+</p>
+<p>Older versions of Windows still rely on the previous encoding support where
+the native encoding cannot be UTF-8. R 4.2 requires UCRT to work, but UCRT
+can be installed on Windows since Vista SP2 and Windows Server 2008 SP2. It
+is shipped with Windows since Windows 10 and Windows Server 2016.
 </p>
 <hr>
 </div>
@@ -1954,33 +1991,18 @@ Next: <a href="#Internal-use-of-global-and-base-environments" accesskey="n" rel=
 <span id="Memory-allocators-1"></span><h3 class="section">1.13 Memory allocators</h3>
 
 <p>R&rsquo;s memory allocation is almost all done via routines in file
-<samp>src/main/memory.c</samp>.  It is important to keep track of where memory
-is allocated, as the Windows port (by default) makes use of a memory
-allocator that differs from <code>malloc</code> etc as provided by MinGW.
-Specifically, there are entry points <code>Rm_malloc</code>, <code>Rm_free</code>,
-<code>Rm_calloc</code> and <code>Rm_free</code> provided by file
-<samp>src/gnuwin32/malloc.c</samp>.  This was done for two reasons.  The
-primary motivation was performance: the allocator provided by MSVCRT
-<em>via</em> MinGW was far too slow at handling the many small allocations
-that the allocation system for <code>SEXPREC</code>s uses.  As a side benefit,
-we can set a limit on the amount of allocated memory: this is useful as
-whereas Windows does provide virtual memory it is relatively far slower
-than many other R platforms and so limiting R&rsquo;s use of swapping is
-highly advantageous.  The high-performance allocator is only called from
-<samp>src/main/memory.c</samp>, <samp>src/main/regex.c</samp>, <samp>src/extra/pcre</samp>
-and <samp>src/extra/xdr</samp>: note that this means that it is not used in
-packages.
+<samp>src/main/memory.c</samp>. 
 </p>
 <p>The rest of R should where possible make use of the allocators made
 available by file <samp>src/main/memory.c</samp>, which are also the methods
 recommended in
 <a data-manual="R-exts" href="https://cran.r-project.org/doc/manuals/R-exts.html#Memory-allocation">Memory allocation</a> in <cite>Writing R Extensions</cite>
 <span id="index-R_005falloc"></span>
-<span id="index-Calloc"></span>
-<span id="index-Realloc"></span>
-<span id="index-Free"></span>
+<span id="index-R_005fCalloc"></span>
+<span id="index-R_005fRealloc"></span>
+<span id="index-R_005fFree"></span>
 for use in R packages, namely the use of <code>R_alloc</code>,
-<code>Calloc</code>, <code>Realloc</code> and <code>Free</code>.  Memory allocated by
+<code>R_Calloc</code>, <code>R_Realloc</code> and <code>R_Free</code>.  Memory allocated by
 <code>R_alloc</code> is freed by the garbage collector once the &lsquo;watermark&rsquo;
 has been reset by calling
 <span id="index-vmaxset"></span>
@@ -3221,6 +3243,8 @@ error or by the user).
 </li><li> close the device.
 </li></ul>
 
+
+
 <p>The device also sets a number of variables, mainly Boolean flags
 indicating its capabilities.  Devices work entirely in &lsquo;device units&rsquo;
 which are up to its developer: they can be in pixels, big points (1/72
@@ -3410,6 +3434,14 @@ void R_GE_checkVersionOrDie(int version);
 it can ensure it will only be used in versions of R which provide the
 API it was designed for and compiled against.
 </p>
+<p>The <code>DevDesc</code> structure also contains an <code>int</code> &lsquo;<samp>deviceVersion</samp>&rsquo;
+to indicate which version of the engine/device API that the device supports.
+If the device driver sets this correctly, 
+there is no need for a device driver to use 
+<code>R_GE_checkVersionOrDie(R_GE_version)</code> because the graphics engine will
+not make use of callbacks from an API version above the version that is
+supported by the device.
+</p>
 <hr>
 </div>
 <div class="subsection" id="Device-capabilities">
@@ -3458,10 +3490,95 @@ is there support for rendering raster images?
 is there support for <code>grid::grid.cap</code>?
 </li><li> <code>haveLocator</code>:
 is there an interactive locator?
+</li><li> <code>deviceClip</code>:
+should the engine leave <em>all</em> clipping to the device?
 </li></ul>
 
-<p>The last three can often be deduced to be false from the presence of
+<p><code>haveRaster</code>,
+<code>haveCapture</code>, and <code>haveLocator</code>
+ can often be deduced to be false from the presence of
 <code>NULL</code> entries instead of the corresponding functions.
+</p>
+<p>In addition, the <code>capabilities</code> callback allows the device driver
+to provide more detailed information, especially related to callbacks
+in the engine/device API version 13 or higher.
+</p>
+<p>The <code>capabilities</code> callback is called with a list of integer
+vectors that represent the best guess that the graphics engine
+can make, based on the flags in the <code>DevDesc</code> structure and
+the &lsquo;<samp>deviceVersion</samp>&rsquo;.  For some capabilities, the integer vector
+is length 1 with <code>0</code> for no support, <code>1</code> for support, or
+<code>NA</code> for unknown support.  For capabilities where support
+can be more nuanced, the integer vector may either take higher values
+or it may have length greater than 1,
+though length 1 and <code>0</code> still means no support and <code>NA</code> still means 
+unknown support.
+</p>
+<p>The following components of 
+this list are likely to need modifying (for these, the graphics engine 
+can only guess <code>0</code>
+if &lsquo;<samp>deviceVersion</samp>&rsquo; is too low or <code>NA</code>
+otherwise):
+</p>
+<ul>
+<li> The <code>patterns</code> component reports what sort of pattern fills are 
+supported.  If the device supports one or more pattern types,
+this component should be replaced with an integer vector containing
+a value for each supported pattern type;
+the graphics engine provides 
+constants <code>R_GE_linearGradientPattern</code>,
+<code>R_GE_radialGradientPattern</code>, and 
+<code>R_GE_tilingPattern</code>.
+If the device does not provide support, this component should
+be set to 0.
+
+</li><li> The <code>clippingPaths</code> component reports whether 
+arbitrary clipping paths are supported. 
+If the device supports clipping paths, this component should be set to 1.
+If the device does not provide support, this component should
+be set to 0.
+
+</li><li> The <code>masks</code> component reports what sort of masks are supported.
+If the device supports one or more mask types,
+this component should be replaced with an integer vector containing
+a value for each supported mask type;
+the graphics engine provides 
+constants <code>R_GE_alphaMask</code> and <code>R_GE_luminanceMask</code>.
+If the device does not provide support, this component should
+be set to 0.
+
+</li><li> The <code>compositing</code> component reports which compositing operators 
+are supported. 
+If the device supports one or more compositing operators,
+this component should be replaced with an integer vector containing
+a value for each supported operator;
+The list of possible operators is long, 
+encompassing Porter-Duff operators and Adobe PDF Blend Modes; 
+the graphics engine provides constants <code>R_GE_compositeClear</code>, etc.
+If the device does not provide support, this component should
+be set to 0.
+
+</li><li> The <code>transformations</code> component reports whether 
+affine transformations are supported.
+If the device supports transformations, this component should be set to 1.
+If the device does not provide support, this component should
+be set to 0.
+
+</li><li> The <code>paths</code> component reports whether stroking and 
+filling of paths composed of multiple shapes is supported. 
+If the device supports stroking and filling paths, 
+this component should be set to 1.
+If the device does not provide support, this component should
+be set to 0.
+
+</li></ul>
+
+<p>The graphics engine provides constants like 
+<code>R_GE_capability_patterns</code> for selecting the appropriate
+component of the list of capabilities.
+</p>
+<p>It is valid (if unhelpful) for the device driver to return the list
+of capabilities unaltered.
 </p>
 <hr>
 </div>
@@ -3585,7 +3702,7 @@ character, which font at which size?  Some help can be obtained by
 looking at what this is used for.  The first element, &lsquo;width&rsquo;, is not
 used by R except to set the graphical parameters.  The second,
 &lsquo;height&rsquo;, is use to set the line spacing, that is the relationship
-between <code>par(&quot;mai&quot;)</code> and <code>par(&quot;mai&quot;)</code> and so on.  It is
+between <code>par(&quot;mar&quot;)</code> and <code>par(&quot;mai&quot;)</code> and so on.  It is
 suggested that a good choice is
 </p>
 <div class="example">
@@ -4015,7 +4132,8 @@ and many variables recording the graphics parameters and functions of
 them.
 </p>
 <p>The base system state is contained in <code>baseSystemState</code> structure
-defined in <samp>R_ext/GraphicsBase.h</samp>.  This contains three <code>GPar</code>
+defined in the private header <samp>GraphicsBase.h</samp>.  
+This contains three <code>GPar</code>
 structures and a Boolean variable used to record if <code>plot.new()</code>
 (or <code>persp</code>) has been used successfully on the device.
 </p>
@@ -4415,7 +4533,7 @@ about implicit function declarations (as spotted by GCC with command
 line option <samp>-Wimplicit-function-declaration</samp>, which is implied
 by <samp>-Wall</samp>).  NB: implicit function declarations are errors in
 some recent C compilers, including Apple <code>clang</code>.
-Default: false.
+Default: true from R 4.2.0, previously false.
 </p></dd>
 <dt id='index-_005fR_005fCHECK_005fSRC_005fMINUS_005fW_005fUNUSED_005f'><span><code>_R_CHECK_SRC_MINUS_W_UNUSED_</code><a href='#index-_005fR_005fCHECK_005fSRC_005fMINUS_005fW_005fUNUSED_005f' class='copiable-anchor'> &para;</a></span></dt>
 <dd><p>Control whether installation output is checked for compilation warnings
@@ -4555,55 +4673,6 @@ aggregate) the ratio of CPU time to elapsed time exceeds this threshold
 (and the CPU time is at least one second).  Not supported on
 Windows.
 Default: <code>NA</code>.
-</p>
-</dd>
-<dt id='index-_005fR_005fCHECK_005fINSTALL_005fDEPENDS_005f'><span><code>_R_CHECK_INSTALL_DEPENDS_</code><a href='#index-_005fR_005fCHECK_005fINSTALL_005fDEPENDS_005f' class='copiable-anchor'> &para;</a></span></dt>
-<dd><p>If set to a true value and a test installation is to be done, this is
-done with <code>.libPaths()</code> containing just a temporary library
-directory and <code>.Library</code>.  The temporary library is populated by
-symbolic links<a id="DOCF22" href="#FOOT22"><sup>22</sup></a>
-to the installed copies of all the Depends/Imports/LinkingTo packages
-which are not in <code>.Library</code>.  Default: false (but true for CRAN
-submission checks).
-</p>
-<p>Note that this is actually implemented in <code>R CMD INSTALL</code>, so it
-is available to those who first install recording to a log, then call
-<code>R CMD check</code>.
-</p>
-</dd>
-<dt id='index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005f'><span><code>_R_CHECK_DEPENDS_ONLY_</code><a href='#index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005f' class='copiable-anchor'> &para;</a></span></dt>
-<dt id='index-_005fR_005fCHECK_005fSUGGESTS_005fONLY_005f'><span><code>_R_CHECK_SUGGESTS_ONLY_</code><a href='#index-_005fR_005fCHECK_005fSUGGESTS_005fONLY_005f' class='copiable-anchor'> &para;</a></span></dt>
-<dd><p>If set to a true value, running examples, tests and vignettes is done
-with <code>.libPaths()</code> containing just a temporary library directory
-and <code>.Library</code>.  The temporary library is populated by symbolic
-links<a id="DOCF23" href="#FOOT23"><sup>23</sup></a> to the installed copies of
-all the Depends/Imports and (for the second only) Suggests packages
-which are not in <code>.Library</code>.  (As exceptions, packages in a
-&lsquo;<samp>VignetteBuilder</samp>&rsquo; field and test-suite managers in &lsquo;<samp>Suggests</samp>&rsquo;
-are always made available.)  
-Default: false (but
-<code>_R_CHECK_SUGGESTS_ONLY_</code> is true for CRAN submission checks: some
-of the regular checks use true
-and some use false).
-</p>
-</dd>
-<dt id='index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005fDATA_005f'><span><code>_R_CHECK_DEPENDS_ONLY_DATA_</code><a href='#index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005fDATA_005f' class='copiable-anchor'> &para;</a></span></dt>
-<dd><p>Apply <code>_R_CHECK_DEPENDS_ONLY_</code> only to the check of loading from
-the <samp>data</samp> directory, so checks if any dataset depends on
-packages which are in Suggests or undeclared.  Default: false (but
-true for CRAN submission checks)
-</p>
-</dd>
-<dt id='index-_005fR_005fCHECK_005fNO_005fRECOMMENDED_005f'><span><code>_R_CHECK_NO_RECOMMENDED_</code><a href='#index-_005fR_005fCHECK_005fNO_005fRECOMMENDED_005f' class='copiable-anchor'> &para;</a></span></dt>
-<dd><p>If set to a true value, augment the previous checks to make recommended
-packages unavailable unless declared.
-Default: false (but true for CRAN submission checks).
-</p>
-<p>This may give false positives on code which uses
-<code>grDevices::densCols</code> and <code>stats:::.asSparse</code> /
-<code>stats:::.Diag</code> as these invoke <a href="https://CRAN.R-project.org/package=KernSmooth"><strong>KernSmooth</strong></a> and
-<a href="https://CRAN.R-project.org/package=Matrix"><strong>Matrix</strong></a> respectively. (Those in <strong>stats</strong> are called from
-various contrasts functions if <code>sparse = TRUE</code> is used.)
 </p>
 </dd>
 <dt id='index-_005fR_005fCHECK_005fCODETOOLS_005fPROFILE_005f'><span><code>_R_CHECK_CODETOOLS_PROFILE_</code><a href='#index-_005fR_005fCHECK_005fCODETOOLS_005fPROFILE_005f' class='copiable-anchor'> &para;</a></span></dt>
@@ -4841,29 +4910,35 @@ Default: false (but true for CRAN submission checks).
 </p>
 </dd>
 <dt id='index-_005fR_005fCHECK_005fLENGTH_005f1_005fCONDITION_005f'><span><code>_R_CHECK_LENGTH_1_CONDITION_</code><a href='#index-_005fR_005fCHECK_005fLENGTH_005f1_005fCONDITION_005f' class='copiable-anchor'> &para;</a></span></dt>
-<dd><p>Optionally check if the condition in <code>if</code> and <code>while</code> statements
-has length greater than one.  For a true value (&lsquo;<samp>T</samp>&rsquo;, &lsquo;<samp>True</samp>&rsquo;,
-&lsquo;<samp>TRUE</samp>&rsquo; or &lsquo;<samp>true</samp>&rsquo;), give an error.  For a false value (&lsquo;<samp>F</samp>&rsquo;,
-&lsquo;<samp>False</samp>&rsquo;, &lsquo;<samp>FALSE</samp>&rsquo; or &lsquo;<samp>false</samp>&rsquo;) or when unset, print a warning. 
-Any other non-true non-empty value needs to be a list of commands separated
-by comma: &lsquo;<samp>abort</samp>&rsquo; causes R to terminate unconditionally instead of
-signalling an error, &lsquo;<samp>verbose</samp>&rsquo; prints very detailed diagnostic message,
-&lsquo;<samp>package:pkg</samp>&rsquo; restricts the check to if/while statements executing in
-the namespace of package &lsquo;<samp>pkg</samp>&rsquo;, &lsquo;<samp>package:_R_CHECK_PACKAGE_NAME_</samp>&rsquo;
-restricts the check to if/while statements executing in the package that is
-currently being checked by <code>R CMD check</code>, &lsquo;<samp>warn</samp>&rsquo; causes R to
-report a warning instead of signalling an error.
-Default: unset (warning is reported, but
-&lsquo;<samp>package:_R_CHECK_PACKAGE_NAME_,[abort,]verbose</samp>&rsquo; for the CRAN submission checks).
+<dd><p>No longer in use: conditions of length greater than one in <code>if</code> or
+<code>while</code> statements are now an error.
 </p>
 </dd>
 <dt id='index-_005fR_005fCHECK_005fLENGTH_005f1_005fLOGIC2_005f'><span><code>_R_CHECK_LENGTH_1_LOGIC2_</code><a href='#index-_005fR_005fCHECK_005fLENGTH_005f1_005fLOGIC2_005f' class='copiable-anchor'> &para;</a></span></dt>
 <dd><p>Optionally check if an argument of the binary operators <code>&amp;&amp;</code> and
-<code>||</code> has length greater than one, checked only if it is used.  The
-format is the same as for &lsquo;<samp>_R_CHECK_LENGTH_1_CONDITION_</samp>&rsquo;.
-Default: unset (nothing is reported, but
-&lsquo;<samp>package:_R_CHECK_PACKAGE_NAME_,[abort,]verbose</samp>&rsquo; for the CRAN
-submission checks).
+<code>||</code> has length greater than one, the right-hand side being checked
+only if it is used.  For a false value (&lsquo;<samp>F</samp>&rsquo;, &lsquo;<samp>False</samp>&rsquo;,
+&lsquo;<samp>FALSE</samp>&rsquo; or &lsquo;<samp>false</samp>&rsquo;) or when unset, print a warning.  Any other
+non-true non-empty value needs to be a list of commands separated by
+commas: &lsquo;<samp>abort</samp>&rsquo; causes R to terminate unconditionally instead of
+signalling an error (which is useful in pinpointing issues in code
+called from <code>try</code> or <code>tryCatch</code>), &lsquo;<samp>verbose</samp>&rsquo; prints a very
+detailed diagnostic message, &lsquo;<samp>package:pkg</samp>&rsquo; restricts the check to
+if/while statements executing in the namespace of package &lsquo;<samp>pkg</samp>&rsquo;
+(but <code>all_base</code> refers to all the standard packages),
+&lsquo;<samp>package:_R_CHECK_PACKAGE_NAME_</samp>&rsquo; restricts the check to if/while
+statements executing in the package that is currently being checked by
+<code>R CMD check</code>, &lsquo;<samp>warn</samp>&rsquo; causes R to report a warning instead of
+signalling an error.  (More than one package specification can be given:
+a report, error or warning will be given if any are satisfied.)
+Default: unset (a warning is reported), but equivalent to
+&lsquo;<samp>abort,verbose</samp>&rsquo; for the CRAN submission checks.
+</p>
+</dd>
+<dt id='index-_005fR_005fCHECK_005fVIGNETTES_005fSKIP_005fRUN_005fMAYBE_005f'><span><code>_R_CHECK_VIGNETTES_SKIP_RUN_MAYBE_</code><a href='#index-_005fR_005fCHECK_005fVIGNETTES_005fSKIP_005fRUN_005fMAYBE_005f' class='copiable-anchor'> &para;</a></span></dt>
+<dd><p>Should running the R code in the vignettes be skipped if vignette
+outputs are to be rebuilt (which will involve running that code).
+Default: false (but true for CRAN checking)
 </p>
 </dd>
 <dt id='index-_005fR_005fCHECK_005fBUILD_005fVIGNETTES_005fSEPARATELY_005f'><span><code>_R_CHECK_BUILD_VIGNETTES_SEPARATELY_</code><a href='#index-_005fR_005fCHECK_005fBUILD_005fVIGNETTES_005fSEPARATELY_005f' class='copiable-anchor'> &para;</a></span></dt>
@@ -4888,7 +4963,11 @@ Default: true (but false for CRAN checking)
 <code>autoconf</code> and either <samp>configure.ac</samp> or
 <samp>configure,.in</samp>, check that <code>autoreconf</code> can, if available,
 be run in a copy of the sources (this will detect missing source files
-and report <code>autoconf</code> warnings).
+and report <code>autoconf</code> warnings).  Environment variable
+<code>AUTORECONf</code> controls the command used: it can give the full path to
+<code>autoreconf</code> (without spaces) and can include flags such as
+<samp>--warnings=obsolete</samp> (which is added for <code>autoreconf</code>
+version 2.68 or 2.69 and is the default for later versions).
 Default: false (but true for CRAN submission checks).
 </p>
 </dd>
@@ -4914,9 +4993,41 @@ of these might be out of the user&rsquo;s control, environment variable
 regex) pattern of file paths not to be reported &ndash; CRAN uses
 &lsquo;<samp>^ompi.</samp>&rsquo; for directories left behind by OpenMPI.  There are rare
 instances where <code>TEMPDIR</code> is not respected and so files are left in
-<samp>/tmp</samp> (and not reported): one example is
+<samp>/tmp</samp> (and not reported, but see the next item): one example is
 <samp>/tmp/boost_interprocess</samp> on some OSes.
 Default: false (but true for CRAN submission checks).
+</p>
+</dd>
+<dt id='index-_005fR_005fCHECK_005fTHINGS_005fIN_005fOTHER_005fDIRS_005f'><span><code>_R_CHECK_THINGS_IN_OTHER_DIRS_</code><a href='#index-_005fR_005fCHECK_005fTHINGS_005fIN_005fOTHER_005fDIRS_005f' class='copiable-anchor'> &para;</a></span></dt>
+<dd><p>Check and report at the end of the check run if new files or directories
+are created in a selected set of directories during the check run.
+(This is confined to files owned by the user running the check process.)
+Currently the directories monitored are the home directory, <samp>/tmp</samp>
+(excluding <samp>RtmpXXXXXX</samp> dirs), <samp>/dav/shm</samp>, <samp>~/.cache</samp>
+(recursively) and <samp>~/.local/share</samp> (recursively) or their
+equivalents on Windows and macOS (the directories in which the default
+settings for <code>tools::R_user_dir()</code> use a <samp>R</samp> subdirectory).
+Additional directories can be specified in environment variable
+<code>_R_CHECK_THINGS_IN_OTHER_DIRS_XTRA_</code>, separated by semicolons.
+Directories are reported with a trailing &lsquo;<samp>/</samp>&rsquo; on all platforms.
+</p>
+<p>Environment variable <code>_R_CHECK_THINGS_IN_OTHER_DIRS_EXCLUDE_</code> can
+specify an (extended regex) pattern of file paths not to be reported &ndash;
+this should match absolute file paths with home represented by
+<samp>~</samp>.  For example, on a Linux system
+</p><div class="example">
+<pre class="example">'^~/.cache/(mozilla/firefox|mesa_shader_cache)/'
+</pre></div>
+<p>matches cache directories used by Firefox and OpenGL (and their
+content).  If the value starts with &lsquo;<samp>@</samp>&rsquo; it is considered as a
+filepath which is read with each line treated as a pattern to be
+matched.
+</p>
+<p>Note that other processes (include check runs in parallel) may create
+new files in these directories which will get reported.  However, this
+optional check is very useful for narrowing down possible packages which
+are leaving behind unexpected files.
+Default: false
 </p>
 </dd>
 <dt id='index-_005fR_005fCHECK_005fBASHISMS_005f'><span><code>_R_CHECK_BASHISMS_</code><a href='#index-_005fR_005fCHECK_005fBASHISMS_005f' class='copiable-anchor'> &para;</a></span></dt>
@@ -4974,6 +5085,95 @@ Default: false.
 <dd><p>If true and <code>_R_CHECK_USE_CODETOOLS_</code> is also true, functions are
 scanned for use of <code>return</code> rather than <code>return()</code>.
 Default: false (but true for CRAN submission checks).
+</p>
+</dd>
+<dt id='index-_005fR_005fCHECK_005fMATRIX_005fDATA_005f'><span><code>_R_CHECK_MATRIX_DATA_</code><a href='#index-_005fR_005fCHECK_005fMATRIX_005fDATA_005f' class='copiable-anchor'> &para;</a></span></dt>
+<dd><p>By default, the check for a mismatch between the data length and the
+dimensions in a call to <code>matrix</code> gives a warning: setting this to a
+true value gives an error with a compact traceback.
+Default: false (but true for CRAN submission checks).
+</p>
+</dd>
+<dt id='index-_005fR_005fCHECK_005fCODE_005fCLASS_005fIS_005fSTRING_005f'><span><code>_R_CHECK_CODE_CLASS_IS_STRING_</code><a href='#index-_005fR_005fCHECK_005fCODE_005fCLASS_005fIS_005fSTRING_005f' class='copiable-anchor'> &para;</a></span></dt>
+<dd><p>Check if package code has <code>if()</code> condition which compare the class
+of an object to a string.
+See
+<a href="https://developer.r-project.org/Blog/public/2019/11/09/when-you-think-class.-think-again/index.html">https://developer.r-project.org/Blog/public/2019/11/09/when-you-think-class.-think-again/index.html</a>
+why this is a bad idea.
+Default: false (but true for CRAN submission checks).
+</p>
+</dd>
+<dt id='index-_005fR_005fCHECK_005fRD_005fVALIDATE_005fRD2HTML_005f'><span><code>_R_CHECK_RD_VALIDATE_RD2HTML_</code><a href='#index-_005fR_005fCHECK_005fRD_005fVALIDATE_005fRD2HTML_005f' class='copiable-anchor'> &para;</a></span></dt>
+<dd><p>Check the validity of the package HTML help pages using HTML tidy
+(<a href="https://www.html-tidy.org/">https://www.html-tidy.org/</a>) (if a suitable version is available
+on the system path for executables or its path is specified by
+environment variable <code>R_TIDYCMD</code>).  macOS users are advised to
+install 5.8.0 or later from <a href="http://binaries.html-tidy.org/">http://binaries.html-tidy.org/</a>.
+Default: false (but true for CRAN submission checks). <samp>-as-cran</samp>
+can be overridden by setting this variable to a false value.
+</p></dd>
+</dl>
+
+<p>The following variables control checks for undeclared/unconditional use
+of other packages.  They work by setting up a temporary library
+directory and setting <code>.libPaths()</code> to just that and
+<code>.Library</code>, so are only effective if additional packages are
+installed somewhere other than <code>.Library</code>.  The temporary library
+is populated by symbolic links<a id="DOCF22" href="#FOOT22"><sup>22</sup></a> to installed packages not also in <code>.library</code>.
+</p>
+<dl compact="compact">
+<dt id='index-_005fR_005fCHECK_005fINSTALL_005fDEPENDS_005f'><span><code>_R_CHECK_INSTALL_DEPENDS_</code><a href='#index-_005fR_005fCHECK_005fINSTALL_005fDEPENDS_005f' class='copiable-anchor'> &para;</a></span></dt>
+<dd><p>If set to a true value and a test installation is to be done, this is
+done with a temporary library populated by all the
+Depends/Imports/LinkingTo packages.
+Default: false (but true for CRAN submission checks).
+</p>
+<p>Note that this is actually implemented in <code>R CMD INSTALL</code>, so it
+is available to those who first install recording to a log, then call
+<code>R CMD check</code>.
+</p>
+</dd>
+<dt id='index-_005fR_005fCHECK_005fSUGGESTS_005fONLY_005f'><span><code>_R_CHECK_SUGGESTS_ONLY_</code><a href='#index-_005fR_005fCHECK_005fSUGGESTS_005fONLY_005f' class='copiable-anchor'> &para;</a></span></dt>
+<dd><p>If set to a true value, running examples, tests and vignettes is done
+with a temporary library directory populated by all the
+Depends/Imports/Suggests packages.  (As exceptions, packages in a
+&lsquo;<samp>VignetteBuilder</samp>&rsquo; field are always made available.)
+Default: false (but true for CRAN submission checks: some of the regular
+checks use true and some use false).
+</p>
+</dd>
+<dt id='index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005f'><span><code>_R_CHECK_DEPENDS_ONLY_</code><a href='#index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005f' class='copiable-anchor'> &para;</a></span></dt>
+<dd><p>As for <code>_R_CHECK_SUGGESTS_ONLY_</code> but using only Depends/Imports (and
+the exceptions, including test-suite managers in &lsquo;<samp>Suggests</samp>&rsquo;).
+Default: false
+</p>
+</dd>
+<dt id='index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005fDATA_005f'><span><code>_R_CHECK_DEPENDS_ONLY_DATA_</code><a href='#index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005fDATA_005f' class='copiable-anchor'> &para;</a></span></dt>
+<dd><p>Apply <code>_R_CHECK_DEPENDS_ONLY_</code> only to the check of loading from
+the <samp>data</samp> directory, so checks if any dataset depends on
+packages which are in Suggests or undeclared.
+Default: false (but true for CRAN submission checks)
+</p>
+</dd>
+<dt id='index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005fEXAMPLES_005f'><span><code>_R_CHECK_DEPENDS_ONLY_EXAMPLES_</code><a href='#index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005fEXAMPLES_005f' class='copiable-anchor'> &para;</a></span></dt>
+<dt id='index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005fTESTS_005f'><span><code>_R_CHECK_DEPENDS_ONLY_TESTS_</code><a href='#index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005fTESTS_005f' class='copiable-anchor'> &para;</a></span></dt>
+<dt id='index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005fVIGNETTES_005f'><span><code>_R_CHECK_DEPENDS_ONLY_VIGNETTES_</code><a href='#index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005fVIGNETTES_005f' class='copiable-anchor'> &para;</a></span></dt>
+<dd><p>Apply <code>_R_CHECK_DEPENDS_ONLY_</code> only to the checking of
+examples, tests or vignettes.  These can be used on their own, or
+with a false value to override <code>_R_CHECK_DEPENDS_ONLY_</code>.
+Default: the value of <code>_R_CHECK_DEPENDS_ONLY_</code> or false if that is unset..
+</p>
+</dd>
+<dt id='index-_005fR_005fCHECK_005fNO_005fRECOMMENDED_005f'><span><code>_R_CHECK_NO_RECOMMENDED_</code><a href='#index-_005fR_005fCHECK_005fNO_005fRECOMMENDED_005f' class='copiable-anchor'> &para;</a></span></dt>
+<dd><p>If set to a true value, augment the previous checks to make recommended
+packages unavailable unless declared (even if installed in <code>.library</code>).
+Default: false (but true for CRAN submission checks).
+</p>
+<p>This may give false positives on code which uses
+<code>grDevices::densCols</code> and <code>stats:::.asSparse</code> /
+<code>stats:::.Diag</code> as these invoke <a href="https://CRAN.R-project.org/package=KernSmooth"><strong>KernSmooth</strong></a> and
+<a href="https://CRAN.R-project.org/package=Matrix"><strong>Matrix</strong></a> respectively. (Those in <strong>stats</strong> are called from
+various contrasts functions if <code>sparse = TRUE</code> is used.)
 </p></dd>
 </dl>
 
@@ -5019,6 +5219,9 @@ _R_CHECK_BASHISMS_=true
 _R_CLASS_MATRIX_ARRARY_=true
 _R_CHECK_ORPHANED_=true
 _R_CHECK_BOGUS_RETURN_=true
+_R_CHECK_MATRIX_DATA_=TRUE
+_R_CHECK_CODE_CLASS_IS_STRING_=true
+_R_CHECK_RD_VALIDATE_RD2HTML_=true
 </pre></div>
 
 <p>These are turned on by <code>R CMD check --as-cran</code>: the incoming
@@ -5078,7 +5281,7 @@ re-building each vignette separately.
 
 <p>Another variable which enables stricter checks is to set
 <code>R_CHECK_CONSTANTS</code> to <code>5</code>.  This checks that
-nothing<a id="DOCF24" href="#FOOT24"><sup>24</sup></a> changes the values of &lsquo;constants&rsquo;<a id="DOCF25" href="#FOOT25"><sup>25</sup></a> in R
+nothing<a id="DOCF23" href="#FOOT23"><sup>23</sup></a> changes the values of &lsquo;constants&rsquo;<a id="DOCF24" href="#FOOT24"><sup>24</sup></a> in R
 code.  This is best used in conjunction with setting
 <code>R_JIT_STRATEGY</code> to <code>3</code>, which checks code on first use (by
 default most code is only checked after byte-compilation on second use).
@@ -5173,12 +5376,13 @@ Bourne shell).
 <p>In addition, the following tools are needed for certain tasks.
 </p>
 <ul>
-<li> Perl version 5 is only needed for the maintainer-only script
+<li> Perl version 5 is needed for the maintainer-only script
 <samp>tools/help2man.pl</samp>.
 <span id="index-Perl"></span>
 
-</li><li> Makeinfo version 4.7 or later is needed to build the Info files for the
-R manuals written in the <acronym>GNU</acronym> Texinfo system.
+</li><li> <code>texinfo</code> version 5.1 or later is needed to build the HTML, PDF
+and Info files for the R manuals written in the <acronym>GNU</acronym> Texinfo
+system.  And that requires Perl.
 <span id="index-makeinfo"></span>
 </li></ul>
 
@@ -5278,7 +5482,7 @@ a sequence of <code>(pdf)latex</code>, <code>bibtex</code> and
 </p>
 <p>This process has been rather vulnerable to the versions of the external
 software used: particular issues have been <code>texi2dvi</code> and
-<samp>texinfo.tex</samp> updates, mismatches between the two<a id="DOCF26" href="#FOOT26"><sup>26</sup></a>,
+<samp>texinfo.tex</samp> updates, mismatches between the two<a id="DOCF25" href="#FOOT25"><sup>25</sup></a>,
 versions of the LaTeX package &lsquo;<samp>hyperref</samp>&rsquo; and quirks in index
 production.  The licenses used for LaTeX and latterly &lsquo;<samp>texinfo</samp>&rsquo;
 prohibit us from including &lsquo;known good&rsquo; versions in the R
@@ -5421,7 +5625,7 @@ vectors.
 <p>The remaining interfaces will need to cope with the changed
 <code>VECTOR_SEXPREC</code> types.  It seems likely that in most cases lengths
 are accessed by the <code>length</code> and <code>LENGTH</code>
-functions<a id="DOCF27" href="#FOOT27"><sup>27</sup></a>  The current approach is to keep these returning 32-bit lengths and
+functions<a id="DOCF26" href="#FOOT26"><sup>26</sup></a>  The current approach is to keep these returning 32-bit lengths and
 introduce &lsquo;long&rsquo; versions <code>xlength</code> and <code>XLENGTH</code> which return
 <code>R_xlen_t</code> values.
 </p>
@@ -5489,8 +5693,6 @@ Next: <a href="#Concept-index" accesskey="n" rel="next">Concept index</a>, Previ
  &nbsp; 
 <a class="summary-letter" href="#Function-and-variable-index_vr_letter-E"><b>E</b></a>
  &nbsp; 
-<a class="summary-letter" href="#Function-and-variable-index_vr_letter-F"><b>F</b></a>
- &nbsp; 
 <a class="summary-letter" href="#Function-and-variable-index_vr_letter-G"><b>G</b></a>
  &nbsp; 
 <a class="summary-letter" href="#Function-and-variable-index_vr_letter-I"><b>I</b></a>
@@ -5544,6 +5746,7 @@ Next: <a href="#Concept-index" accesskey="n" rel="next">Concept index</a>, Previ
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fCODETOOLS_005fPROFILE_005f"><code>_R_CHECK_CODETOOLS_PROFILE_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fCODE_005fASSIGN_005fTO_005fGLOBALENV_005f"><code>_R_CHECK_CODE_ASSIGN_TO_GLOBALENV_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fCODE_005fATTACH_005f"><code>_R_CHECK_CODE_ATTACH_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fCODE_005fCLASS_005fIS_005fSTRING_005f"><code>_R_CHECK_CODE_CLASS_IS_STRING_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fCODE_005fDATA_005fINTO_005fGLOBALENV_005f"><code>_R_CHECK_CODE_DATA_INTO_GLOBALENV_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fCODE_005fUSAGE_005fVIA_005fNAMESPACES_005f"><code>_R_CHECK_CODE_USAGE_VIA_NAMESPACES_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fCODE_005fUSAGE_005fWITH_005fONLY_005fBASE_005fATTACHED_005f"><code>_R_CHECK_CODE_USAGE_WITH_ONLY_BASE_ATTACHED_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
@@ -5556,6 +5759,9 @@ Next: <a href="#Concept-index" accesskey="n" rel="next">Concept index</a>, Previ
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fDATALIST_005f"><code>_R_CHECK_DATALIST_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005f"><code>_R_CHECK_DEPENDS_ONLY_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005fDATA_005f"><code>_R_CHECK_DEPENDS_ONLY_DATA_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005fEXAMPLES_005f"><code>_R_CHECK_DEPENDS_ONLY_EXAMPLES_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005fTESTS_005f"><code>_R_CHECK_DEPENDS_ONLY_TESTS_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fDEPENDS_005fONLY_005fVIGNETTES_005f"><code>_R_CHECK_DEPENDS_ONLY_VIGNETTES_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fDEPRECATED_005fDEFUNCT_005f"><code>_R_CHECK_DEPRECATED_DEFUNCT_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fDOC_005fSIZES2_005f"><code>_R_CHECK_DOC_SIZES2_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fDOC_005fSIZES_005f"><code>_R_CHECK_DOC_SIZES_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
@@ -5581,6 +5787,7 @@ Next: <a href="#Concept-index" accesskey="n" rel="next">Concept index</a>, Previ
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fLENGTH_005f1_005fLOGIC2_005f"><code>_R_CHECK_LENGTH_1_LOGIC2_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fLICENSE_005f"><code>_R_CHECK_LICENSE_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fLIMIT_005fCORES_005f"><code>_R_CHECK_LIMIT_CORES_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fMATRIX_005fDATA_005f"><code>_R_CHECK_MATRIX_DATA_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fNATIVE_005fROUTINE_005fREGISTRATION_005f"><code>_R_CHECK_NATIVE_ROUTINE_REGISTRATION_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fNO_005fRECOMMENDED_005f"><code>_R_CHECK_NO_RECOMMENDED_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fNO_005fSTOP_005fON_005fTEST_005fERROR_005f"><code>_R_CHECK_NO_STOP_ON_TEST_ERROR_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
@@ -5599,6 +5806,7 @@ Next: <a href="#Concept-index" accesskey="n" rel="next">Concept index</a>, Previ
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fRD_005fEXAMPLES_005fT_005fAND_005fF_005f"><code>_R_CHECK_RD_EXAMPLES_T_AND_F_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fRD_005fLINE_005fWIDTHS_005f"><code>_R_CHECK_RD_LINE_WIDTHS_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fRD_005fSTYLE_005f"><code>_R_CHECK_RD_STYLE_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fRD_005fVALIDATE_005fRD2HTML_005f"><code>_R_CHECK_RD_VALIDATE_RD2HTML_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fRD_005fXREFS_005f"><code>_R_CHECK_RD_XREFS_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fREPLACING_005fIMPORTS_005f"><code>_R_CHECK_REPLACING_IMPORTS_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fR_005fDEPENDS_005f"><code>_R_CHECK_R_DEPENDS_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
@@ -5620,6 +5828,7 @@ Next: <a href="#Concept-index" accesskey="n" rel="next">Concept index</a>, Previ
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fTESTS_005fNLINES_005f"><code>_R_CHECK_TESTS_NLINES_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fTEST_005fTIMING_005fCPU_005fTO_005fELAPSED_005fTHRESHOLD_005f"><code>_R_CHECK_TEST_TIMING_CPU_TO_ELAPSED_THRESHOLD_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fTHINGS_005fIN_005fCHECK_005fDIR_005f"><code>_R_CHECK_THINGS_IN_CHECK_DIR_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fTHINGS_005fIN_005fOTHER_005fDIRS_005f"><code>_R_CHECK_THINGS_IN_OTHER_DIRS_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fTHINGS_005fIN_005fTEMP_005fDIR_005f"><code>_R_CHECK_THINGS_IN_TEMP_DIR_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fTIMINGS_005f"><code>_R_CHECK_TIMINGS_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fTOPLEVEL_005fFILES_005f"><code>_R_CHECK_TOPLEVEL_FILES_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
@@ -5628,6 +5837,7 @@ Next: <a href="#Concept-index" accesskey="n" rel="next">Concept index</a>, Previ
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fUSE_005fINSTALL_005fLOG_005f"><code>_R_CHECK_USE_INSTALL_LOG_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fVC_005fDIRS_005f"><code>_R_CHECK_VC_DIRS_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fVIGNETTES_005fNLINES_005f"><code>_R_CHECK_VIGNETTES_NLINES_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fVIGNETTES_005fSKIP_005fRUN_005fMAYBE_005f"><code>_R_CHECK_VIGNETTES_SKIP_RUN_MAYBE_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fVIGNETTE_005fTIMING_005fCPU_005fTO_005fELAPSED_005fTHRESHOLD_005f"><code>_R_CHECK_VIGNETTE_TIMING_CPU_TO_ELAPSED_THRESHOLD_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fWALL_005fFORTRAN_005f"><code>_R_CHECK_WALL_FORTRAN_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-_005fR_005fCHECK_005fWINDOWS_005fDEVICE_005f"><code>_R_CHECK_WINDOWS_DEVICE_</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Tools">Tools</a></td></tr>
@@ -5645,7 +5855,6 @@ Next: <a href="#Concept-index" accesskey="n" rel="next">Concept index</a>, Previ
 <tr><td></td><td valign="top"><a href="#index-attribute_005fhidden"><code>attribute_hidden</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Hiding-C-entry-points">Hiding C entry points</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
 <tr><th id="Function-and-variable-index_vr_letter-C">C</th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="#index-Calloc"><code>Calloc</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Memory-allocators">Memory allocators</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-copyMostAttrib"><code>copyMostAttrib</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Attributes">Attributes</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
 <tr><th id="Function-and-variable-index_vr_letter-D">D</th><td></td><td></td></tr>
@@ -5660,9 +5869,6 @@ Next: <a href="#Concept-index" accesskey="n" rel="next">Concept index</a>, Previ
 <tr><td></td><td valign="top"><a href="#index-emacs"><code>emacs</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#R-coding-standards">R coding standards</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-error"><code>error</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Warnings-and-errors">Warnings and errors</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-errorcall"><code>errorcall</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Warnings-and-errors">Warnings and errors</a></td></tr>
-<tr><td colspan="4"> <hr></td></tr>
-<tr><th id="Function-and-variable-index_vr_letter-F">F</th><td></td><td></td></tr>
-<tr><td></td><td valign="top"><a href="#index-Free"><code>Free</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Memory-allocators">Memory allocators</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
 <tr><th id="Function-and-variable-index_vr_letter-G">G</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-gp-bits"><code>gp bits</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Rest-of-header">Rest of header</a></td></tr>
@@ -5695,15 +5901,17 @@ Next: <a href="#Concept-index" accesskey="n" rel="next">Concept index</a>, Previ
 <tr><td colspan="4"> <hr></td></tr>
 <tr><th id="Function-and-variable-index_vr_letter-R">R</th><td></td><td></td></tr>
 <tr><td></td><td valign="top"><a href="#index-Rdll_002ehide"><code>Rdll.hide</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Hiding-C-entry-points">Hiding C entry points</a></td></tr>
-<tr><td></td><td valign="top"><a href="#index-Realloc"><code>Realloc</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Memory-allocators">Memory allocators</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-R_005falloc"><code>R_alloc</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Memory-allocators">Memory allocators</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-R_005fAllocStringBuffer"><code>R_AllocStringBuffer</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Memory-allocators">Memory allocators</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-R_005fBaseNamespace"><code>R_BaseNamespace</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Namespaces">Namespaces</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-R_005fCalloc"><code>R_Calloc</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Memory-allocators">Memory allocators</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-R_005fCheckStack"><code>R_CheckStack</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Memory-allocators">Memory allocators</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-R_005fCheckStack2"><code>R_CheckStack2</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Memory-allocators">Memory allocators</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-R_005fFree"><code>R_Free</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Memory-allocators">Memory allocators</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-R_005fFreeStringBuffer"><code>R_FreeStringBuffer</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Memory-allocators">Memory allocators</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-R_005fFreeStringBufferL"><code>R_FreeStringBufferL</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Memory-allocators">Memory allocators</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-R_005fMissingArg"><code>R_MissingArg</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Missingness">Missingness</a></td></tr>
+<tr><td></td><td valign="top"><a href="#index-R_005fRealloc"><code>R_Realloc</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Memory-allocators">Memory allocators</a></td></tr>
 <tr><td></td><td valign="top"><a href="#index-R_005fVisible"><code>R_Visible</code></a>:</td><td>&nbsp;</td><td valign="top"><a href="#Autoprinting">Autoprinting</a></td></tr>
 <tr><td colspan="4"> <hr></td></tr>
 <tr><th id="Function-and-variable-index_vr_letter-S">S</th><td></td><td></td></tr>
@@ -5742,8 +5950,6 @@ Next: <a href="#Concept-index" accesskey="n" rel="next">Concept index</a>, Previ
 <a class="summary-letter" href="#Function-and-variable-index_vr_letter-D"><b>D</b></a>
  &nbsp; 
 <a class="summary-letter" href="#Function-and-variable-index_vr_letter-E"><b>E</b></a>
- &nbsp; 
-<a class="summary-letter" href="#Function-and-variable-index_vr_letter-F"><b>F</b></a>
  &nbsp; 
 <a class="summary-letter" href="#Function-and-variable-index_vr_letter-G"><b>G</b></a>
  &nbsp; 
@@ -5973,7 +6179,7 @@ pseudo-<code>SEXPTYPE</code>s.</p>
 <p>Currently the only relevant bits are 0:1, 4, 14:15.</p>
 <h5><a id="FOOT9" href="#DOCF9">(9)</a></h5>
 <p>See define
-<code>USE_UTF8_IF_POSSIBLE</code> in file <samp>src/main/gram.c</samp>.</p>
+<code>USE_UTF8_IF_POSSIBLE</code> in old versions of file <samp>src/main/gram.c</samp>.</p>
 <h5><a id="FOOT10" href="#DOCF10">(10)</a></h5>
 <p>or UTF-16 if support for surrogates is enabled in the OS,
 which it used not to be when encoding support was added to R.</p>
@@ -6014,21 +6220,20 @@ for this.</p>
 <p>an Xcode project, in SVN at
 <a href="https://svn.r-project.org/R-packages/trunk/Mac-GUI/">https://svn.r-project.org/R-packages/trunk/Mac-GUI/</a>.</p>
 <h5><a id="FOOT22" href="#DOCF22">(22)</a></h5>
-<p>under Windows, junction points, or copies if
-environment variable <code>R_WIN_NO_JUNCTIONS</code> has a non-empty value.</p>
+<p>under Windows, junction points,
+or copies if environment variable <code>R_WIN_NO_JUNCTIONS</code> has a
+non-empty value.</p>
 <h5><a id="FOOT23" href="#DOCF23">(23)</a></h5>
-<p>see the previous footnote.</p>
-<h5><a id="FOOT24" href="#DOCF24">(24)</a></h5>
 <p>The usual culprits are calls to compiled code
 <em>via</em> <code>.Call</code> or <code>.External</code> which alter their
 arguments.</p>
-<h5><a id="FOOT25" href="#DOCF25">(25)</a></h5>
+<h5><a id="FOOT24" href="#DOCF24">(24)</a></h5>
 <p>things which the
 byte compiler assumes do not change, e.g. function bodies.</p>
-<h5><a id="FOOT26" href="#DOCF26">(26)</a></h5>
+<h5><a id="FOOT25" href="#DOCF25">(25)</a></h5>
 <p>Linux
 distributions tend to unbundle <samp>texinfo.tex</samp> from &lsquo;<samp>texinfo</samp>&rsquo;.</p>
-<h5><a id="FOOT27" href="#DOCF27">(27)</a></h5>
+<h5><a id="FOOT26" href="#DOCF26">(26)</a></h5>
 <p>but <code>LENGTH</code> is a macro under some internal
 uses.</p>
 </div>

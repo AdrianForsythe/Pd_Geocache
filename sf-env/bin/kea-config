@@ -30,7 +30,7 @@ case $1 in
     echo -n "/home/adrian/PhD/Pd_Geocache/sf-env "
      ;;
 	--version)
-    echo -n "1.4.14 "
+    echo -n "1.4.15 "
      ;;
     --cflags)
     echo -n "-I/home/adrian/PhD/Pd_Geocache/sf-env/include "

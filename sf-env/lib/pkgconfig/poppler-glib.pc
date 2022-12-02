@@ -4,9 +4,9 @@ includedir=/home/adrian/PhD/Pd_Geocache/sf-env/include
 
 Name: poppler-glib
 Description: GLib wrapper for poppler
-Version: 21.11.0
+Version: 22.04.0
 Requires: glib-2.0 >= 2.56 gobject-2.0 >= 2.56 cairo >= 1.10.0 
-Requires.private: poppler = 21.11.0
+Requires.private: poppler = 22.04.0
 
 Libs: -L${libdir} -lpoppler-glib
 Cflags: -I${includedir}/poppler/glib

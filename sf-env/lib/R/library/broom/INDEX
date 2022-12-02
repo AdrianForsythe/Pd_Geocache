@@ -92,6 +92,7 @@ glance.Arima            Glance at a(n) Arima object
 glance.Gam              Glance at a(n) Gam object
 glance.Mclust           Glance at a(n) Mclust object
 glance.aareg            Glance at a(n) aareg object
+glance.anova            Glance at a(n) anova object
 glance.aov              Glance at a(n) lm object
 glance.betamfx          Glance at a(n) betamfx object
 glance.betareg          Glance at a(n) betareg object
@@ -161,8 +162,6 @@ list_tidiers            Tidying methods for lists / returned values
                         that are not S3 objects
 null_tidiers            Tidiers for NULL inputs
 sp_tidiers              Tidy a(n) SpatialPolygonsDataFrame object
-sparse_tidiers          Tidy a sparseMatrix object from the Matrix
-                        package
 summary_tidiers         (Deprecated) Tidy summaryDefault objects
 tidy.Arima              Tidy a(n) Arima object
 tidy.Gam                Tidy a(n) Gam object

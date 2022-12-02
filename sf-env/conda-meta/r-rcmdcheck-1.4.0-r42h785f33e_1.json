@@ -1,0 +1,217 @@
+{
+  "build": "r42h785f33e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.2,<4.3.0a0",
+    "r-callr >=3.1.1.9000",
+    "r-cli >=3.0.0",
+    "r-curl",
+    "r-desc >=1.2.0",
+    "r-digest",
+    "r-pkgbuild",
+    "r-prettyunits",
+    "r-r6",
+    "r-rprojroot",
+    "r-sessioninfo >=1.1.1",
+    "r-withr",
+    "r-xopen"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-rcmdcheck-1.4.0-r42h785f33e_1",
+  "features": "",
+  "files": [
+    "lib/R/library/rcmdcheck/DESCRIPTION",
+    "lib/R/library/rcmdcheck/INDEX",
+    "lib/R/library/rcmdcheck/LICENSE",
+    "lib/R/library/rcmdcheck/Meta/Rd.rds",
+    "lib/R/library/rcmdcheck/Meta/features.rds",
+    "lib/R/library/rcmdcheck/Meta/hsearch.rds",
+    "lib/R/library/rcmdcheck/Meta/links.rds",
+    "lib/R/library/rcmdcheck/Meta/nsInfo.rds",
+    "lib/R/library/rcmdcheck/Meta/package.rds",
+    "lib/R/library/rcmdcheck/NAMESPACE",
+    "lib/R/library/rcmdcheck/NEWS.md",
+    "lib/R/library/rcmdcheck/R/rcmdcheck",
+    "lib/R/library/rcmdcheck/R/rcmdcheck.rdb",
+    "lib/R/library/rcmdcheck/R/rcmdcheck.rdx",
+    "lib/R/library/rcmdcheck/help/AnIndex",
+    "lib/R/library/rcmdcheck/help/aliases.rds",
+    "lib/R/library/rcmdcheck/help/paths.rds",
+    "lib/R/library/rcmdcheck/help/rcmdcheck.rdb",
+    "lib/R/library/rcmdcheck/help/rcmdcheck.rdx",
+    "lib/R/library/rcmdcheck/html/00Index.html",
+    "lib/R/library/rcmdcheck/html/R.css"
+  ],
+  "fn": "r-rcmdcheck-1.4.0-r42h785f33e_1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-rcmdcheck-1.4.0-r42h785f33e_1",
+    "type": 1
+  },
+  "md5": "a5c0bdb67cc09209c59b48eec1acf290",
+  "name": "r-rcmdcheck",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-rcmdcheck-1.4.0-r42h785f33e_1.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/rcmdcheck/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "7d12dfa8994a547336bd34a03b25e2cc3abff10de549e92ff4debb5ab56041dd",
+        "sha256_in_prefix": "7d12dfa8994a547336bd34a03b25e2cc3abff10de549e92ff4debb5ab56041dd",
+        "size_in_bytes": 1202
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/INDEX",
+        "path_type": "hardlink",
+        "sha256": "2320975d1aa8f297f5fbeef39b24c2c980b24c74410c95244423fd6b905905a9",
+        "sha256_in_prefix": "2320975d1aa8f297f5fbeef39b24c2c980b24c74410c95244423fd6b905905a9",
+        "size_in_bytes": 1049
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "949bf6670dfcfcacd7872077a23af3c96d227369abf0388bd88254ad40abcd32",
+        "sha256_in_prefix": "949bf6670dfcfcacd7872077a23af3c96d227369abf0388bd88254ad40abcd32",
+        "size_in_bytes": 75
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "a5f73859e41c0b62aa19cc05a41c20151abc2c488d4d62dc08e4d8bc8328ade5",
+        "sha256_in_prefix": "a5f73859e41c0b62aa19cc05a41c20151abc2c488d4d62dc08e4d8bc8328ade5",
+        "size_in_bytes": 795
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "8b25785a01ab9fbf4788dc604d16f6804da361b23005e881efe73620e459c87e",
+        "sha256_in_prefix": "8b25785a01ab9fbf4788dc604d16f6804da361b23005e881efe73620e459c87e",
+        "size_in_bytes": 741
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "fc8c572b1051c212b17cc24cd4cfa76cf27dd3e9b2962d6e7feca51b95564fb3",
+        "sha256_in_prefix": "fc8c572b1051c212b17cc24cd4cfa76cf27dd3e9b2962d6e7feca51b95564fb3",
+        "size_in_bytes": 330
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "6035b24af1cda0126c943dbba1d0622382ef29c7418d53f294c3ea5d13a936fc",
+        "sha256_in_prefix": "6035b24af1cda0126c943dbba1d0622382ef29c7418d53f294c3ea5d13a936fc",
+        "size_in_bytes": 643
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "f66b2e8cb57240c527ac1a709763888097d9d552761c8bd4653f193eb35af453",
+        "sha256_in_prefix": "f66b2e8cb57240c527ac1a709763888097d9d552761c8bd4653f193eb35af453",
+        "size_in_bytes": 1276
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "2eb8a6457e4f2761abe0aeeb21e339dc0e3f9f9c67eaccf50e15e846fd310964",
+        "sha256_in_prefix": "2eb8a6457e4f2761abe0aeeb21e339dc0e3f9f9c67eaccf50e15e846fd310964",
+        "size_in_bytes": 1319
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "d62a1c09d21aed8fd1ceab913ce7b1fa3bbac31eebc80a93034acad5699210c8",
+        "sha256_in_prefix": "d62a1c09d21aed8fd1ceab913ce7b1fa3bbac31eebc80a93034acad5699210c8",
+        "size_in_bytes": 5016
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/R/rcmdcheck",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/R/rcmdcheck.rdb",
+        "path_type": "hardlink",
+        "sha256": "7c47bf9c0e59eb7c64b1592927429f0c559d56c0b94d14790587ab9adbde0608",
+        "sha256_in_prefix": "7c47bf9c0e59eb7c64b1592927429f0c559d56c0b94d14790587ab9adbde0608",
+        "size_in_bytes": 122539
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/R/rcmdcheck.rdx",
+        "path_type": "hardlink",
+        "sha256": "3c75d1f7bdbeaa5fd2df4b9936a21a1214747f1abd867a50333a93bb61e3e75a",
+        "sha256_in_prefix": "3c75d1f7bdbeaa5fd2df4b9936a21a1214747f1abd867a50333a93bb61e3e75a",
+        "size_in_bytes": 1864
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "fec2aac677c9f7d3d12a534cfad75896a665b4c489241d16c0f843ead06b9a15",
+        "sha256_in_prefix": "fec2aac677c9f7d3d12a534cfad75896a665b4c489241d16c0f843ead06b9a15",
+        "size_in_bytes": 466
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "f8609bdbec8dc462f899e173429b631e845ff1d3f1614ee7dbc32276395777e5",
+        "sha256_in_prefix": "f8609bdbec8dc462f899e173429b631e845ff1d3f1614ee7dbc32276395777e5",
+        "size_in_bytes": 221
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "f55a1e094da64eb52cd56951def8f33f7c8c5e52e7356b2ca08378bda6a5ca68",
+        "sha256_in_prefix": "f55a1e094da64eb52cd56951def8f33f7c8c5e52e7356b2ca08378bda6a5ca68",
+        "size_in_bytes": 304
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/help/rcmdcheck.rdb",
+        "path_type": "hardlink",
+        "sha256": "27f099157b9bdccd5c16f732581c73b78a31ef84186235121f7d09a720038200",
+        "sha256_in_prefix": "27f099157b9bdccd5c16f732581c73b78a31ef84186235121f7d09a720038200",
+        "size_in_bytes": 33387
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/help/rcmdcheck.rdx",
+        "path_type": "hardlink",
+        "sha256": "14cc8beec8a23a7d9363d676b5bec35aae1cab20ff2479674c2b4f094a5bc9a4",
+        "sha256_in_prefix": "14cc8beec8a23a7d9363d676b5bec35aae1cab20ff2479674c2b4f094a5bc9a4",
+        "size_in_bytes": 504
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "62a124c84b352240ade3597285d90c7fb40e2186a3a477882ff853ab84110f68",
+        "sha256_in_prefix": "62a124c84b352240ade3597285d90c7fb40e2186a3a477882ff853ab84110f68",
+        "size_in_bytes": 2823
+      },
+      {
+        "_path": "lib/R/library/rcmdcheck/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "500fc3ca26f88a08779d4b7c003892e8f5bc68624a570552c61696da789367dc",
+  "size": 179721,
+  "subdir": "noarch",
+  "timestamp": 1665307186000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-rcmdcheck-1.4.0-r42h785f33e_1.tar.bz2",
+  "version": "1.4.0"
+}

@@ -1,0 +1,224 @@
+{
+  "build": "r42hc72bb7e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.2,<4.3.0a0",
+    "r-cli",
+    "r-curl",
+    "r-xml2"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-urlchecker-1.0.1-r42hc72bb7e_1",
+  "features": "",
+  "files": [
+    "lib/R/library/urlchecker/DESCRIPTION",
+    "lib/R/library/urlchecker/INDEX",
+    "lib/R/library/urlchecker/Meta/Rd.rds",
+    "lib/R/library/urlchecker/Meta/features.rds",
+    "lib/R/library/urlchecker/Meta/hsearch.rds",
+    "lib/R/library/urlchecker/Meta/links.rds",
+    "lib/R/library/urlchecker/Meta/nsInfo.rds",
+    "lib/R/library/urlchecker/Meta/package.rds",
+    "lib/R/library/urlchecker/NAMESPACE",
+    "lib/R/library/urlchecker/NEWS.md",
+    "lib/R/library/urlchecker/R/urlchecker",
+    "lib/R/library/urlchecker/R/urlchecker.rdb",
+    "lib/R/library/urlchecker/R/urlchecker.rdx",
+    "lib/R/library/urlchecker/help/AnIndex",
+    "lib/R/library/urlchecker/help/aliases.rds",
+    "lib/R/library/urlchecker/help/paths.rds",
+    "lib/R/library/urlchecker/help/urlchecker.rdb",
+    "lib/R/library/urlchecker/help/urlchecker.rdx",
+    "lib/R/library/urlchecker/html/00Index.html",
+    "lib/R/library/urlchecker/html/R.css",
+    "lib/R/library/urlchecker/tools/README.md",
+    "lib/R/library/urlchecker/tools/urltools.R",
+    "lib/R/library/urlchecker/tools/utils.R"
+  ],
+  "fn": "r-urlchecker-1.0.1-r42hc72bb7e_1.tar.bz2",
+  "license": "GPL-3.0-only",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-urlchecker-1.0.1-r42hc72bb7e_1",
+    "type": 1
+  },
+  "md5": "30c400f784e808557bdacfd12990f8e9",
+  "name": "r-urlchecker",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-urlchecker-1.0.1-r42hc72bb7e_1.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/urlchecker/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "28844cf28f951765c16ac25c17fdb630ee3199a43b6e92fca8dd35f212ab4e7c",
+        "sha256_in_prefix": "28844cf28f951765c16ac25c17fdb630ee3199a43b6e92fca8dd35f212ab4e7c",
+        "size_in_bytes": 1275
+      },
+      {
+        "_path": "lib/R/library/urlchecker/INDEX",
+        "path_type": "hardlink",
+        "sha256": "ac0d4a6b9c1d7f1664794ccb041d144e494e6cca0722426d08759051409379cb",
+        "sha256_in_prefix": "ac0d4a6b9c1d7f1664794ccb041d144e494e6cca0722426d08759051409379cb",
+        "size_in_bytes": 97
+      },
+      {
+        "_path": "lib/R/library/urlchecker/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "81e206b6184f412d5d83dfc8814ca5f4543dd96f51b67a8138bbb0e3fcbae0a1",
+        "sha256_in_prefix": "81e206b6184f412d5d83dfc8814ca5f4543dd96f51b67a8138bbb0e3fcbae0a1",
+        "size_in_bytes": 266
+      },
+      {
+        "_path": "lib/R/library/urlchecker/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/urlchecker/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "68cf818c3480303fa5fc2ad047dcd571bf7210c2c2839687a98f4afc8b3e1591",
+        "sha256_in_prefix": "68cf818c3480303fa5fc2ad047dcd571bf7210c2c2839687a98f4afc8b3e1591",
+        "size_in_bytes": 291
+      },
+      {
+        "_path": "lib/R/library/urlchecker/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "7a704f4495f043aa203fc3fe195f485f2bffe86419085e717cf6327e3d5a5d42",
+        "sha256_in_prefix": "7a704f4495f043aa203fc3fe195f485f2bffe86419085e717cf6327e3d5a5d42",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "lib/R/library/urlchecker/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "059f2f1ac59dc46207955f88849cd762c8403bf8776ace99d8b9dbdc9c6a766c",
+        "sha256_in_prefix": "059f2f1ac59dc46207955f88849cd762c8403bf8776ace99d8b9dbdc9c6a766c",
+        "size_in_bytes": 235
+      },
+      {
+        "_path": "lib/R/library/urlchecker/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "3f0938abddd844e23c3b952a6d960c3a36bc4668894295f286245e5eee5f8bd7",
+        "sha256_in_prefix": "3f0938abddd844e23c3b952a6d960c3a36bc4668894295f286245e5eee5f8bd7",
+        "size_in_bytes": 1110
+      },
+      {
+        "_path": "lib/R/library/urlchecker/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "ad12521f9a5a666afd6e63b0392cb3f5641d745eb79eb2a125a95ca8c4e90116",
+        "sha256_in_prefix": "ad12521f9a5a666afd6e63b0392cb3f5641d745eb79eb2a125a95ca8c4e90116",
+        "size_in_bytes": 113
+      },
+      {
+        "_path": "lib/R/library/urlchecker/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "940a3d41a4c2e9738676b9e88ce28fd83d289b597df88a9cc28e733f15374dea",
+        "sha256_in_prefix": "940a3d41a4c2e9738676b9e88ce28fd83d289b597df88a9cc28e733f15374dea",
+        "size_in_bytes": 139
+      },
+      {
+        "_path": "lib/R/library/urlchecker/R/urlchecker",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/urlchecker/R/urlchecker.rdb",
+        "path_type": "hardlink",
+        "sha256": "252eefcbfc420bf76988c72c050b4b07b4b7ff76622e84777d7bce0657107a85",
+        "sha256_in_prefix": "252eefcbfc420bf76988c72c050b4b07b4b7ff76622e84777d7bce0657107a85",
+        "size_in_bytes": 14923
+      },
+      {
+        "_path": "lib/R/library/urlchecker/R/urlchecker.rdx",
+        "path_type": "hardlink",
+        "sha256": "d4e50ec62b1feac40260068549bd2c747894adfa3b406a12e0531809dcd5bf41",
+        "sha256_in_prefix": "d4e50ec62b1feac40260068549bd2c747894adfa3b406a12e0531809dcd5bf41",
+        "size_in_bytes": 484
+      },
+      {
+        "_path": "lib/R/library/urlchecker/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "2b9c5619147f393d25c6487c32879be188ec1458f860fe5402abdc3ede869dc7",
+        "sha256_in_prefix": "2b9c5619147f393d25c6487c32879be188ec1458f860fe5402abdc3ede869dc7",
+        "size_in_bytes": 42
+      },
+      {
+        "_path": "lib/R/library/urlchecker/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "9a5055defa05c6f81774871ec7b815304acf679c971f9b6ba2bfe3572ed0f307",
+        "sha256_in_prefix": "9a5055defa05c6f81774871ec7b815304acf679c971f9b6ba2bfe3572ed0f307",
+        "size_in_bytes": 95
+      },
+      {
+        "_path": "lib/R/library/urlchecker/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "451ce85f031bccac7a15060ee6b9485045bb8f4d1a9de9fc965a936af8f2c779",
+        "sha256_in_prefix": "451ce85f031bccac7a15060ee6b9485045bb8f4d1a9de9fc965a936af8f2c779",
+        "size_in_bytes": 174
+      },
+      {
+        "_path": "lib/R/library/urlchecker/help/urlchecker.rdb",
+        "path_type": "hardlink",
+        "sha256": "3a154a6d1238efcfa40e83c47c1376364dc29709dc0f7528f56ca85c16c24df5",
+        "sha256_in_prefix": "3a154a6d1238efcfa40e83c47c1376364dc29709dc0f7528f56ca85c16c24df5",
+        "size_in_bytes": 3372
+      },
+      {
+        "_path": "lib/R/library/urlchecker/help/urlchecker.rdx",
+        "path_type": "hardlink",
+        "sha256": "a97fcea47f80077553e464cf887499cfe4b1a6cc3e130f71d70c04018fb712b0",
+        "sha256_in_prefix": "a97fcea47f80077553e464cf887499cfe4b1a6cc3e130f71d70c04018fb712b0",
+        "size_in_bytes": 189
+      },
+      {
+        "_path": "lib/R/library/urlchecker/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "109dc07970b13328ea4a25dc97b7c388db77c7e283ab7fc95ffb0a05eb05d057",
+        "sha256_in_prefix": "109dc07970b13328ea4a25dc97b7c388db77c7e283ab7fc95ffb0a05eb05d057",
+        "size_in_bytes": 1181
+      },
+      {
+        "_path": "lib/R/library/urlchecker/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/urlchecker/tools/README.md",
+        "path_type": "hardlink",
+        "sha256": "e724591c67121610408603d15c92a8b737a00c6b8ed4db1f554eeb3bf7a28aa8",
+        "sha256_in_prefix": "e724591c67121610408603d15c92a8b737a00c6b8ed4db1f554eeb3bf7a28aa8",
+        "size_in_bytes": 272
+      },
+      {
+        "_path": "lib/R/library/urlchecker/tools/urltools.R",
+        "path_type": "hardlink",
+        "sha256": "9535d07a218f4c198d313786816053e0f5b3541ccdebea68e967aa8dcbc23212",
+        "sha256_in_prefix": "9535d07a218f4c198d313786816053e0f5b3541ccdebea68e967aa8dcbc23212",
+        "size_in_bytes": 29370
+      },
+      {
+        "_path": "lib/R/library/urlchecker/tools/utils.R",
+        "path_type": "hardlink",
+        "sha256": "9bea22e6fecb4aa1fdf642e1a181fcd7710e58efc110a19b4f41cf656a95d973",
+        "sha256_in_prefix": "9bea22e6fecb4aa1fdf642e1a181fcd7710e58efc110a19b4f41cf656a95d973",
+        "size_in_bytes": 157
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "09597fb1efb0e8c2e074c46a2c64babdb22d019dddd4024cc741c02c69dec0fe",
+  "size": 51780,
+  "subdir": "noarch",
+  "timestamp": 1665334106000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-urlchecker-1.0.1-r42hc72bb7e_1.tar.bz2",
+  "version": "1.0.1"
+}

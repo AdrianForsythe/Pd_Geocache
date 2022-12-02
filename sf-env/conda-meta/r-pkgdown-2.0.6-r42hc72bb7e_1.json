@@ -1,0 +1,1257 @@
+{
+  "build": "r42hc72bb7e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.2,<4.3.0a0",
+    "r-bslib",
+    "r-callr >=2.0.2",
+    "r-crayon",
+    "r-desc",
+    "r-digest",
+    "r-downlit >=0.4.0",
+    "r-fs >=1.4.0",
+    "r-httr >=1.4.2",
+    "r-jsonlite",
+    "r-magrittr",
+    "r-memoise",
+    "r-purrr",
+    "r-ragg",
+    "r-rlang >=0.4.0",
+    "r-rmarkdown >=1.1.9007",
+    "r-tibble",
+    "r-whisker",
+    "r-withr",
+    "r-xml2 >=1.3.1",
+    "r-yaml"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-pkgdown-2.0.6-r42hc72bb7e_1",
+  "features": "",
+  "files": [
+    "lib/R/library/pkgdown/BS3/assets/bootstrap-toc.css",
+    "lib/R/library/pkgdown/BS3/assets/bootstrap-toc.js",
+    "lib/R/library/pkgdown/BS3/assets/docsearch.css",
+    "lib/R/library/pkgdown/BS3/assets/docsearch.js",
+    "lib/R/library/pkgdown/BS3/assets/link.svg",
+    "lib/R/library/pkgdown/BS3/assets/pkgdown.css",
+    "lib/R/library/pkgdown/BS3/assets/pkgdown.js",
+    "lib/R/library/pkgdown/BS3/templates/after-body.html",
+    "lib/R/library/pkgdown/BS3/templates/before-body.html",
+    "lib/R/library/pkgdown/BS3/templates/config-docsearch.json",
+    "lib/R/library/pkgdown/BS3/templates/content-article-index.html",
+    "lib/R/library/pkgdown/BS3/templates/content-article.html",
+    "lib/R/library/pkgdown/BS3/templates/content-citation-authors.html",
+    "lib/R/library/pkgdown/BS3/templates/content-home.html",
+    "lib/R/library/pkgdown/BS3/templates/content-news-index.html",
+    "lib/R/library/pkgdown/BS3/templates/content-news.html",
+    "lib/R/library/pkgdown/BS3/templates/content-reference-index.html",
+    "lib/R/library/pkgdown/BS3/templates/content-reference-topic.html",
+    "lib/R/library/pkgdown/BS3/templates/content-title-body.html",
+    "lib/R/library/pkgdown/BS3/templates/content-tutorial-index.html",
+    "lib/R/library/pkgdown/BS3/templates/content-tutorial.html",
+    "lib/R/library/pkgdown/BS3/templates/docsearch.html",
+    "lib/R/library/pkgdown/BS3/templates/footer.html",
+    "lib/R/library/pkgdown/BS3/templates/head.html",
+    "lib/R/library/pkgdown/BS3/templates/header.html",
+    "lib/R/library/pkgdown/BS3/templates/in-header.html",
+    "lib/R/library/pkgdown/BS3/templates/layout-redirect.html",
+    "lib/R/library/pkgdown/BS3/templates/layout.html",
+    "lib/R/library/pkgdown/BS3/templates/navbar.html",
+    "lib/R/library/pkgdown/BS5/assets/link.svg",
+    "lib/R/library/pkgdown/BS5/assets/pkgdown.js",
+    "lib/R/library/pkgdown/BS5/assets/pkgdown.scss",
+    "lib/R/library/pkgdown/BS5/templates/after-body.html",
+    "lib/R/library/pkgdown/BS5/templates/before-body.html",
+    "lib/R/library/pkgdown/BS5/templates/config-docsearch.json",
+    "lib/R/library/pkgdown/BS5/templates/content-article-index.html",
+    "lib/R/library/pkgdown/BS5/templates/content-article.html",
+    "lib/R/library/pkgdown/BS5/templates/content-authors.html",
+    "lib/R/library/pkgdown/BS5/templates/content-citation-authors.html",
+    "lib/R/library/pkgdown/BS5/templates/content-home.html",
+    "lib/R/library/pkgdown/BS5/templates/content-news-index.html",
+    "lib/R/library/pkgdown/BS5/templates/content-news.html",
+    "lib/R/library/pkgdown/BS5/templates/content-reference-index.html",
+    "lib/R/library/pkgdown/BS5/templates/content-reference-topic.html",
+    "lib/R/library/pkgdown/BS5/templates/content-title-body.html",
+    "lib/R/library/pkgdown/BS5/templates/content-tutorial-index.html",
+    "lib/R/library/pkgdown/BS5/templates/content-tutorial.html",
+    "lib/R/library/pkgdown/BS5/templates/footer.html",
+    "lib/R/library/pkgdown/BS5/templates/head.html",
+    "lib/R/library/pkgdown/BS5/templates/header.html",
+    "lib/R/library/pkgdown/BS5/templates/in-header.html",
+    "lib/R/library/pkgdown/BS5/templates/layout-redirect.html",
+    "lib/R/library/pkgdown/BS5/templates/layout.html",
+    "lib/R/library/pkgdown/BS5/templates/navbar.html",
+    "lib/R/library/pkgdown/DESCRIPTION",
+    "lib/R/library/pkgdown/INDEX",
+    "lib/R/library/pkgdown/LICENSE",
+    "lib/R/library/pkgdown/Meta/Rd.rds",
+    "lib/R/library/pkgdown/Meta/features.rds",
+    "lib/R/library/pkgdown/Meta/hsearch.rds",
+    "lib/R/library/pkgdown/Meta/links.rds",
+    "lib/R/library/pkgdown/Meta/nsInfo.rds",
+    "lib/R/library/pkgdown/Meta/package.rds",
+    "lib/R/library/pkgdown/Meta/vignette.rds",
+    "lib/R/library/pkgdown/NAMESPACE",
+    "lib/R/library/pkgdown/NEWS.md",
+    "lib/R/library/pkgdown/R/pkgdown",
+    "lib/R/library/pkgdown/R/pkgdown.rdb",
+    "lib/R/library/pkgdown/R/pkgdown.rdx",
+    "lib/R/library/pkgdown/doc/customise.R",
+    "lib/R/library/pkgdown/doc/customise.Rmd",
+    "lib/R/library/pkgdown/doc/customise.html",
+    "lib/R/library/pkgdown/doc/how-to-update-released-site.R",
+    "lib/R/library/pkgdown/doc/how-to-update-released-site.Rmd",
+    "lib/R/library/pkgdown/doc/how-to-update-released-site.html",
+    "lib/R/library/pkgdown/doc/index.html",
+    "lib/R/library/pkgdown/doc/linking.R",
+    "lib/R/library/pkgdown/doc/linking.Rmd",
+    "lib/R/library/pkgdown/doc/linking.html",
+    "lib/R/library/pkgdown/doc/metadata.R",
+    "lib/R/library/pkgdown/doc/metadata.Rmd",
+    "lib/R/library/pkgdown/doc/metadata.html",
+    "lib/R/library/pkgdown/doc/pkgdown.R",
+    "lib/R/library/pkgdown/doc/pkgdown.Rmd",
+    "lib/R/library/pkgdown/doc/pkgdown.html",
+    "lib/R/library/pkgdown/doc/search.R",
+    "lib/R/library/pkgdown/doc/search.Rmd",
+    "lib/R/library/pkgdown/doc/search.html",
+    "lib/R/library/pkgdown/help/AnIndex",
+    "lib/R/library/pkgdown/help/aliases.rds",
+    "lib/R/library/pkgdown/help/figures/bacon.jpg",
+    "lib/R/library/pkgdown/help/figures/lifecycle-archived.svg",
+    "lib/R/library/pkgdown/help/figures/lifecycle-defunct.svg",
+    "lib/R/library/pkgdown/help/figures/lifecycle-deprecated.svg",
+    "lib/R/library/pkgdown/help/figures/lifecycle-experimental.svg",
+    "lib/R/library/pkgdown/help/figures/lifecycle-maturing.svg",
+    "lib/R/library/pkgdown/help/figures/lifecycle-questioning.svg",
+    "lib/R/library/pkgdown/help/figures/lifecycle-stable.svg",
+    "lib/R/library/pkgdown/help/figures/lifecycle-superseded.svg",
+    "lib/R/library/pkgdown/help/figures/logo.png",
+    "lib/R/library/pkgdown/help/paths.rds",
+    "lib/R/library/pkgdown/help/pkgdown.rdb",
+    "lib/R/library/pkgdown/help/pkgdown.rdx",
+    "lib/R/library/pkgdown/highlight-styles/a11y-dark.scss",
+    "lib/R/library/pkgdown/highlight-styles/a11y-light.scss",
+    "lib/R/library/pkgdown/highlight-styles/arrow-dark.scss",
+    "lib/R/library/pkgdown/highlight-styles/arrow-light.scss",
+    "lib/R/library/pkgdown/highlight-styles/atom-one-dark.scss",
+    "lib/R/library/pkgdown/highlight-styles/atom-one-light.scss",
+    "lib/R/library/pkgdown/highlight-styles/ayu-dark.scss",
+    "lib/R/library/pkgdown/highlight-styles/ayu-light.scss",
+    "lib/R/library/pkgdown/highlight-styles/ayu-mirage.scss",
+    "lib/R/library/pkgdown/highlight-styles/breeze-dark.scss",
+    "lib/R/library/pkgdown/highlight-styles/breeze-light.scss",
+    "lib/R/library/pkgdown/highlight-styles/breezedark.scss",
+    "lib/R/library/pkgdown/highlight-styles/dracula.scss",
+    "lib/R/library/pkgdown/highlight-styles/espresso.scss",
+    "lib/R/library/pkgdown/highlight-styles/github-dark.scss",
+    "lib/R/library/pkgdown/highlight-styles/github-light.scss",
+    "lib/R/library/pkgdown/highlight-styles/gruvbox-dark.scss",
+    "lib/R/library/pkgdown/highlight-styles/gruvbox-light.scss",
+    "lib/R/library/pkgdown/highlight-styles/haddock.scss",
+    "lib/R/library/pkgdown/highlight-styles/kate.scss",
+    "lib/R/library/pkgdown/highlight-styles/monochrome-dark.scss",
+    "lib/R/library/pkgdown/highlight-styles/monochrome-light.scss",
+    "lib/R/library/pkgdown/highlight-styles/monochrome.scss",
+    "lib/R/library/pkgdown/highlight-styles/monokai.scss",
+    "lib/R/library/pkgdown/highlight-styles/nord.scss",
+    "lib/R/library/pkgdown/highlight-styles/oblivion.scss",
+    "lib/R/library/pkgdown/highlight-styles/printing.scss",
+    "lib/R/library/pkgdown/highlight-styles/pygments.scss",
+    "lib/R/library/pkgdown/highlight-styles/radical.scss",
+    "lib/R/library/pkgdown/highlight-styles/solarized-dark.scss",
+    "lib/R/library/pkgdown/highlight-styles/solarized-light.scss",
+    "lib/R/library/pkgdown/highlight-styles/solarized.scss",
+    "lib/R/library/pkgdown/highlight-styles/tango.scss",
+    "lib/R/library/pkgdown/highlight-styles/vim-dark.scss",
+    "lib/R/library/pkgdown/highlight-styles/zenburn.scss",
+    "lib/R/library/pkgdown/html/00Index.html",
+    "lib/R/library/pkgdown/html/R.css",
+    "lib/R/library/pkgdown/po/de/LC_MESSAGES/R-pkgdown.mo",
+    "lib/R/library/pkgdown/po/dk/LC_MESSAGES/R-pkgdown.mo",
+    "lib/R/library/pkgdown/po/es/LC_MESSAGES/R-pkgdown.mo",
+    "lib/R/library/pkgdown/po/fr/LC_MESSAGES/R-pkgdown.mo",
+    "lib/R/library/pkgdown/po/ko/LC_MESSAGES/R-pkgdown.mo",
+    "lib/R/library/pkgdown/po/kr/LC_MESSAGES/R-pkgdown.mo",
+    "lib/R/library/pkgdown/po/pt/LC_MESSAGES/R-pkgdown.mo",
+    "lib/R/library/pkgdown/po/tr/LC_MESSAGES/R-pkgdown.mo",
+    "lib/R/library/pkgdown/po/zh_CN/LC_MESSAGES/R-pkgdown.mo",
+    "lib/R/library/pkgdown/rstudio/addins.dcf"
+  ],
+  "fn": "r-pkgdown-2.0.6-r42hc72bb7e_1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-pkgdown-2.0.6-r42hc72bb7e_1",
+    "type": 1
+  },
+  "md5": "9624970842a785414ca87fab9d179053",
+  "name": "r-pkgdown",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-pkgdown-2.0.6-r42hc72bb7e_1.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/pkgdown/BS3/assets/bootstrap-toc.css",
+        "path_type": "hardlink",
+        "sha256": "5361de56c2d2171b60f7789ca00d7ad464332916707953c43a005b991bd9ab65",
+        "sha256_in_prefix": "5361de56c2d2171b60f7789ca00d7ad464332916707953c43a005b991bd9ab65",
+        "size_in_bytes": 1843
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/assets/bootstrap-toc.js",
+        "path_type": "hardlink",
+        "sha256": "f74f76927fe172f26d6be0eba938e1a9f3f01477ae6b6b310655577e72bc7478",
+        "sha256_in_prefix": "f74f76927fe172f26d6be0eba938e1a9f3f01477ae6b6b310655577e72bc7478",
+        "size_in_bytes": 4764
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/assets/docsearch.css",
+        "path_type": "hardlink",
+        "sha256": "52df098c2f2582680168d9dd52441415c7df20a90b20e3e3220768975f33c127",
+        "sha256_in_prefix": "52df098c2f2582680168d9dd52441415c7df20a90b20e3e3220768975f33c127",
+        "size_in_bytes": 11758
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/assets/docsearch.js",
+        "path_type": "hardlink",
+        "sha256": "7d6964deb026efa1c15de6eec625a65b2a0a2e93cc389d9fe7fde6b3699e6cc7",
+        "sha256_in_prefix": "7d6964deb026efa1c15de6eec625a65b2a0a2e93cc389d9fe7fde6b3699e6cc7",
+        "size_in_bytes": 2018
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/assets/link.svg",
+        "path_type": "hardlink",
+        "sha256": "f1403d3dc6051421df5b25acff90c21eb99041849957afd9e2908f66f34d1ee6",
+        "sha256_in_prefix": "f1403d3dc6051421df5b25acff90c21eb99041849957afd9e2908f66f34d1ee6",
+        "size_in_bytes": 810
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/assets/pkgdown.css",
+        "path_type": "hardlink",
+        "sha256": "5adfe331db92a9ac53058e7ba21dcaed1716a9b577226fda26d8c6dc1702aae0",
+        "sha256_in_prefix": "5adfe331db92a9ac53058e7ba21dcaed1716a9b577226fda26d8c6dc1702aae0",
+        "size_in_bytes": 7308
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/assets/pkgdown.js",
+        "path_type": "hardlink",
+        "sha256": "0ab1216121aa67d206c48fd84cdb95ae9c8a17360dcb0cb0f74c8a69c9b7b065",
+        "sha256_in_prefix": "0ab1216121aa67d206c48fd84cdb95ae9c8a17360dcb0cb0f74c8a69c9b7b065",
+        "size_in_bytes": 3248
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/after-body.html",
+        "path_type": "hardlink",
+        "sha256": "561fa1144bf9b185bf42d7291f5575aece686a2006e29bd556a8f21676d454c5",
+        "sha256_in_prefix": "561fa1144bf9b185bf42d7291f5575aece686a2006e29bd556a8f21676d454c5",
+        "size_in_bytes": 43
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/before-body.html",
+        "path_type": "hardlink",
+        "sha256": "564741cd3418135253309727512d75648bd8f3fc5e641220c7f049b77453ada8",
+        "sha256_in_prefix": "564741cd3418135253309727512d75648bd8f3fc5e641220c7f049b77453ada8",
+        "size_in_bytes": 44
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/config-docsearch.json",
+        "path_type": "hardlink",
+        "sha256": "7dfa2fa79471a43a48c3c3748ab6b459de8da10497e4838fc3770d19529e3879",
+        "sha256_in_prefix": "7dfa2fa79471a43a48c3c3748ab6b459de8da10497e4838fc3770d19529e3879",
+        "size_in_bytes": 1970
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/content-article-index.html",
+        "path_type": "hardlink",
+        "sha256": "dfee4b006651d6f0ee77c1d396cd57f16ecfa62887a36314614945d695887af7",
+        "sha256_in_prefix": "dfee4b006651d6f0ee77c1d396cd57f16ecfa62887a36314614945d695887af7",
+        "size_in_bytes": 442
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/content-article.html",
+        "path_type": "hardlink",
+        "sha256": "5a81a2e0e503987dba7580c26dd1f0a2631021f2e79321d31e0cb53d432b8ffe",
+        "sha256_in_prefix": "5a81a2e0e503987dba7580c26dd1f0a2631021f2e79321d31e0cb53d432b8ffe",
+        "size_in_bytes": 1437
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/content-citation-authors.html",
+        "path_type": "hardlink",
+        "sha256": "2010ff23770e7375809fa3043a4d7ea74264caabe8e7cdc107ba329d744a10f3",
+        "sha256_in_prefix": "2010ff23770e7375809fa3043a4d7ea74264caabe8e7cdc107ba329d744a10f3",
+        "size_in_bytes": 760
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/content-home.html",
+        "path_type": "hardlink",
+        "sha256": "a4dc7db4d727f56ebca18fd724c6667d62d221e90ad2919edf45c4b369538a4e",
+        "sha256_in_prefix": "a4dc7db4d727f56ebca18fd724c6667d62d221e90ad2919edf45c4b369538a4e",
+        "size_in_bytes": 202
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/content-news-index.html",
+        "path_type": "hardlink",
+        "sha256": "3d02b9e89862488903153e251d63c3358e6de8ed18dd3d1b8576669c994fd8b7",
+        "sha256_in_prefix": "3d02b9e89862488903153e251d63c3358e6de8ed18dd3d1b8576669c994fd8b7",
+        "size_in_bytes": 258
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/content-news.html",
+        "path_type": "hardlink",
+        "sha256": "e55ac810928b37eda47ce2e764eb75d91f5609206c2eb6227e3a2d2b308e28a5",
+        "sha256_in_prefix": "e55ac810928b37eda47ce2e764eb75d91f5609206c2eb6227e3a2d2b308e28a5",
+        "size_in_bytes": 460
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/content-reference-index.html",
+        "path_type": "hardlink",
+        "sha256": "743073d918aa41004e049306f31a4273e9f287cc1131afa7fe53c9f24a2b2610",
+        "sha256_in_prefix": "743073d918aa41004e049306f31a4273e9f287cc1131afa7fe53c9f24a2b2610",
+        "size_in_bytes": 1521
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/content-reference-topic.html",
+        "path_type": "hardlink",
+        "sha256": "2a70d78c48dcabb4a222eda175331d5ef32c743791f8168be6b050118ac2f4ed",
+        "sha256_in_prefix": "2a70d78c48dcabb4a222eda175331d5ef32c743791f8168be6b050118ac2f4ed",
+        "size_in_bytes": 939
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/content-title-body.html",
+        "path_type": "hardlink",
+        "sha256": "da34d9a6d358d0da4f6dc9388f2f3392d3022a6b80abd02285cd81bbd96219bc",
+        "sha256_in_prefix": "da34d9a6d358d0da4f6dc9388f2f3392d3022a6b80abd02285cd81bbd96219bc",
+        "size_in_bytes": 334
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/content-tutorial-index.html",
+        "path_type": "hardlink",
+        "sha256": "ffac83bcbc2206fc4935a647563e0505f9853623350bbf1b7732cf1118e51d45",
+        "sha256_in_prefix": "ffac83bcbc2206fc4935a647563e0505f9853623350bbf1b7732cf1118e51d45",
+        "size_in_bytes": 244
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/content-tutorial.html",
+        "path_type": "hardlink",
+        "sha256": "39d8c96e42530cc872ecc3e72c08dd90f107e2c41a4ab8f49db5bf47d3c4b2f5",
+        "sha256_in_prefix": "39d8c96e42530cc872ecc3e72c08dd90f107e2c41a4ab8f49db5bf47d3c4b2f5",
+        "size_in_bytes": 262
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/docsearch.html",
+        "path_type": "hardlink",
+        "sha256": "0b9281ac507b6e7e47bc9f45f629d7c14ae1baab1c3392ea3b45a810287ceffe",
+        "sha256_in_prefix": "0b9281ac507b6e7e47bc9f45f629d7c14ae1baab1c3392ea3b45a810287ceffe",
+        "size_in_bytes": 618
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/footer.html",
+        "path_type": "hardlink",
+        "sha256": "e5ae3d93176fd5e49f8e3f530139dc7baeb2a670dade26a1436bd00cf551604d",
+        "sha256_in_prefix": "e5ae3d93176fd5e49f8e3f530139dc7baeb2a670dade26a1436bd00cf551604d",
+        "size_in_bytes": 157
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/head.html",
+        "path_type": "hardlink",
+        "sha256": "458c44c87527b93af044feb09b75cb736cba4444f646d315148cdb4b886a00db",
+        "sha256_in_prefix": "458c44c87527b93af044feb09b75cb736cba4444f646d315148cdb4b886a00db",
+        "size_in_bytes": 6240
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/header.html",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/in-header.html",
+        "path_type": "hardlink",
+        "sha256": "9ff9f5c7affb1c830f878a6ed265afcb43d4d648d38d67b4b54ad56a3e0f3873",
+        "sha256_in_prefix": "9ff9f5c7affb1c830f878a6ed265afcb43d4d648d38d67b4b54ad56a3e0f3873",
+        "size_in_bytes": 42
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/layout-redirect.html",
+        "path_type": "hardlink",
+        "sha256": "7491d87c2d35fdfa67781aa3a55520824f2ae5e08f499cbd6c0eb185cbe8760d",
+        "sha256_in_prefix": "7491d87c2d35fdfa67781aa3a55520824f2ae5e08f499cbd6c0eb185cbe8760d",
+        "size_in_bytes": 181
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/layout.html",
+        "path_type": "hardlink",
+        "sha256": "142fd4eec97bc1fa78304848f514a18c2a2b575ee6894ead69fa46c567f4e8c1",
+        "sha256_in_prefix": "142fd4eec97bc1fa78304848f514a18c2a2b575ee6894ead69fa46c567f4e8c1",
+        "size_in_bytes": 482
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS3/templates/navbar.html",
+        "path_type": "hardlink",
+        "sha256": "bc21b05a5e531bd730e508d384792aeab310b238bab2218b3b2e8847fa871f52",
+        "sha256_in_prefix": "bc21b05a5e531bd730e508d384792aeab310b238bab2218b3b2e8847fa871f52",
+        "size_in_bytes": 1585
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/assets/link.svg",
+        "path_type": "hardlink",
+        "sha256": "f1403d3dc6051421df5b25acff90c21eb99041849957afd9e2908f66f34d1ee6",
+        "sha256_in_prefix": "f1403d3dc6051421df5b25acff90c21eb99041849957afd9e2908f66f34d1ee6",
+        "size_in_bytes": 810
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/assets/pkgdown.js",
+        "path_type": "hardlink",
+        "sha256": "603f213b0cd6f3eef19593be002356296c20ab4dc9a81f39c4b98a4099eae722",
+        "sha256_in_prefix": "603f213b0cd6f3eef19593be002356296c20ab4dc9a81f39c4b98a4099eae722",
+        "size_in_bytes": 4406
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/assets/pkgdown.scss",
+        "path_type": "hardlink",
+        "sha256": "33897e8e98057ae063a8f10f4fdca32784bab721c6cfbbeb009a89b4348824ae",
+        "sha256_in_prefix": "33897e8e98057ae063a8f10f4fdca32784bab721c6cfbbeb009a89b4348824ae",
+        "size_in_bytes": 11401
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/after-body.html",
+        "path_type": "hardlink",
+        "sha256": "561fa1144bf9b185bf42d7291f5575aece686a2006e29bd556a8f21676d454c5",
+        "sha256_in_prefix": "561fa1144bf9b185bf42d7291f5575aece686a2006e29bd556a8f21676d454c5",
+        "size_in_bytes": 43
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/before-body.html",
+        "path_type": "hardlink",
+        "sha256": "564741cd3418135253309727512d75648bd8f3fc5e641220c7f049b77453ada8",
+        "sha256_in_prefix": "564741cd3418135253309727512d75648bd8f3fc5e641220c7f049b77453ada8",
+        "size_in_bytes": 44
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/config-docsearch.json",
+        "path_type": "hardlink",
+        "sha256": "2abec73045be1cbd0096521c358a52fb467104ecfaa92f41167e566762cba0ee",
+        "sha256_in_prefix": "2abec73045be1cbd0096521c358a52fb467104ecfaa92f41167e566762cba0ee",
+        "size_in_bytes": 1890
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/content-article-index.html",
+        "path_type": "hardlink",
+        "sha256": "702c896086eefbb888f811728c7f74ac30fe92ae245ce22901cd7c27b8c8a2ab",
+        "sha256_in_prefix": "702c896086eefbb888f811728c7f74ac30fe92ae245ce22901cd7c27b8c8a2ab",
+        "size_in_bytes": 651
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/content-article.html",
+        "path_type": "hardlink",
+        "sha256": "f6a6433c12abac05cab075be5e19521f40e0f46046bb66b12a03a957e3803766",
+        "sha256_in_prefix": "f6a6433c12abac05cab075be5e19521f40e0f46046bb66b12a03a957e3803766",
+        "size_in_bytes": 1405
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/content-authors.html",
+        "path_type": "hardlink",
+        "sha256": "57d1007483dc20caae891778b1bdfb6ddb25955fdd27d15b42d88c0576607254",
+        "sha256_in_prefix": "57d1007483dc20caae891778b1bdfb6ddb25955fdd27d15b42d88c0576607254",
+        "size_in_bytes": 652
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/content-citation-authors.html",
+        "path_type": "hardlink",
+        "sha256": "ece92a9cc5d77c600e9f403113b517c9fb16e2fa965ce47f0b821ca68e4c75e7",
+        "sha256_in_prefix": "ece92a9cc5d77c600e9f403113b517c9fb16e2fa965ce47f0b821ca68e4c75e7",
+        "size_in_bytes": 1027
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/content-home.html",
+        "path_type": "hardlink",
+        "sha256": "7960fc2f76ee2512d930ee432443cf1a41cbe600a8846fd9c43b192fee3f9543",
+        "sha256_in_prefix": "7960fc2f76ee2512d930ee432443cf1a41cbe600a8846fd9c43b192fee3f9543",
+        "size_in_bytes": 156
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/content-news-index.html",
+        "path_type": "hardlink",
+        "sha256": "171077f81bea6ace0babfc413ed8ee4d5f4f8a3f611a6bd2278dd680fd526b56",
+        "sha256_in_prefix": "171077f81bea6ace0babfc413ed8ee4d5f4f8a3f611a6bd2278dd680fd526b56",
+        "size_in_bytes": 494
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/content-news.html",
+        "path_type": "hardlink",
+        "sha256": "4140ee3dc22f8ef57c62cfd5f4cd13dedd991fd0fd66f10eec81545f14e11982",
+        "sha256_in_prefix": "4140ee3dc22f8ef57c62cfd5f4cd13dedd991fd0fd66f10eec81545f14e11982",
+        "size_in_bytes": 446
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/content-reference-index.html",
+        "path_type": "hardlink",
+        "sha256": "e00bf47a9bb2c15c65f52905f111e173dc79b96b8d5aa13fefb9d1b4f67aab24",
+        "sha256_in_prefix": "e00bf47a9bb2c15c65f52905f111e173dc79b96b8d5aa13fefb9d1b4f67aab24",
+        "size_in_bytes": 881
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/content-reference-topic.html",
+        "path_type": "hardlink",
+        "sha256": "8e913eaabb06f36bc26e9764e6ad40b29444351da18f28ba13e330898ee03fac",
+        "sha256_in_prefix": "8e913eaabb06f36bc26e9764e6ad40b29444351da18f28ba13e330898ee03fac",
+        "size_in_bytes": 1117
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/content-title-body.html",
+        "path_type": "hardlink",
+        "sha256": "531199c2d6d7b6b96d9432f6e01db24e507cee705738da442573e6cf37f66f8b",
+        "sha256_in_prefix": "531199c2d6d7b6b96d9432f6e01db24e507cee705738da442573e6cf37f66f8b",
+        "size_in_bytes": 424
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/content-tutorial-index.html",
+        "path_type": "hardlink",
+        "sha256": "faeed7b9f9fda7327cc5bddaea961af367648c5188b75e724f33b449c03a99aa",
+        "sha256_in_prefix": "faeed7b9f9fda7327cc5bddaea961af367648c5188b75e724f33b449c03a99aa",
+        "size_in_bytes": 452
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/content-tutorial.html",
+        "path_type": "hardlink",
+        "sha256": "a2c74d50efb3466dfb2acb6dceea771e95ba7407c12b2c77d0db1be1fe25ca4a",
+        "sha256_in_prefix": "a2c74d50efb3466dfb2acb6dceea771e95ba7407c12b2c77d0db1be1fe25ca4a",
+        "size_in_bytes": 411
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/footer.html",
+        "path_type": "hardlink",
+        "sha256": "9de75d41a954b41f2f6fc62601138dedfd6d7bfaee001c3672c71f42759f586d",
+        "sha256_in_prefix": "9de75d41a954b41f2f6fc62601138dedfd6d7bfaee001c3672c71f42759f586d",
+        "size_in_bytes": 180
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/head.html",
+        "path_type": "hardlink",
+        "sha256": "2132504fb38a95c6af14628509b928fca64597c0a38c9104d45a3da102fc0ab5",
+        "sha256_in_prefix": "2132504fb38a95c6af14628509b928fca64597c0a38c9104d45a3da102fc0ab5",
+        "size_in_bytes": 5551
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/header.html",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/in-header.html",
+        "path_type": "hardlink",
+        "sha256": "9ff9f5c7affb1c830f878a6ed265afcb43d4d648d38d67b4b54ad56a3e0f3873",
+        "sha256_in_prefix": "9ff9f5c7affb1c830f878a6ed265afcb43d4d648d38d67b4b54ad56a3e0f3873",
+        "size_in_bytes": 42
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/layout-redirect.html",
+        "path_type": "hardlink",
+        "sha256": "7491d87c2d35fdfa67781aa3a55520824f2ae5e08f499cbd6c0eb185cbe8760d",
+        "sha256_in_prefix": "7491d87c2d35fdfa67781aa3a55520824f2ae5e08f499cbd6c0eb185cbe8760d",
+        "size_in_bytes": 181
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/layout.html",
+        "path_type": "hardlink",
+        "sha256": "99b2ecf669113ccf9529f93b161a394fb5d0fb2b2753d4a078d32e9cbabb4544",
+        "sha256_in_prefix": "99b2ecf669113ccf9529f93b161a394fb5d0fb2b2753d4a078d32e9cbabb4544",
+        "size_in_bytes": 479
+      },
+      {
+        "_path": "lib/R/library/pkgdown/BS5/templates/navbar.html",
+        "path_type": "hardlink",
+        "sha256": "5f6ce070ffbd3b40534b8e88824ca41f9f2133109ba62ef9817b6ca76c270239",
+        "sha256_in_prefix": "5f6ce070ffbd3b40534b8e88824ca41f9f2133109ba62ef9817b6ca76c270239",
+        "size_in_bytes": 1536
+      },
+      {
+        "_path": "lib/R/library/pkgdown/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "45c749301700a0593081d2c8c2d689e290987ff1ce5df58488c20d8f86113f2d",
+        "sha256_in_prefix": "45c749301700a0593081d2c8c2d689e290987ff1ce5df58488c20d8f86113f2d",
+        "size_in_bytes": 2014
+      },
+      {
+        "_path": "lib/R/library/pkgdown/INDEX",
+        "path_type": "hardlink",
+        "sha256": "65641361d8195d97da542a4977efe50ca394deafe77c0c62bb669df8572abb73",
+        "sha256_in_prefix": "65641361d8195d97da542a4977efe50ca394deafe77c0c62bb669df8572abb73",
+        "size_in_bytes": 1039
+      },
+      {
+        "_path": "lib/R/library/pkgdown/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "38585d1767ebaa99d47d8ba5166bbdac83e654079a39b9ea1434d1abf2d6a67a",
+        "sha256_in_prefix": "38585d1767ebaa99d47d8ba5166bbdac83e654079a39b9ea1434d1abf2d6a67a",
+        "size_in_bytes": 43
+      },
+      {
+        "_path": "lib/R/library/pkgdown/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "bff425c0301a465c354ba0dee82bd8eb7f626e21d30eeb1c8cf8ab3f6212aa47",
+        "sha256_in_prefix": "bff425c0301a465c354ba0dee82bd8eb7f626e21d30eeb1c8cf8ab3f6212aa47",
+        "size_in_bytes": 1483
+      },
+      {
+        "_path": "lib/R/library/pkgdown/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/pkgdown/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "acc26d7344769c7e2cc2574e5cb9861ca120817e580587118298cb8fa7965c17",
+        "sha256_in_prefix": "acc26d7344769c7e2cc2574e5cb9861ca120817e580587118298cb8fa7965c17",
+        "size_in_bytes": 1371
+      },
+      {
+        "_path": "lib/R/library/pkgdown/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "ecc2cbb18c49ed7f6790c2e3a2e2ca43923bfa3ddba40400afa1d07aee5cd7e6",
+        "sha256_in_prefix": "ecc2cbb18c49ed7f6790c2e3a2e2ca43923bfa3ddba40400afa1d07aee5cd7e6",
+        "size_in_bytes": 671
+      },
+      {
+        "_path": "lib/R/library/pkgdown/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "b207cd831a6f0a122e361b4ae7d5a5875d47532851f8501575e79774ba54eed2",
+        "sha256_in_prefix": "b207cd831a6f0a122e361b4ae7d5a5875d47532851f8501575e79774ba54eed2",
+        "size_in_bytes": 1111
+      },
+      {
+        "_path": "lib/R/library/pkgdown/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "d93013de4810a0fa7078de2df5193278d581fb5fabb1f5515637b63910d8841d",
+        "sha256_in_prefix": "d93013de4810a0fa7078de2df5193278d581fb5fabb1f5515637b63910d8841d",
+        "size_in_bytes": 1829
+      },
+      {
+        "_path": "lib/R/library/pkgdown/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "f5b9afec35b7912e7ef546714c2e297d8db45eb4114f32ff855fc5f4cbdc074d",
+        "sha256_in_prefix": "f5b9afec35b7912e7ef546714c2e297d8db45eb4114f32ff855fc5f4cbdc074d",
+        "size_in_bytes": 355
+      },
+      {
+        "_path": "lib/R/library/pkgdown/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "7da36f74e5b3c50629994ad8af360b450b168a853bdfd7f8f42b3b8a324ab68e",
+        "sha256_in_prefix": "7da36f74e5b3c50629994ad8af360b450b168a853bdfd7f8f42b3b8a324ab68e",
+        "size_in_bytes": 3944
+      },
+      {
+        "_path": "lib/R/library/pkgdown/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "d13f274044932246fd098e48b4280952f032d10a56c3c018c00fc59b11c7c4e4",
+        "sha256_in_prefix": "d13f274044932246fd098e48b4280952f032d10a56c3c018c00fc59b11c7c4e4",
+        "size_in_bytes": 43095
+      },
+      {
+        "_path": "lib/R/library/pkgdown/R/pkgdown",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/pkgdown/R/pkgdown.rdb",
+        "path_type": "hardlink",
+        "sha256": "14545714fd42d94d55237b97f1804d2edc4464effa50cb1250b3ecaeaa27ee47",
+        "sha256_in_prefix": "14545714fd42d94d55237b97f1804d2edc4464effa50cb1250b3ecaeaa27ee47",
+        "size_in_bytes": 422545
+      },
+      {
+        "_path": "lib/R/library/pkgdown/R/pkgdown.rdx",
+        "path_type": "hardlink",
+        "sha256": "edcc22178712c4d4ae36c75fc5bcec7b2b12a8767bf56826b0c2e2a7dcdf6dca",
+        "sha256_in_prefix": "edcc22178712c4d4ae36c75fc5bcec7b2b12a8767bf56826b0c2e2a7dcdf6dca",
+        "size_in_bytes": 6868
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/customise.R",
+        "path_type": "hardlink",
+        "sha256": "90eabec94cd2be79247629c0adfd31612105af06f294e30932ad89949709a7dc",
+        "sha256_in_prefix": "90eabec94cd2be79247629c0adfd31612105af06f294e30932ad89949709a7dc",
+        "size_in_bytes": 242
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/customise.Rmd",
+        "path_type": "hardlink",
+        "sha256": "fd5db3855976736adb2cdf1e3923d9f2cb1ff84d93992e1c7961019e59bed49c",
+        "sha256_in_prefix": "fd5db3855976736adb2cdf1e3923d9f2cb1ff84d93992e1c7961019e59bed49c",
+        "size_in_bytes": 11827
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/customise.html",
+        "path_type": "hardlink",
+        "sha256": "7573a02eb18707e0317f17ca5f01c935c4967dd770904a369c2bbb1f4ba3ccf7",
+        "sha256_in_prefix": "7573a02eb18707e0317f17ca5f01c935c4967dd770904a369c2bbb1f4ba3ccf7",
+        "size_in_bytes": 52592
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/how-to-update-released-site.R",
+        "path_type": "hardlink",
+        "sha256": "f500858fa832a92afbc96d1d4415838fabefc77b97bb8ee842a5a40ec8667cc9",
+        "sha256_in_prefix": "f500858fa832a92afbc96d1d4415838fabefc77b97bb8ee842a5a40ec8667cc9",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/how-to-update-released-site.Rmd",
+        "path_type": "hardlink",
+        "sha256": "fb6780105f069d9d39e89b805157542a415d48d6beb1d9a39c9c487d98252f89",
+        "sha256_in_prefix": "fb6780105f069d9d39e89b805157542a415d48d6beb1d9a39c9c487d98252f89",
+        "size_in_bytes": 11796
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/how-to-update-released-site.html",
+        "path_type": "hardlink",
+        "sha256": "ac5fcd05209947c6e384654bf6e3dd311b2b1c4dc8b76177cf6605e0df83505e",
+        "sha256_in_prefix": "ac5fcd05209947c6e384654bf6e3dd311b2b1c4dc8b76177cf6605e0df83505e",
+        "size_in_bytes": 26612
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "ee4c0375dace59c8c971c1c930c1eaf182aa4dfa5430d132e50b794af6cfd9d8",
+        "sha256_in_prefix": "ee4c0375dace59c8c971c1c930c1eaf182aa4dfa5430d132e50b794af6cfd9d8",
+        "size_in_bytes": 4094
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/linking.R",
+        "path_type": "hardlink",
+        "sha256": "f500858fa832a92afbc96d1d4415838fabefc77b97bb8ee842a5a40ec8667cc9",
+        "sha256_in_prefix": "f500858fa832a92afbc96d1d4415838fabefc77b97bb8ee842a5a40ec8667cc9",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/linking.Rmd",
+        "path_type": "hardlink",
+        "sha256": "ea1bb40b1f1f05a37434c79fb0a4a238b0fcbf3494b43f4e63c7552b05c9f8b0",
+        "sha256_in_prefix": "ea1bb40b1f1f05a37434c79fb0a4a238b0fcbf3494b43f4e63c7552b05c9f8b0",
+        "size_in_bytes": 3056
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/linking.html",
+        "path_type": "hardlink",
+        "sha256": "3f4adea514d3f47a3e6ab547e5a4a7d342dac83a6a58372848fc6221a853f081",
+        "sha256_in_prefix": "3f4adea514d3f47a3e6ab547e5a4a7d342dac83a6a58372848fc6221a853f081",
+        "size_in_bytes": 15096
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/metadata.R",
+        "path_type": "hardlink",
+        "sha256": "f500858fa832a92afbc96d1d4415838fabefc77b97bb8ee842a5a40ec8667cc9",
+        "sha256_in_prefix": "f500858fa832a92afbc96d1d4415838fabefc77b97bb8ee842a5a40ec8667cc9",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/metadata.Rmd",
+        "path_type": "hardlink",
+        "sha256": "b486580a36de116dd84c474a1e7361075f0c2b6639f8227d1545dfa292ed521b",
+        "sha256_in_prefix": "b486580a36de116dd84c474a1e7361075f0c2b6639f8227d1545dfa292ed521b",
+        "size_in_bytes": 5440
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/metadata.html",
+        "path_type": "hardlink",
+        "sha256": "05596ac90900a8680ff7faa7c751aeabae517ab8f2b0b1cc60207015c779d51b",
+        "sha256_in_prefix": "05596ac90900a8680ff7faa7c751aeabae517ab8f2b0b1cc60207015c779d51b",
+        "size_in_bytes": 19299
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/pkgdown.R",
+        "path_type": "hardlink",
+        "sha256": "ab4d71d258318d2092b057f9f47296ca44fa6a37f912512e096946bb3a1b02f5",
+        "sha256_in_prefix": "ab4d71d258318d2092b057f9f47296ca44fa6a37f912512e096946bb3a1b02f5",
+        "size_in_bytes": 334
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/pkgdown.Rmd",
+        "path_type": "hardlink",
+        "sha256": "9a2f33d00b675838c89dfcc6d07b6b62add824267652e1024eec13a584d23ed7",
+        "sha256_in_prefix": "9a2f33d00b675838c89dfcc6d07b6b62add824267652e1024eec13a584d23ed7",
+        "size_in_bytes": 7270
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/pkgdown.html",
+        "path_type": "hardlink",
+        "sha256": "31413201f453b04b3fe9849fd9e55fe59e880cf8a219ffe9ac0028141082fef7",
+        "sha256_in_prefix": "31413201f453b04b3fe9849fd9e55fe59e880cf8a219ffe9ac0028141082fef7",
+        "size_in_bytes": 23011
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/search.R",
+        "path_type": "hardlink",
+        "sha256": "f500858fa832a92afbc96d1d4415838fabefc77b97bb8ee842a5a40ec8667cc9",
+        "sha256_in_prefix": "f500858fa832a92afbc96d1d4415838fabefc77b97bb8ee842a5a40ec8667cc9",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/search.Rmd",
+        "path_type": "hardlink",
+        "sha256": "aa1b15fa884ece72a34065df4928b17c5f01a7dcb70b0477c1155fb7245dffc3",
+        "sha256_in_prefix": "aa1b15fa884ece72a34065df4928b17c5f01a7dcb70b0477c1155fb7245dffc3",
+        "size_in_bytes": 3365
+      },
+      {
+        "_path": "lib/R/library/pkgdown/doc/search.html",
+        "path_type": "hardlink",
+        "sha256": "9800644f942dc31a20a6fbd05767037d6abbf3174f4d2c8008796426b49118bc",
+        "sha256_in_prefix": "9800644f942dc31a20a6fbd05767037d6abbf3174f4d2c8008796426b49118bc",
+        "size_in_bytes": 15143
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "feaf49947d619dac06fbf6a92ff69352a55e6cea7ff89c3b1df4e84ec8876c99",
+        "sha256_in_prefix": "feaf49947d619dac06fbf6a92ff69352a55e6cea7ff89c3b1df4e84ec8876c99",
+        "size_in_bytes": 1278
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "3a408aeb883ae721a84fd2f6049c4b751ecdaea5f081ee9b181fce898b8875cc",
+        "sha256_in_prefix": "3a408aeb883ae721a84fd2f6049c4b751ecdaea5f081ee9b181fce898b8875cc",
+        "size_in_bytes": 473
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/figures/bacon.jpg",
+        "path_type": "hardlink",
+        "sha256": "6404d1b2329efd2e0d9e8973b8219ab55e2ebbc605b162d8d98fec02616ba314",
+        "sha256_in_prefix": "6404d1b2329efd2e0d9e8973b8219ab55e2ebbc605b162d8d98fec02616ba314",
+        "size_in_bytes": 8019
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/figures/lifecycle-archived.svg",
+        "path_type": "hardlink",
+        "sha256": "e51548be52932d0b0468f5b11adcbebac08663898a7c043871864b0064710e86",
+        "sha256_in_prefix": "e51548be52932d0b0468f5b11adcbebac08663898a7c043871864b0064710e86",
+        "size_in_bytes": 967
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/figures/lifecycle-defunct.svg",
+        "path_type": "hardlink",
+        "sha256": "977a9d51157cf76f89e0d5562b8b57b06560682c4cc9e44333e9c394629fb520",
+        "sha256_in_prefix": "977a9d51157cf76f89e0d5562b8b57b06560682c4cc9e44333e9c394629fb520",
+        "size_in_bytes": 964
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/figures/lifecycle-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "7fefe18cc3b7059272fa85ff40c4a95739bb271276d819fe782ac38db295a07c",
+        "sha256_in_prefix": "7fefe18cc3b7059272fa85ff40c4a95739bb271276d819fe782ac38db295a07c",
+        "size_in_bytes": 970
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/figures/lifecycle-experimental.svg",
+        "path_type": "hardlink",
+        "sha256": "ed1f8972de7fdeb5dedc1087ea043dc4953dca5d58f54286b4c0ab297eefbe90",
+        "sha256_in_prefix": "ed1f8972de7fdeb5dedc1087ea043dc4953dca5d58f54286b4c0ab297eefbe90",
+        "size_in_bytes": 974
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/figures/lifecycle-maturing.svg",
+        "path_type": "hardlink",
+        "sha256": "9f33b55a1806ad5a3d565a0855a91b47ae26b7cf1ff0f025758bbd15b4c3984a",
+        "sha256_in_prefix": "9f33b55a1806ad5a3d565a0855a91b47ae26b7cf1ff0f025758bbd15b4c3984a",
+        "size_in_bytes": 966
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/figures/lifecycle-questioning.svg",
+        "path_type": "hardlink",
+        "sha256": "2feb00c21e12843cd1cd2e821c941628331dddbb26e34e58c40bb11dcffea89a",
+        "sha256_in_prefix": "2feb00c21e12843cd1cd2e821c941628331dddbb26e34e58c40bb11dcffea89a",
+        "size_in_bytes": 972
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/figures/lifecycle-stable.svg",
+        "path_type": "hardlink",
+        "sha256": "4817300514459f5ac876b1a379c7bad15d6049e1a954b71455ab78d76b83ffa0",
+        "sha256_in_prefix": "4817300514459f5ac876b1a379c7bad15d6049e1a954b71455ab78d76b83ffa0",
+        "size_in_bytes": 956
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/figures/lifecycle-superseded.svg",
+        "path_type": "hardlink",
+        "sha256": "c425824d3301dc7d4dc0100d408c4b469f488a8488be748a1fbe61abae5bab9e",
+        "sha256_in_prefix": "c425824d3301dc7d4dc0100d408c4b469f488a8488be748a1fbe61abae5bab9e",
+        "size_in_bytes": 971
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "f20472fb7ade1c7ebaf948dc6e14e874838d38b8bbb2baa5d9f202fe3e11ebd9",
+        "sha256_in_prefix": "f20472fb7ade1c7ebaf948dc6e14e874838d38b8bbb2baa5d9f202fe3e11ebd9",
+        "size_in_bytes": 70015
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "8ceea6fe312c2ad0326505393b82ad4fd77f9cdaeef1ef5853fc5eda1cb20914",
+        "sha256_in_prefix": "8ceea6fe312c2ad0326505393b82ad4fd77f9cdaeef1ef5853fc5eda1cb20914",
+        "size_in_bytes": 493
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/pkgdown.rdb",
+        "path_type": "hardlink",
+        "sha256": "c48793a681b7d7ca9a7acb3b803e47ce244a030c01206d01d65cfbbd6d1457c0",
+        "sha256_in_prefix": "c48793a681b7d7ca9a7acb3b803e47ce244a030c01206d01d65cfbbd6d1457c0",
+        "size_in_bytes": 114374
+      },
+      {
+        "_path": "lib/R/library/pkgdown/help/pkgdown.rdx",
+        "path_type": "hardlink",
+        "sha256": "5c1f8710a08971ce7af0e29ae5c790d66855e5fcb8780109bb7bfd7b7b85bce2",
+        "sha256_in_prefix": "5c1f8710a08971ce7af0e29ae5c790d66855e5fcb8780109bb7bfd7b7b85bce2",
+        "size_in_bytes": 998
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/a11y-dark.scss",
+        "path_type": "hardlink",
+        "sha256": "767eec9d4fc23024f48cecc7f684ebecea646b8fb37c9b1e8ebd544f0da75de6",
+        "sha256_in_prefix": "767eec9d4fc23024f48cecc7f684ebecea646b8fb37c9b1e8ebd544f0da75de6",
+        "size_in_bytes": 1674
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/a11y-light.scss",
+        "path_type": "hardlink",
+        "sha256": "1579b393f5c24da5c185f5e66311365296c44d4d154e084de5d8601ae846909d",
+        "sha256_in_prefix": "1579b393f5c24da5c185f5e66311365296c44d4d154e084de5d8601ae846909d",
+        "size_in_bytes": 1674
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/arrow-dark.scss",
+        "path_type": "hardlink",
+        "sha256": "812077cf93c8a34a8d1ce833e02eda3ad378269069ed146cb689171077466acf",
+        "sha256_in_prefix": "812077cf93c8a34a8d1ce833e02eda3ad378269069ed146cb689171077466acf",
+        "size_in_bytes": 1850
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/arrow-light.scss",
+        "path_type": "hardlink",
+        "sha256": "27cc2adf1ff37cc9acefedc28b561841affbdd0d97e633103fedbdcdb55a3b5b",
+        "sha256_in_prefix": "27cc2adf1ff37cc9acefedc28b561841affbdd0d97e633103fedbdcdb55a3b5b",
+        "size_in_bytes": 1687
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/atom-one-dark.scss",
+        "path_type": "hardlink",
+        "sha256": "72813afe6495fcf5aab0e1129310ea8eb4f640926569ecb144bea146af97c210",
+        "sha256_in_prefix": "72813afe6495fcf5aab0e1129310ea8eb4f640926569ecb144bea146af97c210",
+        "size_in_bytes": 1832
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/atom-one-light.scss",
+        "path_type": "hardlink",
+        "sha256": "75785a460f3911a526712b1a64b1739bd2c673c28f31391a5718cd9f8606c2d0",
+        "sha256_in_prefix": "75785a460f3911a526712b1a64b1739bd2c673c28f31391a5718cd9f8606c2d0",
+        "size_in_bytes": 1832
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/ayu-dark.scss",
+        "path_type": "hardlink",
+        "sha256": "13fa26dec2e968334f6611158b662bd7b9d3d0441225db196df5a521cd8d30d0",
+        "sha256_in_prefix": "13fa26dec2e968334f6611158b662bd7b9d3d0441225db196df5a521cd8d30d0",
+        "size_in_bytes": 1883
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/ayu-light.scss",
+        "path_type": "hardlink",
+        "sha256": "97fd00bc68eeacc12fc7ab3f130e002acea07bb1b0ba139b951b6b3dc0f30e1b",
+        "sha256_in_prefix": "97fd00bc68eeacc12fc7ab3f130e002acea07bb1b0ba139b951b6b3dc0f30e1b",
+        "size_in_bytes": 1883
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/ayu-mirage.scss",
+        "path_type": "hardlink",
+        "sha256": "0f178eaf96f7d484858f30a477b5f77688f33ffb196fb1ae25ea6dadcaf7e71f",
+        "sha256_in_prefix": "0f178eaf96f7d484858f30a477b5f77688f33ffb196fb1ae25ea6dadcaf7e71f",
+        "size_in_bytes": 1883
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/breeze-dark.scss",
+        "path_type": "hardlink",
+        "sha256": "8e232fb641e0ef5405bbcf0a2f0a069adf86c2c0c07721b1147cf956797a8f60",
+        "sha256_in_prefix": "8e232fb641e0ef5405bbcf0a2f0a069adf86c2c0c07721b1147cf956797a8f60",
+        "size_in_bytes": 1882
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/breeze-light.scss",
+        "path_type": "hardlink",
+        "sha256": "6be151aae510218440873661ef7e00e0d20a23e18e9d058ab7d7c19355bae8d5",
+        "sha256_in_prefix": "6be151aae510218440873661ef7e00e0d20a23e18e9d058ab7d7c19355bae8d5",
+        "size_in_bytes": 1882
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/breezedark.scss",
+        "path_type": "hardlink",
+        "sha256": "efbb2e7cc8fe31cc56db912b4036a978188c9bed24c6082db0ee9cb1823e8afe",
+        "sha256_in_prefix": "efbb2e7cc8fe31cc56db912b4036a978188c9bed24c6082db0ee9cb1823e8afe",
+        "size_in_bytes": 1898
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/dracula.scss",
+        "path_type": "hardlink",
+        "sha256": "1048e21e3b02308a365d8cde8a2db3bd1121b25b2b25f75a73ba8192b70767d2",
+        "sha256_in_prefix": "1048e21e3b02308a365d8cde8a2db3bd1121b25b2b25f75a73ba8192b70767d2",
+        "size_in_bytes": 1793
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/espresso.scss",
+        "path_type": "hardlink",
+        "sha256": "da663ff26f8129eda63199d16a121816730e4c87a8270810ab6bde6d76f1a66d",
+        "sha256_in_prefix": "da663ff26f8129eda63199d16a121816730e4c87a8270810ab6bde6d76f1a66d",
+        "size_in_bytes": 1665
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/github-dark.scss",
+        "path_type": "hardlink",
+        "sha256": "abca2a72b468db1264ccf4cc37fa1cd7b0a87253353e984763e2a51936c50bac",
+        "sha256_in_prefix": "abca2a72b468db1264ccf4cc37fa1cd7b0a87253353e984763e2a51936c50bac",
+        "size_in_bytes": 1773
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/github-light.scss",
+        "path_type": "hardlink",
+        "sha256": "496fa0722242e34346749ce872537977f0e63265a6733cb6f2af0fc986acdc20",
+        "sha256_in_prefix": "496fa0722242e34346749ce872537977f0e63265a6733cb6f2af0fc986acdc20",
+        "size_in_bytes": 1773
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/gruvbox-dark.scss",
+        "path_type": "hardlink",
+        "sha256": "355b464f1306a8179c79987fb4089a8e08023b871613c974e714359d95607436",
+        "sha256_in_prefix": "355b464f1306a8179c79987fb4089a8e08023b871613c974e714359d95607436",
+        "size_in_bytes": 1934
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/gruvbox-light.scss",
+        "path_type": "hardlink",
+        "sha256": "3c4957c7368b249dcfc4ecbbc2652bac6bbc8671011fe8cd7c0d5fc121ac3460",
+        "sha256_in_prefix": "3c4957c7368b249dcfc4ecbbc2652bac6bbc8671011fe8cd7c0d5fc121ac3460",
+        "size_in_bytes": 1934
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/haddock.scss",
+        "path_type": "hardlink",
+        "sha256": "763beb91dc8bcc48891aae391398b35028ab1cbc50a8da41d3504de923f89fc0",
+        "sha256_in_prefix": "763beb91dc8bcc48891aae391398b35028ab1cbc50a8da41d3504de923f89fc0",
+        "size_in_bytes": 1243
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/kate.scss",
+        "path_type": "hardlink",
+        "sha256": "02cdb9830e0e039d88cce9a87db557f2255a13be0338d1622e31d4040077ec40",
+        "sha256_in_prefix": "02cdb9830e0e039d88cce9a87db557f2255a13be0338d1622e31d4040077ec40",
+        "size_in_bytes": 1898
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/monochrome-dark.scss",
+        "path_type": "hardlink",
+        "sha256": "08eb594cd03fb151cfb4ac089d8ca46e9a886b3f0a0be16ffa2d9908ce2c8189",
+        "sha256_in_prefix": "08eb594cd03fb151cfb4ac089d8ca46e9a886b3f0a0be16ffa2d9908ce2c8189",
+        "size_in_bytes": 1843
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/monochrome-light.scss",
+        "path_type": "hardlink",
+        "sha256": "d1d5939bea5b1ab4329a9ce288b724eac124ba1829d7ce9ef432d1fd92e20825",
+        "sha256_in_prefix": "d1d5939bea5b1ab4329a9ce288b724eac124ba1829d7ce9ef432d1fd92e20825",
+        "size_in_bytes": 1843
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/monochrome.scss",
+        "path_type": "hardlink",
+        "sha256": "5cf4ac11f0e646aaedb7560c1fe167e42b273f01ec999febb8ca99dd39e61c50",
+        "sha256_in_prefix": "5cf4ac11f0e646aaedb7560c1fe167e42b273f01ec999febb8ca99dd39e61c50",
+        "size_in_bytes": 699
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/monokai.scss",
+        "path_type": "hardlink",
+        "sha256": "aba3a52b02975993f8febdfa0b68d19b5dedfeb3adfa533cb1db758443e1ca66",
+        "sha256_in_prefix": "aba3a52b02975993f8febdfa0b68d19b5dedfeb3adfa533cb1db758443e1ca66",
+        "size_in_bytes": 1793
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/nord.scss",
+        "path_type": "hardlink",
+        "sha256": "ac5ea967db7bccd1bcb3edb647a50feb82a61d038f899ee58a14e0d34caeb1b9",
+        "sha256_in_prefix": "ac5ea967db7bccd1bcb3edb647a50feb82a61d038f899ee58a14e0d34caeb1b9",
+        "size_in_bytes": 1902
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/oblivion.scss",
+        "path_type": "hardlink",
+        "sha256": "b61e24ee92c9176e6cb29183763ddfe142f344c75747a55f5534b72f1f498447",
+        "sha256_in_prefix": "b61e24ee92c9176e6cb29183763ddfe142f344c75747a55f5534b72f1f498447",
+        "size_in_bytes": 1901
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/printing.scss",
+        "path_type": "hardlink",
+        "sha256": "1e00836001f274e9440c00dd8e737cd877265c03efbb51f059d80f08dad39d2f",
+        "sha256_in_prefix": "1e00836001f274e9440c00dd8e737cd877265c03efbb51f059d80f08dad39d2f",
+        "size_in_bytes": 1863
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/pygments.scss",
+        "path_type": "hardlink",
+        "sha256": "7f2411def73daa0c7a9575a6db7ba92d8e0799d3e0933a75527d028df907cb26",
+        "sha256_in_prefix": "7f2411def73daa0c7a9575a6db7ba92d8e0799d3e0933a75527d028df907cb26",
+        "size_in_bytes": 1799
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/radical.scss",
+        "path_type": "hardlink",
+        "sha256": "fe0ebe48737c6cdcab24d9e3e022a841500bf5738dee9b158c5f28e5b71671a4",
+        "sha256_in_prefix": "fe0ebe48737c6cdcab24d9e3e022a841500bf5738dee9b158c5f28e5b71671a4",
+        "size_in_bytes": 1908
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/solarized-dark.scss",
+        "path_type": "hardlink",
+        "sha256": "e07775d121719b4421ae0f851fa81ed44004e296374438c0049facd9af477934",
+        "sha256_in_prefix": "e07775d121719b4421ae0f851fa81ed44004e296374438c0049facd9af477934",
+        "size_in_bytes": 1819
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/solarized-light.scss",
+        "path_type": "hardlink",
+        "sha256": "5f47ceaf23c60be06186e17d2f5214978da515c9024340721365b8c9e89c0486",
+        "sha256_in_prefix": "5f47ceaf23c60be06186e17d2f5214978da515c9024340721365b8c9e89c0486",
+        "size_in_bytes": 1895
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/solarized.scss",
+        "path_type": "hardlink",
+        "sha256": "5f47ceaf23c60be06186e17d2f5214978da515c9024340721365b8c9e89c0486",
+        "sha256_in_prefix": "5f47ceaf23c60be06186e17d2f5214978da515c9024340721365b8c9e89c0486",
+        "size_in_bytes": 1895
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/tango.scss",
+        "path_type": "hardlink",
+        "sha256": "e400274ef12645ccfddfb90ea1abe51056b8b8544a7aeec3c3e561973dff7879",
+        "sha256_in_prefix": "e400274ef12645ccfddfb90ea1abe51056b8b8544a7aeec3c3e561973dff7879",
+        "size_in_bytes": 1830
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/vim-dark.scss",
+        "path_type": "hardlink",
+        "sha256": "ddedca84f878c7a572e7c5e37a75b56164628b0eacfd2b4d5a40a1437f5e3815",
+        "sha256_in_prefix": "ddedca84f878c7a572e7c5e37a75b56164628b0eacfd2b4d5a40a1437f5e3815",
+        "size_in_bytes": 1901
+      },
+      {
+        "_path": "lib/R/library/pkgdown/highlight-styles/zenburn.scss",
+        "path_type": "hardlink",
+        "sha256": "72da490c167c457adad1f146c3c6b253ee55c0e8ebf8331ccf3e18ed6ef29aa0",
+        "sha256_in_prefix": "72da490c167c457adad1f146c3c6b253ee55c0e8ebf8331ccf3e18ed6ef29aa0",
+        "size_in_bytes": 1664
+      },
+      {
+        "_path": "lib/R/library/pkgdown/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "f24b3a00b98aca52f0460bf039f0f2c062ea93ce5bcb7363b60cb8f9ab2b119e",
+        "sha256_in_prefix": "f24b3a00b98aca52f0460bf039f0f2c062ea93ce5bcb7363b60cb8f9ab2b119e",
+        "size_in_bytes": 4415
+      },
+      {
+        "_path": "lib/R/library/pkgdown/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/pkgdown/po/de/LC_MESSAGES/R-pkgdown.mo",
+        "path_type": "hardlink",
+        "sha256": "d5cec166a6b19d2def815aab782ca0f399f6b22cc86cc310d637b3e855342558",
+        "sha256_in_prefix": "d5cec166a6b19d2def815aab782ca0f399f6b22cc86cc310d637b3e855342558",
+        "size_in_bytes": 3821
+      },
+      {
+        "_path": "lib/R/library/pkgdown/po/dk/LC_MESSAGES/R-pkgdown.mo",
+        "path_type": "hardlink",
+        "sha256": "c400090f95f4b1bf31feb9b13370d0cd78738227f44dc57a5436ae4da94fb538",
+        "sha256_in_prefix": "c400090f95f4b1bf31feb9b13370d0cd78738227f44dc57a5436ae4da94fb538",
+        "size_in_bytes": 3662
+      },
+      {
+        "_path": "lib/R/library/pkgdown/po/es/LC_MESSAGES/R-pkgdown.mo",
+        "path_type": "hardlink",
+        "sha256": "0ad15cbf09bb9615f433aade612bec55a7cbfaf7ad93f411badaf6af9fb19454",
+        "sha256_in_prefix": "0ad15cbf09bb9615f433aade612bec55a7cbfaf7ad93f411badaf6af9fb19454",
+        "size_in_bytes": 4001
+      },
+      {
+        "_path": "lib/R/library/pkgdown/po/fr/LC_MESSAGES/R-pkgdown.mo",
+        "path_type": "hardlink",
+        "sha256": "9ceb17030128886d8df28713c63ff0db6b4656044ff071109f7052248eede22b",
+        "sha256_in_prefix": "9ceb17030128886d8df28713c63ff0db6b4656044ff071109f7052248eede22b",
+        "size_in_bytes": 3919
+      },
+      {
+        "_path": "lib/R/library/pkgdown/po/ko/LC_MESSAGES/R-pkgdown.mo",
+        "path_type": "hardlink",
+        "sha256": "e398b80ed4083e7cfe3078a1d3486c6b383daa0971ae1f56f52118e92c1996ae",
+        "sha256_in_prefix": "e398b80ed4083e7cfe3078a1d3486c6b383daa0971ae1f56f52118e92c1996ae",
+        "size_in_bytes": 3806
+      },
+      {
+        "_path": "lib/R/library/pkgdown/po/kr/LC_MESSAGES/R-pkgdown.mo",
+        "path_type": "hardlink",
+        "sha256": "a34dc627a318b2c91b9e88d1806ef39755ad169c89e4dc475ee060fef028939d",
+        "sha256_in_prefix": "a34dc627a318b2c91b9e88d1806ef39755ad169c89e4dc475ee060fef028939d",
+        "size_in_bytes": 3764
+      },
+      {
+        "_path": "lib/R/library/pkgdown/po/pt/LC_MESSAGES/R-pkgdown.mo",
+        "path_type": "hardlink",
+        "sha256": "1370eb384c1bb7f89a6f894b41681d1c83fd7d898da6cdf2ec58f094bbfdfcd8",
+        "sha256_in_prefix": "1370eb384c1bb7f89a6f894b41681d1c83fd7d898da6cdf2ec58f094bbfdfcd8",
+        "size_in_bytes": 3591
+      },
+      {
+        "_path": "lib/R/library/pkgdown/po/tr/LC_MESSAGES/R-pkgdown.mo",
+        "path_type": "hardlink",
+        "sha256": "b7b62e68750f83b22d037211bcb507393045eb3a86081d1a13080a140d9510fd",
+        "sha256_in_prefix": "b7b62e68750f83b22d037211bcb507393045eb3a86081d1a13080a140d9510fd",
+        "size_in_bytes": 3672
+      },
+      {
+        "_path": "lib/R/library/pkgdown/po/zh_CN/LC_MESSAGES/R-pkgdown.mo",
+        "path_type": "hardlink",
+        "sha256": "5b1a5b2b3bedf1d83eebbb0b7fa844ceb3dfcc219cd67937979547a4e61d5b82",
+        "sha256_in_prefix": "5b1a5b2b3bedf1d83eebbb0b7fa844ceb3dfcc219cd67937979547a4e61d5b82",
+        "size_in_bytes": 3414
+      },
+      {
+        "_path": "lib/R/library/pkgdown/rstudio/addins.dcf",
+        "path_type": "hardlink",
+        "sha256": "2e55b657a494d8a0ae5c95bb725c8c28e932cf4f3b92266ede81f1db52480385",
+        "sha256_in_prefix": "2e55b657a494d8a0ae5c95bb725c8c28e932cf4f3b92266ede81f1db52480385",
+        "size_in_bytes": 116
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "fb2947ec7f03c87d8fcb5a5bdc731da3e220344fc663fcc045d07cc950ce00f0",
+  "size": 755001,
+  "subdir": "noarch",
+  "timestamp": 1665334104000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-pkgdown-2.0.6-r42hc72bb7e_1.tar.bz2",
+  "version": "2.0.6"
+}

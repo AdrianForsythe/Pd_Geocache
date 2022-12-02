@@ -87,8 +87,8 @@ span.env {
     font-family: monospace;
 }
 
-ul.menu {
-    list-style-type: decimal;
+#Top > .header, #Top > h1 {     /* for Texinfo 6.8 */
+    display: none
 }
 
 -->
@@ -114,7 +114,7 @@ ul.menu {
 
 
 <h2>Frequently Asked Questions on R</h2>
-<h3 style="text-align: center;">Version 2021-05-29</h3>
+<h3 style="text-align: center;">Version 2022-04-12</h3>
 <h3 style="text-align: center;">Kurt Hornik</h3>
 <hr>
 
@@ -289,7 +289,7 @@ Next: <a href="#Obtaining-this-document" accesskey="n" rel="next">Obtaining this
 </div>
 <span id="Legalese-1"></span><h3 class="section">1.1 Legalese</h3>
 
-<p>This document is copyright &copy; 1998&ndash;2021 by Kurt
+<p>This document is copyright &copy; 1998&ndash;2022 by Kurt
 Hornik.
 </p>
 <p>This document is free software; you can redistribute it and/or modify it
@@ -347,14 +347,14 @@ Next: <a href="#Notation" accesskey="n" rel="next">Notation</a>, Previous: <a hr
 <span id="Citing-this-document-1"></span><h3 class="section">1.3 Citing this document</h3>
 
 <p>In publications, please refer to this <acronym>FAQ</acronym> as Hornik
-(2021), &ldquo;The R <acronym>FAQ</acronym>&rdquo;, and give the above,
+(2022), &ldquo;The R <acronym>FAQ</acronym>&rdquo;, and give the above,
 <em>official</em> <acronym>URL</acronym>:
 </p>
 <div class="example">
 <pre class="example">@Misc{,
   author        = {Kurt Hornik},
   title         = {{R} {FAQ}},
-  year          = {2021},
+  year          = {2022},
   url           = {https://CRAN.R-project.org/doc/FAQ/R-FAQ.html}
 }
 </pre></div>
@@ -580,8 +580,8 @@ R distribution contains a brief introduction, and the &ldquo;R Installation
 and Administration&rdquo; guide (see <a href="#What-documentation-exists-for-R_003f">What documentation exists for R?</a>)
 has full details.
 </p>
-<p>Note that you need a FORTRAN compiler or perhaps <code>f2c</code> in
-addition to a C compiler to build R.
+<p>Note that you need a FORTRAN 90 compiler as well as a C compiler to
+build R.
 </p>
 <p>In the simplest case, untar the R source code, change to the directory
 thus created, and issue the following commands (at the shell prompt):
@@ -654,11 +654,11 @@ Next: <a href="#How-can-R-be-installed-_0028Mac_0029" accesskey="n" rel="next">H
 <span id="How-can-R-be-installed-_0028Windows_0029-1"></span><h4 class="subsection">2.5.2 How can R be installed (Windows)</h4>
 
 <p>The <samp>bin/windows</samp> directory of a <acronym>CRAN</acronym> site contains binaries for
-a base distribution and add-on packages from <acronym>CRAN</acronym> to run on Windows
-7 and later (including 64-bit versions of Windows) on ix86 and x86_64
-chips. The Windows version of R was created by Robert Gentleman and
-Guido Masarotto, Brian D. Ripley and Duncan Murdoch made substantial 
-contributions and it is now being maintained by
+a base distribution and add-on packages from <acronym>CRAN</acronym> to run on 64-bit
+versions of Windows 7 and later on x86_64 chips (R 4.1.3 was the last
+version of R to support 32-bit Windows).  The Windows version of R was
+created by Robert Gentleman and Guido Masarotto; Brian Ripley and Duncan
+Murdoch made substantial contributions and it is now being maintained by
 other members of the R Core team.
 </p>
 <p>The same directory has links to snapshots of the r-patched and r-devel
@@ -676,19 +676,18 @@ Previous: <a href="#How-can-R-be-installed-_0028Windows_0029" accesskey="p" rel=
 <span id="How-can-R-be-installed-_0028Mac_0029-1"></span><h4 class="subsection">2.5.3 How can R be installed (Mac)</h4>
 
 <p>The <samp>bin/macosx</samp> directory of a <acronym>CRAN</acronym> site contains a standard
-Apple installer package to run on macOS 10.13 (&lsquo;High Sierra&rsquo;) and later.
-Once downloaded and executed, the installer will install the current
-release of R and R.app, the macOS <acronym>GUI</acronym>.  This port of R for macOS
-is maintained by <a href="mailto:Simon.Urbanek@R-project.org">Simon Urbanek</a>
-(and previously by Stefano Iacus).  The
+Apple installer packagea to run on macOS 10.13 (&lsquo;High Sierra&rsquo;) or later,
+and another which runs only on &lsquo;Apple Silicon&rsquo; Macs under macOS 11 (&lsquo;Big
+Sur&rsquo;) or later.  Once downloaded and executed, the installer will
+install the current release of R and R.app, the macOS <acronym>GUI</acronym>.
+This port of R for macOS is maintained by
+<a href="mailto:Simon.Urbanek@R-project.org">Simon Urbanek</a> (and previously by
+Stefano Iacus).  The
 <a href="https://CRAN.R-project.org/bin/macosx/RMacOSX-FAQ.html">&ldquo;R for
 macOS <acronym>FAQ</acronym>&rdquo;</a> has more details.
 </p>
 <p>Snapshots of the r-patched and r-devel versions of R are available as
 Apple installer packages at <a href="https://mac.R-project.org">https://mac.R-project.org</a>.
-</p>
-<p>As from R 4.1.0 there are separate builds for ARM-based Macs (also
-known as &lsquo;M1&rsquo; or &lsquo;Apple Silicon&rsquo;) running macOS 11 (&lsquo;Big Sur&rsquo;) or later.
 </p>
 <hr>
 </div>
@@ -701,6 +700,10 @@ Next: <a href="#What-documentation-exists-for-R_003f" accesskey="n" rel="next">W
 <span id="Are-there-Unix_002dlike-binaries-for-R_003f-1"></span><h3 class="section">2.6 Are there Unix-like binaries for R?</h3>
 
 
+<p>Binary distributions of R are available on many Unix-like OSes: only
+some can be mentioned here so check your OS&rsquo;s search facilities to see
+if one is available for yours.
+</p>
 <p>The <samp>bin/linux</samp> directory of a <acronym>CRAN</acronym> site contains the following
 packages.
 </p>
@@ -740,7 +743,7 @@ configured for use with Java.  The R RPM also installs the standalone R
 math library (<code>libRmath</code> and <code>libRmath-devel</code>), although this
 is not necessary to use R.  When a new version of R is released, there
 may be a delay of up to 2 weeks until the Fedora RPM becomes publicly
-available, as it must pass through the statutory Fedora review process.
+available, as it must pass through the Fedora review process.
 RPMs for a selection of R packages are also provided by Fedora.  The
 Extra Packages for Enterprise Linux (EPEL) project
 (<a href="https://fedoraproject.org/wiki/EPEL">https://fedoraproject.org/wiki/EPEL</a>) provides ports of the Fedora
@@ -908,8 +911,7 @@ about the development of R and the availability of new code.
 <dd><p>This list is for questions and discussion about code development in R.
 </p></dd>
 <dt><span><code>R-package-devel</code></span></dt>
-<dd><p>A list which provides a forum for learning about the R package
-development process.
+<dd><p>A list which provides a forum for those developing R packages.
 </p></dd>
 </dl>
 
@@ -965,7 +967,7 @@ sites which carry identical material, consisting of the R
 distribution(s), the contributed extensions, documentation for R, and
 binaries.
 </p>
-<p>The <acronym>CRAN</acronym> master site at WU (Wirtschaftsuniversit&auml;t Wien) in Austria
+<p>The <acronym>CRAN</acronym> main site at WU (Wirtschaftsuniversit&auml;t Wien) in Austria
 can be found at the <acronym>URL</acronym>
 </p>
 <blockquote>
@@ -1177,7 +1179,7 @@ Next: <a href="#What-are-the-differences-between-R-and-S_003f" accesskey="n" rel
 </div>
 <span id="What-is-S_002dPLUS_003f-1"></span><h3 class="section">3.2 What is <small>S-PLUS</small>?</h3>
 
-<p><small>S-PLUS</small> is a value-added version of S currently sold by
+<p><small>S-PLUS</small> is a value-added version of S sold by
 <a href="https://www.tibco.com/">TIBCO Software Inc</a> as &lsquo;TIBCO Spotfire S+&rsquo;.
 See <a href="https://en.wikipedia.org/wiki/S-PLUS">https://en.wikipedia.org/wiki/S-PLUS</a> for more information.
 </p>
@@ -1792,14 +1794,7 @@ and random-number generation (added in R 2.14.0).
 <dd><p>R utility functions.
 </p></dd>
 </dl>
-<p>These &ldquo;base packages&rdquo; were substantially reorganized in R 1.9.0.  The
-former <strong>base</strong> was split into the four packages <strong>base</strong>,
-<strong>graphics</strong>, <strong>stats</strong>, and <strong>utils</strong>.  Packages <strong>ctest</strong>,
-<strong>eda</strong>, <strong>modreg</strong>, <strong>mva</strong>, <strong>nls</strong>, <strong>stepfun</strong> and
-<strong>ts</strong> were merged into <strong>stats</strong>, package <strong>lqs</strong> returned to the
-recommended package <a href="https://CRAN.R-project.org/package=MASS"><strong>MASS</strong></a>, and package <strong>mle</strong> moved to
-<strong>stats4</strong>.
-</p>
+
 <hr>
 </div>
 <div class="subsection" id="Add_002don-packages-from-CRAN">
@@ -1821,11 +1816,9 @@ the book &ldquo;Kernel Smoothing&rdquo; by M. P. Wand and M. C. Jones, 1995.
 <dt><span><strong>MASS</strong></span></dt>
 <dd><p>Functions and datasets from the main package of Venables and Ripley,
 &ldquo;Modern Applied Statistics with S&rdquo;.
-(Contained in the <samp>VR</samp> bundle for R versions prior to 2.10.0.)
 </p></dd>
 <dt><span><strong>Matrix</strong></span></dt>
-<dd><p>A Matrix package.
-(Recommended for R 2.9.0 or later.)
+<dd><p>Support for spares and dense matrices
 </p></dd>
 <dt><span><strong>boot</strong></span></dt>
 <dd><p>Functions and datasets for bootstrapping from the book &ldquo;Bootstrap
@@ -1834,14 +1827,12 @@ Methods and Their Applications&rdquo; by A. C. Davison and D. V. Hinkley,
 </p></dd>
 <dt><span><strong>class</strong></span></dt>
 <dd><p>Functions for classification (<em class='math'>k</em>-nearest neighbor and LVQ).
-(Contained in the <samp>VR</samp> bundle for R versions prior to 2.10.0.)
 </p></dd>
 <dt><span><strong>cluster</strong></span></dt>
 <dd><p>Functions for cluster analysis.
 </p></dd>
 <dt><span><strong>codetools</strong></span></dt>
 <dd><p>Code analysis tools.
-(Recommended for R 2.5.0 or later.)
 </p></dd>
 <dt><span><strong>foreign</strong></span></dt>
 <dd><p>Functions for reading and writing data stored by statistical software
@@ -1860,7 +1851,6 @@ multiple smoothing parameter selection by GCV or UBRE.
 <dt><span><strong>nnet</strong></span></dt>
 <dd><p>Software for single hidden layer perceptrons (&ldquo;feed-forward neural
 networks&rdquo;), and for multinomial log-linear models.
-(Contained in the <samp>VR</samp> bundle for R versions prior to 2.10.0.)
 </p></dd>
 <dt><span><strong>rpart</strong></span></dt>
 <dd><p>Recursive PARTitioning and regression trees.
@@ -1868,7 +1858,6 @@ networks&rdquo;), and for multinomial log-linear models.
 <dt><span><strong>spatial</strong></span></dt>
 <dd><p>Functions for kriging and point pattern analysis from &ldquo;Modern Applied
 Statistics with S&rdquo; by W. Venables and B. Ripley.
-(Contained in the <samp>VR</samp> bundle for R versions prior to 2.10.0.)
 </p></dd>
 <dt><span><strong>survival</strong></span></dt>
 <dd><p>Functions for survival analysis, including penalized likelihood.
@@ -1916,10 +1905,10 @@ Previous: <a href="#Add_002don-packages-from-Bioconductor" accesskey="p" rel="pr
 </div>
 <span id="Other-add_002don-packages-1"></span><h4 class="subsection">5.1.4 Other add-on packages</h4>
 
-<p>Many more packages are available from places other than the three
-default repositories discussed above (<acronym>CRAN</acronym>, Bioconductor and
-Omegahat).  In particular, R-Forge provides a <acronym>CRAN</acronym> style repository
-at <a href="https://R-Forge.R-project.org/">https://R-Forge.R-project.org/</a>.
+<p>Many more packages are available from places other than the default
+repositories discussed above (<acronym>CRAN</acronym> and Bioconductor).  In particular,
+R-Forge provides a <acronym>CRAN</acronym> style repository at
+<a href="https://R-Forge.R-project.org/">https://R-Forge.R-project.org/</a>.
 </p>
 <p>More code has been posted to the R-help mailing list, and can be
 obtained from the mailing list archive.
@@ -1935,9 +1924,8 @@ Next: <a href="#How-can-add_002don-packages-be-used_003f" accesskey="n" rel="nex
 <span id="How-can-add_002don-packages-be-installed_003f-1"></span><h3 class="section">5.2 How can add-on packages be installed?</h3>
 
 <p>(Unix-like only.)  The add-on packages on <acronym>CRAN</acronym> come as gzipped tar
-files named <code><var>pkg</var>_<var>version</var>.tar.gz</code>, which may in fact be
-&ldquo;bundles&rdquo; containing more than one package.  Let <var>path</var> be the
-path to such a package file.  Provided that <code>tar</code> and
+files named <code><var>pkg</var>_<var>version</var>.tar.gz</code>.  Let <var>path</var> be
+the path to such a package file.  Provided that <code>tar</code> and
 <code>gzip</code> are available on your system, type
 </p>
 <div class="example">
@@ -1995,12 +1983,14 @@ mystuff       My own R functions, nicely packaged but not documented
 Packages in ‘/usr/local/lib/R/library’:
 
 KernSmooth    Functions for kernel smoothing for Wand &amp; Jones (1995)
-MASS          Main Package of Venables and Ripley's MASS
+MASS          Support Functions and Datasets for Venables and Ripley's MASS
 Matrix        Sparse and Dense Matrix Classes and Methods
 base          The R Base package
 boot          Bootstrap R (S-Plus) Functions (Canty)
+boot          Bootstrap Functions (Originally by Angelo Canty for S)
 class         Functions for Classification
-cluster       Functions for clustering (by Rousseeuw et al.)
+cluster       &quot;Finding Groups in Data&quot;: Cluster Analysis Extended
+              Rousseeuw et al.
 codetools     Code Analysis Tools for R
 datasets      The R Datasets Package
 foreign       Read Data Stored by Minitab, S, SAS, SPSS, Stata, Systat,
@@ -2067,9 +2057,9 @@ Next: <a href="#How-can-I-create-an-R-package_003f" accesskey="n" rel="next">How
 
 <p>to remove the packages <var>pkg_1</var>, &hellip;, <var>pkg_n</var> from the
 library tree rooted at the first directory given in <code>R_LIBS</code> if this
-is set and non-null, and from the default library otherwise.  (Versions
-of R prior to 1.3.0 removed from the default library by default.)
+is set and non-null, and from the default library otherwise.
 </p>
+
 <p>To remove from library <var>lib</var>, do
 </p>
 <div class="example">
@@ -2483,6 +2473,8 @@ Next: <a href="#How-should-I-set-options_003f" accesskey="n" rel="next">How shou
 </div>
 <span id="How-does-autoloading-work_003f-1"></span><h3 class="section">7.6 How does autoloading work?</h3>
 
+<p>Autoloading is rarwly used since packages became lazy-loaded.
+</p>
 <p>R has a special environment called <code>.AutoloadEnv</code>.  Using
 <kbd>autoload(<var>name</var>, <var>pkg</var>)</kbd>, where <var>name</var> and
 <var>pkg</var> are strings giving the names of an object and the package
@@ -2565,6 +2557,8 @@ Next: <a href="#How-do-I-convert-factors-to-numeric_003f" accesskey="n" rel="nex
 </div>
 <span id="Why-does-plotting-give-a-color-allocation-error_003f-1"></span><h3 class="section">7.9 Why does plotting give a color allocation error?</h3>
 
+<p>This is about a problem rarely seen with modern X11 installations.
+</p>
 <p>On an X11 device, plotting sometimes, e.g., when running
 <code>demo(&quot;image&quot;)</code>, results in &ldquo;Error: color allocation error&rdquo;.
 This is an X problem, and only indirectly related to R.  It occurs when
@@ -2572,11 +2566,7 @@ applications started prior to R have used all the available colors.
 (How many colors are available depends on the X configuration; sometimes
 only 256 colors can be used.)
 </p>
-<p>One application which is notorious for &ldquo;eating&rdquo; colors is Netscape.
-If the problem occurs when Netscape is running, try (re)starting it with
-either the <samp>-no-install</samp> (to use the default colormap) or the
-<samp>-install</samp> (to install a private colormap) option.
-</p>
+
 <p>You could also set the <code>colortype</code> of <code>X11()</code> to
 <code>&quot;pseudo.cube&quot;</code> rather than the default <code>&quot;pseudo&quot;</code>.  See the
 help page for <code>X11()</code> for more information.
@@ -2744,10 +2734,9 @@ in the language:
 </p>
 <ol>
 <li> A <em>syntactic name</em> is a string the parser interprets as this type
-of expression.  It consists of letters, numbers, and the dot and (for
-versions of R at least 1.9.0) underscore characters, and starts with
-either a letter or a dot not followed by a number.  Reserved words are
-not syntactic names.
+of expression.  It consists of letters, numbers, and the dot and
+underscore characters, and starts with either a letter or a dot not
+followed by a number.  Reserved words are not syntactic names.
 </li><li> An <em>object name</em> is a string associated with an object that is
 assigned in an expression either by having the object name on the left
 of an assignment operation or as an argument to the <code>assign()</code>
@@ -2936,10 +2925,9 @@ PDF file then converts it to any bitmap format supported by Ghostscript.
 On some installations this produces ugly output, on others it is
 perfectly satisfactory.  Many systems now come with Xvfb from
 <a href="https://www.x.org/">X.Org</a> (possibly as an optional
-install), which is an X11 server that does not require a screen; and
-there is the <a href="https://CRAN.R-project.org/package=GDD"><strong>GDD</strong></a> package from <acronym>CRAN</acronym>, which produces PNG,
-JPEG and GIF bitmaps without X11.
+install), which is an X11 server that does not require a screen.
 </p>
+
 <hr>
 </div>
 <div class="section" id="How-can-I-get-command-line-editing-to-work_003f">
@@ -3061,14 +3049,12 @@ Next: <a href="#Why-did-my-_002eRprofile-stop-working-when-I-updated-R_003f" acc
 </div>
 <span id="Why-does-the-help_002estart_0028_0029-search-engine-not-work_003f-1"></span><h3 class="section">7.24 Why does the help.start() search engine not work?</h3>
 
-<p>The browser-based search engine in <code>help.start()</code> utilizes a Java
-applet.  In order for this to function properly, a compatible version of
-Java must installed on your system and linked to your browser, and both
-Java <em>and</em> JavaScript need to be enabled in your browser.
-</p>
-<p>There have been a number of compatibility issues with versions of Java
-and of browsers.  
-See <a data-manual="R-admin" href="https://cran.r-project.org/doc/manuals/R-admin.html#Enabling-search-in-HTML-help">Enabling search in HTML help</a> in <cite>R Installation and Administration</cite>, for further details.
+<p>Since R 2.10.0, the browser-based search engine in <code>help.start()</code>
+is an <acronym>HTML</acronym> interface to <code>help.search()</code>, and should always work.
+Before that, the engine utilized a Java applet.  In order for this to
+function properly, one needed a compatible version of Java installed on
+the system and linked to the browser, and both Java <em>and</em>
+JavaScript enabled in the browser.
 </p>
 <hr>
 </div>
@@ -3655,38 +3641,13 @@ Next: <a href="#How-can-I-get-CRAN-package-binaries-for-outdated-versions-of-R_0
 </div>
 <span id="How-can-I-enable-secure-https-downloads-in-R_003f-1"></span><h3 class="section">7.43 How can I enable secure https downloads in R?</h3>
 
-
-<p>When R transfers files over <acronym>HTTP</acronym> (e.g., using the
-<code>install.packages()</code> or <code>download.file()</code> function), a
-download method is chosen based on the <samp>download.file.method</samp>
-option.  There are several methods available and the default behavior if
-no option is explicitly specified is to use R&rsquo;s internal <acronym>HTTP</acronym>
-implementation.  In most circumstances this internal method will not
-support <acronym>HTTPS</acronym> URLs so you will need to override the default:
-this is done automatically for such URLs as from R 3.2.2.
+<p>From R 4.2.0, <code>&quot;libcurl&quot;</code> download method is always available and
+used for <acronym>HTTPS</acronym> by default on all platforms.  It has been used
+since R 3.3.0 everywhere but Windows where the default method
+<code>&quot;wininet&quot;</code> also supported <acronym>HTTPS</acronym>.
 </p>
-<p>R versions 3.2.0 and greater include two download methods
-(<code>&quot;libcurl&quot;</code> and <code>&quot;wininet&quot;</code>) that both support
-<acronym>HTTPS</acronym> connections: we recommend that you use these methods.
-The requisite code to add to <samp>.Rprofile</samp> or <samp>Rprofile.site</samp> is:
-</p>
-<div class="example">
-<pre class="example">options(download.file.method = &quot;wininet&quot;, url.method = &quot;wininet&quot;)
-<span class="roman">(Windows)</span>
-options(download.file.method = &quot;libcurl&quot;, url.method = &quot;libcurl&quot;)
-<span class="roman">(Linux and macOS)</span>
-</pre></div>
-
-<p>(Method <code>&quot;wininet&quot;</code> is the default on Windows as from R 3.2.2.)
-</p>
-<p>Note that the <code>&quot;libcurl&quot;</code> method may or may not have been compiled
-in.  In the case that it was not, i.e. <code>capabilities(&quot;libcurl&quot;) ==
-FALSE</code>, we recommend method <code>&quot;wget&quot;</code> on Linux and <code>&quot;curl&quot;</code> on
-macOS.  It is possible that system versions of <code>&quot;libcurl&quot;</code>,
-<code>wget</code> or <code>curl</code> may have been compiled without
-<acronym>HTTPS</acronym> support, but this is unlikely.  As from R 3.3.0
-<code>&quot;libcurl&quot;</code> with <acronym>HTTPS</acronym> support is required except on
-Windows.
+<p>So nothing needs to be done to access &lsquo;<samp>https://</samp>&rsquo; websites in recent
+versions of R.
 </p>
 <hr>
 </div>
@@ -3792,12 +3753,7 @@ Next: <a href="#How-can-I-debug-S4-methods_003f" accesskey="n" rel="next">How ca
 files in <samp>$<code>HOME</code>/.R</samp> to override the default flags.
 See <a data-manual="R-admin" href="https://cran.r-project.org/doc/manuals/R-admin.html#Add_002don-packages">Add-on packages</a> in <cite>R Installation and Administration</cite>.
 </p>
-<p>For earlier versions of R, you could change the file
-<samp><var>R_HOME</var>/etc/Makeconf</samp> to reflect your preferences, or (at
-least for systems using <acronym>GNU</acronym> Make) override them by the
-environment variable <code>MAKEFLAGS</code>.
-See <a data-manual="R-exts" href="https://cran.r-project.org/doc/manuals/R-exts.html#Creating-shared-objects">Creating shared objects</a> in <cite>Writing R Extensions</cite>.
-</p>
+
 <hr>
 </div>
 <div class="section" id="How-can-I-debug-S4-methods_003f">

@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: gdalwarper.h 4986eea379aaa3f553b9d612f6d5da103dc555a8 2021-10-11 23:07:35 +0200 Even Rouault $
+ * $Id$
  *
  * Project:  GDAL High Performance Warper
  * Purpose:  Prototypes, and definitions for warping related work.
@@ -429,7 +429,7 @@ public:
 
     bool                bApplyVerticalShift = false;
 
-    double              dfMultFactorVerticalShit = 1.0;
+    double              dfMultFactorVerticalShift = 1.0;
 /*! @endcond */
 
                        GDALWarpKernel();
@@ -501,6 +501,8 @@ private:
     // Coordinates a few special points in target image space, to determine
     // if ComputeSourceWindow() must use a grid based sampling.
     std::vector<std::pair<double, double>> aDstXYSpecialPoints{};
+
+    bool m_bIsTranslationOnPixelBoundaries = false;
 
     void            WipeChunkList();
     CPLErr          CollectChunkListInternal( int nDstXOff, int nDstYOff,

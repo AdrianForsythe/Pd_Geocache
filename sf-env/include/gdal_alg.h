@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: gdal_alg.h 9b04a6ce329ade6272643ab59d0ffaabd313955c 2021-10-11 23:32:03 +0200 Even Rouault $
+ * $Id$
  *
  * Project:  GDAL Image Processing Algorithms
  * Purpose:  Prototypes, and definitions for various GDAL based algorithms.
@@ -41,6 +41,7 @@
 #include "gdal.h"
 #include "cpl_minixml.h"
 #include "ogr_api.h"
+#include <stdint.h>
 #endif
 
 CPL_C_START
@@ -399,14 +400,26 @@ GDALViewshedGenerate(GDALRasterBandH hBand,
 
 CPLErr CPL_DLL
 GDALRasterizeGeometries( GDALDatasetH hDS,
-                         int nBandCount, int *panBandList,
-                         int nGeomCount, OGRGeometryH *pahGeometries,
+                         int nBandCount, const int *panBandList,
+                         int nGeomCount, const OGRGeometryH *pahGeometries,
                          GDALTransformerFunc pfnTransformer,
                          void *pTransformArg,
-                         double *padfGeomBurnValue,
-                         char **papszOptions,
+                         const double *padfGeomBurnValues,
+                         CSLConstList papszOptions,
                          GDALProgressFunc pfnProgress,
                          void * pProgressArg );
+
+CPLErr CPL_DLL
+GDALRasterizeGeometriesInt64( GDALDatasetH hDS,
+                         int nBandCount, const int *panBandList,
+                         int nGeomCount, const OGRGeometryH *pahGeometries,
+                         GDALTransformerFunc pfnTransformer,
+                         void *pTransformArg,
+                         const int64_t *panGeomBurnValues,
+                         CSLConstList papszOptions,
+                         GDALProgressFunc pfnProgress,
+                         void * pProgressArg );
+
 CPLErr CPL_DLL
 GDALRasterizeLayers( GDALDatasetH hDS,
                      int nBandCount, int *panBandList,
@@ -682,11 +695,6 @@ int CPL_DLL GDALTriangulationFindFacetDirected( const GDALTriangulation* psDT,
                                                 double dfY,
                                                 int* panOutputFacetIdx );
 void CPL_DLL GDALTriangulationFree(GDALTriangulation* psDT);
-
-/*! @cond Doxygen_Suppress */
-// GDAL internal use only
-void GDALTriangulationTerminate(void);
-/*! @endcond */
 
 /*! @cond Doxygen_Suppress */
 #ifndef CPL_WARN_DEPRECATED_GDALOpenVerticalShiftGrid

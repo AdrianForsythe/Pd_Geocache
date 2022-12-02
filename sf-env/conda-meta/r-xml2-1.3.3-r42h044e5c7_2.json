@@ -1,0 +1,599 @@
+{
+  "build": "r42h044e5c7_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "libxml2 >=2.9.14,<2.11.0a0",
+    "r-base >=4.2,<4.3.0a0",
+    "r-rcpp"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-xml2-1.3.3-r42h044e5c7_2",
+  "features": "",
+  "files": [
+    "lib/R/library/xml2/DESCRIPTION",
+    "lib/R/library/xml2/INDEX",
+    "lib/R/library/xml2/LICENSE",
+    "lib/R/library/xml2/Meta/Rd.rds",
+    "lib/R/library/xml2/Meta/features.rds",
+    "lib/R/library/xml2/Meta/hsearch.rds",
+    "lib/R/library/xml2/Meta/links.rds",
+    "lib/R/library/xml2/Meta/nsInfo.rds",
+    "lib/R/library/xml2/Meta/package.rds",
+    "lib/R/library/xml2/Meta/vignette.rds",
+    "lib/R/library/xml2/NAMESPACE",
+    "lib/R/library/xml2/NEWS.md",
+    "lib/R/library/xml2/R/xml2",
+    "lib/R/library/xml2/R/xml2.rdb",
+    "lib/R/library/xml2/R/xml2.rdx",
+    "lib/R/library/xml2/doc/index.html",
+    "lib/R/library/xml2/doc/modification.R",
+    "lib/R/library/xml2/doc/modification.Rmd",
+    "lib/R/library/xml2/doc/modification.html",
+    "lib/R/library/xml2/extdata/cd_catalog.xml",
+    "lib/R/library/xml2/extdata/order-doc.xml",
+    "lib/R/library/xml2/extdata/order-schema.xml",
+    "lib/R/library/xml2/extdata/r-project.html",
+    "lib/R/library/xml2/help/AnIndex",
+    "lib/R/library/xml2/help/aliases.rds",
+    "lib/R/library/xml2/help/paths.rds",
+    "lib/R/library/xml2/help/xml2.rdb",
+    "lib/R/library/xml2/help/xml2.rdx",
+    "lib/R/library/xml2/html/00Index.html",
+    "lib/R/library/xml2/html/R.css",
+    "lib/R/library/xml2/include/xml2_types.h",
+    "lib/R/library/xml2/libs/xml2.so",
+    "lib/R/library/xml2/tests/testthat.R",
+    "lib/R/library/xml2/tests/testthat/helper-version.R",
+    "lib/R/library/xml2/tests/testthat/helper.R",
+    "lib/R/library/xml2/tests/testthat/lego.html.bz2",
+    "lib/R/library/xml2/tests/testthat/ns-multiple-aliases.xml",
+    "lib/R/library/xml2/tests/testthat/ns-multiple-default.xml",
+    "lib/R/library/xml2/tests/testthat/ns-multiple-prefix.xml",
+    "lib/R/library/xml2/tests/testthat/ns-multiple.xml",
+    "lib/R/library/xml2/tests/testthat/output/html_structure.txt",
+    "lib/R/library/xml2/tests/testthat/output/print-xml_document.txt",
+    "lib/R/library/xml2/tests/testthat/output/print-xml_node.txt",
+    "lib/R/library/xml2/tests/testthat/output/print-xml_nodeset.txt",
+    "lib/R/library/xml2/tests/testthat/records.dtd",
+    "lib/R/library/xml2/tests/testthat/records.xml",
+    "lib/R/library/xml2/tests/testthat/test-as_list.R",
+    "lib/R/library/xml2/tests/testthat/test-as_xml_document.R",
+    "lib/R/library/xml2/tests/testthat/test-cdata.R",
+    "lib/R/library/xml2/tests/testthat/test-comment.R",
+    "lib/R/library/xml2/tests/testthat/test-dtd.R",
+    "lib/R/library/xml2/tests/testthat/test-format.R",
+    "lib/R/library/xml2/tests/testthat/test-modify-xml.R",
+    "lib/R/library/xml2/tests/testthat/test-namespaces.R",
+    "lib/R/library/xml2/tests/testthat/test-null.R",
+    "lib/R/library/xml2/tests/testthat/test-print.R",
+    "lib/R/library/xml2/tests/testthat/test-read-xml.R",
+    "lib/R/library/xml2/tests/testthat/test-url.R",
+    "lib/R/library/xml2/tests/testthat/test-write_xml.R",
+    "lib/R/library/xml2/tests/testthat/test-xml_attrs.R",
+    "lib/R/library/xml2/tests/testthat/test-xml_children.R",
+    "lib/R/library/xml2/tests/testthat/test-xml_find.R",
+    "lib/R/library/xml2/tests/testthat/test-xml_missing.R",
+    "lib/R/library/xml2/tests/testthat/test-xml_name.R",
+    "lib/R/library/xml2/tests/testthat/test-xml_nodeset.R",
+    "lib/R/library/xml2/tests/testthat/test-xml_parse.R",
+    "lib/R/library/xml2/tests/testthat/test-xml_schema.R",
+    "lib/R/library/xml2/tests/testthat/test-xml_serialize.R",
+    "lib/R/library/xml2/tests/testthat/test-xml_structure.R",
+    "lib/R/library/xml2/tests/testthat/test-xml_text.R"
+  ],
+  "fn": "r-xml2-1.3.3-r42h044e5c7_2.tar.bz2",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-xml2-1.3.3-r42h044e5c7_2",
+    "type": 1
+  },
+  "md5": "464240dceb420113075dfa4f2d54403b",
+  "name": "r-xml2",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-xml2-1.3.3-r42h044e5c7_2.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/xml2/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "e120e39dbb8e61b17d69c028cdfe9a967a2354dda9076a08726250662f34ad75",
+        "sha256_in_prefix": "e120e39dbb8e61b17d69c028cdfe9a967a2354dda9076a08726250662f34ad75",
+        "size_in_bytes": 1847
+      },
+      {
+        "_path": "lib/R/library/xml2/INDEX",
+        "path_type": "hardlink",
+        "sha256": "fdbbd54ec394310c31a583a0ac627f046fd002b34417a307aa288978a70a0556",
+        "sha256_in_prefix": "fdbbd54ec394310c31a583a0ac627f046fd002b34417a307aa288978a70a0556",
+        "size_in_bytes": 1657
+      },
+      {
+        "_path": "lib/R/library/xml2/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "12e9ec5dc1c1a1d4f81fb1d14a9e1ddb99c8e25f046a5f62c63c756add291c6c",
+        "sha256_in_prefix": "12e9ec5dc1c1a1d4f81fb1d14a9e1ddb99c8e25f046a5f62c63c756add291c6c",
+        "size_in_bytes": 42
+      },
+      {
+        "_path": "lib/R/library/xml2/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "33dee75936e4e31e4696df128a16726aa9af50537010df2bd5010fa83a381ce7",
+        "sha256_in_prefix": "33dee75936e4e31e4696df128a16726aa9af50537010df2bd5010fa83a381ce7",
+        "size_in_bytes": 1513
+      },
+      {
+        "_path": "lib/R/library/xml2/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/xml2/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "d73134afa8c568812119b2d49241269785eab0d5ebcf8a60222d7770a9c61bbd",
+        "sha256_in_prefix": "d73134afa8c568812119b2d49241269785eab0d5ebcf8a60222d7770a9c61bbd",
+        "size_in_bytes": 1487
+      },
+      {
+        "_path": "lib/R/library/xml2/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "64d29a16ae033c240e63a06a05ca532576ad9efaaf28c6a53a0711e70502b072",
+        "sha256_in_prefix": "64d29a16ae033c240e63a06a05ca532576ad9efaaf28c6a53a0711e70502b072",
+        "size_in_bytes": 766
+      },
+      {
+        "_path": "lib/R/library/xml2/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "faaef9028d8fe78b1e3df695b50a2bb23f904d0eb4d28e58baa3a02c39697372",
+        "sha256_in_prefix": "faaef9028d8fe78b1e3df695b50a2bb23f904d0eb4d28e58baa3a02c39697372",
+        "size_in_bytes": 1092
+      },
+      {
+        "_path": "lib/R/library/xml2/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "26f490ba6808a22e075357280e4ebc6e98991fad89781b99e2f9b581f6f8171a",
+        "sha256_in_prefix": "26f490ba6808a22e075357280e4ebc6e98991fad89781b99e2f9b581f6f8171a",
+        "size_in_bytes": 1355
+      },
+      {
+        "_path": "lib/R/library/xml2/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "07fff600babf6da2f5e35b43d35315495aa0a7bf35f1d57ecdcdb24b5ac44b97",
+        "sha256_in_prefix": "07fff600babf6da2f5e35b43d35315495aa0a7bf35f1d57ecdcdb24b5ac44b97",
+        "size_in_bytes": 206
+      },
+      {
+        "_path": "lib/R/library/xml2/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "41f3ed12a9676fd75b7a4fef2207a2e99eaa541da40b7f7f902fd72dc5e43a9e",
+        "sha256_in_prefix": "41f3ed12a9676fd75b7a4fef2207a2e99eaa541da40b7f7f902fd72dc5e43a9e",
+        "size_in_bytes": 6119
+      },
+      {
+        "_path": "lib/R/library/xml2/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "7cca302be9a5ac2ef1ec3fe86e1f507ece364112a434751dd7d82ce7d661c47d",
+        "sha256_in_prefix": "7cca302be9a5ac2ef1ec3fe86e1f507ece364112a434751dd7d82ce7d661c47d",
+        "size_in_bytes": 9003
+      },
+      {
+        "_path": "lib/R/library/xml2/R/xml2",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/xml2/R/xml2.rdb",
+        "path_type": "hardlink",
+        "sha256": "50d26f9057f3f33e5e3abe0630efaaff34c0e01bf4c49df122d1b59c35977171",
+        "sha256_in_prefix": "50d26f9057f3f33e5e3abe0630efaaff34c0e01bf4c49df122d1b59c35977171",
+        "size_in_bytes": 114434
+      },
+      {
+        "_path": "lib/R/library/xml2/R/xml2.rdx",
+        "path_type": "hardlink",
+        "sha256": "f7eeff24d46e135727e57358b31729497b8e893f584cff70eb6309be3b0d89c7",
+        "sha256_in_prefix": "f7eeff24d46e135727e57358b31729497b8e893f584cff70eb6309be3b0d89c7",
+        "size_in_bytes": 3104
+      },
+      {
+        "_path": "lib/R/library/xml2/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "f47e701cce3796c0bb040f873ac256a748134d0702cb9750db4fddecbe1a26de",
+        "sha256_in_prefix": "f47e701cce3796c0bb040f873ac256a748134d0702cb9750db4fddecbe1a26de",
+        "size_in_bytes": 1391
+      },
+      {
+        "_path": "lib/R/library/xml2/doc/modification.R",
+        "path_type": "hardlink",
+        "sha256": "82a23398bd88ae653d4341cf23888ebc6a8c89a8eb2ff6d0fd61f90d19ab4e4b",
+        "sha256_in_prefix": "82a23398bd88ae653d4341cf23888ebc6a8c89a8eb2ff6d0fd61f90d19ab4e4b",
+        "size_in_bytes": 3072
+      },
+      {
+        "_path": "lib/R/library/xml2/doc/modification.Rmd",
+        "path_type": "hardlink",
+        "sha256": "7818d0bdda6ea85b83e38c1e4cd595acda2b5f44087a8e669c9d2b04d7126dac",
+        "sha256_in_prefix": "7818d0bdda6ea85b83e38c1e4cd595acda2b5f44087a8e669c9d2b04d7126dac",
+        "size_in_bytes": 5103
+      },
+      {
+        "_path": "lib/R/library/xml2/doc/modification.html",
+        "path_type": "hardlink",
+        "sha256": "4a0c8218ffa844e1f3d46ddac9910bdade7f0fbc778f8f1f8ed531597c26bd88",
+        "sha256_in_prefix": "4a0c8218ffa844e1f3d46ddac9910bdade7f0fbc778f8f1f8ed531597c26bd88",
+        "size_in_bytes": 39933
+      },
+      {
+        "_path": "lib/R/library/xml2/extdata/cd_catalog.xml",
+        "path_type": "hardlink",
+        "sha256": "5c6c9561b144b151ee0e979e696e9576bf2ce1c3f7c91d977aae19a1e5088d85",
+        "sha256_in_prefix": "5c6c9561b144b151ee0e979e696e9576bf2ce1c3f7c91d977aae19a1e5088d85",
+        "size_in_bytes": 5080
+      },
+      {
+        "_path": "lib/R/library/xml2/extdata/order-doc.xml",
+        "path_type": "hardlink",
+        "sha256": "01f7f47ff9d12ed4cca645bab366b1e2cccedb4b9bd191344608d6410069247d",
+        "sha256_in_prefix": "01f7f47ff9d12ed4cca645bab366b1e2cccedb4b9bd191344608d6410069247d",
+        "size_in_bytes": 1024
+      },
+      {
+        "_path": "lib/R/library/xml2/extdata/order-schema.xml",
+        "path_type": "hardlink",
+        "sha256": "7f75df88cb34bb0ac9c475ee4d48989a9ff2cf5a6d5fe803e249f793d04b3254",
+        "sha256_in_prefix": "7f75df88cb34bb0ac9c475ee4d48989a9ff2cf5a6d5fe803e249f793d04b3254",
+        "size_in_bytes": 2446
+      },
+      {
+        "_path": "lib/R/library/xml2/extdata/r-project.html",
+        "path_type": "hardlink",
+        "sha256": "7110f53677496119770f0ba7ea02035fce655a026133ce9646a910f8e900cf88",
+        "sha256_in_prefix": "7110f53677496119770f0ba7ea02035fce655a026133ce9646a910f8e900cf88",
+        "size_in_bytes": 4993
+      },
+      {
+        "_path": "lib/R/library/xml2/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "648acb96ed20d2a0d957621e5c05f892bc2963f1065ce484f6caece2d3ee3f58",
+        "sha256_in_prefix": "648acb96ed20d2a0d957621e5c05f892bc2963f1065ce484f6caece2d3ee3f58",
+        "size_in_bytes": 1839
+      },
+      {
+        "_path": "lib/R/library/xml2/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "f0ced2a3f384e30257e7ad0f7bb6bf48fd06f9bc5c358fc5454369ac95aaa3d9",
+        "sha256_in_prefix": "f0ced2a3f384e30257e7ad0f7bb6bf48fd06f9bc5c358fc5454369ac95aaa3d9",
+        "size_in_bytes": 670
+      },
+      {
+        "_path": "lib/R/library/xml2/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "b7e248635765e43c9b47957c1e8648bc88fffc5f5cfed2dc30cf2de0ce91a223",
+        "sha256_in_prefix": "b7e248635765e43c9b47957c1e8648bc88fffc5f5cfed2dc30cf2de0ce91a223",
+        "size_in_bytes": 399
+      },
+      {
+        "_path": "lib/R/library/xml2/help/xml2.rdb",
+        "path_type": "hardlink",
+        "sha256": "f39667db0adb0afff6056b62f20997bd0e84f378d5b000ef74383a0340c4b6a0",
+        "sha256_in_prefix": "f39667db0adb0afff6056b62f20997bd0e84f378d5b000ef74383a0340c4b6a0",
+        "size_in_bytes": 61528
+      },
+      {
+        "_path": "lib/R/library/xml2/help/xml2.rdx",
+        "path_type": "hardlink",
+        "sha256": "22dced09c4f76d5adcabfc76fb30b563c75f33ce7021e94c3ca543bc0f730766",
+        "sha256_in_prefix": "22dced09c4f76d5adcabfc76fb30b563c75f33ce7021e94c3ca543bc0f730766",
+        "size_in_bytes": 805
+      },
+      {
+        "_path": "lib/R/library/xml2/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "b861834265a3184befe69d07fa96f7a4709bfcc3db8f845e80235bf579c589c8",
+        "sha256_in_prefix": "b861834265a3184befe69d07fa96f7a4709bfcc3db8f845e80235bf579c589c8",
+        "size_in_bytes": 10162
+      },
+      {
+        "_path": "lib/R/library/xml2/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/xml2/include/xml2_types.h",
+        "path_type": "hardlink",
+        "sha256": "b78557c4e909abd915d825dad9f173e8527de5ff9d3462bfe29f21982b5a1908",
+        "sha256_in_prefix": "b78557c4e909abd915d825dad9f173e8527de5ff9d3462bfe29f21982b5a1908",
+        "size_in_bytes": 1726
+      },
+      {
+        "_path": "lib/R/library/xml2/libs/xml2.so",
+        "path_type": "hardlink",
+        "sha256": "52b5306e18a54f186fa411ae576aaf063bbd9ce430efa7b0aab75a48f84e5dec",
+        "sha256_in_prefix": "52b5306e18a54f186fa411ae576aaf063bbd9ce430efa7b0aab75a48f84e5dec",
+        "size_in_bytes": 114200
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat.R",
+        "path_type": "hardlink",
+        "sha256": "575303da4cb63828b6055087c795b1cb59b0b0766b8626878d43d2e1295aad13",
+        "sha256_in_prefix": "575303da4cb63828b6055087c795b1cb59b0b0766b8626878d43d2e1295aad13",
+        "size_in_bytes": 134
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/helper-version.R",
+        "path_type": "hardlink",
+        "sha256": "68f878176209daec2b4dc80c6b63da0148ebf42a735fe09e53717e0577f091af",
+        "sha256_in_prefix": "68f878176209daec2b4dc80c6b63da0148ebf42a735fe09e53717e0577f091af",
+        "size_in_bytes": 77
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/helper.R",
+        "path_type": "hardlink",
+        "sha256": "bd18dd35d45bb1954744938a677032c701d53603f7bd7debf5de90ed8f470adb",
+        "sha256_in_prefix": "bd18dd35d45bb1954744938a677032c701d53603f7bd7debf5de90ed8f470adb",
+        "size_in_bytes": 104
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/lego.html.bz2",
+        "path_type": "hardlink",
+        "sha256": "4629e2f52494ef43fef28d4866a0659b87acf5c89f620510ba2cf40e24dad41e",
+        "sha256_in_prefix": "4629e2f52494ef43fef28d4866a0659b87acf5c89f620510ba2cf40e24dad41e",
+        "size_in_bytes": 42649
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/ns-multiple-aliases.xml",
+        "path_type": "hardlink",
+        "sha256": "e3d8bcd96da37a44d5ca191241179e4cc4f3999c9910b4b2972a452373f079d9",
+        "sha256_in_prefix": "e3d8bcd96da37a44d5ca191241179e4cc4f3999c9910b4b2972a452373f079d9",
+        "size_in_bytes": 115
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/ns-multiple-default.xml",
+        "path_type": "hardlink",
+        "sha256": "aa39de38cb150b0cd300b4c5c530cc488d8138aef296b317deeb17ca22fa454f",
+        "sha256_in_prefix": "aa39de38cb150b0cd300b4c5c530cc488d8138aef296b317deeb17ca22fa454f",
+        "size_in_bytes": 111
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/ns-multiple-prefix.xml",
+        "path_type": "hardlink",
+        "sha256": "ad234cd9c78cae07bbc246c83748388275a3c0eecd31dc2a8b068181ad403e5a",
+        "sha256_in_prefix": "ad234cd9c78cae07bbc246c83748388275a3c0eecd31dc2a8b068181ad403e5a",
+        "size_in_bytes": 115
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/ns-multiple.xml",
+        "path_type": "hardlink",
+        "sha256": "22c561a7e6c130bb72fcbe4e4bcf992c66bbe75007a8fbda11294a86e120d7c1",
+        "sha256_in_prefix": "22c561a7e6c130bb72fcbe4e4bcf992c66bbe75007a8fbda11294a86e120d7c1",
+        "size_in_bytes": 135
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/output/html_structure.txt",
+        "path_type": "hardlink",
+        "sha256": "08478fd657057194eebef0363f147756f220173af4511b033288289870fb8851",
+        "sha256_in_prefix": "08478fd657057194eebef0363f147756f220173af4511b033288289870fb8851",
+        "size_in_bytes": 6079
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/output/print-xml_document.txt",
+        "path_type": "hardlink",
+        "sha256": "3c1c39f611cf55588ab7f1ff2b6bf36c1102d21d0dbca79ba8b1f10e9c4438a6",
+        "sha256_in_prefix": "3c1c39f611cf55588ab7f1ff2b6bf36c1102d21d0dbca79ba8b1f10e9c4438a6",
+        "size_in_bytes": 261
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/output/print-xml_node.txt",
+        "path_type": "hardlink",
+        "sha256": "2b49612ed3a6833adcce729f2c6f4ea388354327f34d3a0f10d1f45507724e2a",
+        "sha256_in_prefix": "2b49612ed3a6833adcce729f2c6f4ea388354327f34d3a0f10d1f45507724e2a",
+        "size_in_bytes": 1244
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/output/print-xml_nodeset.txt",
+        "path_type": "hardlink",
+        "sha256": "59cd85274fa67f8022d6f560fed1b6d691261c027c930945c432ae7d6697a645",
+        "sha256_in_prefix": "59cd85274fa67f8022d6f560fed1b6d691261c027c930945c432ae7d6697a645",
+        "size_in_bytes": 761
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/records.dtd",
+        "path_type": "hardlink",
+        "sha256": "8f037d6eaca8191f8006893e3f5ce75673da61a02862dfce3bbe5aa8a58530c0",
+        "sha256_in_prefix": "8f037d6eaca8191f8006893e3f5ce75673da61a02862dfce3bbe5aa8a58530c0",
+        "size_in_bytes": 162
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/records.xml",
+        "path_type": "hardlink",
+        "sha256": "f13c81f26c908d5a85a1a10514d9569aa7e04efaceb69cfa7e0c43b6771d4b66",
+        "sha256_in_prefix": "f13c81f26c908d5a85a1a10514d9569aa7e04efaceb69cfa7e0c43b6771d4b66",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-as_list.R",
+        "path_type": "hardlink",
+        "sha256": "4e30785d21c13eac2e88e455d78354bd143afb9ebb82b7f3f08a3e309f49b50c",
+        "sha256_in_prefix": "4e30785d21c13eac2e88e455d78354bd143afb9ebb82b7f3f08a3e309f49b50c",
+        "size_in_bytes": 1514
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-as_xml_document.R",
+        "path_type": "hardlink",
+        "sha256": "c1924b48fca66ecab0a219fa66dfa05ca75e0502e257a4ae5bab3ea240af259b",
+        "sha256_in_prefix": "c1924b48fca66ecab0a219fa66dfa05ca75e0502e257a4ae5bab3ea240af259b",
+        "size_in_bytes": 1245
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-cdata.R",
+        "path_type": "hardlink",
+        "sha256": "7e87c518ba72d57e6152eacf0f05f7cdb8453621f9b720f76dcf0eaffa93e858",
+        "sha256_in_prefix": "7e87c518ba72d57e6152eacf0f05f7cdb8453621f9b720f76dcf0eaffa93e858",
+        "size_in_bytes": 239
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-comment.R",
+        "path_type": "hardlink",
+        "sha256": "02275594e57aa54d5e19598e0ad083b813cf64057e7acd77a5d077ab52c1fcb0",
+        "sha256_in_prefix": "02275594e57aa54d5e19598e0ad083b813cf64057e7acd77a5d077ab52c1fcb0",
+        "size_in_bytes": 258
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-dtd.R",
+        "path_type": "hardlink",
+        "sha256": "e94e45340f24014eed34ef619e8f64bb93ee01ea373c03e4f1f072917867c5b1",
+        "sha256_in_prefix": "e94e45340f24014eed34ef619e8f64bb93ee01ea373c03e4f1f072917867c5b1",
+        "size_in_bytes": 1297
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-format.R",
+        "path_type": "hardlink",
+        "sha256": "aeea0e809de1c4cbc38353f84af555c92686dafb1855efaa341ce47bdd54f1f2",
+        "sha256_in_prefix": "aeea0e809de1c4cbc38353f84af555c92686dafb1855efaa341ce47bdd54f1f2",
+        "size_in_bytes": 651
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-modify-xml.R",
+        "path_type": "hardlink",
+        "sha256": "b5163adcc9333e4635d88de2adf046961a428ce6b2a2b5bc25f1195eb91d9e3b",
+        "sha256_in_prefix": "b5163adcc9333e4635d88de2adf046961a428ce6b2a2b5bc25f1195eb91d9e3b",
+        "size_in_bytes": 7394
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-namespaces.R",
+        "path_type": "hardlink",
+        "sha256": "4e7815eb4c5e5423a198bfb321fc011c71c6602db0ceb13772f8003241d51642",
+        "sha256_in_prefix": "4e7815eb4c5e5423a198bfb321fc011c71c6602db0ceb13772f8003241d51642",
+        "size_in_bytes": 1434
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-null.R",
+        "path_type": "hardlink",
+        "sha256": "3037378e873ceda31d9704f27829fa141956888d343af980d012ebeb0ef37fe0",
+        "sha256_in_prefix": "3037378e873ceda31d9704f27829fa141956888d343af980d012ebeb0ef37fe0",
+        "size_in_bytes": 2611
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-print.R",
+        "path_type": "hardlink",
+        "sha256": "fba519d095e77d55ee74447c47d970f4f2916e6349d3eb05d4561a6bc50fe329",
+        "sha256_in_prefix": "fba519d095e77d55ee74447c47d970f4f2916e6349d3eb05d4561a6bc50fe329",
+        "size_in_bytes": 783
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-read-xml.R",
+        "path_type": "hardlink",
+        "sha256": "a5aead1ce7ee8d0557fc1647da56f432facacdb4ca730c1fadddbb2a909073e5",
+        "sha256_in_prefix": "a5aead1ce7ee8d0557fc1647da56f432facacdb4ca730c1fadddbb2a909073e5",
+        "size_in_bytes": 3213
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-url.R",
+        "path_type": "hardlink",
+        "sha256": "41479c8f402e24b645ef17d4dd57535ef5081dae7d2c0ad0b2883e2205d916d0",
+        "sha256_in_prefix": "41479c8f402e24b645ef17d4dd57535ef5081dae7d2c0ad0b2883e2205d916d0",
+        "size_in_bytes": 2538
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-write_xml.R",
+        "path_type": "hardlink",
+        "sha256": "bcdcb312695c003a66f9039b04a489e8409cfaac9c89caeda00141315c8471f3",
+        "sha256_in_prefix": "bcdcb312695c003a66f9039b04a489e8409cfaac9c89caeda00141315c8471f3",
+        "size_in_bytes": 3954
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-xml_attrs.R",
+        "path_type": "hardlink",
+        "sha256": "a9d1f9b4306b9f913ea3ca86f15eda9b10da9282b75094a89f63f7ac394c3a82",
+        "sha256_in_prefix": "a9d1f9b4306b9f913ea3ca86f15eda9b10da9282b75094a89f63f7ac394c3a82",
+        "size_in_bytes": 7480
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-xml_children.R",
+        "path_type": "hardlink",
+        "sha256": "d6720bd68798d75d50b852fc62a2a056bd0886532fbcc67a3703ea960b47208b",
+        "sha256_in_prefix": "d6720bd68798d75d50b852fc62a2a056bd0886532fbcc67a3703ea960b47208b",
+        "size_in_bytes": 1551
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-xml_find.R",
+        "path_type": "hardlink",
+        "sha256": "713f2630b1a5ad689d8d4749f968b28a43bb5d0fdf6888ed11e362cb1a602a49",
+        "sha256_in_prefix": "713f2630b1a5ad689d8d4749f968b28a43bb5d0fdf6888ed11e362cb1a602a49",
+        "size_in_bytes": 5582
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-xml_missing.R",
+        "path_type": "hardlink",
+        "sha256": "27c1662c0bced4fef2ad989628d8bf13899bac2e2546a9a5823d768ed5f1f216",
+        "sha256_in_prefix": "27c1662c0bced4fef2ad989628d8bf13899bac2e2546a9a5823d768ed5f1f216",
+        "size_in_bytes": 1604
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-xml_name.R",
+        "path_type": "hardlink",
+        "sha256": "d60634f3bf26ed003875fa728f45c6ad491b10d8b4d719878be41b21325779b2",
+        "sha256_in_prefix": "d60634f3bf26ed003875fa728f45c6ad491b10d8b4d719878be41b21325779b2",
+        "size_in_bytes": 1650
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-xml_nodeset.R",
+        "path_type": "hardlink",
+        "sha256": "988b4bc6ffc1782aa186466614cfd0546df30b264b20ed037f7feb351e143644",
+        "sha256_in_prefix": "988b4bc6ffc1782aa186466614cfd0546df30b264b20ed037f7feb351e143644",
+        "size_in_bytes": 2170
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-xml_parse.R",
+        "path_type": "hardlink",
+        "sha256": "0e9eaf735ce1abbfe591fad5e63e498e9bf942a1711d7fcc3219ef6ff4449903",
+        "sha256_in_prefix": "0e9eaf735ce1abbfe591fad5e63e498e9bf942a1711d7fcc3219ef6ff4449903",
+        "size_in_bytes": 258
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-xml_schema.R",
+        "path_type": "hardlink",
+        "sha256": "a4c653f18bdaf7f70a27ac56fe4ffb540b938916f2b39572cfb3bf5a7d3f9512",
+        "sha256_in_prefix": "a4c653f18bdaf7f70a27ac56fe4ffb540b938916f2b39572cfb3bf5a7d3f9512",
+        "size_in_bytes": 771
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-xml_serialize.R",
+        "path_type": "hardlink",
+        "sha256": "ee196fe44db34c8af70b6bd656bed4dc465fda9ce9e36ff9c067fcb950813cba",
+        "sha256_in_prefix": "ee196fe44db34c8af70b6bd656bed4dc465fda9ce9e36ff9c067fcb950813cba",
+        "size_in_bytes": 1268
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-xml_structure.R",
+        "path_type": "hardlink",
+        "sha256": "60819a1e1379428d82c8ca85590c9a44154395d333e9a8befb96b0502c9ebb35",
+        "sha256_in_prefix": "60819a1e1379428d82c8ca85590c9a44154395d333e9a8befb96b0502c9ebb35",
+        "size_in_bytes": 692
+      },
+      {
+        "_path": "lib/R/library/xml2/tests/testthat/test-xml_text.R",
+        "path_type": "hardlink",
+        "sha256": "8d0b4662d6877624c0bdd8c1e84ebd94050bda65dfee249a16300694cf25c658",
+        "sha256_in_prefix": "8d0b4662d6877624c0bdd8c1e84ebd94050bda65dfee249a16300694cf25c658",
+        "size_in_bytes": 2109
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "2dd45eca0dca33f95549e402e30cbe69ac593cb8cb63f6ea0cea5da262a88e32",
+  "size": 331381,
+  "subdir": "linux-64",
+  "timestamp": 1665321667000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-xml2-1.3.3-r42h044e5c7_2.tar.bz2",
+  "version": "1.3.3"
+}

@@ -47,7 +47,7 @@
 #define GEOTIFF_SPEC_1_1_MINOR_REVISION 1
 
 /* Library version */
-#define LIBGEOTIFF_VERSION 1700
+#define LIBGEOTIFF_VERSION 1710
 
 #include "geo_config.h"
 #include "geokeys.h"
@@ -131,7 +131,7 @@ GTIF GTIF_DLL *GTIFNewWithMethodsEx(void *tif, TIFFMethod* methods,
 void GTIF_DLL  GTIFFree(GTIF *gtif);
 int  GTIF_DLL  GTIFWriteKeys(GTIF *gtif);
 /* versions must be an array of 3 int */
-void GTIF_DLL  GTIFDirectoryInfo(GTIF *gtif, int *versions, int *keycount);
+void GTIF_DLL  GTIFDirectoryInfo(GTIF *gtif, int versions[3], int *keycount);
 void GTIF_DLL *GTIFGetUserData(GTIF *gtif);
 int  GTIF_DLL  GTIFSetVersionNumbers(GTIF* gtif,
                                      unsigned short version,

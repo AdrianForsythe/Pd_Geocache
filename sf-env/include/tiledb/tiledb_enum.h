@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * @copyright Copyright (c) 2017-2021 TileDB, Inc.
+ * @copyright Copyright (c) 2017-2022 TileDB, Inc.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -25,6 +25,11 @@
 // clang-format is disabled on the first enum so that we can manually indent it
 // properly.
 // clang-format off
+/**
+ * NOTE: The values of these enums are serialized to the array schema and/or
+ * fragment metadata. Therefore, the values below should never change, 
+ * otherwise backwards compatibility breaks.
+ */
 #ifdef TILEDB_QUERY_TYPE_ENUM
     /** Read query */
     TILEDB_QUERY_TYPE_ENUM(READ) = 0,
@@ -137,6 +142,8 @@
     TILEDB_DATATYPE_ENUM(TIME_FS) = 38,
     /** Time with attosecond resolution */
     TILEDB_DATATYPE_ENUM(TIME_AS) = 39,
+    /** std::byte */
+    TILEDB_DATATYPE_ENUM(BLOB) = 40,
 #endif
 
 #ifdef TILEDB_ARRAY_TYPE_ENUM
@@ -187,6 +194,8 @@
     TILEDB_FILTER_TYPE_ENUM(FILTER_CHECKSUM_MD5) = 12,
     /** SHA256 checksum filter. */
     TILEDB_FILTER_TYPE_ENUM(FILTER_CHECKSUM_SHA256) = 13,
+    /** Dictionary encoding filter. */
+    TILEDB_FILTER_TYPE_ENUM(FILTER_DICTIONARY) = 14,
 #endif
 
 #ifdef TILEDB_FILTER_OPTION_ENUM
@@ -216,6 +225,14 @@
     TILEDB_QUERY_STATUS_ENUM(INCOMPLETE) = 3,
     /** Query not initialized.  */
     TILEDB_QUERY_STATUS_ENUM(UNINITIALIZED) = 4,
+#endif
+
+#ifdef TILEDB_QUERY_STATUS_DETAILS_ENUM
+    TILEDB_QUERY_STATUS_DETAILS_ENUM(REASON_NONE) = 0,
+    /** User buffers are too small */
+    TILEDB_QUERY_STATUS_DETAILS_ENUM(REASON_USER_BUFFER_SIZE) = 1,
+    /** Exceeded memory budget: can resubmit without resize */
+    TILEDB_QUERY_STATUS_DETAILS_ENUM(REASON_MEMORY_BUDGET) = 2,
 #endif
 
 #ifdef TILEDB_QUERY_CONDITION_OP_ENUM
@@ -264,4 +281,13 @@
     TILEDB_VFS_MODE_ENUM(VFS_WRITE) = 1,
     /** Append mode */
     TILEDB_VFS_MODE_ENUM(VFS_APPEND) = 2,
+#endif
+
+#ifdef TILEDB_MIME_TYPE_ENUM
+    /** Unspecified MIME type*/
+    TILEDB_MIME_TYPE_ENUM(MIME_AUTODETECT) = 0,
+    /** image/tiff*/
+    TILEDB_MIME_TYPE_ENUM(MIME_TIFF) = 1,
+    /** application/pdf*/
+    TILEDB_MIME_TYPE_ENUM(MIME_PDF) = 2,
 #endif

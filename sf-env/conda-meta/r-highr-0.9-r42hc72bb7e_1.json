@@ -1,0 +1,262 @@
+{
+  "build": "r42hc72bb7e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.2,<4.3.0a0",
+    "r-xfun >=0.18"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-highr-0.9-r42hc72bb7e_1",
+  "features": "",
+  "files": [
+    "lib/R/library/highr/DESCRIPTION",
+    "lib/R/library/highr/INDEX",
+    "lib/R/library/highr/Meta/Rd.rds",
+    "lib/R/library/highr/Meta/features.rds",
+    "lib/R/library/highr/Meta/hsearch.rds",
+    "lib/R/library/highr/Meta/links.rds",
+    "lib/R/library/highr/Meta/nsInfo.rds",
+    "lib/R/library/highr/Meta/package.rds",
+    "lib/R/library/highr/Meta/vignette.rds",
+    "lib/R/library/highr/NAMESPACE",
+    "lib/R/library/highr/NEWS.Rd",
+    "lib/R/library/highr/R/highr",
+    "lib/R/library/highr/R/highr.rdb",
+    "lib/R/library/highr/R/highr.rdx",
+    "lib/R/library/highr/doc/highr-custom.R",
+    "lib/R/library/highr/doc/highr-custom.Rmd",
+    "lib/R/library/highr/doc/highr-custom.html",
+    "lib/R/library/highr/doc/highr-internals.R",
+    "lib/R/library/highr/doc/highr-internals.Rmd",
+    "lib/R/library/highr/doc/highr-internals.html",
+    "lib/R/library/highr/doc/index.html",
+    "lib/R/library/highr/help/AnIndex",
+    "lib/R/library/highr/help/aliases.rds",
+    "lib/R/library/highr/help/highr.rdb",
+    "lib/R/library/highr/help/highr.rdx",
+    "lib/R/library/highr/help/paths.rds",
+    "lib/R/library/highr/html/00Index.html",
+    "lib/R/library/highr/html/R.css"
+  ],
+  "fn": "r-highr-0.9-r42hc72bb7e_1.tar.bz2",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-highr-0.9-r42hc72bb7e_1",
+    "type": 1
+  },
+  "md5": "dd6b60ae01edc54bf578d2534398a834",
+  "name": "r-highr",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-highr-0.9-r42hc72bb7e_1.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/highr/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "74d1a3bbd1179ad18e6e6fac948686849bb2844e1ce4ec899110928ae4b6527d",
+        "sha256_in_prefix": "74d1a3bbd1179ad18e6e6fac948686849bb2844e1ce4ec899110928ae4b6527d",
+        "size_in_bytes": 1156
+      },
+      {
+        "_path": "lib/R/library/highr/INDEX",
+        "path_type": "hardlink",
+        "sha256": "169d3ceedc7ce1d5344538d0a90e684936d01e9c1c6f9b7a9c01349af8d1f116",
+        "sha256_in_prefix": "169d3ceedc7ce1d5344538d0a90e684936d01e9c1c6f9b7a9c01349af8d1f116",
+        "size_in_bytes": 121
+      },
+      {
+        "_path": "lib/R/library/highr/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "fcc714c0028b1011fe13830f3f617f2af9071dc5d28357f26a65a954bd22b2ca",
+        "sha256_in_prefix": "fcc714c0028b1011fe13830f3f617f2af9071dc5d28357f26a65a954bd22b2ca",
+        "size_in_bytes": 299
+      },
+      {
+        "_path": "lib/R/library/highr/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/highr/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "6314953ca60b5b23f85c0e1a866e2ed4b03c011c01f92eb81b83202f704dff36",
+        "sha256_in_prefix": "6314953ca60b5b23f85c0e1a866e2ed4b03c011c01f92eb81b83202f704dff36",
+        "size_in_bytes": 324
+      },
+      {
+        "_path": "lib/R/library/highr/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "d4e22f058923dcd618075e3732b43a13a0208ac0c27ea60d79ddfd828a49ee00",
+        "sha256_in_prefix": "d4e22f058923dcd618075e3732b43a13a0208ac0c27ea60d79ddfd828a49ee00",
+        "size_in_bytes": 129
+      },
+      {
+        "_path": "lib/R/library/highr/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "05bf009e5b6dcf2dd6c2e9701258983f4fa9157134665792fd999e2f08caae82",
+        "sha256_in_prefix": "05bf009e5b6dcf2dd6c2e9701258983f4fa9157134665792fd999e2f08caae82",
+        "size_in_bytes": 225
+      },
+      {
+        "_path": "lib/R/library/highr/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "5f0303954bc2c209af451d26df6279dfa923220a5597a978e88cc663a8d45503",
+        "sha256_in_prefix": "5f0303954bc2c209af451d26df6279dfa923220a5597a978e88cc663a8d45503",
+        "size_in_bytes": 1092
+      },
+      {
+        "_path": "lib/R/library/highr/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "987e3502683c2468fe1f3684e073fa6d537a770f40d6c99ba3401090a8e07ac1",
+        "sha256_in_prefix": "987e3502683c2468fe1f3684e073fa6d537a770f40d6c99ba3401090a8e07ac1",
+        "size_in_bytes": 246
+      },
+      {
+        "_path": "lib/R/library/highr/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "45cbb58b6a7f51ff5c241e91a40098a2b08df76c121326a29064bb7168b8807f",
+        "sha256_in_prefix": "45cbb58b6a7f51ff5c241e91a40098a2b08df76c121326a29064bb7168b8807f",
+        "size_in_bytes": 126
+      },
+      {
+        "_path": "lib/R/library/highr/NEWS.Rd",
+        "path_type": "hardlink",
+        "sha256": "0acea49305b82e047500fd8af3e0530cc771c4435b7a15e5d5efe32c050cd44f",
+        "sha256_in_prefix": "0acea49305b82e047500fd8af3e0530cc771c4435b7a15e5d5efe32c050cd44f",
+        "size_in_bytes": 281
+      },
+      {
+        "_path": "lib/R/library/highr/R/highr",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/highr/R/highr.rdb",
+        "path_type": "hardlink",
+        "sha256": "c2cd748c28fc72441a9735e3491433542bf4a200d1adf8cbbf42a2cfd4a01e5d",
+        "sha256_in_prefix": "c2cd748c28fc72441a9735e3491433542bf4a200d1adf8cbbf42a2cfd4a01e5d",
+        "size_in_bytes": 20089
+      },
+      {
+        "_path": "lib/R/library/highr/R/highr.rdx",
+        "path_type": "hardlink",
+        "sha256": "678a54d2a0dffa1db66b9b55e4b3c5cc968ddb5916d63090cdc9231deb3f1e30",
+        "sha256_in_prefix": "678a54d2a0dffa1db66b9b55e4b3c5cc968ddb5916d63090cdc9231deb3f1e30",
+        "size_in_bytes": 577
+      },
+      {
+        "_path": "lib/R/library/highr/doc/highr-custom.R",
+        "path_type": "hardlink",
+        "sha256": "086fa3dacc1797f17b8c54bc910ef24f99c34b007d63b1242359a479126e15b3",
+        "sha256_in_prefix": "086fa3dacc1797f17b8c54bc910ef24f99c34b007d63b1242359a479126e15b3",
+        "size_in_bytes": 471
+      },
+      {
+        "_path": "lib/R/library/highr/doc/highr-custom.Rmd",
+        "path_type": "hardlink",
+        "sha256": "3551d0137aab39d644135dfd7b57df088e24b56d22dc687ce7fc1f3d8ef54d0c",
+        "sha256_in_prefix": "3551d0137aab39d644135dfd7b57df088e24b56d22dc687ce7fc1f3d8ef54d0c",
+        "size_in_bytes": 1086
+      },
+      {
+        "_path": "lib/R/library/highr/doc/highr-custom.html",
+        "path_type": "hardlink",
+        "sha256": "74c62cf67d17cfaf62f788a5a86a5f407bee11212cd6dc7e4f9c501c88f70f10",
+        "sha256_in_prefix": "74c62cf67d17cfaf62f788a5a86a5f407bee11212cd6dc7e4f9c501c88f70f10",
+        "size_in_bytes": 7917
+      },
+      {
+        "_path": "lib/R/library/highr/doc/highr-internals.R",
+        "path_type": "hardlink",
+        "sha256": "b6c8ae4919fdd17fd7bbb0e898a77670536b7cf46b800b4f0419ee9ee154faa4",
+        "sha256_in_prefix": "b6c8ae4919fdd17fd7bbb0e898a77670536b7cf46b800b4f0419ee9ee154faa4",
+        "size_in_bytes": 1619
+      },
+      {
+        "_path": "lib/R/library/highr/doc/highr-internals.Rmd",
+        "path_type": "hardlink",
+        "sha256": "21d052b9a892399ac52d03f085e4dd12cbd6001e6a60768e6ebb677fee6c3599",
+        "sha256_in_prefix": "21d052b9a892399ac52d03f085e4dd12cbd6001e6a60768e6ebb677fee6c3599",
+        "size_in_bytes": 3266
+      },
+      {
+        "_path": "lib/R/library/highr/doc/highr-internals.html",
+        "path_type": "hardlink",
+        "sha256": "1e6a27fcad3c87a8e7e6ff7c2a5f2ceadb33625e66352c83774dd4cb8aae71ad",
+        "sha256_in_prefix": "1e6a27fcad3c87a8e7e6ff7c2a5f2ceadb33625e66352c83774dd4cb8aae71ad",
+        "size_in_bytes": 15743
+      },
+      {
+        "_path": "lib/R/library/highr/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "42d4413798e664ec6dbc880a0a12daa0e3c23ab748842335dd8c4e87a6f75420",
+        "sha256_in_prefix": "42d4413798e664ec6dbc880a0a12daa0e3c23ab748842335dd8c4e87a6f75420",
+        "size_in_bytes": 1978
+      },
+      {
+        "_path": "lib/R/library/highr/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "227f3b530b7b3847e9de8c5ccd2972c0d8a2d49c20bf02b8bb6c43eb962599c3",
+        "sha256_in_prefix": "227f3b530b7b3847e9de8c5ccd2972c0d8a2d49c20bf02b8bb6c43eb962599c3",
+        "size_in_bytes": 67
+      },
+      {
+        "_path": "lib/R/library/highr/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "d48edde5ac91a1ee8320386dc25e676561d7585cb86e548cffaaac97cdaf5607",
+        "sha256_in_prefix": "d48edde5ac91a1ee8320386dc25e676561d7585cb86e548cffaaac97cdaf5607",
+        "size_in_bytes": 107
+      },
+      {
+        "_path": "lib/R/library/highr/help/highr.rdb",
+        "path_type": "hardlink",
+        "sha256": "4808cf0362e956c5c26928190f2f36ffe302e733f10ee86f36a114e3447347d3",
+        "sha256_in_prefix": "4808cf0362e956c5c26928190f2f36ffe302e733f10ee86f36a114e3447347d3",
+        "size_in_bytes": 5247
+      },
+      {
+        "_path": "lib/R/library/highr/help/highr.rdx",
+        "path_type": "hardlink",
+        "sha256": "4bf3286d29fccd383781e3ac4ffc21e365dd96ed2e534d167da775c2a0d06952",
+        "sha256_in_prefix": "4bf3286d29fccd383781e3ac4ffc21e365dd96ed2e534d167da775c2a0d06952",
+        "size_in_bytes": 186
+      },
+      {
+        "_path": "lib/R/library/highr/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "8129916d9200111e18a1babdab3375fc86269833a17362b3e2dca70caa6ed6c9",
+        "sha256_in_prefix": "8129916d9200111e18a1babdab3375fc86269833a17362b3e2dca70caa6ed6c9",
+        "size_in_bytes": 171
+      },
+      {
+        "_path": "lib/R/library/highr/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "2ac1e644912d9d087b183c88eef47969f6de2467655790b93c09180b479e6e0c",
+        "sha256_in_prefix": "2ac1e644912d9d087b183c88eef47969f6de2467655790b93c09180b479e6e0c",
+        "size_in_bytes": 1561
+      },
+      {
+        "_path": "lib/R/library/highr/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "2b1cf4253412dca82794d386fa00989a363f22bdf006216d856fe3cbc6a1ddb4",
+  "size": 59128,
+  "subdir": "noarch",
+  "timestamp": 1665186058000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-highr-0.9-r42hc72bb7e_1.tar.bz2",
+  "version": "0.9"
+}

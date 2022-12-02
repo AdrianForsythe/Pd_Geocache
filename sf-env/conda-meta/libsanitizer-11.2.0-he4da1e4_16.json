@@ -1,0 +1,123 @@
+{
+  "build": "he4da1e4_16",
+  "build_number": 16,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/libsanitizer-11.2.0-he4da1e4_16",
+  "features": "",
+  "files": [
+    "lib/libasan.so",
+    "lib/libasan.so.6",
+    "lib/libasan.so.6.0.0",
+    "lib/liblsan.so",
+    "lib/liblsan.so.0",
+    "lib/liblsan.so.0.0.0",
+    "lib/libtsan.so",
+    "lib/libtsan.so.0",
+    "lib/libtsan.so.0.0.0",
+    "lib/libubsan.so",
+    "lib/libubsan.so.1",
+    "lib/libubsan.so.1.0.0"
+  ],
+  "fn": "libsanitizer-11.2.0-he4da1e4_16.tar.bz2",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/libsanitizer-11.2.0-he4da1e4_16",
+    "type": 1
+  },
+  "md5": "70c0020fb2094fd51fe12462e8cde942",
+  "name": "libsanitizer",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/libsanitizer-11.2.0-he4da1e4_16.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libasan.so",
+        "path_type": "softlink",
+        "sha256": "4eeb02992483c52042ed842b7651a2a3d56ee8b64b7eb74df4d0ed88f8c84f39",
+        "size_in_bytes": 5760192
+      },
+      {
+        "_path": "lib/libasan.so.6",
+        "path_type": "softlink",
+        "sha256": "4eeb02992483c52042ed842b7651a2a3d56ee8b64b7eb74df4d0ed88f8c84f39",
+        "size_in_bytes": 5760192
+      },
+      {
+        "_path": "lib/libasan.so.6.0.0",
+        "path_type": "hardlink",
+        "sha256": "4eeb02992483c52042ed842b7651a2a3d56ee8b64b7eb74df4d0ed88f8c84f39",
+        "sha256_in_prefix": "4eeb02992483c52042ed842b7651a2a3d56ee8b64b7eb74df4d0ed88f8c84f39",
+        "size_in_bytes": 5760192
+      },
+      {
+        "_path": "lib/liblsan.so",
+        "path_type": "softlink",
+        "sha256": "67176ff9de4829f5e5ea85f481ef9d5023e7c54b193ddda9449c24d3876f0c87",
+        "size_in_bytes": 2136648
+      },
+      {
+        "_path": "lib/liblsan.so.0",
+        "path_type": "softlink",
+        "sha256": "67176ff9de4829f5e5ea85f481ef9d5023e7c54b193ddda9449c24d3876f0c87",
+        "size_in_bytes": 2136648
+      },
+      {
+        "_path": "lib/liblsan.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "67176ff9de4829f5e5ea85f481ef9d5023e7c54b193ddda9449c24d3876f0c87",
+        "sha256_in_prefix": "67176ff9de4829f5e5ea85f481ef9d5023e7c54b193ddda9449c24d3876f0c87",
+        "size_in_bytes": 2136648
+      },
+      {
+        "_path": "lib/libtsan.so",
+        "path_type": "softlink",
+        "sha256": "8c23f1dc7855f7065aef49c7d0d8c5b69373139a63f6dcb52b0c75fc25b3ed30",
+        "size_in_bytes": 5926096
+      },
+      {
+        "_path": "lib/libtsan.so.0",
+        "path_type": "softlink",
+        "sha256": "8c23f1dc7855f7065aef49c7d0d8c5b69373139a63f6dcb52b0c75fc25b3ed30",
+        "size_in_bytes": 5926096
+      },
+      {
+        "_path": "lib/libtsan.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "8c23f1dc7855f7065aef49c7d0d8c5b69373139a63f6dcb52b0c75fc25b3ed30",
+        "sha256_in_prefix": "8c23f1dc7855f7065aef49c7d0d8c5b69373139a63f6dcb52b0c75fc25b3ed30",
+        "size_in_bytes": 5926096
+      },
+      {
+        "_path": "lib/libubsan.so",
+        "path_type": "softlink",
+        "sha256": "1126bbb6198a9ac5fc2e4969cb0eaf6a800d0e0ea8b13b51fb621b107d2c5a35",
+        "size_in_bytes": 2000216
+      },
+      {
+        "_path": "lib/libubsan.so.1",
+        "path_type": "softlink",
+        "sha256": "1126bbb6198a9ac5fc2e4969cb0eaf6a800d0e0ea8b13b51fb621b107d2c5a35",
+        "size_in_bytes": 2000216
+      },
+      {
+        "_path": "lib/libubsan.so.1.0.0",
+        "path_type": "hardlink",
+        "sha256": "1126bbb6198a9ac5fc2e4969cb0eaf6a800d0e0ea8b13b51fb621b107d2c5a35",
+        "sha256_in_prefix": "1126bbb6198a9ac5fc2e4969cb0eaf6a800d0e0ea8b13b51fb621b107d2c5a35",
+        "size_in_bytes": 2000216
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "ff1b2ad8a19420b6bfb09c8257041244ac25d24eecc5fa103fd92bebe498979f",
+  "size": 6176724,
+  "subdir": "linux-64",
+  "timestamp": 1650670798000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libsanitizer-11.2.0-he4da1e4_16.tar.bz2",
+  "version": "11.2.0"
+}

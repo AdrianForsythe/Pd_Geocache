@@ -483,28 +483,36 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <a class="sourceLine" id="cb8-10" title="10"><span class="co">##   User input: EPSG:4326 </span></a>
 <a class="sourceLine" id="cb8-11" title="11"><span class="co">##   wkt:</span></a>
 <a class="sourceLine" id="cb8-12" title="12"><span class="co">## GEOGCRS[&quot;WGS 84&quot;,</span></a>
-<a class="sourceLine" id="cb8-13" title="13"><span class="co">##     DATUM[&quot;World Geodetic System 1984&quot;,</span></a>
-<a class="sourceLine" id="cb8-14" title="14"><span class="co">##         ELLIPSOID[&quot;WGS 84&quot;,6378137,298.257223563,</span></a>
-<a class="sourceLine" id="cb8-15" title="15"><span class="co">##             LENGTHUNIT[&quot;metre&quot;,1]]],</span></a>
-<a class="sourceLine" id="cb8-16" title="16"><span class="co">##     PRIMEM[&quot;Greenwich&quot;,0,</span></a>
-<a class="sourceLine" id="cb8-17" title="17"><span class="co">##         ANGLEUNIT[&quot;degree&quot;,0.0174532925199433]],</span></a>
-<a class="sourceLine" id="cb8-18" title="18"><span class="co">##     CS[ellipsoidal,2],</span></a>
-<a class="sourceLine" id="cb8-19" title="19"><span class="co">##         AXIS[&quot;geodetic latitude (Lat)&quot;,north,</span></a>
-<a class="sourceLine" id="cb8-20" title="20"><span class="co">##             ORDER[1],</span></a>
-<a class="sourceLine" id="cb8-21" title="21"><span class="co">##             ANGLEUNIT[&quot;degree&quot;,0.0174532925199433]],</span></a>
-<a class="sourceLine" id="cb8-22" title="22"><span class="co">##         AXIS[&quot;geodetic longitude (Lon)&quot;,east,</span></a>
-<a class="sourceLine" id="cb8-23" title="23"><span class="co">##             ORDER[2],</span></a>
-<a class="sourceLine" id="cb8-24" title="24"><span class="co">##             ANGLEUNIT[&quot;degree&quot;,0.0174532925199433]],</span></a>
-<a class="sourceLine" id="cb8-25" title="25"><span class="co">##     USAGE[</span></a>
-<a class="sourceLine" id="cb8-26" title="26"><span class="co">##         SCOPE[&quot;Horizontal component of 3D system.&quot;],</span></a>
-<a class="sourceLine" id="cb8-27" title="27"><span class="co">##         AREA[&quot;World.&quot;],</span></a>
-<a class="sourceLine" id="cb8-28" title="28"><span class="co">##         BBOX[-90,-180,90,180]],</span></a>
-<a class="sourceLine" id="cb8-29" title="29"><span class="co">##     ID[&quot;EPSG&quot;,4326]]</span></a>
-<a class="sourceLine" id="cb8-30" title="30">s2 =<span class="st"> </span>s</a>
-<a class="sourceLine" id="cb8-31" title="31"><span class="kw">st_crs</span>(s2) &lt;-<span class="st"> &quot;+proj=longlat +datum=WGS84&quot;</span></a>
-<a class="sourceLine" id="cb8-32" title="32"><span class="kw">all.equal</span>(s1, s2)</a>
-<a class="sourceLine" id="cb8-33" title="33"><span class="co">## [1] &quot;Component \&quot;geometry\&quot;: Attributes: &lt; Component \&quot;crs\&quot;: Component \&quot;input\&quot;: 1 string mismatch &gt;&quot;</span></a>
-<a class="sourceLine" id="cb8-34" title="34"><span class="co">## [2] &quot;Component \&quot;geometry\&quot;: Attributes: &lt; Component \&quot;crs\&quot;: Component \&quot;wkt\&quot;: 1 string mismatch &gt;&quot;</span></a></code></pre></div>
+<a class="sourceLine" id="cb8-13" title="13"><span class="co">##     ENSEMBLE[&quot;World Geodetic System 1984 ensemble&quot;,</span></a>
+<a class="sourceLine" id="cb8-14" title="14"><span class="co">##         MEMBER[&quot;World Geodetic System 1984 (Transit)&quot;],</span></a>
+<a class="sourceLine" id="cb8-15" title="15"><span class="co">##         MEMBER[&quot;World Geodetic System 1984 (G730)&quot;],</span></a>
+<a class="sourceLine" id="cb8-16" title="16"><span class="co">##         MEMBER[&quot;World Geodetic System 1984 (G873)&quot;],</span></a>
+<a class="sourceLine" id="cb8-17" title="17"><span class="co">##         MEMBER[&quot;World Geodetic System 1984 (G1150)&quot;],</span></a>
+<a class="sourceLine" id="cb8-18" title="18"><span class="co">##         MEMBER[&quot;World Geodetic System 1984 (G1674)&quot;],</span></a>
+<a class="sourceLine" id="cb8-19" title="19"><span class="co">##         MEMBER[&quot;World Geodetic System 1984 (G1762)&quot;],</span></a>
+<a class="sourceLine" id="cb8-20" title="20"><span class="co">##         MEMBER[&quot;World Geodetic System 1984 (G2139)&quot;],</span></a>
+<a class="sourceLine" id="cb8-21" title="21"><span class="co">##         ELLIPSOID[&quot;WGS 84&quot;,6378137,298.257223563,</span></a>
+<a class="sourceLine" id="cb8-22" title="22"><span class="co">##             LENGTHUNIT[&quot;metre&quot;,1]],</span></a>
+<a class="sourceLine" id="cb8-23" title="23"><span class="co">##         ENSEMBLEACCURACY[2.0]],</span></a>
+<a class="sourceLine" id="cb8-24" title="24"><span class="co">##     PRIMEM[&quot;Greenwich&quot;,0,</span></a>
+<a class="sourceLine" id="cb8-25" title="25"><span class="co">##         ANGLEUNIT[&quot;degree&quot;,0.0174532925199433]],</span></a>
+<a class="sourceLine" id="cb8-26" title="26"><span class="co">##     CS[ellipsoidal,2],</span></a>
+<a class="sourceLine" id="cb8-27" title="27"><span class="co">##         AXIS[&quot;geodetic latitude (Lat)&quot;,north,</span></a>
+<a class="sourceLine" id="cb8-28" title="28"><span class="co">##             ORDER[1],</span></a>
+<a class="sourceLine" id="cb8-29" title="29"><span class="co">##             ANGLEUNIT[&quot;degree&quot;,0.0174532925199433]],</span></a>
+<a class="sourceLine" id="cb8-30" title="30"><span class="co">##         AXIS[&quot;geodetic longitude (Lon)&quot;,east,</span></a>
+<a class="sourceLine" id="cb8-31" title="31"><span class="co">##             ORDER[2],</span></a>
+<a class="sourceLine" id="cb8-32" title="32"><span class="co">##             ANGLEUNIT[&quot;degree&quot;,0.0174532925199433]],</span></a>
+<a class="sourceLine" id="cb8-33" title="33"><span class="co">##     USAGE[</span></a>
+<a class="sourceLine" id="cb8-34" title="34"><span class="co">##         SCOPE[&quot;Horizontal component of 3D system.&quot;],</span></a>
+<a class="sourceLine" id="cb8-35" title="35"><span class="co">##         AREA[&quot;World.&quot;],</span></a>
+<a class="sourceLine" id="cb8-36" title="36"><span class="co">##         BBOX[-90,-180,90,180]],</span></a>
+<a class="sourceLine" id="cb8-37" title="37"><span class="co">##     ID[&quot;EPSG&quot;,4326]]</span></a>
+<a class="sourceLine" id="cb8-38" title="38">s2 =<span class="st"> </span>s</a>
+<a class="sourceLine" id="cb8-39" title="39"><span class="kw">st_crs</span>(s2) &lt;-<span class="st"> &quot;+proj=longlat +datum=WGS84&quot;</span></a>
+<a class="sourceLine" id="cb8-40" title="40"><span class="kw">all.equal</span>(s1, s2)</a>
+<a class="sourceLine" id="cb8-41" title="41"><span class="co">## [1] &quot;Component \&quot;geometry\&quot;: Attributes: &lt; Component \&quot;crs\&quot;: Component \&quot;input\&quot;: 1 string mismatch &gt;&quot;</span></a>
+<a class="sourceLine" id="cb8-42" title="42"><span class="co">## [2] &quot;Component \&quot;geometry\&quot;: Attributes: &lt; Component \&quot;crs\&quot;: Component \&quot;wkt\&quot;: 1 string mismatch &gt;&quot;</span></a></code></pre></div>
 <p>An alternative, more pipe-friendly version of <code>st_crs&lt;-</code> is</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1">s1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">st_set_crs</span>(<span class="dv">4326</span>)</a>
 <a class="sourceLine" id="cb9-2" title="2"><span class="co">## Simple feature collection with 2 features and 1 field</span></a>

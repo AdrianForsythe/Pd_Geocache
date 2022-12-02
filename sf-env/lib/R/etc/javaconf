@@ -1,7 +1,7 @@
 ## Versions from settings when configure was run
 : ${JAVA_HOME=}
 : ${JAVA_CPPFLAGS=~autodetect~}
-: ${JAVA_LD_LIBRARY_PATH=/home/conda/feedstock_root/build_artifacts/r-base-split_1639563404388/_build_env/lib/server}
+: ${JAVA_LD_LIBRARY_PATH=/home/conda/feedstock_root/build_artifacts/r-base-split_1659993824316/_build_env/lib/server}
 : ${JAVA_LIBS=~autodetect~}
 : ${JAVA=}
 : ${JAVAC=}

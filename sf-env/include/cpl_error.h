@@ -1,5 +1,5 @@
 /**********************************************************************
- * $Id: cpl_error.h 065bfd22aef8960c05d9ec0e1e72a1e3f4e36b82 2020-02-27 14:12:04 +0100 Even Rouault $
+ * $Id$
  *
  * Name:     cpl_error.h
  * Project:  CPL - Common Portability Library
@@ -170,7 +170,7 @@ void CPL_DLL CPL_STDCALL CPLPopErrorHandler(void);
 #ifdef WITHOUT_CPLDEBUG
 #define CPLDebug(...)  /* Eat all CPLDebug calls. */
 #else
-void CPL_DLL CPL_STDCALL CPLDebug(const char *, CPL_FORMAT_STRING(const char *), ...)
+void CPL_DLL CPLDebug(const char *, CPL_FORMAT_STRING(const char *), ...)
     CPL_PRINT_FUNC_FORMAT(2, 3);
 #endif
 
@@ -222,6 +222,8 @@ CPL_C_END
 
 extern "C++"
 {
+template<class T> T* CPLAssertNotNull(T* x) CPL_RETURNS_NONNULL;
+template<class T> T* CPLAssertNotNull(T* x) { CPLAssert(x); return x; }
 
 #include <string>
 

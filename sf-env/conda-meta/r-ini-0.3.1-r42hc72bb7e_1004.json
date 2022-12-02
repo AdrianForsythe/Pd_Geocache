@@ -1,0 +1,197 @@
+{
+  "build": "r42hc72bb7e_1004",
+  "build_number": 1004,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.2,<4.3.0a0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-ini-0.3.1-r42hc72bb7e_1004",
+  "features": "",
+  "files": [
+    "lib/R/library/ini/DESCRIPTION",
+    "lib/R/library/ini/INDEX",
+    "lib/R/library/ini/Meta/Rd.rds",
+    "lib/R/library/ini/Meta/features.rds",
+    "lib/R/library/ini/Meta/hsearch.rds",
+    "lib/R/library/ini/Meta/links.rds",
+    "lib/R/library/ini/Meta/nsInfo.rds",
+    "lib/R/library/ini/Meta/package.rds",
+    "lib/R/library/ini/NAMESPACE",
+    "lib/R/library/ini/NEWS.md",
+    "lib/R/library/ini/R/ini",
+    "lib/R/library/ini/R/ini.rdb",
+    "lib/R/library/ini/R/ini.rdx",
+    "lib/R/library/ini/help/AnIndex",
+    "lib/R/library/ini/help/aliases.rds",
+    "lib/R/library/ini/help/ini.rdb",
+    "lib/R/library/ini/help/ini.rdx",
+    "lib/R/library/ini/help/paths.rds",
+    "lib/R/library/ini/html/00Index.html",
+    "lib/R/library/ini/html/R.css"
+  ],
+  "fn": "r-ini-0.3.1-r42hc72bb7e_1004.tar.bz2",
+  "license": "GPL-3.0-only",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-ini-0.3.1-r42hc72bb7e_1004",
+    "type": 1
+  },
+  "md5": "28a73d861b7296e5e83229a4b2e341ce",
+  "name": "r-ini",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-ini-0.3.1-r42hc72bb7e_1004.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/ini/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "f1a35d9708df70509f7af50c63393922b232d26df52a6ec5c3037c9124b59b8a",
+        "sha256_in_prefix": "f1a35d9708df70509f7af50c63393922b232d26df52a6ec5c3037c9124b59b8a",
+        "size_in_bytes": 739
+      },
+      {
+        "_path": "lib/R/library/ini/INDEX",
+        "path_type": "hardlink",
+        "sha256": "6a4152e999c65a9d3848b2899575dc7aeaf21a4723a7b97590ae8ab8cd62850c",
+        "sha256_in_prefix": "6a4152e999c65a9d3848b2899575dc7aeaf21a4723a7b97590ae8ab8cd62850c",
+        "size_in_bytes": 105
+      },
+      {
+        "_path": "lib/R/library/ini/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "a273f99c51ee0f72ff2154531f6407c0328623f7bd742c5622155bf9499586a1",
+        "sha256_in_prefix": "a273f99c51ee0f72ff2154531f6407c0328623f7bd742c5622155bf9499586a1",
+        "size_in_bytes": 266
+      },
+      {
+        "_path": "lib/R/library/ini/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/ini/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "b13bc9ee61fa1a2e57f16f9e58cc01f2f27ebc45aa840418a69b927bfb95d277",
+        "sha256_in_prefix": "b13bc9ee61fa1a2e57f16f9e58cc01f2f27ebc45aa840418a69b927bfb95d277",
+        "size_in_bytes": 287
+      },
+      {
+        "_path": "lib/R/library/ini/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "eb01922d3d7cade6f4c0d21940ebcde41c217ad81c6927774f19718033192401",
+        "sha256_in_prefix": "eb01922d3d7cade6f4c0d21940ebcde41c217ad81c6927774f19718033192401",
+        "size_in_bytes": 118
+      },
+      {
+        "_path": "lib/R/library/ini/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "d607062e45e529f8726f05065b4016e05b38770c3d043036178e1cc4bbec612c",
+        "sha256_in_prefix": "d607062e45e529f8726f05065b4016e05b38770c3d043036178e1cc4bbec612c",
+        "size_in_bytes": 210
+      },
+      {
+        "_path": "lib/R/library/ini/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "7e1580b5b8b860390b43cc2b3d10cad3f4be030f5bc2945f1cdc9ea15e0f2b40",
+        "sha256_in_prefix": "7e1580b5b8b860390b43cc2b3d10cad3f4be030f5bc2945f1cdc9ea15e0f2b40",
+        "size_in_bytes": 787
+      },
+      {
+        "_path": "lib/R/library/ini/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "cdec8134d156684b1747b4561b5da441eb983ab16ca4e5b81789a896c3e20fcf",
+        "sha256_in_prefix": "cdec8134d156684b1747b4561b5da441eb983ab16ca4e5b81789a896c3e20fcf",
+        "size_in_bytes": 85
+      },
+      {
+        "_path": "lib/R/library/ini/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "354783e72c21f84c7061f3b8b74b948048d29bc9e098a46b2f7b8daf0efc8fc0",
+        "sha256_in_prefix": "354783e72c21f84c7061f3b8b74b948048d29bc9e098a46b2f7b8daf0efc8fc0",
+        "size_in_bytes": 64
+      },
+      {
+        "_path": "lib/R/library/ini/R/ini",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/ini/R/ini.rdb",
+        "path_type": "hardlink",
+        "sha256": "f97e1b7776c2e40d07deb0ba63949baa405b5678258cf507e9243379f564e84a",
+        "sha256_in_prefix": "f97e1b7776c2e40d07deb0ba63949baa405b5678258cf507e9243379f564e84a",
+        "size_in_bytes": 4623
+      },
+      {
+        "_path": "lib/R/library/ini/R/ini.rdx",
+        "path_type": "hardlink",
+        "sha256": "01dc59c353fd7e65ca3f5217da0ab83e58b40f339d501a0ce789a8a8485b77b9",
+        "sha256_in_prefix": "01dc59c353fd7e65ca3f5217da0ab83e58b40f339d501a0ce789a8a8485b77b9",
+        "size_in_bytes": 274
+      },
+      {
+        "_path": "lib/R/library/ini/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "56b6ebe3b84d2c60a1341ecbcf836faf1fe7e7fd6fa32c8ad422a19a7627ade8",
+        "sha256_in_prefix": "56b6ebe3b84d2c60a1341ecbcf836faf1fe7e7fd6fa32c8ad422a19a7627ade8",
+        "size_in_bytes": 38
+      },
+      {
+        "_path": "lib/R/library/ini/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "283131eb478ffc55ca24731cd872c6a5ce0acdb95cb5e8e83ea69585fd0b488b",
+        "sha256_in_prefix": "283131eb478ffc55ca24731cd872c6a5ce0acdb95cb5e8e83ea69585fd0b488b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/R/library/ini/help/ini.rdb",
+        "path_type": "hardlink",
+        "sha256": "ba63579a87d80cc621c445f9819dc041217786454050a21f936ae0c5a15ba71a",
+        "sha256_in_prefix": "ba63579a87d80cc621c445f9819dc041217786454050a21f936ae0c5a15ba71a",
+        "size_in_bytes": 3331
+      },
+      {
+        "_path": "lib/R/library/ini/help/ini.rdx",
+        "path_type": "hardlink",
+        "sha256": "427e5dfc941cec1db7cab6c182e1cd97cdea3bc992c4d984e49cfa8b9a1ec2b3",
+        "sha256_in_prefix": "427e5dfc941cec1db7cab6c182e1cd97cdea3bc992c4d984e49cfa8b9a1ec2b3",
+        "size_in_bytes": 186
+      },
+      {
+        "_path": "lib/R/library/ini/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "e19c43901559777429686f27dec80a6246f8d6966d79640e7de8afaf33c5e3e9",
+        "sha256_in_prefix": "e19c43901559777429686f27dec80a6246f8d6966d79640e7de8afaf33c5e3e9",
+        "size_in_bytes": 169
+      },
+      {
+        "_path": "lib/R/library/ini/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "ada2f612af880c061da0b41e1b2e06e9cde68e94545a28ad8554b60189a2595b",
+        "sha256_in_prefix": "ada2f612af880c061da0b41e1b2e06e9cde68e94545a28ad8554b60189a2595b",
+        "size_in_bytes": 1150
+      },
+      {
+        "_path": "lib/R/library/ini/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "684dc33a5b87f31f5ca8ddf316d4484773605d45dc1c4305a8849f2517aab0d8",
+  "size": 31788,
+  "subdir": "noarch",
+  "timestamp": 1665206083000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-ini-0.3.1-r42hc72bb7e_1004.tar.bz2",
+  "version": "0.3.1"
+}

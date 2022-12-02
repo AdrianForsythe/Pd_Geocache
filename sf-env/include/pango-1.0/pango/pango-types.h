@@ -41,7 +41,9 @@ typedef struct _PangoFontMap PangoFontMap;
 
 typedef struct _PangoRectangle PangoRectangle;
 
+typedef struct _PangoContext PangoContext;
 
+typedef struct _PangoLanguage PangoLanguage;
 
 /* A index of a glyph into a font. Rendering system dependent */
 /**
@@ -103,6 +105,32 @@ typedef guint32 PangoGlyph;
  *
  * PANGO_PIXELS also behaves differently for +512 and -512.
  */
+
+/**
+ * PANGO_UNITS_FLOOR:
+ * @d: a dimension in Pango units.
+ *
+ * Rounds a dimension down to whole device units, but does not
+ * convert it to device units.
+ *
+ * Return value: rounded down dimension in Pango units.
+ * Since: 1.50
+ */
+#define PANGO_UNITS_FLOOR(d)                \
+  ((d) & ~(PANGO_SCALE - 1))
+
+/**
+ * PANGO_UNITS_CEIL:
+ * @d: a dimension in Pango units.
+ *
+ * Rounds a dimension up to whole device units, but does not
+ * convert it to device units.
+ *
+ * Return value: rounded up dimension in Pango units.
+ * Since: 1.50
+ */
+#define PANGO_UNITS_CEIL(d)                 \
+  (((d) + (PANGO_SCALE - 1)) & ~(PANGO_SCALE - 1))
 
 /**
  * PANGO_UNITS_ROUND:

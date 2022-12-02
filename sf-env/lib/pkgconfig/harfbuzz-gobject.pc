@@ -1,10 +1,10 @@
 prefix=/home/adrian/PhD/Pd_Geocache/sf-env
-libdir=${prefix}/lib
 includedir=${prefix}/include
+libdir=${prefix}/lib
 
 Name: harfbuzz-gobject
 Description: HarfBuzz text shaping library GObject integration
-Version: 3.2.0
-Requires: harfbuzz =  3.2.0, glib-2.0, gobject-2.0
+Version: 5.1.0
+Requires: harfbuzz =  5.1.0, glib-2.0, gobject-2.0
 Libs: -L${libdir} -lharfbuzz-gobject
 Cflags: -I${includedir}/harfbuzz

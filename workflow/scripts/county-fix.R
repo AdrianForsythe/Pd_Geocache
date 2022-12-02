@@ -8,15 +8,16 @@ county_fix<-function(all_counties,can_shape,presence_df,presence_poly,united_pol
   require(tidyverse)
   require(maps)
   require(maptools)
+  require(rgdal)
   
   counties = read.csv(all_counties, header = T) %>%
-    separate(1, c("county", "state.province", "Country"), sep = "\t") %>% distinct(),
+    separate(1, c("county", "state.province", "Country"), sep = "\t") %>% distinct()
 
   # Canadian `Counties` shapefile
-  can.shape = readOGR(can_shape),
+  can.shape = readOGR(can_shape)
 
   # USA Counties shape file
-  usa.shape = maps::map("county", regions = unique(counties[counties$Country == "USA", ]$state.province), fill = T),
+  usa.shape = maps::map("county", regions = unique(counties[counties$Country == "USA", ]$state.province), fill = T)
 
   presence.df<-readRDS(presence_df)
   presence.poly<-readRDS(presence_poly)

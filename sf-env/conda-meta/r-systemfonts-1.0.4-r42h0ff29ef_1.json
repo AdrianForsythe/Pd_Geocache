@@ -1,0 +1,295 @@
+{
+  "build": "r42h0ff29ef_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "freetype >=2.12.1,<3.0a0",
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "r-base >=4.2,<4.3.0a0",
+    "r-cpp11"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-systemfonts-1.0.4-r42h0ff29ef_1",
+  "features": "",
+  "files": [
+    "lib/R/library/systemfonts/DESCRIPTION",
+    "lib/R/library/systemfonts/INDEX",
+    "lib/R/library/systemfonts/LICENSE",
+    "lib/R/library/systemfonts/Meta/Rd.rds",
+    "lib/R/library/systemfonts/Meta/features.rds",
+    "lib/R/library/systemfonts/Meta/hsearch.rds",
+    "lib/R/library/systemfonts/Meta/links.rds",
+    "lib/R/library/systemfonts/Meta/nsInfo.rds",
+    "lib/R/library/systemfonts/Meta/package.rds",
+    "lib/R/library/systemfonts/Meta/vignette.rds",
+    "lib/R/library/systemfonts/NAMESPACE",
+    "lib/R/library/systemfonts/NEWS.md",
+    "lib/R/library/systemfonts/R/sysdata.rdb",
+    "lib/R/library/systemfonts/R/sysdata.rdx",
+    "lib/R/library/systemfonts/R/systemfonts",
+    "lib/R/library/systemfonts/R/systemfonts.rdb",
+    "lib/R/library/systemfonts/R/systemfonts.rdx",
+    "lib/R/library/systemfonts/doc/c_interface.R",
+    "lib/R/library/systemfonts/doc/c_interface.Rmd",
+    "lib/R/library/systemfonts/doc/c_interface.html",
+    "lib/R/library/systemfonts/doc/index.html",
+    "lib/R/library/systemfonts/help/AnIndex",
+    "lib/R/library/systemfonts/help/aliases.rds",
+    "lib/R/library/systemfonts/help/paths.rds",
+    "lib/R/library/systemfonts/help/systemfonts.rdb",
+    "lib/R/library/systemfonts/help/systemfonts.rdx",
+    "lib/R/library/systemfonts/html/00Index.html",
+    "lib/R/library/systemfonts/html/R.css",
+    "lib/R/library/systemfonts/include/systemfonts-ft.h",
+    "lib/R/library/systemfonts/include/systemfonts.h",
+    "lib/R/library/systemfonts/libs/systemfonts.so",
+    "lib/R/library/systemfonts/unfont.ttf"
+  ],
+  "fn": "r-systemfonts-1.0.4-r42h0ff29ef_1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-systemfonts-1.0.4-r42h0ff29ef_1",
+    "type": 1
+  },
+  "md5": "ca5ae7dd512ce09c4bd6bcd3380bb423",
+  "name": "r-systemfonts",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-systemfonts-1.0.4-r42h0ff29ef_1.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/systemfonts/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "648b0b1825c22ffd8d77e70233977f4357946ee2aeffbe05e4188d0c681ad181",
+        "sha256_in_prefix": "648b0b1825c22ffd8d77e70233977f4357946ee2aeffbe05e4188d0c681ad181",
+        "size_in_bytes": 2006
+      },
+      {
+        "_path": "lib/R/library/systemfonts/INDEX",
+        "path_type": "hardlink",
+        "sha256": "dc75a48fc76745b356016ebddbd0b78e8082122ee2213922a78a0e2df092b438",
+        "sha256_in_prefix": "dc75a48fc76745b356016ebddbd0b78e8082122ee2213922a78a0e2df092b438",
+        "size_in_bytes": 1024
+      },
+      {
+        "_path": "lib/R/library/systemfonts/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "acfb6000c35dfabf26aeb921361c0a424e39ecd0286992535485abf441e11270",
+        "sha256_in_prefix": "acfb6000c35dfabf26aeb921361c0a424e39ecd0286992535485abf441e11270",
+        "size_in_bytes": 49
+      },
+      {
+        "_path": "lib/R/library/systemfonts/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "fbf3e11879d0814b0ebe04dc331b4bad7877b0f1e44b8a5adbd3a95241e03b89",
+        "sha256_in_prefix": "fbf3e11879d0814b0ebe04dc331b4bad7877b0f1e44b8a5adbd3a95241e03b89",
+        "size_in_bytes": 873
+      },
+      {
+        "_path": "lib/R/library/systemfonts/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/systemfonts/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "db68e0721b52b4e0a887d591a3f75b63c3e9ee5eb52c5b131980c872900f7c79",
+        "sha256_in_prefix": "db68e0721b52b4e0a887d591a3f75b63c3e9ee5eb52c5b131980c872900f7c79",
+        "size_in_bytes": 831
+      },
+      {
+        "_path": "lib/R/library/systemfonts/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "22827b6c3f32de2874821eefed496141068eb9b61cf542c66c3c7536c8a862ba",
+        "sha256_in_prefix": "22827b6c3f32de2874821eefed496141068eb9b61cf542c66c3c7536c8a862ba",
+        "size_in_bytes": 362
+      },
+      {
+        "_path": "lib/R/library/systemfonts/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "ccea8259595d2411021eb3fd2246b02a4c70dbaf6cfe1ff6cce363ec503b31c0",
+        "sha256_in_prefix": "ccea8259595d2411021eb3fd2246b02a4c70dbaf6cfe1ff6cce363ec503b31c0",
+        "size_in_bytes": 437
+      },
+      {
+        "_path": "lib/R/library/systemfonts/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "0f458c8bf683f7e455b1009d446ee65cee19fbde128c03fecaf0841169f733bf",
+        "sha256_in_prefix": "0f458c8bf683f7e455b1009d446ee65cee19fbde128c03fecaf0841169f733bf",
+        "size_in_bytes": 1423
+      },
+      {
+        "_path": "lib/R/library/systemfonts/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "d92910be0a1a03d0a61fc4e9479810d930182818df1f3ee7fd6b564e94578fab",
+        "sha256_in_prefix": "d92910be0a1a03d0a61fc4e9479810d930182818df1f3ee7fd6b564e94578fab",
+        "size_in_bytes": 214
+      },
+      {
+        "_path": "lib/R/library/systemfonts/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "c99537d9c8281cb97559e3476c88203147fedec653bea10757b7f60230abfbe0",
+        "sha256_in_prefix": "c99537d9c8281cb97559e3476c88203147fedec653bea10757b7f60230abfbe0",
+        "size_in_bytes": 498
+      },
+      {
+        "_path": "lib/R/library/systemfonts/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "0cbed852e5fc8cd4300c8bebc7d355534e0ee2ff75bc03d93e75f3cc9b0759c5",
+        "sha256_in_prefix": "0cbed852e5fc8cd4300c8bebc7d355534e0ee2ff75bc03d93e75f3cc9b0759c5",
+        "size_in_bytes": 3369
+      },
+      {
+        "_path": "lib/R/library/systemfonts/R/sysdata.rdb",
+        "path_type": "hardlink",
+        "sha256": "1bc729182715d0f2c75992c26b52ace308571b275df5ff8a17d96efb9a267e5b",
+        "sha256_in_prefix": "1bc729182715d0f2c75992c26b52ace308571b275df5ff8a17d96efb9a267e5b",
+        "size_in_bytes": 8390
+      },
+      {
+        "_path": "lib/R/library/systemfonts/R/sysdata.rdx",
+        "path_type": "hardlink",
+        "sha256": "84a2b520634f82903ac60100eee91eb7544c649212ac1953d2e35c206ee36543",
+        "sha256_in_prefix": "84a2b520634f82903ac60100eee91eb7544c649212ac1953d2e35c206ee36543",
+        "size_in_bytes": 183
+      },
+      {
+        "_path": "lib/R/library/systemfonts/R/systemfonts",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/systemfonts/R/systemfonts.rdb",
+        "path_type": "hardlink",
+        "sha256": "75c4dffdae5171b95add00ecf4084dd9668365076d161c3be2ae4c449988eb37",
+        "sha256_in_prefix": "75c4dffdae5171b95add00ecf4084dd9668365076d161c3be2ae4c449988eb37",
+        "size_in_bytes": 36695
+      },
+      {
+        "_path": "lib/R/library/systemfonts/R/systemfonts.rdx",
+        "path_type": "hardlink",
+        "sha256": "2fb6d1bb4e0635203eea4e82d00bc1e7ca01130addeaa13f95a6513ba87fe60d",
+        "sha256_in_prefix": "2fb6d1bb4e0635203eea4e82d00bc1e7ca01130addeaa13f95a6513ba87fe60d",
+        "size_in_bytes": 852
+      },
+      {
+        "_path": "lib/R/library/systemfonts/doc/c_interface.R",
+        "path_type": "hardlink",
+        "sha256": "1850a521db444ef00a72fd2323d35adaeeda14cfd8f4e2203ff25bf471cf5ed8",
+        "sha256_in_prefix": "1850a521db444ef00a72fd2323d35adaeeda14cfd8f4e2203ff25bf471cf5ed8",
+        "size_in_bytes": 246
+      },
+      {
+        "_path": "lib/R/library/systemfonts/doc/c_interface.Rmd",
+        "path_type": "hardlink",
+        "sha256": "1168a143cb36752e5c096178128c12beadfc101bf5ed4f11ed02dace5972702b",
+        "sha256_in_prefix": "1168a143cb36752e5c096178128c12beadfc101bf5ed4f11ed02dace5972702b",
+        "size_in_bytes": 7812
+      },
+      {
+        "_path": "lib/R/library/systemfonts/doc/c_interface.html",
+        "path_type": "hardlink",
+        "sha256": "7b9a994d29db5922b032016a2189532db0f664f97cb4131c6dbf3b75e3febd24",
+        "sha256_in_prefix": "7b9a994d29db5922b032016a2189532db0f664f97cb4131c6dbf3b75e3febd24",
+        "size_in_bytes": 31276
+      },
+      {
+        "_path": "lib/R/library/systemfonts/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "490310f5bd33a3c1d7e3b08c05115e428368a7f5415410cc3a63f638185ccd2d",
+        "sha256_in_prefix": "490310f5bd33a3c1d7e3b08c05115e428368a7f5415410cc3a63f638185ccd2d",
+        "size_in_bytes": 1434
+      },
+      {
+        "_path": "lib/R/library/systemfonts/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "b4e377ae5248a36c66b5bcf883259a382286b686f8c7735ca1c52a92b008ff13",
+        "sha256_in_prefix": "b4e377ae5248a36c66b5bcf883259a382286b686f8c7735ca1c52a92b008ff13",
+        "size_in_bytes": 554
+      },
+      {
+        "_path": "lib/R/library/systemfonts/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "f6e2e41006e5a570cfb0206da23b9044baf25ef792faa2c3c8597588289edfa0",
+        "sha256_in_prefix": "f6e2e41006e5a570cfb0206da23b9044baf25ef792faa2c3c8597588289edfa0",
+        "size_in_bytes": 262
+      },
+      {
+        "_path": "lib/R/library/systemfonts/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "79fca9b9e2008aeb6a532fc97bd64d21d5ebfac185052ad3b94d4be547ce7369",
+        "sha256_in_prefix": "79fca9b9e2008aeb6a532fc97bd64d21d5ebfac185052ad3b94d4be547ce7369",
+        "size_in_bytes": 315
+      },
+      {
+        "_path": "lib/R/library/systemfonts/help/systemfonts.rdb",
+        "path_type": "hardlink",
+        "sha256": "92c7e69fbe96b92ed7227d1e32a0ac94d2cceeed10333bb76148087cf867af28",
+        "sha256_in_prefix": "92c7e69fbe96b92ed7227d1e32a0ac94d2cceeed10333bb76148087cf867af28",
+        "size_in_bytes": 41545
+      },
+      {
+        "_path": "lib/R/library/systemfonts/help/systemfonts.rdx",
+        "path_type": "hardlink",
+        "sha256": "716c16991c2aa88119bf85b501b1a3af914c5b7c8d4b9f57b55dd1c860c1d3dc",
+        "sha256_in_prefix": "716c16991c2aa88119bf85b501b1a3af914c5b7c8d4b9f57b55dd1c860c1d3dc",
+        "size_in_bytes": 536
+      },
+      {
+        "_path": "lib/R/library/systemfonts/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "6b8507efd6402febc6137e992c747a12035d6f83108c42e41005711403c5f258",
+        "sha256_in_prefix": "6b8507efd6402febc6137e992c747a12035d6f83108c42e41005711403c5f258",
+        "size_in_bytes": 3206
+      },
+      {
+        "_path": "lib/R/library/systemfonts/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/systemfonts/include/systemfonts-ft.h",
+        "path_type": "hardlink",
+        "sha256": "23b2fdbd877050065d2f88ea8d20be95e975d3bf05d809a1017fa1c11f65e4da",
+        "sha256_in_prefix": "23b2fdbd877050065d2f88ea8d20be95e975d3bf05d809a1017fa1c11f65e4da",
+        "size_in_bytes": 831
+      },
+      {
+        "_path": "lib/R/library/systemfonts/include/systemfonts.h",
+        "path_type": "hardlink",
+        "sha256": "ddd60b4d3466f3ba935e19354f28bfa76cf636cc38dbc63ae5cd77b123d800f8",
+        "sha256_in_prefix": "ddd60b4d3466f3ba935e19354f28bfa76cf636cc38dbc63ae5cd77b123d800f8",
+        "size_in_bytes": 5747
+      },
+      {
+        "_path": "lib/R/library/systemfonts/libs/systemfonts.so",
+        "path_type": "hardlink",
+        "sha256": "cb0f84048c29ffc6eefec97c395224a936c6fa68c9fac4c12273281a8ef65afe",
+        "sha256_in_prefix": "cb0f84048c29ffc6eefec97c395224a936c6fa68c9fac4c12273281a8ef65afe",
+        "size_in_bytes": 470352
+      },
+      {
+        "_path": "lib/R/library/systemfonts/unfont.ttf",
+        "path_type": "hardlink",
+        "sha256": "6a57346b0a8f604df5d718f37df9efd8e0d4f858c89daeab6d85603bdb7cceca",
+        "sha256_in_prefix": "6a57346b0a8f604df5d718f37df9efd8e0d4f858c89daeab6d85603bdb7cceca",
+        "size_in_bytes": 1604
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "64b6ff3561e6cd582ce98e61ee750ac79eb6399708dc0bcbfbc4d94f60f8d45e",
+  "size": 286993,
+  "subdir": "linux-64",
+  "timestamp": 1665202149000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-systemfonts-1.0.4-r42h0ff29ef_1.tar.bz2",
+  "version": "1.0.4"
+}

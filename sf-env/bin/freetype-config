@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# Copyright (C) 2000-2021 by
+# Copyright (C) 2000-2022 by
 # David Turner, Robert Wilhelm, and Werner Lemberg.
 #
 # This file is part of the FreeType project, and may only be used, modified,
@@ -41,7 +41,7 @@ else
   includedir="/home/adrian/PhD/Pd_Geocache/sf-env/include"
   libdir="/home/adrian/PhD/Pd_Geocache/sf-env/lib"
 
-  version=24.0.18
+  version=24.3.18
 
   cflags="-I${SYSROOT}$includedir/freetype2"
   dynamic_libs="-lfreetype"

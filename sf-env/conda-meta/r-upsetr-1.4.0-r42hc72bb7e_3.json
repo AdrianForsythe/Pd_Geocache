@@ -1,0 +1,337 @@
+{
+  "build": "r42hc72bb7e_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.2,<4.3.0a0",
+    "r-ggplot2",
+    "r-gridextra",
+    "r-plyr",
+    "r-scales"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-upsetr-1.4.0-r42hc72bb7e_3",
+  "features": "",
+  "files": [
+    "lib/R/library/UpSetR/DESCRIPTION",
+    "lib/R/library/UpSetR/INDEX",
+    "lib/R/library/UpSetR/LICENSE",
+    "lib/R/library/UpSetR/Meta/Rd.rds",
+    "lib/R/library/UpSetR/Meta/features.rds",
+    "lib/R/library/UpSetR/Meta/hsearch.rds",
+    "lib/R/library/UpSetR/Meta/links.rds",
+    "lib/R/library/UpSetR/Meta/nsInfo.rds",
+    "lib/R/library/UpSetR/Meta/package.rds",
+    "lib/R/library/UpSetR/Meta/vignette.rds",
+    "lib/R/library/UpSetR/NAMESPACE",
+    "lib/R/library/UpSetR/NEWS",
+    "lib/R/library/UpSetR/R/UpSetR",
+    "lib/R/library/UpSetR/R/UpSetR.rdb",
+    "lib/R/library/UpSetR/R/UpSetR.rdx",
+    "lib/R/library/UpSetR/doc/attribute.plots.R",
+    "lib/R/library/UpSetR/doc/attribute.plots.Rmd",
+    "lib/R/library/UpSetR/doc/attribute.plots.html",
+    "lib/R/library/UpSetR/doc/basic.usage.R",
+    "lib/R/library/UpSetR/doc/basic.usage.Rmd",
+    "lib/R/library/UpSetR/doc/basic.usage.html",
+    "lib/R/library/UpSetR/doc/index.html",
+    "lib/R/library/UpSetR/doc/queries.R",
+    "lib/R/library/UpSetR/doc/queries.Rmd",
+    "lib/R/library/UpSetR/doc/queries.html",
+    "lib/R/library/UpSetR/doc/set.metadata.plots.R",
+    "lib/R/library/UpSetR/doc/set.metadata.plots.Rmd",
+    "lib/R/library/UpSetR/doc/set.metadata.plots.html",
+    "lib/R/library/UpSetR/extdata/movies.csv",
+    "lib/R/library/UpSetR/extdata/mutations.csv",
+    "lib/R/library/UpSetR/help/AnIndex",
+    "lib/R/library/UpSetR/help/UpSetR.rdb",
+    "lib/R/library/UpSetR/help/UpSetR.rdx",
+    "lib/R/library/UpSetR/help/aliases.rds",
+    "lib/R/library/UpSetR/help/paths.rds",
+    "lib/R/library/UpSetR/html/00Index.html",
+    "lib/R/library/UpSetR/html/R.css"
+  ],
+  "fn": "r-upsetr-1.4.0-r42hc72bb7e_3.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-upsetr-1.4.0-r42hc72bb7e_3",
+    "type": 1
+  },
+  "md5": "35260846d9060755afdfc3e15d137870",
+  "name": "r-upsetr",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-upsetr-1.4.0-r42hc72bb7e_3.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/UpSetR/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "f1176b08d5a47a407f3404c714d21c60ed87b8b16181e427b0a2c20c33b54353",
+        "sha256_in_prefix": "f1176b08d5a47a407f3404c714d21c60ed87b8b16181e427b0a2c20c33b54353",
+        "size_in_bytes": 1133
+      },
+      {
+        "_path": "lib/R/library/UpSetR/INDEX",
+        "path_type": "hardlink",
+        "sha256": "75ffd8882dc397d63a22f3153688579b64cff8c66f26d092abb8efa032da70a3",
+        "sha256_in_prefix": "75ffd8882dc397d63a22f3153688579b64cff8c66f26d092abb8efa032da70a3",
+        "size_in_bytes": 384
+      },
+      {
+        "_path": "lib/R/library/UpSetR/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "a0091c0ae715bf6da59465fa1c1ab989d8b63964d6557b8e343b43e423080604",
+        "sha256_in_prefix": "a0091c0ae715bf6da59465fa1c1ab989d8b63964d6557b8e343b43e423080604",
+        "size_in_bytes": 83
+      },
+      {
+        "_path": "lib/R/library/UpSetR/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "b6da8381321b0d03ebd4c885286aa275dbe6c52213253a7684705a5723b53ad7",
+        "sha256_in_prefix": "b6da8381321b0d03ebd4c885286aa275dbe6c52213253a7684705a5723b53ad7",
+        "size_in_bytes": 430
+      },
+      {
+        "_path": "lib/R/library/UpSetR/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/UpSetR/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "92d7384897df6f0a5ebc1e963cda20f78f30cfa95f258520b8b29ea8b4eadc47",
+        "sha256_in_prefix": "92d7384897df6f0a5ebc1e963cda20f78f30cfa95f258520b8b29ea8b4eadc47",
+        "size_in_bytes": 424
+      },
+      {
+        "_path": "lib/R/library/UpSetR/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "34d185a8e03bd7392450488bf31c94cfa7abee36f405cb5675f39dc1365ccf02",
+        "sha256_in_prefix": "34d185a8e03bd7392450488bf31c94cfa7abee36f405cb5675f39dc1365ccf02",
+        "size_in_bytes": 212
+      },
+      {
+        "_path": "lib/R/library/UpSetR/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "c745119f4a8af43be940f49033333960735ad1d7cddd19cbbffcb5728e1e5c55",
+        "sha256_in_prefix": "c745119f4a8af43be940f49033333960735ad1d7cddd19cbbffcb5728e1e5c55",
+        "size_in_bytes": 403
+      },
+      {
+        "_path": "lib/R/library/UpSetR/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "173492e2fa6bf2481a3435cc1eedcfe26e6b23e2f2c8d5b8a2c2c786f37c8838",
+        "sha256_in_prefix": "173492e2fa6bf2481a3435cc1eedcfe26e6b23e2f2c8d5b8a2c2c786f37c8838",
+        "size_in_bytes": 1143
+      },
+      {
+        "_path": "lib/R/library/UpSetR/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "23706c643a00bbeff8749b59568642def2469ecacb571a02beea36b049d3bc67",
+        "sha256_in_prefix": "23706c643a00bbeff8749b59568642def2469ecacb571a02beea36b049d3bc67",
+        "size_in_bytes": 315
+      },
+      {
+        "_path": "lib/R/library/UpSetR/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "f8f90407af7d1f63b3c5a9ee5fecbb36a196d1c51f2a7482261c739db34e7572",
+        "sha256_in_prefix": "f8f90407af7d1f63b3c5a9ee5fecbb36a196d1c51f2a7482261c739db34e7572",
+        "size_in_bytes": 576
+      },
+      {
+        "_path": "lib/R/library/UpSetR/NEWS",
+        "path_type": "hardlink",
+        "sha256": "f6c59f7499c612b3a3675d0ce61c4e76ac27e8a6f32b06bf6e63617c0979e86c",
+        "sha256_in_prefix": "f6c59f7499c612b3a3675d0ce61c4e76ac27e8a6f32b06bf6e63617c0979e86c",
+        "size_in_bytes": 4993
+      },
+      {
+        "_path": "lib/R/library/UpSetR/R/UpSetR",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/UpSetR/R/UpSetR.rdb",
+        "path_type": "hardlink",
+        "sha256": "70b896a138d91cb16acfb8a52ad11ba86296197dc5cdc927b9f6fb6e1912e440",
+        "sha256_in_prefix": "70b896a138d91cb16acfb8a52ad11ba86296197dc5cdc927b9f6fb6e1912e440",
+        "size_in_bytes": 123122
+      },
+      {
+        "_path": "lib/R/library/UpSetR/R/UpSetR.rdx",
+        "path_type": "hardlink",
+        "sha256": "73827621da666bae14a3408087756b03efe46ee7750903f99b8ba4deda563c29",
+        "sha256_in_prefix": "73827621da666bae14a3408087756b03efe46ee7750903f99b8ba4deda563c29",
+        "size_in_bytes": 1119
+      },
+      {
+        "_path": "lib/R/library/UpSetR/doc/attribute.plots.R",
+        "path_type": "hardlink",
+        "sha256": "ff99edb08ab678ca937482fab76ad3852b285e7746da8769ae72f77b6410ab77",
+        "sha256_in_prefix": "ff99edb08ab678ca937482fab76ad3852b285e7746da8769ae72f77b6410ab77",
+        "size_in_bytes": 3316
+      },
+      {
+        "_path": "lib/R/library/UpSetR/doc/attribute.plots.Rmd",
+        "path_type": "hardlink",
+        "sha256": "4c521e8167b06279391ede419eac6d5b9d2159d209f86a1437bba5f917e6cfa4",
+        "sha256_in_prefix": "4c521e8167b06279391ede419eac6d5b9d2159d209f86a1437bba5f917e6cfa4",
+        "size_in_bytes": 6271
+      },
+      {
+        "_path": "lib/R/library/UpSetR/doc/attribute.plots.html",
+        "path_type": "hardlink",
+        "sha256": "8fd7e7a1deb018d55d51350d8e77d974bd023a44714d24b8a70e0a68a5f21214",
+        "sha256_in_prefix": "8fd7e7a1deb018d55d51350d8e77d974bd023a44714d24b8a70e0a68a5f21214",
+        "size_in_bytes": 2014269
+      },
+      {
+        "_path": "lib/R/library/UpSetR/doc/basic.usage.R",
+        "path_type": "hardlink",
+        "sha256": "d671058461fd7231c4a5a0fa73d9b70c6b8cb9995b0dd33e05b42f3bb235f422",
+        "sha256_in_prefix": "d671058461fd7231c4a5a0fa73d9b70c6b8cb9995b0dd33e05b42f3bb235f422",
+        "size_in_bytes": 2481
+      },
+      {
+        "_path": "lib/R/library/UpSetR/doc/basic.usage.Rmd",
+        "path_type": "hardlink",
+        "sha256": "c37a8602b8d0b465cb279db6728e82bc6c575f719b27b42acac6498493c43b74",
+        "sha256_in_prefix": "c37a8602b8d0b465cb279db6728e82bc6c575f719b27b42acac6498493c43b74",
+        "size_in_bytes": 5743
+      },
+      {
+        "_path": "lib/R/library/UpSetR/doc/basic.usage.html",
+        "path_type": "hardlink",
+        "sha256": "5283069769cb094ec5dc06a5c26a786058bfab605e0242d96375c7cdb4a72dfd",
+        "sha256_in_prefix": "5283069769cb094ec5dc06a5c26a786058bfab605e0242d96375c7cdb4a72dfd",
+        "size_in_bytes": 2075083
+      },
+      {
+        "_path": "lib/R/library/UpSetR/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "3efe956fa09a2706e827189a1ec0407a0eb7d5a79d0f074a8948aea83b8433aa",
+        "sha256_in_prefix": "3efe956fa09a2706e827189a1ec0407a0eb7d5a79d0f074a8948aea83b8433aa",
+        "size_in_bytes": 3042
+      },
+      {
+        "_path": "lib/R/library/UpSetR/doc/queries.R",
+        "path_type": "hardlink",
+        "sha256": "784ea6faab25d8010228c272297ed315cab10ddd0324f7c8fc7434b058fbc257",
+        "sha256_in_prefix": "784ea6faab25d8010228c272297ed315cab10ddd0324f7c8fc7434b058fbc257",
+        "size_in_bytes": 2560
+      },
+      {
+        "_path": "lib/R/library/UpSetR/doc/queries.Rmd",
+        "path_type": "hardlink",
+        "sha256": "db115d024dd0eff0e5aa49750ab343a3b081b13ae14f7dc4c407d29b11493bd3",
+        "sha256_in_prefix": "db115d024dd0eff0e5aa49750ab343a3b081b13ae14f7dc4c407d29b11493bd3",
+        "size_in_bytes": 5056
+      },
+      {
+        "_path": "lib/R/library/UpSetR/doc/queries.html",
+        "path_type": "hardlink",
+        "sha256": "b657ba06d22d8065f763f62d78d16ba1bd633f37a281e9342266a7ec1a529867",
+        "sha256_in_prefix": "b657ba06d22d8065f763f62d78d16ba1bd633f37a281e9342266a7ec1a529867",
+        "size_in_bytes": 1579995
+      },
+      {
+        "_path": "lib/R/library/UpSetR/doc/set.metadata.plots.R",
+        "path_type": "hardlink",
+        "sha256": "eea457789cbc38aa7d58c8e04118c5753f88bf527f596d2636b498896ce05aa6",
+        "sha256_in_prefix": "eea457789cbc38aa7d58c8e04118c5753f88bf527f596d2636b498896ce05aa6",
+        "size_in_bytes": 4557
+      },
+      {
+        "_path": "lib/R/library/UpSetR/doc/set.metadata.plots.Rmd",
+        "path_type": "hardlink",
+        "sha256": "1280895adbffc111c3df07949c73a38764ecfc772e9542f49b8e2edb97998d67",
+        "sha256_in_prefix": "1280895adbffc111c3df07949c73a38764ecfc772e9542f49b8e2edb97998d67",
+        "size_in_bytes": 10103
+      },
+      {
+        "_path": "lib/R/library/UpSetR/doc/set.metadata.plots.html",
+        "path_type": "hardlink",
+        "sha256": "2d32f31ac98e326b597d997c31a23490977e13bc81c5fa6cd162bca84f416c6c",
+        "sha256_in_prefix": "2d32f31ac98e326b597d997c31a23490977e13bc81c5fa6cd162bca84f416c6c",
+        "size_in_bytes": 2190399
+      },
+      {
+        "_path": "lib/R/library/UpSetR/extdata/movies.csv",
+        "path_type": "hardlink",
+        "sha256": "9455a6ad150ac5ad532d982f94e5b688eb4956b58aaa69acca5c7094347f44ea",
+        "sha256_in_prefix": "9455a6ad150ac5ad532d982f94e5b688eb4956b58aaa69acca5c7094347f44ea",
+        "size_in_bytes": 281227
+      },
+      {
+        "_path": "lib/R/library/UpSetR/extdata/mutations.csv",
+        "path_type": "hardlink",
+        "sha256": "7884743469a46cca4d26a5d54875aa06fe3ae8f83a5639c4162facb2dddf9c88",
+        "sha256_in_prefix": "7884743469a46cca4d26a5d54875aa06fe3ae8f83a5639c4162facb2dddf9c88",
+        "size_in_bytes": 59680
+      },
+      {
+        "_path": "lib/R/library/UpSetR/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "5b33cbc2f32e0e332edbac383e5bc7051912bb08e6e59feab90110e5734a6083",
+        "sha256_in_prefix": "5b33cbc2f32e0e332edbac383e5bc7051912bb08e6e59feab90110e5734a6083",
+        "size_in_bytes": 146
+      },
+      {
+        "_path": "lib/R/library/UpSetR/help/UpSetR.rdb",
+        "path_type": "hardlink",
+        "sha256": "e204606ff609a7ac0bf709301c2b82d0f56ee4c2907267959bfd2c773cfafed4",
+        "sha256_in_prefix": "e204606ff609a7ac0bf709301c2b82d0f56ee4c2907267959bfd2c773cfafed4",
+        "size_in_bytes": 15172
+      },
+      {
+        "_path": "lib/R/library/UpSetR/help/UpSetR.rdx",
+        "path_type": "hardlink",
+        "sha256": "c11d32a60e61a0732a479da997aa72a741963ceb21a67e41887c6844f85a0bb7",
+        "sha256_in_prefix": "c11d32a60e61a0732a479da997aa72a741963ceb21a67e41887c6844f85a0bb7",
+        "size_in_bytes": 317
+      },
+      {
+        "_path": "lib/R/library/UpSetR/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "f5fc2e789db8862fcee296cd7c94a624c047281ecc04dbb7581cd78ba753b5fc",
+        "sha256_in_prefix": "f5fc2e789db8862fcee296cd7c94a624c047281ecc04dbb7581cd78ba753b5fc",
+        "size_in_bytes": 147
+      },
+      {
+        "_path": "lib/R/library/UpSetR/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "6ad6b33e91db04c50603493eb8fbf185ccfff2c5b3474cb23e0104d6b898a404",
+        "sha256_in_prefix": "6ad6b33e91db04c50603493eb8fbf185ccfff2c5b3474cb23e0104d6b898a404",
+        "size_in_bytes": 236
+      },
+      {
+        "_path": "lib/R/library/UpSetR/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "4003e76dac36d9abc659a6561812301a3fdb6b8386ec571997b2bccf3475b010",
+        "sha256_in_prefix": "4003e76dac36d9abc659a6561812301a3fdb6b8386ec571997b2bccf3475b010",
+        "size_in_bytes": 2014
+      },
+      {
+        "_path": "lib/R/library/UpSetR/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "dd767dd377fb7cd6e381227f7ba8f0c5278bf32947cd079a9a4965f0eff07906",
+  "size": 4238169,
+  "subdir": "noarch",
+  "timestamp": 1665538671000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-upsetr-1.4.0-r42hc72bb7e_3.tar.bz2",
+  "version": "1.4.0"
+}

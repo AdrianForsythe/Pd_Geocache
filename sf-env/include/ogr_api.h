@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: ogr_api.h 1e4510d0d88bbf73885b7f18b79f50d5a6696131 2021-08-21 19:26:01 +0200 Even Rouault $
+ * $Id$
  *
  * Project:  OpenGIS Simple Features Reference Implementation
  * Purpose:  C API for OGR Geometry, Feature, Layers, DataSource and drivers.
@@ -446,6 +446,7 @@ OGRErr CPL_DLL OGR_F_SetGeometryDirectly( OGRFeatureH, OGRGeometryH );
 OGRErr CPL_DLL OGR_F_SetGeometry( OGRFeatureH, OGRGeometryH );
 OGRGeometryH CPL_DLL OGR_F_GetGeometryRef( OGRFeatureH );
 OGRGeometryH CPL_DLL OGR_F_StealGeometry( OGRFeatureH ) CPL_WARN_UNUSED_RESULT;
+OGRGeometryH CPL_DLL OGR_F_StealGeometryEx( OGRFeatureH, int iGeomField ) CPL_WARN_UNUSED_RESULT;
 OGRFeatureH CPL_DLL OGR_F_Clone( OGRFeatureH ) CPL_WARN_UNUSED_RESULT;
 int    CPL_DLL OGR_F_Equal( OGRFeatureH, OGRFeatureH );
 
@@ -491,7 +492,7 @@ void   CPL_DLL OGR_F_SetFieldIntegerList( OGRFeatureH, int, int, const int * );
 void   CPL_DLL OGR_F_SetFieldInteger64List( OGRFeatureH, int, int, const GIntBig * );
 void   CPL_DLL OGR_F_SetFieldDoubleList( OGRFeatureH, int, int, const double * );
 void   CPL_DLL OGR_F_SetFieldStringList( OGRFeatureH, int, CSLConstList );
-void   CPL_DLL OGR_F_SetFieldRaw( OGRFeatureH, int, OGRField * );
+void   CPL_DLL OGR_F_SetFieldRaw( OGRFeatureH, int, const OGRField * );
 void   CPL_DLL OGR_F_SetFieldBinary( OGRFeatureH, int, int, const void * );
 void   CPL_DLL OGR_F_SetFieldDateTime( OGRFeatureH, int,
                                        int, int, int, int, int, int, int );
@@ -610,8 +611,6 @@ OGRErr CPL_DLL OGR_L_SetAttributeFilter( OGRLayerH, const char * );
 void   CPL_DLL OGR_L_ResetReading( OGRLayerH );
 OGRFeatureH CPL_DLL OGR_L_GetNextFeature( OGRLayerH ) CPL_WARN_UNUSED_RESULT;
 
-/*! @endcond */
-
 /** Conveniency macro to iterate over features of a layer.
  *
  * Typical usage is:
@@ -679,6 +678,8 @@ OGRErr CPL_DLL OGR_L_AlterFieldDefn( OGRLayerH, int iField, OGRFieldDefnH hNewFi
 OGRErr CPL_DLL OGR_L_StartTransaction( OGRLayerH )  CPL_WARN_UNUSED_RESULT;
 OGRErr CPL_DLL OGR_L_CommitTransaction( OGRLayerH )  CPL_WARN_UNUSED_RESULT;
 OGRErr CPL_DLL OGR_L_RollbackTransaction( OGRLayerH );
+OGRErr CPL_DLL OGR_L_Rename( OGRLayerH hLayer, const char* pszNewName );
+
 /*! @cond Doxygen_Suppress */
 int    CPL_DLL OGR_L_Reference( OGRLayerH );
 int    CPL_DLL OGR_L_Dereference( OGRLayerH );

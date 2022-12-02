@@ -79,6 +79,15 @@ GType poppler_pdf_conformance_get_type (void) G_GNUC_CONST;
 
 /* enumerations from "poppler-form-field.h" */
 POPPLER_PUBLIC
+GType poppler_signature_status_get_type (void) G_GNUC_CONST;
+#define POPPLER_TYPE_SIGNATURE_STATUS (poppler_signature_status_get_type ())
+POPPLER_PUBLIC
+GType poppler_certificate_status_get_type (void) G_GNUC_CONST;
+#define POPPLER_TYPE_CERTIFICATE_STATUS (poppler_certificate_status_get_type ())
+POPPLER_PUBLIC
+GType poppler_signature_validation_flags_get_type (void) G_GNUC_CONST;
+#define POPPLER_TYPE_SIGNATURE_VALIDATION_FLAGS (poppler_signature_validation_flags_get_type ())
+POPPLER_PUBLIC
 GType poppler_form_field_type_get_type (void) G_GNUC_CONST;
 #define POPPLER_TYPE_FORM_FIELD_TYPE (poppler_form_field_type_get_type ())
 POPPLER_PUBLIC

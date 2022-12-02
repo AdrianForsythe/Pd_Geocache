@@ -1,0 +1,199 @@
+{
+  "build": "r42hc72bb7e_1003",
+  "build_number": 1003,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.2,<4.3.0a0",
+    "r-htmltools >=0.3",
+    "r-shiny >=0.13"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-miniui-0.1.1.1-r42hc72bb7e_1003",
+  "features": "",
+  "files": [
+    "lib/R/library/miniUI/DESCRIPTION",
+    "lib/R/library/miniUI/INDEX",
+    "lib/R/library/miniUI/Meta/Rd.rds",
+    "lib/R/library/miniUI/Meta/features.rds",
+    "lib/R/library/miniUI/Meta/hsearch.rds",
+    "lib/R/library/miniUI/Meta/links.rds",
+    "lib/R/library/miniUI/Meta/nsInfo.rds",
+    "lib/R/library/miniUI/Meta/package.rds",
+    "lib/R/library/miniUI/NAMESPACE",
+    "lib/R/library/miniUI/R/miniUI",
+    "lib/R/library/miniUI/R/miniUI.rdb",
+    "lib/R/library/miniUI/R/miniUI.rdx",
+    "lib/R/library/miniUI/help/AnIndex",
+    "lib/R/library/miniUI/help/aliases.rds",
+    "lib/R/library/miniUI/help/miniUI.rdb",
+    "lib/R/library/miniUI/help/miniUI.rdx",
+    "lib/R/library/miniUI/help/paths.rds",
+    "lib/R/library/miniUI/html/00Index.html",
+    "lib/R/library/miniUI/html/R.css",
+    "lib/R/library/miniUI/www/miniUI.css"
+  ],
+  "fn": "r-miniui-0.1.1.1-r42hc72bb7e_1003.tar.bz2",
+  "license": "GPL-3.0-only",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-miniui-0.1.1.1-r42hc72bb7e_1003",
+    "type": 1
+  },
+  "md5": "ddc0dcdce39bfe3198a50b1a2ba718ce",
+  "name": "r-miniui",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-miniui-0.1.1.1-r42hc72bb7e_1003.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/miniUI/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "2dd73545e147f14b3aa3a308544554254c77cbcd0020a1a6db619ef0dc4a1b4b",
+        "sha256_in_prefix": "2dd73545e147f14b3aa3a308544554254c77cbcd0020a1a6db619ef0dc4a1b4b",
+        "size_in_bytes": 703
+      },
+      {
+        "_path": "lib/R/library/miniUI/INDEX",
+        "path_type": "hardlink",
+        "sha256": "91d680990d1321eb51d5d23d8cc77b3b4cd311f91a4ea8d1366dfc7501a1d469",
+        "sha256_in_prefix": "91d680990d1321eb51d5d23d8cc77b3b4cd311f91a4ea8d1366dfc7501a1d469",
+        "size_in_bytes": 256
+      },
+      {
+        "_path": "lib/R/library/miniUI/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "6185df29312125b5c6f1f17191ba33c8407eb9a98e36cbc82814801df2a9e531",
+        "sha256_in_prefix": "6185df29312125b5c6f1f17191ba33c8407eb9a98e36cbc82814801df2a9e531",
+        "size_in_bytes": 414
+      },
+      {
+        "_path": "lib/R/library/miniUI/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/miniUI/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "ac32da76134312b65a833c87c7103dfde3d6ffd948a90243deaa1b6716d9b527",
+        "sha256_in_prefix": "ac32da76134312b65a833c87c7103dfde3d6ffd948a90243deaa1b6716d9b527",
+        "size_in_bytes": 432
+      },
+      {
+        "_path": "lib/R/library/miniUI/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "7a9a8817ca1bb7d680e77344e72128a437aed8fb3c944c0e65a2b36e57937518",
+        "sha256_in_prefix": "7a9a8817ca1bb7d680e77344e72128a437aed8fb3c944c0e65a2b36e57937518",
+        "size_in_bytes": 222
+      },
+      {
+        "_path": "lib/R/library/miniUI/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "c1c5fefb8db698efd0945ce17aa33bda0d77d5b0c31d9ef70690c96cb87e12b3",
+        "sha256_in_prefix": "c1c5fefb8db698efd0945ce17aa33bda0d77d5b0c31d9ef70690c96cb87e12b3",
+        "size_in_bytes": 283
+      },
+      {
+        "_path": "lib/R/library/miniUI/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "ace64fa4fc92931a389a353486466980924be890b30c46b84ec0f3360c1d7068",
+        "sha256_in_prefix": "ace64fa4fc92931a389a353486466980924be890b30c46b84ec0f3360c1d7068",
+        "size_in_bytes": 849
+      },
+      {
+        "_path": "lib/R/library/miniUI/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "3d22aead3936cb6fa1b193b37755ad1fef153bc08a44a4b9e2a5d9aa98a15ce8",
+        "sha256_in_prefix": "3d22aead3936cb6fa1b193b37755ad1fef153bc08a44a4b9e2a5d9aa98a15ce8",
+        "size_in_bytes": 277
+      },
+      {
+        "_path": "lib/R/library/miniUI/R/miniUI",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/miniUI/R/miniUI.rdb",
+        "path_type": "hardlink",
+        "sha256": "948285daa5c02ca29fefd1c4b435bbe71e85f6c263121ac2f719d2d1e23675bd",
+        "sha256_in_prefix": "948285daa5c02ca29fefd1c4b435bbe71e85f6c263121ac2f719d2d1e23675bd",
+        "size_in_bytes": 14343
+      },
+      {
+        "_path": "lib/R/library/miniUI/R/miniUI.rdx",
+        "path_type": "hardlink",
+        "sha256": "d733dd8c30d081e3f30009c5fb90d36b18512bb3362c0a5868eb814430c7bbba",
+        "sha256_in_prefix": "d733dd8c30d081e3f30009c5fb90d36b18512bb3362c0a5868eb814430c7bbba",
+        "size_in_bytes": 491
+      },
+      {
+        "_path": "lib/R/library/miniUI/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "93c2c0d6f04e471aac8cb212a7319c578f07e775d3720f0392642718a8c5d442",
+        "sha256_in_prefix": "93c2c0d6f04e471aac8cb212a7319c578f07e775d3720f0392642718a8c5d442",
+        "size_in_bytes": 275
+      },
+      {
+        "_path": "lib/R/library/miniUI/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "41b9d3a3b2beca8c1ce3815ff82782b9a65bae22d099c772784b57433a7f947f",
+        "sha256_in_prefix": "41b9d3a3b2beca8c1ce3815ff82782b9a65bae22d099c772784b57433a7f947f",
+        "size_in_bytes": 179
+      },
+      {
+        "_path": "lib/R/library/miniUI/help/miniUI.rdb",
+        "path_type": "hardlink",
+        "sha256": "84763625675055ff5d67546b9e5d81de4b2acf7f68c5cbb228aa166cfb4fdad5",
+        "sha256_in_prefix": "84763625675055ff5d67546b9e5d81de4b2acf7f68c5cbb228aa166cfb4fdad5",
+        "size_in_bytes": 12615
+      },
+      {
+        "_path": "lib/R/library/miniUI/help/miniUI.rdx",
+        "path_type": "hardlink",
+        "sha256": "9f885d73d7e98a1b0482a8e5a40d6348a9c18de7eb539c5f9ca5d1ce1abd20a8",
+        "sha256_in_prefix": "9f885d73d7e98a1b0482a8e5a40d6348a9c18de7eb539c5f9ca5d1ce1abd20a8",
+        "size_in_bytes": 283
+      },
+      {
+        "_path": "lib/R/library/miniUI/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "1ec7e035b19f2b5df8e431ea1a25711b6b39c69e473e239c078d6f3d4e8d32a6",
+        "sha256_in_prefix": "1ec7e035b19f2b5df8e431ea1a25711b6b39c69e473e239c078d6f3d4e8d32a6",
+        "size_in_bytes": 214
+      },
+      {
+        "_path": "lib/R/library/miniUI/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "48e04b9d3e092c63388267151c0b734d70eb15ef2f3460b86daed2ef465b1f3e",
+        "sha256_in_prefix": "48e04b9d3e092c63388267151c0b734d70eb15ef2f3460b86daed2ef465b1f3e",
+        "size_in_bytes": 2028
+      },
+      {
+        "_path": "lib/R/library/miniUI/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/miniUI/www/miniUI.css",
+        "path_type": "hardlink",
+        "sha256": "334257164bb8772cd1a6cf7b748a57e661e5b4867baf1ba6822e4ea6042213fe",
+        "sha256_in_prefix": "334257164bb8772cd1a6cf7b748a57e661e5b4867baf1ba6822e4ea6042213fe",
+        "size_in_bytes": 2485
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "227d33ebb4a5cc508efba1cf2cf8b72e67340e483b0763f786b86a440c733d40",
+  "size": 53908,
+  "subdir": "noarch",
+  "timestamp": 1665286761000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-miniui-0.1.1.1-r42hc72bb7e_1003.tar.bz2",
+  "version": "0.1.1.1"
+}

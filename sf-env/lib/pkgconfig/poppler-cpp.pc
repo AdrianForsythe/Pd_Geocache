@@ -4,9 +4,9 @@ includedir=/home/adrian/PhD/Pd_Geocache/sf-env/include
 
 Name: poppler-cpp
 Description: cpp backend for Poppler PDF rendering library
-Version: 21.11.0
+Version: 22.04.0
 Requires: 
-Requires.private: poppler = 21.11.0
+Requires.private: poppler = 22.04.0
 
 Libs: -L${libdir} -lpoppler-cpp
 Cflags: -I${includedir}/poppler/cpp

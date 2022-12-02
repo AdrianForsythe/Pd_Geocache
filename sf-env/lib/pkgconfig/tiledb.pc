@@ -6,9 +6,9 @@ includedir="${prefix}/include/tiledb"
 Name: TileDB
 Description: The Storage Engine for Data Science
 URL: https://github.com/TileDB-Inc/TileDB
-Version: 2.5.3
+Version: 2.9.5
 Requires: 
-Requires.private: 
+Requires.private: libmagic pcre2-8 pcre2-posix
 Cflags: -I"${includedir}"
 Libs: -L"${libdir}" -ltiledb
 Libs.private: -L"${libdir}" -ltiledb 

@@ -6,6 +6,8 @@ cache_engines           Cache engines of other languages
 clean_cache             Clean cache files that are probably no longer
                         needed
 combine_words           Combine multiple words into a single string
+convert_chunk_header    Convert the in-header chunk option syntax to
+                        the in-body syntax
 current_input           Query the current input filename
 dep_auto                Build automatic dependencies among chunks
 dep_prev                Make later chunks depend on previous chunks
@@ -30,7 +32,7 @@ kable                   Create tables in LaTeX, HTML, Markdown and
                         reStructuredText
 knit                    Knit a document
 knit2html               Convert markdown to HTML using knit() and
-                        markdownToHTML()
+                        mark_html()
 knit2pandoc             Convert various input files to various output
                         files using 'knit()' and Pandoc
 knit2pdf                Convert Rnw or Rrst files to PDF
@@ -66,6 +68,8 @@ opts_knit               Options for the knitr package
 opts_template           Template for creating reusable chunk options
 pandoc                  A Pandoc wrapper to convert documents to other
                         formats
+partition_chunk         Partition chunk options from the code chunk
+                        body
 pat_rnw                 Set regular expressions to read input documents
 plot_crop               Crop a plot (remove the edges) using PDFCrop or
                         ImageMagick
@@ -77,6 +81,7 @@ read_chunk              Read chunks from an external script
 read_rforge             Read source code from R-Forge
 render_html             Set or get output hooks for different output
                         formats
+rnw2pdf                 Convert an 'Rnw' document to PDF
 rocco                   Knit R Markdown using the classic Docco style
 rst2pdf                 A wrapper for rst2pdf
 set_alias               Set aliases for chunk options

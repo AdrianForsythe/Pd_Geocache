@@ -1,3 +1,4 @@
+accuracy                Accuracy measures for a model
 augment                 Augment data with information from an object
 calculate               Calculate statistics.
 coercion-factor         Factor coercion
@@ -14,6 +15,7 @@ explore                 Create an interactive visualization appropriate
                         to a particular object type
 fit                     Estimate model parameters.
 fit_xy                  Estimate model parameters.
+forecast                Forecasting from an object
 generate                Generate values based on inputs
 glance                  Glance at an object
 hypothesize             Construct hypotheses.
@@ -21,6 +23,8 @@ interpolate             Interpolate missing values
 learn                   Estimate model parameters.
 min_grid                Determine the minimum set of model fits
 prune                   Prune or reduce an object
+rank_results            Compute relative rankings of a collection of
+                        objects
 refit                   Refitting models
 required_pkgs           Determine packages required by objects
 setops                  Set operations

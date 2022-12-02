@@ -1,3 +1,29 @@
+# version 0.8-0
+
+* enhance unit mapping for newly installed units; #290
+
+* remove deprecations: `install_symbolic_unit`, `remove_symbolic_unit`,
+  `install_conversion_constant`, `install_conversion_offset`; #290
+
+* fix multipliers for round trip log-exp operations; #292
+
+* integrate `ggplot2` scales (previously in the `ggforce` package) to
+  automatically print axes with units; #294 addressing #164
+
+* fix `all.equal.units` for non-units `current`
+
+* fix zero power; #285
+
+* fix `unique.units` to support arrays and matrices, implement methods for
+  `duplicated` and `anyDuplicated`
+
+* fix plot labels with spaces; #298 addressing #297
+
+* always add units to labels, including user-provided ones; as part of #298
+
+* new symbols/names with a percentage character are not allowed due to an
+  upstream bug; #289
+
 # version 0.7-2
 
 * enhance `pillar` integration; #273, #275, #280 @krlmlr

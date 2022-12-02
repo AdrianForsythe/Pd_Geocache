@@ -1,9 +1,9 @@
 # Version checking for GeoTIFF
 
-set (PACKAGE_VERSION "1.7.0")
+set (PACKAGE_VERSION "1.7.1")
 set (PACKAGE_VERSION_MAJOR "1")
 set (PACKAGE_VERSION_MINOR "7")
-set (PACKAGE_VERSION_PATCH "0")
+set (PACKAGE_VERSION_PATCH "1")
 
 if (NOT PACKAGE_FIND_NAME STREQUAL "GeoTIFF")
   # Check package name (in particular, because of the way cmake finds

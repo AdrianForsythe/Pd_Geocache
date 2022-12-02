@@ -6,7 +6,7 @@
 //
 // Copyright 2006 Julien Rebetez <julienr@svn.gnome.org>
 // Copyright 2007, 2008, 2011 Carlos Garcia Campos <carlosgc@gnome.org>
-// Copyright 2007-2010, 2012, 2015-2021 Albert Astals Cid <aacid@kde.org>
+// Copyright 2007-2010, 2012, 2015-2022 Albert Astals Cid <aacid@kde.org>
 // Copyright 2010 Mark Riedesel <mark@klowner.com>
 // Copyright 2011 Pino Toscano <pino@kde.org>
 // Copyright 2012 Fabio D'Urso <fabiodurso@hotmail.it>
@@ -38,6 +38,7 @@
 
 #include <ctime>
 
+#include <optional>
 #include <set>
 #include <vector>
 
@@ -70,19 +71,13 @@ enum FormButtonType
     formButtonRadio
 };
 
-enum VariableTextQuadding
-{
-    quaddingLeftJustified,
-    quaddingCentered,
-    quaddingRightJustified
-};
-
 enum FormSignatureType
 {
     adbe_pkcs7_sha1,
     adbe_pkcs7_detached,
     ETSI_CAdES_detached,
-    unknown_signature_type
+    unknown_signature_type,
+    unsigned_signature_field
 };
 
 enum FillValueType
@@ -310,18 +305,24 @@ public:
     // field "ByteRange" in the dictionary "V".
     // Arguments reason and location are UTF-16 big endian strings with BOM. An empty string and nullptr are acceptable too.
     // Returns success.
-    bool signDocument(const char *filename, const char *certNickname, const char *digestName, const char *password, const GooString *reason = nullptr, const GooString *location = nullptr);
+    bool signDocument(const char *filename, const char *certNickname, const char *digestName, const char *password, const GooString *reason = nullptr, const GooString *location = nullptr, const std::optional<GooString> &ownerPassword = {},
+                      const std::optional<GooString> &userPassword = {});
+
+    // Same as above but adds text, font color, etc.
+    bool signDocumentWithAppearance(const char *filename, const char *certNickname, const char *digestName, const char *password, const GooString *reason = nullptr, const GooString *location = nullptr,
+                                    const std::optional<GooString> &ownerPassword = {}, const std::optional<GooString> &userPassword = {}, const GooString &signatureText = {}, const GooString &signatureTextLeft = {}, double fontSize = {},
+                                    std::unique_ptr<AnnotColor> &&fontColor = {}, double borderWidth = {}, std::unique_ptr<AnnotColor> &&borderColor = {}, std::unique_ptr<AnnotColor> &&backgroundColor = {});
 
     // checks the length encoding of the signature and returns the hex encoded signature
     // if the check passed (and the checked file size as output parameter in checkedFileSize)
     // otherwise a nullptr is returned
-    GooString *getCheckedSignature(Goffset *checkedFileSize);
+    std::optional<GooString> getCheckedSignature(Goffset *checkedFileSize);
 
     const GooString *getSignature() const;
 
 private:
     bool createSignature(Object &vObj, Ref vRef, const GooString &name, const GooString *signature, const GooString *reason = nullptr, const GooString *location = nullptr);
-    bool getObjectStartEnd(GooString *filename, int objNum, Goffset *objStart, Goffset *objEnd);
+    bool getObjectStartEnd(const GooString &filename, int objNum, Goffset *objStart, Goffset *objEnd, const std::optional<GooString> &ownerPassword, const std::optional<GooString> &userPassword);
     bool updateOffsets(FILE *f, Goffset objStart, Goffset objEnd, Goffset *sigStart, Goffset *sigEnd, Goffset *fileSize);
 
     bool updateSignature(FILE *f, Goffset sigStart, Goffset sigEnd, const GooString *signature);
@@ -352,6 +353,8 @@ public:
     bool isStandAlone() const { return standAlone; }
 
     GooString *getDefaultAppearance() const { return defaultAppearance; }
+    void setDefaultAppearance(const std::string &appearance);
+
     bool hasTextQuadding() const { return hasQuadding; }
     VariableTextQuadding getTextQuadding() const { return quadding; }
 
@@ -606,7 +609,7 @@ public:
     // checks the length encoding of the signature and returns the hex encoded signature
     // if the check passed (and the checked file size as output parameter in checkedFileSize)
     // otherwise a nullptr is returned
-    GooString *getCheckedSignature(Goffset *checkedFileSize);
+    std::optional<GooString> getCheckedSignature(Goffset *checkedFileSize);
 
     ~FormFieldSignature() override;
     Object *getByteRange() { return &byte_range; }
@@ -624,6 +627,10 @@ public:
     double getCustomAppearanceLeftFontSize() const;
     void setCustomAppearanceLeftFontSize(double size);
 
+    // Background image (ref to an object of type XObject). Invalid ref if not required.
+    Ref getImageResource() const;
+    void setImageResource(const Ref imageResourceA);
+
     void setCertificateInfo(std::unique_ptr<X509CertificateInfo> &);
 
     FormWidget *getCreateWidget();
@@ -639,6 +646,7 @@ private:
     GooString customAppearanceContent;
     GooString customAppearanceLeftContent;
     double customAppearanceLeftFontSize = 20;
+    Ref imageResource = Ref::INVALID();
     std::unique_ptr<X509CertificateInfo> certificate_info;
 
     void print(int indent) override;
@@ -653,7 +661,7 @@ private:
 class POPPLER_PRIVATE_EXPORT Form
 {
 public:
-    Form(PDFDoc *docA, Object *acroForm);
+    explicit Form(PDFDoc *doc);
 
     ~Form();
 
@@ -668,7 +676,6 @@ public:
        Page::loadStandaloneFields */
     static FormField *createFieldFromDict(Object &&obj, PDFDoc *docA, const Ref aref, FormField *parent, std::set<int> *usedParents);
 
-    Object *getObj() const { return acroForm; }
     bool getNeedAppearances() const { return needAppearances; }
     int getNumFields() const { return numFields; }
     FormField *getRootField(int i) const { return rootFields[i]; }
@@ -691,9 +698,6 @@ private:
     FormField **rootFields;
     int numFields;
     int size;
-    PDFDoc *doc;
-    XRef *xref;
-    Object *acroForm;
     bool needAppearances;
     GfxResources *defaultResources;
     Object resDict;

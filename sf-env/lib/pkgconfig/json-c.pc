@@ -5,7 +5,7 @@ includedir=/home/adrian/PhD/Pd_Geocache/sf-env/include
 
 Name: json-c
 Description: A JSON implementation in C
-Version: 0.15
+Version: 0.16
 Requires:
 Libs.private: 
 Libs: -L${libdir} -ljson-c

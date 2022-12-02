@@ -36,9 +36,9 @@ all:
 .SECONDARY:
 
 # PostgreSQL version number
-VERSION = 14.1
+VERSION = 14.5
 MAJORVERSION = 14
-VERSION_NUM = 140001
+VERSION_NUM = 140005
 
 PACKAGE_URL = https://www.postgresql.org/
 
@@ -61,8 +61,8 @@ endif
 endif
 else # not PGXS
 vpath_build = no
-abs_top_builddir = /home/conda/feedstock_root/build_artifacts/postgresql-split_1637635358047/work
-abs_top_srcdir = /home/conda/feedstock_root/build_artifacts/postgresql-split_1637635358047/work
+abs_top_builddir = /home/conda/feedstock_root/build_artifacts/postgresql-split_1660237941202/work
+abs_top_srcdir = /home/conda/feedstock_root/build_artifacts/postgresql-split_1660237941202/work
 
 ifneq ($(vpath_build),yes)
 top_srcdir = $(top_builddir)
@@ -238,7 +238,7 @@ BITCODE_CXXFLAGS =  -O2
 
 # Compilers
 
-CPP = /home/conda/feedstock_root/build_artifacts/postgresql-split_1637635358047/_build_env/bin/x86_64-conda-linux-gnu-cpp
+CPP = /home/conda/feedstock_root/build_artifacts/postgresql-split_1660237941202/_build_env/bin/x86_64-conda-linux-gnu-cpp
 CPPFLAGS = -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include -D_GNU_SOURCE -I/home/adrian/PhD/Pd_Geocache/sf-env/include/libxml2 -I/home/adrian/PhD/Pd_Geocache/sf-env/include  -I/home/adrian/PhD/Pd_Geocache/sf-env/include
 PG_SYSROOT = undefined
 
@@ -257,14 +257,14 @@ CC = x86_64-conda-linux-gnu-cc
 GCC = yes
 SUN_STUDIO_CC = no
 CXX = x86_64-conda-linux-gnu-c++
-CFLAGS = -Wall -Wmissing-prototypes -Wpointer-arith -Wdeclaration-after-statement -Werror=vla -Wendif-labels -Wmissing-format-attribute -Wimplicit-fallthrough=3 -Wcast-function-type -Wformat-security -fno-strict-aliasing -fwrapv -fexcess-precision=standard -Wno-format-truncation -Wno-stringop-truncation -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/postgresql-split_1637635358047/work=/usr/local/src/conda/postgresql-split-14.1 -fdebug-prefix-map=/home/adrian/PhD/Pd_Geocache/sf-env=/usr/local/src/conda-prefix
+CFLAGS = -Wall -Wmissing-prototypes -Wpointer-arith -Wdeclaration-after-statement -Werror=vla -Wendif-labels -Wmissing-format-attribute -Wimplicit-fallthrough=3 -Wcast-function-type -Wformat-security -fno-strict-aliasing -fwrapv -fexcess-precision=standard -Wno-format-truncation -Wno-stringop-truncation -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/postgresql-split_1660237941202/work=/usr/local/src/conda/postgresql-split-14.5 -fdebug-prefix-map=/home/adrian/PhD/Pd_Geocache/sf-env=/usr/local/src/conda-prefix
 CFLAGS_SL = -fPIC
 CFLAGS_UNROLL_LOOPS =  -funroll-loops
 CFLAGS_VECTORIZE =  -ftree-vectorize
 CFLAGS_SSE42 = -msse4.2
 CFLAGS_ARMV8_CRC32C = 
 PERMIT_DECLARATION_AFTER_STATEMENT = -Wno-declaration-after-statement
-CXXFLAGS = -Wall -Wpointer-arith -Wendif-labels -Wmissing-format-attribute -Wimplicit-fallthrough=3 -Wcast-function-type -Wformat-security -fno-strict-aliasing -fwrapv -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/postgresql-split_1637635358047/work=/usr/local/src/conda/postgresql-split-14.1 -fdebug-prefix-map=/home/adrian/PhD/Pd_Geocache/sf-env=/usr/local/src/conda-prefix
+CXXFLAGS = -Wall -Wpointer-arith -Wendif-labels -Wmissing-format-attribute -Wimplicit-fallthrough=3 -Wcast-function-type -Wformat-security -fno-strict-aliasing -fwrapv -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/postgresql-split_1660237941202/work=/usr/local/src/conda/postgresql-split-14.5 -fdebug-prefix-map=/home/adrian/PhD/Pd_Geocache/sf-env=/usr/local/src/conda-prefix
 
 LLVM_CPPFLAGS = 
 LLVM_CFLAGS = 
@@ -282,7 +282,7 @@ ZIC =
 
 # Linking
 
-AR = /home/conda/feedstock_root/build_artifacts/postgresql-split_1637635358047/_build_env/bin/x86_64-conda-linux-gnu-ar
+AR = /home/conda/feedstock_root/build_artifacts/postgresql-split_1660237941202/_build_env/bin/x86_64-conda-linux-gnu-ar
 DLLTOOL = 
 DLLWRAP = 
 LIBS = -lxslt -lxml2 -lssl -lcrypto -lgssapi_krb5 -lz -lreadline -lpthread -lrt -ldl -lm 
@@ -290,7 +290,7 @@ LDAP_LIBS_FE =
 LDAP_LIBS_BE = 
 UUID_LIBS = -luuid
 LLVM_LIBS=
-LD = /home/conda/feedstock_root/build_artifacts/postgresql-split_1637635358047/_build_env/bin/x86_64-conda-linux-gnu-ld
+LD = /home/conda/feedstock_root/build_artifacts/postgresql-split_1660237941202/_build_env/bin/x86_64-conda-linux-gnu-ld
 with_gnu_ld = yes
 
 # It's critical that within LDFLAGS, all -L switches pointing to build-tree
@@ -312,14 +312,14 @@ ifdef PGXS
 else
   LDFLAGS_INTERNAL = -L$(top_builddir)/src/port -L$(top_builddir)/src/common
 endif
-LDFLAGS = $(LDFLAGS_INTERNAL) -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,-rpath,/home/adrian/PhD/Pd_Geocache/sf-env/lib -Wl,-rpath-link,/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib  -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -Wl,--as-needed
+LDFLAGS = $(LDFLAGS_INTERNAL) -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/adrian/PhD/Pd_Geocache/sf-env/lib -Wl,-rpath-link,/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib  -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -Wl,--as-needed
 
 LDFLAGS_EX = 
 # LDFLAGS_SL might have already been assigned by calling makefile
 LDFLAGS_SL += 
 LDREL = -r
 LDOUT = -o
-RANLIB = /home/conda/feedstock_root/build_artifacts/postgresql-split_1637635358047/_build_env/bin/x86_64-conda-linux-gnu-ranlib
+RANLIB = /home/conda/feedstock_root/build_artifacts/postgresql-split_1660237941202/_build_env/bin/x86_64-conda-linux-gnu-ranlib
 WINDRES = 
 X = 
 
@@ -345,7 +345,7 @@ MSGFMT  =
 MSGFMT_FLAGS = 
 MSGMERGE = 
 PYTHON	= 
-TAR	= /bin/tar
+TAR	= /usr/bin/tar
 XGETTEXT = 
 
 GZIP	= gzip
@@ -496,13 +496,13 @@ INSTALL_SHLIB	= $(INSTALL_SHLIB_ENV) $(INSTALL) $(INSTALL_SHLIB_OPTS) $(INSTALL_
 # Override in Makefile.port if necessary
 INSTALL_SHLIB_OPTS = -m 755
 
-MKDIR_P = /bin/mkdir -p
+MKDIR_P = /usr/bin/mkdir -p
 
 missing		= $(SHELL) $(top_srcdir)/config/missing
 
-STRIP		= /home/conda/feedstock_root/build_artifacts/postgresql-split_1637635358047/_build_env/bin/x86_64-conda-linux-gnu-strip
-STRIP_STATIC_LIB = /home/conda/feedstock_root/build_artifacts/postgresql-split_1637635358047/_build_env/bin/x86_64-conda-linux-gnu-strip -x
-STRIP_SHARED_LIB = /home/conda/feedstock_root/build_artifacts/postgresql-split_1637635358047/_build_env/bin/x86_64-conda-linux-gnu-strip --strip-unneeded
+STRIP		= /home/conda/feedstock_root/build_artifacts/postgresql-split_1660237941202/_build_env/bin/x86_64-conda-linux-gnu-strip
+STRIP_STATIC_LIB = /home/conda/feedstock_root/build_artifacts/postgresql-split_1660237941202/_build_env/bin/x86_64-conda-linux-gnu-strip -x
+STRIP_SHARED_LIB = /home/conda/feedstock_root/build_artifacts/postgresql-split_1660237941202/_build_env/bin/x86_64-conda-linux-gnu-strip --strip-unneeded
 
 # Documentation
 

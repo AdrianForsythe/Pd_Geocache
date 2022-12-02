@@ -7,7 +7,7 @@ includedir=${prefix}/include
 Name: blosc
 Description: A blocking, shuffling and lossless compression library
 URL: http://blosc.org/
-Version: 1.21.0
+Version: 1.21.1
 
 Requires:
 Libs: -L${libdir} -L${sharedlibdir} -lblosc

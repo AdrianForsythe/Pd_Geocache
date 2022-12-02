@@ -15,7 +15,7 @@
 //
 // Copyright (C) 2005 Martin Kretzschmar <martink@gnome.org>
 // Copyright (C) 2005 Kristian Høgsberg <krh@redhat.com>
-// Copyright (C) 2006-2008, 2012, 2013, 2015, 2017-2021 Albert Astals Cid <aacid@kde.org>
+// Copyright (C) 2006-2008, 2012, 2013, 2015, 2017-2022 Albert Astals Cid <aacid@kde.org>
 // Copyright (C) 2007 Brad Hards <bradh@kde.org>
 // Copyright (C) 2009-2013 Thomas Freitag <Thomas.Freitag@alfa.de>
 // Copyright (C) 2009 Till Kamppeter <till.kamppeter@gmail.com>
@@ -29,6 +29,7 @@
 // Copyright (C) 2018, 2020 Philipp Knechtges <philipp-dev@knechtges.com>
 // Copyright (C) 2019 Oliver Sander <oliver.sander@tu-dresden.de>
 // Copyright (C) 2021 Hubert Figuiere <hub@figuiere.net>
+// Copyright (C) 2021 Christian Persch <chpe@src.gnome.org>
 //
 // To see a description of the changes please see the Changelog file that
 // came with your tarball or type make ChangeLog if you are building from git
@@ -123,6 +124,10 @@ public:
     PSOutputDev(const char *fileName, PDFDoc *docA, char *psTitleA, const std::vector<int> &pages, PSOutMode modeA, int paperWidthA = -1, int paperHeightA = -1, bool noCrop = false, bool duplexA = true, int imgLLXA = 0, int imgLLYA = 0,
                 int imgURXA = 0, int imgURYA = 0, PSForceRasterize forceRasterizeA = psRasterizeWhenNeeded, bool manualCtrlA = false, PSOutCustomCodeCbk customCodeCbkA = nullptr, void *customCodeCbkDataA = nullptr,
                 PSLevel levelA = psLevel2);
+
+    // Open a PSOutputDev that will write to a file descriptor
+    PSOutputDev(int fdA, PDFDoc *docA, char *psTitleA, const std::vector<int> &pages, PSOutMode modeA, int paperWidthA = -1, int paperHeightA = -1, bool noCrop = false, bool duplexA = true, int imgLLXA = 0, int imgLLYA = 0, int imgURXA = 0,
+                int imgURYA = 0, PSForceRasterize forceRasterizeA = psRasterizeWhenNeeded, bool manualCtrlA = false, PSOutCustomCodeCbk customCodeCbkA = nullptr, void *customCodeCbkDataA = nullptr, PSLevel levelA = psLevel2);
 
     // Open a PSOutputDev that will write to a generic stream.
     // pages has to be sorted in increasing order
@@ -364,14 +369,14 @@ private:
     void setupFont(GfxFont *font, Dict *parentResDict);
     void setupEmbeddedType1Font(Ref *id, GooString *psName);
     void updateFontMaxValidGlyph(GfxFont *font, int maxValidGlyph);
-    void setupExternalType1Font(GooString *fileName, GooString *psName);
+    void setupExternalType1Font(const GooString *fileName, GooString *psName);
     void setupEmbeddedType1CFont(GfxFont *font, Ref *id, GooString *psName);
     void setupEmbeddedOpenTypeT1CFont(GfxFont *font, Ref *id, GooString *psName);
     void setupEmbeddedTrueTypeFont(GfxFont *font, Ref *id, GooString *psName);
-    void setupExternalTrueTypeFont(GfxFont *font, GooString *fileName, GooString *psName);
+    void setupExternalTrueTypeFont(GfxFont *font, const GooString *fileName, GooString *psName);
     void setupEmbeddedCIDType0Font(GfxFont *font, Ref *id, GooString *psName);
     void setupEmbeddedCIDTrueTypeFont(GfxFont *font, Ref *id, GooString *psName, bool needVerticalMetrics);
-    void setupExternalCIDTrueTypeFont(GfxFont *font, GooString *fileName, GooString *psName, bool needVerticalMetrics);
+    void setupExternalCIDTrueTypeFont(GfxFont *font, const GooString *fileName, GooString *psName, bool needVerticalMetrics);
     void setupEmbeddedOpenTypeCFFFont(GfxFont *font, Ref *id, GooString *psName);
     void setupType3Font(GfxFont *font, GooString *psName, Dict *parentResDict);
     GooString *makePSFontName(GfxFont *font, const Ref *id);
@@ -397,7 +402,7 @@ private:
     void opiTransform(GfxState *state, double x0, double y0, double *x1, double *y1);
 #endif
     void cvtFunction(const Function *func, bool invertPSFunction = false);
-    GooString *filterPSName(const GooString *name);
+    GooString *filterPSName(const std::string &name);
 
     // Write the document-level setup.
     void writeDocSetup(Catalog *catalog, const std::vector<int> &pageList, bool duplexA);

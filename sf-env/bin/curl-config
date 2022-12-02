@@ -76,7 +76,7 @@ while test $# -gt 0; do
         ;;
 
     --cc)
-        echo "/home/conda/feedstock_root/build_artifacts/curl_split_recipe_1638491819473/_build_env/bin/x86_64-conda-linux-gnu-cc"
+        echo "/home/conda/feedstock_root/build_artifacts/curl_split_recipe_1652281458295/_build_env/bin/x86_64-conda-linux-gnu-cc"
         ;;
 
     --prefix)
@@ -96,7 +96,7 @@ while test $# -gt 0; do
         ;;
 
     --version)
-        echo libcurl 7.80.0
+        echo libcurl 7.83.1
         exit 0
         ;;
 
@@ -108,11 +108,11 @@ while test $# -gt 0; do
         # dash as that's used for things like version 1.2.3-CVS
         cpatch=`echo $checkfor | cut -d. -f3 | cut -d- -f1`
 
-        vmajor=`echo 7.80.0 | cut -d. -f1`
-        vminor=`echo 7.80.0 | cut -d. -f2`
+        vmajor=`echo 7.83.1 | cut -d. -f1`
+        vminor=`echo 7.83.1 | cut -d. -f2`
         # when extracting the patch part we strip off everything after a
         # dash as that's used for things like version 1.2.3-CVS
-        vpatch=`echo 7.80.0 | cut -d. -f3 | cut -d- -f1`
+        vpatch=`echo 7.83.1 | cut -d. -f3 | cut -d- -f1`
 
         if test "$vmajor" -gt "$cmajor"; then
             exit 0;
@@ -128,12 +128,12 @@ while test $# -gt 0; do
             fi
         fi
 
-        echo "requested version $checkfor is newer than existing 7.80.0"
+        echo "requested version $checkfor is newer than existing 7.83.1"
         exit 1
         ;;
 
     --vernum)
-        echo 075000
+        echo 075301
         exit 0
         ;;
 
@@ -172,7 +172,7 @@ while test $# -gt 0; do
 
     --static-libs)
         if test "Xyes" != "Xno" ; then
-          echo ${exec_prefix}/lib/libcurl.a -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,-rpath,/home/adrian/PhD/Pd_Geocache/sf-env/lib -Wl,-rpath-link,/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lnghttp2 -lssh2 -lssh2 -lssl -lcrypto -lssl -lcrypto -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lgssapi_krb5 -lz -lrt -pthread
+          echo ${exec_prefix}/lib/libcurl.a -Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/adrian/PhD/Pd_Geocache/sf-env/lib -Wl,-rpath-link,/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lnghttp2 -lssh2 -lssh2 -lssl -lcrypto -lssl -lcrypto -L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lgssapi_krb5 -lz -lrt -pthread
         else
           echo "curl was built with static libraries disabled" >&2
           exit 1
@@ -180,7 +180,7 @@ while test $# -gt 0; do
         ;;
 
     --configure)
-        echo " '--prefix=/home/adrian/PhD/Pd_Geocache/sf-env' '--host=x86_64-conda-linux-gnu' '--disable-ldap' '--with-ca-bundle=/home/adrian/PhD/Pd_Geocache/sf-env/ssl/cacert.pem' '--with-ssl=/home/adrian/PhD/Pd_Geocache/sf-env' '--with-zlib=/home/adrian/PhD/Pd_Geocache/sf-env' '--with-gssapi=/home/adrian/PhD/Pd_Geocache/sf-env' '--with-libssh2=/home/adrian/PhD/Pd_Geocache/sf-env' '--with-nghttp2=/home/adrian/PhD/Pd_Geocache/sf-env' 'build_alias=x86_64-conda-linux-gnu' 'host_alias=x86_64-conda-linux-gnu' 'CC=/home/conda/feedstock_root/build_artifacts/curl_split_recipe_1638491819473/_build_env/bin/x86_64-conda-linux-gnu-cc' 'CFLAGS=-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/curl_split_recipe_1638491819473/work=/usr/local/src/conda/curl_split_recipe-7.80.0 -fdebug-prefix-map=/home/adrian/PhD/Pd_Geocache/sf-env=/usr/local/src/conda-prefix -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include' 'LDFLAGS=-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,-rpath,/home/adrian/PhD/Pd_Geocache/sf-env/lib -Wl,-rpath-link,/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib' 'CPPFLAGS=-DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include' 'CPP=/home/conda/feedstock_root/build_artifacts/curl_split_recipe_1638491819473/_build_env/bin/x86_64-conda-linux-gnu-cpp'"
+        echo " '--prefix=/home/adrian/PhD/Pd_Geocache/sf-env' '--host=x86_64-conda-linux-gnu' '--disable-ldap' '--with-ca-bundle=/home/adrian/PhD/Pd_Geocache/sf-env/ssl/cacert.pem' '--with-ssl=/home/adrian/PhD/Pd_Geocache/sf-env' '--with-zlib=/home/adrian/PhD/Pd_Geocache/sf-env' '--with-gssapi=/home/adrian/PhD/Pd_Geocache/sf-env' '--with-libssh2=/home/adrian/PhD/Pd_Geocache/sf-env' '--with-nghttp2=/home/adrian/PhD/Pd_Geocache/sf-env' 'build_alias=x86_64-conda-linux-gnu' 'host_alias=x86_64-conda-linux-gnu' 'CC=/home/conda/feedstock_root/build_artifacts/curl_split_recipe_1652281458295/_build_env/bin/x86_64-conda-linux-gnu-cc' 'CFLAGS=-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/curl_split_recipe_1652281458295/work=/usr/local/src/conda/curl_split_recipe-7.83.1 -fdebug-prefix-map=/home/adrian/PhD/Pd_Geocache/sf-env=/usr/local/src/conda-prefix -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include' 'LDFLAGS=-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/adrian/PhD/Pd_Geocache/sf-env/lib -Wl,-rpath-link,/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib' 'CPPFLAGS=-DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/adrian/PhD/Pd_Geocache/sf-env/include' 'CPP=/home/conda/feedstock_root/build_artifacts/curl_split_recipe_1652281458295/_build_env/bin/x86_64-conda-linux-gnu-cpp'"
         ;;
 
     *)

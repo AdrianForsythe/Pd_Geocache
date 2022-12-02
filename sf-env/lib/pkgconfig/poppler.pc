@@ -4,7 +4,7 @@ includedir=/home/adrian/PhD/Pd_Geocache/sf-env/include
 
 Name: poppler
 Description: PDF rendering library
-Version: 21.11.0
+Version: 22.04.0
 
 Libs: -L${libdir} -lpoppler
 Cflags: -I${includedir}/poppler

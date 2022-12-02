@@ -1,0 +1,801 @@
+---
+title: "mobility"
+output: html_notebook
+editor_options:
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(mobility)
+```
+
+> There are many sources of travel data that researchers wish to fit models to. So, we have designed a generalized data frame template to standardize travel data from various sources into a long-form format that is compatible with the modeling and simulation tools in this package. The `travel_data_sim()` object contains a simulated example to illustrate the structure of the data. This example data set contains simulated values of location information and observed number of trips *among* origin and destination locations and *within* home locations. The `travel_data_template()` object is an empty template that can be populated from scratch.
+
+> Since the long-form data structure is designed to accomodate different types of data, some columns may be left blank. For example, in a travel survey the rows may represent indivdiduals compared with call data records where the rows may represent total trip counts for an origin and destination. 
+
+> In terms of spatial data, if your data contain coordinate locations down to administrative level 3, then level 4 and 5 can be left blank and the functions will ignore them. Likewise, if all administrative units are in the same country, then `admin_0` can be left blank.
+
+### A simulated example
+```{r}
+str(travel_data_sim)
+```
+
+### Detailed variable descriptions
+```{r, echo=FALSE}
+tab <- matrix(
+  c('date_start', 'date', 'beginning of the time interval for the trip count',
+    'date_stop', 'date', 'end of the time interval for the trip count',
+    'date_span', 'integer','time span in days',
+    'indiv_id', 'numeric', 'unique individual identifier',
+    'indiv_age', 'numeric',  'age of participant',
+    'indiv_sex', 'logical', 'gender of participant',
+    'indiv_type', 'character', 'if individual participants belong to different groups',
+    'orig_adm0', 'character', 'name of highest administration level of origin location (Country)',
+    'orig_adm1', 'character', 'name of administration level 1 of origin location (e.g. Division, State)',
+    'orig_adm2', 'character', 'name of administration level 2 of origin location (e.g. District, County)',
+    'orig_adm3', 'character', 'name of administration level 3 of origin location (e.g. Sub-district, Province)',
+    'orig_adm4', 'character', 'name of administration level 4 of origin location (e.g. City, Municipality)',
+    'orig_adm5', 'character', 'name of administration level 5 of origin location (e.g. Town, Village, Community, Ward)',
+    'orig_type', 'character', 'administrative type for the origin location (e.g. sub-district, community vs town, or urban vs rural)',
+    'orig_x', 'numeric', 'longitude of origin location centroid in decimal degrees (centroid of smallest admin unit',
+    'orig_y', 'numeric', 'latitude of origin location centroid in decimal degrees (centroid of smallest admin unit)',
+    'orig_pop', 'numeric', 'population size of lowest administrative unit for origin location',
+    'dest_adm0', 'character', 'name of highest administration level of destination location (Country)',
+    'dest_adm1', 'character', 'name of administration level 1 of destination location (e.g. Division, State)',
+    'dest_adm2', 'character', 'name of administration level 2 of destination location (e.g. District, County)',
+    'dest_adm3', 'character', 'name of administration level 3 of destination location (e.g. Sub-district, Province)',
+    'dest_adm4', 'character', 'name of administration level 4 of destination location (e.g. City, Municipality)',
+    'dest_adm5', 'character', 'name of administration level 5 of destination location (e.g. Town, Village, Community, Ward)',
+    'dest_type', 'character', 'administrative type for the destination location (e.g. sub-district, community vs town, or urban vs rural)',
+    'dest_x', 'numeric', 'longitude of destination location in decimal degrees (centroid of smallest admin unit)',
+    'dest_y', 'numeric', 'latitude of destination location centroid in decimal degrees (centroid of smallest admin unit)',
+    'dest_pop', 'numeric', 'population size of lowest administrative unit for destination location',
+    'trips', 'numeric', 'total number of observed trips made from origin to destination during time span'
+  ),
+  ncol=3,
+  byrow=TRUE)
+colnames(tab) <- c('Variable', 'Class', 'Description')
+knitr::kable(tab, "markdown") 
+```
+
+### Populating a travel data template from scratch
+> This data template can be populated by starting with the travel_data_template object and adding rows. The code below starts by
+> adding information on trips from an origin to a destination.
+
+```{r}
+# Travel among some locations
+trip <- travel_data_template
+
+n <- 30 # number of locations
+trip[1:n,] <- NA # add rows for each location
+
+# Time span of travel data
+trip$date_start <- as.Date("2020-01-01")
+trip$date_stop <- trip$date_start + 7
+trip$date_span <- difftime(trip$date_stop, trip$date_start, units='days')
+
+# Origin info: some counties within the same state
+trip$orig_adm0 <- trip$dest_adm0 <- 'A' # Country
+trip$orig_adm1 <- trip$dest_adm1 <- 'B' # State
+trip$orig_adm2 <- sample(LETTERS, n, replace=T)
+trip$dest_adm2 <- sample(LETTERS, n, replace=T)
+trip$orig_type <- trip$dest_type <- 'County' # Type of admin unit for lowest admin level
+
+# Some fake coordinates in decimal degrees
+trip$orig_x <- rnorm(n, -90, 2)
+trip$orig_y <- rnorm(n, 30, 1)
+trip$dest_x <- rnorm(n, -90, 2)
+trip$dest_y <- rnorm(n, 30, 1)
+
+# Population sizes of the origins and destinations
+trip$orig_pop <- rnbinom(n, size=5, mu=5000)
+trip$dest_pop <- rnbinom(n, size=10, mu=10000)
+
+trip$trips <- rnbinom(n, size=1, mu=100) # Number of reported trips
+trip <- trip[!(trip$orig_adm2 == trip$dest_adm2),]
+```
+
+> In some cases it may be easier to fill in stays (the number of trips within the origin or home location) in a different data frame and then merge the two.
+
+```{r}
+# Stays in home location
+stay <- travel_data_template
+origins <- unique(c(trip$orig_adm2, trip$orig_adm2)) # all the
+stay[1:length(origins),] <- NA
+
+# Time span of travel survey
+stay$date_start <- trip$date_start[1]
+stay$date_stop <- trip$date_stop[1]
+stay$date_span <- difftime(stay$date_stop, stay$date_start, units='days')
+
+stay$orig_adm0 <- stay$dest_adm0 <- 'A' # Country
+stay$orig_adm1 <- stay$dest_adm1 <- 'B' # State
+stay$orig_adm2 <- stay$dest_adm2 <- origins
+stay$orig_type <- stay$dest_type <- 'County'
+
+for (i in 1:length(origins)) {
+
+  sel <- which(trip$orig_adm2 == stay$orig_adm2[i])[1]
+  stay$orig_x[i] <- stay$dest_x[i] <- trip$orig_x[sel]
+  stay$orig_y[i] <- stay$dest_y[i] <- trip$orig_y[sel]
+  stay$orig_pop[i] <- stay$dest_pop[i] <- trip$orig_pop[sel]
+}
+
+# Number of reported trip within home county
+stay$trips <- rnbinom(length(origins), size=10, mu=1000)
+
+# Combine trips and stays
+suppressMessages(
+  travel_data <- dplyr::full_join(trip, stay)
+)
+
+head(travel_data, n=3)
+```
+
+# Building matrices from longform travel data
+
+> Once the travel data has been converted the to generalized travel data format in the travel_data_template() and travel_data_sim() objects, utility functions can be used to build the data matrices required for fitting and simulating mobility models. For fitting these models the data must be converted into data matrices representing travel among locations (M), along with distances between locations (D) and population sizes of the origins and destinations (N).
+
+## Unique IDs
+
+> The first step is to add unique IDs to the travel data. If the data have all unique names at the lowest admin level then hierarchical IDs are not needed. However, if the data include repeated admin names, then higher admin levels must be included to make unique IDs.
+
+```{r}
+travel_data <- travel_data_sim
+
+# Add unique identifiers using Country, State, and County
+example_ids <- get_unique_ids(travel_data, adm_start=0, adm_stop=2)
+head(example_ids)
+
+# Assume all County names here are unique, we can use only County level as ID.
+example_ids <- get_unique_ids(travel_data, adm_start=2)
+head(example_ids)
+```
+
+## Build mobility matrix
+
+```{r}
+# Add unique identifiers using County
+travel_data <- cbind(travel_data, get_unique_ids(travel_data, adm_start=2))
+
+# Build mobility matrix from the longform data
+M <- get_mob_matrix(orig=travel_data$orig_id,
+                    dest=travel_data$dest_id,
+                    value=travel_data$trips)
+```
+
+Plot the mobility matrix
+
+```{r}
+M %>% reshape2::melt() %>%
+  ggplot() +
+  geom_tile(aes(x=factor(destination),
+                y=factor(origin),
+                fill=value)) +
+  xlab('Destination') + ylab("Origin") +
+  theme_bw() + theme(axis.text.x=element_text(size=10),
+                     axis.text.y=element_text(size=10),
+                     axis.title.x=element_text(size=12, margin = margin(t = 15)),
+                     axis.title.y=element_text(size=12, margin = margin(r = 15)),
+                     legend.position='bottom') +
+  viridis::scale_fill_viridis(option='inferno', direction=1) +
+  guides(fill=guide_colorbar(title='Observed number of trips',
+                             title.position='top',
+                             label.theme=element_text(size=9),
+                             barwidth=20,
+                             barheight=0.5,
+                             frame.colour='black',
+                             ticks=TRUE))
+```
+
+> Many times there are missing observations in travel data. This is especially the case when the travel data span a short time period which increase the likelihood that travel along some routes will not be observed. It can be difficult to see these missing routes of travel in longform data, but when you make a matrix with each row i representing and origin and each column j representing a destination, the missing data are readily apparent (shown as grey cells in the simulated matrix above)
+
+## Build distance matrix
+
+> Mobility models require that distances be provided for all routes even if these observations are missing in the mobility matrix (M). A distance matrix for all unique routes can be built by getting all unique coordinates in the travel data using the get_unique_coords() function and then calculating the distances among all locations with get_distance_matrix(). Note that there is no requirement for the units of the distance matrix. However, we recommend the scale used is sensible for the spatial scale of the study area.
+
+```{r}
+xy <- get_unique_coords(travel_data)
+
+D <- get_distance_matrix(x=xy[,1],
+                         y=xy[,2],
+                         id=xy[,3])
+
+D <- D*111.35 # decimal degrees to km
+D[1:5, 1:5]
+```
+
+## Population size vector
+
+> Fitting mobility models also require a vector of population size for each location that is the same length the number of rows and columns in the mobility matrix (M) and distance matrix (D).
+
+```{r}
+N <- get_pop_vec(travel_data)
+head(N)
+```
+
+> Note that since the distance matrix (N) and population vector (N) are covariates used by models, they cannot have missing values and must all have matching dimensions. Code below checks that all data dimensions match.
+
+```{r}
+# check
+all(
+     sapply(list(dim(D)[1], length(N)), FUN = identical, dim(M)[1]),
+     sapply(list(dimnames(D)$origin, names(N)), FUN = identical, dimnames(M)$origin)
+)
+```
+
+---
+
+> One of the most commonly used types of mobility model is the gravity model, which is used to model connectivity among locations based on the distances among $i$ origins and $j$ destinations ($d_{ij}$) and population sizes of each location ($N_i$ and $N_j$). A major advantage of the gravity model is that distance and population size are simple covariates that can be obtained in almost any context, allowing a researcher to infer connectivity with little information. 
+
+> When fitting the gravity model to data, we also need a matrix of observed travel volume ($M$). Travel volume is an intentionally vague term here because a mobility data matrix can be populated with a variety of measurements that capture relative amounts of travel among locations. For example, if we are using Call Data Records (CDR) which are measures of mobile phone usage supplied by mobile phone companies, the unit of travel volume is likely to be the total number of person trips per unit time. Or if we are using a travel survey that researchers have collated from questionares given to residents of an area, the measurement of travel volume might be the total number of individuals that reported travelling from $i$ to $j$ in the past month. It is important that all $ij$ cells in $M$ have the same unit of travel volume per unit time because the model estimates parameters based on relative differences in travel volume.
+
+> The rest of this vignette shows a simple example of how to use the workhorse functions in this package (`mobility()`, `predict()`, and `check()`) to estimate travel volume ($\hat{M}_{ij}$) for all $i \rightarrow j$ travel routes found in the supplied data matrices ($M$, $D$, and $N$). Travel volume can also be predicted for a different geographic region or data on a different spatial scale by supplying these other data to the `newdata` argument of the `predict()` function.
+
+
+## Build data matrices
+
+> Before we can fit a mobility model, we must build data matrices from the longform travel data. The utility functions get_mob_matrix(), get_distance_matrix(), and get_pop_vec() can be used to generate data matrices representing travel volume among locations (M), along with distances (D) and population sizes (N). The mobiliy_matrices() data object included with this package provides a list of simulated data matrices and is formatted for the data argument of the mobility() function, which requires a list of numerical matrices/vectors with matching dimensions and names.
+
+```{r}
+str(mobility::mobility_matrices)
+```
+
+```{r}
+ggplot(data=reshape2::melt(mobility_matrices$M)) +
+  geom_tile(aes(x=factor(destination),
+                y=factor(origin),
+                fill=value)) +
+  xlab('Destination') + ylab("Origin") +
+  theme_bw() + theme(axis.text.x=element_text(size=10),
+                     axis.text.y=element_text(size=10),
+                     axis.title.x=element_text(size=12, margin = margin(t = 15)),
+                     axis.title.y=element_text(size=12, margin = margin(r = 15)),
+                     legend.position='bottom') +
+  viridis::scale_fill_viridis(option='inferno', direction=1) +
+  guides(fill=guide_colorbar(title='Observed number of trips',
+                             title.position='top',
+                             label.theme=element_text(size=9),
+                             barwidth=20,
+                             barheight=0.5,
+                             frame.colour='black',
+                             ticks=TRUE))
+```
+
+## Fit a mobility model to the data
+
+> Several different mobility models can be fitted to the data using the mobility() function. For a full list of available models, see the ‘Curated list of mobility models’ vignette. This function uses the distance among locations (D
+> ) and population sizes (N) as covariates in the specified model equation, which is fitted to the movement matrix (M) with a Poisson likelihood link function. Fitting a gravity model can be specified using the model = 'sw' argument. The mobility() function contains several variants of the gravity model which can be specified by the type argument.
+> In this example, specifying type = 'power_norm' will fit a normalized gravity model, which uses a power law dispersal kernel and normalizes the connectivity of all routes emanating from origin i:
+
+$$mijλij∼Poisson(λij)=θNi(Nωjd−γij∑∀jNωjd−γij)$$
+
+```{r}
+mod <- mobility(data=mobility_matrices,
+                model='gravity',
+                type='power_norm',
+                n_chain=2,
+                n_burn=1000,
+                n_samp=1000,
+                n_thin=2,
+                DIC=TRUE)
+```
+
+## Model summary and validation
+
+```{r}
+summary(mod, probs=c(0.025, 0.975), ac_lags=10)
+check(mod)
+```
+
+## Simulating a fitted mobility model
+
+> Once we have verified that our model fits the data adequately, we can simulate connectivity values among locations in our data using the estimated parameter values in the 'mobility.model' object using the predict() function.
+
+```{r}
+M_hat <- predict(mod)
+
+breaks <- c(500, 1000, 2000, 4000)
+ggplot(data=reshape2::melt(M_hat)) +
+  geom_tile(aes(x=factor(destination),
+                y=factor(origin),
+                fill=log(value))) +
+  xlab('Destination') + ylab("Origin") +
+  theme_bw() + theme(axis.text.x=element_text(size=10),
+                     axis.text.y=element_text(size=10),
+                     axis.title.x=element_text(size=12, margin = margin(t = 15)),
+                     axis.title.y=element_text(size=12, margin = margin(r = 15)),
+                     legend.position='bottom') +
+  viridis::scale_fill_viridis(option='inferno',
+                              direction=1,
+                              breaks=log(breaks),
+                              labels=breaks) +
+  guides(fill=guide_colorbar(title='Estimated number of trips',
+                             title.position='top',
+                             label.theme=element_text(size=9),
+                             barwidth=20,
+                             barheight=0.5,
+                             frame.colour='black',
+                             ticks=TRUE))
+```
+
+## Predicting a fitted mobility model onto new data
+
+> As shown above, the predict() function can be used to simulate the volume of travel among locations in the input data, and to infer travel for routes that are originally unobserved. If a new data set is supplied using the 'newdata' argument, then the predict() function will predict travel volume given the new distance matrix (D
+> ) and population size vector (N) based on the fitted mobility.model object, allowing the fitted model to be projected onto data of a different geographic scale.
+
+```{r pred}
+# Simulate some new data
+set.seed(123)
+n <- 20
+ids <- letters[1:n]
+# Distance matrix
+D <- get_distance_matrix(x=rnorm(n, -100, 2),
+                         y=rnorm(n, 20, 1),
+                         id=ids)*111.35
+# Vector of population sizes
+N <- rnbinom(n, size=5, mu=5000)
+names(N) <- ids
+# Predict mobility model using new data
+M_hat <- predict(object=mod, newdata=list(D=D, N=N))
+```
+
+```{r pred_plot, fig.height=6.5, fig.width=6.5}
+breaks <- c(500, 1000, 2000, 4000)
+ggplot(data=reshape2::melt(M_hat)) +
+  geom_tile(aes(x=factor(destination),
+                y=factor(origin),
+                fill=log(value))) +
+  xlab('Destination') + ylab("Origin") +
+  theme_bw() + theme(axis.text.x=element_text(size=10),
+                     axis.text.y=element_text(size=10),
+                     axis.title.x=element_text(size=12, margin = margin(t = 15)),
+                     axis.title.y=element_text(size=12, margin = margin(r = 15)),
+                     legend.position='bottom') +
+  viridis::scale_fill_viridis(option='inferno', 
+                              direction=1,
+                              breaks=log(breaks),
+                              labels=breaks) +
+  guides(fill=guide_colorbar(title='Estimated number of trips',
+                             title.position='top',
+                             label.theme=element_text(size=9),
+                             barwidth=20,
+                             barheight=0.5,
+                             frame.colour='black',
+                             ticks=TRUE))
+```
+
+## Stochastic simulation of a mobility model
+As the default, the number of simulations is set to `nsim = 1` so that the `predict()` function simulates the mean point estimate of the provided mobility model using the mean of the posterior distribution of each estimated parameter. When `nsim > 1`, the function performs stochastic simulation of the given model using the mean and standard deviation of the posterior parameter distributions. The `seed` argument can also be defined for reproducible simulation results.   
+```{r stoch}
+M_hat <- predict(mod, nsim=5, seed=123)
+str(M_hat)
+```
+
+---
+
+```{r setup, include=FALSE}
+library(mobility)
+library(ggplot2)
+library(reshape2)
+library(viridis)
+library(ggstance)
+library(foreach)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  autodep=TRUE
+)
+set.seed(1234)
+```
+
+### Build data vectors
+The travel probability model requires two pieces of information: the number of trips for the time interval that travel outside the origin location ($y_i$) and the total number of trips observed for that origin ($m_i$). Both vectors must be the same length but they can have missing values (`NA`) that represent an unobserved origin location. The `get_stay_data()` function can be used to build trips for each location that are aggregated to a desired spatial scale (e.g. admin level 1 or admin level 2).
+```{r data}
+stay_data <- get_stay_data(travel_data_sim, agg_adm=2)
+y <- setNames(stay_data$travel, stay_data$orig_id)
+m <- setNames(stay_data$total, stay_data$orig_id)
+n_orig <- length(y)
+miss <- sample(1:n_orig, n_orig*0.2) # missing observations
+y[miss] <- m[miss] <- NA
+y
+m
+```
+
+
+### Estimate probability of travel for each location
+To estimate the probability of traveling outside the origin location $i$, the `fit_prob_travel()` function uses a Beta-Binomial model with hierarchical structure to infer travel probability in unobserved locations.
+$$
+y_i \sim \text{Binom}(\tau_i, \sum_{\forall j} m_{ij})
+$$
+The random variable $y_i$ is the observed number of trips that leave origin $i$ within the time interval. Binomial parameters $\tau_i$ and $\sum_{\forall j} m_{ij}$ are the success probability and total number of observed trips emanating from origin $i$ respectively. 
+$$
+\begin{aligned}
+\tau_i &\sim \text{Beta}(1+\alpha, 1+\beta) \\
+\tau_\text{pop} &\sim \text{Beta}(1+\bar{\alpha}, 1+\bar{\beta})
+\end{aligned}
+$$
+Binomial probabilities for each origin $\tau_i$ are drawn from a Beta distributed prior with shape and rate parameters $\alpha$ and $\beta$. The hierarchical structure comes from estimating $\alpha$ and $\beta$ as population-level hyper-priors for the origin-level probabilities $\tau_i$ and allowing $\tau_\text{pop}$ to inherit the overall population-level distribution denoted as $\bar{\alpha}$ and $\bar{\beta}$.
+$$
+\begin{aligned}
+\alpha &\sim \text{Gamma}(0.01, 0.01) \\
+\beta &\sim \text{Gamma}(0.01, 0.01)
+\end{aligned}
+$$  
+
+This structure allows origin locations to have probabilities $\tau_i$ which are driven by data in each location and all unobserved locations regress to the population mean $\tau_\text{pop}$.
+```{r fit1}
+prob_trav <- fit_prob_travel(travel=y, total=m)
+```
+
+```{r, fig.width=5, fig.height=7}
+prob_trav_smry <- summary(prob_trav, probs=c(0.025, 0.25, 0.75, 0.975))
+ggplot(data=prob_trav_smry) +
+  geom_point(aes(x=mean, y=names(y)), size=2) +
+  ggstance::geom_linerangeh(aes(y=names(y), xmin=Q2.5, xmax=Q97.5)) +
+  ggstance::geom_linerangeh(aes(y=names(y), xmin=Q25, xmax=Q75), size=1) +
+  xlab('Probability of travel outside origin') + ylab('Origin') +
+  xlim(0,1) +
+  theme_bw() + theme(axis.text.x=element_text(size=10),
+                     axis.text.y=element_text(size=10),
+                     axis.title.x=element_text(size=12, margin = margin(t = 15)),
+                     axis.title.y=element_text(size=12, margin = margin(r = 15)),
+                     panel.border = element_rect(colour = "black", fill=NA, size=1),
+                     legend.position='right')
+```
+
+### Simulate values of travel probability for each location
+There can be relatively large confidence intervals around the travel probability estimated for locations without data. Since these locations inherit the population-level mean, uncertainty will likely be higher than locations with data. If we wanted to then use this model in a simulation, we may want to include this uncertainty in the model.
+
+The `predict()` function can be used to simulate the fitted values of travel probability for each location. The function takes posterior estimates of the mean ($\mu$) and standard deviation ($\sigma$) for each origin $i$, and then derives the shape and rate parameters for the Beta distribution. Simulated values are random draws from this Beta distribution.
+
+```{r}
+# Simulate n realizations of travel probability for each location
+predict(object=prob_trav, nsim=5, seed=123)
+```
+
+
+---
+
+```{r setup, include=FALSE}
+library(mobility)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  autodep=TRUE
+)
+```
+
+Mobility models in general describe interactions between separate locations in space, such as travel among administrative units. There many types of mobility models (gravity and radiation are common model types) and there are many parameterizations of each model type [@barbosa_human_2018]. The 'mobility' R package provides methods for fitting and simulating different mobility models including parameterizations of gravity, radiation, and departure-diffusion models. This vignette contains a list of all the mobility models that are currently available in this package.
+
+The models list below can be called by specifying the `model` and `type` arguments of the `mobility()` function. This function performs parameter estimation for the specified model and supplied data matrices. The models are implemented using using Bayesian inference [@gelman_bayesian_2003] and the Markov Chain Monte Carlo (MCMC) algorithm found in the JAGS (Just Another Gibbs Sampler) library [@plummer_jags_2003; @plummer_rjags_2019]. Each of the models have a likelihood function that assumes a Poisson error structure with mean $\lambda_{ij}$: 
+
+$$
+\begin{aligned}
+        m_{ij} &\sim \text{Poisson}(\lambda_{ij})\\
+\end{aligned}   
+$$
+
+Where, where $m_{ij}$ is an element of the data matrix $M$ and gives the observed number of trips from origin $i$ to destination $j$, and the expected mean number of trips $\lambda_{ij}$ is defined by one of the models below.
+
+## Gravity models
+The application of Newton's gravity equation to explain human mobility was first proposed by Zipf [-@zipf_gravity_1946] and has become one of the most common types of spatial diffusion models. There are many different parameterizations of the gravity model which are routinely used in the fields of transportation science, economics, ecology, and epidemiology. We have included a number of these different model types in this package. Below are brief descriptions of each gravity model type with example function calls that fit each model to data.
+
+### Basic
+The basic gravity model is the simplest gravity model with only one estimated parameter, $\theta$.
+$$
+\begin{aligned}
+        \lambda_{ij} &= \theta
+        \Bigg( \frac{
+        N_{i} N_{j}
+        }{
+        d_{ij}
+        } \Bigg)
+\end{aligned}   
+$$
+
+The parameter $\theta$ acts as a proportionality constant that scales the product of the origin and destination population sizes ($N_i$) and ($N_j$) divided by the distance between $i$ and $j$ ($d_{ij}$). Prior distributions of model parameters are defined as:
+$$
+\begin{aligned}
+        \theta \sim \text{Gamma}(0.001, 0.001)
+\end{aligned} 
+$$
+The basic gravity model can be called by:
+```{r, eval=FALSE}
+mod <- mobility(data=mobility_matrices, model='gravity', type='basic')
+```
+
+
+
+### Transport
+A common form of the gravity model used in transportation science has two parameters, $\theta$ and $\gamma$.
+$$
+\begin{aligned}
+        \lambda_{ij} &= \theta
+        \Bigg(\frac{
+        N_{i} N_{j}
+        }{
+        d_{ij}^{\gamma}
+        }\Bigg)
+\end{aligned}   
+$$
+Where, $\theta$ is a proportionality constant and the exponent $\gamma$ on $d_{ij}$ allows adjustment of the distance-based kernel function. Prior distributions of model parameters are defined as:
+$$
+\begin{aligned}
+        \theta &\sim \text{Gamma}(0.001, 0.001)\\
+        \gamma &\sim \text{Gamma}(1, 1)
+\end{aligned} 
+$$
+The transport gravity model can be called by:
+```{r, eval=FALSE}
+mod <- mobility(data=mobility_matrices, model='gravity', type='transport')
+```
+
+### Power law
+Compared with the basic and transport gravity model types, the power law gravity model adds parameters as exponents on the population sizes of the origin ($N_i$) and destination ($N_j$).
+$$
+\begin{aligned}
+        \lambda_{ij} &= \theta
+        \Bigg(\frac{
+        N_{i}^{\omega_1} N_{j}^{\omega_2}
+        }{
+        d_{ij}^{\gamma}
+        }\Bigg)
+\end{aligned}   
+$$
+Where, $\theta$ is a proportionality constant, the parameters $\omega_1$ and $\omega_2$ serve as weights that modify the contribution of origin and destination population sizes. In the denominator, $d_{ij}^\gamma$, serves as the dispersal kernel function. Prior distributions of model parameters are defined as:
+$$
+\begin{aligned}
+        \theta &\sim \text{Gamma}(0.001, 0.001)\\
+        \omega_1 &\sim \text{Gamma}(1, 1)\\
+        \omega_2 &\sim \text{Gamma}(1, 1)\\
+        \gamma &\sim \text{Gamma}(1, 1)
+\end{aligned} 
+$$
+The power law gravity model can be called by:
+```{r, eval=FALSE}
+mod <- mobility(data=mobility_matrices, model='gravity', type='power')
+```
+
+### Exponential
+Like the power law gravity model, the exponential gravity model has four parameters, however the distance-based kernel function uses exponential decay instead of the power law.
+$$
+\begin{aligned}
+        \lambda_{ij} &= \theta
+        \Bigg(\frac{
+        N_{i}^{\omega_1} N_{j}^{\omega_2}
+        }{
+        e^{d_{ij}/\delta}
+        }\Bigg)
+\end{aligned}   
+$$
+Where, $\theta$ is a proportionality constant, the parameters $\omega_1$ and $\omega_2$ serve as weights that modify the contribution of origin and destination population sizes. In the denominator, $e^{d_{ij}/\delta}$, serves as the exponential dispersal kernel function with $\delta$ giving the deterence distance. Prior distributions of model parameters are defined as:
+$$
+\begin{aligned}
+        \theta &\sim \text{Gamma}(0.001, 0.001)\\
+        \omega_1 &\sim \text{Gamma}(1, 1)\\
+        \omega_2 &\sim \text{Gamma}(1, 1)\\
+        \delta &\sim \text{Truncnorm}(\mu_D, \sigma_D)
+\end{aligned} 
+$$
+The $\text{Truncnorm}(\mu_D, \sigma_D)$ prior is a normal distribution truncated at zero $(0,\infty)$ where $\mu_D$ and $\sigma_D$ are the observed mean and standard deviation of the distance matrix $D$. The exponential gravity model can be called by:
+```{r, eval=FALSE}
+mod <- mobility(data=mobility_matrices, model='gravity', type='exp')
+```
+
+### Normalized power law
+The normalized gravity model eliminates the exponent on the origin population size ($N_i$), requiring estimation of three parameters $\theta$, $\omega$, and $\gamma$. As the name suggests, this model normalizes the connectivity of all routes emanating from origin $i$.
+$$
+\begin{aligned}
+        \lambda_{ij} &= \theta N_i \Bigg(
+        \frac{
+        N_j^\omega d_{ij}^{-\gamma}
+        }{
+        \sum_j N_j^\omega d_{ij}^{-\gamma}
+        } \Bigg)
+\end{aligned}   
+$$
+Here, $\theta$ is a proportionality constant representing the overall number of trips per person taken from the origin population $N_i$, and the exponential parameter $\omega$ scales the attractive force of each $j$ destination population sizes. The kernel function $d_{ij}^{-\gamma}$ serves as a penalty on the proportion of travel from $i$ to $j$ based on distance. Prior distributions of model parameters are defined as:
+$$
+\begin{aligned}
+        \theta &\sim \text{Gamma}(0.001, 0.001)\\
+        \omega &\sim \text{Gamma}(1, 1)\\
+        \gamma &\sim \text{Gamma}(1, 1)
+\end{aligned} 
+$$
+The normalized power law gravity model can be called by:
+```{r, eval=FALSE}
+mod <- mobility(data=mobility_matrices, model='gravity', type='power_norm')
+```
+
+### Normalized exponential
+Similar to the model above, the normalized exponential gravity model normalizes the connectivity of all routes emanating from origin $i$. However, this model uses an exponential dispersal kernal as a penalty on connectivity.
+$$
+\begin{aligned}
+        \lambda_{ij} &= \theta N_i \Bigg(
+        \frac{
+        N_j^\omega e^{-d_{ij}/\delta}
+        }{
+        \sum_j N_j^\omega e^{-d_{ij}/\delta}
+        } \Bigg)
+\end{aligned}   
+$$
+Where, $\theta$ is a proportionality constant representing the overall number of trips per person taken from the origin population $N_i$, and the exponential parameter $\omega$ scales the attractive force of each $j$ destination population sizes. The kernel function $e^{-d_{ij}/\delta}$ serves as the exponential dispersal kernal. Prior distributions of model parameters are defined as:
+$$
+\begin{aligned}
+        \theta &\sim \text{Gamma}(0.001, 0.001)\\
+        \omega &\sim \text{Gamma}(1, 1)\\
+        \delta &\sim \text{Truncnorm}(\mu_D, \sigma_D)
+\end{aligned} 
+$$
+The $\text{Truncnorm}(\mu_D, \sigma_D)$ prior is a normal distribution truncated at zero $(0,\infty)$ where $\mu_D$ and $\sigma_D$ are the observed mean and standard deviation of the distance matrix $D$. The normalized exponential gravity model can be called by:
+```{r, eval=FALSE}
+mod <- mobility(data=mobility_matrices, model='gravity', type='exp_norm')
+```
+
+### Scaled power law
+This gravity model is described in Marshall et al. [-@marshall_key_2016] and uses a scaled power law and requires estimation of three parameters $\omega$, $\rho$, and $\alpha$.
+$$
+\begin{aligned}
+\lambda_{ij} &= N_{j}^\omega \Bigg( 1 + \frac{ d_{ij} }{ \rho } \Bigg)^{-\alpha}
+\end{aligned}   
+$$
+Where, $\omega$ adjusts the attractive force of each $j$ destination population sizes, $\rho$ scales the distance from $i$ to $j$, and $\alpha$ determines the power law distance kernel. Prior distributions of model parameters are defined as:
+$$
+\begin{aligned}
+        \tau &\sim \text{Gamma}(1, 1)\\
+        \rho &\sim \text{Gamma}(0.001, 0.001)\\
+        \alpha &\sim \text{Gamma}(1, 1)
+\end{aligned} 
+$$
+This scaled power law gravity model can be called by:
+```{r, eval=FALSE}
+mod <- mobility(data=mobility_matrices, model='gravity', type='scaled_power')
+```
+
+
+
+
+## Radiation models
+The radiation model was developed as a parameter-free alternative to the parameterized models such the gravity model. As its name suggests the radiation model estimates mobility among locations as the number of travelers or trip counts that radiate from an origin $i$ and are then absorbed by each destination $j$. The process by which absorption occurs is based solely on population distribution. Where the number of trips arriving at a destination $j$ that is distance $r$ from origin $i$ is inversley proportional to the total population that resides within a radius of distance $r$ from the origin $i$.
+
+### Basic
+The radiation model was first introduced by Simini et al. [-@simini_universal_2012] to describe commuting flows in the United States. The model relies on the same data matrices as the gravity models above---mobility matrix $M$, distance matrix $D$, and population size vector(s) $N$---however, and additional matrix $S$ is calculated which gives the total population size surrounding the origin.
+$$
+\begin{aligned}
+        \lambda_{ij} = M_i \frac{N_i N_j}{(N_i + s_{ij})(N_i + N_j + s_{ij})}
+\end{aligned}   
+$$
+Where, $M_i$ gives the total number of trips (or travellers) emanating from origin, $\sum_{j} M_{ij}$, the population sizes of the origin and destination are given by $N_i$ and $N_j$. The population surrounding each origin $s_{ij}$ is calculated as the total population size that resides within the radius $r_{ij}$, where the origin and destination populations are excluded. The basic radiation model can be called by:
+```{r, eval=FALSE}
+mod <- mobility(data=mobility_matrices, model='radiation', type='basic')
+```
+
+### Finite
+This version of the radiation model was derived by Masucci et al. [-@masucci_gravity_2013] to correct the model's normalization for systems with finite population sizes. This derivation may not be significantly different compared with the basic model in settings with a large overall population size. However, this model type may be better suited to systems comprised of smaller population sizes that are heterogeneously distributed. Its fomrulation is quite similar to the above with the addition of the normalization of $M_i$.
+$$
+\begin{aligned}
+        \lambda_{ij} = \frac{M_i}{1-N_i/N_{\text{tot}}} \frac{N_i N_j}{(N_i + s_{ij})(N_i + N_j + s_{ij})}
+\end{aligned}   
+$$
+The finite radiation model differs from the basic model by the scaling factor $\frac{1}{1-N_i/N_{\text{tot}}}$, where $N_{\text{tot}}$ is the total population size of the system given by $\sum_i N_i$. As in the basic model, $M_i$ gives the total number of trips emanating from origin, $\sum_{j} M_{ij}$, the population sizes of the origin and destination are given by $N_i$ and $N_j$. The population surrounding each origin $s_{ij}$ is calculated as the total population size that resides within the radius $r_{ij}$, where the origin and destination populations are excluded. The finite radiation model can be called by:
+```{r, eval=FALSE}
+mod <- mobility(data=mobility_matrices, model='radiation', type='finite')
+```
+
+
+
+
+## Departure-diffusion models
+The departure-diffusion framework models diagonal and off-diagonal elements in the mobility matrix ($M$) separately and combines them using conditional probability rules. The model first estimates the probabilty of travel outside the origin location $i$---the departure process---and then the distribution of travel from the origin location $i$ by normalizing connectivity values across all $j$ destinations---the diffusion process.
+
+These two processes are then combined in the departure-diffusion model as $\tau_i$ (the probability of leaving origin $i$) and $\pi_{ij}$ (the probability of going from $i$ to $j$). The values of $\pi_{ij}$ sum to unity along each row, but the diagonal is not included, indicating that this is a relative quantity. That is to say, $\pi_{ij}$ gives the probability of going from $i$ to $j$ given that travel outside origin $i$ occurs. Therefore, we can use basic conditional probability rules [@blitzstein_introduction_2014] to define the travel routes in the diagonal elements (trips made within the origin $i$) as
+$$
+\Pr( \neg \text{depart}_i ) =  1 - \tau_i
+$$
+and the off-diagonal elements (trips made outside origin $i$) as
+$$
+\Pr( \text{depart}_i, \text{diffuse}_{i \rightarrow j}) = \Pr( \text{diffuse}_{i \rightarrow j} \mid \text{depart}_i ) \Pr(\text{depart}_i ) = \pi_{ij} \tau_i.
+$$
+The expected mean number of trips for route $i \rightarrow j$ is then:
+$$
+\lambda_{ij} = 
+\begin{cases}
+\theta N_i (1-\tau_i) \ & \text{if} \ i = j \\
+\theta N_i \tau_i \pi_{ij} \ & \text{if} \ i \ne j.
+\end{cases}\\
+$$
+Where, $\theta$ is a proportionality constant representing the overall number of trips per person in an origin population of size $N_i$, $\tau_i$ is the probability of leaving origin $i$, and $\pi_{ij}$ is the probability of travel to destination $j$ given that travel outside origin $i$ occurs.
+
+Note that the subscript of $\tau_i$ indicates that this parameter is estimated for all $i$ locations. For a more parsimonious model, the `hierarchical` argument in the `mobility()` function may be set to `FALSE`, in which case $\tau$ is estimated as one parameter representing the general probability that travel occurs outside any origin. The expected mean number of trips for route $i \rightarrow j$ becomes:
+$$
+\lambda_{ij} = 
+\begin{cases}
+\theta N_i (1-\tau) \ & \text{if} \ i = j \\
+\theta N_i \tau \pi_{ij} \ & \text{if} \ i \ne j.
+\end{cases}\\
+$$
+
+
+### Estimating the departure process
+The probability of travel outside origin $i$ is estimated hierarchically, where origin locations have the departure probability $\tau_i$ which are driven by data in each location and all unobserved locations regress to the population mean $\tau_\text{pop}$.
+$$
+\begin{aligned}
+\tau_i &\sim \text{Beta}(1+\alpha, 1+\beta) \\
+\tau_\text{pop} &\sim \text{Beta}(1+\bar{\alpha}, 1+\bar{\beta})
+\end{aligned}
+$$
+Binomial probabilities for each origin $\tau_i$ are drawn from a Beta distributed prior with shape and rate parameters $\alpha$ and $\beta$. The hierarchical structure comes from estimating $\alpha$ and $\beta$ as population-level hyper-priors for the origin-level probabilities $\tau_i$ and allowing $\tau_\text{pop}$ to inherit the overall population-level distribution denoted as $\bar{\alpha}$ and $\bar{\beta}$.
+$$
+\begin{aligned}
+\alpha &\sim \text{Gamma}(0.01, 0.01) \\
+\beta &\sim \text{Gamma}(0.01, 0.01)
+\end{aligned}
+$$  
+
+When `hierarchical = FALSE` the `mobility()` function estimates a non-hierarchical version of the departure-diffusion model where the parameter $\tau$ is given a single uninformative prior distribution: $\tau \sim \text{Beta}(1, 1)$.
+
+
+### Estimating the diffusion process
+Because the departure and diffusion processes are modelled separately, any form can be used to model spatial diffusion. In the `mobility()` function, there are three different model types which can be used to defined the diffusion process $\pi_{ij}$: the power law gravity, exponential gravity, and radiation models.
+
+#### Power law gravity
+When the power law gravity model is used to defined the diffusion process, the probability of travelling to destination $j$ given travel outside origin $i$ ($\pi_{ij}$) is defined as:
+$$
+\pi_{ij} = \frac{
+N_j^\omega d_{ij}^{-\gamma}
+}{
+\sum\limits_{\forall j \ne i} N_j^\omega d_{ij}^{-\gamma}
+}
+$$
+Where, $\omega$ scales the attractive force of each $j$ destination based on its population size $N_j$. The kernel function $d_{ij}^{-\gamma}$ serves as a penalty on the proportion of travel from $i$ to $j$ based on distance. Prior distributions of diffusion model parameters are defined as:
+$$
+\begin{aligned}
+        \omega &\sim \text{Gamma}(1, 1)\\
+        \gamma &\sim \text{Gamma}(1, 1)
+\end{aligned} 
+$$
+The departure-diffusion model with a power law gravity model as the diffusion process can be called by:
+```{r, eval=FALSE}
+mod <- mobility(data=mobility_matrices, model='departure-diffusion', type='power')
+```
+
+#### Exponential gravity
+When the exponential gravity model is used to defined the diffusion process, the probability of travelling to destination $j$ given travel outside origin $i$ ($\pi_{ij}$) is defined as:
+$$
+\pi_{ij} = \frac{
+N_j^\omega e^{-d_{ij}/\delta}
+}{
+\sum\limits_{\forall j \ne i} N_j^\omega e^{-d_{ij}/\delta}
+}
+$$
+Where, $\omega$ scales the attractive force of each $j$ destination based on its population size $N_j$. The term $e^{d_{ij}/\delta}$ serves as the exponential dispersal kernel function with $\delta$ giving the deterence distance. Prior distributions of diffusion model parameters are defined as:
+$$
+\begin{aligned}
+        \omega &\sim \text{Gamma}(1, 1)\\
+        \delta &\sim \text{Truncnorm}(\mu_D, \sigma_D)
+\end{aligned} 
+$$
+The $\text{Truncnorm}(\mu_D, \sigma_D)$ prior is a normal distribution truncated at zero $(0,\infty)$ where $\mu_D$ and $\sigma_D$ are the observed mean and standard deviation of the distance matrix $D$. The departure-diffusion model with a exponential gravity model as the diffusion process can be called by:
+```{r, eval=FALSE}
+mod <- mobility(data=mobility_matrices, model='departure-diffusion', type='exp')
+```
+
+#### Radiation
+When the radiation model is used to defined the diffusion process, the probability of travelling to destination $j$ given travel outside origin $i$ ($\pi_{ij}$) is defined as:
+$$
+\pi_{ij} = \frac{
+        \frac{N_j}{(N_i + s_{ij})(N_i + N_j + s_{ij})}
+        }{
+        \sum\limits_{\forall j \ne i} \frac{N_j}{(N_i + s_{ij})(N_i + N_j + s_{ij})}
+        }
+$$
+Where, the population sizes of the origin and destination are given by $N_i$ and $N_j$. The $s_{ij}$ term is the total population size that resides within distance $d_{ij}$, excluding the origin and destination populations. The departure-diffusion model with a radiation model as the diffusion process can be called by:
+```{r, eval=FALSE}
+mod <- mobility(data=mobility_matrices, model='departure-diffusion', type='radiation')
+```
+
+
+## References
+<div id="refs"></div>

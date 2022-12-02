@@ -1,4 +1,4 @@
-CONFIG_VERSION=3.4.0
+CONFIG_VERSION=3.5.1
 CONFIG_INST_PREFIX=/home/adrian/PhD/Pd_Geocache/sf-env
 CONFIG_INST_LIBS=-L/home/adrian/PhD/Pd_Geocache/sf-env/lib -lgdal
 CONFIG_INST_CFLAGS=-I/home/adrian/PhD/Pd_Geocache/sf-env/include

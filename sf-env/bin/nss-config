@@ -3,7 +3,7 @@
 prefix=/home/adrian/PhD/Pd_Geocache/sf-env
 
 major_version=3
-minor_version=73
+minor_version=78
 patch_version=0
 
 usage()

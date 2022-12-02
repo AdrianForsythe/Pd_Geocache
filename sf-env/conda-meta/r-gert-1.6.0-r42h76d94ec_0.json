@@ -1,0 +1,275 @@
+{
+  "build": "r42h76d94ec_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/r/linux-64",
+  "constrains": [],
+  "depends": [
+    "r-askpass",
+    "r-sys",
+    "_r-mutex 1.* anacondar_1",
+    "r-base >=4.2,<4.3.0a0",
+    "libgcc-ng >=11.2.0",
+    "r-openssl >=1.4.1",
+    "r-credentials >=1.2.1",
+    "r-rstudioapi >=0.11",
+    "r-zip >=2.1.0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-gert-1.6.0-r42h76d94ec_0",
+  "features": "",
+  "files": [
+    "lib/R/library/gert/DESCRIPTION",
+    "lib/R/library/gert/INDEX",
+    "lib/R/library/gert/LICENSE",
+    "lib/R/library/gert/Meta/Rd.rds",
+    "lib/R/library/gert/Meta/features.rds",
+    "lib/R/library/gert/Meta/hsearch.rds",
+    "lib/R/library/gert/Meta/links.rds",
+    "lib/R/library/gert/Meta/nsInfo.rds",
+    "lib/R/library/gert/Meta/package.rds",
+    "lib/R/library/gert/Meta/vignette.rds",
+    "lib/R/library/gert/NAMESPACE",
+    "lib/R/library/gert/NEWS",
+    "lib/R/library/gert/R/gert",
+    "lib/R/library/gert/R/gert.rdb",
+    "lib/R/library/gert/R/gert.rdx",
+    "lib/R/library/gert/WORDLIST",
+    "lib/R/library/gert/doc/gert.R",
+    "lib/R/library/gert/doc/gert.Rmd",
+    "lib/R/library/gert/doc/gert.html",
+    "lib/R/library/gert/doc/index.html",
+    "lib/R/library/gert/help/AnIndex",
+    "lib/R/library/gert/help/aliases.rds",
+    "lib/R/library/gert/help/figures/logo.png",
+    "lib/R/library/gert/help/gert.rdb",
+    "lib/R/library/gert/help/gert.rdx",
+    "lib/R/library/gert/help/paths.rds",
+    "lib/R/library/gert/html/00Index.html",
+    "lib/R/library/gert/html/R.css",
+    "lib/R/library/gert/libs/gert.so"
+  ],
+  "fn": "r-gert-1.6.0-r42h76d94ec_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-gert-1.6.0-r42h76d94ec_0",
+    "type": 1
+  },
+  "md5": "b75fd532fbed243301f95b1b1016e040",
+  "name": "r-gert",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-gert-1.6.0-r42h76d94ec_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/gert/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "1c3f081def1473f1f4bb807a4c04fe17fdc271fa928a125e0b848f442927730b",
+        "sha256_in_prefix": "1c3f081def1473f1f4bb807a4c04fe17fdc271fa928a125e0b848f442927730b",
+        "size_in_bytes": 1574
+      },
+      {
+        "_path": "lib/R/library/gert/INDEX",
+        "path_type": "hardlink",
+        "sha256": "93e927dea5e953815b1122177c18934a17eb6e94e3f31ee4e0eed187b3ac1452",
+        "sha256_in_prefix": "93e927dea5e953815b1122177c18934a17eb6e94e3f31ee4e0eed187b3ac1452",
+        "size_in_bytes": 811
+      },
+      {
+        "_path": "lib/R/library/gert/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "3fbb8e774a322192e18e2d2e1eb9bf3054b065e562e7ffd3a6ab4dfa311fd394",
+        "sha256_in_prefix": "3fbb8e774a322192e18e2d2e1eb9bf3054b065e562e7ffd3a6ab4dfa311fd394",
+        "size_in_bytes": 41
+      },
+      {
+        "_path": "lib/R/library/gert/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "0b5b554504cafc12910a2cafa95f66f92295e885181d2c8deacd6896c35d9603",
+        "sha256_in_prefix": "0b5b554504cafc12910a2cafa95f66f92295e885181d2c8deacd6896c35d9603",
+        "size_in_bytes": 1222
+      },
+      {
+        "_path": "lib/R/library/gert/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "f46232c297371e4cffbf6057a877e30d9c280f48db20d3dad7b640472f21f563",
+        "sha256_in_prefix": "f46232c297371e4cffbf6057a877e30d9c280f48db20d3dad7b640472f21f563",
+        "size_in_bytes": 121
+      },
+      {
+        "_path": "lib/R/library/gert/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "d19eaed92f6f1a1d550d0851ab6e8215b3dc119533905cf06fb1418cc9c6dceb",
+        "sha256_in_prefix": "d19eaed92f6f1a1d550d0851ab6e8215b3dc119533905cf06fb1418cc9c6dceb",
+        "size_in_bytes": 1262
+      },
+      {
+        "_path": "lib/R/library/gert/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "e92f5300420cd1f6da1c53df7c6ddf55c05da3ade2966ff86b3eba58252d2bd9",
+        "sha256_in_prefix": "e92f5300420cd1f6da1c53df7c6ddf55c05da3ade2966ff86b3eba58252d2bd9",
+        "size_in_bytes": 811
+      },
+      {
+        "_path": "lib/R/library/gert/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "6fb2bb6409fa1b21c860793fb180f7bbe9c2c47568fcf22421a3c0fe613ac000",
+        "sha256_in_prefix": "6fb2bb6409fa1b21c860793fb180f7bbe9c2c47568fcf22421a3c0fe613ac000",
+        "size_in_bytes": 1286
+      },
+      {
+        "_path": "lib/R/library/gert/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "41c175f35ab48a75d8b1882a81472e2affca56202ef91066caa7affad89ba8f5",
+        "sha256_in_prefix": "41c175f35ab48a75d8b1882a81472e2affca56202ef91066caa7affad89ba8f5",
+        "size_in_bytes": 1374
+      },
+      {
+        "_path": "lib/R/library/gert/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "35c80f05d2fd9166da68d5933049f994533de90577b187f1fa7944ea21dbeec6",
+        "sha256_in_prefix": "35c80f05d2fd9166da68d5933049f994533de90577b187f1fa7944ea21dbeec6",
+        "size_in_bytes": 191
+      },
+      {
+        "_path": "lib/R/library/gert/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "9a7bafa6a6c1a6d2a13d9c3a0e3a4a3001118d4a12965bc5a4e5b4aed6258859",
+        "sha256_in_prefix": "9a7bafa6a6c1a6d2a13d9c3a0e3a4a3001118d4a12965bc5a4e5b4aed6258859",
+        "size_in_bytes": 4715
+      },
+      {
+        "_path": "lib/R/library/gert/NEWS",
+        "path_type": "hardlink",
+        "sha256": "81c3bd3c9defbe937493efd0465f4055954ce0911cb28fc85e27b24321d58839",
+        "sha256_in_prefix": "81c3bd3c9defbe937493efd0465f4055954ce0911cb28fc85e27b24321d58839",
+        "size_in_bytes": 2877
+      },
+      {
+        "_path": "lib/R/library/gert/R/gert",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/gert/R/gert.rdb",
+        "path_type": "hardlink",
+        "sha256": "fd9745e0768c5f9f627a947a2c4623de4077615c2242088cf6aeeaf30c8df0e5",
+        "sha256_in_prefix": "fd9745e0768c5f9f627a947a2c4623de4077615c2242088cf6aeeaf30c8df0e5",
+        "size_in_bytes": 74515
+      },
+      {
+        "_path": "lib/R/library/gert/R/gert.rdx",
+        "path_type": "hardlink",
+        "sha256": "b9a2cb4148d8f595efa14fd42db15b3ea69fd6f46e43eb708c7efee7e637a6af",
+        "sha256_in_prefix": "b9a2cb4148d8f595efa14fd42db15b3ea69fd6f46e43eb708c7efee7e637a6af",
+        "size_in_bytes": 1874
+      },
+      {
+        "_path": "lib/R/library/gert/WORDLIST",
+        "path_type": "hardlink",
+        "sha256": "24bfa602e9574a21c2e153ad06e226de73c6565ef667e039b8da9880dec3af70",
+        "sha256_in_prefix": "24bfa602e9574a21c2e153ad06e226de73c6565ef667e039b8da9880dec3af70",
+        "size_in_bytes": 342
+      },
+      {
+        "_path": "lib/R/library/gert/doc/gert.R",
+        "path_type": "hardlink",
+        "sha256": "2fc5a0274f5dda6446212c76fd7944b66701995d5bfce9a41ba2c72df7aff7bf",
+        "sha256_in_prefix": "2fc5a0274f5dda6446212c76fd7944b66701995d5bfce9a41ba2c72df7aff7bf",
+        "size_in_bytes": 1252
+      },
+      {
+        "_path": "lib/R/library/gert/doc/gert.Rmd",
+        "path_type": "hardlink",
+        "sha256": "85b209115b21ba79970379376c684f6eba363237cebb3800a44e821fd27c9ee5",
+        "sha256_in_prefix": "85b209115b21ba79970379376c684f6eba363237cebb3800a44e821fd27c9ee5",
+        "size_in_bytes": 2812
+      },
+      {
+        "_path": "lib/R/library/gert/doc/gert.html",
+        "path_type": "hardlink",
+        "sha256": "9025beea804431bacd16573a080e7a1982194fe3111f8c8daaca7e550740ed77",
+        "sha256_in_prefix": "9025beea804431bacd16573a080e7a1982194fe3111f8c8daaca7e550740ed77",
+        "size_in_bytes": 17469
+      },
+      {
+        "_path": "lib/R/library/gert/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "54ca01e42788740e85d68611c4438bfa82f1a52eaab30976e8224f56e3c7b340",
+        "sha256_in_prefix": "54ca01e42788740e85d68611c4438bfa82f1a52eaab30976e8224f56e3c7b340",
+        "size_in_bytes": 1274
+      },
+      {
+        "_path": "lib/R/library/gert/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "501384e2b08cb8ac63893e41b83ee1cb2edd47f215964511d7635d3cff427504",
+        "sha256_in_prefix": "501384e2b08cb8ac63893e41b83ee1cb2edd47f215964511d7635d3cff427504",
+        "size_in_bytes": 2214
+      },
+      {
+        "_path": "lib/R/library/gert/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "8d3e9ec628d3627bc70b82a44d019ea157116b059b570fa6c208edd1a6b6a60c",
+        "sha256_in_prefix": "8d3e9ec628d3627bc70b82a44d019ea157116b059b570fa6c208edd1a6b6a60c",
+        "size_in_bytes": 731
+      },
+      {
+        "_path": "lib/R/library/gert/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "0b330f01cc767ef51e9dad3954136657eeb9190031c098d3a8a3dc6d8da8a657",
+        "sha256_in_prefix": "0b330f01cc767ef51e9dad3954136657eeb9190031c098d3a8a3dc6d8da8a657",
+        "size_in_bytes": 48081
+      },
+      {
+        "_path": "lib/R/library/gert/help/gert.rdb",
+        "path_type": "hardlink",
+        "sha256": "60ef209bed13a7446a56a0a52bad79a4f5e3f4f1fe505ba6889a38280d269ae5",
+        "sha256_in_prefix": "60ef209bed13a7446a56a0a52bad79a4f5e3f4f1fe505ba6889a38280d269ae5",
+        "size_in_bytes": 58369
+      },
+      {
+        "_path": "lib/R/library/gert/help/gert.rdx",
+        "path_type": "hardlink",
+        "sha256": "9562f24b128895706d611df073a1dc42937a945003ddb979b6445d5efb7ceb82",
+        "sha256_in_prefix": "9562f24b128895706d611df073a1dc42937a945003ddb979b6445d5efb7ceb82",
+        "size_in_bytes": 568
+      },
+      {
+        "_path": "lib/R/library/gert/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "3127b3efbf4e72a72c97f287509dded81a9e883aed64b9a1e7875b83f1bb704f",
+        "sha256_in_prefix": "3127b3efbf4e72a72c97f287509dded81a9e883aed64b9a1e7875b83f1bb704f",
+        "size_in_bytes": 310
+      },
+      {
+        "_path": "lib/R/library/gert/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "daded192d02f128577def9d05e515c9566545074d0f5ee8b761f5ce8f67db5c1",
+        "sha256_in_prefix": "daded192d02f128577def9d05e515c9566545074d0f5ee8b761f5ce8f67db5c1",
+        "size_in_bytes": 10210
+      },
+      {
+        "_path": "lib/R/library/gert/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/gert/libs/gert.so",
+        "path_type": "hardlink",
+        "sha256": "9a0893c4a57b326ddd5d82fcc15317a766028ed01d7124721d49c9f0d0cc27e0",
+        "sha256_in_prefix": "9a0893c4a57b326ddd5d82fcc15317a766028ed01d7124721d49c9f0d0cc27e0",
+        "size_in_bytes": 1422808
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "f4c3b39012327c965c6a3c8977ac64d0e6a57f556b5651bd33e21297c57f1a26",
+  "size": 755886,
+  "subdir": "linux-64",
+  "timestamp": 1654503346000,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/r/linux-64/r-gert-1.6.0-r42h76d94ec_0.conda",
+  "version": "1.6.0"
+}

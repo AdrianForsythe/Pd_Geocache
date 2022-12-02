@@ -1,0 +1,233 @@
+{
+  "build": "r42hc72bb7e_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.2,<4.3.0a0",
+    "r-crayon",
+    "r-hms",
+    "r-prettyunits",
+    "r-r6"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-progress-1.2.2-r42hc72bb7e_3",
+  "features": "",
+  "files": [
+    "lib/R/library/progress/DESCRIPTION",
+    "lib/R/library/progress/INDEX",
+    "lib/R/library/progress/LICENSE",
+    "lib/R/library/progress/Meta/Rd.rds",
+    "lib/R/library/progress/Meta/features.rds",
+    "lib/R/library/progress/Meta/hsearch.rds",
+    "lib/R/library/progress/Meta/links.rds",
+    "lib/R/library/progress/Meta/nsInfo.rds",
+    "lib/R/library/progress/Meta/package.rds",
+    "lib/R/library/progress/NAMESPACE",
+    "lib/R/library/progress/NEWS.md",
+    "lib/R/library/progress/R/progress",
+    "lib/R/library/progress/R/progress.rdb",
+    "lib/R/library/progress/R/progress.rdx",
+    "lib/R/library/progress/help/AnIndex",
+    "lib/R/library/progress/help/aliases.rds",
+    "lib/R/library/progress/help/figures/logo.png",
+    "lib/R/library/progress/help/figures/logo.svg",
+    "lib/R/library/progress/help/paths.rds",
+    "lib/R/library/progress/help/progress.rdb",
+    "lib/R/library/progress/help/progress.rdx",
+    "lib/R/library/progress/html/00Index.html",
+    "lib/R/library/progress/html/R.css",
+    "lib/R/library/progress/include/RProgress.h"
+  ],
+  "fn": "r-progress-1.2.2-r42hc72bb7e_3.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-progress-1.2.2-r42hc72bb7e_3",
+    "type": 1
+  },
+  "md5": "d56bcec1d57443abfede702c22067855",
+  "name": "r-progress",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-progress-1.2.2-r42hc72bb7e_3.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/progress/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "349cf08e4e2e4896c60e4e6ac629c593d5d79a3be290cb1931fb4ca4246b8ee0",
+        "sha256_in_prefix": "349cf08e4e2e4896c60e4e6ac629c593d5d79a3be290cb1931fb4ca4246b8ee0",
+        "size_in_bytes": 901
+      },
+      {
+        "_path": "lib/R/library/progress/INDEX",
+        "path_type": "hardlink",
+        "sha256": "6d14197a94431ef72af05ffcae7d60d669f664ce05c606f6e8e0ffeac7144f7a",
+        "sha256_in_prefix": "6d14197a94431ef72af05ffcae7d60d669f664ce05c606f6e8e0ffeac7144f7a",
+        "size_in_bytes": 53
+      },
+      {
+        "_path": "lib/R/library/progress/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "dc5bc95257062894725ba8bbb6c01b1ad441e5fc084bdc8d370f185fcee92ce4",
+        "sha256_in_prefix": "dc5bc95257062894725ba8bbb6c01b1ad441e5fc084bdc8d370f185fcee92ce4",
+        "size_in_bytes": 63
+      },
+      {
+        "_path": "lib/R/library/progress/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "04bd6d4148c0353ab9e96dedad416c2d8c284a832d5273eba45fc63d5e1ddf09",
+        "sha256_in_prefix": "04bd6d4148c0353ab9e96dedad416c2d8c284a832d5273eba45fc63d5e1ddf09",
+        "size_in_bytes": 265
+      },
+      {
+        "_path": "lib/R/library/progress/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/progress/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "a02bf680e04ab28d391ee442fe1f0201f15602ff2a6975b9266051b961b1b1f0",
+        "sha256_in_prefix": "a02bf680e04ab28d391ee442fe1f0201f15602ff2a6975b9266051b961b1b1f0",
+        "size_in_bytes": 272
+      },
+      {
+        "_path": "lib/R/library/progress/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "2b3c4b1bc92c00812ec180514c358117e33f5812dcc9e8bcd3a9abbb688797cf",
+        "sha256_in_prefix": "2b3c4b1bc92c00812ec180514c358117e33f5812dcc9e8bcd3a9abbb688797cf",
+        "size_in_bytes": 117
+      },
+      {
+        "_path": "lib/R/library/progress/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "5e9db1e2a0fc253f6cdb7d42491a9aee8a3c9aa95d93db2f2448d3ef9e82bd7f",
+        "sha256_in_prefix": "5e9db1e2a0fc253f6cdb7d42491a9aee8a3c9aa95d93db2f2448d3ef9e82bd7f",
+        "size_in_bytes": 305
+      },
+      {
+        "_path": "lib/R/library/progress/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "2f261128357e5d09b02a710ce74655db5775aceb671eb76c5b922339241c68df",
+        "sha256_in_prefix": "2f261128357e5d09b02a710ce74655db5775aceb671eb76c5b922339241c68df",
+        "size_in_bytes": 976
+      },
+      {
+        "_path": "lib/R/library/progress/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "b6aa4c4917da177d92c4df9b2b3cc8eff1768862dc65c57f8ba098dd59a166b6",
+        "sha256_in_prefix": "b6aa4c4917da177d92c4df9b2b3cc8eff1768862dc65c57f8ba098dd59a166b6",
+        "size_in_bytes": 274
+      },
+      {
+        "_path": "lib/R/library/progress/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "07ac777d4f52f87d5126a75d9bfbeb30316e33a43e85232af903a16fd93d0c7e",
+        "sha256_in_prefix": "07ac777d4f52f87d5126a75d9bfbeb30316e33a43e85232af903a16fd93d0c7e",
+        "size_in_bytes": 1990
+      },
+      {
+        "_path": "lib/R/library/progress/R/progress",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/progress/R/progress.rdb",
+        "path_type": "hardlink",
+        "sha256": "bd1baffad3f2fb433a525db8d1dcf025f71df831ce65fe65bbeeefd206226f1d",
+        "sha256_in_prefix": "bd1baffad3f2fb433a525db8d1dcf025f71df831ce65fe65bbeeefd206226f1d",
+        "size_in_bytes": 57740
+      },
+      {
+        "_path": "lib/R/library/progress/R/progress.rdx",
+        "path_type": "hardlink",
+        "sha256": "e3e4a3715df81a043631e97f409fb34d73201ea21dbfb5cb6315782605a21092",
+        "sha256_in_prefix": "e3e4a3715df81a043631e97f409fb34d73201ea21dbfb5cb6315782605a21092",
+        "size_in_bytes": 827
+      },
+      {
+        "_path": "lib/R/library/progress/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "8fa53f1b4ad866d5593dae747f0d75e5ba1d177e5fe170bbe340c03f377b3a55",
+        "sha256_in_prefix": "8fa53f1b4ad866d5593dae747f0d75e5ba1d177e5fe170bbe340c03f377b3a55",
+        "size_in_bytes": 26
+      },
+      {
+        "_path": "lib/R/library/progress/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "3a4b7da230c68c4ad8d4b7e3af10b07baed5ffa14139f98f48bd055281aba5f9",
+        "sha256_in_prefix": "3a4b7da230c68c4ad8d4b7e3af10b07baed5ffa14139f98f48bd055281aba5f9",
+        "size_in_bytes": 98
+      },
+      {
+        "_path": "lib/R/library/progress/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "7f700c5c8c66c686b210bda1c16f68823cc3cd179cb97c6434abbca07876da27",
+        "sha256_in_prefix": "7f700c5c8c66c686b210bda1c16f68823cc3cd179cb97c6434abbca07876da27",
+        "size_in_bytes": 5935
+      },
+      {
+        "_path": "lib/R/library/progress/help/figures/logo.svg",
+        "path_type": "hardlink",
+        "sha256": "4038ca9ed84980c82f7d8c8e5d273dc1422f8b49ec921379c4b4bc12aaf1d0f9",
+        "sha256_in_prefix": "4038ca9ed84980c82f7d8c8e5d273dc1422f8b49ec921379c4b4bc12aaf1d0f9",
+        "size_in_bytes": 17884
+      },
+      {
+        "_path": "lib/R/library/progress/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "5b0207e3c77e24ef5f3d5bddac8ecc348b2ea7a747edbb48539f2b20b7bd02db",
+        "sha256_in_prefix": "5b0207e3c77e24ef5f3d5bddac8ecc348b2ea7a747edbb48539f2b20b7bd02db",
+        "size_in_bytes": 159
+      },
+      {
+        "_path": "lib/R/library/progress/help/progress.rdb",
+        "path_type": "hardlink",
+        "sha256": "9faa834b8fac5d78c4f77bc67110bafa06c92b390db053db72bb6f9c4ca82682",
+        "sha256_in_prefix": "9faa834b8fac5d78c4f77bc67110bafa06c92b390db053db72bb6f9c4ca82682",
+        "size_in_bytes": 6404
+      },
+      {
+        "_path": "lib/R/library/progress/help/progress.rdx",
+        "path_type": "hardlink",
+        "sha256": "659d79aa12d165756941bf3f324fdb9d270660f380902b3054b4bb23e51caf10",
+        "sha256_in_prefix": "659d79aa12d165756941bf3f324fdb9d270660f380902b3054b4bb23e51caf10",
+        "size_in_bytes": 162
+      },
+      {
+        "_path": "lib/R/library/progress/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "eafae7d970e4ac9ec5fa2326823ea4992f5a74436e886751e2e5eafd4b8a7427",
+        "sha256_in_prefix": "eafae7d970e4ac9ec5fa2326823ea4992f5a74436e886751e2e5eafd4b8a7427",
+        "size_in_bytes": 1039
+      },
+      {
+        "_path": "lib/R/library/progress/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/progress/include/RProgress.h",
+        "path_type": "hardlink",
+        "sha256": "36f7f816999e3c8c25cbb43d88ba2c2704a6bf238995fd738fe01ae9308814f8",
+        "sha256_in_prefix": "36f7f816999e3c8c25cbb43d88ba2c2704a6bf238995fd738fe01ae9308814f8",
+        "size_in_bytes": 11279
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "1fddd9914af3976cc113e8035a21509170e7470cdd9c5645db39bedb0cd67dcc",
+  "size": 94407,
+  "subdir": "noarch",
+  "timestamp": 1665212892000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-progress-1.2.2-r42hc72bb7e_3.tar.bz2",
+  "version": "1.2.2"
+}

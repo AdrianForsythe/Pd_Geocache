@@ -1,0 +1,375 @@
+{
+  "build": "r42h7525677_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=12",
+    "libstdcxx-ng >=12",
+    "r-base >=4.2,<4.3.0a0",
+    "r-cli >=3.0.0",
+    "r-cpp11",
+    "r-forcats >=0.2.0",
+    "r-hms",
+    "r-lifecycle",
+    "r-readr >=0.1.0",
+    "r-rlang >=0.4.0",
+    "r-tibble",
+    "r-tidyselect",
+    "r-vctrs >=0.3.0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-haven-2.5.1-r42h7525677_0",
+  "features": "",
+  "files": [
+    "lib/R/library/haven/DESCRIPTION",
+    "lib/R/library/haven/INDEX",
+    "lib/R/library/haven/LICENSE",
+    "lib/R/library/haven/Meta/Rd.rds",
+    "lib/R/library/haven/Meta/features.rds",
+    "lib/R/library/haven/Meta/hsearch.rds",
+    "lib/R/library/haven/Meta/links.rds",
+    "lib/R/library/haven/Meta/nsInfo.rds",
+    "lib/R/library/haven/Meta/package.rds",
+    "lib/R/library/haven/Meta/vignette.rds",
+    "lib/R/library/haven/NAMESPACE",
+    "lib/R/library/haven/NEWS.md",
+    "lib/R/library/haven/R/haven",
+    "lib/R/library/haven/R/haven.rdb",
+    "lib/R/library/haven/R/haven.rdx",
+    "lib/R/library/haven/doc/datetimes.Rmd",
+    "lib/R/library/haven/doc/datetimes.html",
+    "lib/R/library/haven/doc/index.html",
+    "lib/R/library/haven/doc/semantics.R",
+    "lib/R/library/haven/doc/semantics.Rmd",
+    "lib/R/library/haven/doc/semantics.html",
+    "lib/R/library/haven/examples/iris.dta",
+    "lib/R/library/haven/examples/iris.sas7bdat",
+    "lib/R/library/haven/examples/iris.sav",
+    "lib/R/library/haven/help/AnIndex",
+    "lib/R/library/haven/help/aliases.rds",
+    "lib/R/library/haven/help/figures/lifecycle-archived.svg",
+    "lib/R/library/haven/help/figures/lifecycle-defunct.svg",
+    "lib/R/library/haven/help/figures/lifecycle-deprecated.svg",
+    "lib/R/library/haven/help/figures/lifecycle-experimental.svg",
+    "lib/R/library/haven/help/figures/lifecycle-maturing.svg",
+    "lib/R/library/haven/help/figures/lifecycle-questioning.svg",
+    "lib/R/library/haven/help/figures/lifecycle-stable.svg",
+    "lib/R/library/haven/help/figures/lifecycle-superseded.svg",
+    "lib/R/library/haven/help/figures/logo.png",
+    "lib/R/library/haven/help/haven.rdb",
+    "lib/R/library/haven/help/haven.rdx",
+    "lib/R/library/haven/help/paths.rds",
+    "lib/R/library/haven/html/00Index.html",
+    "lib/R/library/haven/html/R.css",
+    "lib/R/library/haven/libs/haven.so"
+  ],
+  "fn": "r-haven-2.5.1-r42h7525677_0.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-haven-2.5.1-r42h7525677_0",
+    "type": 1
+  },
+  "md5": "e4f07a451fcbf395759390452d24c7c2",
+  "name": "r-haven",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-haven-2.5.1-r42h7525677_0.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/haven/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "63c58be47b8e6a99b86f64eb973cc347d2e3f1433f26baa2b58fe7a640500b6d",
+        "sha256_in_prefix": "63c58be47b8e6a99b86f64eb973cc347d2e3f1433f26baa2b58fe7a640500b6d",
+        "size_in_bytes": 1615
+      },
+      {
+        "_path": "lib/R/library/haven/INDEX",
+        "path_type": "hardlink",
+        "sha256": "f95ed015a6c8895fdb8288623a25f9ff87d7ee430855f692ffcf851e1d065e45",
+        "sha256_in_prefix": "f95ed015a6c8895fdb8288623a25f9ff87d7ee430855f692ffcf851e1d065e45",
+        "size_in_bytes": 797
+      },
+      {
+        "_path": "lib/R/library/haven/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "40605720053b3e69729a292605837cbddb64bc7327027cee174c9c473821f63b",
+        "sha256_in_prefix": "40605720053b3e69729a292605837cbddb64bc7327027cee174c9c473821f63b",
+        "size_in_bytes": 75
+      },
+      {
+        "_path": "lib/R/library/haven/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "dc7df0e98d9918915112e48afdcb814547ba277da2e42630c53fed40c785ef85",
+        "sha256_in_prefix": "dc7df0e98d9918915112e48afdcb814547ba277da2e42630c53fed40c785ef85",
+        "size_in_bytes": 873
+      },
+      {
+        "_path": "lib/R/library/haven/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/haven/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "5b1ab2435e861e4d8d4a24ea722a6d32227ef9e6638e7a477cbf876e474068ab",
+        "sha256_in_prefix": "5b1ab2435e861e4d8d4a24ea722a6d32227ef9e6638e7a477cbf876e474068ab",
+        "size_in_bytes": 879
+      },
+      {
+        "_path": "lib/R/library/haven/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "8d1d4e62418499eb41492ca5aef0fdd4ed6cd473dfcb9297e661f6555961d491",
+        "sha256_in_prefix": "8d1d4e62418499eb41492ca5aef0fdd4ed6cd473dfcb9297e661f6555961d491",
+        "size_in_bytes": 433
+      },
+      {
+        "_path": "lib/R/library/haven/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "65154b179613213d23dd28e5e79da0d04b166c50105e4f0385b2fd69a53eff71",
+        "sha256_in_prefix": "65154b179613213d23dd28e5e79da0d04b166c50105e4f0385b2fd69a53eff71",
+        "size_in_bytes": 933
+      },
+      {
+        "_path": "lib/R/library/haven/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "c1444fb39075141e7639a3535f677b15da1db60ebdf9c7f798d8db5efe2be6f6",
+        "sha256_in_prefix": "c1444fb39075141e7639a3535f677b15da1db60ebdf9c7f798d8db5efe2be6f6",
+        "size_in_bytes": 1468
+      },
+      {
+        "_path": "lib/R/library/haven/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "acdbc9af4a8daf36a82978b860a09efc6a3374204964e6411057d151782ebe6c",
+        "sha256_in_prefix": "acdbc9af4a8daf36a82978b860a09efc6a3374204964e6411057d151782ebe6c",
+        "size_in_bytes": 230
+      },
+      {
+        "_path": "lib/R/library/haven/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "d7c26df012543a3315f62366f0a737e5706084c71d44ece292c99aaae0c56b1d",
+        "sha256_in_prefix": "d7c26df012543a3315f62366f0a737e5706084c71d44ece292c99aaae0c56b1d",
+        "size_in_bytes": 3871
+      },
+      {
+        "_path": "lib/R/library/haven/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "e69e5f9b3befac16a6dd815331d9e18ff406e81615c564b86a26dc45e5c2e05f",
+        "sha256_in_prefix": "e69e5f9b3befac16a6dd815331d9e18ff406e81615c564b86a26dc45e5c2e05f",
+        "size_in_bytes": 20319
+      },
+      {
+        "_path": "lib/R/library/haven/R/haven",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/haven/R/haven.rdb",
+        "path_type": "hardlink",
+        "sha256": "cb53516a01758032c6cebf2f23a20db16669ac5c9cfd4e606f008153b36f2602",
+        "sha256_in_prefix": "cb53516a01758032c6cebf2f23a20db16669ac5c9cfd4e606f008153b36f2602",
+        "size_in_bytes": 100534
+      },
+      {
+        "_path": "lib/R/library/haven/R/haven.rdx",
+        "path_type": "hardlink",
+        "sha256": "3ccfb39d07c1394046d9f48caefb94b15ffbcdd456777a93dc124618e3f8ec62",
+        "sha256_in_prefix": "3ccfb39d07c1394046d9f48caefb94b15ffbcdd456777a93dc124618e3f8ec62",
+        "size_in_bytes": 2229
+      },
+      {
+        "_path": "lib/R/library/haven/doc/datetimes.Rmd",
+        "path_type": "hardlink",
+        "sha256": "76bdc82bb4950ad4870b09ccbd60fa95e298a91e7089f4121633bd5cdc8f912e",
+        "sha256_in_prefix": "76bdc82bb4950ad4870b09ccbd60fa95e298a91e7089f4121633bd5cdc8f912e",
+        "size_in_bytes": 1304
+      },
+      {
+        "_path": "lib/R/library/haven/doc/datetimes.html",
+        "path_type": "hardlink",
+        "sha256": "b3eabf6cb8e899dca090f21efe43e561063ea4d8d6a711739d9a94f0218cbdec",
+        "sha256_in_prefix": "b3eabf6cb8e899dca090f21efe43e561063ea4d8d6a711739d9a94f0218cbdec",
+        "size_in_bytes": 6603
+      },
+      {
+        "_path": "lib/R/library/haven/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "995ab0b72a42b61987130d1be4a037bdd59d6161b7609fb62e3f3a8995d6ae15",
+        "sha256_in_prefix": "995ab0b72a42b61987130d1be4a037bdd59d6161b7609fb62e3f3a8995d6ae15",
+        "size_in_bytes": 1845
+      },
+      {
+        "_path": "lib/R/library/haven/doc/semantics.R",
+        "path_type": "hardlink",
+        "sha256": "99953b01ab023dd0a7d332a1b5875bd6900c93b989ae7cba83ff59a054f6e67a",
+        "sha256_in_prefix": "99953b01ab023dd0a7d332a1b5875bd6900c93b989ae7cba83ff59a054f6e67a",
+        "size_in_bytes": 1851
+      },
+      {
+        "_path": "lib/R/library/haven/doc/semantics.Rmd",
+        "path_type": "hardlink",
+        "sha256": "4d6e60765cfdad46ca24f8ded2611af0d62ccbb9502a82d0671f856f1099c943",
+        "sha256_in_prefix": "4d6e60765cfdad46ca24f8ded2611af0d62ccbb9502a82d0671f856f1099c943",
+        "size_in_bytes": 6443
+      },
+      {
+        "_path": "lib/R/library/haven/doc/semantics.html",
+        "path_type": "hardlink",
+        "sha256": "a1ff12e40fc00ff58217fdc2944237510f05c9a654e5191f02772dfe2e63a998",
+        "sha256_in_prefix": "a1ff12e40fc00ff58217fdc2944237510f05c9a654e5191f02772dfe2e63a998",
+        "size_in_bytes": 35057
+      },
+      {
+        "_path": "lib/R/library/haven/examples/iris.dta",
+        "path_type": "hardlink",
+        "sha256": "4db83d6731edaa238587f22740e089cc3335975c49773ca7a310dd4ddb3901d9",
+        "sha256_in_prefix": "4db83d6731edaa238587f22740e089cc3335975c49773ca7a310dd4ddb3901d9",
+        "size_in_bytes": 8213
+      },
+      {
+        "_path": "lib/R/library/haven/examples/iris.sas7bdat",
+        "path_type": "hardlink",
+        "sha256": "b25ae02490f8f8e384e4dab3011e26fc8d26b7f28da113d269153faa16e65dcf",
+        "sha256_in_prefix": "b25ae02490f8f8e384e4dab3011e26fc8d26b7f28da113d269153faa16e65dcf",
+        "size_in_bytes": 131072
+      },
+      {
+        "_path": "lib/R/library/haven/examples/iris.sav",
+        "path_type": "hardlink",
+        "sha256": "38dc8f29dc62c0f562b568d83f5d713ec98ef80cb4092425563ea91350e5bf92",
+        "sha256_in_prefix": "38dc8f29dc62c0f562b568d83f5d713ec98ef80cb4092425563ea91350e5bf92",
+        "size_in_bytes": 6690
+      },
+      {
+        "_path": "lib/R/library/haven/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "e71de72c809b0329e988ea3f95ce82d82ccdba136dcb52adc1ef8a0ac6c145eb",
+        "sha256_in_prefix": "e71de72c809b0329e988ea3f95ce82d82ccdba136dcb52adc1ef8a0ac6c145eb",
+        "size_in_bytes": 802
+      },
+      {
+        "_path": "lib/R/library/haven/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "8349b0e0495d881108d4626ce77b91eb51492c40505b820c3d21bc07c0d6289d",
+        "sha256_in_prefix": "8349b0e0495d881108d4626ce77b91eb51492c40505b820c3d21bc07c0d6289d",
+        "size_in_bytes": 344
+      },
+      {
+        "_path": "lib/R/library/haven/help/figures/lifecycle-archived.svg",
+        "path_type": "hardlink",
+        "sha256": "e51548be52932d0b0468f5b11adcbebac08663898a7c043871864b0064710e86",
+        "sha256_in_prefix": "e51548be52932d0b0468f5b11adcbebac08663898a7c043871864b0064710e86",
+        "size_in_bytes": 967
+      },
+      {
+        "_path": "lib/R/library/haven/help/figures/lifecycle-defunct.svg",
+        "path_type": "hardlink",
+        "sha256": "977a9d51157cf76f89e0d5562b8b57b06560682c4cc9e44333e9c394629fb520",
+        "sha256_in_prefix": "977a9d51157cf76f89e0d5562b8b57b06560682c4cc9e44333e9c394629fb520",
+        "size_in_bytes": 964
+      },
+      {
+        "_path": "lib/R/library/haven/help/figures/lifecycle-deprecated.svg",
+        "path_type": "hardlink",
+        "sha256": "7fefe18cc3b7059272fa85ff40c4a95739bb271276d819fe782ac38db295a07c",
+        "sha256_in_prefix": "7fefe18cc3b7059272fa85ff40c4a95739bb271276d819fe782ac38db295a07c",
+        "size_in_bytes": 970
+      },
+      {
+        "_path": "lib/R/library/haven/help/figures/lifecycle-experimental.svg",
+        "path_type": "hardlink",
+        "sha256": "ed1f8972de7fdeb5dedc1087ea043dc4953dca5d58f54286b4c0ab297eefbe90",
+        "sha256_in_prefix": "ed1f8972de7fdeb5dedc1087ea043dc4953dca5d58f54286b4c0ab297eefbe90",
+        "size_in_bytes": 974
+      },
+      {
+        "_path": "lib/R/library/haven/help/figures/lifecycle-maturing.svg",
+        "path_type": "hardlink",
+        "sha256": "9f33b55a1806ad5a3d565a0855a91b47ae26b7cf1ff0f025758bbd15b4c3984a",
+        "sha256_in_prefix": "9f33b55a1806ad5a3d565a0855a91b47ae26b7cf1ff0f025758bbd15b4c3984a",
+        "size_in_bytes": 966
+      },
+      {
+        "_path": "lib/R/library/haven/help/figures/lifecycle-questioning.svg",
+        "path_type": "hardlink",
+        "sha256": "2feb00c21e12843cd1cd2e821c941628331dddbb26e34e58c40bb11dcffea89a",
+        "sha256_in_prefix": "2feb00c21e12843cd1cd2e821c941628331dddbb26e34e58c40bb11dcffea89a",
+        "size_in_bytes": 972
+      },
+      {
+        "_path": "lib/R/library/haven/help/figures/lifecycle-stable.svg",
+        "path_type": "hardlink",
+        "sha256": "4817300514459f5ac876b1a379c7bad15d6049e1a954b71455ab78d76b83ffa0",
+        "sha256_in_prefix": "4817300514459f5ac876b1a379c7bad15d6049e1a954b71455ab78d76b83ffa0",
+        "size_in_bytes": 956
+      },
+      {
+        "_path": "lib/R/library/haven/help/figures/lifecycle-superseded.svg",
+        "path_type": "hardlink",
+        "sha256": "c425824d3301dc7d4dc0100d408c4b469f488a8488be748a1fbe61abae5bab9e",
+        "sha256_in_prefix": "c425824d3301dc7d4dc0100d408c4b469f488a8488be748a1fbe61abae5bab9e",
+        "size_in_bytes": 971
+      },
+      {
+        "_path": "lib/R/library/haven/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "fae3462b3654e8d84bd5b7c2df71a00ab9e876d1178bdb41d03be3ca4aecfce2",
+        "sha256_in_prefix": "fae3462b3654e8d84bd5b7c2df71a00ab9e876d1178bdb41d03be3ca4aecfce2",
+        "size_in_bytes": 19690
+      },
+      {
+        "_path": "lib/R/library/haven/help/haven.rdb",
+        "path_type": "hardlink",
+        "sha256": "fcb8d6ab4500825d9791cf3dbf51c9c5fb481f754d79ed1d54a6cbe40de24edf",
+        "sha256_in_prefix": "fcb8d6ab4500825d9791cf3dbf51c9c5fb481f754d79ed1d54a6cbe40de24edf",
+        "size_in_bytes": 46731
+      },
+      {
+        "_path": "lib/R/library/haven/help/haven.rdx",
+        "path_type": "hardlink",
+        "sha256": "18ba04075c0fff8c4843ac4be8838b6313df2cf5d08966a39ff4a244c8a87998",
+        "sha256_in_prefix": "18ba04075c0fff8c4843ac4be8838b6313df2cf5d08966a39ff4a244c8a87998",
+        "size_in_bytes": 544
+      },
+      {
+        "_path": "lib/R/library/haven/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "ab26e3d7e02a6b8a0a206762f99b3ec8bf1d7e43aa660e460349bbc54f22390c",
+        "sha256_in_prefix": "ab26e3d7e02a6b8a0a206762f99b3ec8bf1d7e43aa660e460349bbc54f22390c",
+        "size_in_bytes": 310
+      },
+      {
+        "_path": "lib/R/library/haven/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "b90006ab5c0d4513ebfa8f9ff0d4c0a482f8b719210aef11c77d8fa924321a04",
+        "sha256_in_prefix": "b90006ab5c0d4513ebfa8f9ff0d4c0a482f8b719210aef11c77d8fa924321a04",
+        "size_in_bytes": 4673
+      },
+      {
+        "_path": "lib/R/library/haven/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      },
+      {
+        "_path": "lib/R/library/haven/libs/haven.so",
+        "path_type": "hardlink",
+        "sha256": "3326be8ad0905d5bc7cb86472dd957b636db24f96eeac88469a8997ac525796a",
+        "sha256_in_prefix": "3326be8ad0905d5bc7cb86472dd957b636db24f96eeac88469a8997ac525796a",
+        "size_in_bytes": 532552
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "2bf7249e24202c42a6579251089fec24c4dda0d6a078fbf7455a33cb64011684",
+  "size": 419342,
+  "subdir": "linux-64",
+  "timestamp": 1665314533000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/r-haven-2.5.1-r42h7525677_0.tar.bz2",
+  "version": "2.5.1"
+}

@@ -2,12 +2,12 @@ prefix=/home/adrian/PhD/Pd_Geocache/sf-env
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
-xcbproto_version=1.14
+xcbproto_version=1.13
 
 Name: XCB
 Description: X-protocol C Binding
-Version: 1.14
-Requires.private: xau >= 0.99.2
+Version: 1.13
+Requires.private: pthread-stubs xau >= 0.99.2 xdmcp
 Libs: -L${libdir} -lxcb
 Libs.private: 
 Cflags: -I${includedir}

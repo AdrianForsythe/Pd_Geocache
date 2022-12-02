@@ -1,3 +1,75 @@
+# wk 0.7.0
+
+* Remove legacy headers that are no longer used by any downstream package
+  (#146).
+* `validate_wk_wkt()` now errors for an object that does not inherit from
+  'wk_wkt' (#123, #146).
+* Added `wk_crs_projjson()` to get a JSON representation of a CRS object.
+  To make lookup possible based on shortcut-style CRS objects (e.g.,
+  `"EPSG:4326"` or `4326`), added data objects `wk_proj_crs_view` and
+  `wk_proj_crs_json` that contain cached versions of rendered PROJJSON
+  based on the latest PROJ version (#147).
+* Added a `wk_crs_proj_definition()` method for `wk_crs_inherit()` (#136,
+  #147).
+* Conversion to sf now uses the `sfc_writer()` for all wk classes, making
+  conversions faster and fixing at least one issue with conversion of NA
+  geometries to sf (#135).
+* `wk_plot()` now plots `NULL`/`NA` geometries and mixed geometry types
+  more reliably (#142, #143, #149).
+* Exported EMPTY geometries to well-known text now include dimension
+  (e.g., `POINT Z EMPTY`) (#141, #150).
+* Fixed bug where `wk_polygon()` doubled some points when the input contained
+  closed rings (#134, #151).
+* Fixed bug where `wk_count()` exposed uninitialized values for empty input
+  (#139, #153).
+* The `xy_writer()` now opportunistically avoids allocating vectors for Z
+  or M values unless they are actually needed (#131, #154).
+* Added example WKT for all geometry types and dimensions plus helper
+  `wk_example()` to access them and set various properties (#155).
+* Fixes warnings when compiling with `-Wstrict-prototypes` (#157, #158).
+* Removed `wk_chunk_map_feature()` in favour of using chunking strategies
+  directly (#132, #159).
+* Optimized `wk_coords()` for `xy()` objects (#138, #160).
+* Added accessor methods for record-style vectors: `rct_xmin()`, `rct_xmax()`,
+  `rct_ymin()`, `rct_ymax()`, `rct_width()`, `rct_height()`, `crc_center()`,
+  `crc_x()`, `crc_y()`, `crc_r()`, `xy_x()`, `xy_y()`, `xy_z()`, and `xy_m()`
+  (#144, #161).
+* Added rectangle operators `rct_intersects()`, `rct_contains()`,
+  and `rct_intersection()` (#161).
+
+# wk 0.6.0
+
+* Fixed `wk_affine_rescale()` to apply the translate and scale
+  operations in the correct order (#94).
+* Add `wk_handle_slice()` and `wk_chunk_map_feature()` to support
+  a chunk + apply workflow when working with large vectors (#101, #107).
+* C and R code was rewritten to avoid materializing ALTREP vectors
+  (#103, #109).
+* Added a `wk_crs_proj_definition()` generic for foreign CRS objects
+  (#110, #112).
+* Added `wk_crs_longlat()` helper to help promote authority-compliant
+  CRS choices (#112).
+* Added `wk_is_geodesic()`, `wk_set_geodesic()`, and argument `geodesic`
+  in `wkt()` and `wkb()` as a flag for objects whose edges must
+  be interpolated along a spherical/ellipsoidal trajectory (#112).
+* Added `sf::st_geometry()` and `sf::st_sfc()` methods for wk geometry
+  vectors for better integration with sf (#113, #114).
+* Refactored well-known text parser to be more reusable and faster
+  (#115, #104).
+* Minor performance enhancement for `is.na()` and `validate_wk_wkb()`
+  when called on a very long `wkb()` vector (#117).
+* Fixed issue with `validate_wk_wkb()` and `validate_wk_wkt()`, which failed
+  for most valid objects (#119).
+* Added `wk_envelope()` and `wk_envelope_handler()` to compute feature-wise
+  bounding boxes (#120, #122).
+* Fixed headers and tests to pass on big endian systems (#105, #122).
+* Incorporated the geodesic attribute into vctrs methods, data frame
+  columns, and bbox/envelope calculation (#124, #125).
+* Fix `as_xy()` for nested data frames and geodesic objects (#126, #128).
+* Remove deprecated `wkb_problems()`, `wkt_problems()`, `wkb_format()`,
+  and `wkt_format()` (#129).
+* `wk_plot()` is now an S3 generic (#130).
+
 # wk 0.5.0
 
 * Fixed bugs relating to the behaviour of wk classes as

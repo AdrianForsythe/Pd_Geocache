@@ -25,7 +25,7 @@
 #
 
 # Configurable parameters set by autoconf
-version_string="Kerberos 5 release 1.19.2"
+version_string="Kerberos 5 release 1.19.3"
 
 prefix=/home/adrian/PhD/Pd_Geocache/sf-env
 exec_prefix=${prefix}
@@ -33,7 +33,7 @@ includedir=${prefix}/include
 libdir=${exec_prefix}/lib
 CC_LINK='$(CC) $(PROG_LIBPATH) $(PROG_RPATH_FLAGS) $(CFLAGS) $(LDFLAGS)'
 KDB5_DB_LIB=
-LDFLAGS='-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,-rpath,/home/adrian/PhD/Pd_Geocache/sf-env/lib -Wl,-rpath-link,/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib'
+LDFLAGS='-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/home/adrian/PhD/Pd_Geocache/sf-env/lib -Wl,-rpath-link,/home/adrian/PhD/Pd_Geocache/sf-env/lib -L/home/adrian/PhD/Pd_Geocache/sf-env/lib '
 RPATH_FLAG='-Wl,--enable-new-dtags -Wl,-rpath -Wl,'
 PROG_RPATH_FLAGS='$(RPATH_FLAG)$(PROG_RPATH)'
 PTHREAD_CFLAGS='-pthread'
@@ -42,7 +42,7 @@ DEFCCNAME='FILE:/tmp/krb5cc_%{uid}'
 DEFKTNAME='FILE:/etc/krb5.keytab'
 DEFCKTNAME='FILE:/opt/conda/var/krb5/user/%{euid}/client.keytab'
 
-LIBS='-lcrypto -lresolv '
+LIBS='-lkeyutils -lcrypto -lresolv '
 GEN_LIB=
 
 # Defaults for program

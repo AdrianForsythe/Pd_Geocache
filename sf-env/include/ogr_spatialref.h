@@ -1,5 +1,5 @@
 /******************************************************************************
- * $Id: ogr_spatialref.h ed03372732878b73c2d7043c0bd8f0a3cc01ca8d 2021-10-18 05:00:39 -0500 Alan D. Snow $
+ * $Id$
  *
  * Project:  OpenGIS Simple Features Reference Implementation
  * Purpose:  Classes for manipulating spatial reference systems in a
@@ -421,6 +421,7 @@ class CPL_DLL OGRSpatialReference
 
     const char *GetAuthorityCode( const char * pszTargetKey ) const;
     const char *GetAuthorityName( const char * pszTargetKey ) const;
+    char       *GetOGCURN() const;
 
     bool        GetAreaOfUse( double* pdfWestLongitudeDeg,
                               double* pdfSouthLatitudeDeg,

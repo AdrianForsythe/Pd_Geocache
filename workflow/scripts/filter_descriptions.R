@@ -35,7 +35,7 @@ filter.description<-function(data_path,out_path,keyword_plot){
     as.data.frame()
 
   png(keyword_plot,res = 300,height = 800,width = 1000,units = "px")
-  UpSetR::upset(wide_full_set,nintersects = NA,nsets = length(keywords),order.by = "freq")
+  wide_full_set %>% as.data.frame() %>%  UpSetR::upset(.,nintersects = NA,nsets = length(keywords),order.by = "freq")
   dev.off()
 
   ##### Filtering

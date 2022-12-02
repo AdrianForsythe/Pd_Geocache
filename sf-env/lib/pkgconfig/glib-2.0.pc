@@ -1,6 +1,6 @@
 prefix=/home/adrian/PhD/Pd_Geocache/sf-env
-libdir=${prefix}/lib
 includedir=${prefix}/include
+libdir=${prefix}/lib
 
 bindir=${prefix}/bin
 glib_genmarshal=${bindir}/glib-genmarshal
@@ -9,7 +9,7 @@ glib_mkenums=${bindir}/glib-mkenums
 
 Name: GLib
 Description: C Utility Library
-Version: 2.70.2
+Version: 2.72.1
 Requires.private: libpcre >=  8.31
 Libs: -L${libdir} -lglib-2.0
 Libs.private: -pthread -lrt -liconv -lm

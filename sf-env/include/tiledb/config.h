@@ -49,10 +49,13 @@ class Config;  // Forward decl for impl classes
 
 namespace impl {
 
-class ConfigIter : public std::iterator<
-                       std::forward_iterator_tag,
-                       const std::pair<std::string, std::string>> {
+class ConfigIter {
  public:
+  using iterator_category = std::forward_iterator_tag;
+  using value_type = const std::pair<std::string, std::string>;
+  using difference_type = std::ptrdiff_t;
+  using pointer = value_type*;
+  using reference = value_type&;
   /* ********************************* */
   /*     CONSTRUCTORS & DESTRUCTORS    */
   /* ********************************* */
@@ -386,7 +389,7 @@ class Config {
    *    **Default**: bytes
    * - `sm.query.dense.reader` <br>
    *    Which reader to use for dense queries. "refactored" or "legacy".<br>
-   *    **Default**: lagacy
+   *    **Default**: refactored
    * - `sm.query.sparse_global_order.reader` <br>
    *    Which reader to use for sparse global order queries. "refactored"
    *    or "legacy".<br>
@@ -418,14 +421,6 @@ class Config {
    *    Ratio of the budget allocated for array data in the sparse global
    *    order reader. <br>
    *    **Default**: 0.1
-   * - `sm.mem.reader.sparse_global_order.ratio_result_tiles` <br>
-   *    Ratio of the budget allocated for result tiles in the sparse global
-   *    order reader. <br>
-   *    **Default**: 0.05
-   * - `sm.mem.reader.sparse_global_order.ratio_rcs` <br>
-   *    Ratio of the budget allocated for result cell slabs in the sparse
-   *    global order reader. <br>
-   *    **Default**: 0.05
    * - `sm.mem.reader.sparse_unordered_with_dups.ratio_coords` <br>
    *    Ratio of the budget allocated for coordinates in the sparse unordered
    *    with duplicates reader. <br>
@@ -442,16 +437,15 @@ class Config {
    *    Ratio of the budget allocated for array data in the sparse unordered
    *    with duplicates reader. <br>
    *    **Default**: 0.1
-   * - `sm.mem.reader.sparse_unordered_with_dups.ratio_result_tiles` <br>
-   *    Ratio of the budget allocated for result tiles in the sparse
-   *    unordered with duplicates reader. <br>
-   *    **Default**: 0.05
-   * - `sm.mem.reader.sparse_unordered_with_dups.ratio_rcs` <br>
-   *    Ratio of the budget allocated for result cell slabs in the sparse
-   *    unordered with duplicates reader. <br>
-   * - `vfs.read_ahead_size` <br>
    *    The maximum byte size to read-ahead from the backend. <br>
    *    **Default**: 102400
+   * - `sm.group.timestamp_start` <br>
+   *    The start timestamp used for opening the group. <br>
+   *    **Default**: 0
+   * - `sm.group.timestamp_end` <br>
+   *    The end timestamp used for opening the group. <br>
+   *    Also used for the write timestamp if set. <br>
+   *    **Default**: UINT64_MAX
    * -  `vfs.read_ahead_cache_size` <br>
    *    The the total maximum size of the read-ahead cache, which is an LRU.
    *    <br>
@@ -461,6 +455,9 @@ class Config {
    *    (except parallel S3 writes, which are controlled by
    *    `vfs.s3.multipart_part_size`.) <br>
    *    **Default**: 10MB
+   * - `vfs.max_batch_size` <br>
+   *    The maximum number of bytes in a VFS read operation<br>
+   *    **Default**: UINT64_MAX
    * - `vfs.min_batch_size` <br>
    *    The minimum number of bytes in a VFS read operation<br>
    *    **Default**: 20MB
@@ -477,10 +474,6 @@ class Config {
    *    The maximum number of parallel operations on objects with `file:///`
    *    URIs. <br>
    *    **Default**: `sm.io_concurrency_level`
-   * - `vfs.file.enable_filelocks` <br>
-   *    If set to `false`, file locking operations are no-ops for `file:///`
-   *    URIs in VFS. <br>
-   *    **Default**: `true`
    * - `vfs.azure.storage_account_name` <br>
    *    Set the Azure Storage Account name. <br>
    *    **Default**: ""
@@ -722,6 +715,15 @@ class Config {
    *    The delay factor to exponentially wait until further retries of a
    *    failed REST request <br>
    *    **Default**: 1.25
+   * - `rest.curl.verbose` <br>
+   * Set curl to run in verbose mode for REST requests <br>
+   * curl will print to stdout with this option
+   *    **Default**: false
+   * - `filestore.buffer_size` <br>
+   *    Specifies the size in bytes of the internal buffers used in the
+   * filestore API. The size should be bigger than the minimum tile size
+   * filestore currently supports, that is currently 1024bytes. <br>
+   *    **Default**: 100MB
    */
   Config& set(const std::string& param, const std::string& value) {
     tiledb_error_t* err;
@@ -746,6 +748,19 @@ class Config {
       throw TileDBError("Config Error: Invalid parameter '" + param + "'");
 
     return val;
+  }
+
+  /**
+   * Check if a configuration parameter exists.
+   * @param param Name of configuration parameter
+   * @return true if the parameter exists, false otherwise
+   */
+  bool contains(const std::string_view& param) const {
+    const char* val;
+    tiledb_error_t* err;
+    tiledb_config_get(config_.get(), param.data(), &val, &err);
+
+    return val != nullptr;
   }
 
   /**

@@ -1,6 +1,8 @@
 align                   Alignment helper
-char                    Format a character vector in a tibble
-ctl_new_pillar          Customize your tibble subclass
+ctl_new_pillar          Customize the appearance of simple pillars in
+                        your tibble subclass
+ctl_new_pillar_list     Customize the appearance of compound pillars in
+                        your tibble subclass
 dim_desc                Format dimensions
 format_glimpse          Format a vector for horizontal printing
 format_type_sum         Format a type summary
@@ -12,7 +14,6 @@ new_pillar_component    Components of a pillar
 new_pillar_shaft        Constructor for column data
 new_pillar_title        Prepare a column title for formatting
 new_pillar_type         Prepare a column type for formatting
-num                     Format a numeric vector in a tibble
 pillar                  Object for formatting a vector suitable for
                         tabular display
 pillar-package          pillar: Coloured Formatting for Columns

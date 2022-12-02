@@ -1,0 +1,928 @@
+{
+  "build": "h236a147_1004",
+  "build_number": 1004,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgfortran-ng",
+    "libgcc-ng >=9.3.0",
+    "libstdcxx-ng >=9.3.0",
+    "libblas >=3.8.0,<4.0a0",
+    "libgfortran5 >=9.3.0",
+    "liblapack >=3.8.0,<4.0.0a0"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/jags-4.3.0-h236a147_1004",
+  "features": "",
+  "files": [
+    "bin/jags",
+    "include/JAGS/Console.h",
+    "include/JAGS/JRmath.h",
+    "include/JAGS/compiler/Compiler.h",
+    "include/JAGS/compiler/Counter.h",
+    "include/JAGS/compiler/CounterTab.h",
+    "include/JAGS/compiler/LogicalFactory.h",
+    "include/JAGS/compiler/MixtureFactory.h",
+    "include/JAGS/compiler/NodeFactory.h",
+    "include/JAGS/compiler/ObsFuncTab.h",
+    "include/JAGS/compiler/ParseTree.h",
+    "include/JAGS/distribution/ArrayDist.h",
+    "include/JAGS/distribution/DistError.h",
+    "include/JAGS/distribution/DistPtr.h",
+    "include/JAGS/distribution/DistTab.h",
+    "include/JAGS/distribution/Distribution.h",
+    "include/JAGS/distribution/RScalarDist.h",
+    "include/JAGS/distribution/ScalarDist.h",
+    "include/JAGS/distribution/VectorDist.h",
+    "include/JAGS/function/ArrayFunction.h",
+    "include/JAGS/function/ArrayLogDensity.h",
+    "include/JAGS/function/DFunction.h",
+    "include/JAGS/function/DPQFunction.h",
+    "include/JAGS/function/FuncError.h",
+    "include/JAGS/function/FuncTab.h",
+    "include/JAGS/function/Function.h",
+    "include/JAGS/function/FunctionPtr.h",
+    "include/JAGS/function/LinkFunction.h",
+    "include/JAGS/function/PFunction.h",
+    "include/JAGS/function/QFunction.h",
+    "include/JAGS/function/ScalarFunction.h",
+    "include/JAGS/function/ScalarLogDensity.h",
+    "include/JAGS/function/ScalarVectorFunction.h",
+    "include/JAGS/function/VectorFunction.h",
+    "include/JAGS/function/VectorLogDensity.h",
+    "include/JAGS/graph/AggNode.h",
+    "include/JAGS/graph/ArrayLogicalNode.h",
+    "include/JAGS/graph/ArrayStochasticNode.h",
+    "include/JAGS/graph/ConstantNode.h",
+    "include/JAGS/graph/DeterministicNode.h",
+    "include/JAGS/graph/Graph.h",
+    "include/JAGS/graph/GraphMarks.h",
+    "include/JAGS/graph/LinkNode.h",
+    "include/JAGS/graph/LogicalNode.h",
+    "include/JAGS/graph/MixTab.h",
+    "include/JAGS/graph/MixtureNode.h",
+    "include/JAGS/graph/Node.h",
+    "include/JAGS/graph/NodeError.h",
+    "include/JAGS/graph/ParentError.h",
+    "include/JAGS/graph/ScalarLogicalNode.h",
+    "include/JAGS/graph/ScalarStochasticNode.h",
+    "include/JAGS/graph/StochasticNode.h",
+    "include/JAGS/graph/VSLogicalNode.h",
+    "include/JAGS/graph/VectorLogicalNode.h",
+    "include/JAGS/graph/VectorStochasticNode.h",
+    "include/JAGS/model/BUGSModel.h",
+    "include/JAGS/model/Model.h",
+    "include/JAGS/model/Monitor.h",
+    "include/JAGS/model/MonitorControl.h",
+    "include/JAGS/model/MonitorFactory.h",
+    "include/JAGS/model/MonitorInfo.h",
+    "include/JAGS/model/NodeArray.h",
+    "include/JAGS/model/NodeArraySubset.h",
+    "include/JAGS/model/SymTab.h",
+    "include/JAGS/module/Module.h",
+    "include/JAGS/module/ModuleError.h",
+    "include/JAGS/rng/RNG.h",
+    "include/JAGS/rng/RNGFactory.h",
+    "include/JAGS/rng/RmathRNG.h",
+    "include/JAGS/rng/TruncatedNormal.h",
+    "include/JAGS/sampler/GraphView.h",
+    "include/JAGS/sampler/ImmutableSampleMethod.h",
+    "include/JAGS/sampler/ImmutableSampler.h",
+    "include/JAGS/sampler/Linear.h",
+    "include/JAGS/sampler/Metropolis.h",
+    "include/JAGS/sampler/MutableSampleMethod.h",
+    "include/JAGS/sampler/MutableSampler.h",
+    "include/JAGS/sampler/RWMetropolis.h",
+    "include/JAGS/sampler/SampleMethodNoAdapt.h",
+    "include/JAGS/sampler/Sampler.h",
+    "include/JAGS/sampler/SamplerFactory.h",
+    "include/JAGS/sampler/SingletonFactory.h",
+    "include/JAGS/sampler/SingletonGraphView.h",
+    "include/JAGS/sampler/Slicer.h",
+    "include/JAGS/sampler/StepAdapter.h",
+    "include/JAGS/sampler/TemperedMetropolis.h",
+    "include/JAGS/sarray/Range.h",
+    "include/JAGS/sarray/RangeIterator.h",
+    "include/JAGS/sarray/SArray.h",
+    "include/JAGS/sarray/SimpleRange.h",
+    "include/JAGS/util/dim.h",
+    "include/JAGS/util/integer.h",
+    "include/JAGS/util/logical.h",
+    "include/JAGS/util/nainf.h",
+    "include/JAGS/version.h",
+    "lib/JAGS/modules-4/basemod.so",
+    "lib/JAGS/modules-4/bugs.so",
+    "lib/JAGS/modules-4/dic.so",
+    "lib/JAGS/modules-4/glm.so",
+    "lib/JAGS/modules-4/lecuyer.so",
+    "lib/JAGS/modules-4/mix.so",
+    "lib/JAGS/modules-4/msm.so",
+    "lib/libjags.so",
+    "lib/libjags.so.4",
+    "lib/libjags.so.4.0.3",
+    "lib/libjrmath.so",
+    "lib/libjrmath.so.0",
+    "lib/libjrmath.so.0.0.0",
+    "lib/pkgconfig/jags.pc",
+    "libexec/jags-terminal",
+    "share/man/man1/jags.1"
+  ],
+  "fn": "jags-4.3.0-h236a147_1004.tar.bz2",
+  "license": "GPL-2.0",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/jags-4.3.0-h236a147_1004",
+    "type": 1
+  },
+  "md5": "6cb024f47efe1d65014b1ead5b8a066a",
+  "name": "jags",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/jags-4.3.0-h236a147_1004.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/jags",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/jags_1603005414856/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "8e91676e066809482fbda1ccc93762a163e2a1808211c5df85cf4a42f59065ac",
+        "sha256_in_prefix": "ac4b35d215484f41dd4eed0fcc02b7f9538edebd08c42aff12dbaaf3c3b22b41",
+        "size_in_bytes": 1926
+      },
+      {
+        "_path": "include/JAGS/Console.h",
+        "path_type": "hardlink",
+        "sha256": "847f30ea0d78c1b11c75268b192b7bda9e2be817df5cd903c623d722d1cbe385",
+        "sha256_in_prefix": "847f30ea0d78c1b11c75268b192b7bda9e2be817df5cd903c623d722d1cbe385",
+        "size_in_bytes": 7653
+      },
+      {
+        "_path": "include/JAGS/JRmath.h",
+        "path_type": "hardlink",
+        "sha256": "799e0362b15dea97e6649e94394b2dfb79b3cec69d7b2de96f6924d7ecf3af37",
+        "sha256_in_prefix": "799e0362b15dea97e6649e94394b2dfb79b3cec69d7b2de96f6924d7ecf3af37",
+        "size_in_bytes": 17331
+      },
+      {
+        "_path": "include/JAGS/compiler/Compiler.h",
+        "path_type": "hardlink",
+        "sha256": "af158bd29901f57794c76eaed048384a137e4da82b4885b451cbeb657429e2a9",
+        "sha256_in_prefix": "af158bd29901f57794c76eaed048384a137e4da82b4885b451cbeb657429e2a9",
+        "size_in_bytes": 4509
+      },
+      {
+        "_path": "include/JAGS/compiler/Counter.h",
+        "path_type": "hardlink",
+        "sha256": "4479f4993016e726cee9d70c21329804c15b9fd7d0348a01c076644c3d3a0c7a",
+        "sha256_in_prefix": "4479f4993016e726cee9d70c21329804c15b9fd7d0348a01c076644c3d3a0c7a",
+        "size_in_bytes": 646
+      },
+      {
+        "_path": "include/JAGS/compiler/CounterTab.h",
+        "path_type": "hardlink",
+        "sha256": "ffe9db9dbedafe4f16b6cb63014d1441e6487f038b268c1be9c1c5119887ed51",
+        "sha256_in_prefix": "ffe9db9dbedafe4f16b6cb63014d1441e6487f038b268c1be9c1c5119887ed51",
+        "size_in_bytes": 1145
+      },
+      {
+        "_path": "include/JAGS/compiler/LogicalFactory.h",
+        "path_type": "hardlink",
+        "sha256": "7f9f1f210917b5f8a3f671932cdde987ddc19c3cfe998470aa4b7413c12a95b8",
+        "sha256_in_prefix": "7f9f1f210917b5f8a3f671932cdde987ddc19c3cfe998470aa4b7413c12a95b8",
+        "size_in_bytes": 2128
+      },
+      {
+        "_path": "include/JAGS/compiler/MixtureFactory.h",
+        "path_type": "hardlink",
+        "sha256": "f39f6d0175c437c2b6932031f90a2805aba39a71dd52a4d620ed2d4a62654aff",
+        "sha256_in_prefix": "f39f6d0175c437c2b6932031f90a2805aba39a71dd52a4d620ed2d4a62654aff",
+        "size_in_bytes": 1944
+      },
+      {
+        "_path": "include/JAGS/compiler/NodeFactory.h",
+        "path_type": "hardlink",
+        "sha256": "e5c538e7a06f59e86566db2abd51acb30ed1c4df5f7b7e15e0b5975f289850cd",
+        "sha256_in_prefix": "e5c538e7a06f59e86566db2abd51acb30ed1c4df5f7b7e15e0b5975f289850cd",
+        "size_in_bytes": 2040
+      },
+      {
+        "_path": "include/JAGS/compiler/ObsFuncTab.h",
+        "path_type": "hardlink",
+        "sha256": "146f04114d95997dafb1ffdcad10403f8a2e09f6f0b661d32d3d853d8a157180",
+        "sha256_in_prefix": "146f04114d95997dafb1ffdcad10403f8a2e09f6f0b661d32d3d853d8a157180",
+        "size_in_bytes": 1893
+      },
+      {
+        "_path": "include/JAGS/compiler/ParseTree.h",
+        "path_type": "hardlink",
+        "sha256": "c401dac83a1851d0fd92de5185db8901c0a385afc385467fc7e72e742d0e5abd",
+        "sha256_in_prefix": "c401dac83a1851d0fd92de5185db8901c0a385afc385467fc7e72e742d0e5abd",
+        "size_in_bytes": 2996
+      },
+      {
+        "_path": "include/JAGS/distribution/ArrayDist.h",
+        "path_type": "hardlink",
+        "sha256": "df0c5528a08ecc7e588dafdbc366eac2e1abefabc8f26eb4dbba09e5e1146145",
+        "sha256_in_prefix": "df0c5528a08ecc7e588dafdbc366eac2e1abefabc8f26eb4dbba09e5e1146145",
+        "size_in_bytes": 7147
+      },
+      {
+        "_path": "include/JAGS/distribution/DistError.h",
+        "path_type": "hardlink",
+        "sha256": "5f0dc4d284e3ea2d4f5ae5ba071bef5daf0a7c3d51591eb0b5e5f10540ee973a",
+        "sha256_in_prefix": "5f0dc4d284e3ea2d4f5ae5ba071bef5daf0a7c3d51591eb0b5e5f10540ee973a",
+        "size_in_bytes": 531
+      },
+      {
+        "_path": "include/JAGS/distribution/DistPtr.h",
+        "path_type": "hardlink",
+        "sha256": "6a875b279ce82847345a45e4e4839fc22453b90dd466b9d244fcdd4877f42385",
+        "sha256_in_prefix": "6a875b279ce82847345a45e4e4839fc22453b90dd466b9d244fcdd4877f42385",
+        "size_in_bytes": 1035
+      },
+      {
+        "_path": "include/JAGS/distribution/DistTab.h",
+        "path_type": "hardlink",
+        "sha256": "7fe99436d389e7d1eeb0c9452bbc98a89898c8a467310f2c4bb038a88e9b8048",
+        "sha256_in_prefix": "7fe99436d389e7d1eeb0c9452bbc98a89898c8a467310f2c4bb038a88e9b8048",
+        "size_in_bytes": 911
+      },
+      {
+        "_path": "include/JAGS/distribution/Distribution.h",
+        "path_type": "hardlink",
+        "sha256": "d3c172efc3138229e8338fed242c8a8b2b863939ee9490606558e9b06836dec7",
+        "sha256_in_prefix": "d3c172efc3138229e8338fed242c8a8b2b863939ee9490606558e9b06836dec7",
+        "size_in_bytes": 5542
+      },
+      {
+        "_path": "include/JAGS/distribution/RScalarDist.h",
+        "path_type": "hardlink",
+        "sha256": "52e0d90f8b62519d632803251b798403702ed292caa639d18a02b75f4dd77428",
+        "sha256_in_prefix": "52e0d90f8b62519d632803251b798403702ed292caa639d18a02b75f4dd77428",
+        "size_in_bytes": 4010
+      },
+      {
+        "_path": "include/JAGS/distribution/ScalarDist.h",
+        "path_type": "hardlink",
+        "sha256": "f672dadd5cacb8d3abd1a2f8043d667e9b36ee6095e3b55fab12641b8b11903d",
+        "sha256_in_prefix": "f672dadd5cacb8d3abd1a2f8043d667e9b36ee6095e3b55fab12641b8b11903d",
+        "size_in_bytes": 5070
+      },
+      {
+        "_path": "include/JAGS/distribution/VectorDist.h",
+        "path_type": "hardlink",
+        "sha256": "02a978e24c434d29b3423d6493971b660fe87de0773e3c63a0e98823993d124e",
+        "sha256_in_prefix": "02a978e24c434d29b3423d6493971b660fe87de0773e3c63a0e98823993d124e",
+        "size_in_bytes": 7265
+      },
+      {
+        "_path": "include/JAGS/function/ArrayFunction.h",
+        "path_type": "hardlink",
+        "sha256": "3a336191b86eb57eb406c660ebdcee998ff8bf1e9f4329e178d70eefe830c069",
+        "sha256_in_prefix": "3a336191b86eb57eb406c660ebdcee998ff8bf1e9f4329e178d70eefe830c069",
+        "size_in_bytes": 2134
+      },
+      {
+        "_path": "include/JAGS/function/ArrayLogDensity.h",
+        "path_type": "hardlink",
+        "sha256": "c003dd890fd12b94285fe9bac6a67b82e08fa2fd10c79399ce10475a3c28f1a0",
+        "sha256_in_prefix": "c003dd890fd12b94285fe9bac6a67b82e08fa2fd10c79399ce10475a3c28f1a0",
+        "size_in_bytes": 923
+      },
+      {
+        "_path": "include/JAGS/function/DFunction.h",
+        "path_type": "hardlink",
+        "sha256": "5a34a7383ff306b3804e2fe1719f9072e1c2f627ea846bd0e9f0d59e8d79c642",
+        "sha256_in_prefix": "5a34a7383ff306b3804e2fe1719f9072e1c2f627ea846bd0e9f0d59e8d79c642",
+        "size_in_bytes": 439
+      },
+      {
+        "_path": "include/JAGS/function/DPQFunction.h",
+        "path_type": "hardlink",
+        "sha256": "f694282599e6e2fd038983af2702ac4b75dfc7d32347b368994f7c29d514561d",
+        "sha256_in_prefix": "f694282599e6e2fd038983af2702ac4b75dfc7d32347b368994f7c29d514561d",
+        "size_in_bytes": 1244
+      },
+      {
+        "_path": "include/JAGS/function/FuncError.h",
+        "path_type": "hardlink",
+        "sha256": "2884a549bacf9d321ef349c7a2e08814f5481908d4816ff44e5a958bd076ccfd",
+        "sha256_in_prefix": "2884a549bacf9d321ef349c7a2e08814f5481908d4816ff44e5a958bd076ccfd",
+        "size_in_bytes": 511
+      },
+      {
+        "_path": "include/JAGS/function/FuncTab.h",
+        "path_type": "hardlink",
+        "sha256": "be5e66b87b6ad7cebf0bb38ae6ae80e34a3bc8e45e6807a5eb6781c6327d6409",
+        "sha256_in_prefix": "be5e66b87b6ad7cebf0bb38ae6ae80e34a3bc8e45e6807a5eb6781c6327d6409",
+        "size_in_bytes": 1275
+      },
+      {
+        "_path": "include/JAGS/function/Function.h",
+        "path_type": "hardlink",
+        "sha256": "62f0637c2771427f7b5c58f5c93ece2c0ff0c2ad8f161841fe07bafd04a839c7",
+        "sha256_in_prefix": "62f0637c2771427f7b5c58f5c93ece2c0ff0c2ad8f161841fe07bafd04a839c7",
+        "size_in_bytes": 6097
+      },
+      {
+        "_path": "include/JAGS/function/FunctionPtr.h",
+        "path_type": "hardlink",
+        "sha256": "931a4e017ca40194cd8935dc6f6f500b59941afb481bdbd0f692913493653e1b",
+        "sha256_in_prefix": "931a4e017ca40194cd8935dc6f6f500b59941afb481bdbd0f692913493653e1b",
+        "size_in_bytes": 1371
+      },
+      {
+        "_path": "include/JAGS/function/LinkFunction.h",
+        "path_type": "hardlink",
+        "sha256": "90dfd3c56adba778f64ba7242697256af50033fa3343df0664ecb9a8a57464b5",
+        "sha256_in_prefix": "90dfd3c56adba778f64ba7242697256af50033fa3343df0664ecb9a8a57464b5",
+        "size_in_bytes": 1225
+      },
+      {
+        "_path": "include/JAGS/function/PFunction.h",
+        "path_type": "hardlink",
+        "sha256": "42fb231561ec08ed1d6d8b3adc4a57306a7c4e4fcc9222672808f48d55e71894",
+        "sha256_in_prefix": "42fb231561ec08ed1d6d8b3adc4a57306a7c4e4fcc9222672808f48d55e71894",
+        "size_in_bytes": 455
+      },
+      {
+        "_path": "include/JAGS/function/QFunction.h",
+        "path_type": "hardlink",
+        "sha256": "a56479ca9153e8cc1439c4f1a49d57437087909150a591cedf6476882116ceeb",
+        "sha256_in_prefix": "a56479ca9153e8cc1439c4f1a49d57437087909150a591cedf6476882116ceeb",
+        "size_in_bytes": 440
+      },
+      {
+        "_path": "include/JAGS/function/ScalarFunction.h",
+        "path_type": "hardlink",
+        "sha256": "4fbf194bcca6222fcdb06bf9ddaca70fb17b1dd73330ef489c66684205a4e711",
+        "sha256_in_prefix": "4fbf194bcca6222fcdb06bf9ddaca70fb17b1dd73330ef489c66684205a4e711",
+        "size_in_bytes": 1473
+      },
+      {
+        "_path": "include/JAGS/function/ScalarLogDensity.h",
+        "path_type": "hardlink",
+        "sha256": "7b6fbc25f92faf4a9a6b156a654e3f401f28df84c18f01717d9dd42764eddac1",
+        "sha256_in_prefix": "7b6fbc25f92faf4a9a6b156a654e3f401f28df84c18f01717d9dd42764eddac1",
+        "size_in_bytes": 548
+      },
+      {
+        "_path": "include/JAGS/function/ScalarVectorFunction.h",
+        "path_type": "hardlink",
+        "sha256": "04b261640595109f15a2773562a09fa0705e39d57c2b8fe0feded1106e80041f",
+        "sha256_in_prefix": "04b261640595109f15a2773562a09fa0705e39d57c2b8fe0feded1106e80041f",
+        "size_in_bytes": 1312
+      },
+      {
+        "_path": "include/JAGS/function/VectorFunction.h",
+        "path_type": "hardlink",
+        "sha256": "9a31cc0c1b9a67447027f6e5f7f40338e9c132e342a6c2e7aa3ec215877096de",
+        "sha256_in_prefix": "9a31cc0c1b9a67447027f6e5f7f40338e9c132e342a6c2e7aa3ec215877096de",
+        "size_in_bytes": 2170
+      },
+      {
+        "_path": "include/JAGS/function/VectorLogDensity.h",
+        "path_type": "hardlink",
+        "sha256": "ce6dbfa576e9c57681e1c61f9556d2f3445cf9e536e95e9a174913602d0ccf3e",
+        "sha256_in_prefix": "ce6dbfa576e9c57681e1c61f9556d2f3445cf9e536e95e9a174913602d0ccf3e",
+        "size_in_bytes": 857
+      },
+      {
+        "_path": "include/JAGS/graph/AggNode.h",
+        "path_type": "hardlink",
+        "sha256": "0b0124ae9941b1e5c99b8ad01c9b0dfa43430660bb3cc397b6eb7978364c25b8",
+        "sha256_in_prefix": "0b0124ae9941b1e5c99b8ad01c9b0dfa43430660bb3cc397b6eb7978364c25b8",
+        "size_in_bytes": 2956
+      },
+      {
+        "_path": "include/JAGS/graph/ArrayLogicalNode.h",
+        "path_type": "hardlink",
+        "sha256": "3a8fe7814ec8f6727e384dea4174069325bd7b5f4a053be49ce7c0a5fb230d54",
+        "sha256_in_prefix": "3a8fe7814ec8f6727e384dea4174069325bd7b5f4a053be49ce7c0a5fb230d54",
+        "size_in_bytes": 1031
+      },
+      {
+        "_path": "include/JAGS/graph/ArrayStochasticNode.h",
+        "path_type": "hardlink",
+        "sha256": "37955a69fb1d50b98f315ea6103f9393cfabc7ff073578924a6ade2f3001d2d2",
+        "sha256_in_prefix": "37955a69fb1d50b98f315ea6103f9393cfabc7ff073578924a6ade2f3001d2d2",
+        "size_in_bytes": 1429
+      },
+      {
+        "_path": "include/JAGS/graph/ConstantNode.h",
+        "path_type": "hardlink",
+        "sha256": "641d9171bd0ba544bdcddf3093c79686279fd067497f62769428f36135c55bda",
+        "sha256_in_prefix": "641d9171bd0ba544bdcddf3093c79686279fd067497f62769428f36135c55bda",
+        "size_in_bytes": 2471
+      },
+      {
+        "_path": "include/JAGS/graph/DeterministicNode.h",
+        "path_type": "hardlink",
+        "sha256": "6dbf011bab7d165f65363ba4eb2e2e7df7b5d235e0efd8a336f7150e41bcc88e",
+        "sha256_in_prefix": "6dbf011bab7d165f65363ba4eb2e2e7df7b5d235e0efd8a336f7150e41bcc88e",
+        "size_in_bytes": 4097
+      },
+      {
+        "_path": "include/JAGS/graph/Graph.h",
+        "path_type": "hardlink",
+        "sha256": "725a1afe2f39b1e065dfd9b48fe4a1a4932e77441233c1cd5c44cdd51fd79732",
+        "sha256_in_prefix": "725a1afe2f39b1e065dfd9b48fe4a1a4932e77441233c1cd5c44cdd51fd79732",
+        "size_in_bytes": 707
+      },
+      {
+        "_path": "include/JAGS/graph/GraphMarks.h",
+        "path_type": "hardlink",
+        "sha256": "018cd07e57ee214bb18676d070d2c8e63e74cd119f08b82746a7467735059597",
+        "sha256_in_prefix": "018cd07e57ee214bb18676d070d2c8e63e74cd119f08b82746a7467735059597",
+        "size_in_bytes": 1955
+      },
+      {
+        "_path": "include/JAGS/graph/LinkNode.h",
+        "path_type": "hardlink",
+        "sha256": "731e67f72defd16462581974e8a2029f3826d89e8849c7bc4888987a16879594",
+        "sha256_in_prefix": "731e67f72defd16462581974e8a2029f3826d89e8849c7bc4888987a16879594",
+        "size_in_bytes": 1307
+      },
+      {
+        "_path": "include/JAGS/graph/LogicalNode.h",
+        "path_type": "hardlink",
+        "sha256": "5c3420dd362ae8b1eaf07e1ae91c6818c8ffc54949a4a29f41203687f6a0b493",
+        "sha256_in_prefix": "5c3420dd362ae8b1eaf07e1ae91c6818c8ffc54949a4a29f41203687f6a0b493",
+        "size_in_bytes": 1452
+      },
+      {
+        "_path": "include/JAGS/graph/MixTab.h",
+        "path_type": "hardlink",
+        "sha256": "16b0cd6e27e4624c7b2b76fce004fc1e1c1af8ec159f4402682341891444671d",
+        "sha256_in_prefix": "16b0cd6e27e4624c7b2b76fce004fc1e1c1af8ec159f4402682341891444671d",
+        "size_in_bytes": 992
+      },
+      {
+        "_path": "include/JAGS/graph/MixtureNode.h",
+        "path_type": "hardlink",
+        "sha256": "1719d0698b073b98086d543970572c9e7ddb7e3b7bb518e3954fec4644d2f8fc",
+        "sha256_in_prefix": "1719d0698b073b98086d543970572c9e7ddb7e3b7bb518e3954fec4644d2f8fc",
+        "size_in_bytes": 3489
+      },
+      {
+        "_path": "include/JAGS/graph/Node.h",
+        "path_type": "hardlink",
+        "sha256": "5230b0d02d4b60d490945e9a83187905834bfb892699cadb7769f4c62ba3f477",
+        "sha256_in_prefix": "5230b0d02d4b60d490945e9a83187905834bfb892699cadb7769f4c62ba3f477",
+        "size_in_bytes": 5511
+      },
+      {
+        "_path": "include/JAGS/graph/NodeError.h",
+        "path_type": "hardlink",
+        "sha256": "9b19aa299027540c795314872312d2bd3a62bd93d6e7709948ea872a11f9c345",
+        "sha256_in_prefix": "9b19aa299027540c795314872312d2bd3a62bd93d6e7709948ea872a11f9c345",
+        "size_in_bytes": 459
+      },
+      {
+        "_path": "include/JAGS/graph/ParentError.h",
+        "path_type": "hardlink",
+        "sha256": "52a15cf783e6ff3403cdf4545d42a7fe295858e4e83c3b2ffb76a9b61842fb6a",
+        "sha256_in_prefix": "52a15cf783e6ff3403cdf4545d42a7fe295858e4e83c3b2ffb76a9b61842fb6a",
+        "size_in_bytes": 503
+      },
+      {
+        "_path": "include/JAGS/graph/ScalarLogicalNode.h",
+        "path_type": "hardlink",
+        "sha256": "dd7f04fdd44c7829043cc135912d64d6bfedf0570295d30adc90c3ecf9dcdb30",
+        "sha256_in_prefix": "dd7f04fdd44c7829043cc135912d64d6bfedf0570295d30adc90c3ecf9dcdb30",
+        "size_in_bytes": 1127
+      },
+      {
+        "_path": "include/JAGS/graph/ScalarStochasticNode.h",
+        "path_type": "hardlink",
+        "sha256": "cb21a5934053f899b78c2d14ca739011686dff8b73a080713302c12b359f2036",
+        "sha256_in_prefix": "cb21a5934053f899b78c2d14ca739011686dff8b73a080713302c12b359f2036",
+        "size_in_bytes": 1260
+      },
+      {
+        "_path": "include/JAGS/graph/StochasticNode.h",
+        "path_type": "hardlink",
+        "sha256": "8f87f141287f9af755b37d901a8653c076fa5972d33564fbd03083a502329ae1",
+        "sha256_in_prefix": "8f87f141287f9af755b37d901a8653c076fa5972d33564fbd03083a502329ae1",
+        "size_in_bytes": 7528
+      },
+      {
+        "_path": "include/JAGS/graph/VSLogicalNode.h",
+        "path_type": "hardlink",
+        "sha256": "ef54bbbce6713b707c5e935192ade8700b4a82fb6d7b85de790c4061964a0f6c",
+        "sha256_in_prefix": "ef54bbbce6713b707c5e935192ade8700b4a82fb6d7b85de790c4061964a0f6c",
+        "size_in_bytes": 1138
+      },
+      {
+        "_path": "include/JAGS/graph/VectorLogicalNode.h",
+        "path_type": "hardlink",
+        "sha256": "55f6d45c48f1907c3ac1b6a84c29709cd42cc0fb5f5741a1f020bc3035593d9c",
+        "sha256_in_prefix": "55f6d45c48f1907c3ac1b6a84c29709cd42cc0fb5f5741a1f020bc3035593d9c",
+        "size_in_bytes": 1227
+      },
+      {
+        "_path": "include/JAGS/graph/VectorStochasticNode.h",
+        "path_type": "hardlink",
+        "sha256": "f868c355c607ddb3f504a851fb62dae4246b5c0feae6d8143ff09ead55cb9df5",
+        "sha256_in_prefix": "f868c355c607ddb3f504a851fb62dae4246b5c0feae6d8143ff09ead55cb9df5",
+        "size_in_bytes": 1424
+      },
+      {
+        "_path": "include/JAGS/model/BUGSModel.h",
+        "path_type": "hardlink",
+        "sha256": "ed773e7d6a2d7b4e5993cb7e0521122d7ddf121b4b90d6d3ac78aca9f23c5128",
+        "sha256_in_prefix": "ed773e7d6a2d7b4e5993cb7e0521122d7ddf121b4b90d6d3ac78aca9f23c5128",
+        "size_in_bytes": 4821
+      },
+      {
+        "_path": "include/JAGS/model/Model.h",
+        "path_type": "hardlink",
+        "sha256": "0823937875a67b94412a7331dcbb6de62aecd0a483ad05fd09192a03aa8166d9",
+        "sha256_in_prefix": "0823937875a67b94412a7331dcbb6de62aecd0a483ad05fd09192a03aa8166d9",
+        "size_in_bytes": 6032
+      },
+      {
+        "_path": "include/JAGS/model/Monitor.h",
+        "path_type": "hardlink",
+        "sha256": "52787fec03e8881938271bd2d95c23f54143d53fde3aeef317946d131da043f8",
+        "sha256_in_prefix": "52787fec03e8881938271bd2d95c23f54143d53fde3aeef317946d131da043f8",
+        "size_in_bytes": 3068
+      },
+      {
+        "_path": "include/JAGS/model/MonitorControl.h",
+        "path_type": "hardlink",
+        "sha256": "6ead692f3cf5d08a42746a66386e2260b004f5fa82682f3e72f5ee0446afba2f",
+        "sha256_in_prefix": "6ead692f3cf5d08a42746a66386e2260b004f5fa82682f3e72f5ee0446afba2f",
+        "size_in_bytes": 1624
+      },
+      {
+        "_path": "include/JAGS/model/MonitorFactory.h",
+        "path_type": "hardlink",
+        "sha256": "0cf27e12ab7817faf39df622f17535aabdfac88af93dc3abc05a115022cca336",
+        "sha256_in_prefix": "0cf27e12ab7817faf39df622f17535aabdfac88af93dc3abc05a115022cca336",
+        "size_in_bytes": 1592
+      },
+      {
+        "_path": "include/JAGS/model/MonitorInfo.h",
+        "path_type": "hardlink",
+        "sha256": "d4fb4cfac852c9777c1ed2e425fcb7dc063a2c7a7dcf0ddfa7d2222161ab5c3f",
+        "sha256_in_prefix": "d4fb4cfac852c9777c1ed2e425fcb7dc063a2c7a7dcf0ddfa7d2222161ab5c3f",
+        "size_in_bytes": 681
+      },
+      {
+        "_path": "include/JAGS/model/NodeArray.h",
+        "path_type": "hardlink",
+        "sha256": "b54bc21539962398f70f47fcc4d2811faef9d71fd01e0861ed00c334b8133496",
+        "sha256_in_prefix": "b54bc21539962398f70f47fcc4d2811faef9d71fd01e0861ed00c334b8133496",
+        "size_in_bytes": 3886
+      },
+      {
+        "_path": "include/JAGS/model/NodeArraySubset.h",
+        "path_type": "hardlink",
+        "sha256": "b7fd006affb4716f41cd9eea05e3c279ce7bd231c07c97f054366a62cb45bc84",
+        "sha256_in_prefix": "b7fd006affb4716f41cd9eea05e3c279ce7bd231c07c97f054366a62cb45bc84",
+        "size_in_bytes": 1291
+      },
+      {
+        "_path": "include/JAGS/model/SymTab.h",
+        "path_type": "hardlink",
+        "sha256": "67ca51face723a0b4c5b91126463564a208cb4377435832adb84e029b43b6854",
+        "sha256_in_prefix": "67ca51face723a0b4c5b91126463564a208cb4377435832adb84e029b43b6854",
+        "size_in_bytes": 3686
+      },
+      {
+        "_path": "include/JAGS/module/Module.h",
+        "path_type": "hardlink",
+        "sha256": "f00e1b30f05887a3ac40d2c2632a41a9435f24f68aec988394177c1c9abd5e71",
+        "sha256_in_prefix": "f00e1b30f05887a3ac40d2c2632a41a9435f24f68aec988394177c1c9abd5e71",
+        "size_in_bytes": 2877
+      },
+      {
+        "_path": "include/JAGS/module/ModuleError.h",
+        "path_type": "hardlink",
+        "sha256": "0641d9a9e36d22dc3e6bb97fb489f722b71bdc49558b17612dd65516b07e5aae",
+        "sha256_in_prefix": "0641d9a9e36d22dc3e6bb97fb489f722b71bdc49558b17612dd65516b07e5aae",
+        "size_in_bytes": 504
+      },
+      {
+        "_path": "include/JAGS/rng/RNG.h",
+        "path_type": "hardlink",
+        "sha256": "fa4e528caea9b71b7c36bd94f7f78fbfd3f7219800593b836fc803be099af051",
+        "sha256_in_prefix": "fa4e528caea9b71b7c36bd94f7f78fbfd3f7219800593b836fc803be099af051",
+        "size_in_bytes": 2071
+      },
+      {
+        "_path": "include/JAGS/rng/RNGFactory.h",
+        "path_type": "hardlink",
+        "sha256": "b105b2800ad94e9b6d9caf2cf64f22282def4d79b25dd25f56a3ba93c746bfe6",
+        "sha256_in_prefix": "b105b2800ad94e9b6d9caf2cf64f22282def4d79b25dd25f56a3ba93c746bfe6",
+        "size_in_bytes": 1505
+      },
+      {
+        "_path": "include/JAGS/rng/RmathRNG.h",
+        "path_type": "hardlink",
+        "sha256": "55703891ca213f56fba04ec1e0b05f88b6708f99ed26fae60c3508642b6c326d",
+        "sha256_in_prefix": "55703891ca213f56fba04ec1e0b05f88b6708f99ed26fae60c3508642b6c326d",
+        "size_in_bytes": 672
+      },
+      {
+        "_path": "include/JAGS/rng/TruncatedNormal.h",
+        "path_type": "hardlink",
+        "sha256": "4d4189e3f94840e94bd72b8b0b3b04598f656ce99fb57b4e050bd5ae7dd0a2d0",
+        "sha256_in_prefix": "4d4189e3f94840e94bd72b8b0b3b04598f656ce99fb57b4e050bd5ae7dd0a2d0",
+        "size_in_bytes": 1309
+      },
+      {
+        "_path": "include/JAGS/sampler/GraphView.h",
+        "path_type": "hardlink",
+        "sha256": "88e5326d65427246e7e2c2d7ad72a5764182117629bf34af8336fa9536d9be4c",
+        "sha256_in_prefix": "88e5326d65427246e7e2c2d7ad72a5764182117629bf34af8336fa9536d9be4c",
+        "size_in_bytes": 5591
+      },
+      {
+        "_path": "include/JAGS/sampler/ImmutableSampleMethod.h",
+        "path_type": "hardlink",
+        "sha256": "286703c96c34db78e8691afe279ecffb55d3a4006a418c01735814287b97c39b",
+        "sha256_in_prefix": "286703c96c34db78e8691afe279ecffb55d3a4006a418c01735814287b97c39b",
+        "size_in_bytes": 472
+      },
+      {
+        "_path": "include/JAGS/sampler/ImmutableSampler.h",
+        "path_type": "hardlink",
+        "sha256": "1dea757f1e844f92c12dc97657b1977f67a7c579a6632503716e935479242df0",
+        "sha256_in_prefix": "1dea757f1e844f92c12dc97657b1977f67a7c579a6632503716e935479242df0",
+        "size_in_bytes": 1640
+      },
+      {
+        "_path": "include/JAGS/sampler/Linear.h",
+        "path_type": "hardlink",
+        "sha256": "d4f77d471a8dd7c15e891dba4b43134ac29d74345d3241e9f8891476863c8885",
+        "sha256_in_prefix": "d4f77d471a8dd7c15e891dba4b43134ac29d74345d3241e9f8891476863c8885",
+        "size_in_bytes": 2577
+      },
+      {
+        "_path": "include/JAGS/sampler/Metropolis.h",
+        "path_type": "hardlink",
+        "sha256": "86ce2264f0015bd4d8a7afdf74e82805c48244f1c92220f148644184868dd512",
+        "sha256_in_prefix": "86ce2264f0015bd4d8a7afdf74e82805c48244f1c92220f148644184868dd512",
+        "size_in_bytes": 2264
+      },
+      {
+        "_path": "include/JAGS/sampler/MutableSampleMethod.h",
+        "path_type": "hardlink",
+        "sha256": "1161bfc5940d74124059245974b93ef00d2847aaff5118128d318882a24df410",
+        "sha256_in_prefix": "1161bfc5940d74124059245974b93ef00d2847aaff5118128d318882a24df410",
+        "size_in_bytes": 705
+      },
+      {
+        "_path": "include/JAGS/sampler/MutableSampler.h",
+        "path_type": "hardlink",
+        "sha256": "5746dcf76b100dc825ae78137ef8466189f571afddb2f59a180148bf5779b68f",
+        "sha256_in_prefix": "5746dcf76b100dc825ae78137ef8466189f571afddb2f59a180148bf5779b68f",
+        "size_in_bytes": 1406
+      },
+      {
+        "_path": "include/JAGS/sampler/RWMetropolis.h",
+        "path_type": "hardlink",
+        "sha256": "42e22f20c121d98a8a19e64590c76c71e927fbb4938b8a8df9e66c3e3f09f4cc",
+        "sha256_in_prefix": "42e22f20c121d98a8a19e64590c76c71e927fbb4938b8a8df9e66c3e3f09f4cc",
+        "size_in_bytes": 2765
+      },
+      {
+        "_path": "include/JAGS/sampler/SampleMethodNoAdapt.h",
+        "path_type": "hardlink",
+        "sha256": "042113a9fcb14f8b452b242e9e08f6448b0bffa750e7300378e1daa7c727a8ff",
+        "sha256_in_prefix": "042113a9fcb14f8b452b242e9e08f6448b0bffa750e7300378e1daa7c727a8ff",
+        "size_in_bytes": 615
+      },
+      {
+        "_path": "include/JAGS/sampler/Sampler.h",
+        "path_type": "hardlink",
+        "sha256": "38a96ee62e947d055583f31a90524f2cb4752426cecec558aa544d8f01a1db55",
+        "sha256_in_prefix": "38a96ee62e947d055583f31a90524f2cb4752426cecec558aa544d8f01a1db55",
+        "size_in_bytes": 2775
+      },
+      {
+        "_path": "include/JAGS/sampler/SamplerFactory.h",
+        "path_type": "hardlink",
+        "sha256": "3fda259e385ed8def1e71af276b277d7a765a0e7f0a566d2c37dd5742d1b491f",
+        "sha256_in_prefix": "3fda259e385ed8def1e71af276b277d7a765a0e7f0a566d2c37dd5742d1b491f",
+        "size_in_bytes": 833
+      },
+      {
+        "_path": "include/JAGS/sampler/SingletonFactory.h",
+        "path_type": "hardlink",
+        "sha256": "928d3db299d88810ed4a67c30a8eec76e6d4d47687510decd90a2ff0038091ab",
+        "sha256_in_prefix": "928d3db299d88810ed4a67c30a8eec76e6d4d47687510decd90a2ff0038091ab",
+        "size_in_bytes": 1282
+      },
+      {
+        "_path": "include/JAGS/sampler/SingletonGraphView.h",
+        "path_type": "hardlink",
+        "sha256": "f28298495ef0f5c6d7fb64af2c88b7eb0fe8c1b37efd3eeffd229572ffcafd28",
+        "sha256_in_prefix": "f28298495ef0f5c6d7fb64af2c88b7eb0fe8c1b37efd3eeffd229572ffcafd28",
+        "size_in_bytes": 1134
+      },
+      {
+        "_path": "include/JAGS/sampler/Slicer.h",
+        "path_type": "hardlink",
+        "sha256": "e04c7719ae3e8c992cc1ad20e22d3938e50544deba5e1e2895edabea93867c6f",
+        "sha256_in_prefix": "e04c7719ae3e8c992cc1ad20e22d3938e50544deba5e1e2895edabea93867c6f",
+        "size_in_bytes": 3280
+      },
+      {
+        "_path": "include/JAGS/sampler/StepAdapter.h",
+        "path_type": "hardlink",
+        "sha256": "e0e76980e2398c49c5c93b47aedec47dd13c05a6614cf81dd0b705c756ea8095",
+        "sha256_in_prefix": "e0e76980e2398c49c5c93b47aedec47dd13c05a6614cf81dd0b705c756ea8095",
+        "size_in_bytes": 1162
+      },
+      {
+        "_path": "include/JAGS/sampler/TemperedMetropolis.h",
+        "path_type": "hardlink",
+        "sha256": "bd63e4617bccb0ac7d81854cd9efcdfef5ef0c59fd63f74c840941c2a58ba501",
+        "sha256_in_prefix": "bd63e4617bccb0ac7d81854cd9efcdfef5ef0c59fd63f74c840941c2a58ba501",
+        "size_in_bytes": 4886
+      },
+      {
+        "_path": "include/JAGS/sarray/Range.h",
+        "path_type": "hardlink",
+        "sha256": "85ef582dc9d8ef4d18c2ceb39fe0a906e64c62520c555080d3e93c7b538e6af9",
+        "sha256_in_prefix": "85ef582dc9d8ef4d18c2ceb39fe0a906e64c62520c555080d3e93c7b538e6af9",
+        "size_in_bytes": 4804
+      },
+      {
+        "_path": "include/JAGS/sarray/RangeIterator.h",
+        "path_type": "hardlink",
+        "sha256": "70eef39b39e116439b3733aa1a61d71578d3b4eb358c039e9dd5e466f837b341",
+        "sha256_in_prefix": "70eef39b39e116439b3733aa1a61d71578d3b4eb358c039e9dd5e466f837b341",
+        "size_in_bytes": 1888
+      },
+      {
+        "_path": "include/JAGS/sarray/SArray.h",
+        "path_type": "hardlink",
+        "sha256": "27836d536a7c86d6cf39bde33ce9e92db9b40f83f9ee1c2903d267c4141541a2",
+        "sha256_in_prefix": "27836d536a7c86d6cf39bde33ce9e92db9b40f83f9ee1c2903d267c4141541a2",
+        "size_in_bytes": 3904
+      },
+      {
+        "_path": "include/JAGS/sarray/SimpleRange.h",
+        "path_type": "hardlink",
+        "sha256": "f890949fd10cecbdd1778f99c7d5f731b2c06ba820f98295e30f280ec3d6ce7e",
+        "sha256_in_prefix": "f890949fd10cecbdd1778f99c7d5f731b2c06ba820f98295e30f280ec3d6ce7e",
+        "size_in_bytes": 4273
+      },
+      {
+        "_path": "include/JAGS/util/dim.h",
+        "path_type": "hardlink",
+        "sha256": "ca01cda49f3a6cf1af2743a984cdf83bf8bd15a480ffe879d9dc117a78ccd103",
+        "sha256_in_prefix": "ca01cda49f3a6cf1af2743a984cdf83bf8bd15a480ffe879d9dc117a78ccd103",
+        "size_in_bytes": 4218
+      },
+      {
+        "_path": "include/JAGS/util/integer.h",
+        "path_type": "hardlink",
+        "sha256": "06fe694ae3dd93e2ac905ef595901e276922928f16a55964d6c559695f2e7ea6",
+        "sha256_in_prefix": "06fe694ae3dd93e2ac905ef595901e276922928f16a55964d6c559695f2e7ea6",
+        "size_in_bytes": 171
+      },
+      {
+        "_path": "include/JAGS/util/logical.h",
+        "path_type": "hardlink",
+        "sha256": "f554185806f9250740d230787719ebdb71212e5508c1deee07b2d1f768c1865b",
+        "sha256_in_prefix": "f554185806f9250740d230787719ebdb71212e5508c1deee07b2d1f768c1865b",
+        "size_in_bytes": 506
+      },
+      {
+        "_path": "include/JAGS/util/nainf.h",
+        "path_type": "hardlink",
+        "sha256": "50293776c05d12475362678da24d4a591bb436011813751376effa0db8777186",
+        "sha256_in_prefix": "50293776c05d12475362678da24d4a591bb436011813751376effa0db8777186",
+        "size_in_bytes": 301
+      },
+      {
+        "_path": "include/JAGS/version.h",
+        "path_type": "hardlink",
+        "sha256": "4baf840dde0203737d0b81ec88a8dd83d62b3401685d129bb8c420ace651e4ea",
+        "sha256_in_prefix": "4baf840dde0203737d0b81ec88a8dd83d62b3401685d129bb8c420ace651e4ea",
+        "size_in_bytes": 148
+      },
+      {
+        "_path": "lib/JAGS/modules-4/basemod.so",
+        "path_type": "hardlink",
+        "sha256": "1f87b238e2400db7ca45fc340621b16a8532ecf922a23379c0837d86822d0670",
+        "sha256_in_prefix": "1f87b238e2400db7ca45fc340621b16a8532ecf922a23379c0837d86822d0670",
+        "size_in_bytes": 179552
+      },
+      {
+        "_path": "lib/JAGS/modules-4/bugs.so",
+        "path_type": "hardlink",
+        "sha256": "3acb4528dbb7d45d4ee9a40dcff55e1e6b12ef9cded3dd04f91bcb3b25d8fca1",
+        "sha256_in_prefix": "3acb4528dbb7d45d4ee9a40dcff55e1e6b12ef9cded3dd04f91bcb3b25d8fca1",
+        "size_in_bytes": 581048
+      },
+      {
+        "_path": "lib/JAGS/modules-4/dic.so",
+        "path_type": "hardlink",
+        "sha256": "ae475cd3b72709bdc0ee17e3796525fc61d46d838b3006f76a6b25fe6c973880",
+        "sha256_in_prefix": "ae475cd3b72709bdc0ee17e3796525fc61d46d838b3006f76a6b25fe6c973880",
+        "size_in_bytes": 74672
+      },
+      {
+        "_path": "lib/JAGS/modules-4/glm.so",
+        "path_type": "hardlink",
+        "sha256": "fe6e8ab37f0f1f6d610f14cffaaf727bba565118b8ef5ffcee0772a134479ce1",
+        "sha256_in_prefix": "fe6e8ab37f0f1f6d610f14cffaaf727bba565118b8ef5ffcee0772a134479ce1",
+        "size_in_bytes": 907384
+      },
+      {
+        "_path": "lib/JAGS/modules-4/lecuyer.so",
+        "path_type": "hardlink",
+        "sha256": "16519057a56617ada7dd5ae10f6facef27de51502417ba239546f74afe880f1d",
+        "sha256_in_prefix": "16519057a56617ada7dd5ae10f6facef27de51502417ba239546f74afe880f1d",
+        "size_in_bytes": 33928
+      },
+      {
+        "_path": "lib/JAGS/modules-4/mix.so",
+        "path_type": "hardlink",
+        "sha256": "f98379b9c81ab6ed2043ca779e32764e354ab8c227f6ea421496554403eb9cec",
+        "sha256_in_prefix": "f98379b9c81ab6ed2043ca779e32764e354ab8c227f6ea421496554403eb9cec",
+        "size_in_bytes": 128760
+      },
+      {
+        "_path": "lib/JAGS/modules-4/msm.so",
+        "path_type": "hardlink",
+        "sha256": "1c584b106b42354f922e634eccca5cd262254e0a2c3a7f4a97db3169701fddce",
+        "sha256_in_prefix": "1c584b106b42354f922e634eccca5cd262254e0a2c3a7f4a97db3169701fddce",
+        "size_in_bytes": 35344
+      },
+      {
+        "_path": "lib/libjags.so",
+        "path_type": "softlink",
+        "sha256": "99dfa73390e946f9743eaa854e58d33c5cab7081acae39bceddff8c62456f122",
+        "size_in_bytes": 805880
+      },
+      {
+        "_path": "lib/libjags.so.4",
+        "path_type": "softlink",
+        "sha256": "99dfa73390e946f9743eaa854e58d33c5cab7081acae39bceddff8c62456f122",
+        "size_in_bytes": 805880
+      },
+      {
+        "_path": "lib/libjags.so.4.0.3",
+        "path_type": "hardlink",
+        "sha256": "99dfa73390e946f9743eaa854e58d33c5cab7081acae39bceddff8c62456f122",
+        "sha256_in_prefix": "99dfa73390e946f9743eaa854e58d33c5cab7081acae39bceddff8c62456f122",
+        "size_in_bytes": 805880
+      },
+      {
+        "_path": "lib/libjrmath.so",
+        "path_type": "softlink",
+        "sha256": "c6de8a237a8ba2225cf6925be89175fc70cda2df54e338c71d37ceafa28413e3",
+        "size_in_bytes": 219512
+      },
+      {
+        "_path": "lib/libjrmath.so.0",
+        "path_type": "softlink",
+        "sha256": "c6de8a237a8ba2225cf6925be89175fc70cda2df54e338c71d37ceafa28413e3",
+        "size_in_bytes": 219512
+      },
+      {
+        "_path": "lib/libjrmath.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "c6de8a237a8ba2225cf6925be89175fc70cda2df54e338c71d37ceafa28413e3",
+        "sha256_in_prefix": "c6de8a237a8ba2225cf6925be89175fc70cda2df54e338c71d37ceafa28413e3",
+        "size_in_bytes": 219512
+      },
+      {
+        "_path": "lib/pkgconfig/jags.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/jags_1603005414856/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "614d40502ccac737dbf4bd4b3ac7b0266681042693399f42a5c9149f4167b46d",
+        "sha256_in_prefix": "99ffaaa0ffdc3d9a4edc0d02ae4229f0aff488c4568a5ed31ce7f7f8c51c0310",
+        "size_in_bytes": 560
+      },
+      {
+        "_path": "libexec/jags-terminal",
+        "path_type": "hardlink",
+        "sha256": "e69d9e0ae6b6e75d5d64993cd5c52d5485e97b25d4da8f8601ec048e4013079e",
+        "sha256_in_prefix": "e69d9e0ae6b6e75d5d64993cd5c52d5485e97b25d4da8f8601ec048e4013079e",
+        "size_in_bytes": 162024
+      },
+      {
+        "_path": "share/man/man1/jags.1",
+        "path_type": "hardlink",
+        "sha256": "9c3c6bde911f454a0f35814853a6c7ddd8db636c5c37ad79314b6f959827c4a3",
+        "sha256_in_prefix": "9c3c6bde911f454a0f35814853a6c7ddd8db636c5c37ad79314b6f959827c4a3",
+        "size_in_bytes": 937
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "8434d2a2b963c8a592b72b75c5ca357249d4cab5c1065a56f68fe20c365e650d",
+  "size": 1119711,
+  "subdir": "linux-64",
+  "timestamp": 1603005876000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/jags-4.3.0-h236a147_1004.tar.bz2",
+  "version": "4.3.0"
+}

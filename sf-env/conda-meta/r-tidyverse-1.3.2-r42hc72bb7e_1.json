@@ -1,0 +1,306 @@
+{
+  "build": "r42hc72bb7e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "r-base >=4.2,<4.3.0a0",
+    "r-broom >=0.7.6",
+    "r-cli >=2.4.0",
+    "r-crayon >=1.4.1",
+    "r-dbplyr >=2.1.1",
+    "r-dplyr >=1.0.5",
+    "r-dtplyr >=1.1.0",
+    "r-forcats >=0.5.1",
+    "r-ggplot2 >=3.3.3",
+    "r-googledrive >=1.0.1",
+    "r-googlesheets4 >=0.3.0",
+    "r-haven >=2.3.1",
+    "r-hms >=1.0.0",
+    "r-httr >=1.4.2",
+    "r-jsonlite >=1.7.2",
+    "r-lubridate >=1.7.10",
+    "r-magrittr >=2.0.1",
+    "r-modelr >=0.1.8",
+    "r-pillar >=1.6.0",
+    "r-purrr >=0.3.4",
+    "r-readr >=1.4.0",
+    "r-readxl >=1.3.1",
+    "r-reprex >=2.0.0",
+    "r-rlang >=0.4.10",
+    "r-rstudioapi >=0.13",
+    "r-rvest >=1.0.0",
+    "r-stringr >=1.4.0",
+    "r-tibble >=3.1.0",
+    "r-tidyr >=1.1.3",
+    "r-xml2 >=1.3.2"
+  ],
+  "extracted_package_dir": "/home/adrian/anaconda3/pkgs/r-tidyverse-1.3.2-r42hc72bb7e_1",
+  "features": "",
+  "files": [
+    "lib/R/library/tidyverse/CITATION",
+    "lib/R/library/tidyverse/DESCRIPTION",
+    "lib/R/library/tidyverse/INDEX",
+    "lib/R/library/tidyverse/LICENSE",
+    "lib/R/library/tidyverse/Meta/Rd.rds",
+    "lib/R/library/tidyverse/Meta/features.rds",
+    "lib/R/library/tidyverse/Meta/hsearch.rds",
+    "lib/R/library/tidyverse/Meta/links.rds",
+    "lib/R/library/tidyverse/Meta/nsInfo.rds",
+    "lib/R/library/tidyverse/Meta/package.rds",
+    "lib/R/library/tidyverse/Meta/vignette.rds",
+    "lib/R/library/tidyverse/NAMESPACE",
+    "lib/R/library/tidyverse/NEWS.md",
+    "lib/R/library/tidyverse/R/tidyverse",
+    "lib/R/library/tidyverse/R/tidyverse.rdb",
+    "lib/R/library/tidyverse/R/tidyverse.rdx",
+    "lib/R/library/tidyverse/doc/index.html",
+    "lib/R/library/tidyverse/doc/manifesto.Rmd",
+    "lib/R/library/tidyverse/doc/manifesto.html",
+    "lib/R/library/tidyverse/doc/paper.R",
+    "lib/R/library/tidyverse/doc/paper.Rmd",
+    "lib/R/library/tidyverse/doc/paper.html",
+    "lib/R/library/tidyverse/help/AnIndex",
+    "lib/R/library/tidyverse/help/aliases.rds",
+    "lib/R/library/tidyverse/help/figures/logo.png",
+    "lib/R/library/tidyverse/help/paths.rds",
+    "lib/R/library/tidyverse/help/tidyverse.rdb",
+    "lib/R/library/tidyverse/help/tidyverse.rdx",
+    "lib/R/library/tidyverse/html/00Index.html",
+    "lib/R/library/tidyverse/html/R.css"
+  ],
+  "fn": "r-tidyverse-1.3.2-r42hc72bb7e_1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/adrian/anaconda3/pkgs/r-tidyverse-1.3.2-r42hc72bb7e_1",
+    "type": 1
+  },
+  "md5": "e3fac7e100a1bf853c0d846e3bdc357b",
+  "name": "r-tidyverse",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/adrian/anaconda3/pkgs/r-tidyverse-1.3.2-r42hc72bb7e_1.tar.bz2",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/R/library/tidyverse/CITATION",
+        "path_type": "hardlink",
+        "sha256": "50b1e46462c9e2a124b78e2c008960dce566f8250d391153b05bf147044476e4",
+        "sha256_in_prefix": "50b1e46462c9e2a124b78e2c008960dce566f8250d391153b05bf147044476e4",
+        "size_in_bytes": 594
+      },
+      {
+        "_path": "lib/R/library/tidyverse/DESCRIPTION",
+        "path_type": "hardlink",
+        "sha256": "33cff4fbee6f7b3d2f41be23a6040c5343d1021ada7e3298c707641008c0d353",
+        "sha256_in_prefix": "33cff4fbee6f7b3d2f41be23a6040c5343d1021ada7e3298c707641008c0d353",
+        "size_in_bytes": 1825
+      },
+      {
+        "_path": "lib/R/library/tidyverse/INDEX",
+        "path_type": "hardlink",
+        "sha256": "204cd7d9cac51560f2d94e434091768ae7b5da9da3a00520528b2482f7dcc0b6",
+        "sha256_in_prefix": "204cd7d9cac51560f2d94e434091768ae7b5da9da3a00520528b2482f7dcc0b6",
+        "size_in_bytes": 430
+      },
+      {
+        "_path": "lib/R/library/tidyverse/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "99962a65305d93f2c4fb43652f0db71695e1e787d7bd660a74db1231fb61e3db",
+        "sha256_in_prefix": "99962a65305d93f2c4fb43652f0db71695e1e787d7bd660a74db1231fb61e3db",
+        "size_in_bytes": 47
+      },
+      {
+        "_path": "lib/R/library/tidyverse/Meta/Rd.rds",
+        "path_type": "hardlink",
+        "sha256": "cac1bef2dea18bb7166f1f26e413050cab6bb953298b717bb5a9969ea8a71639",
+        "sha256_in_prefix": "cac1bef2dea18bb7166f1f26e413050cab6bb953298b717bb5a9969ea8a71639",
+        "size_in_bytes": 503
+      },
+      {
+        "_path": "lib/R/library/tidyverse/Meta/features.rds",
+        "path_type": "hardlink",
+        "sha256": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "sha256_in_prefix": "fb144a3ae7449c200b48999850c58479b03518c44769ba6cd0693899d9a49191",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "lib/R/library/tidyverse/Meta/hsearch.rds",
+        "path_type": "hardlink",
+        "sha256": "df01f3d607933f4d48199e6ae264103709599c0c2ad9e61e60def81c688870e2",
+        "sha256_in_prefix": "df01f3d607933f4d48199e6ae264103709599c0c2ad9e61e60def81c688870e2",
+        "size_in_bytes": 498
+      },
+      {
+        "_path": "lib/R/library/tidyverse/Meta/links.rds",
+        "path_type": "hardlink",
+        "sha256": "2ed2866b48e0ec7574ee765a94c694c0ffa0e9c1e91c670f6b92b496fc5d8813",
+        "sha256_in_prefix": "2ed2866b48e0ec7574ee765a94c694c0ffa0e9c1e91c670f6b92b496fc5d8813",
+        "size_in_bytes": 204
+      },
+      {
+        "_path": "lib/R/library/tidyverse/Meta/nsInfo.rds",
+        "path_type": "hardlink",
+        "sha256": "224221eada59b2ac8daddaecd3d5d8988b679943d5f4506396e2f23727497f8c",
+        "sha256_in_prefix": "224221eada59b2ac8daddaecd3d5d8988b679943d5f4506396e2f23727497f8c",
+        "size_in_bytes": 556
+      },
+      {
+        "_path": "lib/R/library/tidyverse/Meta/package.rds",
+        "path_type": "hardlink",
+        "sha256": "1350a8a94996c1a307613a7ea23be0a142f5bb282ea2b6a3af64753b0855e3d3",
+        "sha256_in_prefix": "1350a8a94996c1a307613a7ea23be0a142f5bb282ea2b6a3af64753b0855e3d3",
+        "size_in_bytes": 1810
+      },
+      {
+        "_path": "lib/R/library/tidyverse/Meta/vignette.rds",
+        "path_type": "hardlink",
+        "sha256": "2a7850d8fd46d9437b8acc60920cc49e8c5ddb62a7850f72dddaad1cec017abf",
+        "sha256_in_prefix": "2a7850d8fd46d9437b8acc60920cc49e8c5ddb62a7850f72dddaad1cec017abf",
+        "size_in_bytes": 236
+      },
+      {
+        "_path": "lib/R/library/tidyverse/NAMESPACE",
+        "path_type": "hardlink",
+        "sha256": "bf8c5bd133f96db90ba7c1a7539d76f7aba0316d7fa9f7fef15498aa58d54e8d",
+        "sha256_in_prefix": "bf8c5bd133f96db90ba7c1a7539d76f7aba0316d7fa9f7fef15498aa58d54e8d",
+        "size_in_bytes": 868
+      },
+      {
+        "_path": "lib/R/library/tidyverse/NEWS.md",
+        "path_type": "hardlink",
+        "sha256": "054559dfed06a512d0f57723b79413381aa33f9d0b06b6dacf0db188bad67dc7",
+        "sha256_in_prefix": "054559dfed06a512d0f57723b79413381aa33f9d0b06b6dacf0db188bad67dc7",
+        "size_in_bytes": 3581
+      },
+      {
+        "_path": "lib/R/library/tidyverse/R/tidyverse",
+        "path_type": "hardlink",
+        "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "sha256_in_prefix": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759",
+        "size_in_bytes": 1058
+      },
+      {
+        "_path": "lib/R/library/tidyverse/R/tidyverse.rdb",
+        "path_type": "hardlink",
+        "sha256": "5b2a2e4c747a49ee552975d3aeec570c9373a33ca481e339d1799e6b204b2067",
+        "sha256_in_prefix": "5b2a2e4c747a49ee552975d3aeec570c9373a33ca481e339d1799e6b204b2067",
+        "size_in_bytes": 21636
+      },
+      {
+        "_path": "lib/R/library/tidyverse/R/tidyverse.rdx",
+        "path_type": "hardlink",
+        "sha256": "118cdce512e77dd97ec6bde0f1505f91fe4c29ccbbe05425d53efe87fdac4c42",
+        "sha256_in_prefix": "118cdce512e77dd97ec6bde0f1505f91fe4c29ccbbe05425d53efe87fdac4c42",
+        "size_in_bytes": 624
+      },
+      {
+        "_path": "lib/R/library/tidyverse/doc/index.html",
+        "path_type": "hardlink",
+        "sha256": "6b77a80a6a973973f8fe61febda6a16b33aa593738e1a513d25ef03d7dc0fed4",
+        "sha256_in_prefix": "6b77a80a6a973973f8fe61febda6a16b33aa593738e1a513d25ef03d7dc0fed4",
+        "size_in_bytes": 1878
+      },
+      {
+        "_path": "lib/R/library/tidyverse/doc/manifesto.Rmd",
+        "path_type": "hardlink",
+        "sha256": "8a8369d5ff0e8987f5c613621145e38d20a5a9faf297e1a8d45bad0928fdac98",
+        "sha256_in_prefix": "8a8369d5ff0e8987f5c613621145e38d20a5a9faf297e1a8d45bad0928fdac98",
+        "size_in_bytes": 6370
+      },
+      {
+        "_path": "lib/R/library/tidyverse/doc/manifesto.html",
+        "path_type": "hardlink",
+        "sha256": "36e01735bf20781b5d7901cafda4d480701b3ab373b1a6ba4a06d49c2728df54",
+        "sha256_in_prefix": "36e01735bf20781b5d7901cafda4d480701b3ab373b1a6ba4a06d49c2728df54",
+        "size_in_bytes": 11745
+      },
+      {
+        "_path": "lib/R/library/tidyverse/doc/paper.R",
+        "path_type": "hardlink",
+        "sha256": "26a94bdcab8afdff48aec7119765d51d9850b55ca4518669d9010d8deac998cc",
+        "sha256_in_prefix": "26a94bdcab8afdff48aec7119765d51d9850b55ca4518669d9010d8deac998cc",
+        "size_in_bytes": 517
+      },
+      {
+        "_path": "lib/R/library/tidyverse/doc/paper.Rmd",
+        "path_type": "hardlink",
+        "sha256": "1c0c5406fef484a0462e04721118b2019bcff37fe8944d64ecb9ac6fb5fd83c8",
+        "sha256_in_prefix": "1c0c5406fef484a0462e04721118b2019bcff37fe8944d64ecb9ac6fb5fd83c8",
+        "size_in_bytes": 13482
+      },
+      {
+        "_path": "lib/R/library/tidyverse/doc/paper.html",
+        "path_type": "hardlink",
+        "sha256": "39d742cbcaf98c18123bd6ee3dd90a73f35014aa8d27efd77bb1c3b0760c43c8",
+        "sha256_in_prefix": "39d742cbcaf98c18123bd6ee3dd90a73f35014aa8d27efd77bb1c3b0760c43c8",
+        "size_in_bytes": 495247
+      },
+      {
+        "_path": "lib/R/library/tidyverse/help/AnIndex",
+        "path_type": "hardlink",
+        "sha256": "9b30affdadfbea67db8423926e93c213036c7d5e750914caa75f5c7f5af763f0",
+        "sha256_in_prefix": "9b30affdadfbea67db8423926e93c213036c7d5e750914caa75f5c7f5af763f0",
+        "size_in_bytes": 270
+      },
+      {
+        "_path": "lib/R/library/tidyverse/help/aliases.rds",
+        "path_type": "hardlink",
+        "sha256": "3f82780d4b9fe9fb17fa53729c9f93c4722b790b6f4b988f5dd90acb84d7c6d8",
+        "sha256_in_prefix": "3f82780d4b9fe9fb17fa53729c9f93c4722b790b6f4b988f5dd90acb84d7c6d8",
+        "size_in_bytes": 153
+      },
+      {
+        "_path": "lib/R/library/tidyverse/help/figures/logo.png",
+        "path_type": "hardlink",
+        "sha256": "038aa8ec1fab3a97a1c9648c677e2ccdc7c5d6122d6e194efe4f094449072a10",
+        "sha256_in_prefix": "038aa8ec1fab3a97a1c9648c677e2ccdc7c5d6122d6e194efe4f094449072a10",
+        "size_in_bytes": 42356
+      },
+      {
+        "_path": "lib/R/library/tidyverse/help/paths.rds",
+        "path_type": "hardlink",
+        "sha256": "129f4a74c4bb45bdb74550d4749d08c0bccb63700f319a8971942e7044b29379",
+        "sha256_in_prefix": "129f4a74c4bb45bdb74550d4749d08c0bccb63700f319a8971942e7044b29379",
+        "size_in_bytes": 217
+      },
+      {
+        "_path": "lib/R/library/tidyverse/help/tidyverse.rdb",
+        "path_type": "hardlink",
+        "sha256": "e1f856aa8e76bca011ec7588b2e5578bfd817e8287253ffafeb4004e9f7be9d7",
+        "sha256_in_prefix": "e1f856aa8e76bca011ec7588b2e5578bfd817e8287253ffafeb4004e9f7be9d7",
+        "size_in_bytes": 9022
+      },
+      {
+        "_path": "lib/R/library/tidyverse/help/tidyverse.rdx",
+        "path_type": "hardlink",
+        "sha256": "ff8826861497bfe9310eaa1bfdf2673c95c62f244ac55cdac29e02066d1313cd",
+        "sha256_in_prefix": "ff8826861497bfe9310eaa1bfdf2673c95c62f244ac55cdac29e02066d1313cd",
+        "size_in_bytes": 319
+      },
+      {
+        "_path": "lib/R/library/tidyverse/html/00Index.html",
+        "path_type": "hardlink",
+        "sha256": "dc72fb2b0c533b60bed1c229b76166487877a431b4f0bc79803487c20e302327",
+        "sha256_in_prefix": "dc72fb2b0c533b60bed1c229b76166487877a431b4f0bc79803487c20e302327",
+        "size_in_bytes": 1890
+      },
+      {
+        "_path": "lib/R/library/tidyverse/html/R.css",
+        "path_type": "hardlink",
+        "sha256": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "sha256_in_prefix": "7378544281fb630e3e62a6b7855b428c008332a0249156e72aac5343078654df",
+        "size_in_bytes": 1735
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "f968922e32e1a3e0be59c6694f97c9c86bcbe0fd3ceb938dd7b8296fd1583551",
+  "size": 448152,
+  "subdir": "noarch",
+  "timestamp": 1665559944000,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/r-tidyverse-1.3.2-r42hc72bb7e_1.tar.bz2",
+  "version": "1.3.2"
+}
